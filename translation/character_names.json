@@ -44,9 +44,9 @@
       "lines": [
         {"offset": "0x72D78", "original": "藤崎", "text": "Shiori"},
         {"offset": "0x72D80", "original": "如月", "text": "Mio"},
-        {"offset": "0x72D88", "original": "紐緒", "text": "Yuina"},
+        {"offset": "0x72D88", "original": "紐緒", "text": "Himoo"},
         {"offset": "0x72D90", "original": "片桐", "text": "Ayako"},
-        {"offset": "0x72D98", "original": "虹野", "text": "Saki"},
+        {"offset": "0x72D98", "original": "虹野", "text": "Nijino"},
         {"offset": "0x72DA0", "original": "古式", "text": "Yukari"},
         {"offset": "0x72DA8", "original": "清川", "text": "Nozomi"},
         {"offset": "0x72DB0", "original": "鏡", "text": "Mira"},
@@ -56,7 +56,7 @@
         {"offset": "0x72DCC", "original": "館林", "text": "Miharu"},
         {"offset": "0x72DD4", "original": "伊集院", "text": "Ijuin"},
         {"offset": "0x72DDC", "original": "好雄", "text": "Yoshio"},
-        {"offset": "0x72DE4", "original": "外井", "text": "Yukinojo"},
+        {"offset": "0x72DE4", "original": "外井", "text": "Sotoi"},
         {"offset": "0x72DEC", "original": "優美", "text": "Yumi"}
       ]
     }

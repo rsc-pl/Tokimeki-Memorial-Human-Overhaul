@@ -119,13 +119,13 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x28D30",
    "original": "藤崎「もう、",
-   "text": "Shiori: Jeez,"
+   "text": "Fujisaki: Oh,"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x28D40",
    "original": "なにバカなこと言ってるのよ。",
-   "text": "what silly things you say."
+   "text": "don't be silly!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -701,7 +701,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x29BE0",
    "original": "片桐「はっ、",
-   "text": "Ayako: Hah,"
+   "text": "Katagiri: Hah,"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -767,7 +767,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2A260",
    "original": "藤崎「やめてっ！",
-   "text": "Shiori: Stop it!"
+   "text": "Fujisaki: Stop it!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1013,7 +1013,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2AF10",
    "original": "鏡「また私のとりこが一人。",
-   "text": "Mira: Another one smitten."
+   "text": "Kagami: One more admirer."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1577,7 +1577,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2BC50",
    "original": "清川「フザケンナヨー！",
-   "text": "Nozomi: Quit fooling!"
+   "text": "Kiyokawa: Cut it out!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1589,7 +1589,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2BC88",
    "original": "清川「フザケンナヨー！",
-   "text": "Nozomi: Quit fooling!"
+   "text": "Kiyokawa: Cut it out!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",

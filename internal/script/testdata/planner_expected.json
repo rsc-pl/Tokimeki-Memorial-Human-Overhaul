@@ -1,0 +1,207 @@
+[
+  {
+    "ok": true,
+    "sha256": "ab922d50acd8820e703209712e3cada22d7f7d23b99032927548f49b9c8cd7ac",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12312,
+        12295
+      ],
+      [
+        12324,
+        12302
+      ]
+    ],
+    "summary": "dialogue: 3 string(s), 19 of 48 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "4ba130cbf0ac3a1f024c8d7f11abec7bb9427d9a0122710ab762b6aa1ebae0aa",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12312,
+        12288
+      ],
+      [
+        12336,
+        12293
+      ]
+    ],
+    "summary": "dialogue: 3 string(s), 1 sharing an identical copy, 12 of 60 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "090dd48bcc574abd328bd086013ced0f4e5c32cb6d8a9878089bf7b8e038f516",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12312,
+        12293
+      ]
+    ],
+    "summary": "dialogue: 2 string(s), 10 of 48 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "ce51ce1e7505922241cd9bf196b01ff33532b2251497ea0b20fd3aaf090796d3",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12316,
+        12293
+      ],
+      [
+        12344,
+        12298
+      ]
+    ],
+    "summary": "dialogue: 3 string(s), 15 of 72 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "05414783718255b698adbdb8d970ddf26d2e09f89a940bfbc387632bec236a8b",
+    "placements": [
+      [
+        12288,
+        12316
+      ],
+      [
+        12316,
+        12288
+      ],
+      [
+        12332,
+        12332
+      ]
+    ],
+    "summary": "dialogue: 3 string(s), 45 of 48 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "29dc9ce619c0498153181b4ae7259c9114bdc2ab0cf66695dcd025c25673a514",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12312,
+        12297
+      ]
+    ],
+    "summary": "dialogue: 2 string(s), 18 of 48 bytes used"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN @ 0x3000: the string has no pointer to it, so it can't move, and the English needs 19 bytes but only 4 are available"
+  },
+  {
+    "ok": true,
+    "sha256": "81a5e3add726ff37f0abd4e2feda257508306d8e9a4971f13ad85793265dd768",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12312,
+        12293
+      ]
+    ],
+    "summary": "dialogue: 2 string(s), 14 of 48 bytes used"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN @ 0x3000: the string is referenced from code, so it can't move, and the English needs 25 bytes but only 4 are available"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN: word at 0x300 points into translated text at 0x3002, not at a string start"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN @ 0x3000: the English must have the same line breaks, choices and name codes as the original (/), has : 'Single line'"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN @ 0x3000: the English must end with ')' exactly when the original ends with '）' (the game draws the other brackets): 'Thought'"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN @ 0x3000: display line 1 is 30 cells wide (max 28; a letter is 1 cell, a name code counts as its longest name): 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+  },
+  {
+    "ok": false,
+    "error": "G04: SYNTHETIC.BIN: the English doesn't fit in the space of the original strings (40 bytes needed, 16 available)"
+  },
+  {
+    "ok": true,
+    "sha256": "51e0aaaf03db84572df1b5237212c8c8be4fbabcdfdb97f4b5b69aafbca28959",
+    "placements": [
+      [
+        12300,
+        12300
+      ]
+    ],
+    "summary": "dialogue: 1 string(s), 5 of 12 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "5691be9879609259bb9bd031eb7c767d6397324844abf6cc9a85ca858c5d2bf6",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12304,
+        12301
+      ]
+    ],
+    "summary": "dialogue: 2 string(s), 27 of 40 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "7a52fee29fa6ae470d28f2bbf3d8d1e098bc691c4bee1800b4a6718b2586822f",
+    "placements": [
+      [
+        12288,
+        12288
+      ]
+    ],
+    "summary": "dialogue: 1 string(s), 10 of 16 bytes used"
+  },
+  {
+    "ok": true,
+    "sha256": "04293eb57559a8d937abcd90fe83fe852b6ddb99dd884cccfe6fd04a3dd7584a",
+    "placements": [
+      [
+        12288,
+        12288
+      ],
+      [
+        12312,
+        12293
+      ],
+      [
+        12336,
+        12298
+      ]
+    ],
+    "summary": "dialogue: 3 string(s), 15 of 72 bytes used"
+  }
+]
