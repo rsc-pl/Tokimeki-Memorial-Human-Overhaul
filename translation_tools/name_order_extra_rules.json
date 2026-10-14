@@ -1,0 +1,26 @@
+[
+  {
+    "file": "meetings.json",
+    "offset": "0x6f14",
+    "original": "今日からマネージャーとして\n入部した、虹野沙希です。\nよろしくお願いします。",
+    "before": "I just joined as\nthe new manager. I'm Saki\nNijino. Nice to meet you.",
+    "after": "I'm Nijino Saki.\nI joined as manager today.\nNice to meet you.",
+    "reason": "Japanese surname–given-name order; retain today, role and greeting."
+  },
+  {
+    "file": "meetings.json",
+    "offset": "0x707c",
+    "original": "今日からマネージャーとして\n入部した、虹野沙希です。\nよろしくお願いします。",
+    "before": "I just joined as\nthe new manager. I'm Saki\nNijino. Nice to meet you.",
+    "after": "I'm Nijino Saki.\nI joined as manager today.\nNice to meet you.",
+    "reason": "The repeated introduction uses the same source and English wording."
+  },
+  {
+    "file": "festival_player.json",
+    "offset": "0x168",
+    "original": "＊パソコン　ＮＭＳ＿９０００＊\nアナタハ、\nヒモオ　ユイナ　サマ　ノ\nケライ　ニ　ナルデショウ。",
+    "before": "+PC NMS-9000+\nYOU WILL\nBECOME A SERVANT\nOF LADY YUINA HIMOO.",
+    "after": "+PC NMS-9000+\nYOU WILL\nBECOME A SERVANT\nOF LADY HIMOO YUINA.",
+    "reason": "The uppercase katakana name was omitted by the earlier full-name matcher."
+  }
+]
