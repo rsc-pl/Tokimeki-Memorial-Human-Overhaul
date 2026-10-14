@@ -1,17 +1,5 @@
-#!/usr/bin/env python3
-"""Reorder unambiguous Japanese character names in the existing English JSON.
 
-This only changes Western given-name/surname order. It does not add or remove
-honorifics, expand initials, normalize long vowels, or change dynamic names.
-
-    python3 translation_tools/name_order.py --audit
-    python3 translation_tools/name_order.py --apply
-    python3 translation_tools/name_order.py --verify
-
-The JSON's original formatting is kept, so Git shows only changed records.
-The script can be rerun safely. It requires only the Python standard library
-and the existing legacy PS1 encoder for capacity comparisons.
-"""
+"""Reorder full Japanese names in translated dialogue and labels."""
 from __future__ import annotations
 
 import argparse
@@ -26,8 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TRANSLATION = ROOT / "translation"
 DEFAULT_REPORT = ROOT / ".local" / "translation" / "reports" / "N01" / "NAME_ORDER_CHANGES.tsv"
 
-# All entries in JP surname/given-name order. Romanization is deliberately
-# identical to upstream: long-vowel spelling belongs to another checkpoint.
+
 @dataclass(frozen=True)
 class Name:
     japanese: str
@@ -55,8 +42,7 @@ NAMES = (
     Name('外井雪之丞', '外井', '雪之丞', 'Yukinojo', 'Sotoi'),
 )
 
-# Record matcher permits both indented and one-line records, but never reads
-# or writes a description, source JP string, executable mapping or control code.
+
 RECORD = re.compile(
     r'(?P<head>"offset"\s*:\s*"(?P<offset>[^"\\]+)"\s*,\s*'
     r'"original"\s*:\s*(?P<jp>"(?:\\.|[^"\\])*")\s*,\s*'
@@ -71,13 +57,13 @@ def _encoder():
 
 
 def _replace(jp: str, english: str) -> tuple[str, list[str]]:
-    """Return transformed string and full names changed, without case guessing."""
+    """Return the reordered text and matched names."""
     updated = english
     matched = []
     for name in NAMES:
         given, surname = re.escape(name.given), re.escape(name.surname)
-        # Restrict swaps to names attested in the same Japanese record.
-        # A shared surname is not enough for an abbreviated initial.
+
+
         jp_attests_person = name.japanese in jp or (
             name.japanese_surname in jp and
             (name.japanese_given in jp or name.surname != "Saotome")
@@ -88,8 +74,8 @@ def _replace(jp: str, english: str) -> tuple[str, list[str]]:
         updated, n = full.subn(f"{name.surname} {name.given}", updated)
         if n:
             matched.extend([name.japanese] * n)
-        # Abbreviations are only safe where JP supplies the exact full name.
-        # In particular, Y. Saotome can refer to TWO different people.
+
+
         if name.japanese in jp:
             abbreviated = re.compile(rf"(?<![A-Za-z]){re.escape(name.given[0])}(\.?) {surname}(?![A-Za-z])")
             def swap(m: re.Match[str]) -> str:
@@ -113,8 +99,8 @@ def _validate_change(jp: str, before: str, after: str, pairs, script) -> None:
     new_bytes, new_widths = script.encode_english(after, pairs)
     if len(old_bytes) != len(new_bytes) or old_widths != new_widths:
         raise ValueError("name reorder changed encoded size or layout")
-    # The JP structure is not changed; pre-existing upstream mismatches are
-    # deliberately outside the scope of this name-order-only checkpoint.
+
+
 
 
 def _entries(path: Path, pairs, script) -> tuple[str, str, list[dict]]:
@@ -140,7 +126,7 @@ def _entries(path: Path, pairs, script) -> tuple[str, str, list[dict]]:
     before_doc, after_doc = json.loads(content), json.loads(changed)
     if before_doc.keys() != after_doc.keys():
         raise ValueError(f"document schema changed: {path}")
-    # No fields beyond the EN `text` values should differ.
+
     def without_text(obj):
         if isinstance(obj, dict):
             return {k: without_text(v) for k, v in obj.items() if k != "text"}
@@ -167,7 +153,7 @@ def run(mode: str, root: Path = ROOT, report: Path | None = None) -> list[dict]:
         if outcomes:
             raise ValueError(f"{len(outcomes)} Western-order names still present")
     if mode == "apply":
-        # All changes are validated before writing any file.
+
         for path, new in updated:
             path.write_text(new, encoding="utf-8")
         if report is not None:

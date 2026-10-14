@@ -1,4 +1,4 @@
-"""Tests for the reversible, size-preserving name-order edit."""
+"""Check name order and text layout."""
 import sys
 import unittest
 from pathlib import Path
@@ -36,7 +36,7 @@ class NameOrderTests(unittest.TestCase):
     def test_does_not_guess_shared_surname(self):
         self.assertEqual(names._replace("早乙女さん", "Y. Saotome"), ("Y. Saotome", []))
 
-    def test_surname_to_given_name_is_not_this_stage(self):
+    def test_keeps_single_names(self):
         self.assertEqual(names._replace("片桐さんだ。", "Ayako really came through."),
                          ("Ayako really came through.", []))
 

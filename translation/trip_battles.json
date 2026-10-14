@@ -5,7 +5,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x289A0",
    "original": "朝日奈「つまんな〜い！",
-   "text": "Yuko: Boooring!"
+   "text": "Asahina: Boooring!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -137,13 +137,13 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x28E20",
    "original": "美樹原「きゃっ！",
-   "text": "Megumi: Eek!"
+   "text": "Mikihara: Eek!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x28E34",
    "original": "美樹原「はっ！",
-   "text": "Megumi: Hah!"
+   "text": "Mikihara: Hah!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -197,7 +197,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x29070",
    "original": "虹野「がんばってっ！",
-   "text": "Saki: Go for it!"
+   "text": "Nijino: Go for it!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -659,7 +659,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x29A40",
    "original": "鏡「つまらないわ…よっ！",
-   "text": "Mira: How dull... hah!"
+   "text": "Kagami: How dull... hah!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -755,13 +755,13 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2A1E0",
    "original": "清川「いいかげんに…してっ！",
-   "text": "Nozomi: Cut it... out!"
+   "text": "Kiyokawa: Cut it... out!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2A200",
    "original": "清川「いいかげんに…しろっ！",
-   "text": "Nozomi: Knock it... off!"
+   "text": "Kiyokawa: Knock it... off!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -797,13 +797,13 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2A420",
    "original": "古式「まぁ、おもしろいですねぇ。",
-   "text": "Yukari: Oh, how amusing."
+   "text": "Koshiki: Oh, how amusing."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2A520",
    "original": "美樹原「いいかげんに…",
-   "text": "Megumi: Enough..."
+   "text": "Mikihara: Enough..."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -815,7 +815,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2A558",
    "original": "美樹原「いいかげんに…",
-   "text": "Megumi: Enough..."
+   "text": "Mikihara: Enough..."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -977,7 +977,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2AA80",
    "original": "虹野「な、なんだかな…",
-   "text": "Saki: Wh-what now..."
+   "text": "Nijino: Wh-what now..."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1019,7 +1019,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2AF2C",
    "original": "鏡「でなおしてらっしゃい！",
-   "text": "Mira: Come back later!"
+   "text": "Kagami: Come back later!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1541,7 +1541,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2BAE0",
    "original": "如月「ああっ！　めまいが！",
-   "text": "Mio: Ah! I'm dizzy!"
+   "text": "Kisaragi: Ah! I'm dizzy!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1553,7 +1553,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2BBA0",
    "original": "朝日奈「ねえ、ねえっ。",
-   "text": "Yuko: Hey, hey."
+   "text": "Asahina: Hey, hey."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -1901,7 +1901,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2C3E0",
    "original": "古式「お父様ーーっ！！",
-   "text": "Yukari: Fatherrr!!"
+   "text": "Koshiki: Fatherrr!!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
