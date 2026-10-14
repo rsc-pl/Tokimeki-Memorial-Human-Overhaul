@@ -2,13 +2,15 @@
 set -euo pipefail
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 bin="$root/.local/bin/tokimemo"
-if [[ ! -x "$bin" || "$root/cmd/tokimemo/main.go" -nt "$bin" || "$root/go.mod" -nt "$bin" ]]; then
-  if ! command -v go >/dev/null 2>&1; then
-    printf '%s\n' 'Go 1.23+ is required for the Human Overhaul CLI (the inherited Python backend is not a replacement for the Go frontend).' >&2
-    exit 1
-  fi
+if ! command -v go >/dev/null 2>&1; then
+  printf '%s\n' 'Go 1.23+ is required to build the Human Overhaul CLI.' >&2
+  exit 1
+fi
+# Recompile whenever any Go source, go.mod or go.sum changes (not only main.go).
+if [[ ! -x "$bin" ]] || find "$root/cmd" "$root/internal" "$root/go.mod" -type f -newer "$bin" -print -quit | grep -q .; then
   mkdir -p "$root/.local/bin"
-  ( cd "$root" && go build -buildvcs=false -o "$bin" ./cmd/tokimemo )
+  ( cd "$root" && go build -buildvcs=false -o "$bin.tmp" ./cmd/tokimemo )
+  mv -f "$bin.tmp" "$bin"
 fi
 cd "$root"
 exec "$bin" "$@"

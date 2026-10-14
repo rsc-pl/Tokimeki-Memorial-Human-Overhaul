@@ -4,7 +4,6 @@
 package main
 
 import (
-	"bufio"
 	"encoding/json"
 	"errors"
 	"flag"
@@ -17,7 +16,11 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
+
+	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/config"
+	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/termui"
 )
 
 const (
@@ -31,6 +34,8 @@ const (
 
 var lineFile = regexp.MustCompile(`(?i)^\s*FILE\s+(?:"([^"]+)"|(\S+))\s+\S+`)
 var lineTrack = regexp.MustCompile(`(?i)^\s*TRACK\s+\d+\s+(\S+)`)
+
+var commandOutput io.Writer = os.Stdout
 
 type counter struct{ Files, Strings, Images, Bytes, Blocks, Lines int }
 type strList []string
@@ -58,7 +63,7 @@ func rootDir() (string, error) {
 	}
 	return "", errors.New("not inside the Human Overhaul repository (or set TOKIMEMO_ROOT)")
 }
-func say(head, val string)   { fmt.Printf("%s%-14s%s %s\n", cyan, head, reset, val) }
+func say(head, val string)   { fmt.Fprintf(commandOutput, "%s%-14s%s %s\n", cyan, head, reset, val) }
 func failure(err error)      { fmt.Fprintf(os.Stderr, "\n%s%sFAIL%s %v\n", bold, red, reset, err) }
 func success(summary string) { fmt.Printf("\n%s%sOK%s %s\n", bold, green, reset, summary) }
 func getInt(v any) (int64, error) {
@@ -264,7 +269,14 @@ func inspect(path string) error {
 		say("Tracks", strconv.Itoa(info.Tracks))
 		say("Sectors", strconv.FormatInt(info.Sectors, 10))
 		say("Data", info.Data)
-		say("Validation", "CUE and track files checked; game identity not yet verified")
+		if f, fs, checkErr := openDiscISO(info.Data, info.Sectors); checkErr == nil {
+			say("ISO volume", fs.Volume)
+			say("ISO entries", strconv.Itoa(len(fs.Entries)))
+			_ = f.Close()
+		} else {
+			say("ISO9660", "read error: "+checkErr.Error())
+		}
+		say("Validation", "CUE / tracks checked; game identity and runtime not verified")
 		return nil
 	}
 	s, e := os.Stat(path)
@@ -290,10 +302,10 @@ func runProcess(root, bin string, args ...string) error {
 	command := exec.Command(bin, args...)
 	command.Dir = root
 	command.Env = pythonEnv(root)
-	command.Stdout = os.Stdout
-	command.Stderr = os.Stderr
+	command.Stdout = commandOutput
+	command.Stderr = commandOutput
 	command.Stdin = os.Stdin
-	fmt.Printf("%s▶ %s%s\n", cyan, strings.Join(append([]string{bin}, args...), " "), reset)
+	fmt.Fprintf(commandOutput, "%s▶ %s%s\n", cyan, strings.Join(append([]string{bin}, args...), " "), reset)
 	if e := command.Run(); e != nil {
 		return fmt.Errorf("%s: %w", bin, e)
 	}
@@ -306,49 +318,153 @@ func runPython(root string, args ...string) error {
 	}
 	return runProcess(root, python, args...)
 }
+func cueChoice(root, explicit string) (string, error) {
+	p, from, e := config.Discover(root, explicit, func(p string) error {
+		if !strings.EqualFold(filepath.Ext(p), ".cue") {
+			return errors.New("expected CUE entry point")
+		}
+		_, e := parseCue(p)
+		return e
+	})
+	if e == nil {
+		say("Game CUE", p)
+		say("Found via", from)
+	}
+	return p, e
+}
+
+// Check already-existing output track destinations; Python's shutil.copyfile follows
+// symlinks and would otherwise overwrite arbitrary targets, including source tracks.
+func guardOutputTracks(cue, target string) error {
+	info, e := parseCue(cue)
+	if e != nil {
+		return e
+	}
+	for _, source := range append([]string{cue}, info.Inputs...) {
+		dest := filepath.Join(target, filepath.Base(source))
+		st, e := os.Lstat(dest)
+		if errors.Is(e, os.ErrNotExist) {
+			continue
+		}
+		if e != nil {
+			return e
+		}
+		if st.Mode()&os.ModeSymlink != 0 || !st.Mode().IsRegular() {
+			return fmt.Errorf("unsafe existing build target: %s", dest)
+		}
+		original, e := os.Stat(source)
+		if e != nil {
+			return e
+		}
+		if os.SameFile(st, original) {
+			return fmt.Errorf("build target is linked to original game: %s", dest)
+		}
+	}
+	return nil
+}
+
+// Stage progress shows actual workflow phases, not a fabricated byte-level percentage.
+// The Python backend remains responsible for verified disc patching.
+type stageWriter struct {
+	destination io.Writer
+	mu          sync.Mutex
+	tail        string
+	stage       int
+}
+
+func (w *stageWriter) Write(p []byte) (int, error) {
+	w.mu.Lock()
+	defer w.mu.Unlock()
+	n, e := w.destination.Write(p)
+	combined := w.tail + string(p)
+	for next := w.stage + 1; next <= 3; next++ {
+		marker := fmt.Sprintf("Step %d/3:", next)
+		if strings.Contains(combined, marker) {
+			w.stage = next
+			labels := []string{"", "Verifying and planning edits", "Copying original CUE/BIN tracks", "Writing verified sector changes"}
+			bar := strings.Repeat("█", next*8) + strings.Repeat("░", (3-next)*8)
+			fmt.Fprintf(w.destination, "\n%s  [%s]  STEP %d/3 — %s%s\n", cyan, bar, next, labels[next], reset)
+		}
+	}
+	if len(combined) > 128 {
+		combined = combined[len(combined)-128:]
+	}
+	w.tail = combined
+	return n, e
+}
 func cmdBuild(root string, argv []string, preflight bool) error {
 	fs := flag.NewFlagSet("build", flag.ContinueOnError)
-	out := fs.String("output", "", "output directory (defaults to source directory + [English])")
-	force := fs.Bool("force", false, "replace existing output")
+	out := fs.String("output", "", "separate output directory (default: .local/build/ps1-english)")
+	game := fs.String("game", "", "original game CUE (also accepted as positional argument)")
+	force := fs.Bool("force", false, "replace output files in selected safe output directory")
 	verbose := fs.Bool("verbose", false, "list every patched string")
 	var translations strList
 	fs.Var(&translations, "translation", "specific translation JSON (repeatable)")
 	if e := fs.Parse(argv); e != nil {
 		return e
 	}
-	if fs.NArg() != 1 {
-		return errors.New("usage: tokimemo build|preflight [options] GAME.cue")
+	if fs.NArg() > 1 || (*game != "" && fs.NArg() != 0) {
+		return errors.New("usage: tokimemo build|preflight [--game CUE] [--output DIR] [GAME.cue]")
 	}
-	input, e := filepath.Abs(fs.Arg(0))
+	explicit := *game
+	if fs.NArg() == 1 {
+		explicit = fs.Arg(0)
+	}
+	input, e := cueChoice(root, explicit)
 	if e != nil {
-		return e
-	}
-	if e = inspect(input); e != nil {
 		return e
 	}
 	n, e := validate(root)
 	if e != nil {
 		return e
 	}
-	fmt.Printf("%sCorpus check passed%s: %d files / %d dialogue lines\n", green, reset, n.Files, n.Lines)
+	fmt.Fprintf(commandOutput, "Corpus check passed: %d files / %d dialogue lines\n", n.Files, n.Lines)
 	a := []string{"-m", "tokipatch"}
 	if preflight {
 		a = []string{"-m", "tokipatch.preflight"}
 	}
 	a = append(a, input)
-	if *out != "" && !preflight {
-		a = append(a, "-o", *out)
-	}
-	if *force && !preflight {
-		a = append(a, "--force")
-	}
-	if *verbose && !preflight {
-		a = append(a, "--verbose")
+	if !preflight {
+		target := *out
+		if target == "" {
+			target, e = config.Output(root)
+			if e != nil {
+				return e
+			}
+		}
+		target, e = filepath.Abs(target)
+		if e != nil {
+			return e
+		}
+		if e = config.SafeOutput(root, input, target); e != nil {
+			return e
+		}
+		if e = guardOutputTracks(input, target); e != nil {
+			return e
+		}
+		a = append(a, "-o", target)
+		if *force {
+			a = append(a, "--force")
+		}
+		if *verbose {
+			a = append(a, "--verbose")
+		}
 	}
 	for _, t := range translations {
 		a = append(a, "-t", t)
 	}
-	return runPython(root, a...)
+	if !preflight {
+		previous := commandOutput
+		commandOutput = &stageWriter{destination: previous}
+		defer func() { commandOutput = previous }()
+	}
+	if e = runPython(root, a...); e != nil {
+		return e
+	}
+	if !preflight {
+		fmt.Fprintf(commandOutput, "Verification: Python preflight and patch application passed; emulator runtime NOT verified by this command.\n")
+	}
+	return nil
 }
 func cmdTests(root string) error {
 	if e := runProcess(root, "go", "test", "./..."); e != nil {
@@ -359,17 +475,20 @@ func cmdTests(root string) error {
 func cmdExtract(root string, args []string) error {
 	fs := flag.NewFlagSet("extract", flag.ContinueOnError)
 	out := fs.String("output", "", "directory for extracted game files (ignored by Git)")
+	game := fs.String("game", "", "original game CUE")
+	pythonFallback := fs.Bool("python", false, "use legacy Python extraction instead of native Go")
 	if e := fs.Parse(args); e != nil {
 		return e
 	}
-	if fs.NArg() != 1 {
-		return errors.New("usage: tokimemo extract [--output DIR] GAME.cue")
+	if fs.NArg() > 1 || (*game != "" && fs.NArg() != 0) {
+		return errors.New("usage: tokimemo extract [--python] [--game GAME.cue] [--output DIR] [GAME.cue]")
 	}
-	cue, e := filepath.Abs(fs.Arg(0))
+	explicit := *game
+	if fs.NArg() == 1 {
+		explicit = fs.Arg(0)
+	}
+	cue, e := cueChoice(root, explicit)
 	if e != nil {
-		return e
-	}
-	if _, e = parseCue(cue); e != nil {
 		return e
 	}
 	target := *out
@@ -380,12 +499,24 @@ func cmdExtract(root string, args []string) error {
 	if e != nil {
 		return e
 	}
-	if _, e = os.Stat(target); e == nil {
-		return errors.New("output directory already exists; choose an empty new directory")
-	}
-	if e = runPython(root, "legacy_scripts/tools/extract.py", cue, target); e != nil {
+	if e = config.SafeOutput(root, cue, target); e != nil {
 		return e
 	}
+	if _, e = os.Stat(target); e == nil {
+		return errors.New("output directory exists; choose a new directory")
+	}
+	if *pythonFallback {
+		return runPython(root, "legacy_scripts/tools/extract.py", cue, target)
+	}
+	info, e := parseCue(cue)
+	if e != nil {
+		return e
+	}
+	extracted, e := nativeExtract(info.Data, info.Sectors, target)
+	if e != nil {
+		return e
+	}
+	say("Extracted", fmt.Sprintf("%d files to %s (native Go)", extracted, target))
 	return nil
 }
 func cmdLegacy(root string, args []string) error {
@@ -415,36 +546,79 @@ func cmdDoctor(root string) {
 			say(x, amber+"not found"+reset)
 		}
 	}
-	fmt.Println("Legacy PS1 patcher requires Python standard library only; Go CLI requires Go 1.23+ to compile.")
+	fmt.Fprintln(commandOutput, "Legacy PS1 patcher requires Python standard library only; Go CLI requires Go 1.23+ to compile.")
 }
 func usage() {
 	fmt.Print(bold + "Tokimeki Memorial — Human Overhaul\n" + reset)
-	fmt.Println("  tokimemo                    Interactive terminal menu")
-	fmt.Println("  tokimemo doctor             Check available dependencies")
-	fmt.Println("  tokimemo status             Count and validate translation corpus")
-	fmt.Println("  tokimemo validate           Validate translation resources (no disc)")
-	fmt.Println("  tokimemo inspect GAME.cue   Inspect CUE/BIN structure")
-	fmt.Println("  tokimemo preflight GAME.cue Validate patch against original disc, no writes")
-	fmt.Println("  tokimemo build GAME.cue     Build patched PS1 BIN/CUE via verified Python backend")
-	fmt.Println("    --output DIR  --force  --verbose  --translation FILE.json")
-	fmt.Println("  tokimemo extract GAME.cue   Extract files, default ./extracted")
-	fmt.Println("  tokimemo test               Run Go tests and inherited Python tests")
-	fmt.Println("  tokimemo legacy FILE.py     Run a legacy Python utility (not PowerShell)")
-	fmt.Println("  tokimemo emulator CUE       Launch DuckStation with a game CUE")
-	fmt.Println("  tokimemo help")
+	fmt.Println("  tokimemo                  Interactive terminal dashboard")
+	fmt.Println("  tokimemo doctor           Check dependencies and configured game")
+	fmt.Println("  tokimemo status|validate  Validate translation resources (read-only)")
+	fmt.Println("  tokimemo inspect [CUE]    Inspect CUE/BIN structure (auto-discovers game)")
+	fmt.Println("  tokimemo preflight [CUE]  Validate patch sites without writing")
+	fmt.Println("  tokimemo build [CUE]      Build English image via legacy production backend")
+	fmt.Println("     --game CUE --output DIR --force --verbose --translation FILE.json")
+	fmt.Println("  tokimemo config           View private path configuration")
+	fmt.Println("  tokimemo config game CUE  Validate and save a game image")
+	fmt.Println("  tokimemo config output DIR Save a separate build directory")
+	fmt.Println("  tokimemo files [CUE]      List ISO9660 disc files in native Go")
+	fmt.Println("  tokimemo codec-check      Check encoding/structure; --compare-python for full parity")
+	fmt.Println("  tokimemo planner-check    Simulate Go dialogue relocation; --compare-python for parity")
+	fmt.Println("  tokimemo graphics-check   Validate indexed PNG and 4/8bpp edits; --compare-python for parity")
+	fmt.Println("  tokimemo native-plan      Read-only full-file Go patch plan; --compare-python for hash parity")
+	fmt.Println("  tokimemo sectors [CUE]    Verify raw-sector EDC/ECC (read-only)")
+	fmt.Println("  tokimemo extract [CUE]    Native Go extraction (--python for legacy)")
+	fmt.Println("  tokimemo emulator [CUE]   Launch DuckStation")
+	fmt.Println("  tokimemo test             Go + inherited Python regression suites")
+	fmt.Println("  tokimemo legacy FILE.py   Run historic Python utility")
 }
 func launchEmulator(root string, args []string) error {
-	if len(args) != 1 {
-		return errors.New("usage: tokimemo emulator GAME.cue")
+	if len(args) > 1 {
+		return errors.New("usage: tokimemo emulator [CUE]")
 	}
-	cue, e := filepath.Abs(args[0])
+	explicit := ""
+	if len(args) == 1 {
+		explicit = args[0]
+	}
+	cue, e := cueChoice(root, explicit)
 	if e != nil {
 		return e
 	}
-	if _, e = parseCue(cue); e != nil {
-		return e
-	}
 	return runProcess(root, "duckstation", cue)
+}
+func cmdConfig(root string, args []string) error {
+	if len(args) == 0 {
+		s, e := config.Load(root)
+		if e != nil {
+			return e
+		}
+		cue, kind, ce := config.Discover(root, "", func(p string) error { _, e := parseCue(p); return e })
+		say("Saved game", s.GameCue)
+		say("Saved output", s.OutputDir)
+		if ce == nil {
+			say("Resolved CUE", cue)
+			say("Discovery", kind)
+		} else {
+			say("Game", ce.Error())
+		}
+		return nil
+	}
+	if len(args) != 2 {
+		return errors.New("usage: tokimemo config game CUE | config output DIR")
+	}
+	switch args[0] {
+	case "game":
+		return config.SetGame(root, args[1], func(p string) error {
+			if filepath.Ext(strings.ToLower(p)) != ".cue" {
+				return errors.New("CUE required")
+			}
+			_, e := parseCue(p)
+			return e
+		})
+	case "output":
+		return config.SetOutput(root, args[1])
+	default:
+		return errors.New("config subcommand must be game or output")
+	}
 }
 func entry(root, cmd string, args []string) error {
 	switch cmd {
@@ -453,6 +627,7 @@ func entry(root, cmd string, args []string) error {
 		return nil
 	case "doctor":
 		cmdDoctor(root)
+		_ = cmdConfig(root, nil)
 		return nil
 	case "status", "validate":
 		n, e := validate(root)
@@ -461,17 +636,39 @@ func entry(root, cmd string, args []string) error {
 		}
 		showCounts(n)
 		return nil
+	case "codec-check":
+		return cmdCodecCheck(root, args)
+	case "planner-check":
+		return cmdPlannerCheck(root, args)
+	case "graphics-check":
+		return cmdGraphicsCheck(root, args)
+	case "native-plan":
+		return cmdNativePlan(root, args)
 	case "inspect":
-		if len(args) != 1 {
-			return errors.New("usage: tokimemo inspect GAME.cue")
+		if len(args) > 1 {
+			return errors.New("usage: tokimemo inspect [GAME.cue]")
 		}
-		return inspect(args[0])
+		explicit := ""
+		if len(args) == 1 {
+			explicit = args[0]
+		}
+		p, e := cueChoice(root, explicit)
+		if e != nil {
+			return e
+		}
+		return inspect(p)
+	case "config":
+		return cmdConfig(root, args)
 	case "build":
 		return cmdBuild(root, args, false)
 	case "preflight":
 		return cmdBuild(root, args, true)
 	case "extract":
 		return cmdExtract(root, args)
+	case "files":
+		return cmdFiles(root, args)
+	case "sectors":
+		return cmdSectorCheck(root, args)
 	case "test":
 		return cmdTests(root)
 	case "legacy":
@@ -484,66 +681,23 @@ func entry(root, cmd string, args []string) error {
 	}
 }
 func menu(root string) error {
-	// Works over SSH and ordinary terminals without external UI dependencies.
-	opts := []struct{ label, desc, cmd string }{
-		{"Project status", "Count translated resources and check source", "status"},
-		{"Build PS1 patch", "Safe 3-stage disc validation and writing", "build"},
-		{"Preflight disc", "Verify ALL edits without changing a byte", "preflight"},
-		{"Inspect CUE", "Check tracks, data file and sector alignment", "inspect"},
-		{"Run regression tests", "Go plus legacy Python unit tests", "test"},
-		{"Extract game files", "Store copyrighted resources outside Git", "extract"},
-		{"System doctor", "Go, Python, DuckStation availability", "doctor"},
-		{"Exit", "Leave the project unchanged", "exit"},
-	}
-	reader := bufio.NewReader(os.Stdin)
-	for {
-		fmt.Print("\033[2J\033[H" + bold + cyan + "╭────────────────────────────────────────────────────────────────────╮\n" +
-			"│       TOKIMEKI MEMORIAL  ·  HUMAN OVERHAUL                        │\n" +
-			"│       PS1 BUILD & QA                               GO EDITION      │\n" +
-			"╰────────────────────────────────────────────────────────────────────╯" + reset + "\n")
-		for i, o := range opts {
-			fmt.Printf("  %s%2d%s  %-22s  %s\n", cyan, i+1, reset, o.label, o.desc)
+	return termui.Run(root, func(action string, emit io.Writer) error {
+		old := commandOutput
+		commandOutput = emit
+		defer func() { commandOutput = old }()
+		switch action {
+		case "settings_game":
+			return termui.ChooseFile(root, filepath.Join(root, ".local", "rom"), ".cue", func(p string) error {
+				return config.SetGame(root, p, func(p string) error { _, e := parseCue(p); return e })
+			})
+		case "settings_output":
+			return termui.ChooseDirectory(root, func(p string) error { return config.SetOutput(root, p) })
+		case "view_settings":
+			return cmdConfig(root, nil)
+		default:
+			return entry(root, action, nil)
 		}
-		fmt.Printf("\n%sSelect [1-%d]: %s", bold, len(opts), reset)
-		input, e := reader.ReadString('\n')
-		if e != nil && e != io.EOF {
-			return e
-		}
-		i, e := strconv.Atoi(strings.TrimSpace(input))
-		if e != nil || i < 1 || i > len(opts) {
-			if e == io.EOF {
-				return nil
-			}
-			continue
-		}
-		picked := opts[i-1]
-		if picked.cmd == "exit" {
-			return nil
-		}
-		var argv []string
-		if picked.cmd == "build" || picked.cmd == "preflight" || picked.cmd == "inspect" || picked.cmd == "extract" {
-			fmt.Print("Path to original game .cue: ")
-			p, err := reader.ReadString('\n')
-			if err != nil {
-				return err
-			}
-			p = strings.Trim(strings.TrimSpace(p), "\"'")
-			if p == "" {
-				continue
-			}
-			argv = []string{p}
-		}
-		fmt.Println()
-		start := time.Now()
-		err := entry(root, picked.cmd, argv)
-		if err != nil {
-			failure(err)
-		} else {
-			success(fmt.Sprintf("%s completed (%.1fs)", picked.cmd, time.Since(start).Seconds()))
-		}
-		fmt.Print("\nPress Enter to return to the menu...")
-		_, _ = reader.ReadString('\n')
-	}
+	})
 }
 func main() {
 	root, e := rootDir()
