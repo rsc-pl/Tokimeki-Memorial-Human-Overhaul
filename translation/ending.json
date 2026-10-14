@@ -404,7 +404,7 @@
         {
           "offset": "0x1840",
           "original": "いえ。\n伊集院レイ、本人です。",
-          "text": "No.\nI'm Rei Ijuin, herself."
+          "text": "No.\nI'm Ijuin Rei, herself."
         },
         {
           "offset": "0x1860",
@@ -1849,7 +1849,7 @@
         {
           "offset": "0x7844",
           "original": "外井雪之丞で、\nございます。",
-          "text": "Yukinojo Sotoi,\nat your service."
+          "text": "Sotoi Yukinojo,\nat your service."
         },
         {
           "offset": "0x7860",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x7cc8",
           "original": "今まで、ごめんなさい。\n私、館林見晴っていいます。",
-          "text": "I'm sorry for everything.\nI'm Miharu Tatebayashi."
+          "text": "I'm sorry for everything.\nI'm Tatebayashi Miharu."
         },
         {
           "offset": "0x7cfc",

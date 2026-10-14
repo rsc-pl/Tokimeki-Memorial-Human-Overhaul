@@ -125,7 +125,7 @@
       {"offset": "0x22f8", "original": "あっ、君は…。", "text": "Oh, you're..."},
       {"offset": "0x2308", "original": "{-謎の女}…なんて。\n本当は、\n偶然なんかじゃないの。", "text": "{-???}...Just kidding.\nActually,\nit was never an accident."},
       {"offset": "0x233c", "original": "それは、そうだろうけど。", "text": "Well, I figured."},
-      {"offset": "0x2358", "original": "やっぱり、わかっちゃった？\n私、館林見晴って言います。\n何度もぶつかったりして、\nごめんなさい。", "text": "You figured it out, huh?\nI'm Miharu Tatebayashi.\nSorry for bumping\ninto you so often."},
+      {"offset": "0x2358", "original": "やっぱり、わかっちゃった？\n私、館林見晴って言います。\n何度もぶつかったりして、\nごめんなさい。", "text": "You figured it out, huh?\nI'm Tatebayashi Miharu.\nSorry for bumping\ninto you so often."},
       {"offset": "0x23b8", "original": "いや、別にいいけど。", "text": "No, it's fine."},
       {"offset": "0x23dc", "original": "どうしたの。", "text": "What's wrong?"},
       {"offset": "0x23ec", "original": "うぅん、なんでもない。\nそれより、散歩でもしようよ。", "text": "Nothing at all.\nAnyway, let's take a walk."},
