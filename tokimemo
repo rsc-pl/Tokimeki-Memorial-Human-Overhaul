@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+bin="$root/.local/bin/tokimemo"
+if [[ ! -x "$bin" || "$root/cmd/tokimemo/main.go" -nt "$bin" || "$root/go.mod" -nt "$bin" ]]; then
+  if ! command -v go >/dev/null 2>&1; then
+    printf '%s\n' 'Go 1.23+ is required for the Human Overhaul CLI (the inherited Python backend is not a replacement for the Go frontend).' >&2
+    exit 1
+  fi
+  mkdir -p "$root/.local/bin"
+  ( cd "$root" && go build -buildvcs=false -o "$bin" ./cmd/tokimemo )
+fi
+cd "$root"
+exec "$bin" "$@"
