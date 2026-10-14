@@ -1,179 +1,857 @@
 {
   "description": "Saki's special events: all of SERIFU/EVENT_NI.BIN (entries 61-66: the lunches, drowning at the pool, the baseball game, the lost child, her cold on the school trip). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_NI.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "さて、昼飯だ。\n早く学食に行かないと…。", "text": "Okay, lunchtime.\nTo the cafeteria, quick."},
-      {"offset": "0x30", "original": "あっ、{G}。", "text": "Oh, {G}"},
-      {"offset": "0x40", "original": "これから昼食でしょう？\nお弁当を持ってきたの？", "text": "You're off to lunch, right?\nDid you bring a lunch?"},
-      {"offset": "0x70", "original": "いや、違うよ。\nこれから、\n学食に行こうと思って。", "text": "No, I didn't.\nI was just about\nto go to the cafeteria."},
-      {"offset": "0xa4", "original": "それなら良かった。", "text": "Oh, good."},
-      {"offset": "0xb8", "original": "えっ、何が？", "text": "Huh, what's good?"},
-      {"offset": "0xc8", "original": "あのね…。\nちょっと\nお弁当作りすぎちゃって\n困ってたんだ。", "text": "Well...\nI kind of\nmade too much lunch,\nand I'm stuck with it."},
-      {"offset": "0x104", "original": "これは、おいしい\nシチュエーションだぞ。", "text": "Now this is a\ntasty situation."},
-      {"offset": "0x12c", "original": "口に合うかどうか\nわからないけど…。\nよかったら\n食べてくれない？", "text": "I don't know if\nyou'll like it...\nbut if you want,\nwould you eat some?"},
-      {"offset": "0x16c", "original": "食べる、食べる。\n食費も助かるし、\n嬉しいなぁ。", "text": "I'll eat, I'll eat!\nIt saves me money too.\nThis is great."},
-      {"offset": "0x19c", "original": "良かった…。\n今日は天気もいいから、\n外で一緒に食べない？", "text": "I'm glad...\nIt's nice out today,\nso let's eat outside?"},
-      {"offset": "0x1d8", "original": "別にいいよ。\nじゃあ、中庭に行こうか。", "text": "Sure.\nLet's go to the courtyard."},
-      {"offset": "0x200", "original": "うん。\n行きましょう。", "text": "Okay.\nLet's go."},
-      {"offset": "0x244", "original": "はい、どうぞ。\n味の保証は\nしないけど…。", "text": "Here you go.\nNo promises\nabout the taste..."},
-      {"offset": "0x270", "original": "それじゃ、遠慮なく\nいただきます。", "text": "Then I'll dig\nright in."},
-      {"offset": "0x294", "original": "モグモグ", "text": "Munch munch"},
-      {"offset": "0x2a0", "original": "ゴックン", "text": "Gulp"},
-      {"offset": "0x2ac", "original": "ど、どう？", "text": "H-how is it?"},
-      {"offset": "0x2b8", "original": "う、うっ…。", "text": "Ugh, ugh..."},
-      {"offset": "0x2c8", "original": "えっ、どうしたの？\n大丈夫？", "text": "Huh, what's wrong?\nAre you okay?"},
-      {"offset": "0x2e4", "original": "うまい。", "text": "Delicious!"},
-      {"offset": "0x2f0", "original": "びっくりさせないでよ。\n本当に、心配したんだから。\nで、味はどう？", "text": "Don't scare me like that.\nI was really worried.\nSo, how does it taste?"},
-      {"offset": "0x334", "original": "冗談抜きで、おいしいよ。\n{G}って、\n料理の天才だね。", "text": "No joke, it's delicious.\nGosh, {G}\nyou're a genius cook."},
-      {"offset": "0x368", "original": "そ、そんなことないけど、\n作ってきてよかった…。\nたくさんあるから\nどんどん食べてね。", "text": "Oh, not really, but\nI'm glad I made it...\nThere's plenty, so\nhelp yourself."},
-      {"offset": "0x3bc", "original": "こんなおいしい\n手作りのお弁当が食べれて\n俺は幸せ者だなぁ。", "text": "Getting to eat such\na tasty homemade lunch,\nI'm one lucky guy."},
-      {"offset": "0x42c", "original": "また、\n作りすぎちゃって…。", "text": "I made too\nmuch again..."},
-      {"offset": "0x448", "original": "{G}のお弁当なら\nいつでも歓迎だよ。", "text": "Your lunches, {G}\nare always welcome."},
-      {"offset": "0x46c", "original": "それじゃ\n今日も外で\n一緒に食べましょう？", "text": "Then let's\neat outside\ntogether again?"},
-      {"offset": "0x498", "original": "そうしよう。", "text": "Let's do that."},
-      {"offset": "0x4b8", "original": "はい、どうぞ。\nあんまり中身は\n変わらないけど。", "text": "Here you go.\nIt's pretty much\nthe same as before."},
-      {"offset": "0x4e8", "original": "それじゃ、\n遠慮しないで、\nいただきます。", "text": "Then I won't\nhold back.\nDig in!"},
-      {"offset": "0x514", "original": "うふ、おいしい？", "text": "Hee hee, is it good?"},
-      {"offset": "0x528", "original": "モグモグ、\nすごくおいしいよ。\nモグモグ。", "text": "Munch munch,\nit's really good.\nMunch munch."},
-      {"offset": "0x554", "original": "良かった…。", "text": "I'm glad..."},
-      {"offset": "0x578", "original": "お昼ご飯どうするの？", "text": "What'll you do for lunch?"},
-      {"offset": "0x590", "original": "これから、\n学食に行こうと思って。", "text": "I was going to\nthe cafeteria."},
-      {"offset": "0x5b4", "original": "それなら、\n一緒にお弁当食べない？", "text": "Then how about\nsharing my lunch?"},
-      {"offset": "0x5d8", "original": "えっ、お弁当？", "text": "Huh, your lunch?"},
-      {"offset": "0x5e8", "original": "この前喜んで\nもらえたから、つい…。\n迷惑だった？", "text": "You liked it so much\nlast time, so I...\nIs that a bother?"},
-      {"offset": "0x61c", "original": "い、いや、全然。\n{G}の料理なら、\nいつでも大歓迎だよ。", "text": "N-no, not at all.\nYour cooking, {G}\nis always welcome."},
-      {"offset": "0x650", "original": "良かった…。\n今日は天気もいいから、\n外で一緒に食べない？", "text": "I'm glad...\nIt's nice out today,\nso let's eat outside?"},
-      {"offset": "0x68c", "original": "別にいいよ。\nじゃあ、中庭に行こうか。", "text": "Sure.\nLet's go to the courtyard."},
-      {"offset": "0x6b4", "original": "うん。\n行きましょう。", "text": "Okay.\nLet's go."},
-      {"offset": "0x6f0", "original": "はい、どうぞ。\n味の保証は\nしないけど…。", "text": "Here you go.\nNo promises\nabout the taste..."},
-      {"offset": "0x71c", "original": "それじゃ、\n遠慮しないで、\nいただきます。", "text": "Then I won't\nhold back.\nDig in!"},
-      {"offset": "0x748", "original": "うふふ、おいしい？", "text": "Hee hee, is it good?"},
-      {"offset": "0x75c", "original": "モグモグ、\nすごくおいしいよ。\nモグモグ。", "text": "Munch munch,\nit's really good.\nMunch munch."},
-      {"offset": "0x788", "original": "良かった…。", "text": "I'm glad..."},
-      {"offset": "0x798", "original": "こんなおいしい\n手作りのお弁当が食べれて\n俺は幸せ者だ。", "text": "Getting to eat such\na tasty homemade lunch,\nI'm one lucky guy."},
-      {"offset": "0xe24", "original": "今日はお弁当を\n作ってきたの。\n一緒に食べましょう。", "text": "I made lunch\nfor today.\nLet's eat together."},
-      {"offset": "0xe58", "original": "本当？\n嬉しいな。", "text": "Really?\nAwesome."},
-      {"offset": "0xe74", "original": "はい、どうぞ。\n時間をかけて作ったから、\nおいしいと思うんだけど。", "text": "Here you go.\nI took my time with it,\nso it should be good."},
-      {"offset": "0xeb8", "original": "それじゃ、遠慮なく\nいただきます。", "text": "Then I'll dig\nright in."},
-      {"offset": "0xee4", "original": "ど、どう？", "text": "H-how is it?"},
-      {"offset": "0xef0", "original": "う、うっ…。", "text": "Ugh, ugh..."},
-      {"offset": "0xf00", "original": "えっ、どうしたの？\n大丈夫？", "text": "Huh, what's wrong?\nAre you okay?"},
-      {"offset": "0xf1c", "original": "うまい。", "text": "Delicious!"},
-      {"offset": "0xf28", "original": "び、びっくりさせないでよ。\n本当に心配したんだから。\nで、味はどう？", "text": "D-don't scare me like that.\nI was really worried.\nSo, how does it taste?"},
-      {"offset": "0xf6c", "original": "冗談抜きで、おいしいよ。\n{G}って、\n料理の天才だね。", "text": "No joke, it's delicious.\nGosh, {G}\nyou're a genius cook."},
-      {"offset": "0xfa0", "original": "そ、そんなことないよ。\nありがとう。", "text": "Oh, it's nothing special.\nThank you."},
-      {"offset": "0xfc4", "original": "時間をかけたって、\nどのぐらいかけたの？", "text": "You took your time?\nHow long did it take?"},
-      {"offset": "0xfec", "original": "朝の５時に起きて、\n作り始めたから…。", "text": "I got up at 5 a.m.\nto start making it..."},
-      {"offset": "0x1014", "original": "そ、そんなに早起きして、\n作ってくれたんだ。\nありがとう。", "text": "Y-you got up that early\nto make it for me?\nThank you."},
-      {"offset": "0x1050", "original": "いいの。\n私、料理好きだし…。\nそれにおいしいって\n言われるのは嬉しいし…。", "text": "It's fine.\nI love cooking...\nAnd I'm happy when\nsomeone says it's good..."},
-      {"offset": "0x109c", "original": "いいねぇ。\nお嫁さんに\n欲しいくらいだよ。", "text": "That's great.\nI'd almost want\nyou as my wife."},
-      {"offset": "0x10c8", "original": "えっ…？\nあっ、たくさんあるから、\nどんどん食べてね。", "text": "Huh...?\nOh, there's plenty,\nso help yourself."},
-      {"offset": "0x1100", "original": "こんなおいしい\n手作りのお弁当が食べれて\n俺は幸せ者だなぁ。", "text": "Getting to eat such\na tasty homemade lunch,\nI'm one lucky guy."},
-      {"offset": "0x1174", "original": "相変わらずおいしいね。\n特に、今日のは最高。", "text": "Delicious as always.\nToday's is the best yet."},
-      {"offset": "0x11a0", "original": "あ、ありがとう。\n早起きした\n甲斐があったわ。", "text": "Th-thank you.\nGetting up early\nwas worth it."},
-      {"offset": "0x11d0", "original": "早起きって、\n何時に起きたの？", "text": "Early?\nWhen did you get up?"},
-      {"offset": "0x11f0", "original": "朝の５時ぐらいかな…。", "text": "Around 5 a.m., I guess..."},
-      {"offset": "0x1208", "original": "そ、そんなに早起きして、\n作ってくれたんだ。\nありがとう。", "text": "Y-you got up that early\nto make it for me?\nThank you."},
-      {"offset": "0x1244", "original": "いいの。\n私料理好きだし…。\nそれにおいしいって\n言われるのは嬉しいし…。", "text": "It's fine.\nI love cooking...\nAnd I'm happy when\nsomeone says it's good..."},
-      {"offset": "0x128c", "original": "いいねぇ。\nお嫁さんに\n欲しいくらいだよ。", "text": "That's great.\nI'd almost want\nyou as my wife."},
-      {"offset": "0x12b8", "original": "えっ…？\nあっ、たくさんあるから、\nどんどん食べてね。", "text": "Huh...?\nOh, there's plenty,\nso help yourself."},
-      {"offset": "0x12f0", "original": "あぁ、俺は幸せだぁ。", "text": "Ahh, I'm so happy."},
-      {"offset": "0x1674", "original": "空いてるね。\nほら、\n一緒に泳ぎましょう。", "text": "It's empty.\nCome on,\nlet's swim together."},
-      {"offset": "0x16a0", "original": "俺は、少し休んでから\n泳ぐから。", "text": "I'll rest a bit\nbefore I swim."},
-      {"offset": "0x16c0", "original": "根性が無いなぁ。\nそれじゃ、\nちょっと泳いでくるね。", "text": "No guts, huh?\nThen I'll go\nswim for a bit."},
-      {"offset": "0x1700", "original": "あれ、プールの方が\n騒がしいぞ。", "text": "Huh, there's a\ncommotion at the pool."},
-      {"offset": "0x1720", "original": "あっ。\n{G}が溺れてる。\n助けなくちゃ。", "text": "Oh no.\n{G} is drowning.\nI have to save her."},
-      {"offset": "0x174c", "original": "{G}、{G}。\n駄目だ。\n意識が戻らない。", "text": "{G}, {G}!\nIt's no good.\nShe won't come to."},
-      {"offset": "0x1770", "original": "しょうがない。\nマウストゥマウスで\n人工呼吸しかない。", "text": "No choice.\nI'll have to give her\nsome mouth-to-mouth."},
-      {"offset": "0x17a8", "original": "よし、行くぞ。", "text": "Okay, here goes."},
-      {"offset": "0x17c4", "original": "う、ううん。", "text": "Mm, mmm..."},
-      {"offset": "0x17d4", "original": "残念ながら、\nいや、良かった。\n意識が戻ったみたいだ。", "text": "Too bad... I mean,\nthank goodness.\nShe's coming to."},
-      {"offset": "0x1814", "original": "あれ？\n私、どうして\nこんな所で…。", "text": "Huh?\nWhy am I\nlying here...?"},
-      {"offset": "0x1838", "original": "{G}。\n大丈夫？\n起き上がれる？", "text": "Oh, {G}\nAre you okay?\nCan you sit up?"},
-      {"offset": "0x1854", "original": "うん。\n平気よ。", "text": "Yeah.\nI'm fine."},
-      {"offset": "0x1870", "original": "私溺れちゃったんだ。\nもしかして、\n助けてくれたの？", "text": "I drowned, didn't I?\nDid you\nsave me?"},
-      {"offset": "0x18a4", "original": "う、うん。\n一応ね…。", "text": "Y-yeah.\nSort of..."},
-      {"offset": "0x18c4", "original": "ありがとう。\n助けてくれて…。", "text": "Thank you.\nFor saving me..."},
-      {"offset": "0x18e4", "original": "いや、当然のことだよ。\nでも、心配したんだよ。\nなかなか、意識が\n戻らないから人工呼吸を…。", "text": "No, it was nothing.\nBut I was worried.\nYou wouldn't come to,\nso I was going to..."},
-      {"offset": "0x1948", "original": "えっ？\n人工呼吸？\nし、しちゃったの？", "text": "Huh?\nMouth-to-mouth?\nD-did you do it?"},
-      {"offset": "0x1970", "original": "いや、しようと思ったら、\nちょうど\n意識が戻ったんだよ。", "text": "No, just as I was\nabout to,\nyou came to."},
-      {"offset": "0x19a8", "original": "そ、そう…。\nもう少し、気絶してれば\nよかったかな…。", "text": "O-oh...\nMaybe I should've\nstayed out a bit longer..."},
-      {"offset": "0x19e0", "original": "えっ？\n今なんて…。", "text": "Huh?\nWhat did you..."},
-      {"offset": "0x1a04", "original": "な、何も…。\nそ、そんな事よりも、\n少し休みたいな。", "text": "N-nothing...\nA-anyway,\nI'd like to rest a bit."},
-      {"offset": "0x1a38", "original": "それじゃあこっちで、\nゆっくり休みなよ。", "text": "Then come over here\nand take it easy."},
-      {"offset": "0x1a60", "original": "うん。\nそうする。", "text": "Okay.\nI will."},
-      {"offset": "0x1db4", "original": "わぁ、\nやってるやってる。", "text": "Wow,\nthey're playing!"},
-      {"offset": "0x1dd0", "original": "{G}って、\n野球好きなんだね。", "text": "Gosh, {G}\nyou really love baseball."},
-      {"offset": "0x1dec", "original": "見るのは大好き。\n私、この試合\nすごく見たかったの。", "text": "I love watching it.\nI really wanted\nto see this game."},
-      {"offset": "0x1e20", "original": "そ、そう。\n良かったね。", "text": "Oh, I see.\nGlad you came."},
-      {"offset": "0x1e48", "original": "あっ、抜けたわ。\nヒットよ。", "text": "Oh, it got through!\nA hit!"},
-      {"offset": "0x1e64", "original": "頑張って。\nホームランよ。", "text": "Go for it!\nHit a homer!"},
-      {"offset": "0x1e80", "original": "あの、{G}…？", "text": "Um, {G}"},
-      {"offset": "0x1e8c", "original": "あっ、途中で\n諦めちゃ駄目よ。", "text": "Oh, don't give up\nhalfway!"},
-      {"offset": "0x1eac", "original": "駄目だ。\n完全に野球に\n熱中してる。", "text": "No use.\nShe's totally\ncaught up in the game."},
-      {"offset": "0x1ee8", "original": "ん？\nこっちに気付いて\nくれたかな？", "text": "Hm?\nDid she finally\nnotice me?"},
-      {"offset": "0x1f10", "original": "ほら、\nあなたも一緒に、\n応援しましょうよ。", "text": "Come on,\nyou cheer\nwith me too!"},
-      {"offset": "0x1f3c", "original": "そ、そうだね。\n（駄目だこりゃ。）", "text": "R-right.\n(This is hopeless.)"},
-      {"offset": "0x211c", "original": "どうしたの？", "text": "What's up?"},
-      {"offset": "0x212c", "original": "あの子、\n迷子じゃない？", "text": "Isn't that kid\nlost?"},
-      {"offset": "0x2144", "original": "そ、そうかもしれないね。", "text": "M-maybe so."},
-      {"offset": "0x2160", "original": "私、\nちょっと行ってくる。", "text": "I'll go\ncheck on him."},
-      {"offset": "0x2190", "original": "{G}って、\n面倒見がいいんだよな。", "text": "Gosh, {G}\nreally looks after people."},
-      {"offset": "0x21b4", "original": "やっぱりこの子\n迷子みたい。", "text": "He's lost,\njust as I thought."},
-      {"offset": "0x21d0", "original": "どうしようか？\n迷子案内センターにでも、\n連れていこうか？", "text": "What should we do?\nShould we take him to\nthe lost child center?"},
-      {"offset": "0x220c", "original": "うん、そうしよう。", "text": "Yeah, let's do that."},
-      {"offset": "0x222c", "original": "{>迷子}エーン。\nやだ、やだ、やだ、ここから\n動きたくない。", "text": "{>Tyke}Waaah!\nNo, no, no! I don't\nwanna move from here!"},
-      {"offset": "0x2268", "original": "何だと、このくそガキ。", "text": "Why, you little twerp."},
-      {"offset": "0x2280", "original": "困っちゃったね。", "text": "This is a problem."},
-      {"offset": "0x2294", "original": "本当。\nどうしようか？", "text": "Yeah.\nWhat do we do?"},
-      {"offset": "0x22ac", "original": "それじゃ、私がここで\nこの子を慰めてるから、\n悪いけど、迷子センターに\n行ってきてくれる？", "text": "I'll stay here and\ncomfort him, so\ncould you go to the\nlost child center?"},
-      {"offset": "0x2304", "original": "しょうがない。\n行ってくるか。", "text": "No choice.\nOff I go."},
-      {"offset": "0x2338", "original": "迷子のご案内を申し上げます。", "text": "Lost child announcement."},
-      {"offset": "0x2358", "original": "ふぅ…。\nとりあえず、放送はされた。\n{G}の所に戻ろう。", "text": "Phew...\nAt least it was announced.\nBack to {G}"},
-      {"offset": "0x2394", "original": "あれ？\nあのくそ、\nいや、あの子は？", "text": "Huh?\nWhere's the brat,\nI mean, the kid?"},
-      {"offset": "0x23b8", "original": "放送されたら、\nすぐにお母さんが\n迎えに来てくれたわ。", "text": "Right after the\nannouncement, his mom\ncame to get him."},
-      {"offset": "0x23f0", "original": "そ、そう。\n良かったね。", "text": "Oh, I see.\nGlad you came."},
-      {"offset": "0x2408", "original": "うん。\n本当に良かった。\nありがとね。", "text": "Yeah.\nI'm really glad.\nThanks."},
-      {"offset": "0x2430", "original": "い、いや。\n何てこと無いよ。\n（{G}の頼みだもん。）", "text": "N-no.\nIt was nothing.\n(Anything for {G})"},
-      {"offset": "0x2758", "original": "よう。おい聞いてるか？", "text": "Yo. Hey, you heard?"},
-      {"offset": "0x2770", "original": "なんだ。好雄か。", "text": "Oh, Yoshio."},
-      {"offset": "0x2784", "original": "虹野さんが、\n風邪でダウンしたらしいぜ。", "text": "They say Nijino-san's\ndown with a cold."},
-      {"offset": "0x27ac", "original": "えっ、虹野さんが？", "text": "Huh, Nijino-san is?"},
-      {"offset": "0x27c0", "original": "おまえが昨日、\n無理させたんじゃないのか？", "text": "Didn't you wear\nher out yesterday?"},
-      {"offset": "0x27ec", "original": "俺は、何もしてないぞ。", "text": "I didn't do anything."},
-      {"offset": "0x2804", "original": "ふーんそうなのか？\nでも、一応虹野さんのところに\n顔出しておけよ。", "text": "Oh, really?\nStill, you should\ngo see Nijino-san."},
-      {"offset": "0x2848", "original": "わかったよ。じゃあな。", "text": "Got it. See ya."},
-      {"offset": "0x2880", "original": "もう、消灯の時間だ。", "text": "It's already lights-out."},
-      {"offset": "0x289c", "original": "しょうがないな。\n虹野さんの様子が\n気になるけど、寝るか。", "text": "Oh well.\nI worry about Nijino-san,\nbut I need to sleep."},
-      {"offset": "0x28dc", "original": "今日は、自由行動の日だ。\n{G}と、一緒に行く\n約束なんだけど…。", "text": "Today's a free day.\n{G} and I were\nsupposed to go out..."},
-      {"offset": "0x2918", "original": "昨日、好雄に\n風邪でダウンと聞いたけど、\nそんなにひどかったんだ。", "text": "Yoshio said yesterday\nshe was down with a cold.\nIt must be that bad."},
-      {"offset": "0x295c", "original": "{G}の部屋に行ってみよう。{q}もう少し待つ", "text": "Go to {G}'s room.{q}Wait a little longer"},
-      {"offset": "0x2990", "original": "{G}。{p}だけれど。\n大丈夫？", "text": "{G}, it is {p}\nAre you okay?"},
-      {"offset": "0x29a8", "original": "返事がないぞ。ま、まさか。", "text": "No answer. Don't tell me..."},
-      {"offset": "0x29cc", "original": "に、{G}大丈夫？", "text": "S-{G}, okay?"},
-      {"offset": "0x29dc", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x29e8", "original": "どうしてここにいるの？", "text": "What are you doing here?"},
-      {"offset": "0x2a00", "original": "{G}が、病気なのに\n一人でなんか行けないよ。", "text": "While {G} is sick,\nI can't go off alone."},
-      {"offset": "0x2a2c", "original": "えっ…。", "text": "Oh..."},
-      {"offset": "0x2a38", "original": "そうだ。\nタオル濡らして来ようか。", "text": "I know.\nI'll get a wet towel."},
-      {"offset": "0x2a5c", "original": "ううん。平気だから。\n自分でやるからいいわよ。", "text": "No, I'm okay.\nI can do it myself."},
-      {"offset": "0x2a8c", "original": "そんなことないよ。\nいいから、{G}は、\n横になってて。", "text": "No, you can't.\nOkay, {G}\njust lie down."},
-      {"offset": "0x2ac0", "original": "それじゃ、お願いしようかな。", "text": "Then I'll let you."},
-      {"offset": "0x2b08", "original": "つっ、冷たい。", "text": "Ooh, cold."},
-      {"offset": "0x2b18", "original": "どう、気持ち良い？", "text": "How's that, feel good?"},
-      {"offset": "0x2b34", "original": "うん。ありがとう。", "text": "Yeah. Thank you."},
-      {"offset": "0x2b48", "original": "今日は、\nずっとそばにいるから、\n安心して眠ってて。", "text": "Today\nI'll stay right here,\nso sleep easy."},
-      {"offset": "0x2b7c", "original": "ずっと、\n風邪、ひいていたいな…。", "text": "I wish I could\nstay sick forever..."},
-      {"offset": "0x2ba0", "original": "えっ？。今なんて…。", "text": "Huh? What did you..."},
-      {"offset": "0x2bc8", "original": "な、何も…。", "text": "N-nothing..."},
-      {"offset": "0x3010", "original": "{P}。", "text": "{P}!"},
-      {"offset": "0x3014", "original": "パクッ", "text": "Chomp"},
-      {"offset": "0x301c", "original": "{G}。", "text": "Um, {G}"},
-      {"offset": "0x3020", "original": "あれ？", "text": "Huh?"},
-      {"offset": "0x3028", "original": "はい。", "text": "Here."}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_NI.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "さて、昼飯だ。\n早く学食に行かないと…。",
+          "text": "Okay, lunchtime.\nTo the cafeteria, quick."
+        },
+        {
+          "offset": "0x30",
+          "original": "あっ、{G}。",
+          "text": "Oh, {G}"
+        },
+        {
+          "offset": "0x40",
+          "original": "これから昼食でしょう？\nお弁当を持ってきたの？",
+          "text": "You're off to lunch, right?\nDid you bring a lunch?"
+        },
+        {
+          "offset": "0x70",
+          "original": "いや、違うよ。\nこれから、\n学食に行こうと思って。",
+          "text": "No, I didn't.\nI was just about\nto go to the cafeteria."
+        },
+        {
+          "offset": "0xa4",
+          "original": "それなら良かった。",
+          "text": "Oh, good."
+        },
+        {
+          "offset": "0xb8",
+          "original": "えっ、何が？",
+          "text": "Huh, what's good?"
+        },
+        {
+          "offset": "0xc8",
+          "original": "あのね…。\nちょっと\nお弁当作りすぎちゃって\n困ってたんだ。",
+          "text": "Well...\nI kind of\nmade too much lunch,\nand I'm stuck with it."
+        },
+        {
+          "offset": "0x104",
+          "original": "これは、おいしい\nシチュエーションだぞ。",
+          "text": "Now this is a\ntasty situation."
+        },
+        {
+          "offset": "0x12c",
+          "original": "口に合うかどうか\nわからないけど…。\nよかったら\n食べてくれない？",
+          "text": "I don't know if\nyou'll like it...\nbut if you want,\nwould you eat some?"
+        },
+        {
+          "offset": "0x16c",
+          "original": "食べる、食べる。\n食費も助かるし、\n嬉しいなぁ。",
+          "text": "I'll eat, I'll eat!\nIt saves me money too.\nThis is great."
+        },
+        {
+          "offset": "0x19c",
+          "original": "良かった…。\n今日は天気もいいから、\n外で一緒に食べない？",
+          "text": "I'm glad...\nIt's nice out today,\nso let's eat outside?"
+        },
+        {
+          "offset": "0x1d8",
+          "original": "別にいいよ。\nじゃあ、中庭に行こうか。",
+          "text": "Sure.\nLet's go to the courtyard."
+        },
+        {
+          "offset": "0x200",
+          "original": "うん。\n行きましょう。",
+          "text": "Okay.\nLet's go."
+        },
+        {
+          "offset": "0x244",
+          "original": "はい、どうぞ。\n味の保証は\nしないけど…。",
+          "text": "Here you go.\nNo promises\nabout the taste..."
+        },
+        {
+          "offset": "0x270",
+          "original": "それじゃ、遠慮なく\nいただきます。",
+          "text": "Then I'll dig\nright in."
+        },
+        {
+          "offset": "0x294",
+          "original": "モグモグ",
+          "text": "Munch munch"
+        },
+        {
+          "offset": "0x2a0",
+          "original": "ゴックン",
+          "text": "Gulp"
+        },
+        {
+          "offset": "0x2ac",
+          "original": "ど、どう？",
+          "text": "H-how is it?"
+        },
+        {
+          "offset": "0x2b8",
+          "original": "う、うっ…。",
+          "text": "Ugh, ugh..."
+        },
+        {
+          "offset": "0x2c8",
+          "original": "えっ、どうしたの？\n大丈夫？",
+          "text": "Huh, what's wrong?\nAre you okay?"
+        },
+        {
+          "offset": "0x2e4",
+          "original": "うまい。",
+          "text": "Delicious!"
+        },
+        {
+          "offset": "0x2f0",
+          "original": "びっくりさせないでよ。\n本当に、心配したんだから。\nで、味はどう？",
+          "text": "Don't scare me like that.\nI was really worried.\nSo, how does it taste?"
+        },
+        {
+          "offset": "0x334",
+          "original": "冗談抜きで、おいしいよ。\n{G}って、\n料理の天才だね。",
+          "text": "No joke, it's delicious.\nGosh, {G}\nyou're a genius cook."
+        },
+        {
+          "offset": "0x368",
+          "original": "そ、そんなことないけど、\n作ってきてよかった…。\nたくさんあるから\nどんどん食べてね。",
+          "text": "Oh, not really, but\nI'm glad I made it...\nThere's plenty, so\nhelp yourself."
+        },
+        {
+          "offset": "0x3bc",
+          "original": "こんなおいしい\n手作りのお弁当が食べれて\n俺は幸せ者だなぁ。",
+          "text": "Getting to eat such\na tasty homemade lunch,\nI'm one lucky guy."
+        },
+        {
+          "offset": "0x42c",
+          "original": "また、\n作りすぎちゃって…。",
+          "text": "I made too\nmuch again..."
+        },
+        {
+          "offset": "0x448",
+          "original": "{G}のお弁当なら\nいつでも歓迎だよ。",
+          "text": "Your lunches, {G}\nare always welcome."
+        },
+        {
+          "offset": "0x46c",
+          "original": "それじゃ\n今日も外で\n一緒に食べましょう？",
+          "text": "Then let's\neat outside\ntogether again?"
+        },
+        {
+          "offset": "0x498",
+          "original": "そうしよう。",
+          "text": "Let's do that."
+        },
+        {
+          "offset": "0x4b8",
+          "original": "はい、どうぞ。\nあんまり中身は\n変わらないけど。",
+          "text": "Here you go.\nIt's pretty much\nthe same as before."
+        },
+        {
+          "offset": "0x4e8",
+          "original": "それじゃ、\n遠慮しないで、\nいただきます。",
+          "text": "Then I won't\nhold back.\nDig in!"
+        },
+        {
+          "offset": "0x514",
+          "original": "うふ、おいしい？",
+          "text": "Hee hee, is it good?"
+        },
+        {
+          "offset": "0x528",
+          "original": "モグモグ、\nすごくおいしいよ。\nモグモグ。",
+          "text": "Munch munch,\nit's really good.\nMunch munch."
+        },
+        {
+          "offset": "0x554",
+          "original": "良かった…。",
+          "text": "I'm glad..."
+        },
+        {
+          "offset": "0x578",
+          "original": "お昼ご飯どうするの？",
+          "text": "What'll you do for lunch?"
+        },
+        {
+          "offset": "0x590",
+          "original": "これから、\n学食に行こうと思って。",
+          "text": "I was going to\nthe cafeteria."
+        },
+        {
+          "offset": "0x5b4",
+          "original": "それなら、\n一緒にお弁当食べない？",
+          "text": "Then how about\nsharing my lunch?"
+        },
+        {
+          "offset": "0x5d8",
+          "original": "えっ、お弁当？",
+          "text": "Huh, your lunch?"
+        },
+        {
+          "offset": "0x5e8",
+          "original": "この前喜んで\nもらえたから、つい…。\n迷惑だった？",
+          "text": "You liked it so much\nlast time, so I...\nIs that a bother?"
+        },
+        {
+          "offset": "0x61c",
+          "original": "い、いや、全然。\n{G}の料理なら、\nいつでも大歓迎だよ。",
+          "text": "N-no, not at all.\nYour cooking, {G}\nis always welcome."
+        },
+        {
+          "offset": "0x650",
+          "original": "良かった…。\n今日は天気もいいから、\n外で一緒に食べない？",
+          "text": "I'm glad...\nIt's nice out today,\nso let's eat outside?"
+        },
+        {
+          "offset": "0x68c",
+          "original": "別にいいよ。\nじゃあ、中庭に行こうか。",
+          "text": "Sure.\nLet's go to the courtyard."
+        },
+        {
+          "offset": "0x6b4",
+          "original": "うん。\n行きましょう。",
+          "text": "Okay.\nLet's go."
+        },
+        {
+          "offset": "0x6f0",
+          "original": "はい、どうぞ。\n味の保証は\nしないけど…。",
+          "text": "Here you go.\nNo promises\nabout the taste..."
+        },
+        {
+          "offset": "0x71c",
+          "original": "それじゃ、\n遠慮しないで、\nいただきます。",
+          "text": "Then I won't\nhold back.\nDig in!"
+        },
+        {
+          "offset": "0x748",
+          "original": "うふふ、おいしい？",
+          "text": "Hee hee, is it good?"
+        },
+        {
+          "offset": "0x75c",
+          "original": "モグモグ、\nすごくおいしいよ。\nモグモグ。",
+          "text": "Munch munch,\nit's really good.\nMunch munch."
+        },
+        {
+          "offset": "0x788",
+          "original": "良かった…。",
+          "text": "I'm glad..."
+        },
+        {
+          "offset": "0x798",
+          "original": "こんなおいしい\n手作りのお弁当が食べれて\n俺は幸せ者だ。",
+          "text": "Getting to eat such\na tasty homemade lunch,\nI'm one lucky guy."
+        },
+        {
+          "offset": "0xe24",
+          "original": "今日はお弁当を\n作ってきたの。\n一緒に食べましょう。",
+          "text": "I made lunch\nfor today.\nLet's eat together."
+        },
+        {
+          "offset": "0xe58",
+          "original": "本当？\n嬉しいな。",
+          "text": "Really?\nAwesome."
+        },
+        {
+          "offset": "0xe74",
+          "original": "はい、どうぞ。\n時間をかけて作ったから、\nおいしいと思うんだけど。",
+          "text": "Here you go.\nI took my time with it,\nso it should be good."
+        },
+        {
+          "offset": "0xeb8",
+          "original": "それじゃ、遠慮なく\nいただきます。",
+          "text": "Then I'll dig\nright in."
+        },
+        {
+          "offset": "0xee4",
+          "original": "ど、どう？",
+          "text": "H-how is it?"
+        },
+        {
+          "offset": "0xef0",
+          "original": "う、うっ…。",
+          "text": "Ugh, ugh..."
+        },
+        {
+          "offset": "0xf00",
+          "original": "えっ、どうしたの？\n大丈夫？",
+          "text": "Huh, what's wrong?\nAre you okay?"
+        },
+        {
+          "offset": "0xf1c",
+          "original": "うまい。",
+          "text": "Delicious!"
+        },
+        {
+          "offset": "0xf28",
+          "original": "び、びっくりさせないでよ。\n本当に心配したんだから。\nで、味はどう？",
+          "text": "D-don't scare me like that.\nI was really worried.\nSo, how does it taste?"
+        },
+        {
+          "offset": "0xf6c",
+          "original": "冗談抜きで、おいしいよ。\n{G}って、\n料理の天才だね。",
+          "text": "No joke, it's delicious.\nGosh, {G}\nyou're a genius cook."
+        },
+        {
+          "offset": "0xfa0",
+          "original": "そ、そんなことないよ。\nありがとう。",
+          "text": "Oh, it's nothing special.\nThank you."
+        },
+        {
+          "offset": "0xfc4",
+          "original": "時間をかけたって、\nどのぐらいかけたの？",
+          "text": "You took your time?\nHow long did it take?"
+        },
+        {
+          "offset": "0xfec",
+          "original": "朝の５時に起きて、\n作り始めたから…。",
+          "text": "I got up at 5 a.m.\nto start making it..."
+        },
+        {
+          "offset": "0x1014",
+          "original": "そ、そんなに早起きして、\n作ってくれたんだ。\nありがとう。",
+          "text": "Y-you got up that early\nto make it for me?\nThank you."
+        },
+        {
+          "offset": "0x1050",
+          "original": "いいの。\n私、料理好きだし…。\nそれにおいしいって\n言われるのは嬉しいし…。",
+          "text": "It's fine.\nI love cooking...\nAnd I'm happy when\nsomeone says it's good..."
+        },
+        {
+          "offset": "0x109c",
+          "original": "いいねぇ。\nお嫁さんに\n欲しいくらいだよ。",
+          "text": "That's great.\nI'd almost want\nyou as my wife."
+        },
+        {
+          "offset": "0x10c8",
+          "original": "えっ…？\nあっ、たくさんあるから、\nどんどん食べてね。",
+          "text": "Huh...?\nOh, there's plenty,\nso help yourself."
+        },
+        {
+          "offset": "0x1100",
+          "original": "こんなおいしい\n手作りのお弁当が食べれて\n俺は幸せ者だなぁ。",
+          "text": "Getting to eat such\na tasty homemade lunch,\nI'm one lucky guy."
+        },
+        {
+          "offset": "0x1174",
+          "original": "相変わらずおいしいね。\n特に、今日のは最高。",
+          "text": "Delicious as always.\nToday's is the best yet."
+        },
+        {
+          "offset": "0x11a0",
+          "original": "あ、ありがとう。\n早起きした\n甲斐があったわ。",
+          "text": "Th-thank you.\nGetting up early\nwas worth it."
+        },
+        {
+          "offset": "0x11d0",
+          "original": "早起きって、\n何時に起きたの？",
+          "text": "Early?\nWhen did you get up?"
+        },
+        {
+          "offset": "0x11f0",
+          "original": "朝の５時ぐらいかな…。",
+          "text": "Around 5 a.m., I guess..."
+        },
+        {
+          "offset": "0x1208",
+          "original": "そ、そんなに早起きして、\n作ってくれたんだ。\nありがとう。",
+          "text": "Y-you got up that early\nto make it for me?\nThank you."
+        },
+        {
+          "offset": "0x1244",
+          "original": "いいの。\n私料理好きだし…。\nそれにおいしいって\n言われるのは嬉しいし…。",
+          "text": "It's fine.\nI love cooking...\nAnd I'm happy when\nsomeone says it's good..."
+        },
+        {
+          "offset": "0x128c",
+          "original": "いいねぇ。\nお嫁さんに\n欲しいくらいだよ。",
+          "text": "That's great.\nI'd almost want\nyou as my wife."
+        },
+        {
+          "offset": "0x12b8",
+          "original": "えっ…？\nあっ、たくさんあるから、\nどんどん食べてね。",
+          "text": "Huh...?\nOh, there's plenty,\nso help yourself."
+        },
+        {
+          "offset": "0x12f0",
+          "original": "あぁ、俺は幸せだぁ。",
+          "text": "Ahh, I'm so happy."
+        },
+        {
+          "offset": "0x1674",
+          "original": "空いてるね。\nほら、\n一緒に泳ぎましょう。",
+          "text": "It's empty.\nCome on,\nlet's swim together."
+        },
+        {
+          "offset": "0x16a0",
+          "original": "俺は、少し休んでから\n泳ぐから。",
+          "text": "I'll rest a bit\nbefore I swim."
+        },
+        {
+          "offset": "0x16c0",
+          "original": "根性が無いなぁ。\nそれじゃ、\nちょっと泳いでくるね。",
+          "text": "No guts, huh?\nThen I'll go\nswim for a bit."
+        },
+        {
+          "offset": "0x1700",
+          "original": "あれ、プールの方が\n騒がしいぞ。",
+          "text": "Huh, there's a\ncommotion at the pool."
+        },
+        {
+          "offset": "0x1720",
+          "original": "あっ。\n{G}が溺れてる。\n助けなくちゃ。",
+          "text": "Oh no.\n{G} is drowning.\nI have to save her."
+        },
+        {
+          "offset": "0x174c",
+          "original": "{G}、{G}。\n駄目だ。\n意識が戻らない。",
+          "text": "{G}, {G}!\nIt's no good.\nShe won't come to."
+        },
+        {
+          "offset": "0x1770",
+          "original": "しょうがない。\nマウストゥマウスで\n人工呼吸しかない。",
+          "text": "No choice.\nI'll have to give her\nsome mouth-to-mouth."
+        },
+        {
+          "offset": "0x17a8",
+          "original": "よし、行くぞ。",
+          "text": "Okay, here goes."
+        },
+        {
+          "offset": "0x17c4",
+          "original": "う、ううん。",
+          "text": "Mm, mmm..."
+        },
+        {
+          "offset": "0x17d4",
+          "original": "残念ながら、\nいや、良かった。\n意識が戻ったみたいだ。",
+          "text": "Too bad... I mean,\nthank goodness.\nShe's coming to."
+        },
+        {
+          "offset": "0x1814",
+          "original": "あれ？\n私、どうして\nこんな所で…。",
+          "text": "Huh?\nWhy am I\nlying here...?"
+        },
+        {
+          "offset": "0x1838",
+          "original": "{G}。\n大丈夫？\n起き上がれる？",
+          "text": "Oh, {G}\nAre you okay?\nCan you sit up?"
+        },
+        {
+          "offset": "0x1854",
+          "original": "うん。\n平気よ。",
+          "text": "Yeah.\nI'm fine."
+        },
+        {
+          "offset": "0x1870",
+          "original": "私溺れちゃったんだ。\nもしかして、\n助けてくれたの？",
+          "text": "I drowned, didn't I?\nDid you\nsave me?"
+        },
+        {
+          "offset": "0x18a4",
+          "original": "う、うん。\n一応ね…。",
+          "text": "Y-yeah.\nSort of..."
+        },
+        {
+          "offset": "0x18c4",
+          "original": "ありがとう。\n助けてくれて…。",
+          "text": "Thank you.\nFor saving me..."
+        },
+        {
+          "offset": "0x18e4",
+          "original": "いや、当然のことだよ。\nでも、心配したんだよ。\nなかなか、意識が\n戻らないから人工呼吸を…。",
+          "text": "No, it was nothing.\nBut I was worried.\nYou wouldn't come to,\nso I was going to..."
+        },
+        {
+          "offset": "0x1948",
+          "original": "えっ？\n人工呼吸？\nし、しちゃったの？",
+          "text": "Huh?\nMouth-to-mouth?\nD-did you do it?"
+        },
+        {
+          "offset": "0x1970",
+          "original": "いや、しようと思ったら、\nちょうど\n意識が戻ったんだよ。",
+          "text": "No, just as I was\nabout to,\nyou came to."
+        },
+        {
+          "offset": "0x19a8",
+          "original": "そ、そう…。\nもう少し、気絶してれば\nよかったかな…。",
+          "text": "O-oh...\nMaybe I should've\nstayed out a bit longer..."
+        },
+        {
+          "offset": "0x19e0",
+          "original": "えっ？\n今なんて…。",
+          "text": "Huh?\nWhat did you..."
+        },
+        {
+          "offset": "0x1a04",
+          "original": "な、何も…。\nそ、そんな事よりも、\n少し休みたいな。",
+          "text": "N-nothing...\nA-anyway,\nI'd like to rest a bit."
+        },
+        {
+          "offset": "0x1a38",
+          "original": "それじゃあこっちで、\nゆっくり休みなよ。",
+          "text": "Then come over here\nand take it easy."
+        },
+        {
+          "offset": "0x1a60",
+          "original": "うん。\nそうする。",
+          "text": "Okay.\nI will."
+        },
+        {
+          "offset": "0x1db4",
+          "original": "わぁ、\nやってるやってる。",
+          "text": "Wow,\nthey're playing!"
+        },
+        {
+          "offset": "0x1dd0",
+          "original": "{G}って、\n野球好きなんだね。",
+          "text": "Gosh, {G}\nyou really love baseball."
+        },
+        {
+          "offset": "0x1dec",
+          "original": "見るのは大好き。\n私、この試合\nすごく見たかったの。",
+          "text": "I love watching it.\nI really wanted\nto see this game."
+        },
+        {
+          "offset": "0x1e20",
+          "original": "そ、そう。\n良かったね。",
+          "text": "Oh, I see.\nGlad you came."
+        },
+        {
+          "offset": "0x1e48",
+          "original": "あっ、抜けたわ。\nヒットよ。",
+          "text": "Oh, it got through!\nA hit!"
+        },
+        {
+          "offset": "0x1e64",
+          "original": "頑張って。\nホームランよ。",
+          "text": "Go for it!\nHit a homer!"
+        },
+        {
+          "offset": "0x1e80",
+          "original": "あの、{G}…？",
+          "text": "Um, {G}"
+        },
+        {
+          "offset": "0x1e8c",
+          "original": "あっ、途中で\n諦めちゃ駄目よ。",
+          "text": "Oh, don't give up\nhalfway!"
+        },
+        {
+          "offset": "0x1eac",
+          "original": "駄目だ。\n完全に野球に\n熱中してる。",
+          "text": "No use.\nShe's totally\ncaught up in the game."
+        },
+        {
+          "offset": "0x1ee8",
+          "original": "ん？\nこっちに気付いて\nくれたかな？",
+          "text": "Hm?\nDid she finally\nnotice me?"
+        },
+        {
+          "offset": "0x1f10",
+          "original": "ほら、\nあなたも一緒に、\n応援しましょうよ。",
+          "text": "Come on,\nyou cheer\nwith me too!"
+        },
+        {
+          "offset": "0x1f3c",
+          "original": "そ、そうだね。\n（駄目だこりゃ。）",
+          "text": "R-right.\n(This is hopeless.)"
+        },
+        {
+          "offset": "0x211c",
+          "original": "どうしたの？",
+          "text": "What's up?"
+        },
+        {
+          "offset": "0x212c",
+          "original": "あの子、\n迷子じゃない？",
+          "text": "Isn't that kid\nlost?"
+        },
+        {
+          "offset": "0x2144",
+          "original": "そ、そうかもしれないね。",
+          "text": "M-maybe so."
+        },
+        {
+          "offset": "0x2160",
+          "original": "私、\nちょっと行ってくる。",
+          "text": "I'll go\ncheck on him."
+        },
+        {
+          "offset": "0x2190",
+          "original": "{G}って、\n面倒見がいいんだよな。",
+          "text": "Gosh, {G}\nreally looks after people."
+        },
+        {
+          "offset": "0x21b4",
+          "original": "やっぱりこの子\n迷子みたい。",
+          "text": "He's lost,\njust as I thought."
+        },
+        {
+          "offset": "0x21d0",
+          "original": "どうしようか？\n迷子案内センターにでも、\n連れていこうか？",
+          "text": "What should we do?\nShould we take him to\nthe lost child center?"
+        },
+        {
+          "offset": "0x220c",
+          "original": "うん、そうしよう。",
+          "text": "Yeah, let's do that."
+        },
+        {
+          "offset": "0x222c",
+          "original": "{>迷子}エーン。\nやだ、やだ、やだ、ここから\n動きたくない。",
+          "text": "{>Tyke}Waaah!\nNo, no, no! I don't\nwanna move from here!"
+        },
+        {
+          "offset": "0x2268",
+          "original": "何だと、このくそガキ。",
+          "text": "Why, you little twerp."
+        },
+        {
+          "offset": "0x2280",
+          "original": "困っちゃったね。",
+          "text": "This is a problem."
+        },
+        {
+          "offset": "0x2294",
+          "original": "本当。\nどうしようか？",
+          "text": "Yeah.\nWhat do we do?"
+        },
+        {
+          "offset": "0x22ac",
+          "original": "それじゃ、私がここで\nこの子を慰めてるから、\n悪いけど、迷子センターに\n行ってきてくれる？",
+          "text": "I'll stay here and\ncomfort him, so\ncould you go to the\nlost child center?"
+        },
+        {
+          "offset": "0x2304",
+          "original": "しょうがない。\n行ってくるか。",
+          "text": "No choice.\nOff I go."
+        },
+        {
+          "offset": "0x2338",
+          "original": "迷子のご案内を申し上げます。",
+          "text": "Lost child announcement."
+        },
+        {
+          "offset": "0x2358",
+          "original": "ふぅ…。\nとりあえず、放送はされた。\n{G}の所に戻ろう。",
+          "text": "Phew...\nAt least it was announced.\nBack to {G}"
+        },
+        {
+          "offset": "0x2394",
+          "original": "あれ？\nあのくそ、\nいや、あの子は？",
+          "text": "Huh?\nWhere's the brat,\nI mean, the kid?"
+        },
+        {
+          "offset": "0x23b8",
+          "original": "放送されたら、\nすぐにお母さんが\n迎えに来てくれたわ。",
+          "text": "Right after the\nannouncement, his mom\ncame to get him."
+        },
+        {
+          "offset": "0x23f0",
+          "original": "そ、そう。\n良かったね。",
+          "text": "Oh, I see.\nGlad you came."
+        },
+        {
+          "offset": "0x2408",
+          "original": "うん。\n本当に良かった。\nありがとね。",
+          "text": "Yeah.\nI'm really glad.\nThanks."
+        },
+        {
+          "offset": "0x2430",
+          "original": "い、いや。\n何てこと無いよ。\n（{G}の頼みだもん。）",
+          "text": "N-no.\nIt was nothing.\n(Anything for {G})"
+        },
+        {
+          "offset": "0x2758",
+          "original": "よう。おい聞いてるか？",
+          "text": "Yo. Hey, you heard?"
+        },
+        {
+          "offset": "0x2770",
+          "original": "なんだ。好雄か。",
+          "text": "Oh, Yoshio."
+        },
+        {
+          "offset": "0x2784",
+          "original": "虹野さんが、\n風邪でダウンしたらしいぜ。",
+          "text": "They say Nijino-san's\ndown with a cold."
+        },
+        {
+          "offset": "0x27ac",
+          "original": "えっ、虹野さんが？",
+          "text": "Huh, Nijino-san is?"
+        },
+        {
+          "offset": "0x27c0",
+          "original": "おまえが昨日、\n無理させたんじゃないのか？",
+          "text": "Didn't you wear\nher out yesterday?"
+        },
+        {
+          "offset": "0x27ec",
+          "original": "俺は、何もしてないぞ。",
+          "text": "I didn't do anything."
+        },
+        {
+          "offset": "0x2804",
+          "original": "ふーんそうなのか？\nでも、一応虹野さんのところに\n顔出しておけよ。",
+          "text": "Oh, really?\nStill, you should\ngo check on her."
+        },
+        {
+          "offset": "0x2848",
+          "original": "わかったよ。じゃあな。",
+          "text": "Got it. See ya."
+        },
+        {
+          "offset": "0x2880",
+          "original": "もう、消灯の時間だ。",
+          "text": "It's already lights-out."
+        },
+        {
+          "offset": "0x289c",
+          "original": "しょうがないな。\n虹野さんの様子が\n気になるけど、寝るか。",
+          "text": "Oh well.\nI worry about Nijino-san,\nbut I need to sleep."
+        },
+        {
+          "offset": "0x28dc",
+          "original": "今日は、自由行動の日だ。\n{G}と、一緒に行く\n約束なんだけど…。",
+          "text": "Today's a free day.\n{G} and I were\nsupposed to go out..."
+        },
+        {
+          "offset": "0x2918",
+          "original": "昨日、好雄に\n風邪でダウンと聞いたけど、\nそんなにひどかったんだ。",
+          "text": "Yoshio said yesterday\nshe was down with a cold.\nIt must be that bad."
+        },
+        {
+          "offset": "0x295c",
+          "original": "{G}の部屋に行ってみよう。{q}もう少し待つ",
+          "text": "Go to {G}'s room.{q}Wait a little longer"
+        },
+        {
+          "offset": "0x2990",
+          "original": "{G}。{p}だけれど。\n大丈夫？",
+          "text": "{G}, it is {p}\nAre you okay?"
+        },
+        {
+          "offset": "0x29a8",
+          "original": "返事がないぞ。ま、まさか。",
+          "text": "No answer. Don't tell me..."
+        },
+        {
+          "offset": "0x29cc",
+          "original": "に、{G}大丈夫？",
+          "text": "S-{G}, okay?"
+        },
+        {
+          "offset": "0x29dc",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x29e8",
+          "original": "どうしてここにいるの？",
+          "text": "What are you doing here?"
+        },
+        {
+          "offset": "0x2a00",
+          "original": "{G}が、病気なのに\n一人でなんか行けないよ。",
+          "text": "While {G} is sick,\nI can't go off alone."
+        },
+        {
+          "offset": "0x2a2c",
+          "original": "えっ…。",
+          "text": "Oh..."
+        },
+        {
+          "offset": "0x2a38",
+          "original": "そうだ。\nタオル濡らして来ようか。",
+          "text": "I know.\nI'll get a wet towel."
+        },
+        {
+          "offset": "0x2a5c",
+          "original": "ううん。平気だから。\n自分でやるからいいわよ。",
+          "text": "No, I'm okay.\nI can do it myself."
+        },
+        {
+          "offset": "0x2a8c",
+          "original": "そんなことないよ。\nいいから、{G}は、\n横になってて。",
+          "text": "No, you can't.\nOkay, {G}\njust lie down."
+        },
+        {
+          "offset": "0x2ac0",
+          "original": "それじゃ、お願いしようかな。",
+          "text": "Then I'll let you."
+        },
+        {
+          "offset": "0x2b08",
+          "original": "つっ、冷たい。",
+          "text": "Ooh, cold."
+        },
+        {
+          "offset": "0x2b18",
+          "original": "どう、気持ち良い？",
+          "text": "How's that, feel good?"
+        },
+        {
+          "offset": "0x2b34",
+          "original": "うん。ありがとう。",
+          "text": "Yeah. Thank you."
+        },
+        {
+          "offset": "0x2b48",
+          "original": "今日は、\nずっとそばにいるから、\n安心して眠ってて。",
+          "text": "Today\nI'll stay right here,\nso sleep easy."
+        },
+        {
+          "offset": "0x2b7c",
+          "original": "ずっと、\n風邪、ひいていたいな…。",
+          "text": "I wish I could\nstay sick forever..."
+        },
+        {
+          "offset": "0x2ba0",
+          "original": "えっ？。今なんて…。",
+          "text": "Huh? What did you..."
+        },
+        {
+          "offset": "0x2bc8",
+          "original": "な、何も…。",
+          "text": "N-nothing..."
+        },
+        {
+          "offset": "0x3010",
+          "original": "{P}。",
+          "text": "{P}!"
+        },
+        {
+          "offset": "0x3014",
+          "original": "パクッ",
+          "text": "Chomp"
+        },
+        {
+          "offset": "0x301c",
+          "original": "{G}。",
+          "text": "Um, {G}"
+        },
+        {
+          "offset": "0x3020",
+          "original": "あれ？",
+          "text": "Huh?"
+        },
+        {
+          "offset": "0x3028",
+          "original": "はい。",
+          "text": "Here."
+        }
+      ]
+    }
+  ]
 }
