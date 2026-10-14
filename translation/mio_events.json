@@ -5,7 +5,7 @@
     "base": "0x80198000",
     "share_identical": true,
     "lines": [
-      {"offset": "0x0", "original": "あっ、あれは如月さん。\n重そうな本を抱えて、\n大変そうだぞ。", "text": "Oh, that's Mio.\nShe's lugging heavy books,\nit looks hard for her."},
+      {"offset": "0x0", "original": "あっ、あれは如月さん。\n重そうな本を抱えて、\n大変そうだぞ。", "text": "Oh, Kisaragi.\nThose books look heavy.\nShe's struggling."},
       {"offset": "0x40", "original": "大変そうだね、\n{G}。", "text": "That looks tough,\n{G}"},
       {"offset": "0x54", "original": "{P}、\nそ、そんなことは\nないですよ。", "text": "{P}\nN-no, it's\nreally not."},
       {"offset": "0x78", "original": "俺が持ってあげるから、\nほら、貸して？", "text": "I'll carry them,\nhere, hand them over."},

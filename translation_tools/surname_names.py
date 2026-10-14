@@ -26,7 +26,9 @@ def candidates(original: str, english: str, kind: str, slot: int | None, offset:
         new = pattern.sub(name.surname, english)
         status = 'READY'
         reason = ''
-        if name.japanese_given in original:
+        if kind == 'dialogue' and offset in (0x72DB0, 0x72DC4) and original in ('鏡', '早乙女'):
+            status, reason = 'TECHNICAL', 'Name-table surname requires allocation and runtime-reference checks'
+        elif name.japanese_given in original:
             status, reason = 'REVIEW', 'Japanese gives a full name'
         elif name.japanese_surname == '早乙女':
             status, reason = 'REVIEW', 'Surname belongs to two characters'
@@ -54,7 +56,7 @@ def candidates(original: str, english: str, kind: str, slot: int | None, offset:
                     if len(after_bytes) + 1 > capacity and len(after_bytes) > len(before_bytes):
                         status, reason = 'TECHNICAL', 'In-place string needs a larger slot'
                 elif len(after_bytes) > len(original_bytes):
-                    status, reason = 'TECHNICAL', 'Dialogue exceeds its Japanese source byte length'
+                    status, reason = 'TECHNICAL', 'Check shared dialogue pool and pointers; individual Japanese bytes are not a strict limit'
                 if status == 'READY':
                     for oldline, newline in zip(english.split('\n'), new.split('\n')):
                         for m in re.finditer(r'\{[A-Za-z]\}', oldline):

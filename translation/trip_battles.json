@@ -149,7 +149,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x28EB0",
    "original": "早乙女「えーん",
-   "text": "Yumi: Waaah"
+   "text": "Saotome: Waaah"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -713,7 +713,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x29D80",
    "original": "如月「いいかげんにして下さい…。",
-   "text": "Mio: Please, that's enough..."
+   "text": "Kisaragi: Please stop..."
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
@@ -995,7 +995,7 @@
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
    "offset": "0x2AC30",
    "original": "早乙女「優美つまんなーい！",
-   "text": "Yumi: Yumi's bored!"
+   "text": "Saotome: Yumi's bored!"
   },
   {
    "file": "CDROM/EXEDIR/RPG_BAT.EXN",
