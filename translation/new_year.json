@@ -1498,7 +1498,7 @@
     {
      "offset": "0x4bd0",
      "original": "明けまして、おめでとう。\n紐緒さんが家に来るなんて、\n新年早々、めずらしいね。",
-     "text": "Happy New Year.\nHimoo at my house? That's\na first for the new year."
+     "text": "Happy New Year.\nHimoo-san at my house?\nWhat a surprise so early!"
     },
     {
      "offset": "0x4c20",
@@ -2398,7 +2398,7 @@
     {
      "offset": "0x744c",
      "original": "何が惜しいって？\n片桐さんのは\nどうだったの？",
-     "text": "Close to what?\nWhat did you get,\nKatagiri?"
+     "text": "Close to what?\nWhat did you get,\nKatagiri-san?"
     },
     {
      "offset": "0x747c",
@@ -2418,7 +2418,7 @@
     {
      "offset": "0x7504",
      "original": "きっと、神様は\n片桐さんに\nだまされてるんだ…。",
-     "text": "I bet God's\nbeen fooled\nby you..."
+     "text": "I bet even the gods\nare fooled by\nKatagiri-san..."
     },
     {
      "offset": "0x7534",
@@ -2438,7 +2438,7 @@
     {
      "offset": "0x75c4",
      "original": "思い切り\n笑うことないだろう。\n片桐さんはどうだったの？",
-     "text": "You don't have to\nlaugh that hard.\nWhat did you get?"
+     "text": "You don't have to\nlaugh that hard.\nAnd yours, Katagiri-san?"
     },
     {
      "offset": "0x75fc",
@@ -2503,7 +2503,7 @@
     {
      "offset": "0x77a4",
      "original": "ど、どうしたの？\n片桐さんらしくない。",
-     "text": "Wh-what's wrong?\nThat's not like you."
+     "text": "Katagiri-san, what's wrong?\nThis isn't like you."
     },
     {
      "offset": "0x77cc",
@@ -7203,7 +7203,7 @@
     {
      "offset": "0x18264",
      "original": "うん、だって先輩と、\n初詣できたんだもん。\n絶対そうなると思うよ。",
-     "text": "Yeah, 'cause Yumi got to\nvisit the shrine with you.\nIt's gonna be great!"
+     "text": "Yeah, Yumi went to the\nshrine with you, senpai.\nI'm sure it'll come true."
     },
     {
      "offset": "0x182a8",

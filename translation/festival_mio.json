@@ -564,7 +564,7 @@
         {
           "offset": "0x1354",
           "original": "ありがとう。\nそうか、{G}は\nこれから舞台なんだね。",
-          "text": "Thanks.\nRight, Miss {G}\nyou're on stage next."
+          "text": "Thanks.\nRight, {G},\nyou're on stage next."
         },
         {
           "offset": "0x1384",
@@ -589,7 +589,7 @@
         {
           "offset": "0x1468",
           "original": "ありがとう。\nそうか、{G}は\nこれから舞台なんだね。",
-          "text": "Thanks.\nRight, Miss {G}\nyou're on stage next."
+          "text": "Thanks.\nRight, {G},\nyou're on stage next."
         },
         {
           "offset": "0x1498",
@@ -1104,7 +1104,7 @@
         {
           "offset": "0x26c0",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x26e0",
@@ -1129,7 +1129,7 @@
         {
           "offset": "0x27b4",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x27d4",
@@ -1144,7 +1144,7 @@
         {
           "offset": "0x2844",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x2864",
@@ -1224,7 +1224,7 @@
         {
           "offset": "0x2b58",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x2b78",
@@ -1254,7 +1254,7 @@
         {
           "offset": "0x2c88",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x2ca8",
@@ -1284,7 +1284,7 @@
         {
           "offset": "0x2dac",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x2dcc",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x418c",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x41ac",
@@ -1844,7 +1844,7 @@
         {
           "offset": "0x42a4",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x42c4",
@@ -1864,7 +1864,7 @@
         {
           "offset": "0x4350",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x4370",
@@ -2756,7 +2756,7 @@
         {
           "offset": "0x8a4",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x8c4",
@@ -2776,7 +2776,7 @@
         {
           "offset": "0x948",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x968",
@@ -2796,7 +2796,7 @@
         {
           "offset": "0x9e8",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0xa08",
@@ -3031,7 +3031,7 @@
         {
           "offset": "0x11c8",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x11e8",
@@ -3146,7 +3146,7 @@
         {
           "offset": "0x15cc",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x15ec",
@@ -3261,7 +3261,7 @@
         {
           "offset": "0x19b8",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x19d8",
@@ -3526,7 +3526,7 @@
         {
           "offset": "0x22f0",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x2310",
@@ -3546,7 +3546,7 @@
         {
           "offset": "0x2394",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x23b4",
@@ -3566,7 +3566,7 @@
         {
           "offset": "0x2434",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x2454",
@@ -4346,7 +4346,7 @@
         {
           "offset": "0x3f30",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x3f50",
@@ -4366,7 +4366,7 @@
         {
           "offset": "0x3ff8",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x4018",
@@ -4376,7 +4376,7 @@
         {
           "offset": "0x4054",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x4074",
@@ -4426,7 +4426,7 @@
         {
           "offset": "0x422c",
           "original": "{G}って、\n演劇部だったんだ…。",
-          "text": "So Miss {G}\nis in Drama..."
+          "text": "So {G}\nis in Drama..."
         },
         {
           "offset": "0x424c",
@@ -4436,7 +4436,7 @@
         {
           "offset": "0x4284",
           "original": "{G}って、\n演劇部だったんだ…。",
-          "text": "So Miss {G}\nis in Drama..."
+          "text": "So {G}\nis in Drama..."
         },
         {
           "offset": "0x42a4",
@@ -4676,7 +4676,7 @@
         {
           "offset": "0x4aac",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x4acc",
@@ -4706,7 +4706,7 @@
         {
           "offset": "0x4bd8",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x4bf8",
@@ -4736,7 +4736,7 @@
         {
           "offset": "0x4cfc",
           "original": "{G}って、\n文芸部だったんだ…。",
-          "text": "So Miss {G}\nis in Literature..."
+          "text": "So {G}\nis in Literature..."
         },
         {
           "offset": "0x4d1c",
@@ -4928,7 +4928,7 @@
         {
           "offset": "0x568",
           "original": "おはよう、{G}。\nどうしたの、手伝おうか？",
-          "text": "Morning, Miss {G}\nNeed a hand?"
+          "text": "Morning, {G}.\nNeed a hand?"
         },
         {
           "offset": "0x590",
@@ -4963,7 +4963,7 @@
         {
           "offset": "0x6a0",
           "original": "おはよう、{G}。\nどうしたの、手伝おうか？",
-          "text": "Morning, Miss {G}\nNeed a hand?"
+          "text": "Morning, {G}.\nNeed a hand?"
         },
         {
           "offset": "0x6c8",
@@ -4993,7 +4993,7 @@
         {
           "offset": "0x798",
           "original": "おはよう、{G}。\nどうしたの、手伝おうか？",
-          "text": "Morning, Miss {G}\nNeed a hand?"
+          "text": "Morning, {G}.\nNeed a hand?"
         },
         {
           "offset": "0x7c0",

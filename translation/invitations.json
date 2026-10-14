@@ -372,7 +372,7 @@
       {"offset": "0x7510", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
       {"offset": "0x7528", "original": "うん、それでいいです。\nそれじゃ。", "text": "Yep, that's fine.\nBye!"},
       {"offset": "0x7558", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x7590", "original": "いいわよーだ。\nふん、\nお兄ちゃんと行くもん。", "text": "Fine, then!\nHmph,\nI'll go with big brother."},
+      {"offset": "0x7590", "original": "いいわよーだ。\nふん、\nお兄ちゃんと行くもん。", "text": "Fine, then!\nHmph,\nI'll go with my brother."},
       {"offset": "0x75c4", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
       {"offset": "0x7ac0", "original": "{P}。", "text": "{P}."},
       {"offset": "0x7ad4", "original": "あっ、{P}", "text": "Oh, {P}."},

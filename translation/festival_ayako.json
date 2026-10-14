@@ -6888,7 +6888,7 @@
         {
           "offset": "0x1170",
           "original": "あははは…。\n引っ掛かったわね\n芸術家さん。\nそれじゃ、さよなら。",
-          "text": "Ahahaha...\nGotcha,\nMr. Artist.\nBye, then."
+          "text": "Ahahaha...\nGotcha,\nArtist-san.\nBye, then."
         },
         {
           "offset": "0x11d4",
@@ -6923,7 +6923,7 @@
         {
           "offset": "0x12bc",
           "original": "はいはい、わかりました。\nモデルを襲わないでよ。\n芸術家さん。",
-          "text": "Okay, okay.\nDon't jump the model,\nMr. Artist."
+          "text": "Okay, okay.\nDon't jump the model,\nArtist-san."
         },
         {
           "offset": "0x1318",
@@ -8390,7 +8390,7 @@
         {
           "offset": "0x3c0",
           "original": "それじゃあ頑張ってね。\nデリケートさん。\nあははは。",
-          "text": "Good luck, then,\nMr. Delicate.\nAhahaha."
+          "text": "Good luck, then,\nDelicate-san.\nAhahaha."
         },
         {
           "offset": "0x418",
@@ -10119,7 +10119,7 @@
         {
           "offset": "0x3c4",
           "original": "彩子君。\n今度は、右上２７°から\nお願いするよ。",
-          "text": "Ayako, my dear,\nnext from 27 degrees\nup and right, please."
+          "text": "Ayako-kun,\nnext from 27 degrees\nup and right, please."
         },
         {
           "offset": "0x3f8",
@@ -10199,7 +10199,7 @@
         {
           "offset": "0x690",
           "original": "つ、付き合いきれん。\n片桐さん、悪いけど俺帰るよ。",
-          "text": "I-I can't deal.\nKatagiri, sorry, I'm off."
+          "text": "I-I can't take this.\nSorry, Katagiri-san. Bye."
         },
         {
           "offset": "0x6d4",
@@ -10219,7 +10219,7 @@
         {
           "offset": "0x764",
           "original": "彩子君。\n今度は、右上２７°から\nお願いするよ。",
-          "text": "Ayako, my dear,\nnext from 27 degrees\nup and right, please."
+          "text": "Ayako-kun,\nnext from 27 degrees\nup and right, please."
         },
         {
           "offset": "0x798",
@@ -10319,7 +10319,7 @@
         {
           "offset": "0xafc",
           "original": "彩子君。\n今度は、右上２７°から\nお願いするよ。",
-          "text": "Ayako, my dear,\nnext from 27 degrees\nup and right, please."
+          "text": "Ayako-kun,\nnext from 27 degrees\nup and right, please."
         },
         {
           "offset": "0xb30",

@@ -3294,7 +3294,7 @@
         {
           "offset": "0x6ba8",
           "original": "は、はい、わかります…。\n喋るなんてとんでもない…。\nそんな事はしませんです。",
-          "text": "Y-yes, I understand...\nTell? Never...\nI won't, ma'am."
+          "text": "Y-yes, I understand...\nTell? Never...\nI won't say a word."
         },
         {
           "offset": "0x6bf8",
@@ -3354,7 +3354,7 @@
         {
           "offset": "0x6dc8",
           "original": "は、はい…。\n喋るなんてとんでもない…。\nそんな事はしませんです。",
-          "text": "Y-yes...\nTell? Never...\nI won't, ma'am."
+          "text": "Y-yes...\nTell? Never...\nI won't say a word."
         },
         {
           "offset": "0x6e0c",
@@ -3501,7 +3501,7 @@
         {
           "offset": "0x23c",
           "original": "いや、こういう舞台は、\n紐緒様のような偉大な方が\nお似合いですよ。",
-          "text": "No, a stage like this\nsuits a great person\nlike Lady Himoo."
+          "text": "No, a stage like this\nsuits someone as great\nas Himoo-sama."
         },
         {
           "offset": "0x280",
@@ -3821,7 +3821,7 @@
         {
           "offset": "0xedc",
           "original": "お疲れ様でした。\n紐緒様。",
-          "text": "Good work,\nLady Himoo."
+          "text": "Good work,\nHimoo-sama."
         },
         {
           "offset": "0xef8",
@@ -3836,7 +3836,7 @@
         {
           "offset": "0xf34",
           "original": "お疲れ様でした。\n紐緒様。",
-          "text": "Good work,\nLady Himoo."
+          "text": "Good work,\nHimoo-sama."
         },
         {
           "offset": "0xf50",
@@ -4516,7 +4516,7 @@
         {
           "offset": "0x24b8",
           "original": "例えば、私の作ったこの\n結奈様ゲーム\nなんてすごいわよ。",
-          "text": "For instance, my own\n\"Lady Yuina Game\"\nis amazing."
+          "text": "For instance, my own\n\"Yuina-sama Game\"\nis amazing."
         },
         {
           "offset": "0x24f0",
