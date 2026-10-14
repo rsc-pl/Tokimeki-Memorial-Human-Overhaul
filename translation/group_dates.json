@@ -399,7 +399,7 @@
         {
           "offset": "0x1028",
           "original": "今日は楽しかったわ。\n好雄君さよなら。",
-          "text": "I had fun today.\nGoodbye, Yoshio."
+          "text": "I had fun today.\nGoodbye, Yoshio-kun."
         },
         {
           "offset": "0x1054",
@@ -579,12 +579,12 @@
         {
           "offset": "0x1c5c",
           "original": "いい暇潰しができたわ。\n好雄君、失礼するわ。",
-          "text": "That passed the time.\nExcuse me, Yoshio."
+          "text": "That passed the time.\nExcuse me, Yoshio-kun."
         },
         {
           "offset": "0x1c8c",
           "original": "いい暇潰しができたわ。\n好雄君、失礼するわ。",
-          "text": "That passed the time.\nExcuse me, Yoshio."
+          "text": "That passed the time.\nExcuse me, Yoshio-kun."
         },
         {
           "offset": "0x23c8",
@@ -779,7 +779,7 @@
         {
           "offset": "0x299c",
           "original": "今日は楽しかったわ。\nグッバイ、好雄君。",
-          "text": "Today was fun.\nGoodbye, Yoshio."
+          "text": "Today was fun.\nGoodbye, Yoshio-kun."
         },
         {
           "offset": "0x29c8",
@@ -989,7 +989,7 @@
         {
           "offset": "0x3664",
           "original": "今日は\nまあまあ面白かったわ。\nそれじゃ失礼するわ\n早乙女君。",
-          "text": "Today was\nfairly amusing.\nNow excuse me,\nSaotome."
+          "text": "Today was\nfairly amusing.\nNow excuse me,\nSaotome-kun."
         },
         {
           "offset": "0x36a4",
@@ -1389,7 +1389,7 @@
         {
           "offset": "0x4fac",
           "original": "それでは、好雄さん。\n失礼いたします。",
-          "text": "Well then, Yoshio.\nI'll take my leave."
+          "text": "Well then, Yoshio-san.\nI'll take my leave."
         },
         {
           "offset": "0x4fd8",
@@ -1749,7 +1749,7 @@
         {
           "offset": "0x663c",
           "original": "あの…好雄さん。\n楽しかったです…。\nそれじゃ…。",
-          "text": "Um... Yoshio.\nIt was fun...\nBye..."
+          "text": "Um... Yoshio-san.\nIt was fun...\nBye..."
         },
         {
           "offset": "0x6674",
@@ -1949,7 +1949,7 @@
         {
           "offset": "0x7258",
           "original": "今日は楽しかったわ。\nそれじゃ好雄君。\nさよなら。",
-          "text": "I had fun today.\nWell then, Yoshio.\nGoodbye."
+          "text": "I had fun today.\nWell then, Yoshio-kun.\nGoodbye."
         },
         {
           "offset": "0x7290",
