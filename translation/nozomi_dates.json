@@ -69,7 +69,7 @@
         {
           "offset": "0x240",
           "original": "うわぁ、\n私こういう絵苦手だな。",
-          "text": "Ugh,\nI hate art like this."
+          "text": "Ugh...\nNot my kind of painting."
         },
         {
           "offset": "0x260",
@@ -184,7 +184,7 @@
         {
           "offset": "0xab4",
           "original": "{G}、やるね。{q}そんなの単なる運だよ。{q}くそ、俺も頑張るぞ。",
-          "text": "{G}, nice shot!{q}That was just dumb luck.{q}Darn, I'll try harder."
+          "text": "{G}, nice shot!{q}That was just luck.{q}Darn, I'll try harder."
         },
         {
           "offset": "0xaf4",
@@ -224,7 +224,7 @@
         {
           "offset": "0xdd8",
           "original": "私はこういうの\n駄目なんだ。\nロック関係がいいな。{q}そうだね。\nロック関係とかが、\n好きなんだよな。{q}私は駄目だな。\nロック関係が好きなんだ。",
-          "text": "This kind of thing\njust isn't for me.\nI'd rather have rock.{q}Yeah.\nI'm more into\nrock and stuff.{q}Not for me.\nI like rock music."
+          "text": "This kind of thing\njust isn't for me.\nI'd rather hear rock.{q}Yeah.\nI'm more into\nrock and stuff.{q}Not for me.\nI like rock music."
         },
         {
           "offset": "0xe64",
@@ -494,7 +494,7 @@
         {
           "offset": "0x1b48",
           "original": "俺でよかったら\nいつでも付き合うよ。",
-          "text": "If you don't mind me,\nI'll come along anytime."
+          "text": "If you'll have me,\nI'll come along anytime."
         },
         {
           "offset": "0x1b74",
@@ -669,7 +669,7 @@
         {
           "offset": "0x2a90",
           "original": "昔から、そう言われるよ。{q}どうして？\n説明してくれよ。{q}きっと、\nそうなんだろうね。",
-          "text": "People always tell me that.{q}Why not?\nExplain it to me.{q}Yeah,\nI guess I do."
+          "text": "People always tell me that.{q}Why?\nExplain it to me.{q}Yeah,\nI guess I do."
         },
         {
           "offset": "0x2ae8",
@@ -834,7 +834,7 @@
         {
           "offset": "0x3230",
           "original": "遅いぞ。\n待ってる身にも\nなってくれよ。",
-          "text": "You're late.\nThink about the one\nwho's waiting, huh?"
+          "text": "You're late!\nDid you even think\nabout me waiting here?"
         },
         {
           "offset": "0x3258",
@@ -1059,7 +1059,7 @@
         {
           "offset": "0x44c0",
           "original": "好きな男の子のためなら、\n水泳もやめる、\nということを聞き出した。",
-          "text": "Found out she'd quit\nswimming for the boy\nshe loves."
+          "text": "Found out she'd quit\nswimming for the boy\nshe likes."
         },
         {
           "offset": "0x46c8",
@@ -1119,7 +1119,7 @@
         {
           "offset": "0x4ad0",
           "original": "何度見ても、奇麗だなぁ。",
-          "text": "Pretty no matter how often."
+          "text": "It's beautiful every time."
         },
         {
           "offset": "0x4af0",
@@ -1654,7 +1654,7 @@
         {
           "offset": "0x6fe0",
           "original": "血が騒ぐんだよね。{q}おかしいんじゃない？{q}{G}、格闘技好きなんだ。",
-          "text": "Gets my blood pumping.{q}Aren't you a little weird?{q}{G}, you like fights?"
+          "text": "Gets my blood pumping.{q}Aren't you a little weird?{q}Martial arts, {G}?"
         },
         {
           "offset": "0x7028",
@@ -1829,7 +1829,7 @@
         {
           "offset": "0x7d60",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to go see it.{q}Ignore the show."
         },
         {
           "offset": "0x7d98",
@@ -1874,12 +1874,12 @@
         {
           "offset": "0x7f24",
           "original": "うん。かなり暑いらしいよ。{q}着たこと無いからな…。{q}特に怪獣が暑いらしいね。",
-          "text": "Yeah, they're super hot.{q}I've never worn one, so...{q}Monster suits are the worst."
+          "text": "Yeah, they're super hot.{q}I've never worn one, so...{q}Monster suits get hotter."
         },
         {
           "offset": "0x7f78",
           "original": "やっぱり。\n私は着たくないな。{q}そんな奴の方が\n珍しいよ。{q}何か、詳しいな…。",
-          "text": "Figures.\nI wouldn't wanna wear one.{q}Most people\nhaven't, dummy.{q}You sure know a lot..."
+          "text": "Figures.\nI wouldn't wanna wear one.{q}Not many people\nhave worn one.{q}You sure know a lot..."
         },
         {
           "offset": "0x7fc8",
@@ -1924,7 +1924,7 @@
         {
           "offset": "0x8164",
           "original": "別にいいよ。\nちょっと\n苦手なだけだから。{q}私は怖いのよ。{q}そんな気分には\nなれないよ。",
-          "text": "It's okay.\nI'm just not\ngreat with it.{q}Well, I'm scared!{q}I can't feel\nthat way about it."
+          "text": "It's okay.\nI'm just not\ngreat with it.{q}Well, I'm scared!{q}Maybe for you,\nbut not for me."
         },
         {
           "offset": "0x81bc",
@@ -1974,7 +1974,7 @@
         {
           "offset": "0x8340",
           "original": "{G}ばかり見てたから…。{q}眠かったよ。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}I was so sleepy.{q}Yeah, it was a great view."
+          "text": "Only had eyes for {G}{q}I was so sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8384",
@@ -2029,7 +2029,7 @@
         {
           "offset": "0x85b8",
           "original": "でも、面白い人には、\nこのスリルが\nいいんだろうな。{q}ホントか？\n信じらんないぜ。{q}好きな人は、\nいいんだろうな。",
-          "text": "But I guess for\npeople who enjoy it,\nthe thrill is great.{q}Seriously?\nI can't believe it.{q}I guess it's great\nfor people who like it."
+          "text": "I guess it's the thrill\nthat makes it fun\nfor some people.{q}Seriously?\nI can't believe it.{q}I guess it's great\nfor people who like it."
         },
         {
           "offset": "0x862c",
@@ -2094,7 +2094,7 @@
         {
           "offset": "0x8880",
           "original": "{G}ばかり見てたから…。{q}眠かったよ。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}I was so sleepy.{q}Yeah, it was a great view."
+          "text": "Only had eyes for {G}{q}I was so sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x88c4",
@@ -2149,7 +2149,7 @@
         {
           "offset": "0x8af8",
           "original": "でも、面白い人には、\nこのスリルが\nいいんだろうな。{q}ホントか？\n信じらんないぜ。{q}好きな人は、\nいいんだろうな。",
-          "text": "But I guess for\npeople who enjoy it,\nthe thrill is great.{q}Seriously?\nI can't believe it.{q}I guess it's great\nfor people who like it."
+          "text": "I guess it's the thrill\nthat makes it fun\nfor some people.{q}Seriously?\nI can't believe it.{q}I guess it's great\nfor people who like it."
         },
         {
           "offset": "0x8b6c",
@@ -2214,7 +2214,7 @@
         {
           "offset": "0x8e10",
           "original": "{G}ばかり見てたから…。{q}眠かったよ。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}I was so sleepy.{q}Yeah, it was a great view."
+          "text": "Only had eyes for {G}{q}I was so sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8e54",

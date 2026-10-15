@@ -64,7 +64,7 @@
         {
           "offset": "0x248",
           "original": "ほーほほほほ。\n当然じゃない。{q}もっと芸術を\n理解できるセンスを\n養ったら？{q}ほーほほほ。\n御自分で考えなさい。",
-          "text": "Ohohohoho.\nNaturally.{q}Why not cultivate\na sense that can\nunderstand art?{q}Ohohoho.\nFigure it out yourself."
+          "text": "Ohohohoho.\nNaturally.{q}Maybe you should\ndevelop an eye\nfor art.{q}Ohohoho.\nFigure it out yourself."
         },
         {
           "offset": "0x2b8",
@@ -84,7 +84,7 @@
         {
           "offset": "0x328",
           "original": "そ、そうだよね。ごめんね。{q}この芸術がわからないの？{q}こういう絵、嫌いなんだね…。",
-          "text": "R-right. Sorry about that.{q}Can't you see the art?{q}You hate this kind, huh..."
+          "text": "R-right. Sorry about that.{q}You don't get this art?{q}You don't like this style?"
         },
         {
           "offset": "0x384",
@@ -124,7 +124,7 @@
         {
           "offset": "0x510",
           "original": "私の眼鏡にかなうなんて、\n相当のものよ。{q}レプリカなの？\n私は、本物にしか\n興味ないわ。{q}貴方には、\n美を見る目がないのね。",
-          "text": "To meet my standards,\nit must be something.{q}A replica?\nI'm only interested\nin the real thing.{q}You have no\neye for beauty."
+          "text": "If it meets my standards,\nit must be exceptional.{q}A replica?\nI'm only interested\nin the real thing.{q}You have no\neye for beauty."
         },
         {
           "offset": "0x58c",
@@ -144,7 +144,7 @@
         {
           "offset": "0x5f4",
           "original": "上手だよね。{q}こんな絵がいいの？{q}俺、ファンなんだ。",
-          "text": "It's well done, right?{q}You like this sort of art?{q}I'm a fan of his work."
+          "text": "It's well done, right?{q}You like this sort of art?{q}I'm a fan of this artist."
         },
         {
           "offset": "0x630",
@@ -214,7 +214,7 @@
         {
           "offset": "0xe8c",
           "original": "こんなことをしていたら、\n筋肉がついて\nしまいますわ。",
-          "text": "Doing this will\ngive me\nmuscles."
+          "text": "If I keep this up,\nI'll end up\nbuilding muscle."
         },
         {
           "offset": "0xec4",
@@ -264,7 +264,7 @@
         {
           "offset": "0x129c",
           "original": "そうね。\nまあまあかしら。{q}つまらないと言う程では\n無かったけど。{q}そうね。\nこんなものかしら。",
-          "text": "Yes.\nPassable, I suppose.{q}It wasn't quite\nboring, though.{q}Yes.\nAbout what I expected."
+          "text": "Yes.\nPassable, I suppose.{q}I wouldn't call\nit boring, though.{q}Yes.\nAbout what I expected."
         },
         {
           "offset": "0x143c",
@@ -474,7 +474,7 @@
         {
           "offset": "0x1e24",
           "original": "俺でよかったら\nいつでも付き合うよ。",
-          "text": "If you don't mind me,\nI'll come along anytime."
+          "text": "If you don't mind,\nI'll come along anytime."
         },
         {
           "offset": "0x1e50",
@@ -489,7 +489,7 @@
         {
           "offset": "0x1ec8",
           "original": "そういえば、\n昨日いただいた詩集、\nわりと読めたわよ。",
-          "text": "By the way,\nthat poetry book from\nyesterday was readable."
+          "text": "Oh, that poetry book\nyou gave me yesterday\nwasn't half bad."
         },
         {
           "offset": "0x1f00",
@@ -509,7 +509,7 @@
         {
           "offset": "0x1f80",
           "original": "そういえば、\n昨日いただいた詩集、\nとりあえず礼を言うわ。",
-          "text": "By the way, I'll thank\nyou for that poetry\nbook yesterday, anyway."
+          "text": "About that poetry book\nyou gave me yesterday...\nThanks, I suppose."
         },
         {
           "offset": "0x1fbc",
@@ -539,7 +539,7 @@
         {
           "offset": "0x2090",
           "original": "そういえば、\n昨日いただいた文集、\nとりあえず礼を言うわ。",
-          "text": "By the way, I'll thank\nyou for that anthology\nyesterday, anyway."
+          "text": "About that anthology\nyou gave me yesterday...\nThanks, I suppose."
         },
         {
           "offset": "0x20cc",
@@ -644,7 +644,7 @@
         {
           "offset": "0x2928",
           "original": "奇麗な花火じゃない。",
-          "text": "Rather pretty fireworks."
+          "text": "Aren't the fireworks lovely?"
         },
         {
           "offset": "0x2940",
@@ -654,7 +654,7 @@
         {
           "offset": "0x2990",
           "original": "ほーほほほ。\nわかってるじゃない。{q}そんな地味なものは、\n私には似合いませんわ。{q}よく知っていたわね。\n誉めてあげるわ。",
-          "text": "Ohohoho.\nYou understand.{q}Such drab things\ndon't suit me.{q}You knew that?\nI'll praise you."
+          "text": "Ohohoho.\nYou understand.{q}Such drab things\ndon't suit me.{q}You knew that?\nI'll give you credit."
         },
         {
           "offset": "0x2d60",
@@ -714,7 +714,7 @@
         {
           "offset": "0x2fdc",
           "original": "どうしたの？\n急に。",
-          "text": "What's this,\nall of a sudden?"
+          "text": "Huh?\nWhy the sudden change?"
         },
         {
           "offset": "0x2ffc",
@@ -729,7 +729,7 @@
         {
           "offset": "0x3044",
           "original": "これで弟達に、\nいいお土産ができたわ。",
-          "text": "Now I have a nice\ngift for my brothers."
+          "text": "Now I've got a nice gift\nfor my little brothers."
         },
         {
           "offset": "0x3070",
@@ -859,7 +859,7 @@
         {
           "offset": "0x385c",
           "original": "待ったわよ。\n３０分ぐらい前から\nここにいなさい。",
-          "text": "I waited.\nBe here 30 minutes\nearly, at least."
+          "text": "Of course I waited.\nNext time, be here\nhalf an hour early."
         },
         {
           "offset": "0x3890",
@@ -1149,7 +1149,7 @@
         {
           "offset": "0x4e98",
           "original": "二流企業に行こうと\n思っていたが、モデルの誘いが\nきているらしい。\nということを聞き出した。",
-          "text": "Found out she meant\nto join a modest firm,\nbut has been asked\nto be a model."
+          "text": "Found out she planned\nto work at a second-rate\ncompany, but she's been\noffered modeling work."
         },
         {
           "offset": "0x4ef8",
@@ -1234,7 +1234,7 @@
         {
           "offset": "0x56b8",
           "original": "待たせたわね。どう？",
-          "text": "Sorry to keep you. Well?"
+          "text": "Kept you waiting. Well?"
         },
         {
           "offset": "0x56d0",
@@ -1519,7 +1519,7 @@
         {
           "offset": "0x6ac4",
           "original": "うん、{G}によく似合うよ。{q}全然、思わない。{q}でも、あれも結構いいよ。",
-          "text": "It suits you, {G}{q}Not cute at all.{q}But that one's nice too."
+          "text": "It suits you, {G}{q}Not really.{q}But that one's nice too."
         },
         {
           "offset": "0x6b10",
@@ -1544,7 +1544,7 @@
         {
           "offset": "0x6c30",
           "original": "何か嫌な雰囲気ね。",
-          "text": "What an unpleasant vibe."
+          "text": "Something feels off here."
         },
         {
           "offset": "0x6c44",
@@ -1559,7 +1559,7 @@
         {
           "offset": "0x6cec",
           "original": "い、いつ来ても\nすごいわね。",
-          "text": "I-it's always\nsomething, here."
+          "text": "I-it's something else,\nevery time we come here."
         },
         {
           "offset": "0x6d08",
@@ -1789,7 +1789,7 @@
         {
           "offset": "0x813c",
           "original": "水の中のアートだね。{q}すごくおいしそうだね。{q}本当、奇麗だね。",
-          "text": "It's art underwater.{q}They look delicious.{q}Yeah, they're so pretty."
+          "text": "It's like underwater art.{q}They look delicious.{q}Yeah, they're so pretty."
         },
         {
           "offset": "0x8184",
@@ -1874,7 +1874,7 @@
         {
           "offset": "0x8794",
           "original": "そうね。\nさあ、早く始めなさい。{q}大きな声を\n出さないで下さる！\nここは図書館ですのよ！{q}これなら、集中できそうね。\nはい、これ。",
-          "text": "Yes.\nNow, start quickly.{q}Would you not\nraise your voice!\nThis is a library!{q}I can focus here.\nHere, this."
+          "text": "Yes.\nNow get started already.{q}Would you not\nraise your voice!\nThis is a library!{q}I can focus here.\nHere, this."
         },
         {
           "offset": "0x8818",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x8994",
           "original": "そう。\nそれならひとつ、\n私の為に、読んで下さる？{q}言葉の使い方を\n知らない様ね。\n最高という言葉は、\n私の為だけのものよ。{q}そう。\nそれなら、\nもう帰りましょう。",
-          "text": "I see.\nThen why not\nread it to me?{q}You don't seem to\nknow how to use words.\n\"The best\" is a word\nfor me alone.{q}I see.\nThen let's\ngo home."
+          "text": "I see.\nThen perhaps\nyou could read it for me?{q}You don't seem to\nknow how to use words.\n\"The best\" is a word\nfor me alone.{q}I see.\nThen let's\ngo home."
         },
         {
           "offset": "0x8c84",
@@ -1949,7 +1949,7 @@
         {
           "offset": "0x8ce8",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to go see it.{q}Ignore the show."
         },
         {
           "offset": "0x8d20",
@@ -1984,12 +1984,12 @@
         {
           "offset": "0x8e00",
           "original": "そこまで言われたら、\nしょうがないわね。",
-          "text": "If you beg like that,\nit can't be helped."
+          "text": "Since you're so insistent,\nI suppose I'll go."
         },
         {
           "offset": "0x8e34",
           "original": "‥‥‥‥。\n顔から火が出る思いよ。",
-          "text": "......\nMy face is burning."
+          "text": "......\nThis is so embarrassing..."
         },
         {
           "offset": "0x8e58",
@@ -2384,7 +2384,7 @@
         {
           "offset": "0xb19c",
           "original": "本当は、こういう所は\n好きではないけれど、\n今日は許してあげるわ。{q}‥‥‥‥。\nせっかくの気分が\n台無しね。{q}貴方では、\n私の相手をするには\n役不足でなくて？",
-          "text": "Truth is, I don't like\nplaces like this, but\nI'll allow it today.{q}......\nYou've ruined\nthe mood.{q}Aren't you a bit\nlacking to be\nmy partner?"
+          "text": "Truth is, I don't like\nplaces like this, but\nI'll allow it today.{q}......\nYou've ruined\nthe mood.{q}Do you really think\nyou're good enough\nto keep me company?"
         },
         {
           "offset": "0xb238",

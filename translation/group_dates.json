@@ -964,7 +964,7 @@
         {
           "offset": "0x35c8",
           "original": "セットが\n乱れちゃったじゃない。",
-          "text": "You've ruined\nmy hair."
+          "text": "My hair's all\nmessed up now!"
         },
         {
           "offset": "0x35ec",
@@ -1554,12 +1554,12 @@
         {
           "offset": "0x5a2c",
           "original": "ただでさえ苦手なのに…。",
-          "text": "And I hate these anyway..."
+          "text": "Rides are hard enough..."
         },
         {
           "offset": "0x5a5c",
           "original": "ただでさえ苦手なのに…。",
-          "text": "And I hate these anyway..."
+          "text": "Rides are hard enough..."
         },
         {
           "offset": "0x5a8c",
@@ -2104,7 +2104,7 @@
         {
           "offset": "0x7dec",
           "original": "お前嫌われてるぜ。",
-          "text": "She hates you, man."
+          "text": "She doesn't like you."
         },
         {
           "offset": "0x7e04",

@@ -124,12 +124,12 @@
         {
           "offset": "0x4f8",
           "original": "上手だよね。{q}俺、ファンなんだよ。{q}{G}は気に入らなかった？",
-          "text": "It's well done, right?{q}I'm a fan of his work.{q}Not your thing, {G}"
+          "text": "It's well done, right?{q}I'm a fan of this artist.{q}Not into it, {G}?"
         },
         {
           "offset": "0x538",
           "original": "うん。\n確かにうまいなぁ。\nでも、優美この人\n知らないよ。{q}この絵の人、\nテレビで見たこと無いけど、\nそんなに有名なんだ。{q}うん。\n優美は、マンガの方が\nいいなー。",
-          "text": "Yeah.\nIt sure is good.\nBut Yumi doesn't\nknow this guy.{q}Yumi's never seen\nhim on TV, but\nhe's that famous?{q}Nope.\nYumi likes manga\nbetter."
+          "text": "Yeah.\nIt really is good.\nBut Yumi doesn't\nknow who painted it.{q}Yumi hasn't seen\nthis artist on TV.\nAre they that famous?{q}Nope.\nYumi likes manga\nbetter."
         },
         {
           "offset": "0x5d8",
@@ -439,7 +439,7 @@
         {
           "offset": "0x1b10",
           "original": "俺でよかったら\nいつでも付き合うよ。",
-          "text": "If you don't mind me,\nI'll come along anytime."
+          "text": "I'd be happy to\ncome along anytime."
         },
         {
           "offset": "0x1b3c",
@@ -499,7 +499,7 @@
         {
           "offset": "0x2238",
           "original": "取れたら{G}に\nあげるね。",
-          "text": "For {G},\nif I win something."
+          "text": "If I win, {G},\nyou can have it."
         },
         {
           "offset": "0x2250",
@@ -599,7 +599,7 @@
         {
           "offset": "0x2980",
           "original": "やっぱりバリバリの\n横シューだよね。{q}優美パズルとクイズは\n苦手だから\nやらないんだ。{q}じゃあガンバッて\nみようかなぁ。",
-          "text": "Yeah, a hardcore\nside-scroller!{q}Yumi's bad at puzzles\nand quizzes, so she\ndoesn't play them.{q}Then I'll give\nit a try!"
+          "text": "Yeah, a hardcore\nside-scrolling shooter!{q}Yumi's bad at puzzles\nand quizzes, so she\ndoesn't play them.{q}Then I'll give\nit a try!"
         },
         {
           "offset": "0x29f8",
@@ -644,7 +644,7 @@
         {
           "offset": "0x2e3c",
           "original": "ごめんなさい。\nお兄ちゃんに、\n捕まっちゃって…。",
-          "text": "I'm sorry!\nMy brother\ncaught me..."
+          "text": "I'm sorry!\nMy older brother\ncaught me..."
         },
         {
           "offset": "0x2e70",
@@ -664,7 +664,7 @@
         {
           "offset": "0x2eec",
           "original": "ごめんね。\nお兄ちゃんが朝から、\nうるさくて。",
-          "text": "Sorry!\nMy brother was a pain\nall morning."
+          "text": "Sorry!\nMy older brother\nwas a pain all morning."
         },
         {
           "offset": "0x2f1c",
@@ -1364,7 +1364,7 @@
         {
           "offset": "0x60d8",
           "original": "優美、\n小さい頃からお兄ちゃんの\nお下がりばかりだったから、\nあまり服を買わないんだ。",
-          "text": "Since she was little,\nYumi always got her\nbrother's hand-me-downs,\nso she rarely buys clothes."
+          "text": "Yumi wore her older\nbrother's hand-me-downs\nas a kid, so she rarely\nshops for clothes."
         },
         {
           "offset": "0x612c",
@@ -1384,12 +1384,12 @@
         {
           "offset": "0x6234",
           "original": "ほら、持ってあげるよ。{q}付き合って、疲れちゃったよ。{q}よくもまあこんなに買って…。",
-          "text": "Here, I'll carry them.{q}Tagging along wore me out.{q}How'd you buy all this...?"
+          "text": "Here, I'll carry them.{q}Tagging along wore me out.{q}You sure bought a lot..."
         },
         {
           "offset": "0x6290",
           "original": "えーっ、持ってくれるの？\nじゃあ、\nこれとこれもお願い。{q}ごめんなさーい。\n優美、反省しまーす。{q}だって、\n楽しかったんだもん。",
-          "text": "Whaaa, you'll carry it?\nThen please take\nthis and this too!{q}Sorryyy.\nYumi will reflect.{q}But it was\nso much fun!"
+          "text": "Whaaa, you'll carry it?\nThen please take\nthis and this too!{q}Sorryyy!\nYumi'll behave!{q}But it was\nso much fun!"
         },
         {
           "offset": "0x6310",
@@ -1404,7 +1404,7 @@
         {
           "offset": "0x633c",
           "original": "うん、{G}によく似合うよ。{q}全然、思わない。{q}でも、あれも結構可愛いよ。",
-          "text": "It suits you, {G}{q}Not cute at all.{q}But that one's cute too."
+          "text": "It suits you, {G}{q}Not really.{q}But that one's cute too."
         },
         {
           "offset": "0x6388",
@@ -1419,7 +1419,7 @@
         {
           "offset": "0x642c",
           "original": "この銀のネックレスはどう？{q}この銅のネックレスはどう？{q}この金のネックレスはどう？",
-          "text": "How about this silver one?{q}How about this copper one?{q}How about this gold one?"
+          "text": "This silver necklace?{q}This copper necklace?{q}This gold necklace?"
         },
         {
           "offset": "0x6488",
@@ -1499,7 +1499,7 @@
         {
           "offset": "0x6bb4",
           "original": "俺が支えててあげるから。{q}転ろんじゃう。きっと。{q}着替え持ってきてないよ。",
-          "text": "I'll hold on to you.{q}You'll fall, I just know it.{q}I didn't bring a change."
+          "text": "I'll hold you steady.{q}You'll fall, I bet.{q}I didn't bring a change."
         },
         {
           "offset": "0x6c08",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x8320",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to go see it.{q}Ignore the show."
         },
         {
           "offset": "0x8358",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x8844",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}Such a chicken, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
         },
         {
           "offset": "0x889c",
@@ -1984,7 +1984,7 @@
         {
           "offset": "0x8b04",
           "original": "{G}と一緒だから平気だよ。{q}園内で、一番怖い乗り物かもね。{q}揺れる？全然気付かなかったよ。",
-          "text": "I'm fine with {G}{q}Scariest ride in the park.{q}Swayed? Didn't notice."
+          "text": "Not with you, {G}.{q}Scariest ride in the park.{q}Swayed? Didn't notice."
         },
         {
           "offset": "0x8b64",
@@ -2024,7 +2024,7 @@
         {
           "offset": "0x8cd0",
           "original": "ビビールでびびっちゃったよ。{q}あれで？おかしいんじゃない？{q}園内で、一番怖い乗り物かもね。",
-          "text": "Frightmare? Frightening!{q}That? Are you serious?{q}Scariest ride in the park."
+          "text": "Frightmare? What a fright!{q}That? Are you serious?{q}Scariest ride in the park."
         },
         {
           "offset": "0x8d34",
@@ -2064,7 +2064,7 @@
         {
           "offset": "0x8ecc",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}Such a chicken, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
         },
         {
           "offset": "0x8f24",
@@ -2119,7 +2119,7 @@
         {
           "offset": "0x918c",
           "original": "{G}と一緒だから平気だよ。{q}園内で、一番怖い乗り物かもね。{q}揺れる？全然気付かなかったよ。",
-          "text": "I'm fine with {G}{q}Scariest ride in the park.{q}Swayed? Didn't notice."
+          "text": "Not with you, {G}.{q}Scariest ride in the park.{q}Swayed? Didn't notice."
         },
         {
           "offset": "0x91ec",
@@ -2159,7 +2159,7 @@
         {
           "offset": "0x9358",
           "original": "ビビールでびびっちゃったよ。{q}あれで？おかしいんじゃない？{q}園内で、一番怖い乗り物かもね。",
-          "text": "Frightmare? Frightening!{q}That? Are you serious?{q}Scariest ride in the park."
+          "text": "Frightmare? What a fright!{q}That? Are you serious?{q}Scariest ride in the park."
         },
         {
           "offset": "0x93bc",
@@ -2249,7 +2249,7 @@
         {
           "offset": "0x985c",
           "original": "{G}と一緒だから平気だよ。{q}園内で、一番怖い乗り物かもね。{q}揺れる？全然気付かなかったよ。",
-          "text": "I'm fine with {G}{q}Scariest ride in the park.{q}Swayed? Didn't notice."
+          "text": "Not with you, {G}.{q}Scariest ride in the park.{q}Swayed? Didn't notice."
         },
         {
           "offset": "0x98bc",

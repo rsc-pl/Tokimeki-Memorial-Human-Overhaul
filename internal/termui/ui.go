@@ -3,7 +3,6 @@ package termui
 
 import (
 	"bufio"
-	"bytes"
 	"fmt"
 	"io"
 	"os"
@@ -50,10 +49,17 @@ var settingsActions = []action{
 }
 
 type state struct {
-	page          string
-	index, scroll int
-	logs          []string
-	status, root  string
+	page                          string
+	index, scroll                 int
+	logs                          []string
+	status, root                  string
+	stage, activeCommand, logPath string
+	started                       time.Time
+	running, follow               bool
+	confirmIndex                  int
+	buildTarget                   BuildTarget
+	events                        chan string
+	completed                     chan error
 }
 
 func cleanLine(s string) string { return strings.ReplaceAll(strings.ReplaceAll(s, "\r", ""), "\n", "") }
@@ -124,145 +130,195 @@ func key() string {
 	}
 	return string(buf[0])
 }
-func (s *state) execute(cmd string, run func(string, io.Writer) error) {
-	fmt.Print(accent + "TOKIMEKI TOOLCHAIN" + reset + " / " + cmd + "\n" + strings.Repeat("─", 62) + "\n")
-	var out bytes.Buffer
-	logDir := filepath.Join(s.root, ".local", "go_toolchain", "logs")
-	_ = os.MkdirAll(logDir, 0700)
-	file, _ := os.OpenFile(filepath.Join(logDir, "latest.log"), os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0600)
-	var dest io.Writer = io.MultiWriter(os.Stdout, &out)
-	if file != nil {
-		dest = io.MultiWriter(os.Stdout, &out, file)
-	}
-	fmt.Fprintf(dest, "Action: %s (%s)\n", cmd, time.Now().Format(time.RFC3339))
-	start := time.Now()
-	err := run(cmd, dest)
-	if err != nil {
-		fmt.Fprintf(dest, "\nFAIL: %v\n", err)
-		s.status = "Failed: " + err.Error()
-	} else {
-		fmt.Fprintf(dest, "\nOK: %s completed in %.1fs (runtime QA separate)\n", cmd, time.Since(start).Seconds())
-		s.status = "Completed: " + cmd
-	}
-	if file != nil {
-		_ = file.Sync()
-		_ = file.Close()
-	}
-	s.logs = strings.Split(strings.TrimSpace(out.String()), "\n")
-	if len(s.logs) > 10000 {
-		s.logs = s.logs[len(s.logs)-10000:]
-	}
-	fmt.Print("\n" + hint + "Press Enter to return to the TUI..." + reset)
-	_, _ = bufio.NewReader(os.Stdin).ReadString('\n')
-}
 
 // Polling the input and resize on the same goroutine keeps cursor output and
 // selection/scroll state serialized. The G11 signal-drawing goroutine raced
 // with the menu and could corrupt the file chooser during resize.
-func Run(root string, callback func(string, io.Writer) error) error {
+func Run(root string, callback func(string, io.Writer) error, build *BuildHooks) error {
 	raw, e := rawOn()
 	if e != nil {
 		return e
 	}
 	defer func() { _ = rawOff(raw); leaveScreen(); fmt.Println() }()
 	enterScreen()
-	s := &state{root: root, page: "main", status: "Sources are read-only • Go UI / Python production build"}
+	s := &state{root: root, page: "main", status: "Source game and translation are read-only"}
 	s.draw()
 	lastW, lastH := termSize()
+	lastClock := time.Now().Unix()
 	for {
-		if !waitInput(90 * time.Millisecond) {
+		dirty := s.pump()
+		if !waitInput(75 * time.Millisecond) {
 			w, h := termSize()
-			if w != lastW || h != lastH {
+			now := time.Now().Unix()
+			if dirty || w != lastW || h != lastH || s.page == "running" && now != lastClock {
 				s.draw()
 				lastW, lastH = w, h
+				lastClock = now
 			}
 			continue
 		}
 		k := key()
-		switch k {
-		case "quit":
-			return nil
-		case "back", "esc", "left":
-			s.page = "main"
-			s.index = 0
-			s.scroll = 0
-		case "logs":
-			s.page = "logs"
-			_, h := termSize()
-			s.scroll = max(0, len(s.logs)-max(0, h-9))
-		case "up", "down", "home", "end", "pgup", "pgdown":
-			if s.page == "logs" {
-				_, h := termSize()
-				step := max(1, h-9)
-				switch k {
-				case "up":
-					s.scroll--
-				case "down":
-					s.scroll++
-				case "home":
-					s.scroll = 0
-				case "end":
-					s.scroll = len(s.logs)
-				case "pgup":
-					s.scroll -= step
-				case "pgdown":
-					s.scroll += step
-				}
-				s.scroll = max(0, s.scroll)
-			} else {
-				opts := chosenActions(s.page)
-				switch k {
-				case "up":
-					s.index = (s.index + len(opts) - 1) % len(opts)
-				case "down":
-					s.index = (s.index + 1) % len(opts)
-				case "home":
-					s.index = 0
-				case "end":
-					s.index = len(opts) - 1
-				case "pgup":
-					s.index = max(0, s.index-6)
-				case "pgdown":
-					s.index = min(len(opts)-1, s.index+6)
-				}
-			}
-		case "enter", "right":
-			if s.page == "logs" {
-				break
-			}
-			opts := chosenActions(s.page)
-			if s.index < 0 || s.index >= len(opts) {
-				break
-			}
-			cmd := opts[s.index].cmd
-			switch cmd {
-			case "exit":
-				return nil
-			case "back":
+		if s.page == "confirm" {
+			switch k {
+			case "left", "up", "home":
+				s.confirmIndex = 0
+			case "right", "down", "end":
+				s.confirmIndex = 1
+			case "esc", "back", "quit":
 				s.page = "main"
-				s.index = 0
+				s.status = "Build cancelled; previous output untouched"
+			case "enter":
+				if s.confirmIndex == 0 {
+					s.page = "main"
+					s.status = "Build cancelled; previous output untouched"
+				} else {
+					target := s.buildTarget
+					s.startJob("build", func(w io.Writer) error { return build.Execute(target, w) })
+				}
+			}
+		} else if s.page == "running" {
+			switch k {
+			case "up":
+				s.follow = false
+				s.scroll--
+			case "down":
+				s.follow = false
+				s.scroll++
+			case "pgup":
+				s.follow = false
+				_, h := termSize()
+				s.scroll -= max(1, h-9)
+			case "pgdown":
+				s.follow = false
+				_, h := termSize()
+				s.scroll += max(1, h-9)
+			case "home":
+				s.follow = false
 				s.scroll = 0
-			case "settings":
-				s.page = "settings"
+			case "end", "f":
+				s.follow = true
+			case "esc", "back", "enter", "quit":
+				if !s.running {
+					s.page = "main"
+					s.index = 0
+					s.scroll = 0
+				}
+			}
+			if s.running && (k == "quit" || k == "esc") {
+				s.status = "Build active; exit available after completion"
+			}
+		} else {
+			switch k {
+			case "quit":
+				return nil
+			case "back", "esc", "left":
+				s.page = "main"
 				s.index = 0
 				s.scroll = 0
 			case "logs":
 				s.page = "logs"
-				s.scroll = 0
-			default:
-				_ = rawOff(raw)
-				leaveScreen()
-				s.execute(cmd, callback)
-				raw, e = rawOn()
-				if e != nil {
-					return e
+				_, h := termSize()
+				s.scroll = max(0, len(s.logs)-max(0, h-9))
+			case "up", "down", "home", "end", "pgup", "pgdown":
+				if s.page == "logs" {
+					_, h := termSize()
+					step := max(1, h-9)
+					switch k {
+					case "up":
+						s.scroll--
+					case "down":
+						s.scroll++
+					case "home":
+						s.scroll = 0
+					case "end":
+						s.scroll = len(s.logs)
+					case "pgup":
+						s.scroll -= step
+					case "pgdown":
+						s.scroll += step
+					}
+					s.scroll = max(0, s.scroll)
+				} else {
+					opts := chosenActions(s.page)
+					switch k {
+					case "up":
+						s.index = (s.index + len(opts) - 1) % len(opts)
+					case "down":
+						s.index = (s.index + 1) % len(opts)
+					case "home":
+						s.index = 0
+					case "end":
+						s.index = len(opts) - 1
+					case "pgup":
+						s.index = max(0, s.index-6)
+					case "pgdown":
+						s.index = min(len(opts)-1, s.index+6)
+					}
 				}
-				enterScreen()
-				s.scroll = 0
+			case "enter", "right":
+				if s.page == "logs" {
+					break
+				}
+				opts := chosenActions(s.page)
+				if s.index < 0 || s.index >= len(opts) {
+					break
+				}
+				cmd := opts[s.index].cmd
+				switch cmd {
+				case "exit":
+					return nil
+				case "back":
+					s.page = "main"
+					s.index = 0
+					s.scroll = 0
+				case "settings":
+					s.page = "settings"
+					s.index = 0
+					s.scroll = 0
+				case "logs":
+					s.page = "logs"
+					s.scroll = 0
+				case "build":
+					if build == nil {
+						s.status = "Build handler unavailable"
+						break
+					}
+					target, err := build.Inspect()
+					if err != nil {
+						s.status = "Cannot start build: " + err.Error()
+						break
+					}
+					s.buildTarget = target
+					if target.Exists {
+						s.page = "confirm"
+						s.confirmIndex = 0
+					} else {
+						s.startJob("build", func(w io.Writer) error { return build.Execute(target, w) })
+					}
+				case "settings_game", "settings_output":
+					// The existing nested native picker still controls its own raw terminal.
+					_ = rawOff(raw)
+					leaveScreen()
+					var result error
+					result = callback(cmd, io.Discard)
+					raw, e = rawOn()
+					if e != nil {
+						return e
+					}
+					enterScreen()
+					if result != nil {
+						s.status = "Settings: " + result.Error()
+					} else {
+						s.status = "Settings updated"
+					}
+				default:
+					s.startJob(cmd, func(w io.Writer) error { return callback(cmd, w) })
+				}
 			}
 		}
 		s.draw()
 		lastW, lastH = termSize()
+		lastClock = time.Now().Unix()
 	}
 }
 func choose(start, suffix string, dirsOnly bool, apply func(string) error) error {

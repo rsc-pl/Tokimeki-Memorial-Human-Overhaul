@@ -24,7 +24,7 @@
         {
           "offset": "0x5c",
           "original": "この絵、奇麗だと思わない？{q}あの人、奇麗だな…。{q}この絵、{G}に似てるね。",
-          "text": "Isn't this one pretty?{q}That lady is pretty...{q}{G}'s twin!"
+          "text": "Isn't this one pretty?{q}That lady is pretty...{q}Looks like {G}."
         },
         {
           "offset": "0xac",
@@ -49,7 +49,7 @@
         {
           "offset": "0x188",
           "original": "才能じゃないかな？{q}誰にでも描けるんじゃない？{q}練習あるのみだよ。",
-          "text": "Isn't it talent?{q}Anyone could paint this.{q}Just lots of practice."
+          "text": "Maybe it's talent?{q}Anyone could paint this.{q}Just lots of practice."
         },
         {
           "offset": "0x1d4",
@@ -149,7 +149,7 @@
         {
           "offset": "0x61c",
           "original": "これ…。\nこの前、\n見たと思います…。",
-          "text": "This...\nI think we saw it\nlast time..."
+          "text": "This...\nI think I saw it\nlast time..."
         },
         {
           "offset": "0x648",
@@ -199,7 +199,7 @@
         {
           "offset": "0xc58",
           "original": "それじゃ、もうやめようか。{q}腕が折れるまでやるんだ。{q}ちょっと休もう。",
-          "text": "Then let's stop now.{q}Keep going till it breaks!{q}Let's take a breather."
+          "text": "Then let's stop now.{q}Work till your arm breaks!{q}Let's take a breather."
         },
         {
           "offset": "0xca8",
@@ -209,7 +209,7 @@
         {
           "offset": "0xe68",
           "original": "あの…。\n開演時間です…。",
-          "text": "Um...\nIt's showtime..."
+          "text": "Um...\nThe show's starting..."
         },
         {
           "offset": "0xe84",
@@ -239,7 +239,7 @@
         {
           "offset": "0xfb0",
           "original": "そ、そうですね…。\nでも、ニューミュージックも\n好きですよ。{q}良かった…。\n私も、\nそう思いました…。{q}そ、そうですね。\nでも、あまり\n好きな方ではないですね。",
-          "text": "Y-yes...\nBut I like\nJ-pop too.{q}I'm glad...\nI thought\nso too...{q}Y-yes.\nBut it isn't really\nmy favorite kind."
+          "text": "Y-yes...\nBut I like\nNew Music too.{q}I'm glad...\nI thought\nso too...{q}Y-yes.\nBut it isn't really\nmy favorite kind."
         },
         {
           "offset": "0x1050",
@@ -289,7 +289,7 @@
         {
           "offset": "0x1348",
           "original": "{G}可愛いからね。{q}にらんでるんじゃない？{q}餌にみえるのかな？",
-          "text": "You're so cute, {G}{q}Is it glaring at us?{q}Maybe we look like food?"
+          "text": "Because {G}'s cute.{q}Is it glaring at us?{q}Maybe we look like food?"
         },
         {
           "offset": "0x138c",
@@ -314,7 +314,7 @@
         {
           "offset": "0x1440",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yes, it really was cute.{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "Yeah, they're cute!{q}Man, so not cute at all.{q}But its eyes are creepy."
         },
         {
           "offset": "0x1484",
@@ -554,7 +554,7 @@
         {
           "offset": "0x1d40",
           "original": "は、はい…。",
-          "text": "O-okay..."
+          "text": "Y-yes..."
         },
         {
           "offset": "0x1d50",
@@ -614,7 +614,7 @@
         {
           "offset": "0x26b0",
           "original": "取れたら{G}に\nあげるね。",
-          "text": "For {G},\nif I win something."
+          "text": "I'll give {G} one\nif I win."
         },
         {
           "offset": "0x26d4",
@@ -744,7 +744,7 @@
         {
           "offset": "0x2f70",
           "original": "あの…。\n偶然、絵がそろって…。{q}そ、そんなつもりは…。{q}あの…。\nいつの間にか、\nたまってました…。",
-          "text": "Um...\nI just got lucky...{q}I-I didn't mean...{q}Um...\nBefore I knew it,\nthey just piled up..."
+          "text": "Um...\nThe icons just matched...{q}I-I didn't mean...{q}Um...\nBefore I knew it,\nthey just piled up..."
         },
         {
           "offset": "0x321c",
@@ -1069,7 +1069,7 @@
         {
           "offset": "0x4638",
           "original": "ニューミュージックを\nよく聴く。\nということを聞き出した。",
-          "text": "Found out she\noften listens to\nJ-pop songs."
+          "text": "Found out she\noften listens to\nNew Music."
         },
         {
           "offset": "0x4674",
@@ -1119,7 +1119,7 @@
         {
           "offset": "0x48a8",
           "original": "好きな人の前で、\nあがらないように\n頑張っているらしい。\nということを聞き出した。",
-          "text": "Found out she's trying\nnot to get nervous\nin front of the\nboy she likes."
+          "text": "Found out she's trying\nnot to get nervous\nin front of the\nperson she likes."
         },
         {
           "offset": "0x4abc",
@@ -1524,7 +1524,7 @@
         {
           "offset": "0x6608",
           "original": "うん、{G}によく似合うよ。{q}全然、思わない。{q}でも、あれも結構可愛いよ。",
-          "text": "It suits you, {G}{q}Not cute at all.{q}But that one's cute too."
+          "text": "It suits you, {G}{q}No, not at all.{q}But that one's cute too."
         },
         {
           "offset": "0x6654",
@@ -1619,7 +1619,7 @@
         {
           "offset": "0x6e08",
           "original": "俺が支えててあげる。{q}転ばなきゃいいだけの話だよ。{q}着替え持ってきてないよ。",
-          "text": "I'll hold on to you.{q}Just don't fall, then.{q}I didn't bring a change."
+          "text": "I'll hold you steady.{q}Just don't fall, then.{q}I didn't bring a change."
         },
         {
           "offset": "0x6e5c",
@@ -1769,7 +1769,7 @@
         {
           "offset": "0x789c",
           "original": "{G}みたい。{q}ちょっと、おかしいんじゃない？{q}うん。可愛いね。",
-          "text": "Like you, {G}{q}Isn't that a little weird?{q}Yeah. It's cute."
+          "text": "Looks like {G}.{q}Isn't that a little weird?{q}Yeah. It's cute."
         },
         {
           "offset": "0x78e0",
@@ -1869,7 +1869,7 @@
         {
           "offset": "0x80ec",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to see it.{q}Ignore the show."
         },
         {
           "offset": "0x8124",
@@ -1909,7 +1909,7 @@
         {
           "offset": "0x8228",
           "original": "ごめんよ。もうやめよう。{q}人の目なんて気にしない。{q}最初からやめればよかったね。",
-          "text": "Sorry. Let's stop now.{q}Who cares what people think?{q}We shouldn't have come here."
+          "text": "Sorry. Let's stop now.{q}Who cares what they think?{q}We should've skipped it."
         },
         {
           "offset": "0x8280",
@@ -1969,12 +1969,12 @@
         {
           "offset": "0x8518",
           "original": "あの…。\n何度乗っても、駄目です…。",
-          "text": "Um...\nI just can't handle it..."
+          "text": "Um...\nI never get used to it..."
         },
         {
           "offset": "0x853c",
           "original": "本当に、苦手なんだね。{q}よし、慣れるまで乗るぜ。{q}でも、段々慣れてきたでしょう？",
-          "text": "You really hate it, huh.{q}Ride till you're used to it!{q}Getting easier now, right?"
+          "text": "Not really your thing, huh.{q}Ride till it feels normal!{q}Getting easier now, right?"
         },
         {
           "offset": "0x8594",
@@ -2094,7 +2094,7 @@
         {
           "offset": "0x8adc",
           "original": "本当に、苦手なんだね。{q}よし、慣れるまで乗るぜ。{q}でも、段々慣れてきたでしょう？",
-          "text": "You really hate it, huh.{q}Ride till you're used to it!{q}Getting easier now, right?"
+          "text": "Not really your thing, huh.{q}Ride till it feels normal!{q}Getting easier now, right?"
         },
         {
           "offset": "0x8b34",
@@ -2214,7 +2214,7 @@
         {
           "offset": "0x907c",
           "original": "本当に、苦手なんだね。{q}よし、慣れるまで乗るぜ。{q}でも、段々慣れてきたでしょう？",
-          "text": "You really hate it, huh.{q}Ride till you're used to it!{q}Getting easier now, right?"
+          "text": "Not really your thing, huh.{q}Ride till it feels normal!{q}Getting easier now, right?"
         },
         {
           "offset": "0x90d4",
@@ -2319,7 +2319,7 @@
         {
           "offset": "0xa2b8",
           "original": "あ、あの…。\n‥‥‥‥。{q}そ、そうですね…。{q}は、はい…。\n私もそう思います。",
-          "text": "U-um...\n......{q}Y-yes, they do...{q}Y-yes...\nI think so too."
+          "text": "U-um...\n......{q}Y-yes, that's true...{q}Y-yes...\nI think so too."
         },
         {
           "offset": "0xa308",

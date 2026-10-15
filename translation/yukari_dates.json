@@ -24,7 +24,7 @@
         {
           "offset": "0x58",
           "original": "この絵、奇麗だと思わない？{q}あの人、奇麗だな…。{q}この絵、{G}に似てるね。",
-          "text": "Isn't this one pretty?{q}That lady is pretty...{q}{G}'s twin!"
+          "text": "Isn't this one pretty?{q}That lady is pretty...{q}It looks like {G}."
         },
         {
           "offset": "0xa8",
@@ -124,7 +124,7 @@
         {
           "offset": "0x4b8",
           "original": "まあ、有名な人の絵だからね。{q}迷子にならないでくれよ。{q}そうだね。うるさいね。",
-          "text": "He's a famous painter.{q}Please don't get lost.{q}Yeah. It's pretty noisy."
+          "text": "It's by a famous artist.{q}Please don't get lost.{q}Yeah. It's pretty noisy."
         },
         {
           "offset": "0x510",
@@ -334,7 +334,7 @@
         {
           "offset": "0x1808",
           "original": "はい。\n私でよろしければ、\n喜んで。",
-          "text": "Yes.\nIf I'll do,\nI'd be delighted."
+          "text": "Yes.\nIf you'd like me to,\nI'd be delighted."
         },
         {
           "offset": "0x182c",
@@ -354,7 +354,7 @@
         {
           "offset": "0x18b4",
           "original": "はい。\n私でよろしければ、\n喜んで。",
-          "text": "Yes.\nIf I'll do,\nI'd be delighted."
+          "text": "Yes.\nIf you'd like me to,\nI'd be delighted."
         },
         {
           "offset": "0x18d8",
@@ -374,7 +374,7 @@
         {
           "offset": "0x194c",
           "original": "はい。\n私でよろしければ、\n喜んで。",
-          "text": "Yes.\nIf I'll do,\nI'd be delighted."
+          "text": "Yes.\nIf you'd like me to,\nI'd be delighted."
         },
         {
           "offset": "0x1970",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1d4c",
           "original": "そう言えば、\n文化祭でいただいた詩集、\n大変面白いですね。",
-          "text": "By the way,\nthe festival poetry book\nis very interesting."
+          "text": "The poetry book you gave me\nat the cultural festival\nis really interesting."
         },
         {
           "offset": "0x1d88",
@@ -679,7 +679,7 @@
         {
           "offset": "0x2cc0",
           "original": "そうですか。\nそれなら、良かったです。{q}お父様のことを\n悪く言わないでください。{q}私になれますかねぇ。",
-          "text": "Is that so.\nThen that's fine.{q}Please don't speak\nill of Father.{q}Could I get used to it?"
+          "text": "Is that so.\nThen that's fine.{q}Please don't speak\nill of Father.{q}I wonder if I could."
         },
         {
           "offset": "0x2d28",
@@ -694,7 +694,7 @@
         {
           "offset": "0x2da4",
           "original": "これなら…。\nでも、無理みたいですね。{q}はぁ…。\n人にできるのでしょうか？{q}可愛いぬいぐるみが\nたくさん\n積んでありますね…。",
-          "text": "This one, perhaps...\nBut it seems too hard.{q}Ah...\nCan a person do this?{q}There are so many\ncute plush toys\npiled up..."
+          "text": "This one, perhaps...\nBut it seems too hard.{q}Ah...\nIs that even possible?{q}There are so many\ncute plush toys\npiled up..."
         },
         {
           "offset": "0x2e24",
@@ -909,7 +909,7 @@
         {
           "offset": "0x3d08",
           "original": "上手だったよ。プロみたい。{q}全然駄目、基礎からやり直したら？{q}わりといいんじゃない。",
-          "text": "Great. Like a pro.{q}Awful. Relearn the basics.{q}Pretty good, actually."
+          "text": "You sang like a pro!{q}Awful. Relearn the basics.{q}Pretty good, actually."
         },
         {
           "offset": "0x3d64",
@@ -934,7 +934,7 @@
         {
           "offset": "0x3e1c",
           "original": "ストレス解消になるよね。{q}その調子でがんがん行こう。{q}それで大声なの？",
-          "text": "It's good for stress, huh.{q}Keep belting it out!{q}Is that why you're loud?"
+          "text": "It's good for stress, huh.{q}Keep belting it out!{q}You call that loud?"
         },
         {
           "offset": "0x3e6c",
@@ -1049,7 +1049,7 @@
         {
           "offset": "0x47a0",
           "original": "意外と怖い映画が好み。\nということを聞き出した。",
-          "text": "Found out, oddly, she's\ninto scary movies."
+          "text": "Turns out she likes\nscary movies."
         },
         {
           "offset": "0x47d0",
@@ -1074,27 +1074,27 @@
         {
           "offset": "0x48c8",
           "original": "ボーリングは、あまり\n好きじゃないらしい。\nということを聞き出した。",
-          "text": "Found out she\ndoesn't much like\nbowling."
+          "text": "Found out she\ndoesn't really like\nbowling."
         },
         {
           "offset": "0x490c",
           "original": "カラオケは、あまり\n好きじゃないらしい。\nということを聞き出した。",
-          "text": "Found out she\ndoesn't much like\nkaraoke."
+          "text": "Found out she\ndoesn't really like\nkaraoke."
         },
         {
           "offset": "0x4964",
           "original": "最近、埴輪をボーッと\n見ていた。\nということを聞き出した。",
-          "text": "Found out she spent\nher time spacing out\nat clay figures."
+          "text": "Found out she was\ngazing at haniwa\nthe other day."
         },
         {
           "offset": "0x49a0",
           "original": "最近、オルゴールをボーッと\n聞いていた。\nということを聞き出した。",
-          "text": "Found out she spent\nher time spacing out\nto a little music box."
+          "text": "Found out she'd been\nlistening to a music box\nin a daze."
         },
         {
           "offset": "0x49e4",
           "original": "最近、奇麗な植物を\nボーッと見ていた。\nということを聞き出した。",
-          "text": "Found out she spent\nher time spacing out\nat some pretty plants."
+          "text": "Found out she'd been\ngazing at some pretty\nplants in a daze."
         },
         {
           "offset": "0x4a30",
@@ -1224,7 +1224,7 @@
         {
           "offset": "0x53c0",
           "original": "はい。\nでは、よろしく\nお願いいたします。{q}そうなのですか？{q}さぁ…。\nどうでしょう？",
-          "text": "Yes.\nThen I'll be\nin your care.{q}Is that so?{q}Well...\nI wonder?"
+          "text": "Yes.\nI'd really appreciate\nyour help.{q}Is that so?{q}Well...\nI wonder?"
         },
         {
           "offset": "0x5574",
@@ -1259,7 +1259,7 @@
         {
           "offset": "0x5680",
           "original": "そうなんですか。\nそう思うと、\nもっと神秘的ですねぇ…。{q}‥‥‥‥。\nそれでも、\n私は好きなのです。{q}子供のころ見た星空を、\n思い出しますねぇ。",
-          "text": "Is that so.\nThinking that, it's\neven more mysterious...{q}......\nEven so,\nI like them.{q}It reminds me of the\nstarry skies of my youth."
+          "text": "Is that so.\nThinking that, it's\neven more mysterious...{q}......\nEven so,\nI like them.{q}I remember the night sky\nfrom when I was little."
         },
         {
           "offset": "0x5710",
@@ -1269,7 +1269,7 @@
         {
           "offset": "0x5764",
           "original": "そうなんですか。\nそう思うと、\nもっと神秘的ですねぇ…。{q}‥‥‥‥。\nそれでも、\n私は好きなのです。{q}子供のころ見た星空を、\n思い出しますねぇ。",
-          "text": "Is that so.\nThinking that, it's\neven more mysterious...{q}......\nEven so,\nI like them.{q}It reminds me of the\nstarry skies of my youth."
+          "text": "Is that so.\nThinking that, it's\neven more mysterious...{q}......\nEven so,\nI like them.{q}I remember the night sky\nfrom when I was little."
         },
         {
           "offset": "0x57f4",
@@ -1524,7 +1524,7 @@
         {
           "offset": "0x6a88",
           "original": "この銀のネックレスはどう？{q}このどくろの指輪はどう？{q}このカラフルなのはどう？",
-          "text": "How about this silver one?{q}How about this skull ring?{q}How about this colorful one?"
+          "text": "This silver necklace?{q}How about this skull ring?{q}This colorful one?"
         },
         {
           "offset": "0x6ae0",
@@ -1539,7 +1539,7 @@
         {
           "offset": "0x6b9c",
           "original": "それじゃ、もう帰ろうか？{q}サイバーな感じでかっこいいよ。{q}大丈夫だよ。危なくないから。",
-          "text": "Then shall we go home?{q}It's cyber and cool.{q}Relax, it's not dangerous."
+          "text": "Then shall we go home?{q}It has a cool cyber vibe.{q}Relax, it's not dangerous."
         },
         {
           "offset": "0x6bfc",
@@ -1584,7 +1584,7 @@
         {
           "offset": "0x71c4",
           "original": "そうですか。\nそれでは、\nよろしくお願い致します。{q}はぁ…。\n何が、ずるいのでしょう。{q}私でよろしければ…。",
-          "text": "Is that so.\nThen I'll be\nin your care.{q}Ah...\nWhat is unfair?{q}If I'll do..."
+          "text": "Is that so.\nI'd really appreciate\nyour help.{q}Ah...\nWhat is unfair?{q}If you don't mind..."
         },
         {
           "offset": "0x7230",
@@ -1914,7 +1914,7 @@
         {
           "offset": "0x8a7c",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to go see it.{q}Ignore the show."
         },
         {
           "offset": "0x8ab4",
@@ -1954,7 +1954,7 @@
         {
           "offset": "0x8c50",
           "original": "ぬいぐるみを着ている人、\n大変そうですねぇ。",
-          "text": "The people in costumes\nlook like they have it hard."
+          "text": "Those people in costumes\nmust have it tough."
         },
         {
           "offset": "0x8c7c",

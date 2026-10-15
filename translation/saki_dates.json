@@ -94,12 +94,12 @@
         {
           "offset": "0x3bc",
           "original": "上手だとは思うけど、\nいいところが\nよくわからなくて…。",
-          "text": "I can tell it's skillful,\nbut I just don't see\nwhat's good about it..."
+          "text": "It's well painted, but\nI just don't see\nwhat makes it good..."
         },
         {
           "offset": "0x3f4",
           "original": "一瞬の躍動美って奴かな。{q}別にわからなくてもいいよ。{q}実は、俺もそうなんだけどね。",
-          "text": "It's a moment of motion.{q}No need to get it, really.{q}Actually, same here."
+          "text": "Beauty in motion, maybe.{q}No need to get it, really.{q}Actually, same here."
         },
         {
           "offset": "0x450",
@@ -124,7 +124,7 @@
         {
           "offset": "0x50c",
           "original": "有名な画家だからね。{q}だからどうしたの？{q}いい絵だよね。",
-          "text": "He's a famous painter.{q}And what about it?{q}It's a great painting."
+          "text": "That painter's famous.{q}And what about it?{q}It's a great painting."
         },
         {
           "offset": "0x54c",
@@ -199,7 +199,7 @@
         {
           "offset": "0xccc",
           "original": "{G}頑張れ。{q}それは、諦めたら？{q}よく、間を抜けるんだよね。",
-          "text": "You'll do it, {G}{q}Why don't you give up?{q}It goes right between."
+          "text": "You'll do it, {G}{q}Why don't you give up?{q}It often slips through."
         },
         {
           "offset": "0xd0c",
@@ -289,12 +289,12 @@
         {
           "offset": "0x13f0",
           "original": "根性で、もうちょっと回ろうよ。{q}ヒィ、もう疲れたよ。{q}疲れたなら、休もうか。",
-          "text": "Guts! Let's go a bit more.{q}Ugh, I'm already beat.{q}If you're tired, let's rest."
+          "text": "Let's push on a bit more!{q}Ugh, I'm already beat.{q}Want to rest a bit?"
         },
         {
           "offset": "0x1444",
           "original": "うん。\n頑張りましょう。{q}もう少し、\n根性出さなきゃ。{q}ありがとう。\nでも、もう少し頑張るわ。",
-          "text": "Okay.\nLet's keep going!{q}You need to\nshow more guts.{q}Thanks.\nBut I'll keep going a bit."
+          "text": "Okay.\nLet's keep going!{q}I need to\npush myself harder.{q}Thanks.\nBut I'll keep going a bit."
         },
         {
           "offset": "0x14a4",
@@ -414,7 +414,7 @@
         {
           "offset": "0x1ac4",
           "original": "はぁ、来る根性が\n無くなっちゃった。",
-          "text": "Sigh, I've lost\nthe guts to come again."
+          "text": "I don't have the nerve\nto come here again."
         },
         {
           "offset": "0x1ae8",
@@ -629,7 +629,7 @@
         {
           "offset": "0x2a48",
           "original": "最近は、女の子も結構来てるよ。{q}不良になっちゃう？{q}時代遅れなんじゃない。",
-          "text": "Lots of girls come lately.{q}Becoming a delinquent?{q}Aren't you behind the times?"
+          "text": "Lots of girls come here now.{q}Becoming a delinquent?{q}A bit behind the times?"
         },
         {
           "offset": "0x2a9c",
@@ -644,12 +644,12 @@
         {
           "offset": "0x2b14",
           "original": "シューティングなんてどう？{q}クレーンゲームなんてどう？{q}パズル関係が面白いと思うよ。",
-          "text": "How about shoot-'em-ups?{q}How about the crane games?{q}Puzzle games, I think."
+          "text": "How about shoot-'em-ups?{q}How about the crane games?{q}Puzzle games are fun."
         },
         {
           "offset": "0x2b70",
           "original": "このぐらい難しいほうが、\nやる気が出るかも\nしれないね。{q}つかむところに、\n根性が感じられないね。{q}こ、こう言うのは、\n頭がついていかなくて…。",
-          "text": "Maybe this hard\nmakes me want\nto try more.{q}That claw just\nhas no guts.{q}M-my brain can't\nkeep up with these..."
+          "text": "A challenge like this\nmight make me\ntry even harder.{q}That claw just\nhas no guts.{q}M-my brain can't\nkeep up with these..."
         },
         {
           "offset": "0x2c00",
@@ -679,7 +679,7 @@
         {
           "offset": "0x2d60",
           "original": "でも、恋人同士が多いね。{q}えっ？\nあ、当たり前なんだ…。{q}そうなの？\nわりと多いと思わない？",
-          "text": "But a lot are couples.{q}Huh?\nI-it's obvious...?{q}Really?\nDon't you think it's a lot?"
+          "text": "Lots of couples, though.{q}Huh?\nI-it's obvious...?{q}Really?\nAren't there quite a few?"
         },
         {
           "offset": "0x3004",
@@ -879,7 +879,7 @@
         {
           "offset": "0x3af8",
           "original": "ありがとう。\nそういう\n誉め方もあったのね。{q}そんな見え透いた嘘は、\n駄目よ。{q}やっぱり、それは\nわかってるんだけどね。",
-          "text": "Thank you.\nThat's one way to\ngive a compliment.{q}No such obvious\nlies, please.{q}Yeah, I already\nknew that, though."
+          "text": "Thank you.\nThat's one way to\ngive a compliment.{q}Come on, that's\nsuch an obvious lie!{q}Yeah, I already\nknew that, though."
         },
         {
           "offset": "0x3b70",
@@ -909,7 +909,7 @@
         {
           "offset": "0x3e10",
           "original": "こういう所で、\n話するのって、\n恋人同士みたいね。",
-          "text": "Talking in\na place like this\nfeels like a couple."
+          "text": "Talking here like this...\nIt's almost like\nwe're a couple."
         },
         {
           "offset": "0x3e44",
@@ -1099,7 +1099,7 @@
         {
           "offset": "0x4b8c",
           "original": "そ、そうね…。\nもう少し派手だと\n良かったけど…。{q}良かった。\n私もそう思ってたんだ。{q}もう少し\n派手な映画だったら\n良かったね。",
-          "text": "Y-yes...\nIt'd be better if it\nwere a bit flashier...{q}Good.\nI was thinking that too.{q}A bit flashier\na movie would've\nbeen nice."
+          "text": "Y-yes...\nIt'd be better if it\nwere a bit flashier...{q}Good.\nI was thinking that too.{q}It would've been nice\nif the movie had\na bit more flair."
         },
         {
           "offset": "0x4c0c",
@@ -1124,7 +1124,7 @@
         {
           "offset": "0x4e70",
           "original": "奇麗。\n思わず\nうっとりしちゃう。",
-          "text": "So pretty.\nI can't help\nbut swoon."
+          "text": "So pretty.\nI can't take\nmy eyes off it."
         },
         {
           "offset": "0x4e98",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x5060",
           "original": "えっ、ありがとう。\nちょっと照れちゃうね。{q}そ、そう？\nそうは思うけどね…。{q}そう？\nそうでもないと思うけど…。",
-          "text": "Oh, thank you.\nI'm a little embarrassed.{q}R-really?\nI guess I agree...{q}Really?\nI don't think it's bad..."
+          "text": "Oh, thank you.\nI'm a little embarrassed.{q}R-really?\nI guess I agree...{q}Really?\nI don't think so..."
         },
         {
           "offset": "0x50d0",
@@ -1354,7 +1354,7 @@
         {
           "offset": "0x5f90",
           "original": "うん。\n心の清涼剤かな。{q}えっ？\n奇麗だと思わない？{q}お花って\nよく料理に使うのよ。",
-          "text": "Yeah.\nThey refresh the heart.{q}Huh?\nDon't you think so?{q}Flowers are used\na lot in cooking."
+          "text": "Yeah.\nThey're good for the soul.{q}Huh?\nDon't you think so?{q}Flowers are used\na lot in cooking."
         },
         {
           "offset": "0x5fe4",
@@ -1414,7 +1414,7 @@
         {
           "offset": "0x6414",
           "original": "たまに買い物に来ると、\nたくさん買っちゃうね。",
-          "text": "When I go shopping\nfor once, I buy a lot."
+          "text": "I don't shop often, but\nI end up buying a lot."
         },
         {
           "offset": "0x6444",
@@ -1424,12 +1424,12 @@
         {
           "offset": "0x6498",
           "original": "悪いですから、\nいいですよ。{q}えっ、あのぐらいで…？\nい、いえ…。\nごめんね。{q}ね、たくさん\n買ったでしょう。",
-          "text": "I couldn't,\nit's fine.{q}Huh, from that little...?\nN-no...\nSorry.{q}See? I bought\na lot, right?"
+          "text": "Oh, it's okay.\nI don't want to impose.{q}Huh, from that little...?\nN-no...\nSorry.{q}See? I bought\na lot, right?"
         },
         {
           "offset": "0x6508",
           "original": "悪くないから、ほら貸して？",
-          "text": "It's no trouble. Here."
+          "text": "It's fine. Let me take them."
         },
         {
           "offset": "0x6528",
@@ -1444,7 +1444,7 @@
         {
           "offset": "0x6554",
           "original": "うん、{G}によく似合うよ。{q}全然、思わない。{q}でも、あれも結構可愛いよ。",
-          "text": "It suits you, {G}{q}Not cute at all.{q}But that one's cute too."
+          "text": "It suits you, {G}{q}No, not at all.{q}But that one's cute too."
         },
         {
           "offset": "0x65a0",
@@ -1459,7 +1459,7 @@
         {
           "offset": "0x662c",
           "original": "このカラフルなのはどう？{q}この銀のネックレスはどう？{q}このどくろの指輪はどう？",
-          "text": "How about this colorful one?{q}How about this silver one?{q}How about this skull ring?"
+          "text": "How about this colorful one?{q}This silver necklace?{q}How about this skull ring?"
         },
         {
           "offset": "0x6684",
@@ -1484,7 +1484,7 @@
         {
           "offset": "0x67f4",
           "original": "何度来ても\nすごい雰囲気ね。",
-          "text": "This place always\nhas such a mood."
+          "text": "This place still feels\nso intense every time."
         },
         {
           "offset": "0x6810",
@@ -1539,7 +1539,7 @@
         {
           "offset": "0x6df4",
           "original": "俺が支えててあげるから。{q}転ばなきゃいいだけの話だよ。{q}着替え持ってきてないよ。",
-          "text": "I'll hold on to you.{q}Just don't fall, then.{q}I didn't bring a change."
+          "text": "I'll hold you steady.{q}Just don't fall, then.{q}I didn't bring a change."
         },
         {
           "offset": "0x6e4c",
@@ -1744,7 +1744,7 @@
         {
           "offset": "0x7d58",
           "original": "ね、何だか\nそう思うでしょう。{q}そ、そう？\nでも言い方が\nよくないと思うな…。{q}そ、そうね。\nうん、反省します。",
-          "text": "See? You kind of\nthink so too, right?{q}R-really?\nBut I don't like\nhow you said that...{q}Y-you're right.\nI'll reflect on that."
+          "text": "See? You kind of\nthink so too, right?{q}R-really?\nBut I don't like\nhow you said that...{q}Y-you're right.\nI'll watch what I say."
         },
         {
           "offset": "0x7dc8",
@@ -1839,7 +1839,7 @@
         {
           "offset": "0x8568",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to go see it.{q}Ignore the show."
         },
         {
           "offset": "0x85a0",
@@ -1944,7 +1944,7 @@
         {
           "offset": "0x8a60",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}Such a chicken, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
         },
         {
           "offset": "0x8ab8",
@@ -1979,7 +1979,7 @@
         {
           "offset": "0x8c0c",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "Only had eyes for {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8c5c",
@@ -2064,7 +2064,7 @@
         {
           "offset": "0x9064",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}Such a chicken, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
         },
         {
           "offset": "0x90bc",
@@ -2099,7 +2099,7 @@
         {
           "offset": "0x9210",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "Only had eyes for {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x9260",
@@ -2184,7 +2184,7 @@
         {
           "offset": "0x9674",
           "original": "いん石が来た時、びびっちゃったよ。{q}所詮は子供だましだね。{q}すごかったね。",
-          "text": "The meteor freaked me out.{q}It's just kid stuff, really.{q}That was really amazing."
+          "text": "The meteor freaked me out.{q}Just a trick for kids.{q}That was really amazing."
         },
         {
           "offset": "0x96c8",
@@ -2199,7 +2199,7 @@
         {
           "offset": "0x9748",
           "original": "そう思うよ。{q}全然、良くないよ。{q}作るほうは大変だね。",
-          "text": "I really think so too.{q}It's no good at all.{q}They must be hard to make."
+          "text": "I really think so too.{q}No, that's a bad idea.{q}They must be hard to make."
         },
         {
           "offset": "0x9788",
@@ -2219,7 +2219,7 @@
         {
           "offset": "0x9818",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "Only had eyes for {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x9868",
@@ -2289,7 +2289,7 @@
         {
           "offset": "0xa82c",
           "original": "奇麗な池ね。\n日頃の疲れも\n吹っ飛びそう。",
-          "text": "What a pretty pond.\nIt blows all my\ntiredness away."
+          "text": "What a pretty pond.\nIt makes me forget\nhow tired I've been."
         },
         {
           "offset": "0xa858",
@@ -2324,7 +2324,7 @@
         {
           "offset": "0xa9c4",
           "original": "残念、お弁当食べたかったよ。{q}いや、桜だけで十分だよ。{q}無いものは、しょうがないね。",
-          "text": "Darn, I wanted your lunch.{q}No, the blossoms are plenty.{q}Can't be helped."
+          "text": "Aw, I wanted some bento.{q}The blossoms are enough.{q}Can't be helped."
         },
         {
           "offset": "0xaa20",

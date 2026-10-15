@@ -124,12 +124,12 @@
         {
           "offset": "0x574",
           "original": "俺、ファンなんだよ。{q}こんな絵がいいの？{q}上手だよね。",
-          "text": "I'm a fan of his work.{q}You like this sort of art?{q}It's well done, right?"
+          "text": "I'm a fan of this artist.{q}You like this sort of art?{q}It's well done, right?"
         },
         {
           "offset": "0x5b4",
           "original": "本当ですか？\n良かった…。\n私も大好きなんです。{q}私は、\n大好きですけど…。{q}だから\n有名なんですね。",
-          "text": "Really?\nI'm so glad...\nI love his work too.{q}I love it,\nthough...{q}That's why\nhe's famous."
+          "text": "Really?\nI'm so glad...\nI love it too.{q}I love it,\nthough...{q}No wonder\nthe artist is famous."
         },
         {
           "offset": "0x61c",
@@ -199,7 +199,7 @@
         {
           "offset": "0xccc",
           "original": "それじゃ、もうやめよう。{q}腕が折れるまでやるんだ。{q}もっと軽い玉にしようか？",
-          "text": "Then let's stop now.{q}Keep going till it breaks!{q}Want a lighter ball?"
+          "text": "Then let's stop now.{q}Play till your arm breaks!{q}Want a lighter ball?"
         },
         {
           "offset": "0xd20",
@@ -209,7 +209,7 @@
         {
           "offset": "0xf04",
           "original": "あっ、もう開演時間です。\n早く中に入らないと…。",
-          "text": "Oh, it's showtime.\nWe should hurry in..."
+          "text": "Oh, the show's starting.\nWe'd better hurry in..."
         },
         {
           "offset": "0xf34",
@@ -344,7 +344,7 @@
         {
           "offset": "0x171c",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yes, it really was cute.{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "Yeah, they're cute!{q}Man, so not cute at all.{q}But its eyes are creepy."
         },
         {
           "offset": "0x1760",
@@ -664,7 +664,7 @@
         {
           "offset": "0x2b6c",
           "original": "取れたら{G}にあげるね。",
-          "text": "I'll win it for {G}"
+          "text": "{G} gets it if I win."
         },
         {
           "offset": "0x2b90",
@@ -999,7 +999,7 @@
         {
           "offset": "0x4324",
           "original": "普段おとなしいからね。{q}それで大声なの？{q}その調子でがんがん行こう。",
-          "text": "You're usually so quiet.{q}Is that why you're loud?{q}Keep belting it out!"
+          "text": "You're usually so quiet.{q}And that's loud to you?{q}Keep belting it out!"
         },
         {
           "offset": "0x4370",
@@ -1084,7 +1084,7 @@
         {
           "offset": "0x4a48",
           "original": "そろそろ、\n外に出ても、平気な季節に\nなってきました。",
-          "text": "It's becoming\nthe season when I can\ngo out without worry."
+          "text": "It's getting nice enough\nfor me to go outside\nagain."
         },
         {
           "offset": "0x4a80",
@@ -1114,7 +1114,7 @@
         {
           "offset": "0x4cc8",
           "original": "趣味は読書ということを\n聞き出した。",
-          "text": "Found out her\nhobby's reading books."
+          "text": "Found out reading\nis her hobby."
         },
         {
           "offset": "0x4cec",
@@ -1134,7 +1134,7 @@
         {
           "offset": "0x4dbc",
           "original": "スキーは身体が弱いので\n行かない、ということを\n聞き出した。",
-          "text": "Found out she's too\nfrail to go\nskiing at all."
+          "text": "Found out she avoids\nskiing because of\nher poor health."
         },
         {
           "offset": "0x4df8",
@@ -1179,7 +1179,7 @@
         {
           "offset": "0x4fec",
           "original": "身体が弱いことを気にしていて\nあまり積極的な友達づきあいが\nできないらしい。",
-          "text": "She worries about\nbeing frail, so she\ncan't make friends easily."
+          "text": "She worries about\nher poor health and\nholds back with friends."
         },
         {
           "offset": "0x5218",
@@ -1364,7 +1364,7 @@
         {
           "offset": "0x5f28",
           "original": "七夕の、織り姫星の\n星座ですね。\nあれがそうなんですね…。{q}そうですけど\n知らないんですね。{q}それならいいんです。\nテープで、説明してくれると\n思いますから。",
-          "text": "The constellation of\nVega, from Tanabata.\nSo that's it...{q}That's so, but\nyou don't know.{q}Then never mind.\nI think the tape\nwill explain it."
+          "text": "That's the constellation\nwith Orihime's star\nfrom Tanabata... I see.{q}That's so, but\nyou don't know.{q}Then never mind.\nI think the tape\nwill explain it."
         },
         {
           "offset": "0x5fc4",
@@ -1489,7 +1489,7 @@
         {
           "offset": "0x6a1c",
           "original": "本当、素敵だね。{q}持って帰ろうか？{q}お花高いからね。",
-          "text": "Really? That's lovely.{q}Shall we take some home?{q}Flowers are expensive."
+          "text": "It really is lovely.{q}Shall we take some home?{q}Flowers are expensive."
         },
         {
           "offset": "0x6a58",
@@ -1559,7 +1559,7 @@
         {
           "offset": "0x6f88",
           "original": "うん、{G}によく似合うよ。{q}全然、思わない。{q}でも、あれも結構可愛いよ。",
-          "text": "It suits you, {G}{q}Not cute at all.{q}But that one's cute too."
+          "text": "It suits you, {G}{q}No, not at all.{q}But that one's cute too."
         },
         {
           "offset": "0x6fd4",
@@ -1589,7 +1589,7 @@
         {
           "offset": "0x718c",
           "original": "それじゃ、もう帰ろうか？{q}サイバーな感じでかっこいいよ。{q}大丈夫だよ。危なくないから。",
-          "text": "Then shall we go home?{q}It's cyber and cool.{q}Relax, it's not dangerous."
+          "text": "Then shall we go home?{q}It has a cool cyber vibe.{q}Relax, it's not dangerous."
         },
         {
           "offset": "0x71ec",
@@ -1599,7 +1599,7 @@
         {
           "offset": "0x7248",
           "original": "何度来ても、\nこの雰囲気に、\n慣れませんね。",
-          "text": "No matter how often\nI come, I can't get\nused to this mood."
+          "text": "No matter how often\nI come, I can't get\nused to this atmosphere."
         },
         {
           "offset": "0x7274",
@@ -1654,7 +1654,7 @@
         {
           "offset": "0x788c",
           "original": "俺が支えててあげるから。{q}転ばなきゃいいだけの話だよ。{q}着替え持ってきてないよ。",
-          "text": "I'll hold on to you.{q}Just don't fall, then.{q}I didn't bring a change."
+          "text": "I'll hold you steady.{q}Just don't fall, then.{q}I didn't bring a change."
         },
         {
           "offset": "0x78e4",
@@ -1904,7 +1904,7 @@
         {
           "offset": "0x8c2c",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Ask {G} to see it.{q}Ignore the show."
         },
         {
           "offset": "0x8c64",
@@ -1934,7 +1934,7 @@
         {
           "offset": "0x8d34",
           "original": "ごめんよ。俺が見たかったんだ…。{q}人の目なんて気にしない。{q}見るのやめればよかったかな…。",
-          "text": "Sorry. I wanted to see it...{q}Who cares what people think?{q}Maybe we shouldn't have..."
+          "text": "Sorry. I wanted to see it...{q}Who cares what they think?{q}Should I have skipped it?"
         },
         {
           "offset": "0x8d98",
@@ -1954,7 +1954,7 @@
         {
           "offset": "0x8e80",
           "original": "やっぱり、\nそうなんですね…。{q}それは、当たり前だと\n思いますけど…。{q}撮影用って何ですか？",
-          "text": "I thought\nas much...{q}Isn't that\nobvious, though...?{q}What are TV suits?"
+          "text": "I thought\nas much...{q}Isn't that\nobvious, though...?{q}What do you mean, filming?"
         },
         {
           "offset": "0x8ee0",
@@ -1999,7 +1999,7 @@
         {
           "offset": "0x9098",
           "original": "でも、段々慣れてきたでしょう？{q}よし、慣れるまで乗るぜ。{q}本当に、苦手なんだね。",
-          "text": "Getting easier now, right?{q}Ride till you're used to it!{q}You really hate it, huh."
+          "text": "Getting easier now, right?{q}Ride till it feels normal!{q}Not your thing, huh."
         },
         {
           "offset": "0x90f0",
@@ -2019,7 +2019,7 @@
         {
           "offset": "0x919c",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}What a chicken, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
         },
         {
           "offset": "0x91f4",
@@ -2054,7 +2054,7 @@
         {
           "offset": "0x9380",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I watched {G}'s face.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x93d0",
@@ -2069,7 +2069,7 @@
         {
           "offset": "0x9458",
           "original": "{G}と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "I'm fine with {G}{q}Swayed? Didn't notice.{q}Scariest ride in the park."
+          "text": "I had {G} with me.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
         },
         {
           "offset": "0x94bc",
@@ -2129,7 +2129,7 @@
         {
           "offset": "0x96d4",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}What a chicken, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
         },
         {
           "offset": "0x972c",
@@ -2164,7 +2164,7 @@
         {
           "offset": "0x98b8",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I watched {G}'s face.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x9908",
@@ -2179,7 +2179,7 @@
         {
           "offset": "0x9990",
           "original": "{G}と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "I'm fine with {G}{q}Swayed? Didn't notice.{q}Scariest ride in the park."
+          "text": "I had {G} with me.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
         },
         {
           "offset": "0x99f4",
@@ -2274,7 +2274,7 @@
         {
           "offset": "0x9e2c",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I watched {G}'s face.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x9e7c",
@@ -2289,7 +2289,7 @@
         {
           "offset": "0x9f04",
           "original": "{G}と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "I'm fine with {G}{q}Swayed? Didn't notice.{q}Scariest ride in the park."
+          "text": "I had {G} with me.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
         },
         {
           "offset": "0x9f68",

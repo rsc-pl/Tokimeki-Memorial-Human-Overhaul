@@ -1,377 +1,1847 @@
 {
   "description": "The Christmas party at Ijuin's house: all of SERIFU/XMAS.BIN (base 0x80197000; game-internals 6t), 357 of 358 strings; the centered '・' pause stays. 13 sections from SHOUGATU.EXN's tables at 0x80145AD0 (tools/geko_sections.py --xmas): 0 Yuko, 1 Shiori, 2 Yuina, 3 Ayako, 4 Mira, 5 Mio, 6 Yukari, 7 Nozomi, 8 Megumi, 9 Saki, 10 the present exchange, 11 the arrival, Ijuin's speeches and the evening at home, 12 Yumi. Each girl has a chat ('Talked to {G}'), a brush-off and, for an unmet girl, her first meeting; Megumi is introduced by Shiori or visits the player at home with a present. The 'strings' entries translate SHOUGATU.EXN's in-place words the party code strcpy's: the butler's labels (黒服 -> Guard, 外井 -> Sotoi), Ijuin's label and the banners Ijuin's, Party Hall and Local Park. Verified in DuckStation on forced parties (force_christmas.py --party via xmas_run.ps1; docs/testing.md 'The Christmas party'): all three ways in (polite, Sotoi's physique lines, 'you've come again') and being turned away with the evening at home and Megumi's visit; Ijuin's speeches for the first, second and third party; Shiori's chat, her hostile variant and her introducing Megumi; the first meetings of every girl but Yumi (who has none); chats of Yuko, Nozomi, Megumi and Yumi; brush-offs of Yuina, Ayako, Mira and Nozomi; presents of Shiori (score, cup), Yuina (reactor), Saki (candy), Mira (fan club kit), Yuko (koala), Megumi (crocodile) and Ijuin (signed photo, poster); both closing thoughts. Checked only statically: the other chats and brush-offs, the player's 'we haven't even talked' after a brush-off (not shown in the forced runs), the other presents and the alternative lines of two-string present parts (e.g. Ijuin's poster 'Nah'), the Ijuin's and Local Park banners, natural triggers.",
   "strings": [
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11940", "original": "伊集院邸", "text": "Ijuin's"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x1194C", "original": "黒服", "text": "Guard"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11954", "original": "外井", "text": "Sotoi"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11960", "original": "伊集院", "text": "Ijuin"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11968", "original": "伊集院", "text": "Ijuin"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11970", "original": "パーティー会場", "text": "Party Hall"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11A20", "original": "伊集院邸", "text": "Ijuin's"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11A2C", "original": "近所の公園", "text": "Local Park"}
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11940",
+      "original": "伊集院邸",
+      "text": "Ijuin's"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x1194C",
+      "original": "黒服",
+      "text": "Guard"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11954",
+      "original": "外井",
+      "text": "Sotoi"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11960",
+      "original": "伊集院",
+      "text": "Ijuin"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11968",
+      "original": "伊集院",
+      "text": "Ijuin"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11970",
+      "original": "パーティー会場",
+      "text": "Party Hall"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11A20",
+      "original": "伊集院邸",
+      "text": "Ijuin's"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11A2C",
+      "original": "近所の公園",
+      "text": "Local Park"
+    }
   ],
-  "dialogue": [{
-    "file": "CDROM/SERIFU/XMAS.BIN",
-    "base": "0x80197000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "来てたんだ。", "text": "You came too!"},
-      {"offset": "0x10", "original": "{G}も\n来てたのか。", "text": "Hey, it's {G}\nYou came too?"},
-      {"offset": "0x24", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x3c", "original": "友達がいるから、\nそろそろ行くね。", "text": "I'm here with friends,\nso I'd better go."},
-      {"offset": "0x60", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x8c", "original": "やっばーっ。\nはまっちゃった。", "text": "Ugh, so not good.\nNow I'm stuck."},
-      {"offset": "0xac", "original": "{G}も来てたんだ。", "text": "Hey, it's {G}"},
-      {"offset": "0xbc", "original": "あっと、\nこれから用が\nあるんだった。", "text": "Oh, wait,\nI just remembered\nI've got plans."},
-      {"offset": "0xf0", "original": "{G}。\nまだ、話してないよ。\nあっ、行っちゃった。", "text": "{G}...\nWe haven't even talked.\nAw, she's gone."},
-      {"offset": "0x124", "original": "あっ、好雄君じゃない。", "text": "Oh, if it isn't Yoshio-kun!"},
-      {"offset": "0x13c", "original": "えっ？\n好雄？", "text": "Huh?\nYoshio?"},
-      {"offset": "0x14c", "original": "ご、ごめんね。\n友達と間違えちゃった。", "text": "S-sorry!\nThought you were a friend."},
-      {"offset": "0x174", "original": "好雄の友達？", "text": "A friend of Yoshio's?"},
-      {"offset": "0x184", "original": "えっ？\n好雄君知ってるの。", "text": "Huh?\nYou know Yoshio-kun?"},
-      {"offset": "0x1a0", "original": "だって俺、\n好雄の友達だもん。", "text": "Well, yeah.\nYoshio's my friend."},
-      {"offset": "0x1c0", "original": "ねぇ、名前聞いてもいい？", "text": "Hey, can I get your name?"},
-      {"offset": "0x1dc", "original": "{F}だよ。\n君は？", "text": "I'm {F}\nAnd you?"},
-      {"offset": "0x1ec", "original": "私は、朝日奈夕子。\nあなたが、好雄君の\n言ってた人なんだ。", "text": "I'm Asahina Yuko.\nSo you're the guy\nYoshio-kun told me about."},
-      {"offset": "0x228", "original": "好雄から？\n何言ってんだあいつ…。", "text": "From Yoshio?\nWhat's he been saying...?"},
-      {"offset": "0x24c", "original": "あっ、もう行かなきゃ。\nそれじゃ、また。", "text": "Oops, gotta run.\nSee ya later."},
-      {"offset": "0x2a0", "original": "好雄の友達ねぇ…。", "text": "Yoshio's friend, huh..."},
-      {"offset": "0x57c", "original": "あっ、{P}。\nあなたも\n招待されてたのね。", "text": "Oh, {P}\nSo you were\ninvited too."},
-      {"offset": "0x5a4", "original": "詩織もいたのか。", "text": "Shiori, you're here too?"},
-      {"offset": "0x5b8", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x5dc", "original": "友達がいるから、\nそろそろ行くね。", "text": "I'm here with friends,\nso I'd better go."},
-      {"offset": "0x600", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x61c", "original": "そう言えば、\n紹介したい\n友達がいるのよ。", "text": "Oh, that reminds me.\nThere's a friend I'd\nlike you to meet."},
-      {"offset": "0x648", "original": "紹介って？", "text": "Meet who?"},
-      {"offset": "0x654", "original": "ここにいれば、\nそのうち来るから\n待っててね。", "text": "If you stay here,\nshe'll come by soon,\nso wait for her."},
-      {"offset": "0x684", "original": "そのうちって…。", "text": "Soon, huh..."},
-      {"offset": "0x698", "original": "それじゃ、私は行くね。", "text": "Well, I'll get going."},
-      {"offset": "0x6b0", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x6dc", "original": "えっ？\nでも、誰だろう。", "text": "Huh?\nBut who could it be?"},
-      {"offset": "0x6f8", "original": "あっ、\nよく参加できたわね。", "text": "Oh,\nyou actually got in."},
-      {"offset": "0x714", "original": "詩織もいたのか。", "text": "Shiori, you're here too?"},
-      {"offset": "0x730", "original": "友達がいるから\nそろそろ行かなきゃ。", "text": "I'm here with friends,\nso I have to go."},
-      {"offset": "0x758", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0x788", "original": "ちょっと、\nここで待っててくれる？", "text": "Hey, could you\nwait here a moment?"},
-      {"offset": "0x7ac", "original": "どうして？", "text": "Why?"},
-      {"offset": "0x7b8", "original": "物好きな娘が\n来ると思うから。", "text": "A girl with odd taste\nis about to show up."},
-      {"offset": "0x7d8", "original": "へ、物好きって？", "text": "Huh? Odd taste?"},
-      {"offset": "0x7ec", "original": "それじゃ\n私は行くわ。", "text": "Well then,\nI'll be going."},
-      {"offset": "0x818", "original": "誰が来るんだよ。", "text": "Who's coming, anyway?"},
-      {"offset": "0xb30", "original": "あなたも\n来てたのね。", "text": "So you're\nhere too."},
-      {"offset": "0xb48", "original": "{G}もいたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0xb58", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0xb70", "original": "研究が残ってるから\nそろそろ行くわ。", "text": "I have research to finish,\nso I'll be going."},
-      {"offset": "0xb94", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0xbc0", "original": "あっ、\nよく来れたわね。", "text": "Oh,\nyou dared to show up?"},
-      {"offset": "0xbd8", "original": "{G}もいたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0xbe8", "original": "研究があるから、\nもう行くわ。", "text": "I have research,\nso I'm leaving."},
-      {"offset": "0xc14", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0xc44", "original": "あなた{P}ね。", "text": "You must be {P}"},
-      {"offset": "0xc50", "original": "クリスマスの記念に、\n改造する気はない？", "text": "For Christmas, how about\nletting me modify you?"},
-      {"offset": "0xc78", "original": "はぁ、なにそれ？\n何で、俺の名前\n知ってるの？", "text": "Huh? What's that?\nAnd how do you\nknow my name?"},
-      {"offset": "0xca8", "original": "そんな事はどうでも\nいいのよ。\nするの、しないの？", "text": "That doesn't\nmatter.\nYes or no?"},
-      {"offset": "0xcdc", "original": "改造って、何の改造？", "text": "Modify? Modify what?"},
-      {"offset": "0xcf4", "original": "決まってるじゃない。\n人体改造よ。", "text": "Isn't it obvious?\nHuman modification."},
-      {"offset": "0xd18", "original": "し、しなくていいです。", "text": "N-no thanks, I'm fine."},
-      {"offset": "0xd30", "original": "そう。\nその気になったら、\n私の所に来なさい。", "text": "I see.\nIf you change your mind,\ncome see me."},
-      {"offset": "0xd60", "original": "あの、君は？", "text": "Um, who are you?"},
-      {"offset": "0xd94", "original": "科学部の、紐緒結奈よ。\nそれじゃ、失礼。", "text": "Himoo Yuina, Science Club.\nNow, excuse me."},
-      {"offset": "0xdc0", "original": "電脳部の、紐緒結奈よ。\nそれじゃ、失礼。", "text": "Himoo Yuina, Computer Club.\nNow, excuse me."},
-      {"offset": "0xdec", "original": "{G}か…。\n何だか怖い娘だな…。", "text": "So that's {G}\nShe's kinda scary..."},
-      {"offset": "0x10f4", "original": "メリークリスマス。\nあなたも\n招待されてたのね。", "text": "Merry Christmas!\nSo you were\ninvited too."},
-      {"offset": "0x1124", "original": "{G}もいたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x1134", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x114c", "original": "あっソーリー、ごめんなさい。\nお友達が待ってるの。\nそろそろ行くわね。", "text": "Oh, sorry, so sorry.\nMy friends are waiting.\nI'd better go."},
-      {"offset": "0x1194", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x11bc", "original": "ソー、バッド。\nあなたも来てたの。", "text": "Oh, so bad.\nYou're here too?"},
-      {"offset": "0x11e0", "original": "{G}もいたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x11f0", "original": "あっ、急用を思い出したわ。\nもう、帰らなくっちゃ。", "text": "Oh! Urgent business!\nI have to go home now."},
-      {"offset": "0x1230", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0x1260", "original": "メリークリスマス。", "text": "Merry Christmas!"},
-      {"offset": "0x1274", "original": "あっ、メリークリスマス。\n（？？？\nこの娘、誰？）", "text": "Oh, Merry Christmas.\n(???\nWho is this girl?)"},
-      {"offset": "0x12a8", "original": "今、伊集院君と\n話してたでしょう。\nキラメキ高校の人？", "text": "You were just talking\nwith Ijuin-kun, right?\nYou go to Kirameki High?"},
-      {"offset": "0x12e0", "original": "そうだけど、君だれ？", "text": "Yeah, but who are you?"},
-      {"offset": "0x12f8", "original": "私、片桐彩子。\nあなたは？", "text": "I'm Katagiri Ayako.\nAnd you?"},
-      {"offset": "0x1314", "original": "それにしても、\n伊集院君の友達なんて、\n珍しいわね。", "text": "Still, I don't often\nmeet a friend\nof Ijuin-kun's."},
-      {"offset": "0x1348", "original": "別に、\n友達なんかじゃないよ。", "text": "No, I'm not\nhis friend or anything."},
-      {"offset": "0x1368", "original": "そう照れないの。\n今度は学校で\n会えるといいわね。", "text": "Don't be shy.\nHope we meet\nat school next time."},
-      {"offset": "0x139c", "original": "そ、そうだね。\n（何で、照れなきゃ\nいけないんだ？）", "text": "Y-yeah.\n(Why would I\nbe shy?)"},
-      {"offset": "0x13d0", "original": "それじゃ、グッバイ。\nさよなら。", "text": "Well then, bye-bye!\nSo long."},
-      {"offset": "0x13f0", "original": "さ、さよなら。\n（なんか変な娘。）", "text": "B-bye.\n(What a weird girl.)"},
-      {"offset": "0x16e0", "original": "貴方もいらしてたのね。", "text": "So you came as well."},
-      {"offset": "0x16f8", "original": "{G}も\n来てたのか。", "text": "Hey, it's {G}\nYou came too?"},
-      {"offset": "0x170c", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x1724", "original": "私、伊集院君に用が\nあるから…。\nそれじゃ…。", "text": "I need to talk\nto Ijuin-kun...\nSee you..."},
-      {"offset": "0x1754", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x177c", "original": "そのかっこで\nよく来れたわね。", "text": "You actually came\ndressed like that?"},
-      {"offset": "0x179c", "original": "{G}も来てたんだ。", "text": "Hey, it's {G}"},
-      {"offset": "0x17ac", "original": "気安く話し掛けないで\nくれるかしら…。\nそれじゃ、失礼。", "text": "Would you mind not\ntalking to me so casually?\nExcuse me."},
-      {"offset": "0x17f0", "original": "{G}。\nまだ、話してないよ。\nあっ、行っちゃった。", "text": "{G}...\nWe haven't even talked.\nAw, she's gone."},
-      {"offset": "0x182c", "original": "あっ、ごめんなさい。", "text": "Oh, I'm sorry!"},
-      {"offset": "0x1844", "original": "ちょっと、どこ見て\n歩いてるの？", "text": "Hey, watch where\nyou're going!"},
-      {"offset": "0x1864", "original": "いや、あのその…。\nあっ、あんまり君が\n奇麗だから…。", "text": "Uh, well, um...\nIt's just, you're\nso beautiful..."},
-      {"offset": "0x189c", "original": "そう。\nま、そういう事なら、\nしかたないわね。", "text": "I see.\nWell, if that's the case,\nI'll let it slide."},
-      {"offset": "0x18cc", "original": "ほっ…。\n良かった。", "text": "Phew...\nThat worked."},
-      {"offset": "0x18e0", "original": "君、名前は？", "text": "You. Your name?"},
-      {"offset": "0x18f0", "original": "あっ、{F}です。", "text": "Oh, I'm {F}"},
-      {"offset": "0x1900", "original": "知ってると思うけど、\n私は鏡魅羅よ。\nそれじゃ、失礼。", "text": "You surely know me,\nbut I'm Kagami Mira.\nNow, excuse me."},
-      {"offset": "0x1958", "original": "あの娘が、\nファンクラブもある、\n{G}なんだ…。", "text": "So that's the girl\nwith her own fan club,\n{G}..."},
-      {"offset": "0x1984", "original": "性格きつそう。", "text": "She seems harsh."},
-      {"offset": "0x1c64", "original": "招待されてたんですね。", "text": "So you were invited too."},
-      {"offset": "0x1c7c", "original": "{G}も、\n来てたのか。", "text": "Hey, it's {G}\nYou came too?"},
-      {"offset": "0x1c90", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x1ca8", "original": "私、挨拶したい人が\nいますので、\nちょっと失礼します。", "text": "There's someone\nI need to greet,\nso please excuse me."},
-      {"offset": "0x1ce0", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x1d0c", "original": "来てたのですね…。", "text": "So you came..."},
-      {"offset": "0x1d20", "original": "{G}も来てたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x1d30", "original": "それでは、\n失礼します。", "text": "Well then,\nexcuse me."},
-      {"offset": "0x1d54", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0x1d84", "original": "あれ？\nあの娘何だか、\n顔色が悪いぞ…。", "text": "Huh?\nThat girl looks\nrather pale..."},
-      {"offset": "0x1db0", "original": "あの、大丈夫ですか？\n気分でも悪いんじゃ…。", "text": "Um, are you okay?\nAre you feeling sick...?"},
-      {"offset": "0x1de0", "original": "だ、大丈夫？\n大変だ、\n人を呼ばないと…。", "text": "A-are you okay?\nOh no,\nI need to get help..."},
-      {"offset": "0x1e0c", "original": "だ、大丈夫です…。", "text": "I-I'm fine..."},
-      {"offset": "0x1e28", "original": "本当に大丈夫？\nいきなり倒れるもんだから、\nびっくりしちゃって。", "text": "Are you really okay?\nYou suddenly collapsed,\nit gave me a scare."},
-      {"offset": "0x1e68", "original": "すいません。\n驚かせてしまった\nみたいで…。", "text": "I'm sorry.\nIt seems I gave\nyou a fright..."},
-      {"offset": "0x1e94", "original": "いや、いいんだけど。\n気分が悪いときは、\n休んでた方がいいよ。", "text": "No, it's fine.\nWhen you feel sick,\nyou should rest."},
-      {"offset": "0x1ed4", "original": "ありがとうございます。\n私、如月未緒といいます。", "text": "Thank you so much.\nMy name is Kisaragi Mio."},
-      {"offset": "0x1f04", "original": "良かったら、お名前を…。", "text": "May I ask your name...?"},
-      {"offset": "0x1f20", "original": "あっ、俺、{F}。\nそれじゃ、{G}。\n無理しちゃ駄目だよ。", "text": "Oh, I'm {F}\nWell, {G}\ndon't push yourself."},
-      {"offset": "0x1f54", "original": "本当に、\nありがとうございました。\n{P}。", "text": "Really,\nthank you so much,\n{P}"},
-      {"offset": "0x225c", "original": "{P}\nこんばんは。\n招待されていたのですね。", "text": "{P}\nGood evening.\nSo you were invited too."},
-      {"offset": "0x2284", "original": "{G}も、\n来てたのか。", "text": "Hey, it's {G}\nYou came too?"},
-      {"offset": "0x2298", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x22b0", "original": "申し訳ありませんが、\n用がありますので、\n少々、失礼いたします。", "text": "I'm terribly sorry,\nbut I have an errand,\nso please excuse me."},
-      {"offset": "0x22f0", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x2318", "original": "あっ、{G}だ。", "text": "There's {G}"},
-      {"offset": "0x2324", "original": "おーい。\n{G}。", "text": "Yoo-hoo!\n{G}!"},
-      {"offset": "0x2334", "original": "こんばんは。\n招待されて\nいたのですね…。", "text": "Good evening.\nSo you were\ninvited too..."},
-      {"offset": "0x2360", "original": "{G}も\n招待されてたんだね。", "text": "{G}, so you\ngot invited too."},
-      {"offset": "0x237c", "original": "それでは、\nお父様が待っていますので、\n失礼いたします。", "text": "Well then,\nmy father is waiting,\nso please excuse me."},
-      {"offset": "0x23c8", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0x23f8", "original": "あの娘、どうしたんだろう。\nボーッと立ってるぞ。\nあっ、人にぶつかる…。\n危ないなぁ。", "text": "What's with that girl?\nShe's just standing there.\nShe'll hit someone...\nThat's not safe."},
-      {"offset": "0x244c", "original": "あの…。", "text": "Um..."},
-      {"offset": "0x2460", "original": "ハイ。\nなんでしょう。", "text": "Yes?\nWhat is it?"},
-      {"offset": "0x2478", "original": "余計な心配だと思うけど、\nボーッとしてると\n危ないよ。", "text": "It's none of my business,\nbut spacing out like that\nisn't safe."},
-      {"offset": "0x24b0", "original": "心配していただいて、\nありがとうございます。\n見とれてましたもので。", "text": "Thank you for\nyour concern.\nI was captivated, you see."},
-      {"offset": "0x24f4", "original": "何を見てたの？", "text": "What were you looking at?"},
-      {"offset": "0x2504", "original": "大きなクリスマスツリーだと\n思いまして…。\nずっと見てました。", "text": "I thought it was such\na big Christmas tree...\nI kept gazing at it."},
-      {"offset": "0x2544", "original": "確かに大きいけど、\nこんな所で見てると、\n人にぶつかっちゃうよ。", "text": "It sure is big, but\nif you stare at it here,\nsomeone'll bump into you."},
-      {"offset": "0x2584", "original": "それもそうですね。\nありがとうございます。\nあの、お名前は？", "text": "That's true.\nThank you.\nUm, may I ask your name?"},
-      {"offset": "0x25c0", "original": "名乗るほどの者じゃ\nないよ。", "text": "Oh, I'm nobody\nworth mentioning."},
-      {"offset": "0x25dc", "original": "親切にしていただいた人の\n名前も知らないのは、\n失礼ですから。", "text": "It would be rude not to\nknow the name of someone\nso kind to me."},
-      {"offset": "0x261c", "original": "俺の名前は\n{F}。\n君は？", "text": "My name's\n{F}\nAnd you?"},
-      {"offset": "0x2634", "original": "私は、古式ゆかりと\n申します。それでは、\n失礼いたします。", "text": "My name is\nKoshiki Yukari. Now,\nplease excuse me."},
-      {"offset": "0x269c", "original": "古式ゆかりさんか、\nおっとりした娘だなぁ。", "text": "Koshiki Yukari-san, huh?\nWhat a laid-back girl."},
-      {"offset": "0x29f8", "original": "あなたも\n招待されてたんだ。", "text": "So you\ngot invited too."},
-      {"offset": "0x2a14", "original": "{G}もいたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x2a24", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x2a3c", "original": "友達がいるから、\n悪いけど、\nそろそろ行くね。", "text": "I'm with friends,\nso sorry,\nbut I'd better go."},
-      {"offset": "0x2a6c", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x2a98", "original": "招待されてたんだ。", "text": "So you got invited."},
-      {"offset": "0x2aac", "original": "{G}もいたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x2abc", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x2ad4", "original": "悪いけど、\nそろそろ行くよ。", "text": "Sorry,\nbut I gotta go."},
-      {"offset": "0x2af0", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x2b1c", "original": "あっ、いたのか。", "text": "Oh, you're here."},
-      {"offset": "0x2b30", "original": "{G}こそ…。", "text": "Says you, {G}"},
-      {"offset": "0x2b3c", "original": "あっ、\nそろそろ行かなきゃ。", "text": "Oh,\nI'd better get going."},
-      {"offset": "0x2b64", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0x2b94", "original": "他に知り合いは、\n来てるのかな…。", "text": "I wonder if anyone\nelse I know is here..."},
-      {"offset": "0x2bc0", "original": "おわっ。\n痛ッ。", "text": "Whoa!\nOw!"},
-      {"offset": "0x2bd4", "original": "何、ぼーっと\nつっ立ってんだよ。", "text": "What are you doing,\njust standing there?"},
-      {"offset": "0x2bf4", "original": "ご、ごめんなさい。\n人を探してたから…。\nあれ？", "text": "S-sorry.\nI was looking around...\nHuh?"},
-      {"offset": "0x2c24", "original": "もしかして、\n水泳部の{G}？", "text": "Wait, are you the\nswimmer {G}?"},
-      {"offset": "0x2c40", "original": "そうだよ。\nそれが？", "text": "Yeah.\nSo what?"},
-      {"offset": "0x2c54", "original": "水泳界の有名人に\nこんな所で会えるなんて、\nついてるな俺。", "text": "Meeting a swimming star\nin a place like this?\nI'm so lucky."},
-      {"offset": "0x2c90", "original": "へぇ、\n私の事知ってるんだ。", "text": "Huh,\nyou know who I am?"},
-      {"offset": "0x2cac", "original": "きらめき高校の人だったら、\n知らない人はいないって。", "text": "Everyone at Kirameki High\nknows who you are."},
-      {"offset": "0x2ce0", "original": "ありがと\n嬉しいよ。\nえーと…。", "text": "Thanks,\nthat's nice.\nUm..."},
-      {"offset": "0x2d00", "original": "俺、{F}。\nよろしく。", "text": "I'm {F}\nNice to meet you."},
-      {"offset": "0x2d14", "original": "私は、清川望。\nあっ、知ってるなら、\n言うことなかったね。", "text": "I'm Kiyokawa Nozomi.\nOh, if you know me,\nno need to say it."},
-      {"offset": "0x2d50", "original": "そ、そうだね。", "text": "Y-yeah."},
-      {"offset": "0x2d60", "original": "それじゃ、\nあんまりボーッとすんなよ。\n危ないからな。", "text": "Well then,\ndon't space out so much.\nIt's dangerous."},
-      {"offset": "0x2d98", "original": "あ、ありがとう。\n{G}。", "text": "Th-thanks,\n{G}"},
-      {"offset": "0x2de8", "original": "清川さんって、\n言葉は悪いけど\n結構、可愛いよな。", "text": "Kiyokawa-san's got a\nrough way of talking,\nbut she's pretty cute."},
-      {"offset": "0x327c", "original": "招待されてたんですか…？", "text": "You were invited...?"},
-      {"offset": "0x3298", "original": "{G}も、\n来てたのか。", "text": "Hey, it's {G}\nYou came too?"},
-      {"offset": "0x32ac", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x32c4", "original": "あの…。\nすいません…。\nそろそろ…。", "text": "Um...\nI'm sorry...\nI should go..."},
-      {"offset": "0x32ec", "original": "あっ、そうだね。\nそれじゃ、また。", "text": "Oh, right.\nSee you later."},
-      {"offset": "0x3328", "original": "あ、あの…。\n失礼します。", "text": "U-um...\nExcuse me."},
-      {"offset": "0x3348", "original": "美樹原さんも来てたのか。", "text": "So Mikihara-san came too."},
-      {"offset": "0x3368", "original": "あの…\nこんばんは。", "text": "Um...\ngood evening."},
-      {"offset": "0x337c", "original": "あ、こんばんは。\n（この娘、誰だろう？）", "text": "Oh, good evening.\n(Who's this girl?)"},
-      {"offset": "0x33a4", "original": "あの…\n私、藤崎さんの友達で…\n美樹原…愛と言います。", "text": "Um...\nI'm Fujisaki-san's friend.\nMikihara... Megumi."},
-      {"offset": "0x33dc", "original": "あの…\n‥‥‥‥‥\n失礼します…。", "text": "Um...\n.....\nExcuse me..."},
-      {"offset": "0x3414", "original": "‥‥‥‥。\nまだ、何も話してないよ。", "text": "......\nWe haven't talked at all."},
-      {"offset": "0x3438", "original": "{G}か…。\n何の用だったんだろう？\nでも、結構可愛かったな。", "text": "So that's {G}\nWhat did she want?\nBut she was pretty cute."},
-      {"offset": "0x3478", "original": "あ、あの…。", "text": "U-um..."},
-      {"offset": "0x348c", "original": "はい、何でしょう？", "text": "Yes, what is it?"},
-      {"offset": "0x34a0", "original": "わ、私、美樹原愛と\n言います…。", "text": "M-my name is\nMikihara Megumi..."},
-      {"offset": "0x34c0", "original": "はぁ？\n俺は{F}。", "text": "Huh?\nI'm {F}"},
-      {"offset": "0x34d0", "original": "し、知ってます。", "text": "I-I know."},
-      {"offset": "0x34e4", "original": "えっ、なんか言った？", "text": "Huh? Did you say something?"},
-      {"offset": "0x34fc", "original": "いえ、あの…。\nパーティーで\n渡そうと思って…。\nど、どうぞ…。", "text": "No, um...\nI meant to give\nit to you at the party...\nH-here you go..."},
-      {"offset": "0x353c", "original": "えっ、ありがとう。\nそれじゃ、俺も…。\nこれをどうぞ。", "text": "Oh, thank you.\nThen I'll give you...\nthis one."},
-      {"offset": "0x3574", "original": "えっ、私にですか…。\nあ、ありがとう\nございます…。", "text": "Oh, for me...?\nTh-thank\nyou so much..."},
-      {"offset": "0x35a8", "original": "いいよ。\nどうせ、パーティーには\n出られないんだから。", "text": "Sure.\nI can't go to\nthe party anyway."},
-      {"offset": "0x35e0", "original": "あの…。\n‥‥‥‥‥。\n失礼します…。", "text": "Um...\n.....\nExcuse me..."},
-      {"offset": "0x3630", "original": "あっ、{G}。\nもっと、お話を…。\n行っちゃったよ。", "text": "Oh, {G}\nI wanted to talk more...\nShe's gone."},
-      {"offset": "0x3660", "original": "{G}か…。\nどうして、俺なんかに\nプレゼントくれるんだ？", "text": "So that's {G}\nWhy would she give\na guy like me a present?"},
-      {"offset": "0x3a3c", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0x3a48", "original": "招待されてたんだ。", "text": "So you got invited."},
-      {"offset": "0x3a5c", "original": "{G}も、来てたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x3a70", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x3a88", "original": "クラブの友達がいるから、\n悪いけど、いいかな？", "text": "I'm with my club friends,\nso do you mind if I go?"},
-      {"offset": "0x3ab8", "original": "いいよ気にしないで。\nそれじゃ、また。", "text": "Sure, don't worry.\nSee you later."},
-      {"offset": "0x3af8", "original": "招待されてたんだ…。", "text": "So you got invited..."},
-      {"offset": "0x3b10", "original": "{G}も来てたのか。", "text": "Hey, it's {G}"},
-      {"offset": "0x3b20", "original": "クラブの友達がいるから、\n悪いけど…。", "text": "I'm with my club friends,\nso, sorry..."},
-      {"offset": "0x3b54", "original": "まだ、話してないよ。\nあっ、行っちゃった。", "text": "We haven't even talked.\nAw, she's gone."},
-      {"offset": "0x3b84", "original": "あっ、危ない。", "text": "Oh, look out!"},
-      {"offset": "0x3b94", "original": "おっと。", "text": "Whoa!"},
-      {"offset": "0x3ba0", "original": "あぶねぇ…。\n何だって果物が\n飛んでくるんだ？", "text": "That was close...\nWhy is fruit\nflying my way?"},
-      {"offset": "0x3bdc", "original": "ごめんなさい。\n手が滑って…。\nそれにしても、\nすごい反射神経ね。", "text": "I'm sorry!\nIt slipped...\nBut wow,\nwhat great reflexes!"},
-      {"offset": "0x3c1c", "original": "ぐ、偶然だよ。\n君だれ？", "text": "J-just luck.\nWho are you?"},
-      {"offset": "0x3c34", "original": "私、\n野球部のマネージャーで、\n虹野沙希といいます。", "text": "I'm the\nbaseball team's manager,\nNijino Saki."},
-      {"offset": "0x3c68", "original": "よかったら、\n野球部に入らない？", "text": "If you want,\nwhy not join baseball?"},
-      {"offset": "0x3c88", "original": "今のところ\n興味無いから…。", "text": "Right now,\nI'm not interested..."},
-      {"offset": "0x3ca4", "original": "そ、そう。\nそれじゃ、\nしかたないか…。", "text": "O-oh.\nWell then,\nI guess that's that..."},
-      {"offset": "0x3ccc", "original": "ごめんね。\n気が向いたら、\n見学に行くよ。", "text": "Sorry.\nIf I feel like it,\nI'll come take a look."},
-      {"offset": "0x3cf8", "original": "うん。\n待ってるわ。\nそれじゃ…。", "text": "Okay.\nI'll be waiting.\nBye..."},
-      {"offset": "0x3d40", "original": "{G}か…。\n野球部に入っても\nいいかな？", "text": "So that's {G}\nMaybe I could join\nthe baseball team?"},
-      {"offset": "0x3d68", "original": "あっ、危ない。", "text": "Oh, look out!"},
-      {"offset": "0x3d78", "original": "おっと。", "text": "Whoa!"},
-      {"offset": "0x3d84", "original": "あぶねぇ…。\n何だって果物が\n飛んでくるんだ？", "text": "That was close...\nWhy is fruit\nflying my way?"},
-      {"offset": "0x3dc0", "original": "ごめんなさい。\n手が滑って…。\nそれにしても、\nすごい反射神経ね。", "text": "I'm sorry!\nIt slipped...\nBut wow,\nwhat great reflexes!"},
-      {"offset": "0x3e00", "original": "ぐ、偶然だよ。\n君だれ？", "text": "J-just luck.\nWho are you?"},
-      {"offset": "0x3e18", "original": "私、サッカー部の\nマネージャーで、\n虹野沙希といいます。", "text": "I'm the soccer\nteam's manager,\nNijino Saki."},
-      {"offset": "0x3e50", "original": "よかったら、\nサッカー部に入らない？", "text": "If you want,\nwhy not join soccer?"},
-      {"offset": "0x3e74", "original": "今のところ\n興味無いから…。", "text": "Right now,\nI'm not interested..."},
-      {"offset": "0x3e90", "original": "そ、そう。\nそれじゃ、\nしかたないか…。", "text": "O-oh.\nWell then,\nI guess that's that..."},
-      {"offset": "0x3eb8", "original": "ごめんね。\n気が向いたら、\n見学に行くよ。", "text": "Sorry.\nIf I feel like it,\nI'll come take a look."},
-      {"offset": "0x3ee4", "original": "うん。\n待ってるわ。\nそれじゃ…。", "text": "Okay.\nI'll be waiting.\nBye..."},
-      {"offset": "0x3f2c", "original": "{G}か…。\nサッカー部に\n入ってもいいかな？", "text": "So that's {G}\nMaybe I could\njoin that soccer team?"},
-      {"offset": "0x43ec", "original": "　　プレゼント交換の時間です。\n　　好きなものを選んで下さい。", "text": "   Gift exchange time!\n   Pick any one you like."},
-      {"offset": "0x4430", "original": "どれにしようかな。", "text": "Which one should I pick?"},
-      {"offset": "0x4448", "original": "詩織のプレゼントだ！\nクラシックのスコアかぁ…\n　（俺、読めないよ…）", "text": "A present from Shiori!\nA classical music score...\n (I can't read music...)"},
-      {"offset": "0x4490", "original": "詩織のプレゼントだ！\nクラシックのスコアかぁ…\nいいものもらっちゃったな。", "text": "A present from Shiori!\nA classical music score...\nWhat a great gift!"},
-      {"offset": "0x44e4", "original": "詩織のプレゼントだ！\n白いコーヒーカップかぁ…\nコーヒーがおいしくなるな。", "text": "A present from Shiori!\nA white coffee cup...\nCoffee will taste better."},
-      {"offset": "0x4534", "original": "詩織のプレゼントだ！\n８分音符のペーパーナイフ！\nしゃれてるな。", "text": "A present from Shiori!\nEighth-note letter opener!\nHow stylish."},
-      {"offset": "0x4578", "original": "如月さんのプレゼントだ！\nゲーテの詩集か…\n冬休みに読んでみようかな。", "text": "A present from Kisaragi-san!\nPoems by Goethe...\nI'll read it over break."},
-      {"offset": "0x45c0", "original": "如月さんのプレゼントだ！\nゲーテの詩集か…\n彼女らしいな。", "text": "From Kisaragi-san!\nPoems by Goethe...\nThat's so like her."},
-      {"offset": "0x4604", "original": "如月さんのプレゼントだ！\n押し花のしおりかぁ…\nきれいだなぁ。", "text": "From Kisaragi-san!\nA pressed-flower bookmark!\nHow pretty."},
-      {"offset": "0x4648", "original": "如月さんのプレゼントだ！\nリルケの詩集か…。\n冬休みに読んでみようかな。", "text": "A present from Kisaragi-san!\nPoems by Rilke...\nI'll read it over break."},
-      {"offset": "0x4690", "original": "如月さんのプレゼントだ！\nリルケの詩集か…。\n彼女らしいな。", "text": "From Kisaragi-san!\nPoems by Rilke...\nThat's so like her."},
-      {"offset": "0x46d4", "original": "紐緒さんのプレゼントだ！\nハイパーウォッチ！！\nすごい！！", "text": "A present from Himoo-san!\nA Hyper Watch!!\nAwesome!!"},
-      {"offset": "0x4714", "original": "紐緒さんのプレゼントだ！\nノート型スーパーコンピュータ！\n使えるかなぁ…", "text": "A present from Himoo-san!\nA notebook supercomputer!\nCan I even use it..."},
-      {"offset": "0x475c", "original": "紐緒さんのプレゼントだ！\nノート型スーパーコンピュータ！\n研究意欲がわいてきたぜ！", "text": "A present from Himoo-san!\nA notebook supercomputer!\nNow I want to do research!"},
-      {"offset": "0x47b8", "original": "紐緒さんのプレゼントだ！\n携帯原子炉！？\n　（こ、これって違法では…）", "text": "From Himoo-san!\nA pocket nuclear reactor!?\n (Isn't this illegal...?)"},
-      {"offset": "0x4804", "original": "片桐さんのプレゼントだ！\n１６７０万色パステルかぁ…\n使うの大変そうだぞ。", "text": "A present from Katagiri-san!\n16.7M-color pastels...\nLooks hard to use."},
-      {"offset": "0x4854", "original": "片桐さんのプレゼントだ！\nガーギーの画集かぁ…\nう〜ん、芸術的だなぁ。", "text": "A present from Katagiri-san!\nAn art book by Gargy...\nHmm, how artistic."},
-      {"offset": "0x48a0", "original": "片桐さんのプレゼントだ！\nフィーリング英会話入門かぁ…\nこれで、英語はバッチリだぜ！", "text": "A present from Katagiri-san!\nFeeling English 101...\nMy English is set now!"},
-      {"offset": "0x48f8", "original": "虹野さんのプレゼントだ！\n手作りのキャンディーかぁ…\n女の子だなぁ。", "text": "A present from Nijino-san!\nHomemade candy...\nSo girly."},
-      {"offset": "0x4940", "original": "虹野さんのプレゼントだ！\n手作りのクッキーかぁ…\nおいしそうだなぁ。", "text": "A present from Nijino-san!\nHomemade cookies...\nThey look delicious."},
-      {"offset": "0x4988", "original": "虹野さんのプレゼントだ！\n手作りのケーキかぁ…\n俺って幸せもの！！", "text": "A present from Nijino-san!\nA homemade cake...\nI'm one lucky guy!!"},
-      {"offset": "0x49d0", "original": "古式さんのプレゼントだ！\nうわぁ、マフラーだ。\n手編みかな？", "text": "A present from Koshiki-san!\nWow, a scarf.\nHand-knitted?"},
-      {"offset": "0x4a10", "original": "古式さんのプレゼントだ！\nうわぁ、手袋だ。\n手編みかな？器用だなぁ。", "text": "A present from Koshiki-san!\nWow, gloves.\nHand-knit? How crafty."},
-      {"offset": "0x4a58", "original": "古式さんのプレゼントだ！\nうわぁ、セーターだ。\n暖かそうだな。", "text": "A present from Koshiki-san!\nWow, a sweater.\nLooks warm."},
-      {"offset": "0x4a9c", "original": "清川さんのプレゼントだ！\nスポーツシューズだ！\n気合いが入るぜ！", "text": "A present from Kiyokawa-san!\nSports shoes!\nI'm fired up!"},
-      {"offset": "0x4ae0", "original": "清川さんのプレゼントだ！\nパワーリストだ！\nよし、鍛えるぜ！", "text": "From Kiyokawa-san!\nWrist weights!\nAll right, time to train!"},
-      {"offset": "0x4b20", "original": "清川さんのプレゼントだ！\nフィットネスセットだ！\nこれで俺もスポーツマンだ！", "text": "A present from Kiyokawa-san!\nA fitness set!\nNow I'm a sportsman too!"},
-      {"offset": "0x4b70", "original": "鏡さんのプレゼントだ！\nん？ファンクラブセット？\n会員証までついてるぞ！！", "text": "A present from Kagami-san!\nHm? A fan club kit?\nEven a membership card!!"},
-      {"offset": "0x4bc0", "original": "鏡さんのプレゼントだ！\nおぉっ！鏡魅羅握手券！！\nこれは使うしか！", "text": "A gift from Kagami-san!\nWhoa! A handshake pass for\nKagami Mira! Gotta use it!"},
-      {"offset": "0x4c08", "original": "鏡さんのプレゼントだ！\n鏡魅羅プロモーションビデオ？\n…帰って見てみようぜ。", "text": "A present from Kagami-san!\nA Kagami Mira promo video?\n...I'll watch it at home."},
-      {"offset": "0x4c58", "original": "朝日奈さんのプレゼントだ！\nコアラキーホルダーかぁ。\n今、コアラブームだもんな。", "text": "A present from Asahina-san!\nA koala key chain.\nKoalas are so hot now."},
-      {"offset": "0x4cac", "original": "朝日奈さんのプレゼントだ！\nライマかぁ。\nこれ、流行ってるんだよな。", "text": "A present from Asahina-san!\nA Lyma, huh.\nThese are all the rage."},
-      {"offset": "0x4cf4", "original": "朝日奈さんのプレゼントだ！\n遊園地のフリーチケットだ。\n今度デートに誘おうかな？", "text": "A present from Asahina-san!\nFree theme park tickets.\nShould I ask her out?"},
-      {"offset": "0x4d48", "original": "美樹原さんのプレゼントだ！\nバナナワニのぬいぐるみ。\nかわいいなぁ。", "text": "A present from Mikihara-san!\nA plush banana crocodile.\nSo cute."},
-      {"offset": "0x4d90", "original": "美樹原さんのプレゼントだ！\n犬のクッションか。\nフカフカで気持ち良さそう。", "text": "A present from Mikihara-san!\nA dog cushion.\nSo soft and comfy."},
-      {"offset": "0x4de0", "original": "美樹原さんのプレゼントだ！\n猫のまくらカバーだ。\nいい夢が見られそうだな。", "text": "A present from Mikihara-san!\nA cat pillowcase.\nI'll have sweet dreams."},
-      {"offset": "0x4e34", "original": "優美ちゃんのプレゼントだ！\nときめきカードゲームだ。\n今度、一緒に遊ぼう。", "text": "A present from Yumi-chan!\nA Tokimeki card game.\nLet's play it together."},
-      {"offset": "0x4e84", "original": "優美ちゃんのプレゼントだ！\nめもりあるボードゲーム２だ。\n面白いって評判なんだよな。", "text": "A present from Yumi-chan!\nMemorial Board Game 2.\nI hear it's really fun."},
-      {"offset": "0x4edc", "original": "うっ…！？こ、これは…\nサイン入りブロマイド！？\n何考えてるんだ、あいつ。", "text": "Ugh...!? Th-this is...\nA signed photo of Ijuin!?\nWhat's he thinking?"},
-      {"offset": "0x4f2c", "original": "うっ…！？こ、これは…\n伊集院のＡ全版ポスターだ。\n部屋に飾ろう。", "text": "Ugh...!? Th-this is...\nA giant Ijuin poster.\nI'll hang it in my room."},
-      {"offset": "0x4f70", "original": "　　　　　　　　・\n　　　　　　　　・\n　　　　　　　　・\n　　　　　　　　やめた。", "text": "                .\n                .\n                .\n            Nah."},
-      {"offset": "0x4fcc", "original": "うっ…！？こ、これは…\n伊集院レイ写真集！？\nず、頭痛がしてきた…。", "text": "Ugh...!? Th-this is...\nA Ijuin Rei photo book!?\nM-my head hurts..."},
-      {"offset": "0x5014", "original": "今日は来てよかったな。\nさて帰るか。", "text": "I'm glad I came today.\nWell, time to head home."},
-      {"offset": "0x503c", "original": "女の子のプレゼントの方が\n良かったなぁ。……帰るか。", "text": "A girl's present would've\nbeen nicer... Home I go."},
-      {"offset": "0x57e0", "original": "伊集院の家に着いたぞ。\nいつ見てもでけぇなぁ。", "text": "Here's Ijuin's house.\nIt's always so huge."},
-      {"offset": "0x5814", "original": "レイ様のお友達で、\nいらっしゃいますか？", "text": "Are you a friend\nof Rei-sama's?"},
-      {"offset": "0x583c", "original": "友達かどうかは\n知らないけど\nクラスメートだよ。", "text": "Not sure about\n'friend', but\nI'm his classmate."},
-      {"offset": "0x5874", "original": "結構です。\nどうぞお入りください。", "text": "Very well.\nPlease come in."},
-      {"offset": "0x589c", "original": "申し訳ございませんが、\nその様なお召し物では\n少々、ご遠慮して\nいただいております。", "text": "I'm terribly sorry,\nbut we must ask guests\nin such attire\nnot to enter."},
-      {"offset": "0x58f0", "original": "えっ、そうなの？", "text": "Huh, really?"},
-      {"offset": "0x5904", "original": "はい。\n厳しく言いつかって\nおりますので。", "text": "Yes.\nThose are my\nstrict orders."},
-      {"offset": "0x5930", "original": "‥‥‥‥。\n（しょうがない帰るか‥。）", "text": "......\n(Guess I'll go home...)"},
-      {"offset": "0x5968", "original": "申し訳ございませんが、\nその様なお召し物では\n少々、ご遠慮して\nいただいております。", "text": "I'm terribly sorry,\nbut we must ask guests\nin such attire\nnot to enter."},
-      {"offset": "0x59c0", "original": "が、\nその素晴らしい肉体に\n目がくらんで何も見えません。\n今の内にお入りください。\nくれぐれも", "text": "However,\nyour splendid physique\nhas blinded me completely.\nQuickly, go on in.\nAnd please,"},
-      {"offset": "0x5a1c", "original": "レイ様にはご内密に‥。", "text": "Don't tell Rei-sama..."},
-      {"offset": "0x5a3c", "original": "何だか、\n目が嫌だったぞ…。", "text": "Somehow,\nI didn't like his eyes..."},
-      {"offset": "0x5a5c", "original": "また来て下さったのですね。\nこんな事しかできませんが、\nどうぞお入りください。", "text": "You've come again, I see.\nThis is all I can do,\nbut please, come in."},
-      {"offset": "0x5ab0", "original": "なんか、やだなぁ…。", "text": "This is kinda creepy..."},
-      {"offset": "0x5acc", "original": "おっ、\n今始まるところだな。", "text": "Oh,\nit's just starting."},
-      {"offset": "0x5ae8", "original": "皆さん。\n我が伊集院家が誇る、\nクリスマスパーティーに\nようこそ。", "text": "Everyone,\nwelcome to the pride\nof the Ijuin family,\nour Christmas party."},
-      {"offset": "0x5b28", "original": "日頃の現実を忘れて、\n今日は大いに\n楽しんで行ってください。", "text": "Forget your daily lives\nand enjoy yourselves\nto the fullest tonight."},
-      {"offset": "0x5b70", "original": "相変わらず、\nすかした野郎だぜ。", "text": "Smug as ever,\nthat jerk."},
-      {"offset": "0x5b94", "original": "何か言ったかね。", "text": "Did you say something?"},
-      {"offset": "0x5ba8", "original": "げ、伊集院。\nお前いつの間に…。", "text": "Ack, Ijuin!\nWhen did you get here..."},
-      {"offset": "0x5bc8", "original": "君にお前呼ばわりされる\n筋合いは無いがね…。\nま、今日は特別だ、\n許してやろうじゃないか。", "text": "You have no right to\naddress me so rudely...\nBut tonight is special,\nso I shall forgive you."},
-      {"offset": "0x5c20", "original": "別に、\n許さなくてもいいよ…。", "text": "You know,\nyou don't have to..."},
-      {"offset": "0x5c40", "original": "それにしても、\nよくそのかっこで\nここに入れたものだ。", "text": "Still, I'm amazed\nyou got in here\ndressed like that."},
-      {"offset": "0x5c78", "original": "余計なお世話だ。", "text": "Mind your own business."},
-      {"offset": "0x5c8c", "original": "外井に来年は、\nもっと厳しくするように\n言わなければな…。", "text": "I must tell Sotoi\nto be stricter\nnext year..."},
-      {"offset": "0x5cc8", "original": "‥‥‥‥。\n（人の話を全然聞いてねえ。）", "text": "......\n(He isn't even listening.)"},
-      {"offset": "0x5cf0", "original": "せっかく来たんだ、\n庶民には味わえない、\n超豪華高級料理でも、\n食べていってくれたまえ。", "text": "Since you came,\ndo help yourself to\nultra-luxurious cuisine\nno commoner could taste."},
-      {"offset": "0x5d48", "original": "はーっはっはっはっ。\nでは、失礼するよ。", "text": "Ha-ha-ha-ha-ha!\nNow, if you'll excuse me."},
-      {"offset": "0x5d98", "original": "本当に嫌なやつ…。", "text": "What a creep..."},
-      {"offset": "0x5db0", "original": "毎年同じ事\n言ってるんじゃねぇの？", "text": "Doesn't he say\nthe same thing every year?"},
-      {"offset": "0x5dd8", "original": "何か言ったかね。", "text": "Did you say something?"},
-      {"offset": "0x5dec", "original": "聞こえなかったのか？\n頭悪いんじゃねぇ？", "text": "Didn't you hear?\nAre you dense?"},
-      {"offset": "0x5e14", "original": "失礼な。\nま、所詮は庶民の遠吠え、\n僕には蚊ほどにも\n感じんがね…。", "text": "How rude.\nWell, a commoner's barking\nbothers me no more\nthan a mosquito..."},
-      {"offset": "0x5e58", "original": "嫌なやつだなぁ…。", "text": "What a jerk..."},
-      {"offset": "0x5e6c", "original": "１年に１回だけのぜい沢を、\n思う存分に味わって\nいってくれたまえ。", "text": "Do savor this luxury,\nthe only one you get\nall year."},
-      {"offset": "0x5eb0", "original": "はーっはっはっはっ。\nでは、失礼するよ。", "text": "Ha-ha-ha-ha-ha!\nNow, if you'll excuse me."},
-      {"offset": "0x5ef0", "original": "本当に嫌なやつ…。", "text": "What a creep..."},
-      {"offset": "0x5f08", "original": "また同じ事\n言ってるよ。", "text": "He's saying\nthe same thing again."},
-      {"offset": "0x5f24", "original": "また今年も来れるとはね。\nそこそこに\n見れるという事か…。", "text": "So you made it in again.\nI suppose you're\nsomewhat presentable..."},
-      {"offset": "0x5f60", "original": "伊集院よぉ…。", "text": "Hey, Ijuin..."},
-      {"offset": "0x5f70", "original": "どうした庶民。\n質問かね？", "text": "What is it, commoner?\nA question?"},
-      {"offset": "0x5f8c", "original": "毎年気になってたんだけど、\nそのカクテルグラスの中に\n何が入ってるんだ？", "text": "I've wondered every year.\nWhat's in that\ncocktail glass?"},
-      {"offset": "0x5fd4", "original": "はーっはっはっはっ。\n無知な庶民に教えてやろう。\nこの中身はな…。", "text": "Ha-ha-ha-ha-ha!\nI'll tell you, commoner.\nWhat's inside is..."},
-      {"offset": "0x6018", "original": "この中身は…。", "text": "What's inside is..."},
-      {"offset": "0x6028", "original": "君には、教えてやらん。\nま、アルコールでは無い\nとだけ言っておこうか。", "text": "I won't tell you.\nI'll just say\nit's not alcohol."},
-      {"offset": "0x6070", "original": "未成年は飲酒をしては\nいけないからね。", "text": "Minors mustn't drink,\nafter all."},
-      {"offset": "0x6098", "original": "そ、そんなことは、\n知ってるよ。\nだったら何なんだよ。", "text": "I-I know that\nalready.\nSo what is it?"},
-      {"offset": "0x60d0", "original": "死ぬまで考えるがいい。\nはーっはっはっはっ。\nでは、失礼するよ。", "text": "Ponder it till you die.\nHa-ha-ha-ha-ha!\nNow, if you'll excuse me."},
-      {"offset": "0x6138", "original": "どうせ、\nジュースのくせに…。", "text": "Bet it's\njust juice..."},
-      {"offset": "0x615c", "original": "ふぅ、家に着いたぞ。", "text": "Phew, I'm back home."},
-      {"offset": "0x6174", "original": "仕方ない、今年は一人で\nクリスマスを祝うか。", "text": "Oh well. This year I'll\ncelebrate Christmas alone."},
-      {"offset": "0x61a8", "original": "メリークリスマス！！\nあぁ、楽しいなぁ。", "text": "Merry Christmas!!\nAh, what fun."},
-      {"offset": "0x6210", "original": "うぅ、来年こそは\n楽しいクリスマスを\n過ごすぞ。", "text": "Ugh... Next year, I'll\nhave a fun Christmas\nfor sure."},
-      {"offset": "0x69a8", "original": "招待されてたんですね。", "text": "So you were invited too."},
-      {"offset": "0x69c0", "original": "優美ちゃんも、\n来てたのか。", "text": "Yumi-chan, you\ncame too?"},
-      {"offset": "0x69dc", "original": "しばらく{G}と話し込んだ", "text": "Talked to {G}"},
-      {"offset": "0x69f4", "original": "同級生のお友達と\n来てるから、\nそろそろ、行かなくちゃ。", "text": "I came with friends\nfrom my class,\nso I'd better go now."},
-      {"offset": "0x6a2c", "original": "いいよ気にしないで。\nそれじゃ、また。", "text": "Sure, don't worry.\nSee you later."},
-      {"offset": "0x6a6c", "original": "あっ…。", "text": "Oh..."},
-      {"offset": "0x6a7c", "original": "優美ちゃんも来てたのか。\nでも、何もあんなに\n走らなくても…。", "text": "So Yumi-chan came too.\nBut she didn't have\nto run off like that..."},
-      {"offset": "0x6bd4", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x6bdc", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x6be4", "original": "俺、{F}", "text": "I'm {F}"},
-      {"offset": "0x6bec", "original": "ドン", "text": "Thud"},
-      {"offset": "0x6bf4", "original": "きゃ。", "text": "Eek!"},
-      {"offset": "0x6bfc", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x6c04", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x6c0c", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x6c14", "original": "ドン", "text": "Thud"},
-      {"offset": "0x6c1c", "original": "何？", "text": "What?"},
-      {"offset": "0x6c24", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x6c2c", "original": "俺、{F}。", "text": "I'm {F}"},
-      {"offset": "0x6c34", "original": "俺、{F}。", "text": "I'm {F}"},
-      {"offset": "0x6c3c", "original": "俺、{F}。", "text": "I'm {F}"},
-      {"offset": "0x6c48", "original": "あっ、{P}", "text": "Oh, {P}"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/XMAS.BIN",
+      "base": "0x80197000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "来てたんだ。",
+          "text": "You came too!"
+        },
+        {
+          "offset": "0x10",
+          "original": "{G}も\n来てたのか。",
+          "text": "Hey, it's {G}\nYou came too?"
+        },
+        {
+          "offset": "0x24",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x3c",
+          "original": "友達がいるから、\nそろそろ行くね。",
+          "text": "I'm here with friends,\nso I'd better go."
+        },
+        {
+          "offset": "0x60",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x8c",
+          "original": "やっばーっ。\nはまっちゃった。",
+          "text": "Oh man...\nNow I'm stuck."
+        },
+        {
+          "offset": "0xac",
+          "original": "{G}も来てたんだ。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0xbc",
+          "original": "あっと、\nこれから用が\nあるんだった。",
+          "text": "Oh, wait,\nI just remembered\nI've got plans."
+        },
+        {
+          "offset": "0xf0",
+          "original": "{G}。\nまだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "{G}...\nWe haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x124",
+          "original": "あっ、好雄君じゃない。",
+          "text": "Oh, if it isn't Yoshio-kun!"
+        },
+        {
+          "offset": "0x13c",
+          "original": "えっ？\n好雄？",
+          "text": "Huh?\nYoshio?"
+        },
+        {
+          "offset": "0x14c",
+          "original": "ご、ごめんね。\n友達と間違えちゃった。",
+          "text": "S-sorry!\nThought you were a friend."
+        },
+        {
+          "offset": "0x174",
+          "original": "好雄の友達？",
+          "text": "A friend of Yoshio's?"
+        },
+        {
+          "offset": "0x184",
+          "original": "えっ？\n好雄君知ってるの。",
+          "text": "Huh?\nYou know Yoshio-kun?"
+        },
+        {
+          "offset": "0x1a0",
+          "original": "だって俺、\n好雄の友達だもん。",
+          "text": "Well, yeah.\nYoshio's my friend."
+        },
+        {
+          "offset": "0x1c0",
+          "original": "ねぇ、名前聞いてもいい？",
+          "text": "Hey, can I get your name?"
+        },
+        {
+          "offset": "0x1dc",
+          "original": "{F}だよ。\n君は？",
+          "text": "I'm {F}\nAnd you?"
+        },
+        {
+          "offset": "0x1ec",
+          "original": "私は、朝日奈夕子。\nあなたが、好雄君の\n言ってた人なんだ。",
+          "text": "I'm Asahina Yuko.\nSo you're the guy\nYoshio-kun told me about."
+        },
+        {
+          "offset": "0x228",
+          "original": "好雄から？\n何言ってんだあいつ…。",
+          "text": "From Yoshio?\nWhat's he been saying...?"
+        },
+        {
+          "offset": "0x24c",
+          "original": "あっ、もう行かなきゃ。\nそれじゃ、また。",
+          "text": "Oops, gotta run.\nSee ya later."
+        },
+        {
+          "offset": "0x2a0",
+          "original": "好雄の友達ねぇ…。",
+          "text": "Yoshio's friend, huh..."
+        },
+        {
+          "offset": "0x57c",
+          "original": "あっ、{P}。\nあなたも\n招待されてたのね。",
+          "text": "Oh, {P}\nSo you were\ninvited too."
+        },
+        {
+          "offset": "0x5a4",
+          "original": "詩織もいたのか。",
+          "text": "Shiori, you're here too?"
+        },
+        {
+          "offset": "0x5b8",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x5dc",
+          "original": "友達がいるから、\nそろそろ行くね。",
+          "text": "I'm here with friends,\nso I'd better go."
+        },
+        {
+          "offset": "0x600",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x61c",
+          "original": "そう言えば、\n紹介したい\n友達がいるのよ。",
+          "text": "Oh, that reminds me.\nThere's a friend I'd\nlike you to meet."
+        },
+        {
+          "offset": "0x648",
+          "original": "紹介って？",
+          "text": "Meet who?"
+        },
+        {
+          "offset": "0x654",
+          "original": "ここにいれば、\nそのうち来るから\n待っててね。",
+          "text": "If you stay here,\nshe'll come by soon,\nso wait for her."
+        },
+        {
+          "offset": "0x684",
+          "original": "そのうちって…。",
+          "text": "Soon, huh..."
+        },
+        {
+          "offset": "0x698",
+          "original": "それじゃ、私は行くね。",
+          "text": "Well, I'll get going."
+        },
+        {
+          "offset": "0x6b0",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x6dc",
+          "original": "えっ？\nでも、誰だろう。",
+          "text": "Huh?\nBut who could it be?"
+        },
+        {
+          "offset": "0x6f8",
+          "original": "あっ、\nよく参加できたわね。",
+          "text": "Oh,\nyou actually got in."
+        },
+        {
+          "offset": "0x714",
+          "original": "詩織もいたのか。",
+          "text": "Shiori, you're here too?"
+        },
+        {
+          "offset": "0x730",
+          "original": "友達がいるから\nそろそろ行かなきゃ。",
+          "text": "I'm here with friends,\nso I have to go."
+        },
+        {
+          "offset": "0x758",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x788",
+          "original": "ちょっと、\nここで待っててくれる？",
+          "text": "Hey, could you\nwait here a moment?"
+        },
+        {
+          "offset": "0x7ac",
+          "original": "どうして？",
+          "text": "Why?"
+        },
+        {
+          "offset": "0x7b8",
+          "original": "物好きな娘が\n来ると思うから。",
+          "text": "A girl with odd taste\nis about to show up."
+        },
+        {
+          "offset": "0x7d8",
+          "original": "へ、物好きって？",
+          "text": "Huh? Odd taste?"
+        },
+        {
+          "offset": "0x7ec",
+          "original": "それじゃ\n私は行くわ。",
+          "text": "Well then,\nI'll be going."
+        },
+        {
+          "offset": "0x818",
+          "original": "誰が来るんだよ。",
+          "text": "Who's coming, anyway?"
+        },
+        {
+          "offset": "0xb30",
+          "original": "あなたも\n来てたのね。",
+          "text": "So you're\nhere too."
+        },
+        {
+          "offset": "0xb48",
+          "original": "{G}もいたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0xb58",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0xb70",
+          "original": "研究が残ってるから\nそろそろ行くわ。",
+          "text": "I have research to finish,\nso I'll be going."
+        },
+        {
+          "offset": "0xb94",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0xbc0",
+          "original": "あっ、\nよく来れたわね。",
+          "text": "Oh,\nyou dared to show up?"
+        },
+        {
+          "offset": "0xbd8",
+          "original": "{G}もいたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0xbe8",
+          "original": "研究があるから、\nもう行くわ。",
+          "text": "I have research,\nso I'm leaving."
+        },
+        {
+          "offset": "0xc14",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0xc44",
+          "original": "あなた{P}ね。",
+          "text": "You must be {P}"
+        },
+        {
+          "offset": "0xc50",
+          "original": "クリスマスの記念に、\n改造する気はない？",
+          "text": "For Christmas, how about\nletting me modify you?"
+        },
+        {
+          "offset": "0xc78",
+          "original": "はぁ、なにそれ？\n何で、俺の名前\n知ってるの？",
+          "text": "Huh? What's that?\nAnd how do you\nknow my name?"
+        },
+        {
+          "offset": "0xca8",
+          "original": "そんな事はどうでも\nいいのよ。\nするの、しないの？",
+          "text": "That doesn't\nmatter.\nYes or no?"
+        },
+        {
+          "offset": "0xcdc",
+          "original": "改造って、何の改造？",
+          "text": "Modify? Modify what?"
+        },
+        {
+          "offset": "0xcf4",
+          "original": "決まってるじゃない。\n人体改造よ。",
+          "text": "Isn't it obvious?\nI'd modify your body."
+        },
+        {
+          "offset": "0xd18",
+          "original": "し、しなくていいです。",
+          "text": "N-no thanks, I'm fine."
+        },
+        {
+          "offset": "0xd30",
+          "original": "そう。\nその気になったら、\n私の所に来なさい。",
+          "text": "I see.\nIf you change your mind,\ncome see me."
+        },
+        {
+          "offset": "0xd60",
+          "original": "あの、君は？",
+          "text": "Um, who are you?"
+        },
+        {
+          "offset": "0xd94",
+          "original": "科学部の、紐緒結奈よ。\nそれじゃ、失礼。",
+          "text": "Himoo Yuina, Science Club.\nNow, excuse me."
+        },
+        {
+          "offset": "0xdc0",
+          "original": "電脳部の、紐緒結奈よ。\nそれじゃ、失礼。",
+          "text": "Himoo Yuina, Computer Club.\nNow, excuse me."
+        },
+        {
+          "offset": "0xdec",
+          "original": "{G}か…。\n何だか怖い娘だな…。",
+          "text": "So that's {G}\nShe's kinda scary..."
+        },
+        {
+          "offset": "0x10f4",
+          "original": "メリークリスマス。\nあなたも\n招待されてたのね。",
+          "text": "Merry Christmas!\nSo you were\ninvited too."
+        },
+        {
+          "offset": "0x1124",
+          "original": "{G}もいたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x1134",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x114c",
+          "original": "あっソーリー、ごめんなさい。\nお友達が待ってるの。\nそろそろ行くわね。",
+          "text": "Oh, sorry! Gomen nasai.\nMy friends are waiting.\nI'd better go."
+        },
+        {
+          "offset": "0x1194",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x11bc",
+          "original": "ソー、バッド。\nあなたも来てたの。",
+          "text": "Oh, so bad.\nYou're here too?"
+        },
+        {
+          "offset": "0x11e0",
+          "original": "{G}もいたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x11f0",
+          "original": "あっ、急用を思い出したわ。\nもう、帰らなくっちゃ。",
+          "text": "Oh! Urgent business!\nI have to go home now."
+        },
+        {
+          "offset": "0x1230",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x1260",
+          "original": "メリークリスマス。",
+          "text": "Merry Christmas!"
+        },
+        {
+          "offset": "0x1274",
+          "original": "あっ、メリークリスマス。\n（？？？\nこの娘、誰？）",
+          "text": "Oh, Merry Christmas.\n(???\nWho is this girl?)"
+        },
+        {
+          "offset": "0x12a8",
+          "original": "今、伊集院君と\n話してたでしょう。\nキラメキ高校の人？",
+          "text": "You were just talking\nwith Ijuin-kun, right?\nYou go to Kirameki High?"
+        },
+        {
+          "offset": "0x12e0",
+          "original": "そうだけど、君だれ？",
+          "text": "Yeah, but who are you?"
+        },
+        {
+          "offset": "0x12f8",
+          "original": "私、片桐彩子。\nあなたは？",
+          "text": "I'm Katagiri Ayako.\nAnd you?"
+        },
+        {
+          "offset": "0x1314",
+          "original": "それにしても、\n伊集院君の友達なんて、\n珍しいわね。",
+          "text": "Still, I don't often\nmeet a friend\nof Ijuin-kun's."
+        },
+        {
+          "offset": "0x1348",
+          "original": "別に、\n友達なんかじゃないよ。",
+          "text": "No, I'm not\nhis friend or anything."
+        },
+        {
+          "offset": "0x1368",
+          "original": "そう照れないの。\n今度は学校で\n会えるといいわね。",
+          "text": "Don't be shy.\nHope we meet\nat school next time."
+        },
+        {
+          "offset": "0x139c",
+          "original": "そ、そうだね。\n（何で、照れなきゃ\nいけないんだ？）",
+          "text": "Y-yeah.\n(Why would I\nbe shy?)"
+        },
+        {
+          "offset": "0x13d0",
+          "original": "それじゃ、グッバイ。\nさよなら。",
+          "text": "Well then, goodbye!\nSayonara!"
+        },
+        {
+          "offset": "0x13f0",
+          "original": "さ、さよなら。\n（なんか変な娘。）",
+          "text": "B-bye.\n(What a weird girl.)"
+        },
+        {
+          "offset": "0x16e0",
+          "original": "貴方もいらしてたのね。",
+          "text": "So you came as well."
+        },
+        {
+          "offset": "0x16f8",
+          "original": "{G}も\n来てたのか。",
+          "text": "Hey, it's {G}\nYou came too?"
+        },
+        {
+          "offset": "0x170c",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x1724",
+          "original": "私、伊集院君に用が\nあるから…。\nそれじゃ…。",
+          "text": "I need to talk\nto Ijuin-kun...\nSee you..."
+        },
+        {
+          "offset": "0x1754",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x177c",
+          "original": "そのかっこで\nよく来れたわね。",
+          "text": "You actually came\ndressed like that?"
+        },
+        {
+          "offset": "0x179c",
+          "original": "{G}も来てたんだ。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x17ac",
+          "original": "気安く話し掛けないで\nくれるかしら…。\nそれじゃ、失礼。",
+          "text": "Would you mind not\ntalking to me so casually?\nExcuse me."
+        },
+        {
+          "offset": "0x17f0",
+          "original": "{G}。\nまだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "{G}...\nWe haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x182c",
+          "original": "あっ、ごめんなさい。",
+          "text": "Oh, I'm sorry!"
+        },
+        {
+          "offset": "0x1844",
+          "original": "ちょっと、どこ見て\n歩いてるの？",
+          "text": "Hey, watch where\nyou're going!"
+        },
+        {
+          "offset": "0x1864",
+          "original": "いや、あのその…。\nあっ、あんまり君が\n奇麗だから…。",
+          "text": "Uh, well, um...\nIt's just, you're\nso beautiful..."
+        },
+        {
+          "offset": "0x189c",
+          "original": "そう。\nま、そういう事なら、\nしかたないわね。",
+          "text": "I see.\nWell, if that's the case,\nI'll let it slide."
+        },
+        {
+          "offset": "0x18cc",
+          "original": "ほっ…。\n良かった。",
+          "text": "Phew...\nThat worked."
+        },
+        {
+          "offset": "0x18e0",
+          "original": "君、名前は？",
+          "text": "And your name?"
+        },
+        {
+          "offset": "0x18f0",
+          "original": "あっ、{F}です。",
+          "text": "Oh, I'm {F}"
+        },
+        {
+          "offset": "0x1900",
+          "original": "知ってると思うけど、\n私は鏡魅羅よ。\nそれじゃ、失礼。",
+          "text": "You surely know me,\nbut I'm Kagami Mira.\nNow, excuse me."
+        },
+        {
+          "offset": "0x1958",
+          "original": "あの娘が、\nファンクラブもある、\n{G}なんだ…。",
+          "text": "So that's the girl\nwith her own fan club,\n{G}..."
+        },
+        {
+          "offset": "0x1984",
+          "original": "性格きつそう。",
+          "text": "She seems harsh."
+        },
+        {
+          "offset": "0x1c64",
+          "original": "招待されてたんですね。",
+          "text": "So you were invited too."
+        },
+        {
+          "offset": "0x1c7c",
+          "original": "{G}も、\n来てたのか。",
+          "text": "Hey, it's {G}\nYou came too?"
+        },
+        {
+          "offset": "0x1c90",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x1ca8",
+          "original": "私、挨拶したい人が\nいますので、\nちょっと失礼します。",
+          "text": "There's someone\nI need to greet,\nso please excuse me."
+        },
+        {
+          "offset": "0x1ce0",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x1d0c",
+          "original": "来てたのですね…。",
+          "text": "So you came..."
+        },
+        {
+          "offset": "0x1d20",
+          "original": "{G}も来てたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x1d30",
+          "original": "それでは、\n失礼します。",
+          "text": "Well then,\nexcuse me."
+        },
+        {
+          "offset": "0x1d54",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x1d84",
+          "original": "あれ？\nあの娘何だか、\n顔色が悪いぞ…。",
+          "text": "Huh?\nThat girl looks\nrather pale..."
+        },
+        {
+          "offset": "0x1db0",
+          "original": "あの、大丈夫ですか？\n気分でも悪いんじゃ…。",
+          "text": "Um, are you okay?\nAre you feeling sick...?"
+        },
+        {
+          "offset": "0x1de0",
+          "original": "だ、大丈夫？\n大変だ、\n人を呼ばないと…。",
+          "text": "A-are you okay?\nOh no,\nI need to get help..."
+        },
+        {
+          "offset": "0x1e0c",
+          "original": "だ、大丈夫です…。",
+          "text": "I-I'm fine..."
+        },
+        {
+          "offset": "0x1e28",
+          "original": "本当に大丈夫？\nいきなり倒れるもんだから、\nびっくりしちゃって。",
+          "text": "Are you really okay?\nYou suddenly collapsed,\nit gave me a scare."
+        },
+        {
+          "offset": "0x1e68",
+          "original": "すいません。\n驚かせてしまった\nみたいで…。",
+          "text": "I'm sorry.\nIt seems I gave\nyou a fright..."
+        },
+        {
+          "offset": "0x1e94",
+          "original": "いや、いいんだけど。\n気分が悪いときは、\n休んでた方がいいよ。",
+          "text": "No, it's fine.\nWhen you feel sick,\nyou should rest."
+        },
+        {
+          "offset": "0x1ed4",
+          "original": "ありがとうございます。\n私、如月未緒といいます。",
+          "text": "Thank you so much.\nMy name is Kisaragi Mio."
+        },
+        {
+          "offset": "0x1f04",
+          "original": "良かったら、お名前を…。",
+          "text": "May I ask your name...?"
+        },
+        {
+          "offset": "0x1f20",
+          "original": "あっ、俺、{F}。\nそれじゃ、{G}。\n無理しちゃ駄目だよ。",
+          "text": "Oh, I'm {F}\nWell, {G}\ndon't push yourself."
+        },
+        {
+          "offset": "0x1f54",
+          "original": "本当に、\nありがとうございました。\n{P}。",
+          "text": "Really,\nthank you so much,\n{P}"
+        },
+        {
+          "offset": "0x225c",
+          "original": "{P}\nこんばんは。\n招待されていたのですね。",
+          "text": "{P}\nGood evening.\nSo you were invited too."
+        },
+        {
+          "offset": "0x2284",
+          "original": "{G}も、\n来てたのか。",
+          "text": "Hey, it's {G}\nYou came too?"
+        },
+        {
+          "offset": "0x2298",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x22b0",
+          "original": "申し訳ありませんが、\n用がありますので、\n少々、失礼いたします。",
+          "text": "I'm terribly sorry,\nbut I have an errand,\nso please excuse me."
+        },
+        {
+          "offset": "0x22f0",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x2318",
+          "original": "あっ、{G}だ。",
+          "text": "There's {G}"
+        },
+        {
+          "offset": "0x2324",
+          "original": "おーい。\n{G}。",
+          "text": "Yoo-hoo!\n{G}!"
+        },
+        {
+          "offset": "0x2334",
+          "original": "こんばんは。\n招待されて\nいたのですね…。",
+          "text": "Good evening.\nSo you were\ninvited too..."
+        },
+        {
+          "offset": "0x2360",
+          "original": "{G}も\n招待されてたんだね。",
+          "text": "{G}, so you\ngot invited too."
+        },
+        {
+          "offset": "0x237c",
+          "original": "それでは、\nお父様が待っていますので、\n失礼いたします。",
+          "text": "Well then,\nmy father is waiting,\nso please excuse me."
+        },
+        {
+          "offset": "0x23c8",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x23f8",
+          "original": "あの娘、どうしたんだろう。\nボーッと立ってるぞ。\nあっ、人にぶつかる…。\n危ないなぁ。",
+          "text": "What's with that girl?\nShe's just standing there.\nShe'll bump into someone.\nThat's dangerous."
+        },
+        {
+          "offset": "0x244c",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0x2460",
+          "original": "ハイ。\nなんでしょう。",
+          "text": "Yes?\nWhat is it?"
+        },
+        {
+          "offset": "0x2478",
+          "original": "余計な心配だと思うけど、\nボーッとしてると\n危ないよ。",
+          "text": "It's none of my business,\nbut spacing out like that\nisn't safe."
+        },
+        {
+          "offset": "0x24b0",
+          "original": "心配していただいて、\nありがとうございます。\n見とれてましたもので。",
+          "text": "Thank you for\nyour concern.\nI was captivated, you see."
+        },
+        {
+          "offset": "0x24f4",
+          "original": "何を見てたの？",
+          "text": "What were you looking at?"
+        },
+        {
+          "offset": "0x2504",
+          "original": "大きなクリスマスツリーだと\n思いまして…。\nずっと見てました。",
+          "text": "I thought it was such\na big Christmas tree...\nI kept gazing at it."
+        },
+        {
+          "offset": "0x2544",
+          "original": "確かに大きいけど、\nこんな所で見てると、\n人にぶつかっちゃうよ。",
+          "text": "It sure is big, but\nif you stare at it here,\nyou'll bump into someone."
+        },
+        {
+          "offset": "0x2584",
+          "original": "それもそうですね。\nありがとうございます。\nあの、お名前は？",
+          "text": "That's true.\nThank you.\nUm, may I ask your name?"
+        },
+        {
+          "offset": "0x25c0",
+          "original": "名乗るほどの者じゃ\nないよ。",
+          "text": "Oh, I'm nobody\nworth mentioning."
+        },
+        {
+          "offset": "0x25dc",
+          "original": "親切にしていただいた人の\n名前も知らないのは、\n失礼ですから。",
+          "text": "It would be rude not to\nknow the name of someone\nso kind to me."
+        },
+        {
+          "offset": "0x261c",
+          "original": "俺の名前は\n{F}。\n君は？",
+          "text": "My name's\n{F}\nAnd you?"
+        },
+        {
+          "offset": "0x2634",
+          "original": "私は、古式ゆかりと\n申します。それでは、\n失礼いたします。",
+          "text": "My name is\nKoshiki Yukari. Now,\nplease excuse me."
+        },
+        {
+          "offset": "0x269c",
+          "original": "古式ゆかりさんか、\nおっとりした娘だなぁ。",
+          "text": "Koshiki Yukari-san, huh?\nShe seems so calm."
+        },
+        {
+          "offset": "0x29f8",
+          "original": "あなたも\n招待されてたんだ。",
+          "text": "So you\ngot invited too."
+        },
+        {
+          "offset": "0x2a14",
+          "original": "{G}もいたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x2a24",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x2a3c",
+          "original": "友達がいるから、\n悪いけど、\nそろそろ行くね。",
+          "text": "I'm with friends,\nso sorry,\nbut I'd better go."
+        },
+        {
+          "offset": "0x2a6c",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x2a98",
+          "original": "招待されてたんだ。",
+          "text": "So you got invited."
+        },
+        {
+          "offset": "0x2aac",
+          "original": "{G}もいたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x2abc",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x2ad4",
+          "original": "悪いけど、\nそろそろ行くよ。",
+          "text": "Sorry,\nbut I gotta go."
+        },
+        {
+          "offset": "0x2af0",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x2b1c",
+          "original": "あっ、いたのか。",
+          "text": "Oh, you're here."
+        },
+        {
+          "offset": "0x2b30",
+          "original": "{G}こそ…。",
+          "text": "You too, {G}..."
+        },
+        {
+          "offset": "0x2b3c",
+          "original": "あっ、\nそろそろ行かなきゃ。",
+          "text": "Oh,\nI'd better get going."
+        },
+        {
+          "offset": "0x2b64",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x2b94",
+          "original": "他に知り合いは、\n来てるのかな…。",
+          "text": "I wonder if anyone\nelse I know is here..."
+        },
+        {
+          "offset": "0x2bc0",
+          "original": "おわっ。\n痛ッ。",
+          "text": "Whoa!\nOw!"
+        },
+        {
+          "offset": "0x2bd4",
+          "original": "何、ぼーっと\nつっ立ってんだよ。",
+          "text": "What are you doing,\njust standing there?"
+        },
+        {
+          "offset": "0x2bf4",
+          "original": "ご、ごめんなさい。\n人を探してたから…。\nあれ？",
+          "text": "S-sorry.\nI was looking for someone.\nHuh?"
+        },
+        {
+          "offset": "0x2c24",
+          "original": "もしかして、\n水泳部の{G}？",
+          "text": "Wait, are you the\nswimmer {G}?"
+        },
+        {
+          "offset": "0x2c40",
+          "original": "そうだよ。\nそれが？",
+          "text": "Yeah.\nSo what?"
+        },
+        {
+          "offset": "0x2c54",
+          "original": "水泳界の有名人に\nこんな所で会えるなんて、\nついてるな俺。",
+          "text": "Meeting a swimming star\nin a place like this?\nI'm so lucky."
+        },
+        {
+          "offset": "0x2c90",
+          "original": "へぇ、\n私の事知ってるんだ。",
+          "text": "Huh,\nyou know who I am?"
+        },
+        {
+          "offset": "0x2cac",
+          "original": "きらめき高校の人だったら、\n知らない人はいないって。",
+          "text": "Everyone at Kirameki High\nknows who you are."
+        },
+        {
+          "offset": "0x2ce0",
+          "original": "ありがと\n嬉しいよ。\nえーと…。",
+          "text": "Thanks,\nthat's nice.\nUm..."
+        },
+        {
+          "offset": "0x2d00",
+          "original": "俺、{F}。\nよろしく。",
+          "text": "I'm {F}\nNice to meet you."
+        },
+        {
+          "offset": "0x2d14",
+          "original": "私は、清川望。\nあっ、知ってるなら、\n言うことなかったね。",
+          "text": "I'm Kiyokawa Nozomi.\nOh, I guess you\nalready knew that."
+        },
+        {
+          "offset": "0x2d50",
+          "original": "そ、そうだね。",
+          "text": "Y-yeah."
+        },
+        {
+          "offset": "0x2d60",
+          "original": "それじゃ、\nあんまりボーッとすんなよ。\n危ないからな。",
+          "text": "Well then,\ndon't space out so much.\nIt's dangerous."
+        },
+        {
+          "offset": "0x2d98",
+          "original": "あ、ありがとう。\n{G}。",
+          "text": "Th-thanks,\n{G}"
+        },
+        {
+          "offset": "0x2de8",
+          "original": "清川さんって、\n言葉は悪いけど\n結構、可愛いよな。",
+          "text": "Kiyokawa-san's got a\nrough way of talking,\nbut she's pretty cute."
+        },
+        {
+          "offset": "0x327c",
+          "original": "招待されてたんですか…？",
+          "text": "You were invited...?"
+        },
+        {
+          "offset": "0x3298",
+          "original": "{G}も、\n来てたのか。",
+          "text": "Hey, it's {G}\nYou came too?"
+        },
+        {
+          "offset": "0x32ac",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x32c4",
+          "original": "あの…。\nすいません…。\nそろそろ…。",
+          "text": "Um...\nI'm sorry...\nI should go..."
+        },
+        {
+          "offset": "0x32ec",
+          "original": "あっ、そうだね。\nそれじゃ、また。",
+          "text": "Oh, right.\nSee you later."
+        },
+        {
+          "offset": "0x3328",
+          "original": "あ、あの…。\n失礼します。",
+          "text": "U-um...\nExcuse me."
+        },
+        {
+          "offset": "0x3348",
+          "original": "美樹原さんも来てたのか。",
+          "text": "So Mikihara-san came too."
+        },
+        {
+          "offset": "0x3368",
+          "original": "あの…\nこんばんは。",
+          "text": "Um...\ngood evening."
+        },
+        {
+          "offset": "0x337c",
+          "original": "あ、こんばんは。\n（この娘、誰だろう？）",
+          "text": "Oh, good evening.\n(Who's this girl?)"
+        },
+        {
+          "offset": "0x33a4",
+          "original": "あの…\n私、藤崎さんの友達で…\n美樹原…愛と言います。",
+          "text": "Um...\nI'm Fujisaki-san's friend.\nMikihara... Megumi."
+        },
+        {
+          "offset": "0x33dc",
+          "original": "あの…\n‥‥‥‥‥\n失礼します…。",
+          "text": "Um...\n.....\nExcuse me..."
+        },
+        {
+          "offset": "0x3414",
+          "original": "‥‥‥‥。\nまだ、何も話してないよ。",
+          "text": "......\nWe haven't talked at all."
+        },
+        {
+          "offset": "0x3438",
+          "original": "{G}か…。\n何の用だったんだろう？\nでも、結構可愛かったな。",
+          "text": "So that's {G}\nWhat did she want?\nBut she was pretty cute."
+        },
+        {
+          "offset": "0x3478",
+          "original": "あ、あの…。",
+          "text": "U-um..."
+        },
+        {
+          "offset": "0x348c",
+          "original": "はい、何でしょう？",
+          "text": "Yes, what is it?"
+        },
+        {
+          "offset": "0x34a0",
+          "original": "わ、私、美樹原愛と\n言います…。",
+          "text": "M-my name is\nMikihara Megumi..."
+        },
+        {
+          "offset": "0x34c0",
+          "original": "はぁ？\n俺は{F}。",
+          "text": "Huh?\nI'm {F}"
+        },
+        {
+          "offset": "0x34d0",
+          "original": "し、知ってます。",
+          "text": "I-I know."
+        },
+        {
+          "offset": "0x34e4",
+          "original": "えっ、なんか言った？",
+          "text": "Huh? Did you say something?"
+        },
+        {
+          "offset": "0x34fc",
+          "original": "いえ、あの…。\nパーティーで\n渡そうと思って…。\nど、どうぞ…。",
+          "text": "No, um...\nI meant to give\nit to you at the party...\nH-here you go..."
+        },
+        {
+          "offset": "0x353c",
+          "original": "えっ、ありがとう。\nそれじゃ、俺も…。\nこれをどうぞ。",
+          "text": "Oh, thank you.\nThen I'll give you...\nthis one."
+        },
+        {
+          "offset": "0x3574",
+          "original": "えっ、私にですか…。\nあ、ありがとう\nございます…。",
+          "text": "Oh, for me...?\nTh-thank\nyou so much..."
+        },
+        {
+          "offset": "0x35a8",
+          "original": "いいよ。\nどうせ、パーティーには\n出られないんだから。",
+          "text": "Sure.\nI can't go to\nthe party anyway."
+        },
+        {
+          "offset": "0x35e0",
+          "original": "あの…。\n‥‥‥‥‥。\n失礼します…。",
+          "text": "Um...\n.....\nExcuse me..."
+        },
+        {
+          "offset": "0x3630",
+          "original": "あっ、{G}。\nもっと、お話を…。\n行っちゃったよ。",
+          "text": "Oh, {G}\nI wanted to talk more...\nShe's gone."
+        },
+        {
+          "offset": "0x3660",
+          "original": "{G}か…。\nどうして、俺なんかに\nプレゼントくれるんだ？",
+          "text": "So that's {G}\nWhy would she give\na guy like me a present?"
+        },
+        {
+          "offset": "0x3a3c",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x3a48",
+          "original": "招待されてたんだ。",
+          "text": "So you got invited."
+        },
+        {
+          "offset": "0x3a5c",
+          "original": "{G}も、来てたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x3a70",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x3a88",
+          "original": "クラブの友達がいるから、\n悪いけど、いいかな？",
+          "text": "I'm with my club friends,\nso do you mind if I go?"
+        },
+        {
+          "offset": "0x3ab8",
+          "original": "いいよ気にしないで。\nそれじゃ、また。",
+          "text": "Sure, don't worry.\nSee you later."
+        },
+        {
+          "offset": "0x3af8",
+          "original": "招待されてたんだ…。",
+          "text": "So you got invited..."
+        },
+        {
+          "offset": "0x3b10",
+          "original": "{G}も来てたのか。",
+          "text": "Hey, it's {G}"
+        },
+        {
+          "offset": "0x3b20",
+          "original": "クラブの友達がいるから、\n悪いけど…。",
+          "text": "I'm with my club friends,\nso, sorry..."
+        },
+        {
+          "offset": "0x3b54",
+          "original": "まだ、話してないよ。\nあっ、行っちゃった。",
+          "text": "We haven't even talked.\nAw, she's gone."
+        },
+        {
+          "offset": "0x3b84",
+          "original": "あっ、危ない。",
+          "text": "Oh, look out!"
+        },
+        {
+          "offset": "0x3b94",
+          "original": "おっと。",
+          "text": "Whoa!"
+        },
+        {
+          "offset": "0x3ba0",
+          "original": "あぶねぇ…。\n何だって果物が\n飛んでくるんだ？",
+          "text": "That was close...\nWhy is fruit\nflying my way?"
+        },
+        {
+          "offset": "0x3bdc",
+          "original": "ごめんなさい。\n手が滑って…。\nそれにしても、\nすごい反射神経ね。",
+          "text": "I'm sorry!\nIt slipped...\nBut wow,\nwhat great reflexes!"
+        },
+        {
+          "offset": "0x3c1c",
+          "original": "ぐ、偶然だよ。\n君だれ？",
+          "text": "J-just luck.\nWho are you?"
+        },
+        {
+          "offset": "0x3c34",
+          "original": "私、\n野球部のマネージャーで、\n虹野沙希といいます。",
+          "text": "I'm the\nbaseball team's manager,\nNijino Saki."
+        },
+        {
+          "offset": "0x3c68",
+          "original": "よかったら、\n野球部に入らない？",
+          "text": "Would you like to\njoin the baseball team?"
+        },
+        {
+          "offset": "0x3c88",
+          "original": "今のところ\n興味無いから…。",
+          "text": "Right now,\nI'm not interested..."
+        },
+        {
+          "offset": "0x3ca4",
+          "original": "そ、そう。\nそれじゃ、\nしかたないか…。",
+          "text": "O-oh.\nWell then,\nI guess that's that..."
+        },
+        {
+          "offset": "0x3ccc",
+          "original": "ごめんね。\n気が向いたら、\n見学に行くよ。",
+          "text": "Sorry.\nMaybe I'll come by\nand take a look sometime."
+        },
+        {
+          "offset": "0x3cf8",
+          "original": "うん。\n待ってるわ。\nそれじゃ…。",
+          "text": "Okay.\nI'll be waiting.\nBye..."
+        },
+        {
+          "offset": "0x3d40",
+          "original": "{G}か…。\n野球部に入っても\nいいかな？",
+          "text": "So that's {G}\nMaybe I could join\nthe baseball team?"
+        },
+        {
+          "offset": "0x3d68",
+          "original": "あっ、危ない。",
+          "text": "Oh, look out!"
+        },
+        {
+          "offset": "0x3d78",
+          "original": "おっと。",
+          "text": "Whoa!"
+        },
+        {
+          "offset": "0x3d84",
+          "original": "あぶねぇ…。\n何だって果物が\n飛んでくるんだ？",
+          "text": "That was close...\nWhy is fruit\nflying my way?"
+        },
+        {
+          "offset": "0x3dc0",
+          "original": "ごめんなさい。\n手が滑って…。\nそれにしても、\nすごい反射神経ね。",
+          "text": "I'm sorry!\nIt slipped...\nBut wow,\nwhat great reflexes!"
+        },
+        {
+          "offset": "0x3e00",
+          "original": "ぐ、偶然だよ。\n君だれ？",
+          "text": "J-just luck.\nWho are you?"
+        },
+        {
+          "offset": "0x3e18",
+          "original": "私、サッカー部の\nマネージャーで、\n虹野沙希といいます。",
+          "text": "I'm the soccer\nteam's manager,\nNijino Saki."
+        },
+        {
+          "offset": "0x3e50",
+          "original": "よかったら、\nサッカー部に入らない？",
+          "text": "Would you like to\njoin the soccer team?"
+        },
+        {
+          "offset": "0x3e74",
+          "original": "今のところ\n興味無いから…。",
+          "text": "Right now,\nI'm not interested..."
+        },
+        {
+          "offset": "0x3e90",
+          "original": "そ、そう。\nそれじゃ、\nしかたないか…。",
+          "text": "O-oh.\nWell then,\nI guess that's that..."
+        },
+        {
+          "offset": "0x3eb8",
+          "original": "ごめんね。\n気が向いたら、\n見学に行くよ。",
+          "text": "Sorry.\nMaybe I'll come by\nand take a look sometime."
+        },
+        {
+          "offset": "0x3ee4",
+          "original": "うん。\n待ってるわ。\nそれじゃ…。",
+          "text": "Okay.\nI'll be waiting.\nBye..."
+        },
+        {
+          "offset": "0x3f2c",
+          "original": "{G}か…。\nサッカー部に\n入ってもいいかな？",
+          "text": "So that's {G}\nMaybe I could\njoin that soccer team?"
+        },
+        {
+          "offset": "0x43ec",
+          "original": "　　プレゼント交換の時間です。\n　　好きなものを選んで下さい。",
+          "text": "   Gift exchange time!\n   Pick any one you like."
+        },
+        {
+          "offset": "0x4430",
+          "original": "どれにしようかな。",
+          "text": "Which one should I pick?"
+        },
+        {
+          "offset": "0x4448",
+          "original": "詩織のプレゼントだ！\nクラシックのスコアかぁ…\n　（俺、読めないよ…）",
+          "text": "A present from Shiori!\nA classical music score...\n (I can't read music...)"
+        },
+        {
+          "offset": "0x4490",
+          "original": "詩織のプレゼントだ！\nクラシックのスコアかぁ…\nいいものもらっちゃったな。",
+          "text": "A present from Shiori!\nA classical music score...\nWhat a great gift!"
+        },
+        {
+          "offset": "0x44e4",
+          "original": "詩織のプレゼントだ！\n白いコーヒーカップかぁ…\nコーヒーがおいしくなるな。",
+          "text": "A present from Shiori!\nA white coffee cup...\nCoffee will taste better."
+        },
+        {
+          "offset": "0x4534",
+          "original": "詩織のプレゼントだ！\n８分音符のペーパーナイフ！\nしゃれてるな。",
+          "text": "A present from Shiori!\nEighth-note letter opener!\nHow stylish."
+        },
+        {
+          "offset": "0x4578",
+          "original": "如月さんのプレゼントだ！\nゲーテの詩集か…\n冬休みに読んでみようかな。",
+          "text": "A present from Kisaragi-san!\nPoems by Goethe...\nI'll read it over break."
+        },
+        {
+          "offset": "0x45c0",
+          "original": "如月さんのプレゼントだ！\nゲーテの詩集か…\n彼女らしいな。",
+          "text": "From Kisaragi-san!\nPoems by Goethe...\nThat's so like her."
+        },
+        {
+          "offset": "0x4604",
+          "original": "如月さんのプレゼントだ！\n押し花のしおりかぁ…\nきれいだなぁ。",
+          "text": "From Kisaragi-san!\nA pressed-flower bookmark!\nHow pretty."
+        },
+        {
+          "offset": "0x4648",
+          "original": "如月さんのプレゼントだ！\nリルケの詩集か…。\n冬休みに読んでみようかな。",
+          "text": "A present from Kisaragi-san!\nPoems by Rilke...\nI'll read it over break."
+        },
+        {
+          "offset": "0x4690",
+          "original": "如月さんのプレゼントだ！\nリルケの詩集か…。\n彼女らしいな。",
+          "text": "From Kisaragi-san!\nPoems by Rilke...\nThat's so like her."
+        },
+        {
+          "offset": "0x46d4",
+          "original": "紐緒さんのプレゼントだ！\nハイパーウォッチ！！\nすごい！！",
+          "text": "A present from Himoo-san!\nA Hyper Watch!!\nAwesome!!"
+        },
+        {
+          "offset": "0x4714",
+          "original": "紐緒さんのプレゼントだ！\nノート型スーパーコンピュータ！\n使えるかなぁ…",
+          "text": "A present from Himoo-san!\nA laptop supercomputer!\nCan I even use it..."
+        },
+        {
+          "offset": "0x475c",
+          "original": "紐緒さんのプレゼントだ！\nノート型スーパーコンピュータ！\n研究意欲がわいてきたぜ！",
+          "text": "A present from Himoo-san!\nA laptop supercomputer!\nNow I want to do research!"
+        },
+        {
+          "offset": "0x47b8",
+          "original": "紐緒さんのプレゼントだ！\n携帯原子炉！？\n　（こ、これって違法では…）",
+          "text": "From Himoo-san!\nA pocket nuclear reactor!?\n (Isn't this illegal...?)"
+        },
+        {
+          "offset": "0x4804",
+          "original": "片桐さんのプレゼントだ！\n１６７０万色パステルかぁ…\n使うの大変そうだぞ。",
+          "text": "A present from Katagiri-san!\n16.7M-color pastels...\nLooks hard to use."
+        },
+        {
+          "offset": "0x4854",
+          "original": "片桐さんのプレゼントだ！\nガーギーの画集かぁ…\nう〜ん、芸術的だなぁ。",
+          "text": "A present from Katagiri-san!\nAn art book by Gargy...\nHmm, how artistic."
+        },
+        {
+          "offset": "0x48a0",
+          "original": "片桐さんのプレゼントだ！\nフィーリング英会話入門かぁ…\nこれで、英語はバッチリだぜ！",
+          "text": "A present from Katagiri-san!\nFeeling English 101...\nMy English is set now!"
+        },
+        {
+          "offset": "0x48f8",
+          "original": "虹野さんのプレゼントだ！\n手作りのキャンディーかぁ…\n女の子だなぁ。",
+          "text": "A present from Nijino-san!\nHomemade candy...\nSo girly."
+        },
+        {
+          "offset": "0x4940",
+          "original": "虹野さんのプレゼントだ！\n手作りのクッキーかぁ…\nおいしそうだなぁ。",
+          "text": "A present from Nijino-san!\nHomemade cookies...\nThey look delicious."
+        },
+        {
+          "offset": "0x4988",
+          "original": "虹野さんのプレゼントだ！\n手作りのケーキかぁ…\n俺って幸せもの！！",
+          "text": "A present from Nijino-san!\nA homemade cake...\nI'm one lucky guy!!"
+        },
+        {
+          "offset": "0x49d0",
+          "original": "古式さんのプレゼントだ！\nうわぁ、マフラーだ。\n手編みかな？",
+          "text": "A present from Koshiki-san!\nWow, a scarf.\nHand-knitted?"
+        },
+        {
+          "offset": "0x4a10",
+          "original": "古式さんのプレゼントだ！\nうわぁ、手袋だ。\n手編みかな？器用だなぁ。",
+          "text": "A present from Koshiki-san!\nWow, gloves.\nHand-knit? How crafty."
+        },
+        {
+          "offset": "0x4a58",
+          "original": "古式さんのプレゼントだ！\nうわぁ、セーターだ。\n暖かそうだな。",
+          "text": "A present from Koshiki-san!\nWow, a sweater.\nLooks warm."
+        },
+        {
+          "offset": "0x4a9c",
+          "original": "清川さんのプレゼントだ！\nスポーツシューズだ！\n気合いが入るぜ！",
+          "text": "A present from Kiyokawa-san!\nSports shoes!\nI'm fired up!"
+        },
+        {
+          "offset": "0x4ae0",
+          "original": "清川さんのプレゼントだ！\nパワーリストだ！\nよし、鍛えるぜ！",
+          "text": "From Kiyokawa-san!\nWrist weights!\nAll right, time to train!"
+        },
+        {
+          "offset": "0x4b20",
+          "original": "清川さんのプレゼントだ！\nフィットネスセットだ！\nこれで俺もスポーツマンだ！",
+          "text": "A present from Kiyokawa-san!\nA fitness set!\nNow I'm an athlete too!"
+        },
+        {
+          "offset": "0x4b70",
+          "original": "鏡さんのプレゼントだ！\nん？ファンクラブセット？\n会員証までついてるぞ！！",
+          "text": "A present from Kagami-san!\nHm? A fan club kit?\nEven a membership card!!"
+        },
+        {
+          "offset": "0x4bc0",
+          "original": "鏡さんのプレゼントだ！\nおぉっ！鏡魅羅握手券！！\nこれは使うしか！",
+          "text": "A gift from Kagami-san!\nWhoa! A handshake pass for\nKagami Mira! Gotta use it!"
+        },
+        {
+          "offset": "0x4c08",
+          "original": "鏡さんのプレゼントだ！\n鏡魅羅プロモーションビデオ？\n…帰って見てみようぜ。",
+          "text": "A present from Kagami-san!\nA Kagami Mira promo video?\n...I'll watch it at home."
+        },
+        {
+          "offset": "0x4c58",
+          "original": "朝日奈さんのプレゼントだ！\nコアラキーホルダーかぁ。\n今、コアラブームだもんな。",
+          "text": "A present from Asahina-san!\nA koala key chain.\nKoalas are all the rage."
+        },
+        {
+          "offset": "0x4cac",
+          "original": "朝日奈さんのプレゼントだ！\nライマかぁ。\nこれ、流行ってるんだよな。",
+          "text": "A present from Asahina-san!\nA Lyma, huh.\nThese are all the rage."
+        },
+        {
+          "offset": "0x4cf4",
+          "original": "朝日奈さんのプレゼントだ！\n遊園地のフリーチケットだ。\n今度デートに誘おうかな？",
+          "text": "A present from Asahina-san!\nFree theme park tickets.\nShould I ask her out?"
+        },
+        {
+          "offset": "0x4d48",
+          "original": "美樹原さんのプレゼントだ！\nバナナワニのぬいぐるみ。\nかわいいなぁ。",
+          "text": "A present from Mikihara-san!\nA plush banana crocodile.\nSo cute."
+        },
+        {
+          "offset": "0x4d90",
+          "original": "美樹原さんのプレゼントだ！\n犬のクッションか。\nフカフカで気持ち良さそう。",
+          "text": "A present from Mikihara-san!\nA dog cushion.\nSo soft and comfy."
+        },
+        {
+          "offset": "0x4de0",
+          "original": "美樹原さんのプレゼントだ！\n猫のまくらカバーだ。\nいい夢が見られそうだな。",
+          "text": "A present from Mikihara-san!\nA cat pillowcase.\nI'll have sweet dreams."
+        },
+        {
+          "offset": "0x4e34",
+          "original": "優美ちゃんのプレゼントだ！\nときめきカードゲームだ。\n今度、一緒に遊ぼう。",
+          "text": "A present from Yumi-chan!\nA Tokimeki card game.\nLet's play it together."
+        },
+        {
+          "offset": "0x4e84",
+          "original": "優美ちゃんのプレゼントだ！\nめもりあるボードゲーム２だ。\n面白いって評判なんだよな。",
+          "text": "A present from Yumi-chan!\nMemorial Board Game 2.\nI hear it's really fun."
+        },
+        {
+          "offset": "0x4edc",
+          "original": "うっ…！？こ、これは…\nサイン入りブロマイド！？\n何考えてるんだ、あいつ。",
+          "text": "Ugh...!? Th-this is...\nA signed photo of Ijuin!?\nWhat's he thinking?"
+        },
+        {
+          "offset": "0x4f2c",
+          "original": "うっ…！？こ、これは…\n伊集院のＡ全版ポスターだ。\n部屋に飾ろう。",
+          "text": "Ugh...!? Th-this is...\nA giant Ijuin poster.\nI'll hang it in my room."
+        },
+        {
+          "offset": "0x4f70",
+          "original": "　　　　　　　　・\n　　　　　　　　・\n　　　　　　　　・\n　　　　　　　　やめた。",
+          "text": "                .\n                .\n                .\n            Nah."
+        },
+        {
+          "offset": "0x4fcc",
+          "original": "うっ…！？こ、これは…\n伊集院レイ写真集！？\nず、頭痛がしてきた…。",
+          "text": "Ugh...!? Th-this is...\nAn Ijuin Rei photo book!?\nM-my head hurts..."
+        },
+        {
+          "offset": "0x5014",
+          "original": "今日は来てよかったな。\nさて帰るか。",
+          "text": "I'm glad I came today.\nWell, time to head home."
+        },
+        {
+          "offset": "0x503c",
+          "original": "女の子のプレゼントの方が\n良かったなぁ。……帰るか。",
+          "text": "A girl's present would've\nbeen nicer... Home I go."
+        },
+        {
+          "offset": "0x57e0",
+          "original": "伊集院の家に着いたぞ。\nいつ見てもでけぇなぁ。",
+          "text": "Here's Ijuin's house.\nIt's always so huge."
+        },
+        {
+          "offset": "0x5814",
+          "original": "レイ様のお友達で、\nいらっしゃいますか？",
+          "text": "Are you a friend\nof Rei-sama's?"
+        },
+        {
+          "offset": "0x583c",
+          "original": "友達かどうかは\n知らないけど\nクラスメートだよ。",
+          "text": "Not sure about\n'friend', but\nI'm his classmate."
+        },
+        {
+          "offset": "0x5874",
+          "original": "結構です。\nどうぞお入りください。",
+          "text": "Very well.\nPlease come in."
+        },
+        {
+          "offset": "0x589c",
+          "original": "申し訳ございませんが、\nその様なお召し物では\n少々、ご遠慮して\nいただいております。",
+          "text": "I'm terribly sorry,\nbut we must ask guests\nin such attire\nnot to enter."
+        },
+        {
+          "offset": "0x58f0",
+          "original": "えっ、そうなの？",
+          "text": "Huh, really?"
+        },
+        {
+          "offset": "0x5904",
+          "original": "はい。\n厳しく言いつかって\nおりますので。",
+          "text": "Yes.\nThose are my\nstrict orders."
+        },
+        {
+          "offset": "0x5930",
+          "original": "‥‥‥‥。\n（しょうがない帰るか‥。）",
+          "text": "......\n(Guess I'll go home...)"
+        },
+        {
+          "offset": "0x5968",
+          "original": "申し訳ございませんが、\nその様なお召し物では\n少々、ご遠慮して\nいただいております。",
+          "text": "I'm terribly sorry,\nbut we must ask guests\nin such attire\nnot to enter."
+        },
+        {
+          "offset": "0x59c0",
+          "original": "が、\nその素晴らしい肉体に\n目がくらんで何も見えません。\n今の内にお入りください。\nくれぐれも",
+          "text": "However,\nyour splendid physique\nhas blinded me completely.\nQuickly, go on in.\nAnd please,"
+        },
+        {
+          "offset": "0x5a1c",
+          "original": "レイ様にはご内密に‥。",
+          "text": "Don't tell Rei-sama..."
+        },
+        {
+          "offset": "0x5a3c",
+          "original": "何だか、\n目が嫌だったぞ…。",
+          "text": "I didn't like the way\nhe looked at me..."
+        },
+        {
+          "offset": "0x5a5c",
+          "original": "また来て下さったのですね。\nこんな事しかできませんが、\nどうぞお入りください。",
+          "text": "You've come again, I see.\nThis is all I can do,\nbut please, come in."
+        },
+        {
+          "offset": "0x5ab0",
+          "original": "なんか、やだなぁ…。",
+          "text": "This is kinda creepy..."
+        },
+        {
+          "offset": "0x5acc",
+          "original": "おっ、\n今始まるところだな。",
+          "text": "Oh,\nit's just starting."
+        },
+        {
+          "offset": "0x5ae8",
+          "original": "皆さん。\n我が伊集院家が誇る、\nクリスマスパーティーに\nようこそ。",
+          "text": "Everyone,\nwelcome to the pride\nof the Ijuin family,\nour Christmas party."
+        },
+        {
+          "offset": "0x5b28",
+          "original": "日頃の現実を忘れて、\n今日は大いに\n楽しんで行ってください。",
+          "text": "Forget your daily lives\nand enjoy yourselves\nto the fullest tonight."
+        },
+        {
+          "offset": "0x5b70",
+          "original": "相変わらず、\nすかした野郎だぜ。",
+          "text": "Smug as ever,\nthat jerk."
+        },
+        {
+          "offset": "0x5b94",
+          "original": "何か言ったかね。",
+          "text": "Did you say something?"
+        },
+        {
+          "offset": "0x5ba8",
+          "original": "げ、伊集院。\nお前いつの間に…。",
+          "text": "Ack, Ijuin!\nWhen did you get here..."
+        },
+        {
+          "offset": "0x5bc8",
+          "original": "君にお前呼ばわりされる\n筋合いは無いがね…。\nま、今日は特別だ、\n許してやろうじゃないか。",
+          "text": "You have no right to\naddress me so rudely...\nBut tonight is special,\nso I shall forgive you."
+        },
+        {
+          "offset": "0x5c20",
+          "original": "別に、\n許さなくてもいいよ…。",
+          "text": "You know,\nyou don't have to..."
+        },
+        {
+          "offset": "0x5c40",
+          "original": "それにしても、\nよくそのかっこで\nここに入れたものだ。",
+          "text": "Still, I'm amazed\nyou got in here\ndressed like that."
+        },
+        {
+          "offset": "0x5c78",
+          "original": "余計なお世話だ。",
+          "text": "Mind your own business."
+        },
+        {
+          "offset": "0x5c8c",
+          "original": "外井に来年は、\nもっと厳しくするように\n言わなければな…。",
+          "text": "I must tell Sotoi\nto be stricter\nnext year..."
+        },
+        {
+          "offset": "0x5cc8",
+          "original": "‥‥‥‥。\n（人の話を全然聞いてねえ。）",
+          "text": "......\n(He isn't even listening.)"
+        },
+        {
+          "offset": "0x5cf0",
+          "original": "せっかく来たんだ、\n庶民には味わえない、\n超豪華高級料理でも、\n食べていってくれたまえ。",
+          "text": "Since you came,\ndo help yourself to\nultra-luxurious cuisine\nno commoner could taste."
+        },
+        {
+          "offset": "0x5d48",
+          "original": "はーっはっはっはっ。\nでは、失礼するよ。",
+          "text": "Ha-ha-ha-ha-ha!\nNow, if you'll excuse me."
+        },
+        {
+          "offset": "0x5d98",
+          "original": "本当に嫌なやつ…。",
+          "text": "What a jerk..."
+        },
+        {
+          "offset": "0x5db0",
+          "original": "毎年同じ事\n言ってるんじゃねぇの？",
+          "text": "Doesn't he say\nthe same thing every year?"
+        },
+        {
+          "offset": "0x5dd8",
+          "original": "何か言ったかね。",
+          "text": "Did you say something?"
+        },
+        {
+          "offset": "0x5dec",
+          "original": "聞こえなかったのか？\n頭悪いんじゃねぇ？",
+          "text": "Didn't you hear?\nAre you dense?"
+        },
+        {
+          "offset": "0x5e14",
+          "original": "失礼な。\nま、所詮は庶民の遠吠え、\n僕には蚊ほどにも\n感じんがね…。",
+          "text": "How rude.\nWell, a commoner's barking\nbothers me no more\nthan a mosquito..."
+        },
+        {
+          "offset": "0x5e58",
+          "original": "嫌なやつだなぁ…。",
+          "text": "What a jerk..."
+        },
+        {
+          "offset": "0x5e6c",
+          "original": "１年に１回だけのぜい沢を、\n思う存分に味わって\nいってくれたまえ。",
+          "text": "Do savor this luxury,\nthe only one you get\nall year."
+        },
+        {
+          "offset": "0x5eb0",
+          "original": "はーっはっはっはっ。\nでは、失礼するよ。",
+          "text": "Ha-ha-ha-ha-ha!\nNow, if you'll excuse me."
+        },
+        {
+          "offset": "0x5ef0",
+          "original": "本当に嫌なやつ…。",
+          "text": "What a jerk..."
+        },
+        {
+          "offset": "0x5f08",
+          "original": "また同じ事\n言ってるよ。",
+          "text": "He's saying\nthe same thing again."
+        },
+        {
+          "offset": "0x5f24",
+          "original": "また今年も来れるとはね。\nそこそこに\n見れるという事か…。",
+          "text": "So you made it in again.\nI suppose you're\nsomewhat presentable..."
+        },
+        {
+          "offset": "0x5f60",
+          "original": "伊集院よぉ…。",
+          "text": "Hey, Ijuin..."
+        },
+        {
+          "offset": "0x5f70",
+          "original": "どうした庶民。\n質問かね？",
+          "text": "What is it, commoner?\nA question?"
+        },
+        {
+          "offset": "0x5f8c",
+          "original": "毎年気になってたんだけど、\nそのカクテルグラスの中に\n何が入ってるんだ？",
+          "text": "I've wondered every year.\nWhat's in that\ncocktail glass?"
+        },
+        {
+          "offset": "0x5fd4",
+          "original": "はーっはっはっはっ。\n無知な庶民に教えてやろう。\nこの中身はな…。",
+          "text": "Ha-ha-ha-ha-ha!\nI'll tell you, commoner.\nWhat's inside is..."
+        },
+        {
+          "offset": "0x6018",
+          "original": "この中身は…。",
+          "text": "What's inside is..."
+        },
+        {
+          "offset": "0x6028",
+          "original": "君には、教えてやらん。\nま、アルコールでは無い\nとだけ言っておこうか。",
+          "text": "I won't tell you.\nI'll just say\nit's not alcohol."
+        },
+        {
+          "offset": "0x6070",
+          "original": "未成年は飲酒をしては\nいけないからね。",
+          "text": "Minors mustn't drink,\nafter all."
+        },
+        {
+          "offset": "0x6098",
+          "original": "そ、そんなことは、\n知ってるよ。\nだったら何なんだよ。",
+          "text": "I-I know that\nalready.\nSo what is it?"
+        },
+        {
+          "offset": "0x60d0",
+          "original": "死ぬまで考えるがいい。\nはーっはっはっはっ。\nでは、失礼するよ。",
+          "text": "Ponder it till you die.\nHa-ha-ha-ha-ha!\nNow, if you'll excuse me."
+        },
+        {
+          "offset": "0x6138",
+          "original": "どうせ、\nジュースのくせに…。",
+          "text": "Bet it's\njust juice..."
+        },
+        {
+          "offset": "0x615c",
+          "original": "ふぅ、家に着いたぞ。",
+          "text": "Phew, I'm back home."
+        },
+        {
+          "offset": "0x6174",
+          "original": "仕方ない、今年は一人で\nクリスマスを祝うか。",
+          "text": "Oh well. This year I'll\ncelebrate Christmas alone."
+        },
+        {
+          "offset": "0x61a8",
+          "original": "メリークリスマス！！\nあぁ、楽しいなぁ。",
+          "text": "Merry Christmas!!\nAh, what fun."
+        },
+        {
+          "offset": "0x6210",
+          "original": "うぅ、来年こそは\n楽しいクリスマスを\n過ごすぞ。",
+          "text": "Ugh... Next year, I'll\nhave a fun Christmas\nfor sure."
+        },
+        {
+          "offset": "0x69a8",
+          "original": "招待されてたんですね。",
+          "text": "So you were invited too."
+        },
+        {
+          "offset": "0x69c0",
+          "original": "優美ちゃんも、\n来てたのか。",
+          "text": "Yumi-chan, you\ncame too?"
+        },
+        {
+          "offset": "0x69dc",
+          "original": "しばらく{G}と話し込んだ",
+          "text": "Talked to {G}"
+        },
+        {
+          "offset": "0x69f4",
+          "original": "同級生のお友達と\n来てるから、\nそろそろ、行かなくちゃ。",
+          "text": "I came with friends\nfrom my class,\nso I'd better go now."
+        },
+        {
+          "offset": "0x6a2c",
+          "original": "いいよ気にしないで。\nそれじゃ、また。",
+          "text": "Sure, don't worry.\nSee you later."
+        },
+        {
+          "offset": "0x6a6c",
+          "original": "あっ…。",
+          "text": "Oh..."
+        },
+        {
+          "offset": "0x6a7c",
+          "original": "優美ちゃんも来てたのか。\nでも、何もあんなに\n走らなくても…。",
+          "text": "So Yumi-chan came too.\nBut she didn't have\nto run off like that..."
+        },
+        {
+          "offset": "0x6bd4",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x6bdc",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x6be4",
+          "original": "俺、{F}",
+          "text": "I'm {F}"
+        },
+        {
+          "offset": "0x6bec",
+          "original": "ドン",
+          "text": "Thud"
+        },
+        {
+          "offset": "0x6bf4",
+          "original": "きゃ。",
+          "text": "Eek!"
+        },
+        {
+          "offset": "0x6bfc",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x6c04",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x6c0c",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x6c14",
+          "original": "ドン",
+          "text": "Thud"
+        },
+        {
+          "offset": "0x6c1c",
+          "original": "何？",
+          "text": "What?"
+        },
+        {
+          "offset": "0x6c24",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x6c2c",
+          "original": "俺、{F}。",
+          "text": "I'm {F}"
+        },
+        {
+          "offset": "0x6c34",
+          "original": "俺、{F}。",
+          "text": "I'm {F}"
+        },
+        {
+          "offset": "0x6c3c",
+          "original": "俺、{F}。",
+          "text": "I'm {F}"
+        },
+        {
+          "offset": "0x6c48",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        }
+      ]
+    }
+  ]
 }

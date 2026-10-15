@@ -19,7 +19,7 @@
         {
           "offset": "0x38",
           "original": "真の天才は、芸術を\n楽しむ心を持たなくては\nいけないわ。",
-          "text": "A true genius must\nhave a heart that\ncan enjoy art."
+          "text": "A true genius must\nknow how to\nappreciate art."
         },
         {
           "offset": "0x70",
@@ -29,7 +29,7 @@
         {
           "offset": "0xc4",
           "original": "そうね。\nこの私にふさわしい\n価値があるわ。{q}そう。\n良かったわね。{q}私のような知的な顔が\nこの世にそうあるとは\n思えないわ。",
-          "text": "Indeed.\nIts worth befits\neven me.{q}I see.\nGood for you.{q}I doubt this world holds\nmany faces as intelligent\nas mine."
+          "text": "Indeed.\nIt's worthy of\nsomeone like me.{q}I see.\nGood for you.{q}I doubt this world holds\nmany faces as intelligent\nas mine."
         },
         {
           "offset": "0x140",
@@ -74,7 +74,7 @@
         {
           "offset": "0x2a8",
           "original": "わりと絵の趣味広いね。{q}これのどこが落ち着くんだ？{q}現代アートも好きなんだ。",
-          "text": "Your tastes are pretty wide.{q}What's so soothing here?{q}You like modern art too?"
+          "text": "You like all kinds of art.{q}What's so soothing here?{q}You like modern art too?"
         },
         {
           "offset": "0x2fc",
@@ -119,17 +119,17 @@
         {
           "offset": "0x4ac",
           "original": "この人の絵の才能に、\n私と共通するものを\n感じるわ。",
-          "text": "I sense in this artist's\ntalent something\nin common with mine."
+          "text": "This artist's talent\nreminds me of\nmy own."
         },
         {
           "offset": "0x4e0",
           "original": "両方とも、天才だもんね。{q}この画家は変人で有名だね。{q}何だろう？よくわかんないよ。",
-          "text": "You're both geniuses, huh.{q}He's famous for being odd.{q}What? I don't really get it."
+          "text": "You're both geniuses, huh.{q}A famous eccentric, huh.{q}Huh? I don't get it."
         },
         {
           "offset": "0x53c",
           "original": "そう。\nその通りよ。\nよくわかってるじゃない。{q}私が変人だとでも\n言いたいの？{q}ま、あなたにわからないのは\n当然ね。",
-          "text": "Yes.\nPrecisely.\nYou understand well.{q}Are you implying\nthat I'm odd?{q}Well, of course someone\nlike you wouldn't."
+          "text": "Yes.\nExactly.\nYou do understand.{q}Are you implying\nthat I'm odd?{q}Well, of course someone\nlike you wouldn't."
         },
         {
           "offset": "0x5b0",
@@ -169,7 +169,7 @@
         {
           "offset": "0xaf0",
           "original": "左右に別れちゃったわね。",
-          "text": "A split, left and right."
+          "text": "It's split on both sides."
         },
         {
           "offset": "0xb0c",
@@ -314,7 +314,7 @@
         {
           "offset": "0x1478",
           "original": "それが、奴等の本性よ。{q}外見だけに、\nごまかされてるんじゃ\nない？{q}少しは、\n本質が見えてるみたいね。",
-          "text": "That's their true nature.{q}Aren't you being\nfooled by mere\nappearances?{q}So you can see\nthe truth a little."
+          "text": "That's their true nature.{q}Aren't you being\nfooled by mere\nappearances?{q}You see a bit of\ntheir true nature."
         },
         {
           "offset": "0x1714",
@@ -369,7 +369,7 @@
         {
           "offset": "0x1878",
           "original": "あまり馴れ馴れしく\nされるのも困るけど、\nま、いいでしょう。",
-          "text": "Don't get too\nfamiliar with me, but\nfine, very well."
+          "text": "Don't get too\nfamiliar with me...\nbut I'll allow it."
         },
         {
           "offset": "0x18b4",
@@ -669,7 +669,7 @@
         {
           "offset": "0x2bd4",
           "original": "こういう行為が楽しいんだよ。{q}女の子にわりと人気あるんだよ。{q}この雰囲気がいいんだよ。",
-          "text": "The doing is the fun part.{q}Girls really like these.{q}I like the atmosphere."
+          "text": "It's the playing that's fun.{q}Girls really like these.{q}I like the atmosphere."
         },
         {
           "offset": "0x2c34",
@@ -834,7 +834,7 @@
         {
           "offset": "0x38b8",
           "original": "脳が溶けそうな\n音楽ばかりね。",
-          "text": "This music could\nmelt a brain."
+          "text": "All this music\nmakes my brain melt."
         },
         {
           "offset": "0x38d8",
@@ -949,7 +949,7 @@
         {
           "offset": "0x41a8",
           "original": "好きな音楽は頭脳にやさしい\nクラシックということを\n聞き出した。",
-          "text": "Found out she likes\nbrain-friendly\nclassical music."
+          "text": "Found out she likes\nclassical music that's\neasy on the brain."
         },
         {
           "offset": "0x41e8",
@@ -1364,7 +1364,7 @@
         {
           "offset": "0x5fb8",
           "original": "当然ね。\nこんな所に、\n来る人の気が知れないわ。{q}頭おかしいんじゃないの？{q}何しに来たの？\n馬鹿みたい。",
-          "text": "Naturally.\nI can't fathom anyone\nwho'd come here.{q}Is your head on straight?{q}Then why did we come?\nHow stupid."
+          "text": "Naturally.\nI can't fathom anyone\nwho'd come here.{q}Are you out of your mind?{q}Then why did we come?\nHow stupid."
         },
         {
           "offset": "0x6020",
@@ -1424,7 +1424,7 @@
         {
           "offset": "0x6624",
           "original": "滑れないのが、\nさぞかし\nおかしいでしょうね。",
-          "text": "I suppose my falling\nmust be\nterribly amusing."
+          "text": "You must find it\nhilarious that\nI can't skate."
         },
         {
           "offset": "0x6654",
@@ -1434,7 +1434,7 @@
         {
           "offset": "0x6698",
           "original": "そ、そう。\nそれならいいわ。{q}覚悟しておきなさい…。{q}そうよ。",
-          "text": "I-I see.\nThen fine.{q}Prepare yourself...{q}I'm not."
+          "text": "I-I see.\nThen fine.{q}Prepare yourself...{q}That's right."
         },
         {
           "offset": "0x66d8",
@@ -1509,7 +1509,7 @@
         {
           "offset": "0x6b28",
           "original": "そう。\nやっぱりつまらないわ。{q}だったら、\n何をしに来たの？{q}別にいいわよ。\n考えてみれば、\nあなたに聞く方が恥ね。",
-          "text": "I see.\nIt's dull after all.{q}Then what\ndid we come for?{q}Never mind.\nCome to think of it,\nasking you was shameful."
+          "text": "I see.\nIt's dull after all.{q}Then what\ndid we come for?{q}Never mind.\nI should be embarrassed\nI even asked you."
         },
         {
           "offset": "0x6b9c",
@@ -1549,7 +1549,7 @@
         {
           "offset": "0x6d2c",
           "original": "プロレスラーって、\nいい身体してるわね。",
-          "text": "Pro wrestlers\nhave good bodies."
+          "text": "Pro wrestlers\nare really well-built."
         },
         {
           "offset": "0x6d54",
@@ -1559,7 +1559,7 @@
         {
           "offset": "0x6d94",
           "original": "あれなら、\n改造にも耐えられそうね。{q}何、馬鹿なこと\n言ってるの？{q}そんなこと、\n考えたこともないわ。",
-          "text": "Those could probably\nsurvive modification.{q}What nonsense\nare you spouting?{q}I've never even\nthought about that."
+          "text": "They could even survive\nbeing modified.{q}What nonsense\nare you spouting?{q}I've never even\nthought about that."
         },
         {
           "offset": "0x70ec",
@@ -1704,7 +1704,7 @@
         {
           "offset": "0x7ae4",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Go with {G}{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x7b1c",
@@ -1749,7 +1749,7 @@
         {
           "offset": "0x7c3c",
           "original": "待たせたわね。\nさあ、行くわよ。",
-          "text": "Sorry to keep you.\nCome, let's go."
+          "text": "Kept you waiting, huh?\nCome on, let's go."
         },
         {
           "offset": "0x7c5c",
@@ -1799,7 +1799,7 @@
         {
           "offset": "0x7dfc",
           "original": "そうね。\n子供だましもいいとこね。{q}どういう神経してるの？{q}あなたには、\nちょうどいいわね。",
-          "text": "Yes.\nChild's play, at best.{q}What are you made of?{q}It's just right\nfor you, then."
+          "text": "Yes.\nChild's play, at best.{q}That really scared you?{q}It's just right\nfor you, then."
         },
         {
           "offset": "0x7e5c",
@@ -1899,7 +1899,7 @@
         {
           "offset": "0x8324",
           "original": "随分と、\nごたいそうな機械ね。",
-          "text": "Quite the\npompous machine."
+          "text": "What an over-the-top\ncontraption."
         },
         {
           "offset": "0x8344",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x849c",
           "original": "それは、面白そうだね。{q}そんな、危ない実験やめろよ。{q}そ、そうなんだ。",
-          "text": "Ooh, that sounds like fun.{q}Stop such dangerous stuff.{q}Oh... r-really, huh?"
+          "text": "Ooh, that sounds like fun.{q}No more risky experiments.{q}Oh... r-really, huh?"
         },
         {
           "offset": "0x84ec",
@@ -2019,7 +2019,7 @@
         {
           "offset": "0x8960",
           "original": "随分と、\nごたいそうな機械ね。",
-          "text": "Quite the\npompous machine."
+          "text": "What an over-the-top\ncontraption."
         },
         {
           "offset": "0x8980",
@@ -2049,7 +2049,7 @@
         {
           "offset": "0x8ad8",
           "original": "それは、面白そうだね。{q}そんな、危ない実験やめろよ。{q}そ、そうなんだ。",
-          "text": "Ooh, that sounds like fun.{q}Stop such dangerous stuff.{q}Oh... r-really, huh?"
+          "text": "Ooh, that sounds like fun.{q}No more risky experiments.{q}Oh... r-really, huh?"
         },
         {
           "offset": "0x8b28",
@@ -2184,7 +2184,7 @@
         {
           "offset": "0x9e84",
           "original": "当たり前よ。\n凡人と比べてもらったら\n困るわ。{q}私の勝手よ。{q}あなたの頭には、\n無理ね。",
-          "text": "Naturally.\nDon't compare me\nto commoners.{q}That's my business.{q}Too much for\nyour brain."
+          "text": "Naturally.\nDon't compare me\nto ordinary people.{q}That's my business.{q}Too much for\nyour brain."
         },
         {
           "offset": "0x9edc",
@@ -2209,7 +2209,7 @@
         {
           "offset": "0x9f64",
           "original": "後で、道路が汚くなるんだよね。{q}{G}らしくないよ。{q}さすが日本を代表する花だね。",
-          "text": "The roads get messy after.{q}That's not like {G}{q}Japan's flower, all right."
+          "text": "The roads get messy after.{q}That's not like {G}{q}Japan's iconic flower!"
         },
         {
           "offset": "0x9fb8",

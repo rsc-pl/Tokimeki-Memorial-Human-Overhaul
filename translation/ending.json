@@ -159,7 +159,7 @@
         {
           "offset": "0x8b4",
           "original": "でも、興味がなかった訳じゃないのよ。",
-          "text": "But I wasn't uninterested."
+          "text": "I was interested, though."
         },
         {
           "offset": "0x8dc",
@@ -199,7 +199,7 @@
         {
           "offset": "0xa98",
           "original": "恥ずかしくて、逃げたい気分だけど\nもう、ただの幼馴染みじゃ嫌…。",
-          "text": "I'm so shy I could run, but\nI won't be just a friend..."
+          "text": "I'm embarrassed, but...\nI can't be just a friend."
         },
         {
           "offset": "0xad8",
@@ -279,7 +279,7 @@
         {
           "offset": "0x105c",
           "original": "今までの私は、自分の才能に溺れて\n人を見下した態度を取って、",
-          "text": "I drowned in my own talent\nand looked down on others."
+          "text": "My talent went to my head.\nI looked down on others."
         },
         {
           "offset": "0x1098",
@@ -409,7 +409,7 @@
         {
           "offset": "0x1860",
           "original": "ごめんなさい。\n今まで私…。\n男のふりをして嘘をついてたの…。",
-          "text": "I'm sorry.\nAll this time, I...\nlied and played a boy..."
+          "text": "I'm sorry.\nAll this time...\nI pretended to be a boy."
         },
         {
           "offset": "0x18a0",
@@ -424,7 +424,7 @@
         {
           "offset": "0x1914",
           "original": "漫画みたい…。",
-          "text": "Like a manga..."
+          "text": "Just like a manga..."
         },
         {
           "offset": "0x1924",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1c64",
           "original": "もう伊集院家なんて、どうでもいいの。\nだから…\n好きです。",
-          "text": "I don't care about Ijuins.\nSo...\nI love you."
+          "text": "Family rules don't matter.\nSo...\nI love you."
         },
         {
           "offset": "0x1ca0",
@@ -544,7 +544,7 @@
         {
           "offset": "0x1dcc",
           "original": "やっと、普通の女の子になれたのね…。",
-          "text": "At last, a normal girl..."
+          "text": "Now I can live as a girl..."
         },
         {
           "offset": "0x1df4",
@@ -609,7 +609,7 @@
         {
           "offset": "0x2574",
           "original": "一つ聞きたいんだけど…。\n大雑把な性格の女の子は、嫌い？",
-          "text": "Can I ask one thing...\nDo you hate easygoing girls?"
+          "text": "Can I ask you... do you\nmind careless girls?"
         },
         {
           "offset": "0x25ac",
@@ -619,7 +619,7 @@
         {
           "offset": "0x25cc",
           "original": "ウェイト、ちょっと待って。\n本当の用は、これからなの。",
-          "text": "Wait, hold on.\nThe real thing comes now."
+          "text": "Wait, hold on.\nThat's not why I called."
         },
         {
           "offset": "0x2604",
@@ -674,7 +674,7 @@
         {
           "offset": "0x2878",
           "original": "だから…、だから私と…。",
-          "text": "So... so please, with me..."
+          "text": "So... so will you..."
         },
         {
           "offset": "0x2894",
@@ -734,12 +734,12 @@
         {
           "offset": "0x2d9c",
           "original": "この前の街で、私…\n男の子に何度も振られて…。",
-          "text": "In my old town, I...\nwas dumped again and again."
+          "text": "In my old town, I...\nkept getting rejected."
         },
         {
           "offset": "0x2dcc",
           "original": "だから、この街に来る時に、\n生まれ変わろう。",
-          "text": "So when I came here,\nI vowed to be reborn."
+          "text": "So when I moved here,\nI decided to start over."
         },
         {
           "offset": "0x2df8",
@@ -749,7 +749,7 @@
         {
           "offset": "0x2e38",
           "original": "苦労の甲斐があって、\n男の子の目をひく女になったわ。",
-          "text": "My efforts paid off.\nNow boys turn to stare."
+          "text": "All my hard work paid off.\nI could turn boys' heads."
         },
         {
           "offset": "0x2e6c",
@@ -794,7 +794,7 @@
         {
           "offset": "0x3044",
           "original": "また昔の自分に戻りたくなかったから…。",
-          "text": "I didn't want my old self."
+          "text": "I didn't want to go back."
         },
         {
           "offset": "0x306c",
@@ -804,7 +804,7 @@
         {
           "offset": "0x3094",
           "original": "貴方に、こんな女だと思われたまま\n卒業するなんて耐えられない。",
-          "text": "I can't graduate with you\nthinking I'm that kind."
+          "text": "I can't graduate knowing\nyou see me like that."
         },
         {
           "offset": "0x30d4",
@@ -829,12 +829,12 @@
         {
           "offset": "0x3188",
           "original": "やっぱり、私じゃだめよね。",
-          "text": "I suppose I won't do."
+          "text": "I guess I'm not good enough."
         },
         {
           "offset": "0x31a4",
           "original": "俺でよかったら…。",
-          "text": "If I'll do..."
+          "text": "If you'll have me..."
         },
         {
           "offset": "0x31b8",
@@ -899,7 +899,7 @@
         {
           "offset": "0x37fc",
           "original": "本当の気持ちを打ち明けられないでいる\n臆病な自分が、ずっと腹立たしくて…。",
-          "text": "and angry at myself, the\ncoward hiding her heart..."
+          "text": "and hated how scared I was\nto tell you how I felt..."
         },
         {
           "offset": "0x3848",
@@ -914,12 +914,12 @@
         {
           "offset": "0x3898",
           "original": "今まで、たくさんの本と出会って、\n私の思い出の中に残してきました。",
-          "text": "I've met so many books\nand kept them as memories."
+          "text": "I've read so many books,\nand still remember them."
         },
         {
           "offset": "0x38dc",
           "original": "でも、あなたと知り合った、\n高校生活の全てを、\nただの思い出だけにしたくないから…、",
-          "text": "But my school days with you,\nall of them, I won't let\nbe just a memory..."
+          "text": "But I don't want our\nhigh school days together\nto become just a memory."
         },
         {
           "offset": "0x3930",
@@ -929,7 +929,7 @@
         {
           "offset": "0x3960",
           "original": "私の、一生分の勇気を出して言います。",
-          "text": "With all my courage..."
+          "text": "This takes all my courage."
         },
         {
           "offset": "0x3988",
@@ -939,7 +939,7 @@
         {
           "offset": "0x3994",
           "original": "恋人じゃなく、お友達でもいいんです。\n卒業してからも、\nずっとあなたに会えるなら…。",
-          "text": "Not lovers. Friends is fine.\nIf only, after graduation,\nI can keep seeing you..."
+          "text": "Even if we're just friends,\nI'll be happy if we can\nmeet after graduation..."
         },
         {
           "offset": "0x39e8",
@@ -1039,7 +1039,7 @@
         {
           "offset": "0x3d78",
           "original": "本当の気持ちを打ち明けられないでいる\n臆病な自分が、ずっと腹立たしくて…。",
-          "text": "and angry at myself, the\ncoward hiding her heart..."
+          "text": "and hated how scared I was\nto tell you how I felt..."
         },
         {
           "offset": "0x3dc4",
@@ -1054,12 +1054,12 @@
         {
           "offset": "0x3e14",
           "original": "今まで、たくさんの本と出会って、\n私の思い出の中に残してきました。",
-          "text": "I've met so many books\nand kept them as memories."
+          "text": "I've read so many books,\nand still remember them."
         },
         {
           "offset": "0x3e58",
           "original": "でも、あなたと知り合った、\n高校生活の全てを、\nただの思い出だけにしたくないから…、",
-          "text": "But my school days with you,\nall of them, I won't let\nbe just a memory..."
+          "text": "But I don't want our\nhigh school days together\nto become just a memory."
         },
         {
           "offset": "0x3eac",
@@ -1069,7 +1069,7 @@
         {
           "offset": "0x3edc",
           "original": "私の、一生分の勇気を出して言います。",
-          "text": "With all my courage..."
+          "text": "This takes all my courage."
         },
         {
           "offset": "0x3f04",
@@ -1079,7 +1079,7 @@
         {
           "offset": "0x3f10",
           "original": "恋人じゃなく、お友達でもいいんです。\n卒業してからも、\nずっとあなたに会えるなら…。",
-          "text": "Not lovers. Friends is fine.\nIf only, after graduation,\nI can keep seeing you..."
+          "text": "Even if we're just friends,\nI'll be happy if we can\nmeet after graduation..."
         },
         {
           "offset": "0x3f64",
@@ -1164,7 +1164,7 @@
         {
           "offset": "0x4900",
           "original": "お恥ずかしいお話ですけれども、\nあなたの姿が、頭から離れなくて…。\n家にいても、あなたの事ばかり考えて、\n時間が経つのも忘れてしまいます。",
-          "text": "It's embarrassing to say,\nbut I can't stop seeing you.\nEven at home, I think of you\nand lose all track of time."
+          "text": "It's embarrassing to say,\nbut I can't get you out\nof my head. Even at home,\nI lose track of time."
         },
         {
           "offset": "0x4988",
@@ -1179,7 +1179,7 @@
         {
           "offset": "0x4a94",
           "original": "いつも、\nあなたの事だけを考えてしまいます。\n私が、落ち着いていられる場所は、\nあなたのそばだけです。\n私でよろしければ、これからずっと…、\n卒業してからも、\nお付き合いしていただきたいのです。",
-          "text": "I always end up\nthinking only of you.\nI only feel at peace\nby your side.\nIf you'll have me, from now,\neven after graduation,\nI'd like you to court me."
+          "text": "I always end up\nthinking only of you.\nI only feel at peace\nby your side.\nIf you'll have me,\neven after graduation,\nI'd like to be with you."
         },
         {
           "offset": "0x4b54",
@@ -1189,7 +1189,7 @@
         {
           "offset": "0x4b6c",
           "original": "本当ですか？\n良かった。お母様の言うとおりにして…。\nそれでは、\n明日お父様に会っていただけますか？",
-          "text": "Truly?\nI'm glad I heeded Mother.\nThen,\nwill you meet Father soon?"
+          "text": "Really?\nGlad I did as Mother said.\nThen, will you meet Father\ntomorrow?"
         },
         {
           "offset": "0x4bd0",
@@ -1569,7 +1569,7 @@
         {
           "offset": "0x64a4",
           "original": "あ、あなたが…。\nあなたが、好きです…。\nは、恥ずかしい…。",
-          "text": "I-I...\nI love you...\nS-so embarrassing..."
+          "text": "Y-you...\nI love you...\nI'm so embarrassed..."
         },
         {
           "offset": "0x64e0",
@@ -1599,7 +1599,7 @@
         {
           "offset": "0x6580",
           "original": "は、はい…。\nでも。嘘でも良かったんです。",
-          "text": "Y-yes...\nIt was fine even if a lie."
+          "text": "Y-yes...\nEven if it wasn't true."
         },
         {
           "offset": "0x65ac",
@@ -1659,7 +1659,7 @@
         {
           "offset": "0x6a9c",
           "original": "私は、悩んだり、苦しいときには、\nいつもあなたの、\nひたむきな頑張りにはげまされて、",
-          "text": "When I was troubled or hurt,\nI was always cheered on\nby how hard you tried,"
+          "text": "Whenever things got hard,\nseeing how you kept trying\nalways gave me strength."
         },
         {
           "offset": "0x6af0",
@@ -1694,7 +1694,7 @@
         {
           "offset": "0x6c54",
           "original": "勇気を出してよかった…。\nやっぱり頑張れば、なんとかなるね。",
-          "text": "I'm glad I was brave...\nWith guts, things work out."
+          "text": "I'm glad I was brave...\nTrying your best pays off."
         },
         {
           "offset": "0x6c90",
@@ -1799,7 +1799,7 @@
         {
           "offset": "0x73fc",
           "original": "それじゃ、制服の第二ボタンを下さい。",
-          "text": "Then give me your button!"
+          "text": "Give me your second button!"
         },
         {
           "offset": "0x7424",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x7468",
           "original": "卒業してからも、お兄ちゃんにでなく、\n優美に会うために\n家に遊びに来て下さいね。",
-          "text": "After you graduate, visit\nnot for my brother,\nbut to see Yumi, okay?"
+          "text": "After graduation, come by\nto see Yumi, not\nmy brother, okay?"
         },
         {
           "offset": "0x74b8",
@@ -1979,7 +1979,7 @@
         {
           "offset": "0x7ea0",
           "original": "やっぱり、一目ぼれを信じます。\n私と付き合ってください。",
-          "text": "I believe in first sight.\nPlease go out with me."
+          "text": "Love at first sight is real.\nPlease go out with me."
         },
         {
           "offset": "0x7ed8",

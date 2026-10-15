@@ -296,7 +296,7 @@ func pythonEnv(root string) []string {
 	if old := os.Getenv("PYTHONPATH"); old != "" {
 		p += string(os.PathListSeparator) + old
 	}
-	return append(env, "PYTHONPATH="+p, "PYTHONDONTWRITEBYTECODE=1")
+	return append(env, "PYTHONPATH="+p, "PYTHONDONTWRITEBYTECODE=1", "PYTHONUNBUFFERED=1")
 }
 func runProcess(root, bin string, args ...string) error {
 	command := exec.Command(bin, args...)
@@ -568,8 +568,19 @@ func usage() {
 	fmt.Println("  tokimemo native-plan      Read-only full-file Go patch plan; --compare-python for hash parity")
 	fmt.Println("  tokimemo name-tables      Read-only N10 surname capacity and pointer audit")
 	fmt.Println("  tokimemo name-label-bounds  Inspect N10 R07 label sources and candidate B byte limits (read-only)")
+	fmt.Println("  tokimemo name-combine-stage PRIVATE nonbootable G18+G24 N10 research merge")
+	fmt.Println("  tokimemo name-fixed-stage   PRIVATE nonbootable partial N10 literal source redirects (research only)")
 	fmt.Println("  tokimemo name-stage       PRIVATE experimental EXE-only N10 staging; never changes build")
 	fmt.Println("  tokimemo name-xrefs       Read-only original EXE/GEKO RAM-reference census")
+	fmt.Println("  tokimemo name-overlay-census  Read-only original disc-wide N10 executable/overlay A/B/C census")
+	fmt.Println("  tokimemo name-overlay-context  Read-only verified G31 per-site MIPS context capture")
+	fmt.Println("  tokimemo name-overlay-geometry  Read-only original-disc ISO/source-image geometry; NOT BSS proof")
+	fmt.Println("  tokimemo name-overlay-loader  Read-only PS-X EXE header / static overlay callsite analysis; NOT loader proof")
+	fmt.Println("  tokimemo name-overlay-followup  Original O.BIN A/B/C/C+64 and full main EXE loader-anchor context (read-only)")
+	fmt.Println("  tokimemo name-overlay-dispatch  Offline, SHA-verified G38 overlay entry-pointer classification (read-only)")
+	fmt.Println("  tokimemo name-overlay-trace  SHA-verified original-disc focused dispatch/3-callee trace (read-only)\n  tokimemo name-overlay-io     G42: sector LBA selector matches + original-disc I/O target code (read-only)\n  tokimemo name-overlay-transfer  G43: packed descriptor + I/O request consumer trace (read-only)\n  tokimemo name-overlay-route G44: original op-6 dispatch table and dependent code (read-only)\n  tokimemo name-overlay-queue G45: bounded queue consumer continuation (read-only)")
+	fmt.Println("  tokimemo name-source-export --out FILE.zip  Export complete original EXE + 26 EXN + O.BIN for offline analysis (private)")
+	fmt.Println("  tokimemo name-geko-provenance  Read-only derived/aliased GEKO name-source audit")
 	fmt.Println("  tokimemo name-ram-watch   Passive DuckStation N10 RAM snapshots (no writes)\n  tokimemo name-ram-review  Offline review of a saved N10 RAM report")
 	fmt.Println("  tokimemo name-buffer-stage  PRIVATE unbootable N10 A/B experimental byte candidates")
 	fmt.Println("  tokimemo cue-audit       Verify a safe two-track CUE layout for native builds")
@@ -662,8 +673,38 @@ func entry(root, cmd string, args []string) error {
 		return cmdNameTables(root, args)
 	case "name-label-bounds":
 		return cmdNameLabelBounds(root, args)
+	case "name-combine-stage":
+		return cmdNameCombineStage(root, args)
+	case "name-fixed-stage":
+		return cmdNameFixedStage(root, args)
 	case "name-stage":
 		return cmdNameStage(root, args)
+	case "name-overlay-census":
+		return cmdNameOverlayCensus(root, args)
+	case "name-overlay-context":
+		return cmdNameOverlayContext(root, args)
+	case "name-overlay-geometry":
+		return cmdNameOverlayGeometry(root, args)
+	case "name-overlay-loader":
+		return cmdNameOverlayLoader(root, args)
+	case "name-overlay-followup":
+		return cmdNameOverlayFollowup(root, args)
+	case "name-overlay-trace":
+		return cmdNameOverlayTrace(root, args)
+	case "name-overlay-io":
+		return cmdNameOverlayIO(root, args)
+	case "name-overlay-transfer":
+		return cmdNameOverlayTransfer(root, args)
+	case "name-overlay-route":
+		return cmdNameOverlayRoute(root, args)
+	case "name-overlay-queue":
+		return cmdNameOverlayQueue(root, args)
+	case "name-source-export":
+		return cmdNameSourceExport(root, args)
+	case "name-overlay-dispatch":
+		return cmdNameOverlayDispatch(root, args)
+	case "name-geko-provenance":
+		return cmdNameGEKOProvenance(root, args)
 	case "name-xrefs":
 		return cmdNameXrefs(root, args)
 	case "name-ram-watch":
@@ -737,6 +778,9 @@ func menu(root string) error {
 		default:
 			return entry(root, action, nil)
 		}
+	}, &termui.BuildHooks{
+		Inspect: func() (termui.BuildTarget, error) { return inspectTUIBuild(root) },
+		Execute: func(b termui.BuildTarget, w io.Writer) error { return buildTUI(root, b, w) },
 	})
 }
 func main() {
