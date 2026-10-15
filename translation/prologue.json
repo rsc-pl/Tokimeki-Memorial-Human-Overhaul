@@ -18,12 +18,12 @@
         {
           "offset": "0x1b248",
           "original": "最高の気分だぜ。\n密かに想っている、\n藤崎詩織と同じ学校に\n入学できたんだから。",
-          "text": "I feel great!\nI got into the same\nschool as Fujisaki Shiori,\nmy secret crush."
+          "text": "This is amazing!\nI'm at the same school\nas Fujisaki Shiori,\nthe girl I secretly like."
         },
         {
           "offset": "0x1b298",
           "original": "実は…。\n彼女とは小学校からの\n幼なじみで、\n家も隣りどうしなんだけれど…。",
-          "text": "Truth is...\nShiori's my childhood\nfriend. She even lives\nnext door, but..."
+          "text": "Actually...\nWe've been friends since\nelementary school.\nWe live next door, but..."
         },
         {
           "offset": "0x1b2e4",
@@ -38,7 +38,7 @@
         {
           "offset": "0x1b348",
           "original": "あ、あぁ…。\n別に…。\n（なれなれしい奴だなぁ…。）",
-          "text": "Uh, oh...\nNothing...\n(Kind of a pushy guy...)"
+          "text": "Uh, yeah...\nNothing...\n(A bit too friendly...)"
         },
         {
           "offset": "0x1b37c",
@@ -73,17 +73,17 @@
         {
           "offset": "0x1b438",
           "original": "この僕の事を知らない者は\nいないと思うが…。\n僕が理事長の孫の\n伊集院レイだ。",
-          "text": "Surely you all know who\nI am, but...\nthe chairman's grandson,\nIjuin Rei."
+          "text": "You all know me,\nof course...\nI'm Ijuin Rei,\nthe chairman's grandson."
         },
         {
           "offset": "0x1b484",
           "original": "同じクラスの男性諸君には\n悪いが…。\nま、仲良くやって\nいこうじゃないか。",
-          "text": "My condolences to the\nother boys in this class...\nWell, let's try to\nget along."
+          "text": "Tough luck, boys.\nAnyway...\nLet's try to\nget along, shall we?"
         },
         {
           "offset": "0x1b4cc",
           "original": "伊集院って、\nあの金持ちのか…。\n嫌なクラスに\nなっちまったなぁ。",
-          "text": "Ijuin... you mean\nthat rich kid?\nMan, we got stuck in\na lousy class."
+          "text": "Ijuin? From that\nrich family?\nThis class is going\nto be a pain..."
         },
         {
           "offset": "0x1b50c",
@@ -118,7 +118,7 @@
         {
           "offset": "0x1b63c",
           "original": "あっ、今、お前の事見たぜ。\nあの娘知ってるのか？",
-          "text": "Hey, she just looked at you!\nDo you know her?"
+          "text": "Hey, she looked at you!\nDo you know her?"
         },
         {
           "offset": "0x1b66c",
@@ -163,12 +163,12 @@
         {
           "offset": "0x1b750",
           "original": "お、お前…。\nそのメモ帳、女の子の事\nばっかりじゃないか…。",
-          "text": "H-hey...\nThat notebook of yours\nis all about girls..."
+          "text": "H-hey...\nYour notebook's\nall about girls..."
         },
         {
           "offset": "0x1b78c",
           "original": "ま、女の子の事で、\n知りたいことがあったら、\n俺に連絡しな。\n力になるぜ。",
-          "text": "If you ever want to know\nanything about girls,\njust ask me.\nI'll help you out."
+          "text": "Got questions\nabout girls?\nGive me a call.\nI'll help you out."
         },
         {
           "offset": "0x1b7d4",
@@ -178,7 +178,7 @@
         {
           "offset": "0x1b7f0",
           "original": "それよりも。\nお前、この高校の\n伝説知ってるか？",
-          "text": "Anyway...\nhave you heard about\nthis school's legend?"
+          "text": "Anyway...\nHave you heard\nthis school's legend?"
         },
         {
           "offset": "0x1b820",
@@ -198,7 +198,7 @@
         {
           "offset": "0x1b86c",
           "original": "あの木の下で、\n女の子に告白されると、\n永遠に幸せな関係に\nなれるんだってよ。",
-          "text": "They say if a girl\nconfesses to you under\nthat tree, you'll be\nhappy together forever."
+          "text": "If a girl confesses\nto you under that tree,\nyou'll be happy\ntogether forever."
         },
         {
           "offset": "0x1b8b8",
@@ -208,7 +208,7 @@
         {
           "offset": "0x1b8d8",
           "original": "誰が言ったかしらねぇが、\nうらやましい話だな。",
-          "text": "Who knows who started it,\nbut I'm jealous."
+          "text": "Don't know who started it,\nbut it sounds nice."
         },
         {
           "offset": "0x1b908",
@@ -218,7 +218,7 @@
         {
           "offset": "0x1b928",
           "original": "こうして、不安と期待の\n高校生活が始まった…。",
-          "text": "And so began high school,\nfull of hope and worry..."
+          "text": "And so high school began,\nfull of hopes and fears..."
         }
       ]
     }

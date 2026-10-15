@@ -2,7 +2,10 @@
 
 package termui
 
-import "errors"
+import (
+	"errors"
+	"time"
+)
 
 type terminalState struct{}
 
@@ -12,3 +15,5 @@ func rawOn() (terminalState, error) {
 func rawOff(terminalState) error { return nil }
 func termSize() (int, int)       { return 92, 28 }
 func inputReady() bool           { return false }
+
+func waitInput(timeout time.Duration) bool { return false }

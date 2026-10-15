@@ -277,3 +277,108 @@ func TestWriteSectorPreflight(t *testing.T) {
 		t.Fatal("partial modification despite preflight failure")
 	}
 }
+
+// The retail image contains an ISO9660 *descriptor* for its separate audio
+// Track 2. Its extent lies beyond MODE2 Track 1; it must stay visible in the
+// listing, but must never be read from (or validated as part of) Track 1.
+func syntheticTrackWithExternalAudio(t *testing.T) []byte {
+	t.Helper()
+	raw := syntheticTrack(t)
+	root := make([]byte, DataSize)
+	copy(root, raw[20*SectorSize+DataOffset:20*SectorSize+DataOffset+DataSize])
+	at := 0
+	for at < len(root) && root[at] != 0 {
+		at += int(root[at])
+	}
+	pseudo := dirRecord([]byte("DADIR"), 22, DataSize, true)
+	copy(root[at:], pseudo)
+	copy(raw[20*SectorSize:21*SectorSize], sectorFixture(root))
+	sub := make([]byte, DataSize)
+	at = 0
+	for _, rec := range [][]byte{
+		dirRecord([]byte{0}, 22, DataSize, true),
+		dirRecord([]byte{1}, 20, DataSize, true),
+		dirRecord([]byte("TR02.DA;1"), 12000, 2352*150, false),
+	} {
+		copy(sub[at:], rec)
+		at += len(rec)
+	}
+	copy(raw[22*SectorSize:23*SectorSize], sectorFixture(sub))
+	return raw
+}
+
+func TestExternalAudioDirectoryEntry(t *testing.T) {
+	raw := syntheticTrackWithExternalAudio(t)
+	before := sha256.Sum256(raw)
+	// The actual retail entry is CDROM/DADIR/TR02.DA. A top-level DADIR
+	// descriptor must not bypass our strict data-track extent validation.
+	if _, err := OpenISO(bytes.NewReader(raw), 90); err == nil {
+		t.Fatal("unrelated top-level audio descriptor accepted outside data track")
+	}
+	if before != sha256.Sum256(raw) {
+		t.Fatal("read mutated original image")
+	}
+}
+
+func TestRetailAudioDescriptorOutsideDataTrack(t *testing.T) {
+	raw := syntheticTrackWithExternalAudio(t)
+	// Place DADIR underneath CDROM (the real retail hierarchy) by changing
+	// its ISO name at root and CDROM's child directory list.
+	root := make([]byte, DataSize)
+	at := 0
+	for _, rec := range [][]byte{
+		dirRecord([]byte{0}, 20, DataSize, true),
+		dirRecord([]byte{1}, 20, DataSize, true),
+		dirRecord([]byte("CDROM"), 21, DataSize, true),
+		dirRecord([]byte("SYSTEM.CNF;1"), 23, 2300, false),
+		dirRecord([]byte("VIDEO.STR;1"), 26, 1700, false),
+	} {
+		copy(root[at:], rec)
+		at += len(rec)
+	}
+	copy(raw[20*SectorSize:21*SectorSize], sectorFixture(root))
+	cdrom := make([]byte, DataSize)
+	at = 0
+	for _, rec := range [][]byte{
+		dirRecord([]byte{0}, 21, DataSize, true),
+		dirRecord([]byte{1}, 20, DataSize, true),
+		dirRecord([]byte("TEST.BIN;1"), 24, 7, false),
+		dirRecord([]byte("DADIR"), 22, DataSize, true),
+	} {
+		copy(cdrom[at:], rec)
+		at += len(rec)
+	}
+	sector := sectorFixture(nil)
+	copy(sector[0x10:], cdrom) // special /CDROM data offset
+	copy(raw[21*SectorSize:22*SectorSize], sector)
+	iso, err := OpenISO(bytes.NewReader(raw), 90)
+	if err != nil {
+		t.Fatal(err)
+	}
+	e, ok := iso.Entries["CDROM/DADIR/TR02.DA"]
+	if !ok || !IsExternalTrackAudio(e) {
+		t.Fatalf("external track descriptor missing %+v", e)
+	}
+	if e.LBA != 12000 {
+		t.Fatal("audio LBA should be a disc-wide LBA")
+	}
+	if err := ReadFileTo(bytes.NewReader(raw), iso.Sectors, e.LBA, e.Size, &bytes.Buffer{}); err == nil {
+		t.Fatal("out-of-data-track audio read must remain prohibited")
+	}
+	if _, err := OpenISO(bytes.NewReader(raw[:22*SectorSize]), 22); err == nil {
+		t.Fatal("truncated data track accepted")
+	}
+	// Reject unrelated bogus entries outside Track 1.
+	broken := append([]byte(nil), raw...)
+	d := make([]byte, DataSize)
+	copy(d, broken[22*SectorSize+DataOffset:22*SectorSize+DataOffset+DataSize])
+	idx := bytes.Index(d, []byte("TR02.DA;1"))
+	if idx < 0 {
+		t.Fatal("fixture missing audio name")
+	}
+	copy(d[idx:], []byte("BAD0.DA;1"))
+	copy(broken[22*SectorSize:23*SectorSize], sectorFixture(d))
+	if _, err := OpenISO(bytes.NewReader(broken), 90); err == nil {
+		t.Fatal("accepted unrelated bogus out-of-track file")
+	}
+}

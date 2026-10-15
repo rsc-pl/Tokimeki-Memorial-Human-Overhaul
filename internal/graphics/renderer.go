@@ -2,9 +2,10 @@ package graphics
 
 import (
 	"bytes"
-	"embed"
+
 	"fmt"
 	"hash/crc32"
+	"tokimemo/internal/mips"
 )
 
 const (
@@ -21,17 +22,32 @@ const (
 
 var originalSite = []byte{0x0b, 0x80, 0x09, 0x3c, 0x2c, 0x40, 0x29, 0x95}
 
-//go:embed renderer_hook.bin renderer_site.bin
-var rendererBlobs embed.FS
-
-// RendererBuild returns the preassembled PS1 hook bytes, with a native-Go font table.
-// The embedded MIPS code is checked against the Python assembler in tests.
+// RendererBuild assembles the original hook source in native Go and creates
+// the 5x12 English pair-font table. No preassembled binary is needed at runtime.
 func RendererBuild() (site, hook, narrow []byte, scratch uint32, err error) {
-	site, err = rendererBlobs.ReadFile("renderer_site.bin")
-	if err != nil {
+	symbols := map[string]int64{
+		"HOOK_RESUME": 0x8004F2D8, "LAYOUT_LOOP": 0x8004F294,
+		"RENDER_GLYPH": 0x8004F364, "NARROW": int64(narrowSource),
+		"SCRATCH": 0, "SCRATCH_INDEX": 0,
+	}
+	preliminary, e := mips.Assemble(hookAssembly, hookSource, symbols)
+	if e != nil {
+		err = fmt.Errorf("renderer first assembly: %w", e)
 		return
 	}
-	hook, err = rendererBlobs.ReadFile("renderer_hook.bin")
+	// Scratch must be aligned to the game's 18-byte font-glyph stride.
+	scratch = hookSource + uint32(len(preliminary))
+	for (int64(scratch)-0x800B6D50)%18 != 0 {
+		scratch++
+	}
+	symbols["SCRATCH"] = int64(scratch)
+	symbols["SCRATCH_INDEX"] = int64(uint32((int64(scratch) - 0x800B6D50) / 18))
+	hook, err = mips.Assemble(hookAssembly, hookSource, symbols)
+	if err != nil {
+		err = fmt.Errorf("renderer final assembly: %w", err)
+		return
+	}
+	site, err = mips.Assemble("j hook\nandi t0, v1, 0xffff", hookSite, map[string]int64{"hook": int64(hookSource)})
 	if err != nil {
 		return
 	}
@@ -39,8 +55,7 @@ func RendererBuild() (site, hook, narrow []byte, scratch uint32, err error) {
 	if err != nil {
 		return
 	}
-	scratch = scratchGlyph
-	if len(site) != len(originalSite) || len(hook) > hookSize || len(narrow) > narrowSize || scratchGlyph+18 > hookSource+hookSize {
+	if len(site) != len(originalSite) || len(hook) > hookSize || len(narrow) > narrowSize || scratch+18 > hookSource+hookSize {
 		err = fmt.Errorf("renderer patch exceeds reserved regions")
 	}
 	return
@@ -130,4 +145,65 @@ func GlyphOffset(exe []byte, code uint16) (int, error) {
 		return 0, fmt.Errorf("glyph %04x lies outside executable", code)
 	}
 	return off, nil
+}
+
+// RendererNameTail verifies the complete installed renderer hook and font, then
+// returns a detached copy of its 180-byte reserved tail. Callers MUST audit
+// ownership of any occupied bytes; this routine does not claim spare RAM.
+func RendererNameTail(patched []byte) (start int, tail []byte, err error) {
+	site, hook, font, scratch, e := RendererBuild()
+	if e != nil {
+		return 0, nil, e
+	}
+	if scratch != scratchGlyph {
+		return 0, nil, fmt.Errorf("unexpected renderer scratch")
+	}
+	src, e := region(patched, hookSite, len(site))
+	if e != nil {
+		return 0, nil, e
+	}
+	if !bytes.Equal(src, site) {
+		return 0, nil, fmt.Errorf("renderer site not installed as expected")
+	}
+	code, e := region(patched, hookSource, hookSize)
+	if e != nil {
+		return 0, nil, e
+	}
+	if !bytes.Equal(code[:len(hook)], hook) || !allZero(code[len(hook):int(scratch-hookSource)]) || !allZero(code[int(scratch-hookSource)+18:]) {
+		return 0, nil, fmt.Errorf("renderer hook reservation changed")
+	}
+	narrow, e := region(patched, narrowSource, narrowSize)
+	if e != nil {
+		return 0, nil, e
+	}
+	if !bytes.Equal(narrow[:len(font)], font) {
+		return 0, nil, fmt.Errorf("renderer font changed")
+	}
+	return int(narrowSource-exeBase) + len(font), append([]byte(nil), narrow[len(font):]...), nil
+}
+
+// ReservedNamePool returns the as-yet-unused trailing portion of the already
+// guarded renderer font reservation. The original renderer installation clears
+// the entire 948-byte region, and only the first 768 bytes contain font glyphs.
+// This is a candidate for EXE static string storage ONLY. It does not enlarge
+// runtime name-copy destinations or prove that longer names are safe in game.
+// It refuses an uninstalled, partially changed, or foreign renderer.
+func ReservedNamePool(patched []byte) (start int, before []byte, err error) {
+	start, before, err = RendererNameTail(patched)
+	if err != nil {
+		return 0, nil, err
+	}
+	if !allZero(before) {
+		return 0, nil, fmt.Errorf("renderer font tail is occupied")
+	}
+	return start, before, nil
+}
+
+func allZero(b []byte) bool {
+	for _, v := range b {
+		if v != 0 {
+			return false
+		}
+	}
+	return true
 }

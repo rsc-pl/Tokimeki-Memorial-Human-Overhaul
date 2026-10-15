@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/ps1"
+	"tokimemo/internal/ps1"
 )
 
 func isoRecord(name string, lba, size int, dir bool) []byte {

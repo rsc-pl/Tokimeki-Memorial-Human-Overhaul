@@ -414,7 +414,7 @@
         {
           "offset": "0x1790",
           "original": "一番くだらないわね。",
-          "text": "The most foolish of all."
+          "text": "That's the dumbest one."
         },
         {
           "offset": "0x17ac",
@@ -444,7 +444,7 @@
         {
           "offset": "0x1848",
           "original": "せっかくの科学を\nこんな非科学的なものに\n使うなんて。",
-          "text": "Wasting science\non something so\nunscientific."
+          "text": "All that science\nwasted on something\nso unscientific."
         },
         {
           "offset": "0x1884",
@@ -464,7 +464,7 @@
         {
           "offset": "0x18ec",
           "original": "一番くだらないわね。",
-          "text": "The most foolish of all."
+          "text": "That's the dumbest one."
         },
         {
           "offset": "0x1908",
@@ -494,7 +494,7 @@
         {
           "offset": "0x19a4",
           "original": "せっかくの科学を\nこんな非科学的なものに\n使うなんて。",
-          "text": "Wasting science\non something so\nunscientific."
+          "text": "All that science\nwasted on something\nso unscientific."
         },
         {
           "offset": "0x19e0",
@@ -514,7 +514,7 @@
         {
           "offset": "0x1a3c",
           "original": "一番くだらないわね。",
-          "text": "The most foolish of all."
+          "text": "That's the dumbest one."
         },
         {
           "offset": "0x1a58",
@@ -544,7 +544,7 @@
         {
           "offset": "0x1af4",
           "original": "せっかくの科学を\nこんな非科学的なものに\n使うなんて。",
-          "text": "Wasting science\non something so\nunscientific."
+          "text": "All that science\nwasted on something\nso unscientific."
         },
         {
           "offset": "0x1b30",
@@ -559,22 +559,22 @@
         {
           "offset": "0x1b88",
           "original": "くだらない上に…。\n来なければよかったわ。",
-          "text": "Foolish, and on top...\nI shouldn't have come."
+          "text": "What a stupid ride...\nI shouldn't have come."
         },
         {
           "offset": "0x1bc8",
           "original": "つまらない上に、\n更に追い討ちを\nかけるのね。",
-          "text": "It's dull, and now\nyou make it\neven worse."
+          "text": "It's bad enough already.\nDo you have to\nmake it worse?"
         },
         {
           "offset": "0x1c0c",
           "original": "しかたないわね…。",
-          "text": "Very well..."
+          "text": "Oh, fine..."
         },
         {
           "offset": "0x1c34",
           "original": "しかたないわね…。",
-          "text": "Very well..."
+          "text": "Oh, fine..."
         },
         {
           "offset": "0x1c5c",
@@ -634,7 +634,7 @@
         {
           "offset": "0x250c",
           "original": "{P}\n今日は\nとっても楽しかったわ。\nグッバイ、さよなら。",
-          "text": "{P}\ntoday was\nso much fun.\nGoodbye, bye."
+          "text": "{P}\ntoday was\nso much fun.\nGoodbye, sayonara."
         },
         {
           "offset": "0x2548",
@@ -684,7 +684,7 @@
         {
           "offset": "0x2690",
           "original": "今日は、楽しかったわ。\nグッバイエブリバディ、\nさよなら。",
-          "text": "Today was fun.\nGoodbye, everybody,\nbye."
+          "text": "Today was fun.\nGoodbye, everybody!\nSayonara!"
         },
         {
           "offset": "0x26d0",
@@ -734,7 +734,7 @@
         {
           "offset": "0x280c",
           "original": "今日は、楽しかったわ。\nグッバイエブリバディ、\nさよなら。",
-          "text": "Today was fun.\nGoodbye, everybody,\nbye."
+          "text": "Today was fun.\nGoodbye, everybody!\nSayonara!"
         },
         {
           "offset": "0x285c",
@@ -784,7 +784,7 @@
         {
           "offset": "0x29c8",
           "original": "グッバイ、さよなら。",
-          "text": "Goodbye, see you."
+          "text": "Goodbye, sayonara."
         },
         {
           "offset": "0x30f0",
@@ -799,7 +799,7 @@
         {
           "offset": "0x3114",
           "original": "好きではないけど、\n乗ってあげるわ。",
-          "text": "I don't care for it,\nbut I'll ride."
+          "text": "I don't like it,\nbut I'll ride with you."
         },
         {
           "offset": "0x313c",
@@ -809,7 +809,7 @@
         {
           "offset": "0x315c",
           "original": "つきあってあげるわ。",
-          "text": "I'll keep you company."
+          "text": "Fine, I'll go with you."
         },
         {
           "offset": "0x3178",
@@ -819,7 +819,7 @@
         {
           "offset": "0x3198",
           "original": "つきあってあげるわ。",
-          "text": "I'll keep you company."
+          "text": "Fine, I'll go with you."
         },
         {
           "offset": "0x31b4",
@@ -829,7 +829,7 @@
         {
           "offset": "0x31d4",
           "original": "もうそんな歳でもないし…。\n悪いけど、一人で\n乗って下さるかしら。",
-          "text": "I'm too old for this...\nSorry, but would you\nride it alone?"
+          "text": "I'm too old for this...\nSorry, but could you\ngo on your own?"
         },
         {
           "offset": "0x321c",
@@ -839,7 +839,7 @@
         {
           "offset": "0x3234",
           "original": "{P}。\n今日は、\nなかなか楽しかったわ。\nまた誘ってくれてもいいわよ。\nそれじゃあ。",
-          "text": "{P}\ntoday was\nrather fun.\nYou may invite me again.\nFarewell."
+          "text": "{P}.\nI actually\nhad a good time today.\nYou can invite me again.\nSee you."
         },
         {
           "offset": "0x3288",
@@ -854,7 +854,7 @@
         {
           "offset": "0x32ac",
           "original": "好きではないけど、\n乗ってあげるわ。",
-          "text": "I don't care for it,\nbut I'll ride."
+          "text": "I don't like it,\nbut I'll ride with you."
         },
         {
           "offset": "0x32d4",
@@ -864,7 +864,7 @@
         {
           "offset": "0x32f4",
           "original": "つきあってあげるわ。",
-          "text": "I'll keep you company."
+          "text": "Fine, I'll go with you."
         },
         {
           "offset": "0x3310",
@@ -874,7 +874,7 @@
         {
           "offset": "0x3330",
           "original": "つきあってあげるわ。",
-          "text": "I'll keep you company."
+          "text": "Fine, I'll go with you."
         },
         {
           "offset": "0x334c",
@@ -884,7 +884,7 @@
         {
           "offset": "0x336c",
           "original": "もうそんな歳でもないし…。\n悪いけど、一人で\n乗って下さるかしら。",
-          "text": "I'm too old for this...\nSorry, but would you\nride it alone?"
+          "text": "I'm too old for this...\nSorry, but could you\ngo on your own?"
         },
         {
           "offset": "0x33b4",
@@ -894,7 +894,7 @@
         {
           "offset": "0x33cc",
           "original": "今日は\nなかなか楽しかったわ。\nまたね。",
-          "text": "Today was\nrather fun.\nUntil next time."
+          "text": "I had\nquite a nice time.\nSee you."
         },
         {
           "offset": "0x33f8",
@@ -904,7 +904,7 @@
         {
           "offset": "0x3410",
           "original": "好きではないけど、\n乗ってあげるわ。",
-          "text": "I don't care for it,\nbut I'll ride."
+          "text": "I don't like it,\nbut I'll ride with you."
         },
         {
           "offset": "0x3438",
@@ -914,7 +914,7 @@
         {
           "offset": "0x3458",
           "original": "つきあってあげるわ。",
-          "text": "I'll keep you company."
+          "text": "Fine, I'll go with you."
         },
         {
           "offset": "0x3474",
@@ -924,7 +924,7 @@
         {
           "offset": "0x3494",
           "original": "つきあってあげるわ。",
-          "text": "I'll keep you company."
+          "text": "Fine, I'll go with you."
         },
         {
           "offset": "0x34b0",
@@ -934,7 +934,7 @@
         {
           "offset": "0x34d0",
           "original": "もうそんな歳でもないし…。\n悪いけど、一人で\n乗って下さるかしら。",
-          "text": "I'm too old for this...\nSorry, but would you\nride it alone?"
+          "text": "I'm too old for this...\nSorry, but could you\ngo on your own?"
         },
         {
           "offset": "0x3518",
@@ -944,7 +944,7 @@
         {
           "offset": "0x3530",
           "original": "今日は\nなかなか楽しかったわ。\nまたね。",
-          "text": "Today was\nrather fun.\nUntil next time."
+          "text": "I had\nquite a nice time.\nSee you."
         },
         {
           "offset": "0x356c",
@@ -959,7 +959,7 @@
         {
           "offset": "0x35a8",
           "original": "‥‥‥‥。\nしかたないわね。",
-          "text": "......\nVery well."
+          "text": "......\nOh, fine..."
         },
         {
           "offset": "0x35c8",
@@ -969,12 +969,12 @@
         {
           "offset": "0x35ec",
           "original": "‥‥‥‥。\nしかたないわね。",
-          "text": "......\nVery well."
+          "text": "......\nOh, fine..."
         },
         {
           "offset": "0x360c",
           "original": "何か、疲れたわね。",
-          "text": "How tiring."
+          "text": "I'm exhausted."
         },
         {
           "offset": "0x3624",
@@ -989,7 +989,7 @@
         {
           "offset": "0x3664",
           "original": "今日は\nまあまあ面白かったわ。\nそれじゃ失礼するわ\n早乙女君。",
-          "text": "Today was\nfairly amusing.\nNow excuse me,\nSaotome-kun."
+          "text": "Today was\nrather amusing.\nI'll be going now,\nSaotome-kun."
         },
         {
           "offset": "0x36a4",
@@ -1014,7 +1014,7 @@
         {
           "offset": "0x3e5c",
           "original": "私、ちょっと\n苦手なんです…。",
-          "text": "I'm not very\ngood with this..."
+          "text": "This one makes me\na bit nervous..."
         },
         {
           "offset": "0x3e80",
@@ -1024,12 +1024,12 @@
         {
           "offset": "0x3e9c",
           "original": "これだけは乗れないので、\nすみませんけれども、\n一人で乗ってください。",
-          "text": "I can't ride this one.\nI'm sorry, but\nplease ride alone."
+          "text": "I can't ride this one.\nI'm sorry, but\nplease go on without me."
         },
         {
           "offset": "0x3ee8",
           "original": "もう少し、\n身体が強かったら\n良かったんですけど…。",
-          "text": "If only I\nwere a little\nstronger..."
+          "text": "If only I\nwere a little\nhealthier..."
         },
         {
           "offset": "0x3f20",
@@ -1064,7 +1064,7 @@
         {
           "offset": "0x3fe4",
           "original": "私、ちょっと\n苦手なんです…。",
-          "text": "I'm not very\ngood with this..."
+          "text": "This one makes me\na bit nervous..."
         },
         {
           "offset": "0x4008",
@@ -1074,12 +1074,12 @@
         {
           "offset": "0x4024",
           "original": "これだけは乗れないので、\nすみませんけれども、\n一人で乗ってください。",
-          "text": "I can't ride this one.\nI'm sorry, but\nplease ride alone."
+          "text": "I can't ride this one.\nI'm sorry, but\nplease go on without me."
         },
         {
           "offset": "0x4070",
           "original": "もう少し、\n身体が強かったら\n良かったんですけど…。",
-          "text": "If only I\nwere a little\nstronger..."
+          "text": "If only I\nwere a little\nhealthier..."
         },
         {
           "offset": "0x40a8",
@@ -1114,7 +1114,7 @@
         {
           "offset": "0x4168",
           "original": "私、ちょっと\n苦手なんです…。",
-          "text": "I'm not very\ngood with this..."
+          "text": "This one makes me\na bit nervous..."
         },
         {
           "offset": "0x418c",
@@ -1124,12 +1124,12 @@
         {
           "offset": "0x41a8",
           "original": "これだけは乗れないので、\nすみませんけれども、\n一人で乗ってください。",
-          "text": "I can't ride this one.\nI'm sorry, but\nplease ride alone."
+          "text": "I can't ride this one.\nI'm sorry, but\nplease go on without me."
         },
         {
           "offset": "0x41f4",
           "original": "もう少し、\n身体が強かったら\n良かったんですけど…。",
-          "text": "If only I\nwere a little\nstronger..."
+          "text": "If only I\nwere a little\nhealthier..."
         },
         {
           "offset": "0x422c",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x42e8",
           "original": "ただでさえ、\n苦手なのに…。",
-          "text": "And I don't like\nthis to begin with..."
+          "text": "It's hard enough\nfor me as it is..."
         },
         {
           "offset": "0x4308",
@@ -1204,7 +1204,7 @@
         {
           "offset": "0x4b28",
           "original": "のんびりしてて、\nいいですねぇ。",
-          "text": "It's so relaxing.\nHow nice."
+          "text": "It's nice to just\nrelax like this."
         },
         {
           "offset": "0x4b4c",
@@ -1244,7 +1244,7 @@
         {
           "offset": "0x4c10",
           "original": "{P}\n本日はありがとう\nございました。\nでは、失礼いたします。",
-          "text": "{P}\nthank you for\ntoday.\nI'll take my leave."
+          "text": "{P}\nthank you for\nsuch a lovely day.\nI should get going."
         },
         {
           "offset": "0x4c50",
@@ -1254,7 +1254,7 @@
         {
           "offset": "0x4c68",
           "original": "のんびりしてて、\nいいですねぇ。",
-          "text": "It's so relaxing.\nHow nice."
+          "text": "It's nice to just\nrelax like this."
         },
         {
           "offset": "0x4c8c",
@@ -1294,7 +1294,7 @@
         {
           "offset": "0x4d50",
           "original": "本日は、楽しかったですね。\nでは、失礼いたします。",
-          "text": "Today was such fun.\nI'll take my leave."
+          "text": "I had a lovely time.\nI should get going."
         },
         {
           "offset": "0x4d88",
@@ -1304,7 +1304,7 @@
         {
           "offset": "0x4d9c",
           "original": "のんびりしてて、\nいいですねぇ。",
-          "text": "It's so relaxing.\nHow nice."
+          "text": "It's nice to just\nrelax like this."
         },
         {
           "offset": "0x4dc0",
@@ -1344,57 +1344,57 @@
         {
           "offset": "0x4e84",
           "original": "本日は、楽しかったですね。\nでは、失礼いたします。",
-          "text": "Today was such fun.\nI'll take my leave."
+          "text": "I had a lovely time.\nI should get going."
         },
         {
           "offset": "0x4ecc",
           "original": "これに乗るのですね…。",
-          "text": "So we ride this..."
+          "text": "We're riding this...?"
         },
         {
           "offset": "0x4ee8",
           "original": "楽しく思いました…。",
-          "text": "I found it fun..."
+          "text": "I enjoyed that..."
         },
         {
           "offset": "0x4f04",
           "original": "これに乗るのですか…？",
-          "text": "We ride this...?"
+          "text": "We're riding this...?"
         },
         {
           "offset": "0x4f20",
           "original": "楽しく思いました…。",
-          "text": "I found it fun..."
+          "text": "I enjoyed that..."
         },
         {
           "offset": "0x4f3c",
           "original": "これに乗るのですか…？",
-          "text": "We ride this...?"
+          "text": "We're riding this...?"
         },
         {
           "offset": "0x4f58",
           "original": "楽しく思いました…。",
-          "text": "I found it fun..."
+          "text": "I enjoyed that..."
         },
         {
           "offset": "0x4f74",
           "original": "ここに入るのですか…？",
-          "text": "We go in here...?"
+          "text": "We're going in here...?"
         },
         {
           "offset": "0x4f90",
           "original": "楽しく思いました…。",
-          "text": "I found it fun..."
+          "text": "I enjoyed that..."
         },
         {
           "offset": "0x4fac",
           "original": "それでは、好雄さん。\n失礼いたします。",
-          "text": "Well then, Yoshio-san.\nI'll take my leave."
+          "text": "Well, Yoshio-san,\nI should get going."
         },
         {
           "offset": "0x4fd8",
           "original": "それでは、\n失礼いたします。",
-          "text": "Well then,\nI'll take my leave."
+          "text": "Well then,\nI should get going."
         },
         {
           "offset": "0x5704",
@@ -1729,22 +1729,22 @@
         {
           "offset": "0x658c",
           "original": "ちょっと、苦痛でした…。",
-          "text": "That was a little painful..."
+          "text": "That was... a bit rough."
         },
         {
           "offset": "0x65bc",
           "original": "ちょっと、苦痛でした…。",
-          "text": "That was a little painful..."
+          "text": "That was... a bit rough."
         },
         {
           "offset": "0x65ec",
           "original": "ちょっと、苦痛でした…。",
-          "text": "That was a little painful..."
+          "text": "That was... a bit rough."
         },
         {
           "offset": "0x661c",
           "original": "ちょっと、苦痛でした…。",
-          "text": "That was a little painful..."
+          "text": "That was... a bit rough."
         },
         {
           "offset": "0x663c",
@@ -1969,7 +1969,7 @@
         {
           "offset": "0x79e0",
           "original": "あっ、電話だ。\n珍しいな…。",
-          "text": "Oh, the phone.\nThat's rare..."
+          "text": "Oh, a phone call.\nThat's unusual..."
         },
         {
           "offset": "0x7a04",
@@ -1999,7 +1999,7 @@
         {
           "offset": "0x7ab4",
           "original": "まあ、いいじゃないか。\n待ってるからな。",
-          "text": "Come on, just come.\nI'll be waiting."
+          "text": "Just come, all right?\nI'll be waiting."
         },
         {
           "offset": "0x7af8",

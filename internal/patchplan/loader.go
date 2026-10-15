@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/graphics"
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/script"
+	"tokimemo/internal/graphics"
+	"tokimemo/internal/script"
 )
 
 // Batch holds patch operations in the same order as the legacy patcher.

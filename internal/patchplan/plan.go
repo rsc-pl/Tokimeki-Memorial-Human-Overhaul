@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/graphics"
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/ps1"
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/script"
+	"tokimemo/internal/graphics"
+	"tokimemo/internal/ps1"
+	"tokimemo/internal/script"
 )
 
 // Reader provides unmodified file bytes and never exposes writable storage.
@@ -40,9 +40,22 @@ type edit struct{ pristine, data []byte }
 // translation resource, disc or private configuration is ever written.
 // On error the caller receives no partial plan.
 func Plan(source Reader, batch Batch) (Result, error) {
+	result, _, err := plan(source, batch, false)
+	return result, err
+}
+
+// PlanBytes returns the same validated plan plus isolated, writable copies of
+// every planned file. Callers must check the original hashes and only write to
+// a separate staging image. Nothing in the input Reader is modified.
+func PlanBytes(source Reader, batch Batch) (Result, map[string][]byte, error) {
+	return plan(source, batch, true)
+}
+
+func plan(source Reader, batch Batch, withBytes bool) (Result, map[string][]byte, error) {
 	var result Result
+	var empty map[string][]byte
 	if source == nil {
-		return result, fmt.Errorf("missing source")
+		return result, nil, fmt.Errorf("missing source")
 	}
 	edits := map[string]*edit{}
 	order := []string{}
@@ -63,53 +76,53 @@ func Plan(source Reader, batch Batch) (Result, error) {
 	for _, p := range batch.Strings {
 		e, err := get(p.File)
 		if err != nil {
-			return result, err
+			return result, nil, err
 		}
 		if err = script.ApplyInPlaceString(e.data, p, pairs); err != nil {
-			return result, err
+			return result, nil, err
 		}
 	}
 	for _, p := range batch.Images {
 		e, err := get(p.File)
 		if err != nil {
-			return result, err
+			return result, nil, err
 		}
 		im, err := graphics.ReadIndexedFile(p.PNG)
 		if err != nil {
-			return result, fmt.Errorf("%s: %w", p.Source, err)
+			return result, nil, fmt.Errorf("%s: %w", p.Source, err)
 		}
 		updated, err := graphics.ApplyPatch(e.data, im, p.Patch)
 		if err != nil {
-			return result, fmt.Errorf("%s: %w", p.Source, err)
+			return result, nil, fmt.Errorf("%s: %w", p.Source, err)
 		}
 		e.data = updated
 	}
 	for _, p := range batch.Bytes {
 		e, err := get(p.File)
 		if err != nil {
-			return result, err
+			return result, nil, err
 		}
 		if err = script.ApplyBytesPatch(e.data, p); err != nil {
-			return result, err
+			return result, nil, err
 		}
 	}
 	for _, p := range batch.Dialogue {
 		e, err := get(p.File)
 		if err != nil {
-			return result, err
+			return result, nil, err
 		}
 		if _, err = script.ApplyDialogue(e.pristine, e.data, p, pairs); err != nil {
-			return result, err
+			return result, nil, err
 		}
 	}
 	if pairs.Used {
 		e, err := get("SLPM_86.053")
 		if err != nil {
-			return result, err
+			return result, nil, err
 		}
 		updated, err := graphics.InstallRenderer(e.data)
 		if err != nil {
-			return result, err
+			return result, nil, err
 		}
 		e.data = updated
 		result.RendererInstalled = true
@@ -119,10 +132,10 @@ func Plan(source Reader, batch Batch) (Result, error) {
 		checksum := ps1.TailChecksumValid(e.pristine)
 		if checksum {
 			if !bytes.Equal(e.pristine[len(e.pristine)-4:], e.data[len(e.data)-4:]) {
-				return Result{}, fmt.Errorf("%s: edit modified checksum trailer", path)
+				return Result{}, nil, fmt.Errorf("%s: edit modified checksum trailer", path)
 			}
 			if err := ps1.FixTailChecksum(e.data); err != nil {
-				return Result{}, err
+				return Result{}, nil, err
 			}
 		}
 		changed := 0
@@ -139,7 +152,13 @@ func Plan(source Reader, batch Batch) (Result, error) {
 	result.Images = len(batch.Images)
 	result.Bytes = len(batch.Bytes)
 	result.Blocks = len(batch.Dialogue)
-	return result, nil
+	if withBytes {
+		empty = make(map[string][]byte, len(edits))
+		for path, item := range edits {
+			empty[path] = append([]byte(nil), item.data...)
+		}
+	}
+	return result, empty, nil
 }
 func SortedFiles(r Result) []FileResult {
 	files := append([]FileResult(nil), r.Files...)

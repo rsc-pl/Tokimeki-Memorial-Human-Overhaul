@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/ps1"
+	"tokimemo/internal/ps1"
 )
 
 func openDiscISO(dataTrack string, sectors int64) (*os.File, *ps1.ISO, error) {
@@ -108,7 +108,7 @@ func nativeExtract(dataTrack string, sectors int64, target string) (int, error) 
 		if _, err = fmt.Fprintf(list, "%d\t%d\t%s%s\n", e.LBA, e.Size, e.Path, suffix); err != nil {
 			break
 		}
-		if e.IsDir || strings.HasSuffix(e.Path, ".STR") {
+		if e.IsDir || ps1.IsExternalTrackAudio(e) || strings.HasSuffix(e.Path, ".STR") {
 			continue
 		}
 		dest := filepath.Join(stage, filepath.FromSlash(e.Path))

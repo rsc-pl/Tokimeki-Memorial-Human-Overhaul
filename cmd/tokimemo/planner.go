@@ -15,7 +15,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/script"
+	"tokimemo/internal/script"
 )
 
 // The corpus probes deliberately use fake bytes and fake address tables. They

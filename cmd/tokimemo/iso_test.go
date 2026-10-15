@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/ps1"
+	"tokimemo/internal/ps1"
 )
 
 func isoTestRecord(name []byte, lba, size uint32, isDir bool) []byte {
@@ -194,5 +194,163 @@ func TestNativeImageCLI(t *testing.T) {
 	}
 	if err := cmdExtract(root, []string{"--game", cue, "--output", filepath.Join(link, "extract")}); err == nil {
 		t.Fatal("symlinked extraction output was accepted")
+	}
+}
+
+func fixtureCueWithAudioDescriptor(t *testing.T, dir string) (string, string) {
+	t.Helper()
+	cue, bin := fixtureCue(t, dir)
+	raw, err := os.ReadFile(bin)
+	if err != nil {
+		t.Fatal(err)
+	}
+	install := func(lba int, data []byte, quirky bool) {
+		sector := make([]byte, ps1.SectorSize)
+		sector[0xf] = 2
+		copy(sector[0x10:0x18], []byte{0, 0, 8, 0, 0, 0, 8, 0})
+		offset := ps1.DataOffset
+		if quirky {
+			offset = 0x10
+		}
+		copy(sector[offset:], data)
+		// The /CDROM special sector deliberately has overlapping subheader.
+		if err := ps1.RegenerateForm1(sector); err != nil {
+			t.Fatal(err)
+		}
+		copy(raw[lba*ps1.SectorSize:(lba+1)*ps1.SectorSize], sector)
+	}
+	root := make([]byte, ps1.DataSize)
+	at := 0
+	for _, r := range [][]byte{
+		isoTestRecord([]byte{0}, 20, ps1.DataSize, true),
+		isoTestRecord([]byte{1}, 20, ps1.DataSize, true),
+		isoTestRecord([]byte("HELLO.TXT;1"), 25, 14, false),
+		isoTestRecord([]byte("MOVIE.STR;1"), 26, 5, false),
+		isoTestRecord([]byte("CDROM"), 21, ps1.DataSize, true),
+	} {
+		copy(root[at:], r)
+		at += len(r)
+	}
+	install(20, root, false)
+	cdrom := make([]byte, ps1.DataSize)
+	at = 0
+	for _, r := range [][]byte{
+		isoTestRecord([]byte{0}, 21, ps1.DataSize, true),
+		isoTestRecord([]byte{1}, 20, ps1.DataSize, true),
+		isoTestRecord([]byte("DADIR"), 22, ps1.DataSize, true),
+	} {
+		copy(cdrom[at:], r)
+		at += len(r)
+	}
+	install(21, cdrom, true)
+	dadir := make([]byte, ps1.DataSize)
+	at = 0
+	for _, r := range [][]byte{
+		isoTestRecord([]byte{0}, 22, ps1.DataSize, true),
+		isoTestRecord([]byte{1}, 21, ps1.DataSize, true),
+		isoTestRecord([]byte("TR02.DA;1"), 9000, 2352*150, false),
+	} {
+		copy(dadir[at:], r)
+		at += len(r)
+	}
+	install(22, dadir, false)
+	if err := os.WriteFile(bin, raw, 0600); err != nil {
+		t.Fatal(err)
+	}
+	audio := filepath.Join(dir, "audio.bin")
+	if err := os.WriteFile(audio, bytes.Repeat([]byte{0x5a}, 150*ps1.SectorSize), 0600); err != nil {
+		t.Fatal(err)
+	}
+	cueText := "FILE \"synthetic.bin\" BINARY\n  TRACK 01 MODE2/2352\n    INDEX 01 00:00:00\nFILE \"audio.bin\" BINARY\n  TRACK 02 AUDIO\n    FLAGS DCP\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\n"
+	if err := os.WriteFile(cue, []byte(cueText), 0600); err != nil {
+		t.Fatal(err)
+	}
+	return cue, bin
+}
+
+func TestAudioDescriptorNativeExtractionPythonParity(t *testing.T) {
+	tmp := t.TempDir()
+	cue, bin := fixtureCueWithAudioDescriptor(t, filepath.Join(tmp, "disc"))
+	before, err := os.ReadFile(bin)
+	if err != nil {
+		t.Fatal(err)
+	}
+	f, err := os.Open(bin)
+	if err != nil {
+		t.Fatal(err)
+	}
+	iso, err := ps1.OpenISO(f, 40)
+	f.Close()
+	if err != nil {
+		t.Fatal(err)
+	}
+	entry, found := iso.Entries["CDROM/DADIR/TR02.DA"]
+	if !found || !ps1.IsExternalTrackAudio(entry) {
+		t.Fatal("audio descriptor missing")
+	}
+	out := filepath.Join(tmp, "go")
+	count, err := nativeExtract(bin, 40, out)
+	if err != nil || count != 1 {
+		t.Fatalf("native extraction count %d: %v", count, err)
+	}
+	if _, err := os.Stat(filepath.Join(out, "CDROM", "DADIR", "TR02.DA")); !os.IsNotExist(err) {
+		t.Fatal("tried to extract external audio from Track 1")
+	}
+	if !bytes.Equal(before, mustRead(t, bin)) {
+		t.Fatal("source image mutated")
+	}
+	py, err := exec.LookPath("python3")
+	if err != nil {
+		t.Skip("Python not available for parity test")
+	}
+	repo, err := filepath.Abs("../..")
+	if err != nil {
+		t.Fatal(err)
+	}
+	reference := filepath.Join(tmp, "python")
+	cmd := exec.Command(py, filepath.Join(repo, "legacy_scripts", "tools", "extract.py"), cue, reference)
+	cmd.Env = append(os.Environ(), "PYTHONPATH="+filepath.Join(repo, "legacy_scripts"), "PYTHONDONTWRITEBYTECODE=1")
+	if output, err := cmd.CombinedOutput(); err != nil {
+		t.Fatalf("Python failed: %v: %s", err, output)
+	}
+	for _, file := range []string{"files.tsv", "HELLO.TXT"} {
+		a, b := mustRead(t, filepath.Join(out, file)), mustRead(t, filepath.Join(reference, file))
+		if !bytes.Equal(a, b) {
+			t.Fatalf("different extracted %s, Go %q Python %q", file, a, b)
+		}
+	}
+}
+func mustRead(t *testing.T, p string) []byte {
+	t.Helper()
+	b, err := os.ReadFile(p)
+	if err != nil {
+		t.Fatal(err)
+	}
+	return b
+}
+
+func TestNameXrefsAudioDescriptorDoesNotBlockISO(t *testing.T) {
+	dir := t.TempDir()
+	cue, bin := fixtureCueWithAudioDescriptor(t, dir)
+	data := mustRead(t, bin)
+	// Add the expected EXE entry so name-xrefs reaches its mandatory
+	// cryptographic revision check, rather than failing during ISO parsing.
+	s := append([]byte(nil), data[20*ps1.SectorSize:21*ps1.SectorSize]...)
+	records := s[ps1.DataOffset : ps1.DataOffset+ps1.DataSize]
+	at := 0
+	for at < len(records) && records[at] != 0 {
+		at += int(records[at])
+	}
+	copy(records[at:], isoTestRecord([]byte("SLPM_86.053;1"), 27, 16, false))
+	if err := ps1.RegenerateForm1(s); err != nil {
+		t.Fatal(err)
+	}
+	copy(data[20*ps1.SectorSize:21*ps1.SectorSize], s)
+	if err := os.WriteFile(bin, data, 0600); err != nil {
+		t.Fatal(err)
+	}
+	err := cmdNameXrefs(dir, []string{"--game", cue})
+	if err == nil || !strings.Contains(err.Error(), "does not match verified original N10 revision") {
+		t.Fatalf("expected revision check after ISO traversal, got: %v", err)
 	}
 }

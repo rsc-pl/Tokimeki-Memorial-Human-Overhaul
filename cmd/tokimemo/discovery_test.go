@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/config"
+	"tokimemo/internal/config"
 	"os"
 	"path/filepath"
 	"testing"

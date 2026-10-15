@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/config"
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/termui"
+	"tokimemo/internal/config"
+	"tokimemo/internal/termui"
 )
 
 const (
@@ -564,10 +564,22 @@ func usage() {
 	fmt.Println("  tokimemo codec-check      Check encoding/structure; --compare-python for full parity")
 	fmt.Println("  tokimemo planner-check    Simulate Go dialogue relocation; --compare-python for parity")
 	fmt.Println("  tokimemo graphics-check   Validate indexed PNG and 4/8bpp edits; --compare-python for parity")
+	fmt.Println("  tokimemo renderer-check   Check native MIPS hook/font; --compare-python runs CPU simulation")
 	fmt.Println("  tokimemo native-plan      Read-only full-file Go patch plan; --compare-python for hash parity")
+	fmt.Println("  tokimemo name-tables      Read-only N10 surname capacity and pointer audit")
+	fmt.Println("  tokimemo name-label-bounds  Inspect N10 R07 label sources and candidate B byte limits (read-only)")
+	fmt.Println("  tokimemo name-stage       PRIVATE experimental EXE-only N10 staging; never changes build")
+	fmt.Println("  tokimemo name-xrefs       Read-only original EXE/GEKO RAM-reference census")
+	fmt.Println("  tokimemo name-ram-watch   Passive DuckStation N10 RAM snapshots (no writes)\n  tokimemo name-ram-review  Offline review of a saved N10 RAM report")
+	fmt.Println("  tokimemo name-buffer-stage  PRIVATE unbootable N10 A/B experimental byte candidates")
+	fmt.Println("  tokimemo cue-audit       Verify a safe two-track CUE layout for native builds")
+	fmt.Println("  tokimemo native-build     EXPERIMENTAL Go CUE/BIN builder; requires --experimental")
+	fmt.Println("  tokimemo native-verify    Compare two finished CUE/BIN images; optional original-sector audit")
 	fmt.Println("  tokimemo sectors [CUE]    Verify raw-sector EDC/ECC (read-only)")
 	fmt.Println("  tokimemo extract [CUE]    Native Go extraction (--python for legacy)")
 	fmt.Println("  tokimemo emulator [CUE]   Launch DuckStation")
+	fmt.Println("  tokimemo emulator-probe    Read PS1 state/RAM using DuckStation GDB stub (read-only)")
+	fmt.Println("  tokimemo screen-check      Detect title screen in a DuckStation PNG (read-only)")
 	fmt.Println("  tokimemo test             Go + inherited Python regression suites")
 	fmt.Println("  tokimemo legacy FILE.py   Run historic Python utility")
 }
@@ -642,8 +654,30 @@ func entry(root, cmd string, args []string) error {
 		return cmdPlannerCheck(root, args)
 	case "graphics-check":
 		return cmdGraphicsCheck(root, args)
+	case "renderer-check":
+		return cmdRendererCheck(root, args)
 	case "native-plan":
 		return cmdNativePlan(root, args)
+	case "name-tables":
+		return cmdNameTables(root, args)
+	case "name-label-bounds":
+		return cmdNameLabelBounds(root, args)
+	case "name-stage":
+		return cmdNameStage(root, args)
+	case "name-xrefs":
+		return cmdNameXrefs(root, args)
+	case "name-ram-watch":
+		return cmdNameRAMWatch(root, args)
+	case "name-ram-review":
+		return cmdNameRAMReview(root, args)
+	case "name-buffer-stage":
+		return cmdNameBufferStage(root, args)
+	case "cue-audit":
+		return cmdCueAudit(root, args)
+	case "native-build":
+		return cmdNativeBuild(root, args)
+	case "native-verify":
+		return cmdNativeVerify(root, args)
 	case "inspect":
 		if len(args) > 1 {
 			return errors.New("usage: tokimemo inspect [GAME.cue]")
@@ -675,6 +709,10 @@ func entry(root, cmd string, args []string) error {
 		return cmdLegacy(root, args)
 	case "emulator":
 		return launchEmulator(root, args)
+	case "emulator-probe":
+		return cmdEmulatorProbe(args)
+	case "screen-check":
+		return cmdScreenCheck(args)
 	default:
 		usage()
 		return fmt.Errorf("unknown command %q", cmd)
@@ -694,6 +732,8 @@ func menu(root string) error {
 			return termui.ChooseDirectory(root, func(p string) error { return config.SetOutput(root, p) })
 		case "view_settings":
 			return cmdConfig(root, nil)
+		case "emulator_probe_state":
+			return cmdEmulatorProbe([]string{"--state"})
 		default:
 			return entry(root, action, nil)
 		}
@@ -710,7 +750,13 @@ func main() {
 	} else {
 		start := time.Now()
 		e = entry(root, os.Args[1], os.Args[2:])
-		if e == nil && os.Args[1] != "help" && os.Args[1] != "--help" && os.Args[1] != "-h" {
+		jsonResult := false
+		for _, arg := range os.Args[2:] {
+			if arg == "--json" || strings.HasPrefix(arg, "--json=") {
+				jsonResult = true
+			}
+		}
+		if e == nil && !jsonResult && os.Args[1] != "help" && os.Args[1] != "--help" && os.Args[1] != "-h" {
 			success(fmt.Sprintf("%s completed in %.1fs", os.Args[1], time.Since(start).Seconds()))
 		}
 	}

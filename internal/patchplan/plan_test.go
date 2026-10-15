@@ -2,8 +2,10 @@ package patchplan
 
 import (
 	"bytes"
+	"crypto/sha256"
 	"encoding/base64"
 	"encoding/json"
+	"fmt"
 	"hash/crc32"
 	"os"
 	"os/exec"
@@ -12,8 +14,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/graphics"
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/ps1"
+	"tokimemo/internal/graphics"
+	"tokimemo/internal/ps1"
 )
 
 type memorySource map[string][]byte
@@ -136,3 +138,27 @@ func TestTranslationPNGTraversalRejected(t *testing.T) {
 		t.Fatal("expected traversal rejection")
 	}
 }
+
+func TestPlanBytesIsolatedAndSameReport(t *testing.T) {
+	_, source, batch := createFixture(t)
+	old := append([]byte(nil), source["FIRST.BIN"]...)
+	expected, err := Plan(source, batch)
+	if err != nil {
+		t.Fatal(err)
+	}
+	result, buffers, err := PlanBytes(source, batch)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !reflect.DeepEqual(result, expected) {
+		t.Fatal("PlanBytes metadata differs from read-only Plan")
+	}
+	if result.Files[0].PatchedSHA256 != sha256String(buffers["FIRST.BIN"]) {
+		t.Fatal("planned bytes SHA mismatch")
+	}
+	buffers["FIRST.BIN"][0] ^= 0xff
+	if !bytes.Equal(source["FIRST.BIN"], old) {
+		t.Fatal("exposed source was changed")
+	}
+}
+func sha256String(b []byte) string { s := sha256.Sum256(b); return fmt.Sprintf("%x", s[:]) }

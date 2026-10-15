@@ -14,7 +14,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/script"
+	"tokimemo/internal/script"
 )
 
 type codecRow struct {

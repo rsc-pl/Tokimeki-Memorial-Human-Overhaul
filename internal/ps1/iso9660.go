@@ -20,6 +20,21 @@ const maxDirectoryBytes = 32 << 20
 const maxEntries = 100000
 const maxDepth = 64
 
+// IsExternalTrackAudio reports the ISO9660 audio-track directory descriptors.
+// The game lists Track 2 audio under CDROM/DADIR, but its sectors live in a
+// separate CUE BIN, not in the MODE2 data track. Such records are metadata, not
+// readable files in the data track. Never use their LBAs with ReadFileTo.
+func IsExternalTrackAudio(e ISOEntry) bool {
+	if e.IsDir || !strings.HasPrefix(e.Path, "CDROM/DADIR/TR") || !strings.HasSuffix(e.Path, ".DA") {
+		return false
+	}
+	name := strings.TrimSuffix(strings.TrimPrefix(e.Path, "CDROM/DADIR/TR"), ".DA")
+	if len(name) != 2 || name[0] < '0' || name[0] > '9' || name[1] < '0' || name[1] > '9' {
+		return false
+	}
+	return name != "00" && name != "01" // Track 1 is the MODE2 data track
+}
+
 type ISOEntry struct {
 	Path  string
 	LBA   int64
@@ -175,7 +190,12 @@ func OpenISO(r io.ReaderAt, sectors int64) (*ISO, error) {
 			}
 			n := (e.Size + DataSize - 1) / DataSize
 			if e.LBA > sectors || n > sectors-e.LBA {
-				return fmt.Errorf("ISO9660 entry %s points outside data track", e.Path)
+				// The game describes audio tracks in DADIR using disc-wide
+				// LBAs. Keep the directory listing intact for Python parity,
+				// but never read an external track through this data reader.
+				if !IsExternalTrackAudio(e) {
+					return fmt.Errorf("ISO9660 entry %s points outside data track", e.Path)
+				}
 			}
 			result.Entries[e.Path] = e
 			result.order = append(result.order, e)

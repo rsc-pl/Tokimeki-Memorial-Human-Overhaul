@@ -5,6 +5,7 @@ package termui
 import (
 	"os"
 	"syscall"
+	"time"
 	"unsafe"
 )
 
@@ -54,5 +55,17 @@ func inputReady() bool {
 	set.Bits[fd/64] |= 1 << uint(fd%64)
 	timeout := syscall.Timeval{Sec: 0, Usec: 80000}
 	n, err := syscall.Select(fd+1, &set, nil, nil, &timeout)
+	return err == nil && n > 0
+}
+
+func waitInput(timeout time.Duration) bool {
+	fd := int(os.Stdin.Fd())
+	if fd < 0 || fd >= 1024 {
+		return false
+	}
+	var set syscall.FdSet
+	set.Bits[fd/64] |= 1 << uint(fd%64)
+	tv := syscall.NsecToTimeval(timeout.Nanoseconds())
+	n, err := syscall.Select(fd+1, &set, nil, nil, &tv)
 	return err == nil && n > 0
 }

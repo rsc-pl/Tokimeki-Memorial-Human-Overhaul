@@ -14,7 +14,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/graphics"
+	"tokimemo/internal/graphics"
 )
 
 type imageProbe struct {

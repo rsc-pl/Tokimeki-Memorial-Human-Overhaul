@@ -9,12 +9,12 @@
         {
           "offset": "0x0",
           "original": "今日は、文化祭だ。",
-          "text": "Festival day!"
+          "text": "It's the school festival!"
         },
         {
           "offset": "0x18",
           "original": "さてと、これから\nどうしようかな。",
-          "text": "Well now,\nwhat should I do?"
+          "text": "All right,\nwhat should I do first?"
         },
         {
           "offset": "0x3c",
@@ -39,7 +39,7 @@
         {
           "offset": "0xcc",
           "original": "さすがに{G}を\n誘うことはできないな…。\n別の人にしよう。",
-          "text": "To invite {G}\nis too much...\nI'll ask someone else."
+          "text": "I can't ask {G}.\nI'd better\ninvite someone else."
         },
         {
           "offset": "0x108",
@@ -89,32 +89,32 @@
         {
           "offset": "0x268",
           "original": "よし、文芸部に\n行こう。",
-          "text": "Okay, to\nLiterature."
+          "text": "I'll check out\nthe Literature Club."
         },
         {
           "offset": "0x284",
           "original": "よし、演劇部に\n行こう。",
-          "text": "Okay, to\nDrama."
+          "text": "I'll check out\nthe Drama Club."
         },
         {
           "offset": "0x2a0",
           "original": "よし、科学部に\n行こう。",
-          "text": "Okay, to\nScience."
+          "text": "I'll check out\nthe Science Club."
         },
         {
           "offset": "0x2bc",
           "original": "よし、電脳部に\n行こう。",
-          "text": "Okay, to\nComputers."
+          "text": "I'll check out\nthe Computer Club."
         },
         {
           "offset": "0x2d8",
           "original": "よし、美術部に\n行こう。",
-          "text": "Okay, to\nArt."
+          "text": "I'll check out\nthe Art Club."
         },
         {
           "offset": "0x2f4",
           "original": "よし、吹奏楽部に\n行こう。",
-          "text": "Okay, to\nthe band."
+          "text": "I'll check out\nthe band."
         },
         {
           "offset": "0x314",
@@ -149,7 +149,7 @@
         {
           "offset": "0x494",
           "original": "科学部は、展示室で\n公開薬品調合実験だ。\n早く、準備しなきゃ。",
-          "text": "Science mixes\nchemicals live.\nBetter get ready."
+          "text": "The Science Club's holding\na live chemistry demo.\nBetter get ready."
         },
         {
           "offset": "0x4d8",
@@ -164,37 +164,37 @@
         {
           "offset": "0x564",
           "original": "電脳部は、展示室で\nパソコン占いだ。\n早く、準備しなきゃ。",
-          "text": "Computers does\nPC fortunes.\nBetter get ready."
+          "text": "Computer Club's doing\na fortune-telling demo.\nBetter get ready."
         },
         {
           "offset": "0x5a4",
           "original": "電脳部は、ゲームの展示だ。\n早く、準備しなきゃ。",
-          "text": "Computers: games.\nBetter get ready."
+          "text": "Game exhibit today.\nBetter get ready."
         },
         {
           "offset": "0x5d8",
           "original": "電脳部は、展示室で\nハッキング実演だ。\n早く、準備しなきゃ。",
-          "text": "Computers does\na hacking demo.\nBetter get ready."
+          "text": "Computer Club's doing\na live hacking demo.\nBetter get ready."
         },
         {
           "offset": "0x618",
           "original": "美術部は、展示室で\n似顔絵描きだ。\n早く、準備しなきゃ。",
-          "text": "Art draws\nportraits.\nBetter get ready."
+          "text": "Art Club's offering\nportrait sketches.\nBetter get ready."
         },
         {
           "offset": "0x654",
           "original": "美術部は、展示室で\n公開デッサンだ。\n早く、準備しなきゃ。",
-          "text": "Art sketches\nlive.\nBetter get ready."
+          "text": "Art Club's doing\nlive sketching.\nBetter get ready."
         },
         {
           "offset": "0x694",
           "original": "美術部は、油絵の展示だ。\n早く、準備しなきゃ。",
-          "text": "Art: oil paintings.\nBetter get ready."
+          "text": "Oil painting exhibit.\nBetter get ready."
         },
         {
           "offset": "0x6c8",
           "original": "吹奏楽部は、体育館で\nゲーム音楽の演奏だ。\n早く、準備しなきゃ。",
-          "text": "Band plays game\nmusic in the gym.\nBetter get ready."
+          "text": "The band is playing\ngame music in the gym.\nBetter get ready."
         },
         {
           "offset": "0x70c",
@@ -204,7 +204,7 @@
         {
           "offset": "0x750",
           "original": "吹奏楽部は、体育館で\nクラシック音楽の演奏だ。\n早く、準備しなきゃ。",
-          "text": "Band plays classical\nin the gym.\nBetter get ready."
+          "text": "The band's in the gym,\nplaying classical music.\nBetter get ready."
         },
         {
           "offset": "0x798",
@@ -229,7 +229,7 @@
         {
           "offset": "0x874",
           "original": "初めての舞台だ。\nあぁ、緊張するなぁ。\nセリフは大丈夫かな…。",
-          "text": "My first stage.\nMan, I'm nervous.\nDo I know my lines?"
+          "text": "My first time on stage.\nMan, I'm nervous.\nHope I remember my lines."
         },
         {
           "offset": "0x8f0",
@@ -264,7 +264,7 @@
         {
           "offset": "0xa34",
           "original": "美術部員て、\nこういうとき得だよな。",
-          "text": "Art Club perks\nat a time like this."
+          "text": "It sure pays to be\nin the Art Club right now."
         },
         {
           "offset": "0xa5c",
@@ -499,12 +499,12 @@
         {
           "offset": "0x12a8",
           "original": "いい曲だったな。",
-          "text": "Nice piece."
+          "text": "That was a good tune."
         },
         {
           "offset": "0x12c0",
           "original": "変な曲だったな。",
-          "text": "Weird piece."
+          "text": "That was a strange tune."
         },
         {
           "offset": "0x12d8",
@@ -521,7 +521,7 @@
         {
           "offset": "0x0",
           "original": "あっ、今日は{G}の\n誕生日じゃないか。",
-          "text": "Oh! Today's for {G}\nher birthday!"
+          "text": "Oh, it's {G}'s\nbirthday today!"
         },
         {
           "offset": "0x24",
@@ -606,7 +606,7 @@
         {
           "offset": "0x294",
           "original": "待ったぁ。\nごめんね、\n遅くなっちゃって。",
-          "text": "Did you wait?\nSorry\nfor being late."
+          "text": "Been waiting long?\nSorry!\nI'm a little late."
         },
         {
           "offset": "0x2c4",
@@ -646,7 +646,7 @@
         {
           "offset": "0x36c",
           "original": "忙しいのに、ごめん。",
-          "text": "Sorry, you're busy."
+          "text": "Sorry, I know you're busy."
         },
         {
           "offset": "0x388",
@@ -741,7 +741,7 @@
         {
           "offset": "0x65c",
           "original": "今日は{G}も誕生日だ。\nプレゼントを用意して\nおいたんだ。",
-          "text": "Today's for {G}\ntoo: her birthday.\nI got her a present."
+          "text": "It's {G}'s\nbirthday too.\nI brought a present."
         },
         {
           "offset": "0x694",
@@ -751,17 +751,17 @@
         {
           "offset": "0x6c0",
           "original": "すいません、\nもう展示終りなんですけど。\n…なんだ、{G}じゃないか。\n忘れものか？",
-          "text": "Sorry,\nthe exhibit's closed.\n...Oh, it's {G}\nForget something?"
+          "text": "Sorry,\nthe exhibit's over now.\n...Oh, {G}!\nForget something?"
         },
         {
           "offset": "0x710",
           "original": "うん…。",
-          "text": "No..."
+          "text": "Yeah..."
         },
         {
           "offset": "0x71c",
           "original": "しょうがないな、\n何を忘れたの？\n一緒に…",
-          "text": "Oh, okay,\nwhat'd you forget?\nI'll help..."
+          "text": "Well, okay.\nWhat'd you leave behind?\nI'll help you look..."
         },
         {
           "offset": "0x748",
@@ -796,7 +796,7 @@
         {
           "offset": "0x810",
           "original": "{G}だって、\n今日誕生日でしょう？\nはい、プレゼント。",
-          "text": "{G}\nit's your birthday too.\nHere, a present."
+          "text": "{G}, isn't it\nyour birthday today too?\nHere, a present."
         },
         {
           "offset": "0x844",
@@ -831,12 +831,12 @@
         {
           "offset": "0x93c",
           "original": "今日は{G}の誕生日だ。\nプレゼントを用意して\nおいたんだ。",
-          "text": "Today's for {G}\nit's her birthday.\nI got her a present."
+          "text": "It's {G}'s birthday.\nI made sure\nto bring a present."
         },
         {
           "offset": "0x978",
           "original": "今日は{G}も誕生日だ。\nプレゼントを用意して\nおいたんだ。",
-          "text": "Today's for {G}\ntoo: her birthday.\nI got her a present."
+          "text": "It's {G}'s\nbirthday too.\nI brought a present."
         },
         {
           "offset": "0x9b4",
@@ -846,12 +846,12 @@
         {
           "offset": "0x9d0",
           "original": "あれ、{G}が\n戻ってきたぞ。\n忘れものかな？",
-          "text": "Oh, {G}\ncame back.\nForget something?"
+          "text": "Huh, {G}\ncame back.\nDid she forget something?"
         },
         {
           "offset": "0x9f8",
           "original": "{G}、どうしたの？",
-          "text": "Huh? It's {G}"
+          "text": "{G}, what's wrong?"
         },
         {
           "offset": "0x1484",
@@ -930,12 +930,12 @@
         {
           "offset": "0x0",
           "original": "誰とのことを\n占おうかな。",
-          "text": "Who should I get\na reading on?"
+          "text": "Who am I\ncompatible with?"
         },
         {
           "offset": "0x20",
           "original": "それじゃ、\n{G}との\n相性だな。",
-          "text": "Okay, me and\n{G}\ncompatibility."
+          "text": "Okay,\n{G} and me.\nLet's see."
         },
         {
           "offset": "0x40",

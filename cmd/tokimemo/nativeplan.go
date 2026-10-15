@@ -12,8 +12,8 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/patchplan"
-	"github.com/rsc-pl/Tokimeki-Memorial-Human-Overhaul/internal/ps1"
+	"tokimemo/internal/patchplan"
+	"tokimemo/internal/ps1"
 )
 
 type isoSource struct{ iso *ps1.ISO }
