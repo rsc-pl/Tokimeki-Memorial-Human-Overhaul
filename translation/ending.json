@@ -54,7 +54,7 @@
         {
           "offset": "0x22c",
           "original": "言いたいことって、何？",
-          "text": "Something to say?"
+          "text": "What is it?"
         },
         {
           "offset": "0x244",
@@ -94,7 +94,7 @@
         {
           "offset": "0x3dc",
           "original": "もう、あなただけいてくれたら、\n何もいらない。\n流行なんて、どうでもいい。",
-          "text": "If I just have you,\nI don't need anything.\nWho cares about trends."
+          "text": "If I just have you,\nI don't need anything.\nWho cares about trends?"
         },
         {
           "offset": "0x428",
@@ -134,7 +134,7 @@
         {
           "offset": "0x534",
           "original": "全然変わらないけど、\nま、いいか。",
-          "text": "She hasn't changed\na bit, but whatever."
+          "text": "She hasn't changed,\nbut I don't mind."
         },
         {
           "offset": "0x7fc",
@@ -149,7 +149,7 @@
         {
           "offset": "0x86c",
           "original": "言いたいことって、何？",
-          "text": "Something to say?"
+          "text": "What is it?"
         },
         {
           "offset": "0x884",
@@ -189,7 +189,7 @@
         {
           "offset": "0x9dc",
           "original": "ううん、きっとあなたに\n私の本心を悟られるのが怖くて、\nそう思い込んでいたのかもしれない。",
-          "text": "No... maybe I was\nafraid you'd see my heart,\nso I told myself that."
+          "text": "No... maybe I told myself\nthat because I was afraid\nyou'd see how I felt."
         },
         {
           "offset": "0xa38",
@@ -359,7 +359,7 @@
         {
           "offset": "0x1380",
           "original": "ほ、本当に…？\nじゃあ、野望は達成されたのね…。",
-          "text": "R-really...?\nThen my ambition is won..."
+          "text": "R-really...?\nMy ambition's fulfilled..."
         },
         {
           "offset": "0x13b0",
@@ -499,7 +499,7 @@
         {
           "offset": "0x1c18",
           "original": "明日からはそうなれるけど、\n卒業する前に、\n本当の私を見て欲しかったから…。",
-          "text": "I can be, from tomorrow,\nbut before graduating,\nI wanted you to see me..."
+          "text": "Tomorrow I can be myself,\nbut before graduation,\nI wanted you to know me."
         },
         {
           "offset": "0x1c64",
@@ -524,7 +524,7 @@
         {
           "offset": "0x1d4c",
           "original": "そこまで想ってくれて、\n断れる訳無いじゃないか。",
-          "text": "How could I turn down\nfeelings like that?"
+          "text": "How could I\nturn you down?"
         },
         {
           "offset": "0x1d7c",
@@ -544,7 +544,7 @@
         {
           "offset": "0x1dcc",
           "original": "やっと、普通の女の子になれたのね…。",
-          "text": "Now I can live as a girl..."
+          "text": "I'm finally a normal girl..."
         },
         {
           "offset": "0x1df4",
@@ -689,12 +689,12 @@
         {
           "offset": "0x28f0",
           "original": "こんな時に\n冗談なんて言えないよ。",
-          "text": "I couldn't joke\nat a time like this."
+          "text": "I wouldn't joke\nabout this."
         },
         {
           "offset": "0x2914",
           "original": "アンビリーバブル。信じられない…。",
-          "text": "Unbelievable. I can't..."
+          "text": "Unbelievable! No way..."
         },
         {
           "offset": "0x2938",
@@ -834,7 +834,7 @@
         {
           "offset": "0x31a4",
           "original": "俺でよかったら…。",
-          "text": "If you'll have me..."
+          "text": "I'd love to..."
         },
         {
           "offset": "0x31b8",
@@ -1149,12 +1149,12 @@
         {
           "offset": "0x4864",
           "original": "大事な用って？",
-          "text": "Rests on what?"
+          "text": "What is it?"
         },
         {
           "offset": "0x4874",
           "original": "いつも、私は何も考えないでいるのが\n好きなのですけれども、\n最近では、その時間よりも\n色々と考えてしまう事の方が多いのです。",
-          "text": "I usually love thinking\nabout nothing at all,\nbut lately I spend more time\nthinking about many things."
+          "text": "I used to enjoy\nhaving nothing on my mind,\nbut lately there's so much\nI can't stop thinking about."
         },
         {
           "offset": "0x48f0",
@@ -1269,7 +1269,7 @@
         {
           "offset": "0x517c",
           "original": "あなたにだけは、そう思われたくない。",
-          "text": "but not you. Not you."
+          "text": "but not if you think so."
         },
         {
           "offset": "0x51a4",
@@ -1294,7 +1294,7 @@
         {
           "offset": "0x52ec",
           "original": "う、うん…。",
-          "text": "Mm... mmh..."
+          "text": "Y-yeah..."
         },
         {
           "offset": "0x52fc",
@@ -1414,7 +1414,7 @@
         {
           "offset": "0x579c",
           "original": "私、男っぽいって言われ続けてきても、\n気にもならなかったけど、\nあなたにだけは、そう思われたくない。",
-          "text": "People call me boyish,\nand I never minded,\nbut not you. Not you."
+          "text": "People call me boyish,\nand I never minded,\nbut not if you think so."
         },
         {
           "offset": "0x5800",
@@ -1439,7 +1439,7 @@
         {
           "offset": "0x5930",
           "original": "う、うん…。",
-          "text": "Mm... mmh..."
+          "text": "Y-yeah..."
         },
         {
           "offset": "0x5940",
@@ -1654,7 +1654,7 @@
         {
           "offset": "0x6a58",
           "original": "そして、何事にも頑張って向かっていく\nその姿に、だんだん惹かれて…。",
-          "text": "And how you gave everything\nyour all slowly drew me in."
+          "text": "Seeing you give it your all\nslowly drew me to you."
         },
         {
           "offset": "0x6a9c",
@@ -1664,7 +1664,7 @@
         {
           "offset": "0x6af0",
           "original": "どんなときでも、切り抜けてこれたわ。\nだから、今日も勇気を出せると思う。",
-          "text": "and I got through anything.\nSo I can be brave today."
+          "text": "It got me through it all.\nI think I can be brave now."
         },
         {
           "offset": "0x6b44",
@@ -1674,7 +1674,7 @@
         {
           "offset": "0x6b84",
           "original": "あなたにとって、迷惑かもしれないけど、\nもう、\nこれ以上自分の心に嘘はつけないから",
-          "text": "Maybe it's a bother to you,\nbut I just\ncan't lie to my heart,"
+          "text": "This may be a bother,\nbut I can't keep\nlying to myself."
         },
         {
           "offset": "0x6bd8",
@@ -1749,7 +1749,7 @@
         {
           "offset": "0x7170",
           "original": "あのね。\n優美ね。\nずっと先輩と同じ学年に\nなりたかったんです。",
-          "text": "You know,\nYumi always\nwished she was in your\nyear, senpai."
+          "text": "You know,\nYumi always\nwished she was in your\nyear, Senpai."
         },
         {
           "offset": "0x71b0",
@@ -1779,7 +1779,7 @@
         {
           "offset": "0x735c",
           "original": "だって、先輩が世界中の誰より大好きで、\n大好きでしかたがないから…。",
-          "text": "'Cause I love you, senpai,\nI just can't help it..."
+          "text": "'Cause I love you, Senpai,\nI just can't help it..."
         },
         {
           "offset": "0x73a0",
@@ -1799,7 +1799,7 @@
         {
           "offset": "0x73fc",
           "original": "それじゃ、制服の第二ボタンを下さい。",
-          "text": "Give me your second button!"
+          "text": "Your second button, please!"
         },
         {
           "offset": "0x7424",
@@ -1829,12 +1829,12 @@
         {
           "offset": "0x74fc",
           "original": "嬉しい。\n大好きです。\n先輩。",
-          "text": "Yay.\nI love you,\nsenpai."
+          "text": "Yay.\nI love you,\nSenpai."
         },
         {
           "offset": "0x751c",
           "original": "でも、結婚したら、\n好雄の弟になるのか…。",
-          "text": "But if we marry, I'll be\nYoshio's little brother..."
+          "text": "If we got married, I'd be\nYoshio's brother-in-law..."
         },
         {
           "offset": "0x780c",
@@ -1884,7 +1884,7 @@
         {
           "offset": "0x7920",
           "original": "所詮それは、報われね恋だ…。\nお前の気持ちはわかるが、\n諦めろ…。",
-          "text": "That love can never be...\nI understand your feelings,\nbut give up..."
+          "text": "Your love is unrequited.\nI know how you feel,\nbut you must give up."
         },
         {
           "offset": "0x7964",
@@ -1939,7 +1939,7 @@
         {
           "offset": "0x7d4c",
           "original": "言いたいことって、何？",
-          "text": "Something to say?"
+          "text": "What is it?"
         },
         {
           "offset": "0x7d64",
@@ -1974,7 +1974,7 @@
         {
           "offset": "0x7e74",
           "original": "あの…。\nあんな事しておいて、何ですけど…。",
-          "text": "Um...\nAfter all that, but..."
+          "text": "Um...\nAfter all I've done..."
         },
         {
           "offset": "0x7ea0",

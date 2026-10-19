@@ -31,7 +31,28 @@ type Placement struct {
 	Pinned   bool  `json:"pinned"`
 	Pointers []int `json:"pointers"`
 }
+
+// PackAttempt describes the exact first placement rejected by one of the
+// existing greedy packing strategies. It is not a proof that this text itself
+// needs to be shortened: different placements can change the result.
+type PackAttempt struct {
+	Strategy            string
+	FirstUnplacedOffset int
+	Requested           int
+	FreeTotal           int
+	LargestContiguous   int
+	FreeSpans           int
+	PlacedCount         int
+}
+type PackingFailure struct {
+	Reason       string // total_capacity, fragmented_or_strategy, or pinned_oversize
+	PinnedOffset int
+	PinnedNeed   int
+	PinnedSlot   int
+	Attempts     []PackAttempt
+}
 type PlanStats struct {
+	Failure        *PackingFailure
 	Lines          int         `json:"lines"`
 	Copies         int         `json:"copies"`
 	BytesNeeded    int         `json:"bytes_needed"`
@@ -169,6 +190,7 @@ func ApplyDialogue(original, data []byte, block DialogueBlock, pairs *PairEncode
 		}
 		cap := slots[job.line.Offset] - job.line.Offset
 		if len(job.newText)+1 > cap {
+			result.Failure = &PackingFailure{Reason: "pinned_oversize", PinnedOffset: job.line.Offset, PinnedNeed: len(job.newText) + 1, PinnedSlot: cap}
 			reason := "has no pointer to it"
 			if len(job.pointers) > 0 {
 				reason = "is referenced from code"
@@ -201,7 +223,7 @@ func ApplyDialogue(original, data []byte, block DialogueBlock, pairs *PairEncode
 			result.BytesNeeded += len(job.newText) + 1
 		}
 	}
-	pack := func(order []plannedLine, bestFit bool) map[int]int {
+	pack := func(order []plannedLine, bestFit bool) (map[int]int, *PackAttempt) {
 		available := append([]span(nil), free...)
 		placed := make(map[int]int, len(jobs))
 		for k, v := range pinned {
@@ -230,18 +252,32 @@ func ApplyDialogue(original, data []byte, block DialogueBlock, pairs *PairEncode
 				}
 			}
 			if bestIdx < 0 {
-				return nil
+				info := &PackAttempt{FirstUnplacedOffset: job.line.Offset, Requested: required, PlacedCount: len(placed)}
+				if bestFit {
+					info.Strategy = "descending_best_fit"
+				} else {
+					info.Strategy = "original_first_fit"
+				}
+				for _, f := range available {
+					n := f.hi - f.lo
+					info.FreeTotal += n
+					info.FreeSpans++
+					if n > info.LargestContiguous {
+						info.LargestContiguous = n
+					}
+				}
+				return nil, info
 			}
 			at := available[bestIdx].lo
 			placed[job.line.Offset] = at
 			shared[key] = at
 			if !take(&available, at, required) {
-				return nil
+				return nil, &PackAttempt{Strategy: "internal_take_failure", FirstUnplacedOffset: job.line.Offset, Requested: required}
 			}
 		}
-		return placed
+		return placed, nil
 	}
-	placed := pack(jobs, false)
+	placed, firstAttempt := pack(jobs, false)
 	if placed == nil {
 		ordered := append([]plannedLine(nil), jobs...)
 		sort.SliceStable(ordered, func(i, j int) bool {
@@ -250,7 +286,21 @@ func ApplyDialogue(original, data []byte, block DialogueBlock, pairs *PairEncode
 			}
 			return len(ordered[i].newText) > len(ordered[j].newText)
 		})
-		placed = pack(ordered, true)
+		var secondAttempt *PackAttempt
+		placed, secondAttempt = pack(ordered, true)
+		if placed == nil {
+			reason := "fragmented_or_strategy"
+			if result.BytesNeeded > result.BytesAvailable {
+				reason = "total_capacity"
+			}
+			result.Failure = &PackingFailure{Reason: reason}
+			if firstAttempt != nil {
+				result.Failure.Attempts = append(result.Failure.Attempts, *firstAttempt)
+			}
+			if secondAttempt != nil {
+				result.Failure.Attempts = append(result.Failure.Attempts, *secondAttempt)
+			}
+		}
 		result.UsedBestFit = true
 	}
 	if placed == nil {

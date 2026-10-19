@@ -314,7 +314,7 @@
         {
           "offset": "0x1440",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yeah, they're cute!{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "They were so cute!{q}Not cute at all!{q}Their eyes are creepy."
         },
         {
           "offset": "0x1484",
@@ -519,7 +519,7 @@
         {
           "offset": "0x1c00",
           "original": "この次は、\n俺から誘っていいかな？",
-          "text": "Next time,\ncan I be the one to ask?"
+          "text": "Next time, can I\nask you out?"
         },
         {
           "offset": "0x1c24",
@@ -539,7 +539,7 @@
         {
           "offset": "0x1c9c",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x1cf4",
@@ -569,7 +569,7 @@
         {
           "offset": "0x1db4",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1ddc",
@@ -614,7 +614,7 @@
         {
           "offset": "0x26b0",
           "original": "取れたら{G}に\nあげるね。",
-          "text": "I'll give {G} one\nif I win."
+          "text": "If I win, {G},\nit's yours."
         },
         {
           "offset": "0x26d4",
@@ -749,7 +749,7 @@
         {
           "offset": "0x321c",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x323c",
@@ -769,7 +769,7 @@
         {
           "offset": "0x32c4",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x32e4",
@@ -789,7 +789,7 @@
         {
           "offset": "0x3360",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x3380",
@@ -1039,7 +1039,7 @@
         {
           "offset": "0x43f8",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x441c",
@@ -1049,7 +1049,7 @@
         {
           "offset": "0x4440",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x4464",
@@ -1174,7 +1174,7 @@
         {
           "offset": "0x4e88",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x4eb8",
@@ -1699,7 +1699,7 @@
         {
           "offset": "0x72d8",
           "original": "すいません。\n私のために…。{q}そ、そうですか…。{q}あの…。\nあまり慣れたくは…。",
-          "text": "I'm sorry.\nIt's for my sake...{q}O-oh...{q}Um...\nI'd rather not..."
+          "text": "S-sorry...\nJust for me...?{q}O-oh...{q}Um...\nI'd rather not..."
         },
         {
           "offset": "0x732c",
@@ -1724,7 +1724,7 @@
         {
           "offset": "0x73e0",
           "original": "すいません。\n私のために…。{q}そ、そうですか…。{q}あの…。\nあまり慣れたくは…。",
-          "text": "I'm sorry.\nIt's for my sake...{q}O-oh...{q}Um...\nI'd rather not..."
+          "text": "S-sorry...\nJust for me...?{q}O-oh...{q}Um...\nI'd rather not..."
         },
         {
           "offset": "0x7724",
@@ -1839,7 +1839,7 @@
         {
           "offset": "0x7e1c",
           "original": "あの…。\nこの本は、どこに\nかたづければ…。",
-          "text": "Um...\nWhere should I\nput this book away...?"
+          "text": "Um...\nWhere should I\nreturn this book...?"
         },
         {
           "offset": "0x7e48",
@@ -1849,7 +1849,7 @@
         {
           "offset": "0x7e90",
           "original": "そ、そうですか…。\nそれじゃ、\nお願いします。{q}そ、そんな…。\n意地悪しないで下さい…。{q}あっ、あの本棚ですね。",
-          "text": "O-oh...\nThen, please\ndo.{q}Oh, d-don't...\nPlease don't be mean...{q}Oh, that shelf."
+          "text": "O-oh...\nThen please\ntake care of it.{q}Oh, d-don't...\nPlease don't be mean...{q}Oh, that shelf."
         },
         {
           "offset": "0x8078",
@@ -1914,7 +1914,7 @@
         {
           "offset": "0x8280",
           "original": "す、すいません。\n私の為に…。{q}そ、そんな…。{q}そ、そうですね…。",
-          "text": "I-I'm sorry.\nIt's for my sake...{q}Oh, n-no...{q}Y-yes, I suppose..."
+          "text": "I-I'm sorry.\nJust for me...?{q}Oh, n-no...{q}Y-yes, I suppose..."
         },
         {
           "offset": "0x82c4",
@@ -1959,7 +1959,7 @@
         {
           "offset": "0x8460",
           "original": "俺も、ちょっと怖かったよ。{q}あれで？おかしいんじゃない。{q}怖いのが面白いんだよ。",
-          "text": "I was a little scared too.{q}That? Are you serious?{q}The scary part is the fun."
+          "text": "I was a little scared too.{q}That? Are you serious?{q}That's what makes it fun!"
         },
         {
           "offset": "0x84b8",
@@ -1969,7 +1969,7 @@
         {
           "offset": "0x8518",
           "original": "あの…。\n何度乗っても、駄目です…。",
-          "text": "Um...\nI never get used to it..."
+          "text": "Um...\nI still can't handle it..."
         },
         {
           "offset": "0x853c",
@@ -2079,7 +2079,7 @@
         {
           "offset": "0x8a0c",
           "original": "俺も、ちょっと怖かったよ。{q}あれで？おかしいんじゃない。{q}怖いのが面白いんだよ。",
-          "text": "I was a little scared too.{q}That? Are you serious?{q}The scary part is the fun."
+          "text": "I was a little scared too.{q}That? Are you serious?{q}That's what makes it fun!"
         },
         {
           "offset": "0x8a64",
@@ -2199,7 +2199,7 @@
         {
           "offset": "0x8fac",
           "original": "俺も、ちょっと怖かったよ。{q}あれで？おかしいんじゃない。{q}怖いのが面白いんだよ。",
-          "text": "I was a little scared too.{q}That? Are you serious?{q}The scary part is the fun."
+          "text": "I was a little scared too.{q}That? Are you serious?{q}That's what makes it fun!"
         },
         {
           "offset": "0x9004",
@@ -2359,7 +2359,7 @@
         {
           "offset": "0xa430",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0xa448",

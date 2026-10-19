@@ -94,17 +94,17 @@
         {
           "offset": "0x2cc",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x2f0",
           "original": "こんなにたくさん詩が\n飾ってあるんだね。",
-          "text": "There's so many\npoems up."
+          "text": "So many poems\non display."
         },
         {
           "offset": "0x318",
           "original": "全部、文芸部員が\n創ったんだよ。",
-          "text": "Literature members\nwrote all of them."
+          "text": "The Literature Club\nwrote all of them."
         },
         {
           "offset": "0x338",
@@ -119,7 +119,7 @@
         {
           "offset": "0x3b0",
           "original": "えっ、私に。\n理解できるかなぁ。\nとりあえず、貰っとくね。",
-          "text": "Huh, for me?\nWill I get it?\nWell, I'll take it."
+          "text": "Oh, for me?\nWill I understand it?\nI'll take it anyway."
         },
         {
           "offset": "0x3ec",
@@ -134,17 +134,17 @@
         {
           "offset": "0x448",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x46c",
           "original": "たくさん詩が\n飾ってあるね。",
-          "text": "Lots of poems\nup, huh."
+          "text": "Lots of poems\non display."
         },
         {
           "offset": "0x488",
           "original": "全部、文芸部員が\n創ったんだよ。",
-          "text": "Literature members\nwrote all of them."
+          "text": "The Literature Club\nwrote all of them."
         },
         {
           "offset": "0x4a8",
@@ -159,7 +159,7 @@
         {
           "offset": "0x518",
           "original": "くれるなら、貰うけどさ。\n読んでもわかんないと\n思うな。",
-          "text": "I'll take it if you're\noffering, but I doubt\nI'll get it."
+          "text": "I'll take it if you're\noffering, but I doubt\nI'll understand it."
         },
         {
           "offset": "0x550",
@@ -174,22 +174,22 @@
         {
           "offset": "0x5ac",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x5d0",
           "original": "たくさん詩が\n飾ってあるね。",
-          "text": "Lots of poems\nup, huh."
+          "text": "Lots of poems\non display."
         },
         {
           "offset": "0x5ec",
           "original": "全部、文芸部員が\n創ったんだよ。",
-          "text": "Literature members\nwrote all of them."
+          "text": "The Literature Club\nwrote all of them."
         },
         {
           "offset": "0x60c",
           "original": "私にはちょっと無理だな、\nこういうのは…。\n運動より疲れるよ。",
-          "text": "This isn't really\nmy thing...\nIt's worse than a workout."
+          "text": "This isn't my thing.\nIt's more tiring\nthan a workout."
         },
         {
           "offset": "0x64c",
@@ -199,7 +199,7 @@
         {
           "offset": "0x690",
           "original": "くれるなら貰うけどさ。\n読んでもわかんないと\n思うな。",
-          "text": "I'll take it if you're\noffering, but I doubt\nI'll get it."
+          "text": "I'll take it if you're\noffering, but I doubt\nI'll understand it."
         },
         {
           "offset": "0x6c8",
@@ -239,17 +239,17 @@
         {
           "offset": "0x7f0",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x814",
           "original": "こんなにたくさん作文が\n飾ってあるんだね。",
-          "text": "There's so many\nessays up."
+          "text": "So many essays\non display."
         },
         {
           "offset": "0x840",
           "original": "全部、文芸部員が\n書いたんだよ。",
-          "text": "Literature members\nwrote all of them."
+          "text": "The Literature Club\nwrote all of them."
         },
         {
           "offset": "0x860",
@@ -259,7 +259,7 @@
         {
           "offset": "0x894",
           "original": "これ、今回うちの部で\n作った、文集なんだ。\n良かったら読んでみない？",
-          "text": "Our club made this\nessay collection.\nWant to read it?"
+          "text": "Our club made this\nanthology.\nWant to read it?"
         },
         {
           "offset": "0x8d8",
@@ -279,7 +279,7 @@
         {
           "offset": "0x950",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x974",
@@ -289,7 +289,7 @@
         {
           "offset": "0x994",
           "original": "全部、文芸部員が\n書いたんだよ。",
-          "text": "Literature members\nwrote all of them."
+          "text": "The Literature Club\nwrote all of them."
         },
         {
           "offset": "0x9b4",
@@ -299,7 +299,7 @@
         {
           "offset": "0x9d4",
           "original": "これ、今回うちの部で\n作った、文集なんだ。\n良かったら読んでみない？",
-          "text": "Our club made this\nessay collection.\nWant to read it?"
+          "text": "Our club made this\nanthology.\nWant to read it?"
         },
         {
           "offset": "0xa18",
@@ -319,7 +319,7 @@
         {
           "offset": "0xa84",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0xaa8",
@@ -329,17 +329,17 @@
         {
           "offset": "0xac8",
           "original": "全部、文芸部員が\n書いたんだよ。",
-          "text": "Literature members\nwrote all of them."
+          "text": "The Literature Club\nwrote all of them."
         },
         {
           "offset": "0xae8",
           "original": "よくやるね。\nこういうのは\n運動より疲れるよ。",
-          "text": "You work hard.\nThis is worse\nthan a workout."
+          "text": "Impressive!\nThis is more tiring\nthan a workout."
         },
         {
           "offset": "0xb18",
           "original": "これ、今回うちの部で\n作った、文集なんだ。\n良かったら読んでみない？",
-          "text": "Our club made this\nessay collection.\nWant to read it?"
+          "text": "Our club made this\nanthology.\nWant to read it?"
         },
         {
           "offset": "0xb5c",
@@ -369,7 +369,7 @@
         {
           "offset": "0xc00",
           "original": "これ、今回うちの部で\n作った、文集なんだ。\n良かったら読んでみない？",
-          "text": "Our club made this\nessay collection.\nWant to read it?"
+          "text": "Our club made this\nanthology.\nWant to read it?"
         },
         {
           "offset": "0xc44",
@@ -384,7 +384,7 @@
         {
           "offset": "0xc98",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0xcb0",
@@ -394,7 +394,7 @@
         {
           "offset": "0xce8",
           "original": "えっ、そう？\n何だか、照れるなぁ。",
-          "text": "Huh, really?\nThat's embarrassing."
+          "text": "Huh, really?\nYou're making me blush."
         },
         {
           "offset": "0xd1c",
@@ -404,12 +404,12 @@
         {
           "offset": "0xd30",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}!\nYou came.\nHow was it?"
         },
         {
           "offset": "0xd58",
           "original": "いつもと違って、\nかっこよく見えたよ。",
-          "text": "Unlike usual,\nyou looked cool."
+          "text": "You looked cool\nfor a change!"
         },
         {
           "offset": "0xd80",
@@ -449,7 +449,7 @@
         {
           "offset": "0xee0",
           "original": "あっ、{G}\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}!\nYou came.\nHow was it?"
         },
         {
           "offset": "0xf08",
@@ -459,7 +459,7 @@
         {
           "offset": "0xf38",
           "original": "えっ、そう？\n何か、照れるなぁ。",
-          "text": "Huh, really?\nThat's embarrassing."
+          "text": "Huh, really?\nYou're making me blush."
         },
         {
           "offset": "0xf68",
@@ -484,7 +484,7 @@
         {
           "offset": "0xfdc",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0xff4",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1070",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x1088",
@@ -524,7 +524,7 @@
         {
           "offset": "0x1100",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x1118",
@@ -544,7 +544,7 @@
         {
           "offset": "0x1188",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x11a0",
@@ -564,7 +564,7 @@
         {
           "offset": "0x1210",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x1228",
@@ -584,7 +584,7 @@
         {
           "offset": "0x1298",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x12b0",
@@ -604,7 +604,7 @@
         {
           "offset": "0x132c",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x1344",
@@ -654,7 +654,7 @@
         {
           "offset": "0x1494",
           "original": "私だって\n相手は選ばないとね。",
-          "text": "Even I have\nto be picky."
+          "text": "I have my standards,\nyou know."
         },
         {
           "offset": "0x14b4",
@@ -669,7 +669,7 @@
         {
           "offset": "0x150c",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x1524",
@@ -709,7 +709,7 @@
         {
           "offset": "0x1614",
           "original": "ちょうど良かった。\nこれから実験ショーなんだ。\n見ていってよ。",
-          "text": "Good timing.\nOur show's next.\nStay and watch."
+          "text": "Good timing.\nOur science demo's next.\nStay and watch."
         },
         {
           "offset": "0x1654",
@@ -724,7 +724,7 @@
         {
           "offset": "0x168c",
           "original": "ちょうど良かった。\nこれから実験ショーなんだ。\n見ていってくれよ。",
-          "text": "Good timing.\nOur science show's next.\nStay and watch."
+          "text": "Good timing.\nOur science demo's next.\nStay and watch."
         },
         {
           "offset": "0x16d0",
@@ -739,7 +739,7 @@
         {
           "offset": "0x1718",
           "original": "ちょうど良かった。\nこれから実験ショーなんだ。\n見ていってくれよ。",
-          "text": "Good timing.\nOur science show's next.\nStay and watch."
+          "text": "Good timing.\nOur science demo's next.\nStay and watch."
         },
         {
           "offset": "0x175c",
@@ -754,7 +754,7 @@
         {
           "offset": "0x17a0",
           "original": "ちょうど良かった。\nこれから実験ショーなんだ。\n見ていってくれよ。",
-          "text": "Good timing.\nOur science show's next.\nStay and watch."
+          "text": "Good timing.\nOur science demo's next.\nStay and watch."
         },
         {
           "offset": "0x17e4",
@@ -769,7 +769,7 @@
         {
           "offset": "0x182c",
           "original": "ちょうど良かった。\nこれから実験ショーなんだ。\n見ていってよ。",
-          "text": "Good timing.\nOur show's next.\nStay and watch."
+          "text": "Good timing.\nOur science demo's next.\nStay and watch."
         },
         {
           "offset": "0x186c",
@@ -864,7 +864,7 @@
         {
           "offset": "0x1b58",
           "original": "今の、手品かなんかでしょう。\nだまそうったって\nそうはいかないよ。",
-          "text": "That's some kind of trick.\nYou won't fool\nme that easy."
+          "text": "It's some kind of trick.\nYou can't fool me\nthat easily."
         },
         {
           "offset": "0x1b9c",
@@ -944,7 +944,7 @@
         {
           "offset": "0x1ddc",
           "original": "あれ、{G}がいない。\nショーの最中は\nいたんだけどなぁ…。",
-          "text": "Huh, no sign of {G}\nShe was here\nduring the show..."
+          "text": "Where'd {G} go?\nShe was here\nduring the show..."
         },
         {
           "offset": "0x1e18",
@@ -954,7 +954,7 @@
         {
           "offset": "0x1e28",
           "original": "コンピュータ占い\nやってるんだけど、\nどう、やってみない？",
-          "text": "We're doing\ncomputer fortunes.\nWant to try?"
+          "text": "We're doing\ncomputer fortune-telling.\nWant to try?"
         },
         {
           "offset": "0x1e64",
@@ -969,7 +969,7 @@
         {
           "offset": "0x1e9c",
           "original": "コンピュータ占い\nやってるんだけど、\nどう、やってみない？",
-          "text": "We're doing\ncomputer fortunes.\nWant to try?"
+          "text": "We're doing\ncomputer fortune-telling.\nWant to try?"
         },
         {
           "offset": "0x1ed8",
@@ -984,7 +984,7 @@
         {
           "offset": "0x1f14",
           "original": "コンピュータ占い\nやってるんだけど、\nどう、やってみない？",
-          "text": "We're doing\ncomputer fortunes.\nWant to try?"
+          "text": "We're doing\ncomputer fortune-telling.\nWant to try?"
         },
         {
           "offset": "0x1f50",
@@ -999,12 +999,12 @@
         {
           "offset": "0x1f90",
           "original": "コンピュータ占い\nやってるんだけど、\nどう、やってみない？",
-          "text": "We're doing\ncomputer fortunes.\nWant to try?"
+          "text": "We're doing\ncomputer fortune-telling.\nWant to try?"
         },
         {
           "offset": "0x1fcc",
           "original": "悪いけど、\n占いなんて信じないから。",
-          "text": "Sorry, but\nI don't buy fortunes."
+          "text": "Sorry, I don't believe\nin fortune-telling."
         },
         {
           "offset": "0x1ffc",
@@ -1044,22 +1044,22 @@
         {
           "offset": "0x2110",
           "original": "占いってさ、\nだいたいいい結果が\n出るよね。",
-          "text": "Fortunes always\ngive good results,\ndon't they?"
+          "text": "Fortunes usually\nturn out well,\ndon't they?"
         },
         {
           "offset": "0x213c",
           "original": "そんな、\nいんちき占いじゃないぞ。",
-          "text": "Hey, this isn't\nsome fake fortune."
+          "text": "This isn't some\nphony fortune-telling!"
         },
         {
           "offset": "0x2168",
           "original": "占いってさ、\nだいたいこんないい加減な\n結果が出るよね。",
-          "text": "Fortunes always\ngive sloppy results\nlike this."
+          "text": "Fortunes tend to\nbe pretty sloppy,\ndon't they?"
         },
         {
           "offset": "0x21a0",
           "original": "そんな、\nいんちき占いじゃないぞ。",
-          "text": "Hey, this isn't\nsome fake fortune."
+          "text": "This isn't some\nphony fortune-telling!"
         },
         {
           "offset": "0x21cc",
@@ -1074,22 +1074,22 @@
         {
           "offset": "0x222c",
           "original": "占いってさ、\nだいたいいい結果が\n出るよね。",
-          "text": "Fortunes always\ngive good results,\ndon't they?"
+          "text": "Fortunes usually\nturn out well,\ndon't they?"
         },
         {
           "offset": "0x2258",
           "original": "そんな、\nいんちき占いじゃないぞ。",
-          "text": "Hey, this isn't\nsome fake fortune."
+          "text": "This isn't some\nphony fortune-telling!"
         },
         {
           "offset": "0x2284",
           "original": "占いってさ、\nだいたいこんないい加減な\n結果が出るよね。",
-          "text": "Fortunes always\ngive sloppy results\nlike this."
+          "text": "Fortunes tend to\nbe pretty sloppy,\ndon't they?"
         },
         {
           "offset": "0x22bc",
           "original": "そんな、\nいんちき占いじゃないぞ。",
-          "text": "Hey, this isn't\nsome fake fortune."
+          "text": "This isn't some\nphony fortune-telling!"
         },
         {
           "offset": "0x22e8",
@@ -1164,7 +1164,7 @@
         {
           "offset": "0x2538",
           "original": "行ってしまった…。\n悔しいから、\nゲームでもしよう。",
-          "text": "She's gone...\nOut of spite,\nI'll play a game."
+          "text": "She left...\nGuess I'll play a game\nto take my mind off it."
         },
         {
           "offset": "0x2570",
@@ -1259,7 +1259,7 @@
         {
           "offset": "0x27c4",
           "original": "作った人が、\nうまいとは限らないから。",
-          "text": "The maker isn't\nalways good at it."
+          "text": "Making it doesn't\nmean I'm good at it."
         },
         {
           "offset": "0x27f4",
@@ -1279,7 +1279,7 @@
         {
           "offset": "0x2844",
           "original": "作った人が、\nうまいとは限らないから。",
-          "text": "The maker isn't\nalways good at it."
+          "text": "Making it doesn't\nmean I'm good at it."
         },
         {
           "offset": "0x2874",
@@ -1299,7 +1299,7 @@
         {
           "offset": "0x28c4",
           "original": "作った人が、\nうまいとは限らないから。",
-          "text": "The maker isn't\nalways good at it."
+          "text": "Making it doesn't\nmean I'm good at it."
         },
         {
           "offset": "0x28f4",
@@ -1329,7 +1329,7 @@
         {
           "offset": "0x29e0",
           "original": "はい、できたよ。\nどう？",
-          "text": "Here, done.\nWell?"
+          "text": "All done.\nWhat do you think?"
         },
         {
           "offset": "0x2a0c",
@@ -1339,7 +1339,7 @@
         {
           "offset": "0x2a20",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks.\nI'm glad you like it."
         },
         {
           "offset": "0x2a40",
@@ -1364,12 +1364,12 @@
         {
           "offset": "0x2aac",
           "original": "うん、\n可愛く描いてくれよ。",
-          "text": "Sure,\nmake me cute."
+          "text": "Sure,\nmake me look cute."
         },
         {
           "offset": "0x2b04",
           "original": "はい、できたよ。\nどう？",
-          "text": "Here, done.\nWell?"
+          "text": "All done.\nWhat do you think?"
         },
         {
           "offset": "0x2b30",
@@ -1404,12 +1404,12 @@
         {
           "offset": "0x2bf0",
           "original": "可愛く描いてくれるんなら、\nいいよ。",
-          "text": "If you'll make me cute,\nsure."
+          "text": "Sure, if you can\nmake me look cute."
         },
         {
           "offset": "0x2c50",
           "original": "はい、できたよ。\nどう？",
-          "text": "Here, done.\nWell?"
+          "text": "All done.\nWhat do you think?"
         },
         {
           "offset": "0x2c7c",
@@ -1504,7 +1504,7 @@
         {
           "offset": "0x2f2c",
           "original": "あー、びっくりした、\n{G}が来るとは\n思わなかったよ。",
-          "text": "Whoa, you startled me.\nI didn't expect {G}\nto come by."
+          "text": "Oh, what a surprise!\nI didn't expect {G}\nto show up."
         },
         {
           "offset": "0x2f64",
@@ -1524,7 +1524,7 @@
         {
           "offset": "0x2fbc",
           "original": "そんな下賎な考えを…。\nこれは、芸術だよ、芸術。",
-          "text": "Such a vulgar thought...\nThis is art, art."
+          "text": "What a dirty mind!\nThis is art, I tell you!"
         },
         {
           "offset": "0x2fec",
@@ -1564,7 +1564,7 @@
         {
           "offset": "0x312c",
           "original": "あー、びっくりした、\n{G}が来るとは\n思わなかったよ。",
-          "text": "Whoa, you startled me.\nI didn't expect {G}\nto come by."
+          "text": "Oh, what a surprise!\nI didn't expect {G}\nto show up."
         },
         {
           "offset": "0x3164",
@@ -1624,7 +1624,7 @@
         {
           "offset": "0x3318",
           "original": "あー、びっくりした、\n{G}が来るとは\n思わなかったよ。",
-          "text": "Whoa, you startled me.\nI didn't expect {G}\nto come by."
+          "text": "Oh, what a surprise!\nI didn't expect {G}\nto show up."
         },
         {
           "offset": "0x3350",
@@ -1649,12 +1649,12 @@
         {
           "offset": "0x33d0",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x33f4",
           "original": "こんなにたくさん絵が\n飾ってあるんだね。",
-          "text": "There's so many\npaintings up."
+          "text": "So many paintings\non display."
         },
         {
           "offset": "0x341c",
@@ -1679,12 +1679,12 @@
         {
           "offset": "0x34c8",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x34ec",
           "original": "こんなにたくさん絵が\n飾ってあるんだね。",
-          "text": "There's so many\npaintings up."
+          "text": "So many paintings\non display."
         },
         {
           "offset": "0x3514",
@@ -1709,12 +1709,12 @@
         {
           "offset": "0x35c0",
           "original": "良かった。\nちょうど、暇だったんだ。",
-          "text": "Great.\nI was just bored."
+          "text": "Great.\nI'm free right now."
         },
         {
           "offset": "0x35e4",
           "original": "こんなにたくさん絵が\n飾ってあるんだね。",
-          "text": "There's so many\npaintings up."
+          "text": "So many paintings\non display."
         },
         {
           "offset": "0x360c",
@@ -1759,12 +1759,12 @@
         {
           "offset": "0x3734",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x374c",
           "original": "いい曲だと思うんだけど、\n何の曲なの？",
-          "text": "It's a good song,\nbut what is it?"
+          "text": "That's a nice tune,\nbut what is it?"
         },
         {
           "offset": "0x3774",
@@ -1789,12 +1789,12 @@
         {
           "offset": "0x3800",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x3818",
           "original": "いい曲だと思うけど、\nいったい何の曲？",
-          "text": "It's a good song,\nbut what is it?"
+          "text": "That's a nice tune,\nbut what is it?"
         },
         {
           "offset": "0x3840",
@@ -1819,12 +1819,12 @@
         {
           "offset": "0x38cc",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x38e4",
           "original": "いい曲だと思うけど、\n何の曲かわかんないよ。",
-          "text": "It's a good song, but\nI don't know what it is."
+          "text": "Nice tune, but\nI don't know it."
         },
         {
           "offset": "0x3910",
@@ -1849,12 +1849,12 @@
         {
           "offset": "0x3984",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x399c",
           "original": "おかしかったー。\n音楽を冗談で\nやってるでしょう。",
-          "text": "That was hilarious!\nYou do music\nas a joke, right?"
+          "text": "That was funny!\nYou play music\nas a joke, right?"
         },
         {
           "offset": "0x39d0",
@@ -1869,12 +1869,12 @@
         {
           "offset": "0x3a28",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x3a40",
           "original": "冗談で音楽\nやってるとしか\n思えないね。",
-          "text": "You've gotta be\ndoing music\nas a joke."
+          "text": "You're only\nplaying music\nas a joke."
         },
         {
           "offset": "0x3a68",
@@ -1889,12 +1889,12 @@
         {
           "offset": "0x3ac0",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x3ad8",
           "original": "変な曲やるんだね。\nすっごく面白かったけど。",
-          "text": "You play weird songs.\nIt was super fun, though."
+          "text": "That tune was weird.\nReally fun, though."
         },
         {
           "offset": "0x3b04",
@@ -1909,12 +1909,12 @@
         {
           "offset": "0x3b60",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x3b78",
           "original": "素晴らしい演奏だったと\n思うな。\nよくわかんないけど…。",
-          "text": "I think it was a\ngreat performance.\nNot that I'd know..."
+          "text": "Great performance,\nI think.\nNot that I know much..."
         },
         {
           "offset": "0x3bb0",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x3c00",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x3c18",
@@ -1949,7 +1949,7 @@
         {
           "offset": "0x3ca0",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}!\nHow was it?"
         },
         {
           "offset": "0x3cb8",
@@ -2138,22 +2138,22 @@
         {
           "offset": "0x0",
           "original": "こうして、\n文化祭は終了した。",
-          "text": "And so, the\nfestival was over."
+          "text": "With that, the\nfestival was over."
         },
         {
           "offset": "0x24",
           "original": "俺は、{G}と一緒に、\n展示物を見て回った。",
-          "text": "Together with {G}\nI toured the exhibits."
+          "text": "{G} and I looked\naround the exhibits."
         },
         {
           "offset": "0x50",
           "original": "文芸部は、詩の展示\nみたいだね。",
-          "text": "Literature's showing\npoems, it seems."
+          "text": "The Literature Club\nis displaying poems."
         },
         {
           "offset": "0x70",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x94",
@@ -2168,12 +2168,12 @@
         {
           "offset": "0xd8",
           "original": "文芸部は、詩の展示\nみたいだね。",
-          "text": "Literature's showing\npoems, it seems."
+          "text": "The Literature Club\nis displaying poems."
         },
         {
           "offset": "0xf8",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x11c",
@@ -2193,12 +2193,12 @@
         {
           "offset": "0x190",
           "original": "文芸部は、詩の展示\nみたいだね。",
-          "text": "Literature's showing\npoems, it seems."
+          "text": "The Literature Club\nis displaying poems."
         },
         {
           "offset": "0x1b0",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x1d4",
@@ -2298,12 +2298,12 @@
         {
           "offset": "0x4ac",
           "original": "文芸部は、作文の展示\nみたいだね。",
-          "text": "Literature's showing\nessays, it seems."
+          "text": "The Literature Club\nhas essays on display."
         },
         {
           "offset": "0x4d0",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x4f4",
@@ -2318,12 +2318,12 @@
         {
           "offset": "0x53c",
           "original": "文芸部は、作文の展示\nみたいだね。",
-          "text": "Literature's showing\nessays, it seems."
+          "text": "The Literature Club\nhas essays on display."
         },
         {
           "offset": "0x560",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x584",
@@ -2343,12 +2343,12 @@
         {
           "offset": "0x600",
           "original": "文芸部は作文の展示\nみたいだね。",
-          "text": "Literature's showing\nessays, it seems."
+          "text": "The Literature Club\nhas essays on display."
         },
         {
           "offset": "0x620",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x644",
@@ -2368,12 +2368,12 @@
         {
           "offset": "0x6cc",
           "original": "たくさんあって、\n全然読み終わらないね。",
-          "text": "There's so many,\nI'll never finish."
+          "text": "There are so many,\nI'll never finish."
         },
         {
           "offset": "0x6f4",
           "original": "あそこで、文集を配ってる\nみたいだから、\nもらってくるよ。",
-          "text": "They're handing out\nanthologies there.\nI'll get one."
+          "text": "Looks like they're\nhanding out anthologies.\nI'll grab one."
         },
         {
           "offset": "0x738",
@@ -2423,7 +2423,7 @@
         {
           "offset": "0x8b0",
           "original": "あそこで、文集を配ってる\nみたいだから、\nもらってくるよ。",
-          "text": "They're handing out\nanthologies there.\nI'll get one."
+          "text": "Looks like they're\nhanding out anthologies.\nI'll grab one."
         },
         {
           "offset": "0x8ec",
@@ -2688,7 +2688,7 @@
         {
           "offset": "0x1140",
           "original": "私だって、\n相手は選ばないとね。",
-          "text": "Even I have\nto be picky."
+          "text": "I have my standards,\nyou know."
         },
         {
           "offset": "0x1160",
@@ -2723,7 +2723,7 @@
         {
           "offset": "0x126c",
           "original": "科学部は、実験ショーを\nやってるみたいだね。",
-          "text": "Looks like the Science\nClub has a show on."
+          "text": "Science Club's\nputting on a demo."
         },
         {
           "offset": "0x1298",
@@ -2733,7 +2733,7 @@
         {
           "offset": "0x12bc",
           "original": "科学部は、実験ショーを\nやってるみたいだね。",
-          "text": "Looks like the Science\nClub has a show on."
+          "text": "Science Club's\nputting on a demo."
         },
         {
           "offset": "0x12e8",
@@ -2743,7 +2743,7 @@
         {
           "offset": "0x130c",
           "original": "科学部は、実験ショーを\nやってるみたいだね。",
-          "text": "Looks like the Science\nClub has a show on."
+          "text": "Science Club's\nputting on a demo."
         },
         {
           "offset": "0x1338",
@@ -2758,12 +2758,12 @@
         {
           "offset": "0x137c",
           "original": "それよりも、\nあの爆発で全然平気だった、\n科学部の人に驚いたよ。",
-          "text": "I was more shocked\nthat the science guy\nwas totally fine."
+          "text": "What shocked me more\nwas that the Science Club\nmember was fine."
         },
         {
           "offset": "0x13bc",
           "original": "よく平気だったね。",
-          "text": "How was he okay?"
+          "text": "And not even hurt?!"
         },
         {
           "offset": "0x13d0",
@@ -2973,12 +2973,12 @@
         {
           "offset": "0x1a94",
           "original": "電脳部は、\n何やってるのかな？",
-          "text": "What's Computers\ndoing?"
+          "text": "What's the Computer Club\ndoing?"
         },
         {
           "offset": "0x1ab4",
           "original": "コンピューター\n占いみたいだね。\n一緒に占ってもらおうよ。",
-          "text": "Looks like\ncomputer fortunes.\nLet's get ours done."
+          "text": "Looks like they're doing\ncomputer fortune-telling.\nLet's try it together."
         },
         {
           "offset": "0x1af0",
@@ -2988,12 +2988,12 @@
         {
           "offset": "0x1b14",
           "original": "電脳部は、\n何やってるんだろう？",
-          "text": "What's Computers\ndoing?"
+          "text": "What's the Computer Club\ndoing?"
         },
         {
           "offset": "0x1b34",
           "original": "コンピューター\n占いみたいだね。\n一緒に占ってもらおうよ。",
-          "text": "Looks like\ncomputer fortunes.\nLet's get ours done."
+          "text": "Looks like they're doing\ncomputer fortune-telling.\nLet's try it together."
         },
         {
           "offset": "0x1b70",
@@ -3003,12 +3003,12 @@
         {
           "offset": "0x1b98",
           "original": "電脳部は\n何やってるんだろう？",
-          "text": "What's Computers\ndoing?"
+          "text": "What's the Computer Club\ndoing?"
         },
         {
           "offset": "0x1bb8",
           "original": "コンピューター\n占いみたいだね。\n一緒に占ってもらおうよ。",
-          "text": "Looks like\ncomputer fortunes.\nLet's get ours done."
+          "text": "Looks like they're doing\ncomputer fortune-telling.\nLet's try it together."
         },
         {
           "offset": "0x1bf4",
@@ -3048,7 +3048,7 @@
         {
           "offset": "0x1cec",
           "original": "占いってさ、\nだいたい良い結果が\n出るよね。",
-          "text": "Fortunes always\ngive good results,\ndon't they?"
+          "text": "Fortunes usually\nturn out well,\ndon't they?"
         },
         {
           "offset": "0x1d18",
@@ -3058,7 +3058,7 @@
         {
           "offset": "0x1d44",
           "original": "占いってさ、\nだいたい、こんないい加減な\n結果が出るよね。",
-          "text": "Fortunes always\ngive sloppy results\nlike this."
+          "text": "Fortunes tend to\nbe pretty sloppy,\ndon't they?"
         },
         {
           "offset": "0x1d80",
@@ -3078,7 +3078,7 @@
         {
           "offset": "0x1e04",
           "original": "占いってさ、\nだいたい良い結果が\n出るよね。",
-          "text": "Fortunes always\ngive good results,\ndon't they?"
+          "text": "Fortunes usually\nturn out well,\ndon't they?"
         },
         {
           "offset": "0x1e30",
@@ -3088,7 +3088,7 @@
         {
           "offset": "0x1e5c",
           "original": "占いってさ、\nだいたい、こんないい加減な\n結果が出るよね。",
-          "text": "Fortunes always\ngive sloppy results\nlike this."
+          "text": "Fortunes tend to\nbe pretty sloppy,\ndon't they?"
         },
         {
           "offset": "0x1e98",
@@ -3148,32 +3148,32 @@
         {
           "offset": "0x2028",
           "original": "電脳部は、\n何やってるのかな？",
-          "text": "What's Computers\ndoing?"
+          "text": "What's the Computer Club\ndoing?"
         },
         {
           "offset": "0x2048",
           "original": "コンピューターゲームの\n展示みたいだね。\n{G}やってみない？",
-          "text": "Looks like a\ncomputer game exhibit.\n{G} want to try?"
+          "text": "Looks like they're\nshowing a computer game.\nWanna try, {G}?"
         },
         {
           "offset": "0x2088",
           "original": "電脳部は、\n何やってるのかな？",
-          "text": "What's Computers\ndoing?"
+          "text": "What's the Computer Club\ndoing?"
         },
         {
           "offset": "0x20a8",
           "original": "コンピューターゲームの\n展示みたいだね。\n{G}やってみない？",
-          "text": "Looks like a\ncomputer game exhibit.\n{G} want to try?"
+          "text": "Looks like they're\nshowing a computer game.\nWanna try, {G}?"
         },
         {
           "offset": "0x20e8",
           "original": "電脳部は、\n何やってるのかな？",
-          "text": "What's Computers\ndoing?"
+          "text": "What's the Computer Club\ndoing?"
         },
         {
           "offset": "0x2108",
           "original": "コンピューターゲームの\n展示みたいだね。\n{G}やってみない？",
-          "text": "Looks like a\ncomputer game exhibit.\n{G} want to try?"
+          "text": "Looks like they're\nshowing a computer game.\nWanna try, {G}?"
         },
         {
           "offset": "0x2148",
@@ -3368,7 +3368,7 @@
         {
           "offset": "0x2610",
           "original": "電脳部は、実験ショーを\nやってるみたいだね。",
-          "text": "Looks like Computers\nhas a demo on."
+          "text": "Computer Club's\nputting on a demo."
         },
         {
           "offset": "0x263c",
@@ -3378,7 +3378,7 @@
         {
           "offset": "0x2660",
           "original": "電脳部は、実験ショーを\nやってるみたいだね。",
-          "text": "Looks like Computers\nhas a demo on."
+          "text": "Computer Club's\nputting on a demo."
         },
         {
           "offset": "0x268c",
@@ -3388,7 +3388,7 @@
         {
           "offset": "0x26b0",
           "original": "電脳部は、実験ショーを\nやってるみたいだね。",
-          "text": "Looks like Computers\nhas a demo on."
+          "text": "Computer Club's\nputting on a demo."
         },
         {
           "offset": "0x26dc",
@@ -3468,7 +3468,7 @@
         {
           "offset": "0x2960",
           "original": "わ、私…、\n雷だけは駄目なの。",
-          "text": "I-I...\njust can't do lightning."
+          "text": "I-I...\nI can't stand lightning."
         },
         {
           "offset": "0x2980",
@@ -3503,7 +3503,7 @@
         {
           "offset": "0x2a74",
           "original": "{G}、\n描いてもらったら？",
-          "text": "{G}\nwant one done?"
+          "text": "{G},\nwant a portrait?"
         },
         {
           "offset": "0x2a8c",
@@ -3513,7 +3513,7 @@
         {
           "offset": "0x2afc",
           "original": "似顔絵どうだった？",
-          "text": "How's the portrait?"
+          "text": "How'd it turn out?"
         },
         {
           "offset": "0x2b10",
@@ -3568,7 +3568,7 @@
         {
           "offset": "0x2c90",
           "original": "{G}、\n描いてもらったら？",
-          "text": "{G}\nwant one done?"
+          "text": "{G},\nwant a portrait?"
         },
         {
           "offset": "0x2ca8",
@@ -3578,7 +3578,7 @@
         {
           "offset": "0x2d18",
           "original": "似顔絵どうだった？",
-          "text": "How's the portrait?"
+          "text": "How'd it turn out?"
         },
         {
           "offset": "0x2d2c",
@@ -3633,7 +3633,7 @@
         {
           "offset": "0x2ec8",
           "original": "{G}、\n描いてもらったら？",
-          "text": "{G}\nwant one done?"
+          "text": "{G},\nwant a portrait?"
         },
         {
           "offset": "0x2ee0",
@@ -3643,7 +3643,7 @@
         {
           "offset": "0x2f50",
           "original": "似顔絵どうだった？",
-          "text": "How's the portrait?"
+          "text": "How'd it turn out?"
         },
         {
           "offset": "0x2f64",
@@ -3673,7 +3673,7 @@
         {
           "offset": "0x3028",
           "original": "ど、どうしたの\n{G}？",
-          "text": "Wh-what's wrong,\n{G}"
+          "text": "Wh-what's up,\n{G}?"
         },
         {
           "offset": "0x303c",
@@ -3728,7 +3728,7 @@
         {
           "offset": "0x31d8",
           "original": "ど、どうしたの\n{G}？",
-          "text": "Wh-what's wrong,\n{G}"
+          "text": "Wh-what's up,\n{G}?"
         },
         {
           "offset": "0x31ec",
@@ -3738,7 +3738,7 @@
         {
           "offset": "0x3208",
           "original": "えっ、何が？",
-          "text": "Huh, what's good?"
+          "text": "Huh? What do you mean?"
         },
         {
           "offset": "0x3218",
@@ -3753,7 +3753,7 @@
         {
           "offset": "0x3288",
           "original": "{>部員}君、静かにしてくれ。\nデッサンの邪魔だよ。",
-          "text": "{>Club}Quiet, you.\nWe're sketching here."
+          "text": "{>Club}Keep it down.\nI'm trying to sketch."
         },
         {
           "offset": "0x32b8",
@@ -3763,7 +3763,7 @@
         {
           "offset": "0x32f0",
           "original": "ど、どうしたの\n{G}？",
-          "text": "Wh-what's wrong,\n{G}"
+          "text": "Wh-what's up,\n{G}?"
         },
         {
           "offset": "0x3304",
@@ -3773,7 +3773,7 @@
         {
           "offset": "0x3320",
           "original": "えっ、何が？",
-          "text": "Huh, what's good?"
+          "text": "Huh? What do you mean?"
         },
         {
           "offset": "0x3330",
@@ -3788,7 +3788,7 @@
         {
           "offset": "0x33a0",
           "original": "{>部員}君、静かにしてくれ。\nデッサンの邪魔だよ。",
-          "text": "{>Club}Quiet, you.\nWe're sketching here."
+          "text": "{>Club}Keep it down.\nI'm trying to sketch."
         },
         {
           "offset": "0x33d0",
@@ -3798,17 +3798,17 @@
         {
           "offset": "0x3408",
           "original": "美術部は、油絵の展示\nみたいだね。",
-          "text": "Looks like the Art Club\nis showing oils."
+          "text": "The Art Club has\noil paintings on display."
         },
         {
           "offset": "0x342c",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x3450",
           "original": "油絵なんて、見ても\nわかるかな？",
-          "text": "Will I even get\noil paintings?"
+          "text": "Will I even understand\noil paintings?"
         },
         {
           "offset": "0x3470",
@@ -3818,17 +3818,17 @@
         {
           "offset": "0x34ac",
           "original": "美術部は、油絵の展示\nみたいだね。",
-          "text": "Looks like the Art Club\nis showing oils."
+          "text": "The Art Club has\noil paintings on display."
         },
         {
           "offset": "0x34d0",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x34f4",
           "original": "油絵なんて見るの？",
-          "text": "We're seeing oils?"
+          "text": "We're seeing oil paintings?"
         },
         {
           "offset": "0x3508",
@@ -3843,17 +3843,17 @@
         {
           "offset": "0x3568",
           "original": "美術部は、油絵の展示\nみたいだね。",
-          "text": "Looks like the Art Club\nis showing oils."
+          "text": "The Art Club has\noil paintings on display."
         },
         {
           "offset": "0x358c",
           "original": "ほんとだ、\nたくさん飾ってあるね。",
-          "text": "So it does.\nThere are lots."
+          "text": "You're right.\nThere are so many."
         },
         {
           "offset": "0x35b0",
           "original": "油絵なんて見るの？",
-          "text": "We're seeing oils?"
+          "text": "We're seeing oil paintings?"
         },
         {
           "offset": "0x35c4",
@@ -3868,7 +3868,7 @@
         {
           "offset": "0x3620",
           "original": "やっぱり、\nよくわからなかったけど、\n奇麗な絵だったね。",
-          "text": "I didn't really\nget it, but they\nwere pretty paintings."
+          "text": "I didn't get it,\nbut the paintings\nwere pretty."
         },
         {
           "offset": "0x3658",
@@ -3928,7 +3928,7 @@
         {
           "offset": "0x3804",
           "original": "いい曲だと思ったんだけど、\n何の曲かわかった？",
-          "text": "I thought it was good.\nDid you know the song?"
+          "text": "I liked that tune.\nKnow what it was?"
         },
         {
           "offset": "0x3834",
@@ -3938,7 +3938,7 @@
         {
           "offset": "0x385c",
           "original": "ゲームの音楽？\nそれはわからないわ。",
-          "text": "Game music?\nNo way I'd know that."
+          "text": "Game music?\nI wouldn't know."
         },
         {
           "offset": "0x3880",
@@ -3963,7 +3963,7 @@
         {
           "offset": "0x3938",
           "original": "ゲーム？\nそれはわからないよ。",
-          "text": "A game?\nNo way I'd know that."
+          "text": "A game?\nI wouldn't know."
         },
         {
           "offset": "0x3958",
@@ -3978,7 +3978,7 @@
         {
           "offset": "0x39b4",
           "original": "いい曲だと思ったけど、\n何の曲かわかった？",
-          "text": "I thought it was good.\nDid you know the song?"
+          "text": "I liked that tune.\nKnow what it was?"
         },
         {
           "offset": "0x39e0",
@@ -3988,7 +3988,7 @@
         {
           "offset": "0x3a08",
           "original": "ゲーム？\nそうなんだ。",
-          "text": "A game?\nHuh."
+          "text": "A game?\nI see."
         },
         {
           "offset": "0x3a20",
@@ -4053,7 +4053,7 @@
         {
           "offset": "0x3c18",
           "original": "おかしかったー。\nこんなの大会前に聴いたら、\n力が抜けて駄目だね。",
-          "text": "That was hilarious!\nHear that before a meet\nand I'd go limp."
+          "text": "That was hilarious!\nThat tune before a meet\nwould throw me off."
         },
         {
           "offset": "0x3c5c",
@@ -4068,7 +4068,7 @@
         {
           "offset": "0x3cac",
           "original": "確かに、そんなときに\nこんな曲聴いてたら、\n力が抜けるね。",
-          "text": "Yeah, if you heard\nthat song then,\nyou'd go limp."
+          "text": "Yeah, hearing that\nbefore a meet would\nkill your focus."
         },
         {
           "offset": "0x3ce8",
@@ -4108,12 +4108,12 @@
         {
           "offset": "0x3e0c",
           "original": "わからなくても、\nいい曲は、やっぱり良いね。",
-          "text": "Even if you don't get it,\na good song is good."
+          "text": "You don't need to get it\nto know it's good music."
         },
         {
           "offset": "0x3e40",
           "original": "俺もよく\nわかんなかったけど、\n良かった気がするよ。",
-          "text": "I didn't really\nget it either, but\nit felt good."
+          "text": "I didn't really\nget it either, but\nI thought it was good."
         },
         {
           "offset": "0x3e74",
@@ -4223,7 +4223,7 @@
         {
           "offset": "0x78c0",
           "original": "何が？",
-          "text": "What is?"
+          "text": "What?"
         },
         {
           "offset": "0x78c8",

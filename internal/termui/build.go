@@ -98,14 +98,30 @@ func (s *state) startJob(cmd string, run func(io.Writer) error) {
 			_ = f.Sync()
 			_ = f.Close()
 		}
+		// Preserve the entire FAILED command log before latest.log can be
+		// replaced by the next command, even after the TUI is restarted.
+		if err != nil && f != nil {
+			if saveErr := saveLastError(s.logPath, s.errorLogPath()); saveErr != nil {
+				s.events <- "Could not save last-error.log: " + saveErr.Error()
+			}
+		}
 		s.completed <- err
 	}()
 }
 func (s *state) pump() bool {
-	if s.page != "running" {
-		return false
-	}
 	dirty := false
+	if s.clipboardDone != nil {
+		select {
+		case msg := <-s.clipboardDone:
+			s.clipboardDone = nil
+			s.status = msg
+			dirty = true
+		default:
+		}
+	}
+	if s.page != "running" {
+		return dirty
+	}
 	for i := 0; i < 300; i++ {
 		select {
 		case line := <-s.events:

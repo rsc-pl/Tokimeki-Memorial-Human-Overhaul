@@ -14,7 +14,7 @@
         {
           "offset": "0x54",
           "original": "３年間、科学部で頑張った\n成果が出たぜ。",
-          "text": "Three years in Science\nreally paid off."
+          "text": "Three years in Science Club\nreally paid off."
         },
         {
           "offset": "0x7c",
@@ -169,7 +169,7 @@
         {
           "offset": "0x418",
           "original": "こんにちは、{P}。",
-          "text": "Good afternoon, {P}"
+          "text": "Hi, {P}."
         },
         {
           "offset": "0x42c",
@@ -179,7 +179,7 @@
         {
           "offset": "0x438",
           "original": "この度は、なにか大きな賞\nをいただいたそうで、\nおめでとうございます。",
-          "text": "I hear you received\nsome great award.\nCongratulations."
+          "text": "I heard you won\na major award.\nCongratulations!"
         },
         {
           "offset": "0x480",
@@ -244,7 +244,7 @@
         {
           "offset": "0x5e0",
           "original": "あなたが受賞するのは、\n悪い気分じゃないわね。",
-          "text": "You winning a prize\ndoesn't feel bad."
+          "text": "Seeing you win doesn't\nfeel half bad."
         },
         {
           "offset": "0x620",
@@ -309,7 +309,7 @@
         {
           "offset": "0x758",
           "original": "ノーベル賞って本当ですか？",
-          "text": "Is the Nobel thing true?"
+          "text": "You won the Nobel Prize?"
         },
         {
           "offset": "0x774",
@@ -319,7 +319,7 @@
         {
           "offset": "0x784",
           "original": "すっごーい。\n今度サインくださいね。",
-          "text": "Awesome!\nGive me an autograph!"
+          "text": "Wow!\nCan I get your autograph?"
         },
         {
           "offset": "0x7a8",

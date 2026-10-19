@@ -9,12 +9,12 @@
         {
           "offset": "0x0",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x10",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x34",
@@ -34,17 +34,17 @@
         {
           "offset": "0xd4",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0xe4",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x108",
           "original": "こんな絵よく描けるね。",
-          "text": "How do they paint like this?"
+          "text": "How'd they paint that?"
         },
         {
           "offset": "0x120",
@@ -59,12 +59,12 @@
         {
           "offset": "0x1bc",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x1cc",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x1f0",
@@ -84,17 +84,17 @@
         {
           "offset": "0x2b8",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x2c8",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x2ec",
           "original": "んー？\n面白いのかなぁ？",
-          "text": "Hmm?\nIs this supposed to be fun?"
+          "text": "Hmm?\nIs it interesting?"
         },
         {
           "offset": "0x304",
@@ -109,12 +109,12 @@
         {
           "offset": "0x3a4",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x3b4",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x3d8",
@@ -124,7 +124,7 @@
         {
           "offset": "0x3f0",
           "original": "よく知ってるね。{q}{G}でも知ってるんだ。{q}有名な人の絵だからね。",
-          "text": "You know your stuff.{q}{G} knows it?{q}It's by a famous artist."
+          "text": "You know your stuff.{q}Even you, {G}?{q}It's by a famous artist."
         },
         {
           "offset": "0x434",
@@ -134,27 +134,27 @@
         {
           "offset": "0x49c",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x4ac",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x4d0",
           "original": "ちょださーっ。\nこれ前にも来たよ。",
-          "text": "Ugh, so lame!\nWe've been here before."
+          "text": "So lame!\nWe've been here before."
         },
         {
           "offset": "0x4f8",
           "original": "ちょださーっ。\nこれ前にも来たよ。",
-          "text": "Ugh, so lame!\nWe've been here before."
+          "text": "So lame!\nWe've been here before."
         },
         {
           "offset": "0x520",
           "original": "ちょださーっ。\nこれ前にも来たよ。",
-          "text": "Ugh, so lame!\nWe've been here before."
+          "text": "So lame!\nWe've been here before."
         },
         {
           "offset": "0x9c0",
@@ -224,7 +224,7 @@
         {
           "offset": "0xd84",
           "original": "ほら、{G}、\nこっちこっち。",
-          "text": "Here, {G},\nover here."
+          "text": "Hey, {G}!\nOver here!"
         },
         {
           "offset": "0xda8",
@@ -314,7 +314,7 @@
         {
           "offset": "0x1304",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yes, it really was cute.{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "Yeah, so cute!{q}Not cute at all!{q}But its eyes are creepy."
         },
         {
           "offset": "0x1348",
@@ -449,7 +449,7 @@
         {
           "offset": "0x19ac",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x19d4",
@@ -479,7 +479,7 @@
         {
           "offset": "0x1ac8",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1af0",
@@ -509,7 +509,7 @@
         {
           "offset": "0x20dc",
           "original": "それじゃあ、\n金魚すくいでもしようか？",
-          "text": "Well then,\nwanna scoop some goldfish?"
+          "text": "Wanna try\ngoldfish scooping?"
         },
         {
           "offset": "0x2104",
@@ -539,7 +539,7 @@
         {
           "offset": "0x21a0",
           "original": "取れたら{G}に\nあげるね。",
-          "text": "If I win, {G},\nyou can have it."
+          "text": "If I win, {G},\nit's yours."
         },
         {
           "offset": "0x21c4",
@@ -589,7 +589,7 @@
         {
           "offset": "0x2308",
           "original": "あっ、私も知ってる。\n留さんっていう人に\n聞いたんだ。{q}えぇーっ。\nこっちの方がいいよ。{q}やっぱそう思うよね。",
-          "text": "Oh, I know that one!\nSomeone named Tome\ntold me about it.{q}Whaaat?\nThese are way better.{q}Right? I knew you'd agree."
+          "text": "Oh, I know that one!\nTome-san told me\nabout it.{q}Whaaat?\nThese are better.{q}Right? I knew you'd agree."
         },
         {
           "offset": "0x2640",
@@ -669,7 +669,7 @@
         {
           "offset": "0x2c54",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2c74",
@@ -694,7 +694,7 @@
         {
           "offset": "0x2d24",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2d44",
@@ -714,7 +714,7 @@
         {
           "offset": "0x2dc4",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2de4",
@@ -959,7 +959,7 @@
         {
           "offset": "0x3e7c",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x3ea0",
@@ -969,7 +969,7 @@
         {
           "offset": "0x3ec4",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x3ee8",
@@ -1094,7 +1094,7 @@
         {
           "offset": "0x499c",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x49cc",
@@ -1414,7 +1414,7 @@
         {
           "offset": "0x5f68",
           "original": "{G}に似合いそうだね。{q}そう？全然。{q}それほどでも、ないと思うよ。",
-          "text": "That's so {G}{q}You think? Not at all.{q}Nah, it's not that cute."
+          "text": "Suits you, {G}.{q}You think? Not at all.{q}Not that cute, really."
         },
         {
           "offset": "0x5fb0",
@@ -1539,7 +1539,7 @@
         {
           "offset": "0x6a4c",
           "original": "気が進まないけど、\n入りましょ。",
-          "text": "I'm not really feeling it,\nbut let's go in."
+          "text": "Not thrilled, but\nlet's go in."
         },
         {
           "offset": "0x6a6c",
@@ -1564,7 +1564,7 @@
         {
           "offset": "0x6b40",
           "original": "気が進まないけど、\n入りましょ。",
-          "text": "I'm not really feeling it,\nbut let's go in."
+          "text": "Not thrilled, but\nlet's go in."
         },
         {
           "offset": "0x6b60",
@@ -1579,7 +1579,7 @@
         {
           "offset": "0x6b9c",
           "original": "　（説明する）。{q}教えてあげない。{q}俺もわかんないよ。",
-          "text": "(Explain it to her.){q}I'm not telling you.{q}I don't get it either."
+          "text": "(Explain.){q}I won't tell you.{q}I don't know either."
         },
         {
           "offset": "0x6bdc",
@@ -1589,7 +1589,7 @@
         {
           "offset": "0x6c3c",
           "original": "気が進まないけど、\n入りましょ。",
-          "text": "I'm not really feeling it,\nbut let's go in."
+          "text": "Not thrilled, but\nlet's go in."
         },
         {
           "offset": "0x6c5c",
@@ -1614,7 +1614,7 @@
         {
           "offset": "0x6d34",
           "original": "気が進まないけど、\n入りましょ。",
-          "text": "I'm not really feeling it,\nbut let's go in."
+          "text": "Not thrilled, but\nlet's go in."
         },
         {
           "offset": "0x6d54",
@@ -1714,12 +1714,12 @@
         {
           "offset": "0x7664",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x7674",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x7698",
@@ -1734,17 +1734,17 @@
         {
           "offset": "0x76f0",
           "original": "ラッキー。\nやめよやめよ。{q}ちょむかーっ。\nわかったわよ。{q}じゃあやめようよ。",
-          "text": "Lucky!\nLet's bail, let's bail.{q}Sooo annoying!\nFine, I get it.{q}Then let's skip it."
+          "text": "Lucky!\nLet's skip it!{q}Sooo annoying!\nFine, I get it.{q}Then let's skip it."
         },
         {
           "offset": "0x7740",
           "original": "中に、入るの？",
-          "text": "We're going in?"
+          "text": "Going in?"
         },
         {
           "offset": "0x7750",
           "original": "もちろん、ほら入ろうよ。",
-          "text": "Sure, c'mon, let's go in."
+          "text": "Sure, let's go in."
         },
         {
           "offset": "0x7774",
@@ -1819,7 +1819,7 @@
         {
           "offset": "0x7b6c",
           "original": "やっぱそうなんだ。{q}普通いないよ。{q}えっ？\n撮影用って何。",
-          "text": "Figured as much.{q}Well, normal people haven't.{q}Huh?\nWhat film ones?"
+          "text": "Figured as much.{q}Who has?{q}Huh?\nWhat film ones?"
         },
         {
           "offset": "0x7ba8",
@@ -1894,7 +1894,7 @@
         {
           "offset": "0x7e9c",
           "original": "また見たいね。{q}えっ、目をつぶっていたから。{q}すごかったね。",
-          "text": "Hey, let's see it again.{q}Huh? I had my eyes shut.{q}That was incredible."
+          "text": "Let's go again.{q}I had my eyes shut.{q}That was incredible."
         },
         {
           "offset": "0x7ee0",
@@ -1904,12 +1904,12 @@
         {
           "offset": "0x7f34",
           "original": "ちょろっと\n眠くなりそう。",
-          "text": "This might make me\na teeny bit sleepy."
+          "text": "Might get\nsleepy soon."
         },
         {
           "offset": "0x7f54",
           "original": "あーっ、眠かった。",
-          "text": "Yawn, that made me sleepy."
+          "text": "Man, I was sleepy."
         },
         {
           "offset": "0x7f68",
@@ -1924,7 +1924,7 @@
         {
           "offset": "0x8010",
           "original": "また乗るの？",
-          "text": "We're riding again?"
+          "text": "Again?"
         },
         {
           "offset": "0x8020",
@@ -1974,7 +1974,7 @@
         {
           "offset": "0x81cc",
           "original": "ねぇねぇ。\nもっかい乗ろうよ。{q}えぇーっ。\nもっと乗りたいのにぃ。{q}こういうの嫌いなの？",
-          "text": "Hey, hey.\nLet's ride again!{q}Whaaat?\nBut I wanna ride more!{q}You don't like this stuff?"
+          "text": "Hey, hey.\nOne more time!{q}Whaaat?\nI wanna go again!{q}You don't like this stuff?"
         },
         {
           "offset": "0x8228",
@@ -2019,7 +2019,7 @@
         {
           "offset": "0x83ac",
           "original": "また見たいね。{q}えっ、目をつぶっていたから。{q}すごかったね。",
-          "text": "Hey, let's see it again.{q}Huh? I had my eyes shut.{q}That was incredible."
+          "text": "Let's go again.{q}I had my eyes shut.{q}That was incredible."
         },
         {
           "offset": "0x83f0",
@@ -2029,12 +2029,12 @@
         {
           "offset": "0x8444",
           "original": "ちょろっと\n眠くなりそう。",
-          "text": "This might make me\na teeny bit sleepy."
+          "text": "Might get\nsleepy soon."
         },
         {
           "offset": "0x8464",
           "original": "あーっ、眠かった。",
-          "text": "Yawn, that made me sleepy."
+          "text": "Man, I was sleepy."
         },
         {
           "offset": "0x8478",
@@ -2049,7 +2049,7 @@
         {
           "offset": "0x8520",
           "original": "また乗るの？",
-          "text": "We're riding again?"
+          "text": "Again?"
         },
         {
           "offset": "0x8530",
@@ -2099,7 +2099,7 @@
         {
           "offset": "0x86dc",
           "original": "ねぇねぇ。\nもっかい乗ろうよ。{q}えぇーっ。\nもっと乗りたいのにぃ。{q}こういうの嫌いなの？",
-          "text": "Hey, hey.\nLet's ride again!{q}Whaaat?\nBut I wanna ride more!{q}You don't like this stuff?"
+          "text": "Hey, hey.\nOne more time!{q}Whaaat?\nI wanna go again!{q}You don't like this stuff?"
         },
         {
           "offset": "0x8738",
@@ -2164,12 +2164,12 @@
         {
           "offset": "0x89a0",
           "original": "ちょろっと\n眠くなりそう。",
-          "text": "This might make me\na teeny bit sleepy."
+          "text": "Might get\nsleepy soon."
         },
         {
           "offset": "0x89c0",
           "original": "あーっ、眠かった。",
-          "text": "Yawn, that made me sleepy."
+          "text": "Man, I was sleepy."
         },
         {
           "offset": "0x89d4",
@@ -2184,7 +2184,7 @@
         {
           "offset": "0x8a7c",
           "original": "また乗るの？",
-          "text": "We're riding again?"
+          "text": "Again?"
         },
         {
           "offset": "0x8a8c",
@@ -2259,12 +2259,12 @@
         {
           "offset": "0x9ae4",
           "original": "桜が満開だね。\n確か、情報誌にも\n載ってたよ。",
-          "text": "Cherry blossoms in full\nbloom! I think they were\nin a magazine, too."
+          "text": "Sakura in\nfull bloom! Saw it\nin a magazine."
         },
         {
           "offset": "0x9b14",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0x9b2c",

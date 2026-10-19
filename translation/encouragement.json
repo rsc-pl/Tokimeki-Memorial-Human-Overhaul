@@ -184,7 +184,7 @@
         {
           "offset": "0x50c",
           "original": "今日も、頑張って\n絵を描きましょう。",
-          "text": "Let's paint\nhard again today."
+          "text": "Let's work hard\non our art today."
         },
         {
           "offset": "0x530",
@@ -274,7 +274,7 @@
         {
           "offset": "0x6f0",
           "original": "すごい\n泳ぎだったね。",
-          "text": "That was\namazing swimming."
+          "text": "That was an\namazing swim!"
         },
         {
           "offset": "0x708",
@@ -334,7 +334,7 @@
         {
           "offset": "0x102c",
           "original": "くだらない実験ね。\nま、頑張りなさい。",
-          "text": "A foolish experiment.\nWell, do your best."
+          "text": "This experiment's silly.\nGood luck."
         },
         {
           "offset": "0x1054",
@@ -364,7 +364,7 @@
         {
           "offset": "0x1120",
           "original": "今回は、こんなものね。\n次も、頑張りなさいよ。",
-          "text": "That's about it this time.\nDo your best next time."
+          "text": "That's it for now.\nDo your best next time."
         },
         {
           "offset": "0x1150",
@@ -374,7 +374,7 @@
         {
           "offset": "0x131c",
           "original": "君がそんな事をしても\nまったくの無意味だ。\n無駄な努力はやめたまえ。",
-          "text": "Your doing that is\ncompletely pointless.\nGive up the vain effort."
+          "text": "What you're doing\nis utterly pointless.\nStop wasting your time."
         },
         {
           "offset": "0x1364",
@@ -394,7 +394,7 @@
         {
           "offset": "0x1404",
           "original": "頑張ってるつもりだろうが、\nまったく無駄だ。\nこれだから庶民は…。",
-          "text": "You think you're trying,\nbut it's all in vain.\nSuch is the commoner..."
+          "text": "You think you're trying,\nbut it's all pointless.\nTypical commoners..."
         },
         {
           "offset": "0x144c",
@@ -454,7 +454,7 @@
         {
           "offset": "0x1748",
           "original": "今日の演奏、\nグッドだったわよ。",
-          "text": "Your playing today\nwas good, very good."
+          "text": "Your playing today\nwas good!"
         },
         {
           "offset": "0x1768",
@@ -554,7 +554,7 @@
         {
           "offset": "0x1d8c",
           "original": "すごい汗ですね。\nあまり無理は、\nしないでくださいね。",
-          "text": "You're sweating so.\nPlease don't push\nyourself too hard."
+          "text": "You're sweating a lot.\nPlease don't push\nyourself too hard."
         },
         {
           "offset": "0x1dc4",
@@ -589,7 +589,7 @@
         {
           "offset": "0x1fac",
           "original": "{G}ほどじゃ\nないけどね。",
-          "text": "{G} more than me,\nthough."
+          "text": "{G}, you work\nharder than I do."
         },
         {
           "offset": "0x1fcc",
@@ -609,7 +609,7 @@
         {
           "offset": "0x2034",
           "original": "{G}ほどじゃ\nないけどね。",
-          "text": "{G} more than me,\nthough."
+          "text": "{G}, you work\nharder than I do."
         },
         {
           "offset": "0x2054",
@@ -634,7 +634,7 @@
         {
           "offset": "0x20c8",
           "original": "今日も練習頑張ろうぜ。",
-          "text": "Let's crush practice today."
+          "text": "Let's give it our all today!"
         },
         {
           "offset": "0x20e0",
@@ -804,7 +804,7 @@
         {
           "offset": "0x2a1c",
           "original": "俺だけ、特別かぁ。\n嬉しいな。",
-          "text": "Special, just for me.\nThat's so great."
+          "text": "Mine's special...\nI'm so happy."
         },
         {
           "offset": "0x2a40",

@@ -169,7 +169,7 @@
         {
           "offset": "0xaf0",
           "original": "左右に別れちゃったわね。",
-          "text": "It's split on both sides."
+          "text": "That's a split."
         },
         {
           "offset": "0xb0c",
@@ -219,7 +219,7 @@
         {
           "offset": "0xe88",
           "original": "ほら、{G}、\nこっちこっち。",
-          "text": "Here, {G}\nover here."
+          "text": "Hey, {G}!\nOver here!"
         },
         {
           "offset": "0xea8",
@@ -474,7 +474,7 @@
         {
           "offset": "0x1b9c",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1bc4",
@@ -484,7 +484,7 @@
         {
           "offset": "0x1bfc",
           "original": "そ、そう。\nでも、読んでくれたんだ。\nありがとう。",
-          "text": "O-oh.\nBut you read it.\nThanks."
+          "text": "O-oh.\nYou read it, though.\nThanks."
         },
         {
           "offset": "0x1c38",
@@ -494,7 +494,7 @@
         {
           "offset": "0x1c68",
           "original": "そ、そう。\nでも、読んでくれたんだ。\nありがとう。",
-          "text": "O-oh.\nBut you read it.\nThanks."
+          "text": "O-oh.\nYou read it, though.\nThanks."
         },
         {
           "offset": "0x1ca4",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1cd4",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1cfc",
@@ -514,7 +514,7 @@
         {
           "offset": "0x1d34",
           "original": "そ、そう。\nでも、読んでくれたんだ。\nありがとう。",
-          "text": "O-oh.\nBut you read it.\nThanks."
+          "text": "O-oh.\nYou read it, though.\nThanks."
         },
         {
           "offset": "0x1d70",
@@ -524,7 +524,7 @@
         {
           "offset": "0x1da0",
           "original": "そ、そう。\nでも、読んでくれたんだ。\nありがとう。",
-          "text": "O-oh.\nBut you read it.\nThanks."
+          "text": "O-oh.\nYou read it, though.\nThanks."
         },
         {
           "offset": "0x23a0",
@@ -534,7 +534,7 @@
         {
           "offset": "0x23bc",
           "original": "それじゃあ、\n金魚すくいでもしようか？",
-          "text": "Well then,\nwanna scoop some goldfish?"
+          "text": "Wanna try\ngoldfish scooping?"
         },
         {
           "offset": "0x23e4",
@@ -564,7 +564,7 @@
         {
           "offset": "0x2478",
           "original": "取れたら{G}にあげるね。",
-          "text": "I'll win it for {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x249c",
@@ -664,7 +664,7 @@
         {
           "offset": "0x2bb0",
           "original": "本物のお金じゃないのに、\n楽しいの？",
-          "text": "It's not even real money.\nIs it fun?"
+          "text": "It's not real money.\nIs that fun?"
         },
         {
           "offset": "0x2bd4",
@@ -699,7 +699,7 @@
         {
           "offset": "0x2fdc",
           "original": "別に、待ってないわ。\n時間通りだから。",
-          "text": "I haven't waited.\nYou're on time."
+          "text": "No, not at all.\nYou're on time."
         },
         {
           "offset": "0x3004",
@@ -729,7 +729,7 @@
         {
           "offset": "0x3078",
           "original": "別に、待ってないわ。",
-          "text": "I haven't been waiting."
+          "text": "No, not at all."
         },
         {
           "offset": "0x3090",
@@ -1019,7 +1019,7 @@
         {
           "offset": "0x46cc",
           "original": "あそこが空いてるよ。\n座ろう。",
-          "text": "There are seats open there.\nLet's sit."
+          "text": "Look, empty seats.\nLet's sit."
         },
         {
           "offset": "0x46f0",
@@ -1049,7 +1049,7 @@
         {
           "offset": "0x4a28",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x4a58",
@@ -1359,7 +1359,7 @@
         {
           "offset": "0x5f64",
           "original": "{G}は、嫌いなんだ。{q}すごく、可愛いじゃないか。{q}そ、そうだね。俺もそう思うよ。",
-          "text": "So you hate it, {G}{q}But it's really cute here.{q}Y-yeah, I think so, too."
+          "text": "Don't like it, {G}?{q}But it's really cute here.{q}Y-yeah, I think so, too."
         },
         {
           "offset": "0x5fb8",
@@ -1479,7 +1479,7 @@
         {
           "offset": "0x69a8",
           "original": "{G}は嫌いなの？{q}別に、面白くないよ。{q}よくわからないけど、面白いよ。",
-          "text": "So you hate it, {G}{q}It's not that fun.{q}No idea, but it's fun."
+          "text": "Don't like it, {G}?{q}It's not that fun.{q}No idea, but it's fun."
         },
         {
           "offset": "0x69f4",
@@ -1674,7 +1674,7 @@
         {
           "offset": "0x7830",
           "original": "この図書館では、\n資料が足りないわ。",
-          "text": "This library doesn't\nhave enough material."
+          "text": "Not enough research\nmaterial here."
         },
         {
           "offset": "0x7854",
@@ -1709,7 +1709,7 @@
         {
           "offset": "0x7b1c",
           "original": "{G}、\nヒーローショーを\n見にいかないか？",
-          "text": "{G}\nwant to go see\nthe hero show?"
+          "text": "{G},\nwanna see\nthe hero show?"
         },
         {
           "offset": "0x7b48",
@@ -1749,7 +1749,7 @@
         {
           "offset": "0x7c3c",
           "original": "待たせたわね。\nさあ、行くわよ。",
-          "text": "Kept you waiting, huh?\nCome on, let's go."
+          "text": "I kept you waiting.\nLet's go."
         },
         {
           "offset": "0x7c5c",
@@ -1839,7 +1839,7 @@
         {
           "offset": "0x802c",
           "original": "何度見ても、\nつまらないわ。",
-          "text": "It's boring no\nmatter how often."
+          "text": "Still boring,\nevery time."
         },
         {
           "offset": "0x8048",
@@ -1959,7 +1959,7 @@
         {
           "offset": "0x8664",
           "original": "何度見ても、\nつまらないわ。",
-          "text": "It's boring no\nmatter how often."
+          "text": "Still boring,\nevery time."
         },
         {
           "offset": "0x8680",
@@ -2084,7 +2084,7 @@
         {
           "offset": "0x8c9c",
           "original": "今日は体調が悪かったんだよ。{q}別に良いじゃない。{q}乗ってる感覚になったんだ。",
-          "text": "You're just off today.{q}What's the harm in that?{q}So it felt like a real ride?"
+          "text": "You're just off today.{q}What's the harm in that?{q}It felt like a real ride."
         },
         {
           "offset": "0x8cf0",
@@ -2194,7 +2194,7 @@
         {
           "offset": "0x9ef0",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0x9f08",

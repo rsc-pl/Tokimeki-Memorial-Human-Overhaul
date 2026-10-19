@@ -1,82 +1,372 @@
 {
   "description": "Mio's special events: all of SERIFU/EVENT_KI.BIN (entries 37-41: carrying her books, fainting on a ride, the beach shade, lost in a book, crying at the cinema). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_KI.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あっ、あれは如月さん。\n重そうな本を抱えて、\n大変そうだぞ。", "text": "Oh, Kisaragi-san.\nThose books look heavy.\nShe's struggling."},
-      {"offset": "0x40", "original": "大変そうだね、\n{G}。", "text": "That looks tough,\n{G}"},
-      {"offset": "0x54", "original": "{P}、\nそ、そんなことは\nないですよ。", "text": "{P}\nN-no, it's\nreally not."},
-      {"offset": "0x78", "original": "俺が持ってあげるから、\nほら、貸して？", "text": "I'll carry them,\nhere, hand them over."},
-      {"offset": "0xa0", "original": "い、いえ、大丈夫です。\nそれに、\n迷惑がかかりますし…。", "text": "N-no, I'm all right.\nBesides,\nit would be a bother..."},
-      {"offset": "0xd8", "original": "こういう事は、\n男に任せておけば\nいいの。", "text": "This sort of thing,\nyou leave to\nthe guys."},
-      {"offset": "0x104", "original": "え…、でも…。", "text": "Oh... but..."},
-      {"offset": "0x114", "original": "いいから、いいから。\nよいしょっと。", "text": "It's fine, it's fine.\nHup!"},
-      {"offset": "0x154", "original": "あ、ありがとうございます。\nとても、嬉しいです。", "text": "Th-thank you so much.\nI'm really happy."},
-      {"offset": "0x184", "original": "それで、これはどこまで\n運べばいいのかな？", "text": "So, how far do\nthese need to go?"},
-      {"offset": "0x1b0", "original": "あっ、すみません。\nそれでは、図書館まで\nお願いできますか…。", "text": "Oh, I'm sorry.\nThen, could you take\nthem to the library...?"},
-      {"offset": "0x1f0", "original": "お安い御用だよ。", "text": "No problem at all."},
-      {"offset": "0x204", "original": "本当に、\n優しいんですね…。", "text": "You're really\nso kind..."},
-      {"offset": "0x220", "original": "{G}みたいに\n可愛い娘なら、\nいつでも手伝っちゃうよ。", "text": "Oh, for {G}\na girl this cute,\nI'd help out any time."},
-      {"offset": "0x26c", "original": "か、可愛いだなんて…、\nそ、そんな事…。\n嬉しい…。", "text": "C-cute? Me...?\nI-I'm not...\nI'm so happy..."},
-      {"offset": "0x2a0", "original": "ほら、早く図書館に\n行かないと\n授業が始まっちゃうよ。", "text": "Come on, let's get to\nthe library fast, or\nclass will start."},
-      {"offset": "0x2d8", "original": "そ、そうですね。\n早く行きましょう。", "text": "Y-yes, you're right.\nLet's hurry."},
-      {"offset": "0x52c", "original": "どうしても、\n乗らなければ\n駄目ですか…。", "text": "Do we\nreally have\nto ride it...?"},
-      {"offset": "0x558", "original": "絶対乗るの。{q}やっぱりやめよう。", "text": "We're riding it.{q}Okay, let's not."},
-      {"offset": "0x580", "original": "そうですか。\nでは、\n私も覚悟を決めます。{q}良かった…。\nそれでは、\n戻りましょう。{q}だみ", "text": "I see.\nThen I'll\nsteel myself too.{q}Thank goodness...\nWell then,\nlet's go back.{q}dummy"},
-      {"offset": "0x5dc", "original": "ス、スリルあったね。\n{G}。", "text": "Wh-what a thrill,\neh, {G}"},
-      {"offset": "0x604", "original": "{G}。\nどうしたの？", "text": "Oh, {G}\nwhat's wrong?"},
-      {"offset": "0x624", "original": "{G}、大丈夫？\n（やばいな。\n完全に気を失ってるよ。）", "text": "You okay, {G}\n(Uh-oh.\nShe's totally passed out.)"},
-      {"offset": "0x65c", "original": "う、ううん。", "text": "Mm, mmm..."},
-      {"offset": "0x670", "original": "あっ、気がついた？\n良かった。", "text": "Oh, you're awake?\nThank goodness."},
-      {"offset": "0x690", "original": "わ、私…。\nやっぱり気絶して\nしまったんですね。", "text": "I-I...\nI fainted after all,\ndidn't I?"},
-      {"offset": "0x6c0", "original": "とりあえず、\n降りようよ。", "text": "For now,\nlet's get off."},
-      {"offset": "0x6e8", "original": "だから私、\n気が進まなかったんです…。", "text": "That's why I\ndidn't want to..."},
-      {"offset": "0x710", "original": "ごめんよ。\nこんな事になるとは\n思わなかったんだよ。", "text": "I'm sorry.\nI never thought\nthis would happen."},
-      {"offset": "0x744", "original": "いいえ、私も、断れば\nよかったんですから…。", "text": "No, I should have\njust said no..."},
-      {"offset": "0x770", "original": "もう、無理はさせないから、\nごめんね。", "text": "I won't push you again.\nI'm sorry."},
-      {"offset": "0x9c0", "original": "あの、私、直射日光は\n身体に良くないので、\n日陰で休んでます。", "text": "Um, direct sunlight\nisn't good for me,\nso I'll rest in the shade."},
-      {"offset": "0xa00", "original": "そ、そう。\nじゃあ、俺も付き合うよ。", "text": "O-oh.\nI'll keep you company."},
-      {"offset": "0xa2c", "original": "あの…、私のことなら、\n放っておいて\n構いませんよ。", "text": "Um... don't mind me,\nyou can\nleave me be."},
-      {"offset": "0xa60", "original": "そんな訳にいかないよ。", "text": "I can't do that."},
-      {"offset": "0xa78", "original": "せっかく\n海に来たんですから、\n私に合わせなくても…。", "text": "We came all the way\nto the sea, you don't\nhave to stay with me..."},
-      {"offset": "0xab0", "original": "俺はね、\nただ海に来たかった\nわけじゃないの。", "text": "Listen,\nI didn't just want\nto come to the sea."},
-      {"offset": "0xae0", "original": "そうなんですか？\nだとすると…。", "text": "Is that so?\nThen..."},
-      {"offset": "0xb00", "original": "{G}と一緒に\n海に来たかったんだよ。\nだから、{G}が\n日陰にいるなら、\n俺も、喜んでそうするよ。", "text": "It's with {G}\nI wanted to visit the sea.\nSo if {G}\nstays in the shade,\nI'm happy to stay too."},
-      {"offset": "0xb70", "original": "えっ、嬉しいです…。\nでもごめんなさい。\n身体が丈夫なら…。", "text": "Oh, I'm so happy...\nBut I'm sorry.\nIf only I were stronger..."},
-      {"offset": "0xbac", "original": "いいの、いいの。\n{G}の\n水着姿も見れたしね。", "text": "It's fine, it's fine.\nI saw {G}\nin a swimsuit, after all."},
-      {"offset": "0xbd8", "original": "えっ、あんまり\n見ないでくださいね。\n恥ずかしいです…。", "text": "Oh, please don't\nlook too much.\nIt's embarrassing..."},
-      {"offset": "0xc10", "original": "{G}って、\nやっぱり可愛いぜ…。", "text": "Gosh, {G}\nis adorable..."},
-      {"offset": "0xdc8", "original": "{G}…。\n{G}…。", "text": "Um, {G}\nHelloo, {G}"},
-      {"offset": "0xde0", "original": "返事がないぞ…。", "text": "No answer..."},
-      {"offset": "0xe00", "original": "駄目だ。\n本に熱中してて、\n声が聞こえないらしい。", "text": "No use.\nShe's so into her book\nshe can't hear me."},
-      {"offset": "0xe40", "original": "このまま、\nそっとしておこう。", "text": "I'll just\nleave her alone."},
-      {"offset": "0xe6c", "original": "そろそろ\n帰りましょうか？", "text": "Shall we\nhead home soon?"},
-      {"offset": "0xe88", "original": "もう、本はいいの？", "text": "Are you done reading?"},
-      {"offset": "0xe9c", "original": "はい。\nあの…、本を読んでるとき\n私に声をかけましたか？", "text": "Yes.\nUm... while I was reading,\ndid you call me?"},
-      {"offset": "0xed4", "original": "ま、まあね。\nでも、別に大した用じゃ\nなかったから。", "text": "W-well, yeah.\nBut it wasn't\nanything important."},
-      {"offset": "0xf08", "original": "ごめんなさい。\n私、本に夢中になると…。", "text": "I'm sorry.\nWhen I get into a book..."},
-      {"offset": "0xf30", "original": "そんな事、\n気にしなくていいから。\nほら、帰ろうよ。", "text": "Don't worry\nabout that.\nCome on, let's go home."},
-      {"offset": "0xf64", "original": "はい、\nありがとうございます。", "text": "Okay,\nthank you."},
-      {"offset": "0x1140", "original": "くすん…。", "text": "Sniff..."},
-      {"offset": "0x114c", "original": "ん？\n{G}泣いてるのか？", "text": "Hm?\nCrying? {G}"},
-      {"offset": "0x116c", "original": "くすん…。\n可哀想…。", "text": "Sniff...\nThe poor thing..."},
-      {"offset": "0x1184", "original": "{G}て、感銘を\n受けやすいんだな…。", "text": "My, {G}\nis easily moved..."},
-      {"offset": "0x11b0", "original": "「只今の上映を持ちまして、\n　本日の上映を終了いたします。", "text": "This concludes\ntoday's screenings."},
-      {"offset": "0x11f0", "original": "今の映画、\nとても良かったですね。", "text": "That movie\nwas really good."},
-      {"offset": "0x1214", "original": "そういえば、{G}。\n途中で泣いてたでしょう。", "text": "Oh, {G}\nyou cried partway through."},
-      {"offset": "0x1248", "original": "えっ…。\n見てたんですか？\n恥ずかしい…。", "text": "Oh...\nYou saw?\nHow embarrassing..."},
-      {"offset": "0x1274", "original": "眼鏡を外した顔、\n可愛かったよ。", "text": "Your face without glasses\nwas cute."},
-      {"offset": "0x1294", "original": "そんな、可愛いだなんて…。", "text": "Oh, cute? Me...?"},
-      {"offset": "0x12b0", "original": "私…、眼鏡をしてないほうが\nいいですか？", "text": "Do you... like me better\nwithout my glasses?"},
-      {"offset": "0x12d8", "original": "そうだね。元がいいからね。\nそんな事はないよ。", "text": "Yep. You're pretty anyway.\nNah, not at all."},
-      {"offset": "0x131c", "original": "そうですか…？", "text": "Really...?"},
-      {"offset": "0x132c", "original": "思い切って、\nコンタクトにしてみたら？\nみんなびっくりするよ。", "text": "Why not be bold\nand try contacts?\nEveryone would be amazed."},
-      {"offset": "0x136c", "original": "コンタクトは\nちょっと、\n怖いですから…。", "text": "Contacts are\na little\nscary..."},
-      {"offset": "0x1398", "original": "でも、今のままでも、\n十分に可愛いから…。", "text": "But you're plenty\ncute just as you are..."},
-      {"offset": "0x13c4", "original": "お世辞でも、\n嬉しいです…。", "text": "Even if it's flattery,\nI'm happy..."},
-      {"offset": "0x13f4", "original": "そうですか？\nお世辞でも、\n嬉しいです…。", "text": "Really?\nEven if it's flattery,\nI'm happy..."}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_KI.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あっ、あれは如月さん。\n重そうな本を抱えて、\n大変そうだぞ。",
+          "text": "Oh, Kisaragi-san.\nThose books look heavy.\nShe's struggling."
+        },
+        {
+          "offset": "0x40",
+          "original": "大変そうだね、\n{G}。",
+          "text": "That looks tough,\n{G}"
+        },
+        {
+          "offset": "0x54",
+          "original": "{P}、\nそ、そんなことは\nないですよ。",
+          "text": "{P}\nN-no, it's\nreally not."
+        },
+        {
+          "offset": "0x78",
+          "original": "俺が持ってあげるから、\nほら、貸して？",
+          "text": "I'll carry them,\nhere, hand them over."
+        },
+        {
+          "offset": "0xa0",
+          "original": "い、いえ、大丈夫です。\nそれに、\n迷惑がかかりますし…。",
+          "text": "N-no, I'm all right.\nBesides,\nit would be a bother..."
+        },
+        {
+          "offset": "0xd8",
+          "original": "こういう事は、\n男に任せておけば\nいいの。",
+          "text": "This sort of thing,\nyou leave to\nthe guys."
+        },
+        {
+          "offset": "0x104",
+          "original": "え…、でも…。",
+          "text": "Oh... but..."
+        },
+        {
+          "offset": "0x114",
+          "original": "いいから、いいから。\nよいしょっと。",
+          "text": "It's fine, it's fine.\nHup!"
+        },
+        {
+          "offset": "0x154",
+          "original": "あ、ありがとうございます。\nとても、嬉しいです。",
+          "text": "Th-thank you so much.\nI'm really happy."
+        },
+        {
+          "offset": "0x184",
+          "original": "それで、これはどこまで\n運べばいいのかな？",
+          "text": "So, how far do\nthese need to go?"
+        },
+        {
+          "offset": "0x1b0",
+          "original": "あっ、すみません。\nそれでは、図書館まで\nお願いできますか…。",
+          "text": "Oh, I'm sorry.\nThen, could you take\nthem to the library...?"
+        },
+        {
+          "offset": "0x1f0",
+          "original": "お安い御用だよ。",
+          "text": "No problem at all."
+        },
+        {
+          "offset": "0x204",
+          "original": "本当に、\n優しいんですね…。",
+          "text": "You're really\nso kind..."
+        },
+        {
+          "offset": "0x220",
+          "original": "{G}みたいに\n可愛い娘なら、\nいつでも手伝っちゃうよ。",
+          "text": "Oh, for {G}\na girl this cute,\nI'd help out any time."
+        },
+        {
+          "offset": "0x26c",
+          "original": "か、可愛いだなんて…、\nそ、そんな事…。\n嬉しい…。",
+          "text": "C-cute? Me...?\nI-I'm not...\nI'm so happy..."
+        },
+        {
+          "offset": "0x2a0",
+          "original": "ほら、早く図書館に\n行かないと\n授業が始まっちゃうよ。",
+          "text": "Come on, let's get to\nthe library fast, or\nclass will start."
+        },
+        {
+          "offset": "0x2d8",
+          "original": "そ、そうですね。\n早く行きましょう。",
+          "text": "Y-yes, you're right.\nLet's hurry."
+        },
+        {
+          "offset": "0x52c",
+          "original": "どうしても、\n乗らなければ\n駄目ですか…。",
+          "text": "Do we\nreally have\nto ride it...?"
+        },
+        {
+          "offset": "0x558",
+          "original": "絶対乗るの。{q}やっぱりやめよう。",
+          "text": "We're riding it.{q}Okay, let's not."
+        },
+        {
+          "offset": "0x580",
+          "original": "そうですか。\nでは、\n私も覚悟を決めます。{q}良かった…。\nそれでは、\n戻りましょう。{q}だみ",
+          "text": "I see.\nThen I'll\nsteel myself too.{q}Thank goodness...\nWell then,\nlet's go back.{q}dummy"
+        },
+        {
+          "offset": "0x5dc",
+          "original": "ス、スリルあったね。\n{G}。",
+          "text": "Wh-what a thrill,\neh, {G}"
+        },
+        {
+          "offset": "0x604",
+          "original": "{G}。\nどうしたの？",
+          "text": "Oh, {G}\nwhat's wrong?"
+        },
+        {
+          "offset": "0x624",
+          "original": "{G}、大丈夫？\n（やばいな。\n完全に気を失ってるよ。）",
+          "text": "You okay, {G}\n(Uh-oh.\nShe's totally passed out.)"
+        },
+        {
+          "offset": "0x65c",
+          "original": "う、ううん。",
+          "text": "Mm, mmm..."
+        },
+        {
+          "offset": "0x670",
+          "original": "あっ、気がついた？\n良かった。",
+          "text": "Oh, you're awake?\nThank goodness."
+        },
+        {
+          "offset": "0x690",
+          "original": "わ、私…。\nやっぱり気絶して\nしまったんですね。",
+          "text": "I-I...\nI fainted after all,\ndidn't I?"
+        },
+        {
+          "offset": "0x6c0",
+          "original": "とりあえず、\n降りようよ。",
+          "text": "For now,\nlet's get off."
+        },
+        {
+          "offset": "0x6e8",
+          "original": "だから私、\n気が進まなかったんです…。",
+          "text": "That's why I\ndidn't want to..."
+        },
+        {
+          "offset": "0x710",
+          "original": "ごめんよ。\nこんな事になるとは\n思わなかったんだよ。",
+          "text": "I'm sorry.\nI never thought\nthis would happen."
+        },
+        {
+          "offset": "0x744",
+          "original": "いいえ、私も、断れば\nよかったんですから…。",
+          "text": "No, I should have\njust said no..."
+        },
+        {
+          "offset": "0x770",
+          "original": "もう、無理はさせないから、\nごめんね。",
+          "text": "I won't push you again.\nI'm sorry."
+        },
+        {
+          "offset": "0x9c0",
+          "original": "あの、私、直射日光は\n身体に良くないので、\n日陰で休んでます。",
+          "text": "Um, direct sunlight\nisn't good for me,\nso I'll rest in the shade."
+        },
+        {
+          "offset": "0xa00",
+          "original": "そ、そう。\nじゃあ、俺も付き合うよ。",
+          "text": "O-oh.\nI'll keep you company."
+        },
+        {
+          "offset": "0xa2c",
+          "original": "あの…、私のことなら、\n放っておいて\n構いませんよ。",
+          "text": "Um... don't mind me,\nyou can\nleave me be."
+        },
+        {
+          "offset": "0xa60",
+          "original": "そんな訳にいかないよ。",
+          "text": "I can't do that."
+        },
+        {
+          "offset": "0xa78",
+          "original": "せっかく\n海に来たんですから、\n私に合わせなくても…。",
+          "text": "We came all the way\nto the sea, you don't\nhave to stay with me..."
+        },
+        {
+          "offset": "0xab0",
+          "original": "俺はね、\nただ海に来たかった\nわけじゃないの。",
+          "text": "Listen,\nI didn't just want\nto come to the sea."
+        },
+        {
+          "offset": "0xae0",
+          "original": "そうなんですか？\nだとすると…。",
+          "text": "Is that so?\nThen..."
+        },
+        {
+          "offset": "0xb00",
+          "original": "{G}と一緒に\n海に来たかったんだよ。\nだから、{G}が\n日陰にいるなら、\n俺も、喜んでそうするよ。",
+          "text": "It's with {G}\nI wanted to visit the sea.\nSo if {G}\nstays in the shade,\nI'm happy to stay too."
+        },
+        {
+          "offset": "0xb70",
+          "original": "えっ、嬉しいです…。\nでもごめんなさい。\n身体が丈夫なら…。",
+          "text": "Oh, I'm so happy...\nBut I'm sorry.\nIf only I were stronger..."
+        },
+        {
+          "offset": "0xbac",
+          "original": "いいの、いいの。\n{G}の\n水着姿も見れたしね。",
+          "text": "It's fine, it's fine.\nI saw {G}\nin a swimsuit, after all."
+        },
+        {
+          "offset": "0xbd8",
+          "original": "えっ、あんまり\n見ないでくださいね。\n恥ずかしいです…。",
+          "text": "Oh, please don't\nlook too much.\nIt's embarrassing..."
+        },
+        {
+          "offset": "0xc10",
+          "original": "{G}って、\nやっぱり可愛いぜ…。",
+          "text": "Gosh, {G}\nis adorable..."
+        },
+        {
+          "offset": "0xdc8",
+          "original": "{G}…。\n{G}…。",
+          "text": "Um, {G}\nHelloo, {G}"
+        },
+        {
+          "offset": "0xde0",
+          "original": "返事がないぞ…。",
+          "text": "No answer..."
+        },
+        {
+          "offset": "0xe00",
+          "original": "駄目だ。\n本に熱中してて、\n声が聞こえないらしい。",
+          "text": "No use.\nShe's so into her book\nshe can't hear me."
+        },
+        {
+          "offset": "0xe40",
+          "original": "このまま、\nそっとしておこう。",
+          "text": "I'll just\nleave her alone."
+        },
+        {
+          "offset": "0xe6c",
+          "original": "そろそろ\n帰りましょうか？",
+          "text": "Shall we\nhead home soon?"
+        },
+        {
+          "offset": "0xe88",
+          "original": "もう、本はいいの？",
+          "text": "Are you done reading?"
+        },
+        {
+          "offset": "0xe9c",
+          "original": "はい。\nあの…、本を読んでるとき\n私に声をかけましたか？",
+          "text": "Yes.\nUm... while I was reading,\ndid you call me?"
+        },
+        {
+          "offset": "0xed4",
+          "original": "ま、まあね。\nでも、別に大した用じゃ\nなかったから。",
+          "text": "W-well, yeah.\nBut it wasn't\nanything important."
+        },
+        {
+          "offset": "0xf08",
+          "original": "ごめんなさい。\n私、本に夢中になると…。",
+          "text": "I'm sorry.\nWhen I get into a book..."
+        },
+        {
+          "offset": "0xf30",
+          "original": "そんな事、\n気にしなくていいから。\nほら、帰ろうよ。",
+          "text": "Don't worry\nabout that.\nCome on, let's go home."
+        },
+        {
+          "offset": "0xf64",
+          "original": "はい、\nありがとうございます。",
+          "text": "Okay,\nthank you."
+        },
+        {
+          "offset": "0x1140",
+          "original": "くすん…。",
+          "text": "Sniff..."
+        },
+        {
+          "offset": "0x114c",
+          "original": "ん？\n{G}泣いてるのか？",
+          "text": "Hm?\nIs {G} crying?"
+        },
+        {
+          "offset": "0x116c",
+          "original": "くすん…。\n可哀想…。",
+          "text": "Sniff...\nThe poor thing..."
+        },
+        {
+          "offset": "0x1184",
+          "original": "{G}て、感銘を\n受けやすいんだな…。",
+          "text": "My, {G}\nis easily moved..."
+        },
+        {
+          "offset": "0x11b0",
+          "original": "「只今の上映を持ちまして、\n　本日の上映を終了いたします。",
+          "text": "This concludes\ntoday's screenings."
+        },
+        {
+          "offset": "0x11f0",
+          "original": "今の映画、\nとても良かったですね。",
+          "text": "That movie\nwas really good."
+        },
+        {
+          "offset": "0x1214",
+          "original": "そういえば、{G}。\n途中で泣いてたでしょう。",
+          "text": "Say, {G}.\nYou cried during the film."
+        },
+        {
+          "offset": "0x1248",
+          "original": "えっ…。\n見てたんですか？\n恥ずかしい…。",
+          "text": "Oh...\nYou saw?\nHow embarrassing..."
+        },
+        {
+          "offset": "0x1274",
+          "original": "眼鏡を外した顔、\n可愛かったよ。",
+          "text": "Your face without glasses\nwas cute."
+        },
+        {
+          "offset": "0x1294",
+          "original": "そんな、可愛いだなんて…。",
+          "text": "Oh, cute? Me...?"
+        },
+        {
+          "offset": "0x12b0",
+          "original": "私…、眼鏡をしてないほうが\nいいですか？",
+          "text": "Do you... like me better\nwithout my glasses?"
+        },
+        {
+          "offset": "0x12d8",
+          "original": "そうだね。元がいいからね。\nそんな事はないよ。",
+          "text": "Yep. You're pretty anyway.\nNah, not at all."
+        },
+        {
+          "offset": "0x131c",
+          "original": "そうですか…？",
+          "text": "Really...?"
+        },
+        {
+          "offset": "0x132c",
+          "original": "思い切って、\nコンタクトにしてみたら？\nみんなびっくりするよ。",
+          "text": "Why not be bold\nand try contacts?\nEveryone would be amazed."
+        },
+        {
+          "offset": "0x136c",
+          "original": "コンタクトは\nちょっと、\n怖いですから…。",
+          "text": "Contacts are\na little\nscary..."
+        },
+        {
+          "offset": "0x1398",
+          "original": "でも、今のままでも、\n十分に可愛いから…。",
+          "text": "But you're plenty\ncute just as you are..."
+        },
+        {
+          "offset": "0x13c4",
+          "original": "お世辞でも、\n嬉しいです…。",
+          "text": "Even if it's flattery,\nI'm happy..."
+        },
+        {
+          "offset": "0x13f4",
+          "original": "そうですか？\nお世辞でも、\n嬉しいです…。",
+          "text": "Really?\nEven if it's flattery,\nI'm happy..."
+        }
+      ]
+    }
+  ]
 }

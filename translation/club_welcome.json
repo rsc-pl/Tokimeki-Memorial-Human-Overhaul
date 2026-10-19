@@ -1,101 +1,467 @@
 {
   "description": "A girl welcoming the player to her club: all of SERIFU/NYUBU.BIN (base 0x80197000; game-internals 6q), 91 of 93 strings; the two '‥‥‥‥。' pauses stay. Eight sections from KANGEI.EXN's tables at 0x80139950 (`tools/geko_sections.py --nyubu`): 0 Shiori (parts by club: any club, baseball, soccer, other; she greets a new member or he finds her there), 1 Yuina, 2 Ayako (Art Club / Band), 3 Mio, 4 Yukari (Tennis), 5 Nozomi (swim team), 6 Saki (baseball / soccer manager), 7 the default case for girl ids 7 and up (a basketball-team line). Codes: 00 player, 01 girl, 0C/0D 'Oh, {P}' plus her line in one box. The player's lines that address her end the first line on {G} with an even-length lead-in ('Hi, {G}', 'Oh, {G}') so odd-length names don't show their pair padding before a comma. Verified in DuckStation with tools/emu/force_club_welcome.py (main state 0x60, hidden emulator; docs/testing.md 'Club welcome'): every section; Shiori's baseball, soccer and general parts (with a club set: her background is looked up by club and hangs with none, unpatched too); Yuina, Ayako's Art Club and Band, Mio, Yukari, Nozomi, Saki's soccer part, and section 7 via girl 10. Checked only statically: the other parts (the 'already there' variants of some girls, Saki's baseball part, Yuina's 'you forced me' part), and the natural trigger.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/NYUBU.BIN",
-    "base": "0x80197000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0xc", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x24", "original": "詩織、\nこれからよろしく。", "text": "Shiori,\nhope we get along."},
-      {"offset": "0x40", "original": "こちらこそ。", "text": "Likewise."},
-      {"offset": "0x60", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x6c", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x84", "original": "詩織、\nこの部だったんだ。", "text": "Shiori,\nso you're in this club."},
-      {"offset": "0xa0", "original": "そうよ。\nこれからよろしくね。", "text": "That's right.\nI hope we get along."},
-      {"offset": "0xd0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0xdc", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0xf4", "original": "詩織、\nこれからよろしく。", "text": "Shiori,\nhope we get along."},
-      {"offset": "0x110", "original": "こちらこそ。\n甲子園目指して、\n頑張ってね。", "text": "You too.\nDo your best\nand make it to Koshien!"},
-      {"offset": "0x14c", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x158", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x170", "original": "詩織、\nこの部だったんだ。", "text": "Shiori,\nso you're in this club."},
-      {"offset": "0x18c", "original": "そうよ。\n甲子園目指して、\n頑張ってね。", "text": "That's right.\nDo your best\nand make it to Koshien!"},
-      {"offset": "0x1c4", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x1d0", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x1e8", "original": "詩織、\nこれからよろしく。", "text": "Shiori,\nhope we get along."},
-      {"offset": "0x204", "original": "こちらこそ。\n国立競技場目指して、\n頑張ってね。", "text": "You too.\nSet your sights on\nthe National Stadium!"},
-      {"offset": "0x244", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x250", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x268", "original": "詩織、\nこの部だったんだ。", "text": "Shiori,\nso you're in this club."},
-      {"offset": "0x284", "original": "そうよ。\n国立競技場目指して、\n頑張ってね。", "text": "That's right.\nSet your sights on\nthe National Stadium!"},
-      {"offset": "0x2c0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x2cc", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x2e4", "original": "詩織、\nこれからよろしく。", "text": "Shiori,\nhope we get along."},
-      {"offset": "0x300", "original": "こちらこそ。\nお互いに頑張りましょう。", "text": "Likewise.\nLet's both do our best."},
-      {"offset": "0x338", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x344", "original": "この部に入部したの？", "text": "You joined this club?"},
-      {"offset": "0x35c", "original": "詩織、\nこの部だったんだ。", "text": "Shiori,\nso you're in this club."},
-      {"offset": "0x378", "original": "そうよ。\nお互いに頑張りましょう。", "text": "That's right.\nLet's both do our best."},
-      {"offset": "0x7cc", "original": "{P}\nこの部に来たのね。", "text": "{P},\nso you came to this club."},
-      {"offset": "0x7e4", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0x7fc", "original": "せいぜい、\n頑張りなさい。", "text": "Well,\ndo your best, I suppose."},
-      {"offset": "0x824", "original": "{P}\nこの部に来たのね。", "text": "{P},\nso you came to this club."},
-      {"offset": "0x83c", "original": "{G}、\nこの部だったんだ。", "text": "Oh, {G}\nso you're in this club."},
-      {"offset": "0x854", "original": "そうよ。\nよく覚えておきなさい。", "text": "That's right.\nDon't you forget it."},
-      {"offset": "0x890", "original": "{P}\nこの部に来たのね。", "text": "{P},\nso you came to this club."},
-      {"offset": "0x8a8", "original": "{G}が、\n無理矢理に…。", "text": "Wait, {G}\nyou forced me..."},
-      {"offset": "0x8c0", "original": "全然、身に覚えがないわ。\nとにかく、歓迎するわよ。", "text": "I don't recall doing that.\nAnyway, welcome aboard."},
-      {"offset": "0xa7c", "original": "ウェルカム。\nようこそ美術部へ。", "text": "Welcome!\nWelcome to the Art Club."},
-      {"offset": "0xa9c", "original": "{G}。\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0xab4", "original": "こちらこそ。\nよろしくね。", "text": "You too.\nLooking forward to it!"},
-      {"offset": "0xae0", "original": "ウェルカム。\nようこそ吹奏楽部へ。", "text": "Welcome!\nWelcome to the Band."},
-      {"offset": "0xb04", "original": "{G}。\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0xb1c", "original": "こちらこそ。\nよろしくね。", "text": "You too.\nLooking forward to it!"},
-      {"offset": "0xb48", "original": "ウェルカム。\nようこそ美術部へ。", "text": "Welcome!\nWelcome to the Art Club."},
-      {"offset": "0xb68", "original": "{G}。\nこの部だったんだ。", "text": "Oh, {G}\nso you're in this club."},
-      {"offset": "0xb80", "original": "知らなかったの？\nそうよ。\nこれから、よろしくね。", "text": "You didn't know?\nYeah.\nLooking forward to it!"},
-      {"offset": "0xbc4", "original": "ウェルカム。\nようこそ吹奏楽部へ。", "text": "Welcome!\nWelcome to the Band."},
-      {"offset": "0xbe8", "original": "{G}。\nこの部だったんだ。", "text": "Oh, {G}\nso you're in this club."},
-      {"offset": "0xc00", "original": "知らなかったの？\nそうよ。\nこれから、よろしくね。", "text": "You didn't know?\nYeah.\nLooking forward to it!"},
-      {"offset": "0xe54", "original": "この部に\n入部したんですね？", "text": "So you joined\nthis club?"},
-      {"offset": "0xe70", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0xe88", "original": "こちらこそ。\nよろしくお願いします。", "text": "Likewise.\nI look forward to it."},
-      {"offset": "0xebc", "original": "この部に\n入部したんですね？", "text": "So you joined\nthis club?"},
-      {"offset": "0xed8", "original": "{G}、\nこの部だったんだ。", "text": "Oh, {G}\nso you're in this club."},
-      {"offset": "0xef0", "original": "そうですよ。\nこれから、\nよろしくお願いしますね。", "text": "Yes, I am.\nI look forward\nto working with you."},
-      {"offset": "0x103c", "original": "{P}\nこんにちは。\nテニス部にようこそ。", "text": "{P},\ngood afternoon. Welcome\nto the Tennis Club."},
-      {"offset": "0x1060", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0x1078", "original": "こちらこそ。\nよろしくお願い\nいたします。", "text": "Likewise.\nI look forward\nto it."},
-      {"offset": "0x10b0", "original": "{P}\nこんにちは。\nテニス部にようこそ。", "text": "{P},\ngood afternoon. Welcome\nto the Tennis Club."},
-      {"offset": "0x10d4", "original": "{G}、\nこの部だったんだ。", "text": "Oh, {G}\nso you're in this club."},
-      {"offset": "0x10ec", "original": "そうなんですよ。\nこれから、\nよろしくお願いしますね。", "text": "Yes, indeed.\nI look forward\nto working with you."},
-      {"offset": "0x11f8", "original": "水泳部に入部したのか？", "text": "You joined the swim team?"},
-      {"offset": "0x1210", "original": "そうだよ。\n{G}、\nこれからよろしく。", "text": "Yep.\nHi, {G}\nhope we get along."},
-      {"offset": "0x1234", "original": "こちらこそ。\n練習厳しいけど、\n頑張れよ。", "text": "Likewise.\nPractice is tough,\nbut hang in there."},
-      {"offset": "0x1270", "original": "水泳部に入部したの？", "text": "You joined the swim team?"},
-      {"offset": "0x1288", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0x12a0", "original": "こちらこそ。\n練習厳しいけど、\n頑張ってね。", "text": "Likewise.\nPractice is tough,\nbut do your best."},
-      {"offset": "0x13e4", "original": "野球部に入部して\nくれたんだ。", "text": "You joined\nthe baseball team!"},
-      {"offset": "0x1404", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0x141c", "original": "こちらこそ、よろしくね。\nそれじゃ、甲子園目指して\n頑張ってね。", "text": "Same here!\nNow give it your all\nand aim for Koshien!"},
-      {"offset": "0x146c", "original": "サッカー部に入部して\nくれたんだ。", "text": "You joined\nthe soccer team!"},
-      {"offset": "0x1490", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0x14a8", "original": "こちらこそ、よろしくね。\n国立競技場目指して\n頑張ってね。", "text": "Same here!\nMake it to the National\nStadium! Give it your all!"},
-      {"offset": "0x15fc", "original": "バスケ部に入部して\nくれたんですね。", "text": "So you joined\nthe basketball team."},
-      {"offset": "0x1620", "original": "{G}、\nこれからよろしく。", "text": "Hi, {G}\nhope we get along."},
-      {"offset": "0x1638", "original": "うん、任せといて。", "text": "Yeah, leave it to me."},
-      {"offset": "0x16e0", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x16e8", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x16f0", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x16f8", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x1700", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x1708", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x1710", "original": "やぁ、{P}", "text": "Yo, {P}"},
-      {"offset": "0x1718", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x1720", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x1728", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x1730", "original": "あっ、{P}", "text": "Oh, {P}"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/NYUBU.BIN",
+      "base": "0x80197000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xc",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x24",
+          "original": "詩織、\nこれからよろしく。",
+          "text": "Shiori,\nhope we get along."
+        },
+        {
+          "offset": "0x40",
+          "original": "こちらこそ。",
+          "text": "Likewise."
+        },
+        {
+          "offset": "0x60",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x6c",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x84",
+          "original": "詩織、\nこの部だったんだ。",
+          "text": "Shiori,\nso you're in this club."
+        },
+        {
+          "offset": "0xa0",
+          "original": "そうよ。\nこれからよろしくね。",
+          "text": "That's right.\nI hope we get along."
+        },
+        {
+          "offset": "0xd0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xdc",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0xf4",
+          "original": "詩織、\nこれからよろしく。",
+          "text": "Shiori,\nhope we get along."
+        },
+        {
+          "offset": "0x110",
+          "original": "こちらこそ。\n甲子園目指して、\n頑張ってね。",
+          "text": "You too.\nDo your best\nand make it to Koshien!"
+        },
+        {
+          "offset": "0x14c",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x158",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x170",
+          "original": "詩織、\nこの部だったんだ。",
+          "text": "Shiori,\nso you're in this club."
+        },
+        {
+          "offset": "0x18c",
+          "original": "そうよ。\n甲子園目指して、\n頑張ってね。",
+          "text": "That's right.\nDo your best\nand make it to Koshien!"
+        },
+        {
+          "offset": "0x1c4",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x1d0",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x1e8",
+          "original": "詩織、\nこれからよろしく。",
+          "text": "Shiori,\nhope we get along."
+        },
+        {
+          "offset": "0x204",
+          "original": "こちらこそ。\n国立競技場目指して、\n頑張ってね。",
+          "text": "You too.\nSet your sights on\nthe National Stadium!"
+        },
+        {
+          "offset": "0x244",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x250",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x268",
+          "original": "詩織、\nこの部だったんだ。",
+          "text": "Shiori,\nso you're in this club."
+        },
+        {
+          "offset": "0x284",
+          "original": "そうよ。\n国立競技場目指して、\n頑張ってね。",
+          "text": "That's right.\nSet your sights on\nthe National Stadium!"
+        },
+        {
+          "offset": "0x2c0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x2cc",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x2e4",
+          "original": "詩織、\nこれからよろしく。",
+          "text": "Shiori,\nhope we get along."
+        },
+        {
+          "offset": "0x300",
+          "original": "こちらこそ。\nお互いに頑張りましょう。",
+          "text": "Likewise.\nLet's both do our best."
+        },
+        {
+          "offset": "0x338",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x344",
+          "original": "この部に入部したの？",
+          "text": "You joined this club?"
+        },
+        {
+          "offset": "0x35c",
+          "original": "詩織、\nこの部だったんだ。",
+          "text": "Shiori,\nso you're in this club."
+        },
+        {
+          "offset": "0x378",
+          "original": "そうよ。\nお互いに頑張りましょう。",
+          "text": "That's right.\nLet's both do our best."
+        },
+        {
+          "offset": "0x7cc",
+          "original": "{P}\nこの部に来たのね。",
+          "text": "{P},\nso you came to this club."
+        },
+        {
+          "offset": "0x7e4",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "{G},\nhope we get along."
+        },
+        {
+          "offset": "0x7fc",
+          "original": "せいぜい、\n頑張りなさい。",
+          "text": "Well,\ndo your best, I suppose."
+        },
+        {
+          "offset": "0x824",
+          "original": "{P}\nこの部に来たのね。",
+          "text": "{P},\nso you came to this club."
+        },
+        {
+          "offset": "0x83c",
+          "original": "{G}、\nこの部だったんだ。",
+          "text": "Oh, {G}\nso you're in this club."
+        },
+        {
+          "offset": "0x854",
+          "original": "そうよ。\nよく覚えておきなさい。",
+          "text": "That's right.\nDon't you forget it."
+        },
+        {
+          "offset": "0x890",
+          "original": "{P}\nこの部に来たのね。",
+          "text": "{P},\nso you came to this club."
+        },
+        {
+          "offset": "0x8a8",
+          "original": "{G}が、\n無理矢理に…。",
+          "text": "Wait, {G}\nyou forced me..."
+        },
+        {
+          "offset": "0x8c0",
+          "original": "全然、身に覚えがないわ。\nとにかく、歓迎するわよ。",
+          "text": "I don't recall doing that.\nAnyway, welcome aboard."
+        },
+        {
+          "offset": "0xa7c",
+          "original": "ウェルカム。\nようこそ美術部へ。",
+          "text": "Welcome!\nYoukoso to the Art Club!"
+        },
+        {
+          "offset": "0xa9c",
+          "original": "{G}。\nこれからよろしく。",
+          "text": "{G},\nhope we get along."
+        },
+        {
+          "offset": "0xab4",
+          "original": "こちらこそ。\nよろしくね。",
+          "text": "You too.\nLooking forward to it!"
+        },
+        {
+          "offset": "0xae0",
+          "original": "ウェルカム。\nようこそ吹奏楽部へ。",
+          "text": "Welcome!\nYoukoso to the Band!"
+        },
+        {
+          "offset": "0xb04",
+          "original": "{G}。\nこれからよろしく。",
+          "text": "{G},\nhope we get along."
+        },
+        {
+          "offset": "0xb1c",
+          "original": "こちらこそ。\nよろしくね。",
+          "text": "You too.\nLooking forward to it!"
+        },
+        {
+          "offset": "0xb48",
+          "original": "ウェルカム。\nようこそ美術部へ。",
+          "text": "Welcome!\nYoukoso to the Art Club!"
+        },
+        {
+          "offset": "0xb68",
+          "original": "{G}。\nこの部だったんだ。",
+          "text": "Oh, {G}\nso you're in this club."
+        },
+        {
+          "offset": "0xb80",
+          "original": "知らなかったの？\nそうよ。\nこれから、よろしくね。",
+          "text": "You didn't know?\nYeah.\nLooking forward to it!"
+        },
+        {
+          "offset": "0xbc4",
+          "original": "ウェルカム。\nようこそ吹奏楽部へ。",
+          "text": "Welcome!\nYoukoso to the Band!"
+        },
+        {
+          "offset": "0xbe8",
+          "original": "{G}。\nこの部だったんだ。",
+          "text": "Oh, {G}\nso you're in this club."
+        },
+        {
+          "offset": "0xc00",
+          "original": "知らなかったの？\nそうよ。\nこれから、よろしくね。",
+          "text": "You didn't know?\nYeah.\nLooking forward to it!"
+        },
+        {
+          "offset": "0xe54",
+          "original": "この部に\n入部したんですね？",
+          "text": "So you joined\nthis club?"
+        },
+        {
+          "offset": "0xe70",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "{G},\nhope we get along."
+        },
+        {
+          "offset": "0xe88",
+          "original": "こちらこそ。\nよろしくお願いします。",
+          "text": "Likewise.\nI look forward to it."
+        },
+        {
+          "offset": "0xebc",
+          "original": "この部に\n入部したんですね？",
+          "text": "So you joined\nthis club?"
+        },
+        {
+          "offset": "0xed8",
+          "original": "{G}、\nこの部だったんだ。",
+          "text": "Oh, {G}\nso you're in this club."
+        },
+        {
+          "offset": "0xef0",
+          "original": "そうですよ。\nこれから、\nよろしくお願いしますね。",
+          "text": "Yes, I am.\nI look forward\nto working with you."
+        },
+        {
+          "offset": "0x103c",
+          "original": "{P}\nこんにちは。\nテニス部にようこそ。",
+          "text": "{P},\ngood afternoon. Welcome\nto the Tennis Club."
+        },
+        {
+          "offset": "0x1060",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "{G},\nhope we get along."
+        },
+        {
+          "offset": "0x1078",
+          "original": "こちらこそ。\nよろしくお願い\nいたします。",
+          "text": "Likewise.\nI look forward\nto it."
+        },
+        {
+          "offset": "0x10b0",
+          "original": "{P}\nこんにちは。\nテニス部にようこそ。",
+          "text": "{P},\ngood afternoon. Welcome\nto the Tennis Club."
+        },
+        {
+          "offset": "0x10d4",
+          "original": "{G}、\nこの部だったんだ。",
+          "text": "Oh, {G}\nso you're in this club."
+        },
+        {
+          "offset": "0x10ec",
+          "original": "そうなんですよ。\nこれから、\nよろしくお願いしますね。",
+          "text": "Yes, indeed.\nI look forward\nto working with you."
+        },
+        {
+          "offset": "0x11f8",
+          "original": "水泳部に入部したのか？",
+          "text": "You joined the swim team?"
+        },
+        {
+          "offset": "0x1210",
+          "original": "そうだよ。\n{G}、\nこれからよろしく。",
+          "text": "Yep.\nHi, {G}\nhope we get along."
+        },
+        {
+          "offset": "0x1234",
+          "original": "こちらこそ。\n練習厳しいけど、\n頑張れよ。",
+          "text": "Likewise.\nPractice is tough,\nbut hang in there."
+        },
+        {
+          "offset": "0x1270",
+          "original": "水泳部に入部したの？",
+          "text": "You joined the swim team?"
+        },
+        {
+          "offset": "0x1288",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "Hi, {G}\nhope we get along."
+        },
+        {
+          "offset": "0x12a0",
+          "original": "こちらこそ。\n練習厳しいけど、\n頑張ってね。",
+          "text": "Likewise.\nPractice is tough,\nbut do your best."
+        },
+        {
+          "offset": "0x13e4",
+          "original": "野球部に入部して\nくれたんだ。",
+          "text": "You joined\nthe baseball team!"
+        },
+        {
+          "offset": "0x1404",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "Hi, {G}\nhope we get along."
+        },
+        {
+          "offset": "0x141c",
+          "original": "こちらこそ、よろしくね。\nそれじゃ、甲子園目指して\n頑張ってね。",
+          "text": "Same here!\nNow give it your all\nand aim for Koshien!"
+        },
+        {
+          "offset": "0x146c",
+          "original": "サッカー部に入部して\nくれたんだ。",
+          "text": "You joined\nthe soccer team!"
+        },
+        {
+          "offset": "0x1490",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "Hi, {G}\nhope we get along."
+        },
+        {
+          "offset": "0x14a8",
+          "original": "こちらこそ、よろしくね。\n国立競技場目指して\n頑張ってね。",
+          "text": "Same here!\nMake it to the National\nStadium! Give it your all!"
+        },
+        {
+          "offset": "0x15fc",
+          "original": "バスケ部に入部して\nくれたんですね。",
+          "text": "So you joined\nthe basketball team."
+        },
+        {
+          "offset": "0x1620",
+          "original": "{G}、\nこれからよろしく。",
+          "text": "Hi, {G}\nhope we get along."
+        },
+        {
+          "offset": "0x1638",
+          "original": "うん、任せといて。",
+          "text": "Yeah, leave it to me."
+        },
+        {
+          "offset": "0x16e0",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x16e8",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x16f0",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x16f8",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x1700",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x1708",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x1710",
+          "original": "やぁ、{P}",
+          "text": "Yo, {P}"
+        },
+        {
+          "offset": "0x1718",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x1720",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x1728",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        },
+        {
+          "offset": "0x1730",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}"
+        }
+      ]
+    }
+  ]
 }

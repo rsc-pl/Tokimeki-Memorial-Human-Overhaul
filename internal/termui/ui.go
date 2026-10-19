@@ -31,13 +31,14 @@ var mainActions = []action{
 	{"Browse ISO9660 files", "Read-only Go filesystem inventory", "files"},
 	{"Run disc preflight", "Check original bytes; never modify source", "preflight"},
 	{"Native Go file plan", "Read-only complete file planning and checksums", "native-plan"},
+	{"Compare Go/Python plans", "Read-only full-file parity; compact report, no disc writes", "native-plan-parity"},
 	{"Validate resources", "Read-only corpus structure checks", "validate"},
-	{"Run regression tests", "Go modules and inherited Python tests", "test"},
 	{"Verify game graphics", "Native indexed PNG / 4bpp / 8bpp checks", "graphics-check"},
 	{"Launch DuckStation", "Open original CUE in emulator", "emulator"},
 	{"Inspect running scene", "Read-only DuckStation GDB state / scene", "emulator_probe_state"},
 	{"Configure paths", "Select source CUE and output folder", "settings"},
 	{"Build and test logs", "Scroll through recent command output", "logs"},
+	{"Copy last error", "Copy the complete failed command log to the clipboard [c]", "copy-last-error"},
 	{"System doctor", "Inspect dependencies and saved paths", "doctor"},
 	{"Exit", "Return to your shell", "exit"},
 }
@@ -60,6 +61,7 @@ type state struct {
 	buildTarget                   BuildTarget
 	events                        chan string
 	completed                     chan error
+	clipboardDone                 chan string
 }
 
 func cleanLine(s string) string { return strings.ReplaceAll(strings.ReplaceAll(s, "\r", ""), "\n", "") }
@@ -127,12 +129,14 @@ func key() string {
 		return "quit"
 	case 'l':
 		return "logs"
+	case 'c':
+		return "copy-error"
 	}
 	return string(buf[0])
 }
 
 // Polling the input and resize on the same goroutine keeps cursor output and
-// selection/scroll state serialized. The G11 signal-drawing goroutine raced
+// selection/scroll state serialized. An earlier signal-drawing goroutine raced
 // with the menu and could corrupt the file chooser during resize.
 func Run(root string, callback func(string, io.Writer) error, build *BuildHooks) error {
 	raw, e := rawOn()
@@ -158,6 +162,13 @@ func Run(root string, callback func(string, io.Writer) error, build *BuildHooks)
 			continue
 		}
 		k := key()
+		if k == "copy-error" && s.page != "confirm" {
+			s.copyLastError()
+			s.draw()
+			lastW, lastH = termSize()
+			lastClock = time.Now().Unix()
+			continue
+		}
 		if s.page == "confirm" {
 			switch k {
 			case "left", "up", "home":
@@ -278,6 +289,8 @@ func Run(root string, callback func(string, io.Writer) error, build *BuildHooks)
 				case "logs":
 					s.page = "logs"
 					s.scroll = 0
+				case "copy-last-error":
+					s.copyLastError()
 				case "build":
 					if build == nil {
 						s.status = "Build handler unavailable"

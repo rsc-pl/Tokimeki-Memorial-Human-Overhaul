@@ -1,16 +1,82 @@
 #!/usr/bin/env bash
 set -euo pipefail
+
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-bin="$root/.local/bin/tokimemo"
-if ! command -v go >/dev/null 2>&1; then
-  printf '%s\n' 'Go 1.23+ is required to build the Human Overhaul CLI.' >&2
+cd "$root"
+
+for tool in go sha256sum flock find sort mktemp; do
+  if ! command -v "$tool" >/dev/null 2>&1; then
+    printf 'tokimemo: missing required tool: %s\n' "$tool" >&2
+    exit 1
+  fi
+done
+
+if [[ ! -f go.mod || ! -d cmd/tokimemo || ! -d internal ]]; then
+  printf 'tokimemo: public Go sources are missing in %s\n' "$root" >&2
   exit 1
 fi
-# Recompile whenever any Go source, go.mod or go.sum changes (not only main.go).
-if [[ ! -x "$bin" ]] || find "$root/cmd" "$root/internal" "$root/go.mod" -type f -newer "$bin" -print -quit | grep -q .; then
-  mkdir -p "$root/.local/bin"
-  ( cd "$root" && go build -buildvcs=false -o "$bin.tmp" ./cmd/tokimemo )
-  mv -f "$bin.tmp" "$bin"
+
+cache_dir="$root/.local/bin"
+program="$cache_dir/tokimemo"
+stamp="$cache_dir/tokimemo.build.sha256"
+mkdir -p "$cache_dir"
+
+# Serialize concurrent launches so they cannot overwrite an in-progress build.
+exec 9>"$cache_dir/.tokimemo-build.lock"
+flock -x 9
+
+source_hash() {
+  {
+    printf 'tokimemo-source-cache-v2\0%s\0' "$root"
+    GOWORK=off GOTOOLCHAIN=local go env GOOS GOARCH GOAMD64 GOARM GO386 CGO_ENABLED GOVERSION GOFLAGS GOEXPERIMENT GOROOT CC CGO_CFLAGS CGO_CPPFLAGS CGO_CXXFLAGS CGO_LDFLAGS
+    for path in tokimemo go.mod go.sum; do
+      if [[ -f "$path" ]]; then
+        printf '%s\0' "$path"
+        sha256sum -- "$path"
+      fi
+    done
+    while IFS= read -r -d '' path; do
+      printf '%s\0' "$path"
+      sha256sum -- "$path"
+    done < <(find cmd internal -type f -print0 | LC_ALL=C sort -z)
+  } | sha256sum | cut -d ' ' -f 1
+}
+
+current="$(source_hash)"
+cached=""
+if [[ -f "$stamp" ]]; then
+  IFS= read -r cached < "$stamp" || true
 fi
-cd "$root"
-exec "$bin" "$@"
+
+if [[ ! -x "$program" || "$current" != "$cached" ]]; then
+  tmp="$(mktemp "$cache_dir/.tokimemo-build.XXXXXXXX")"
+  tmp_stamp="$(mktemp "$cache_dir/.tokimemo-stamp.XXXXXXXX")"
+  cleanup() { rm -f -- "$tmp" "$tmp_stamp"; }
+  trap cleanup EXIT
+
+  for attempt in 1 2 3; do
+    printf 'tokimemo: building updated Go sources...\n' >&2
+    if ! GOWORK=off GOTOOLCHAIN=local go build -buildvcs=false -o "$tmp" ./cmd/tokimemo; then
+      printf 'tokimemo: build failed; previous executable was not replaced.\n' >&2
+      exit 1
+    fi
+    after="$(source_hash)"
+    if [[ "$after" == "$current" ]]; then
+      chmod 0755 "$tmp"
+      printf '%s\n' "$after" > "$tmp_stamp"
+      mv -f -- "$tmp" "$program"
+      mv -f -- "$tmp_stamp" "$stamp"
+      break
+    fi
+    if [[ "$attempt" == 3 ]]; then
+      printf 'tokimemo: sources changed during compilation; retry when editing finishes.\n' >&2
+      exit 1
+    fi
+    current="$after"
+  done
+  trap - EXIT
+fi
+
+flock -u 9
+exec 9>&-
+exec "$program" "$@"

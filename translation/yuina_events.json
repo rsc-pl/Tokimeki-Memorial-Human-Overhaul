@@ -1,107 +1,497 @@
 {
   "description": "Yuina's special events: all of SERIFU/EVENT_HI.BIN (event-table entries 14-20: the rooftop slump, zoo koala, bowling, arcade coins, the sale, the school-trip crop circle, the beach showdown). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_HI.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あぁ、\n屋上は気持ちいいなぁ。", "text": "Ahh,\nthe roof feels nice."},
-      {"offset": "0x20", "original": "ん？\nあそこにいるのは、\n{G}じゃないか。", "text": "Hm?\nWho's that over there?\nWhy, it's {G}"},
-      {"offset": "0x50", "original": "はぁ…。", "text": "Sigh..."},
-      {"offset": "0x5c", "original": "どうしたの{G}。\nため息なんてついて。", "text": "So, {G}\nwhat's with the sigh?"},
-      {"offset": "0x88", "original": "あっ、{P}\n嫌なところ\n見られちゃったわね。", "text": "Oh, {P}\nYou caught me at\na bad moment."},
-      {"offset": "0xb0", "original": "本当に、どうしたの？\n{G}らしくないよ。", "text": "Really, what's wrong?\nSo unlike {G}"},
-      {"offset": "0xd8", "original": "らしくないついでだから\n言うけど…。\n実は、スランプなのよ。", "text": "Since I'm already not\nmyself, I'll say it...\nI'm in a slump."},
-      {"offset": "0x114", "original": "スランプって言うと？", "text": "A slump? How so?"},
-      {"offset": "0x12c", "original": "どうしても、\nいいアイディアが\n思いつかないのよ。", "text": "No matter what,\nI can't come up\nwith a good idea."},
-      {"offset": "0x160", "original": "俺でよかったら、\n一緒に考えるけど…。", "text": "If I'm any help,\nI could think with you..."},
-      {"offset": "0x1a0", "original": "ありがとう。\nでも、\n今は一人で考えたいの。", "text": "Thank you.\nBut right now\nI want to think alone."},
-      {"offset": "0x1cc", "original": "そう、なら行くよ。\nいいアイディアが\n思いつくといいね。", "text": "Okay, I'll go then.\nI hope you come up\nwith a good idea."},
-      {"offset": "0x204", "original": "そうね。\n頭を冷やしながら、\n考えてみるわ。", "text": "Yes.\nI'll cool my head\nand think it over."},
-      {"offset": "0x23c", "original": "{G}大丈夫かな…。\n向こうで、\n何かつぶやいてるぞ。", "text": "Oh, {G}\nare you okay? She's\nmuttering something."},
-      {"offset": "0x26c", "original": "あぁ、究極破壊兵器の\nアイディアが、\n思いつかないわ。", "text": "Ugh, no ideas\nfor the ultimate\ndoomsday weapon."},
-      {"offset": "0x2a4", "original": "‥‥‥‥。\n（何てものを考えてるんだ、\nこの娘は…。）", "text": "........\n(What on earth is\nthis girl thinking up...)"},
-      {"offset": "0x4fc", "original": "動物園に来ると、\n遺伝子操作実験を\nしたくなるわね。", "text": "The zoo makes me\nwant to do some\ngene splicing."},
-      {"offset": "0x530", "original": "そ、そう？\n（そんなこと思う人\nいないって…。）", "text": "R-really?\n(Nobody else would\nthink that...)"},
-      {"offset": "0x568", "original": "きゃーっ。", "text": "Eeek!"},
-      {"offset": "0x574", "original": "ど、どうしたの？\n{G}。", "text": "Wh-what's wrong,\n{G}"},
-      {"offset": "0x58c", "original": "コアラ「ニヤリ。", "text": "Koala: Smirk."},
-      {"offset": "0x5ac", "original": "なんだ？\n今のコアラは。", "text": "What the?\nThat koala..."},
-      {"offset": "0x5c4", "original": "新手の生物兵器ね。\n誰の差し金か知らないけど、\n受けて立つわよ。", "text": "A new bio-weapon, then.\nWhoever sent it,\nI accept the challenge."},
-      {"offset": "0x604", "original": "あ、あの。\n{G}。\n何言ってるの？", "text": "U-um,\n{G}\nwhat are you saying?"},
-      {"offset": "0x624", "original": "邪魔者は\n叩きつぶすのみよ。\nあぁ、燃えてきたわ。", "text": "All obstacles\nshall be crushed.\nI'm fired up."},
-      {"offset": "0x658", "original": "‥‥‥‥。\n（人の話なんか、\n聞いちゃいねぇ。）", "text": "........\n(She's not listening\nto a word I say.)"},
-      {"offset": "0x7e8", "original": "ひ、{G}。\nこのスコアは何？", "text": "Y-{G}\nwhat is this score?"},
-      {"offset": "0x804", "original": "ふふん、どう？\n天才は\n何をやっても天才ね。", "text": "Heh, how's that?\nA genius excels\nat everything."},
-      {"offset": "0x830", "original": "あのさ、{G}…。", "text": "Listen, {G}"},
-      {"offset": "0x840", "original": "この点数って、\n全部ストライクじゃないと\n出ないんだよ。", "text": "You only get this\nscore if every single\nframe is a strike."},
-      {"offset": "0x878", "original": "それが、どうしたの？", "text": "And what of it?"},
-      {"offset": "0x890", "original": "{G}は、ストライク\nなんて、ほとんど\n出してないじゃないか。", "text": "Except, {G}\nyou hardly bowled\nany strikes at all."},
-      {"offset": "0x8e4", "original": "でも、ほら見なさいよ。\nこの点数。", "text": "But look at it.\nLook at this score."},
-      {"offset": "0x908", "original": "機械が壊れてるんだよ。\nそれでなきゃ…。", "text": "The machine's broken.\nOtherwise..."},
-      {"offset": "0x930", "original": "失礼ね。\nコンピュータは絶対よ。", "text": "How rude.\nComputers are never wrong."},
-      {"offset": "0x95c", "original": "あっ、\n煙が出てきたよ。", "text": "Whoa,\nit's starting to smoke."},
-      {"offset": "0x974", "original": "そう？\nさあ、帰るわよ。", "text": "Is it?\nCome, we're leaving."},
-      {"offset": "0x98c", "original": "{G}、\n何かやったんじゃ…。", "text": "Wait, {G}\ndid you do this?"},
-      {"offset": "0x9a8", "original": "ほら、帰るわよ。", "text": "Come, we're leaving."},
-      {"offset": "0xbb8", "original": "{G}。\nちょっとトイレに\n行ってくるね。", "text": "Listen, {G}\nI'll be back,\nrestroom."},
-      {"offset": "0xbdc", "original": "勝手に、どうぞ。", "text": "Suit yourself."},
-      {"offset": "0xbf8", "original": "あーっ、すっきりした。\nなんだ？\nあの人だかりは。", "text": "Ahh, that's better.\nHuh?\nWhat's with that crowd?"},
-      {"offset": "0xc30", "original": "ひ、{G}。\nどうしたの？\nこのコインの山は…。", "text": "Y-{G}\nwhat's going on?\nWhat's this pile of coins?"},
-      {"offset": "0xc5c", "original": "決まってるわ。\n私の実力よ。", "text": "Obviously.\nMy skill."},
-      {"offset": "0xc78", "original": "あのさ…。\nちょっと\n言ってもいいかな？", "text": "Listen...\nCan I say\nsomething?"},
-      {"offset": "0xca0", "original": "何よ。\n言ってみなさいよ。", "text": "What?\nGo ahead, say it."},
-      {"offset": "0xcbc", "original": "変な機械\nつないでるでしょう。", "text": "You hooked up\nsome weird gadget."},
-      {"offset": "0xcdc", "original": "何それ？\n知らないわ。", "text": "What?\nNo idea."},
-      {"offset": "0xcf4", "original": "別に、いいけどさ…。\n（変なコードが\n見えてるんだよ。）", "text": "Well, whatever...\n(I can see\nthe weird cables.)"},
-      {"offset": "0xd2c", "original": "あーぁ、銀行の機械も\nこのぐらい簡単に出せれば、\n研究資金に\n困らないのに…。", "text": "Sigh, if only banks\npaid out this easily,\nI'd never lack\nresearch funds..."},
-      {"offset": "0xd78", "original": "‥‥‥‥。\n（何てこと考えてるんだ\nこの娘は…。）", "text": "........\n(What is this girl\neven thinking...)"},
-      {"offset": "0xf58", "original": "今日は、特別大安売りを\nしてるみたいだね。", "text": "Looks like there's\na huge sale today."},
-      {"offset": "0xf84", "original": "大安売りですって？\n買いだめよ。\nほら、手伝いなさい。", "text": "A huge sale?\nWe stock up.\nCome, help me."},
-      {"offset": "0xfbc", "original": "は、はい。\n（そんなに急がなくたって、\n売り切れないよ。）", "text": "Y-yes.\n(It won't sell out,\nno need to rush...)"},
-      {"offset": "0x1004", "original": "これも、これも、\nみんな安いわ。\n全部、買い占めよ。", "text": "This, and this...\nit's all so cheap.\nI'll buy them all."},
-      {"offset": "0x1038", "original": "{G}。\n買ってる姿が怖いよ…。", "text": "Oh, {G}\nthe way you shop is scary."},
-      {"offset": "0x105c", "original": "もう、たくさん\n買ったわね。", "text": "We've bought\nquite a lot."},
-      {"offset": "0x1078", "original": "そうだね。\nもう、帰ろうか？\n（疲れたから…。）", "text": "Yeah.\nShall we head home?\n(I'm exhausted...)"},
-      {"offset": "0x10b0", "original": "まだよ。\n他の店も安売りを\nしてるみたいだから。", "text": "Not yet.\nOther shops seem\nto be having sales too."},
-      {"offset": "0x10e0", "original": "えーっ。\nまだ行くの？", "text": "Whaaat?\nWe're still going?"},
-      {"offset": "0x10f8", "original": "ほら、つべこべ言わずに、\nついてきなさい。", "text": "Stop your whining\nand follow me."},
-      {"offset": "0x1124", "original": "はい、はい。\n（あぁ、もう帰りたい…。）", "text": "Yes, yes.\n(Ugh, I wanna go home...)"},
-      {"offset": "0x12d4", "original": "あれ、{G}だ。", "text": "There's {G}"},
-      {"offset": "0x12e0", "original": "探したわよ。{P}、\nこれから調査よ。", "text": "Here you are, {P}\nwe investigate."},
-      {"offset": "0x1304", "original": "えっ、どこに行くの？", "text": "Huh, where are we going?"},
-      {"offset": "0x131c", "original": "ホテルのそばの農場に、\nいい研究テーマがあったのよ。", "text": "A farm by the hotel has\na fine research subject."},
-      {"offset": "0x1350", "original": "またも研究か…。", "text": "More research..."},
-      {"offset": "0x1378", "original": "これがミステリーサークルね。\n私が、\n科学的に解明してあげるわ。", "text": "So this is a crop circle.\nI shall explain it\nscientifically."},
-      {"offset": "0x13b8", "original": "初めて見た。", "text": "My first one."},
-      {"offset": "0x13c8", "original": "ほらつっ立っていないで、\n調査よ、調査。\nまずは、中心からね。", "text": "Don't just stand there,\ninvestigate!\nStart at the center."},
-      {"offset": "0x1414", "original": "あ、何だ。\nもしかして、\nＵＦＯ？", "text": "Whoa, what?\nCould it be...\na UFO?"},
-      {"offset": "0x143c", "original": "この世に未確認飛行物体など\n存在するわけがないでしょう。\n私が正体を暴いてあげるわ。", "text": "Unidentified flying objects\ncan't possibly exist.\nI'll expose what it is."},
-      {"offset": "0x1490", "original": "えっ、え〜？", "text": "Huh? Whaaat?"},
-      {"offset": "0x14a8", "original": "いまのは、何だったんだろう。", "text": "What was that just now?"},
-      {"offset": "0x14c8", "original": "大したことなかったわね。\n私に挑戦するのは、\n一万光年早かったわよ。", "text": "That was nothing.\nYou're ten thousand light\nyears too early for me."},
-      {"offset": "0x150c", "original": "光年は、距離の単位じゃ。", "text": "That's distance, not time."},
-      {"offset": "0x1534", "original": "いっ、行くわよ。", "text": "W-we're leaving."},
-      {"offset": "0x1548", "original": "もしかして、\n俺達地球の危機を\n救ったのかも…。", "text": "Maybe we just\nsaved the Earth\nfrom disaster..."},
-      {"offset": "0x1580", "original": "あなたのせいで、\n負けたじゃないの。", "text": "Thanks to you,\nI lost."},
-      {"offset": "0x15a4", "original": "ご、ごめんなさい。", "text": "S-sorry."},
-      {"offset": "0x15b8", "original": "まあ、いいわ。\n次は、必ず勝つわよ。", "text": "Oh well.\nNext time I'll surely win."},
-      {"offset": "0x15dc", "original": "つ、次があるのか…。", "text": "Th-there's a next time...?"},
-      {"offset": "0x18ac", "original": "待ってたわ。\n{P}。", "text": "I've been waiting,\n{P}."},
-      {"offset": "0x18c0", "original": "ひ、{G}。\nどうしたの？", "text": "Y-{G}\nwhat's going on?"},
-      {"offset": "0x18d8", "original": "私の、野望を\n達成するためには\nあなたが邪魔なのよ。", "text": "To achieve\nmy ambition,\nyou are in the way."},
-      {"offset": "0x190c", "original": "俺は{G}の\n邪魔をした記憶はないよ。\nそれに、野望って？", "text": "Listen, {G}\nI never got in your way.\nAnd what ambition?"},
-      {"offset": "0x1940", "original": "世界征服よ。", "text": "World domination."},
-      {"offset": "0x1950", "original": "せ、世界征服？\n冗談でしょう。", "text": "W-world domination?\nYou're kidding."},
-      {"offset": "0x1970", "original": "物理的な準備は整ったわ。\nでも、あなたのおかげで、\n心の準備がまだなのよ。", "text": "The physical preparations\nare done. But thanks to\nyou, my heart's not ready."},
-      {"offset": "0x19bc", "original": "ど、どうして、\n俺のせいなんだ？", "text": "Wh-why is that\nmy fault?"},
-      {"offset": "0x19dc", "original": "ここで、\nあなたに勝利すれば、\n全て解決するわ。\nさあ、覚悟しなさい。", "text": "If I defeat you\nright here,\nit's all settled.\nNow, prepare yourself."},
-      {"offset": "0x1a20", "original": "ちょっと待って、紐緒さん。\n公園じゃ被害が出るから、\n砂浜へ行こう。", "text": "Wait, Himoo-san.\nWe'll wreck the park.\nLet's go to the beach."},
-      {"offset": "0x1a8c", "original": "ま、負けたわ。\n私の完敗よ。", "text": "I-I lost.\nA total defeat."},
-      {"offset": "0x1aa8", "original": "大丈夫？\n怪我はなかった？", "text": "Are you okay?\nDid you get hurt?"},
-      {"offset": "0x1ac4", "original": "私の取るべき道は\n決まったわ。\nそれじゃ、失礼するわ。", "text": "I now know the path\nI must take.\nFarewell, then."},
-      {"offset": "0x1b08", "original": "ひ、{G}…。", "text": "Y-{G}"},
-      {"offset": "0x1cd8", "original": "何よ。", "text": "What?"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_HI.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あぁ、\n屋上は気持ちいいなぁ。",
+          "text": "Ahh,\nthe rooftop feels great."
+        },
+        {
+          "offset": "0x20",
+          "original": "ん？\nあそこにいるのは、\n{G}じゃないか。",
+          "text": "Hm?\nWho's that over there?\nWhy, it's {G}"
+        },
+        {
+          "offset": "0x50",
+          "original": "はぁ…。",
+          "text": "Sigh..."
+        },
+        {
+          "offset": "0x5c",
+          "original": "どうしたの{G}。\nため息なんてついて。",
+          "text": "So, {G}\nwhat's with the sigh?"
+        },
+        {
+          "offset": "0x88",
+          "original": "あっ、{P}\n嫌なところ\n見られちゃったわね。",
+          "text": "Oh, {P}\nYou caught me at\na bad moment."
+        },
+        {
+          "offset": "0xb0",
+          "original": "本当に、どうしたの？\n{G}らしくないよ。",
+          "text": "Really, what's wrong?\nSo unlike {G}"
+        },
+        {
+          "offset": "0xd8",
+          "original": "らしくないついでだから\n言うけど…。\n実は、スランプなのよ。",
+          "text": "I'm not myself,\nso I'll admit it...\nI'm in a slump."
+        },
+        {
+          "offset": "0x114",
+          "original": "スランプって言うと？",
+          "text": "A slump? How so?"
+        },
+        {
+          "offset": "0x12c",
+          "original": "どうしても、\nいいアイディアが\n思いつかないのよ。",
+          "text": "No matter what,\nI can't come up\nwith a good idea."
+        },
+        {
+          "offset": "0x160",
+          "original": "俺でよかったら、\n一緒に考えるけど…。",
+          "text": "If I'm any help,\nI could think with you..."
+        },
+        {
+          "offset": "0x1a0",
+          "original": "ありがとう。\nでも、\n今は一人で考えたいの。",
+          "text": "Thank you.\nBut right now\nI want to think alone."
+        },
+        {
+          "offset": "0x1cc",
+          "original": "そう、なら行くよ。\nいいアイディアが\n思いつくといいね。",
+          "text": "Okay, I'll go then.\nI hope you come up\nwith a good idea."
+        },
+        {
+          "offset": "0x204",
+          "original": "そうね。\n頭を冷やしながら、\n考えてみるわ。",
+          "text": "Yes.\nI'll cool my head\nand think it over."
+        },
+        {
+          "offset": "0x23c",
+          "original": "{G}大丈夫かな…。\n向こうで、\n何かつぶやいてるぞ。",
+          "text": "Oh, {G}\nare you okay? She's\nmuttering something."
+        },
+        {
+          "offset": "0x26c",
+          "original": "あぁ、究極破壊兵器の\nアイディアが、\n思いつかないわ。",
+          "text": "Ugh, no ideas\nfor the ultimate\ndoomsday weapon."
+        },
+        {
+          "offset": "0x2a4",
+          "original": "‥‥‥‥。\n（何てものを考えてるんだ、\nこの娘は…。）",
+          "text": "........\n(What on earth is\nthis girl thinking up...)"
+        },
+        {
+          "offset": "0x4fc",
+          "original": "動物園に来ると、\n遺伝子操作実験を\nしたくなるわね。",
+          "text": "The zoo makes me\nwant to do some\ngene splicing."
+        },
+        {
+          "offset": "0x530",
+          "original": "そ、そう？\n（そんなこと思う人\nいないって…。）",
+          "text": "R-really?\n(Nobody else would\nthink that...)"
+        },
+        {
+          "offset": "0x568",
+          "original": "きゃーっ。",
+          "text": "Eeek!"
+        },
+        {
+          "offset": "0x574",
+          "original": "ど、どうしたの？\n{G}。",
+          "text": "Wh-what's wrong,\n{G}?"
+        },
+        {
+          "offset": "0x58c",
+          "original": "コアラ「ニヤリ。",
+          "text": "Koala: Smirk."
+        },
+        {
+          "offset": "0x5ac",
+          "original": "なんだ？\n今のコアラは。",
+          "text": "What the?\nThat koala..."
+        },
+        {
+          "offset": "0x5c4",
+          "original": "新手の生物兵器ね。\n誰の差し金か知らないけど、\n受けて立つわよ。",
+          "text": "A new bio-weapon, then.\nWhoever sent it,\nI accept the challenge."
+        },
+        {
+          "offset": "0x604",
+          "original": "あ、あの。\n{G}。\n何言ってるの？",
+          "text": "U-um,\n{G}\nwhat are you saying?"
+        },
+        {
+          "offset": "0x624",
+          "original": "邪魔者は\n叩きつぶすのみよ。\nあぁ、燃えてきたわ。",
+          "text": "All obstacles\nshall be crushed.\nI'm fired up."
+        },
+        {
+          "offset": "0x658",
+          "original": "‥‥‥‥。\n（人の話なんか、\n聞いちゃいねぇ。）",
+          "text": "........\n(She's not listening\nto a word I say.)"
+        },
+        {
+          "offset": "0x7e8",
+          "original": "ひ、{G}。\nこのスコアは何？",
+          "text": "Y-{G}\nwhat is this score?"
+        },
+        {
+          "offset": "0x804",
+          "original": "ふふん、どう？\n天才は\n何をやっても天才ね。",
+          "text": "Heh, how's that?\nA genius excels\nat everything."
+        },
+        {
+          "offset": "0x830",
+          "original": "あのさ、{G}…。",
+          "text": "Listen, {G}"
+        },
+        {
+          "offset": "0x840",
+          "original": "この点数って、\n全部ストライクじゃないと\n出ないんだよ。",
+          "text": "You only get this\nscore if every single\nframe is a strike."
+        },
+        {
+          "offset": "0x878",
+          "original": "それが、どうしたの？",
+          "text": "And what of it?"
+        },
+        {
+          "offset": "0x890",
+          "original": "{G}は、ストライク\nなんて、ほとんど\n出してないじゃないか。",
+          "text": "Except, {G}\nyou hardly bowled\nany strikes at all."
+        },
+        {
+          "offset": "0x8e4",
+          "original": "でも、ほら見なさいよ。\nこの点数。",
+          "text": "But look at it.\nLook at this score."
+        },
+        {
+          "offset": "0x908",
+          "original": "機械が壊れてるんだよ。\nそれでなきゃ…。",
+          "text": "The machine's broken.\nOtherwise..."
+        },
+        {
+          "offset": "0x930",
+          "original": "失礼ね。\nコンピュータは絶対よ。",
+          "text": "How rude.\nComputers are never wrong."
+        },
+        {
+          "offset": "0x95c",
+          "original": "あっ、\n煙が出てきたよ。",
+          "text": "Whoa,\nit's starting to smoke."
+        },
+        {
+          "offset": "0x974",
+          "original": "そう？\nさあ、帰るわよ。",
+          "text": "Is it?\nCome, we're leaving."
+        },
+        {
+          "offset": "0x98c",
+          "original": "{G}、\n何かやったんじゃ…。",
+          "text": "Wait, {G}\ndid you do this?"
+        },
+        {
+          "offset": "0x9a8",
+          "original": "ほら、帰るわよ。",
+          "text": "Come, we're leaving."
+        },
+        {
+          "offset": "0xbb8",
+          "original": "{G}。\nちょっとトイレに\n行ってくるね。",
+          "text": "Listen, {G}\nI'll be back,\nrestroom."
+        },
+        {
+          "offset": "0xbdc",
+          "original": "勝手に、どうぞ。",
+          "text": "Suit yourself."
+        },
+        {
+          "offset": "0xbf8",
+          "original": "あーっ、すっきりした。\nなんだ？\nあの人だかりは。",
+          "text": "Ahh, that's better.\nHuh?\nWhat's with that crowd?"
+        },
+        {
+          "offset": "0xc30",
+          "original": "ひ、{G}。\nどうしたの？\nこのコインの山は…。",
+          "text": "Y-{G}\nwhat's going on?\nWhat's this pile of coins?"
+        },
+        {
+          "offset": "0xc5c",
+          "original": "決まってるわ。\n私の実力よ。",
+          "text": "Obviously.\nMy skill."
+        },
+        {
+          "offset": "0xc78",
+          "original": "あのさ…。\nちょっと\n言ってもいいかな？",
+          "text": "Listen...\nCan I say\nsomething?"
+        },
+        {
+          "offset": "0xca0",
+          "original": "何よ。\n言ってみなさいよ。",
+          "text": "What?\nGo ahead, say it."
+        },
+        {
+          "offset": "0xcbc",
+          "original": "変な機械\nつないでるでしょう。",
+          "text": "You hooked up\nsome weird gadget."
+        },
+        {
+          "offset": "0xcdc",
+          "original": "何それ？\n知らないわ。",
+          "text": "What?\nNo idea."
+        },
+        {
+          "offset": "0xcf4",
+          "original": "別に、いいけどさ…。\n（変なコードが\n見えてるんだよ。）",
+          "text": "Well, whatever...\n(I can see\nthe weird cables.)"
+        },
+        {
+          "offset": "0xd2c",
+          "original": "あーぁ、銀行の機械も\nこのぐらい簡単に出せれば、\n研究資金に\n困らないのに…。",
+          "text": "Sigh, if only banks\npaid out this easily,\nI'd never lack\nresearch funds..."
+        },
+        {
+          "offset": "0xd78",
+          "original": "‥‥‥‥。\n（何てこと考えてるんだ\nこの娘は…。）",
+          "text": "........\n(What is this girl\neven thinking...)"
+        },
+        {
+          "offset": "0xf58",
+          "original": "今日は、特別大安売りを\nしてるみたいだね。",
+          "text": "Looks like there's\na huge sale today."
+        },
+        {
+          "offset": "0xf84",
+          "original": "大安売りですって？\n買いだめよ。\nほら、手伝いなさい。",
+          "text": "A huge sale?\nWe stock up.\nCome, help me."
+        },
+        {
+          "offset": "0xfbc",
+          "original": "は、はい。\n（そんなに急がなくたって、\n売り切れないよ。）",
+          "text": "Y-yes.\n(It won't sell out,\nno need to rush...)"
+        },
+        {
+          "offset": "0x1004",
+          "original": "これも、これも、\nみんな安いわ。\n全部、買い占めよ。",
+          "text": "This, and this...\nit's all so cheap.\nI'll buy them all."
+        },
+        {
+          "offset": "0x1038",
+          "original": "{G}。\n買ってる姿が怖いよ…。",
+          "text": "Oh, {G}\nthe way you shop is scary."
+        },
+        {
+          "offset": "0x105c",
+          "original": "もう、たくさん\n買ったわね。",
+          "text": "We've bought\nquite a lot."
+        },
+        {
+          "offset": "0x1078",
+          "original": "そうだね。\nもう、帰ろうか？\n（疲れたから…。）",
+          "text": "Yeah.\nShall we head home?\n(I'm exhausted...)"
+        },
+        {
+          "offset": "0x10b0",
+          "original": "まだよ。\n他の店も安売りを\nしてるみたいだから。",
+          "text": "Not yet.\nOther shops seem\nto be having sales too."
+        },
+        {
+          "offset": "0x10e0",
+          "original": "えーっ。\nまだ行くの？",
+          "text": "Whaaat?\nWe're still going?"
+        },
+        {
+          "offset": "0x10f8",
+          "original": "ほら、つべこべ言わずに、\nついてきなさい。",
+          "text": "Stop your whining\nand follow me."
+        },
+        {
+          "offset": "0x1124",
+          "original": "はい、はい。\n（あぁ、もう帰りたい…。）",
+          "text": "Yes, yes.\n(Ugh, I wanna go home...)"
+        },
+        {
+          "offset": "0x12d4",
+          "original": "あれ、{G}だ。",
+          "text": "There's {G}"
+        },
+        {
+          "offset": "0x12e0",
+          "original": "探したわよ。{P}、\nこれから調査よ。",
+          "text": "Found you, {P}.\nLet's investigate."
+        },
+        {
+          "offset": "0x1304",
+          "original": "えっ、どこに行くの？",
+          "text": "Huh, where are we going?"
+        },
+        {
+          "offset": "0x131c",
+          "original": "ホテルのそばの農場に、\nいい研究テーマがあったのよ。",
+          "text": "A farm by the hotel has\na fine research subject."
+        },
+        {
+          "offset": "0x1350",
+          "original": "またも研究か…。",
+          "text": "More research..."
+        },
+        {
+          "offset": "0x1378",
+          "original": "これがミステリーサークルね。\n私が、\n科学的に解明してあげるわ。",
+          "text": "So this is a crop circle.\nI shall explain it\nscientifically."
+        },
+        {
+          "offset": "0x13b8",
+          "original": "初めて見た。",
+          "text": "My first one."
+        },
+        {
+          "offset": "0x13c8",
+          "original": "ほらつっ立っていないで、\n調査よ、調査。\nまずは、中心からね。",
+          "text": "Don't just stand there,\ninvestigate!\nStart at the center."
+        },
+        {
+          "offset": "0x1414",
+          "original": "あ、何だ。\nもしかして、\nＵＦＯ？",
+          "text": "Whoa, what?\nCould it be...\na UFO?"
+        },
+        {
+          "offset": "0x143c",
+          "original": "この世に未確認飛行物体など\n存在するわけがないでしょう。\n私が正体を暴いてあげるわ。",
+          "text": "Unidentified flying objects\ncan't possibly exist.\nI'll expose what it is."
+        },
+        {
+          "offset": "0x1490",
+          "original": "えっ、え〜？",
+          "text": "Huh? Whaaat?"
+        },
+        {
+          "offset": "0x14a8",
+          "original": "いまのは、何だったんだろう。",
+          "text": "What was that just now?"
+        },
+        {
+          "offset": "0x14c8",
+          "original": "大したことなかったわね。\n私に挑戦するのは、\n一万光年早かったわよ。",
+          "text": "That was nothing.\nYou're ten thousand light\nyears too early for me."
+        },
+        {
+          "offset": "0x150c",
+          "original": "光年は、距離の単位じゃ。",
+          "text": "That's distance, not time."
+        },
+        {
+          "offset": "0x1534",
+          "original": "いっ、行くわよ。",
+          "text": "W-we're leaving."
+        },
+        {
+          "offset": "0x1548",
+          "original": "もしかして、\n俺達地球の危機を\n救ったのかも…。",
+          "text": "Maybe we just\nsaved the Earth\nfrom disaster..."
+        },
+        {
+          "offset": "0x1580",
+          "original": "あなたのせいで、\n負けたじゃないの。",
+          "text": "Thanks to you,\nI lost."
+        },
+        {
+          "offset": "0x15a4",
+          "original": "ご、ごめんなさい。",
+          "text": "S-sorry."
+        },
+        {
+          "offset": "0x15b8",
+          "original": "まあ、いいわ。\n次は、必ず勝つわよ。",
+          "text": "Oh well.\nNext time I'll surely win."
+        },
+        {
+          "offset": "0x15dc",
+          "original": "つ、次があるのか…。",
+          "text": "Th-there's a next time...?"
+        },
+        {
+          "offset": "0x18ac",
+          "original": "待ってたわ。\n{P}。",
+          "text": "I've been waiting,\n{P}."
+        },
+        {
+          "offset": "0x18c0",
+          "original": "ひ、{G}。\nどうしたの？",
+          "text": "Y-{G}\nwhat's going on?"
+        },
+        {
+          "offset": "0x18d8",
+          "original": "私の、野望を\n達成するためには\nあなたが邪魔なのよ。",
+          "text": "To achieve\nmy ambition,\nyou are in the way."
+        },
+        {
+          "offset": "0x190c",
+          "original": "俺は{G}の\n邪魔をした記憶はないよ。\nそれに、野望って？",
+          "text": "Listen, {G}\nI never got in your way.\nAnd what ambition?"
+        },
+        {
+          "offset": "0x1940",
+          "original": "世界征服よ。",
+          "text": "World domination."
+        },
+        {
+          "offset": "0x1950",
+          "original": "せ、世界征服？\n冗談でしょう。",
+          "text": "W-world domination?\nYou're kidding."
+        },
+        {
+          "offset": "0x1970",
+          "original": "物理的な準備は整ったわ。\nでも、あなたのおかげで、\n心の準備がまだなのよ。",
+          "text": "The physical preparations\nare done. But thanks to\nyou, my heart's not ready."
+        },
+        {
+          "offset": "0x19bc",
+          "original": "ど、どうして、\n俺のせいなんだ？",
+          "text": "Wh-why is that\nmy fault?"
+        },
+        {
+          "offset": "0x19dc",
+          "original": "ここで、\nあなたに勝利すれば、\n全て解決するわ。\nさあ、覚悟しなさい。",
+          "text": "If I defeat you\nright here,\nit's all settled.\nNow, prepare yourself."
+        },
+        {
+          "offset": "0x1a20",
+          "original": "ちょっと待って、紐緒さん。\n公園じゃ被害が出るから、\n砂浜へ行こう。",
+          "text": "Wait, Himoo-san.\nWe'll wreck the park.\nLet's go to the beach."
+        },
+        {
+          "offset": "0x1a8c",
+          "original": "ま、負けたわ。\n私の完敗よ。",
+          "text": "I-I lost.\nYou crushed me."
+        },
+        {
+          "offset": "0x1aa8",
+          "original": "大丈夫？\n怪我はなかった？",
+          "text": "Are you okay?\nDid you get hurt?"
+        },
+        {
+          "offset": "0x1ac4",
+          "original": "私の取るべき道は\n決まったわ。\nそれじゃ、失礼するわ。",
+          "text": "I now know the path\nI must take.\nFarewell, then."
+        },
+        {
+          "offset": "0x1b08",
+          "original": "ひ、{G}…。",
+          "text": "Y-{G}"
+        },
+        {
+          "offset": "0x1cd8",
+          "original": "何よ。",
+          "text": "What?"
+        }
+      ]
+    }
+  ]
 }

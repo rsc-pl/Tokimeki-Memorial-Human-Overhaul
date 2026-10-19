@@ -9,12 +9,12 @@
         {
           "offset": "0x0",
           "original": "さて、昼飯だ。\n早く学食に行かないと…。",
-          "text": "Okay, lunchtime.\nTo the cafeteria, quick."
+          "text": "It's lunchtime.\nBetter hit the cafeteria."
         },
         {
           "offset": "0x30",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x40",
@@ -34,7 +34,7 @@
         {
           "offset": "0xb8",
           "original": "えっ、何が？",
-          "text": "Huh, what's good?"
+          "text": "Huh? Why's that?"
         },
         {
           "offset": "0xc8",
@@ -49,7 +49,7 @@
         {
           "offset": "0x12c",
           "original": "口に合うかどうか\nわからないけど…。\nよかったら\n食べてくれない？",
-          "text": "I don't know if\nyou'll like it...\nbut if you want,\nwould you eat some?"
+          "text": "I'm not sure\nif you'll like it...\nWould you like\nto try some?"
         },
         {
           "offset": "0x16c",
@@ -59,7 +59,7 @@
         {
           "offset": "0x19c",
           "original": "良かった…。\n今日は天気もいいから、\n外で一緒に食べない？",
-          "text": "I'm glad...\nIt's nice out today,\nso let's eat outside?"
+          "text": "I'm glad...\nIt's nice out today.\nWant to eat outside?"
         },
         {
           "offset": "0x1d8",
@@ -119,7 +119,7 @@
         {
           "offset": "0x334",
           "original": "冗談抜きで、おいしいよ。\n{G}って、\n料理の天才だね。",
-          "text": "No joke, it's delicious.\nGosh, {G}\nyou're a genius cook."
+          "text": "Seriously, it's delicious.\n{G}, you're\na genius in the kitchen!"
         },
         {
           "offset": "0x368",
@@ -139,7 +139,7 @@
         {
           "offset": "0x448",
           "original": "{G}のお弁当なら\nいつでも歓迎だよ。",
-          "text": "Your lunches, {G}\nare always welcome."
+          "text": "{G}, I'd love\nyour lunch any day."
         },
         {
           "offset": "0x46c",
@@ -179,7 +179,7 @@
         {
           "offset": "0x578",
           "original": "お昼ご飯どうするの？",
-          "text": "What'll you do for lunch?"
+          "text": "Got any lunch plans?"
         },
         {
           "offset": "0x590",
@@ -204,12 +204,12 @@
         {
           "offset": "0x61c",
           "original": "い、いや、全然。\n{G}の料理なら、\nいつでも大歓迎だよ。",
-          "text": "N-no, not at all.\nYour cooking, {G}\nis always welcome."
+          "text": "N-no, not at all.\n{G}, I'd eat\nyour food anytime."
         },
         {
           "offset": "0x650",
           "original": "良かった…。\n今日は天気もいいから、\n外で一緒に食べない？",
-          "text": "I'm glad...\nIt's nice out today,\nso let's eat outside?"
+          "text": "I'm glad...\nIt's nice out today.\nWant to eat outside?"
         },
         {
           "offset": "0x68c",
@@ -259,7 +259,7 @@
         {
           "offset": "0xe58",
           "original": "本当？\n嬉しいな。",
-          "text": "Really?\nAwesome."
+          "text": "Really?\nThat's great!"
         },
         {
           "offset": "0xe74",
@@ -299,7 +299,7 @@
         {
           "offset": "0xf6c",
           "original": "冗談抜きで、おいしいよ。\n{G}って、\n料理の天才だね。",
-          "text": "No joke, it's delicious.\nGosh, {G}\nyou're a genius cook."
+          "text": "No joke, it's delicious.\n{G}, you're\na genius cook."
         },
         {
           "offset": "0xfa0",
@@ -329,7 +329,7 @@
         {
           "offset": "0x109c",
           "original": "いいねぇ。\nお嫁さんに\n欲しいくらいだよ。",
-          "text": "That's great.\nI'd almost want\nyou as my wife."
+          "text": "Wow.\nI'd marry you\nfor cooking like this."
         },
         {
           "offset": "0x10c8",
@@ -374,7 +374,7 @@
         {
           "offset": "0x128c",
           "original": "いいねぇ。\nお嫁さんに\n欲しいくらいだよ。",
-          "text": "That's great.\nI'd almost want\nyou as my wife."
+          "text": "Wow.\nI'd marry you\nfor cooking like this."
         },
         {
           "offset": "0x12b8",
@@ -454,7 +454,7 @@
         {
           "offset": "0x1870",
           "original": "私溺れちゃったんだ。\nもしかして、\n助けてくれたの？",
-          "text": "I drowned, didn't I?\nDid you\nsave me?"
+          "text": "I nearly drowned, huh?\nDid you\nsave me?"
         },
         {
           "offset": "0x18a4",
@@ -584,7 +584,7 @@
         {
           "offset": "0x2160",
           "original": "私、\nちょっと行ってくる。",
-          "text": "I'll go\ncheck on him."
+          "text": "I'll go\ncheck on the kid."
         },
         {
           "offset": "0x2190",
@@ -644,7 +644,7 @@
         {
           "offset": "0x2358",
           "original": "ふぅ…。\nとりあえず、放送はされた。\n{G}の所に戻ろう。",
-          "text": "Phew...\nAt least it was announced.\nBack to {G}"
+          "text": "Phew...\nThe announcement's done.\nBack to {G}."
         },
         {
           "offset": "0x2394",
@@ -659,7 +659,7 @@
         {
           "offset": "0x23f0",
           "original": "そ、そう。\n良かったね。",
-          "text": "Oh, I see.\nGlad you came."
+          "text": "Oh, really?\nThat's a relief."
         },
         {
           "offset": "0x2408",
@@ -724,7 +724,7 @@
         {
           "offset": "0x28dc",
           "original": "今日は、自由行動の日だ。\n{G}と、一緒に行く\n約束なんだけど…。",
-          "text": "Today's a free day.\n{G} and I were\nsupposed to go out..."
+          "text": "It's our free day.\nI promised {G}\nwe'd go together..."
         },
         {
           "offset": "0x2918",
@@ -739,7 +739,7 @@
         {
           "offset": "0x2990",
           "original": "{G}。{p}だけれど。\n大丈夫？",
-          "text": "{G}, it is {p}\nAre you okay?"
+          "text": "{G}? It's {p}.\nAre you okay?"
         },
         {
           "offset": "0x29a8",
@@ -749,7 +749,7 @@
         {
           "offset": "0x29cc",
           "original": "に、{G}大丈夫？",
-          "text": "S-{G}, okay?"
+          "text": "N-{G}, okay?"
         },
         {
           "offset": "0x29dc",
@@ -764,7 +764,7 @@
         {
           "offset": "0x2a00",
           "original": "{G}が、病気なのに\n一人でなんか行けないよ。",
-          "text": "While {G} is sick,\nI can't go off alone."
+          "text": "{G}, you're sick.\nI can't just leave."
         },
         {
           "offset": "0x2a2c",
@@ -784,7 +784,7 @@
         {
           "offset": "0x2a8c",
           "original": "そんなことないよ。\nいいから、{G}は、\n横になってて。",
-          "text": "No, you can't.\nOkay, {G}\njust lie down."
+          "text": "No, let me.\n{G}, you should\njust lie down."
         },
         {
           "offset": "0x2ac0",
@@ -799,7 +799,7 @@
         {
           "offset": "0x2b18",
           "original": "どう、気持ち良い？",
-          "text": "How's that, feel good?"
+          "text": "Feel better?"
         },
         {
           "offset": "0x2b34",
@@ -809,7 +809,7 @@
         {
           "offset": "0x2b48",
           "original": "今日は、\nずっとそばにいるから、\n安心して眠ってて。",
-          "text": "Today\nI'll stay right here,\nso sleep easy."
+          "text": "I'll stay here\nwith you all day.\nGet some rest."
         },
         {
           "offset": "0x2b7c",

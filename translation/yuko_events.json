@@ -1,95 +1,437 @@
 {
   "description": "Yuko's special events: all of SERIFU/EVENT_AS.BIN (base 0x80198000; game-internals 6j/6k), 85 of 89 strings; the four centered '・' pause lines stay. Six entries of the shared 237-word event table (0-5; Shiori's are 6-13): 0 the staff room (GEKO, girl 8 scene 1; Yuko scolded for lateness, with the in-string teacher label {>Tchr}), 1 the Arcade crane game (DATE scene 2), 2 the Theme Park parade (scene 3), 3 the concert (scene 4), 4 the Skating Rink's melting ice (scene 5), 5 the library cram sheets (scene 6). Lines are kept tight: the English filled 2,657 of the 2,704 bytes the originals free. Verified in DuckStation, every scene, hidden emulator (docs/testing.md \"Yuko's special events\"): the staff room via a type-0x45 record (force_event.py 8 1); the crane game on a forced 4/30 Arcade date (it plays by itself); the parade, concert, skating and library scenes via force_date.py --scene 3-6 (the parade with --any-step, at the date's first step); each date then ends normally. Not tested: natural triggers (seasons, ranks, dates), and the parade at its own step (0x3C, after the rides).",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_AS.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "職員室は、\nいつ来ても緊張するなぁ。", "text": "The staff room always\nmakes me so tense."},
-      {"offset": "0x24", "original": "失礼します。", "text": "Excuse me."},
-      {"offset": "0x40", "original": "{G}だ。\n何か、怒られてるな。", "text": "Hey, it's {G}\nShe's getting scolded."},
-      {"offset": "0x5c", "original": "{>先生}おっ、{p}君\n待ってたよ。", "text": "{>Tchr}Ah, {p}\nI've been expecting you."},
-      {"offset": "0x78", "original": "ちっ、先生に\n呼ばれちまったぜ。", "text": "Tch, the teacher\ncaught me."},
-      {"offset": "0xe4", "original": "やっと、先生の用事が\n終わったよ。\n{G}は、\nもういないみたいだ。", "text": "Finally done with\nthe teacher's errand.\nAnd {G}\nis already gone."},
-      {"offset": "0x124", "original": "失礼しました。", "text": "Pardon me."},
-      {"offset": "0x13c", "original": "あれ？\n{G}。", "text": "Huh?\nOh, {G}"},
-      {"offset": "0x148", "original": "あっ、\n職員室にいたの？", "text": "Oh,\nyou were in there?"},
-      {"offset": "0x160", "original": "今、怒られてた\nでしょう。", "text": "You were getting\nscolded, right?"},
-      {"offset": "0x17c", "original": "えっ。\nやばいとこ、\n見られちゃったなぁ。", "text": "Huh?\nUgh, you saw\nthe embarrassing part."},
-      {"offset": "0x1a8", "original": "何、怒られてたの？", "text": "Scolded for what?"},
-      {"offset": "0x1bc", "original": "ちょろっと、\n遅刻してね…。", "text": "I was, like,\na teeny bit late..."},
-      {"offset": "0x1d8", "original": "それで、あんなに\n怒られるって事は、\nかなりの常習犯だね。", "text": "If you got chewed out\nthat much, you must be\na repeat offender."},
-      {"offset": "0x214", "original": "そんなことないよ。\n週に３、４回かな。", "text": "No way.\nThree, four times a week?"},
-      {"offset": "0x23c", "original": "それを常習犯って\n言うんだよ。", "text": "That's what a repeat\noffender IS."},
-      {"offset": "0x25c", "original": "でも、あんぐらい\n我慢するだけで、\n遅刻ができんだもん。\n安いもんよ。", "text": "But if I just\nsit through that,\nI get to be late.\nSo worth it."},
-      {"offset": "0x2a0", "original": "はぁ…。\n反省の色が無い…。", "text": "Sigh...\nNo remorse at all..."},
-      {"offset": "0x2bc", "original": "それじゃ、\n私急ぐから。", "text": "Well, gotta run.\nSee ya."},
-      {"offset": "0x5bc", "original": "あっ、新しい\nぬいぐるみだ。", "text": "Ooh, new\nplushies!"},
-      {"offset": "0x5d8", "original": "クレーンゲームの景品か。\nよし、俺が取って\nあげようか？", "text": "Crane game prizes, huh.\nOkay, want me to\nwin you one?"},
-      {"offset": "0x618", "original": "ちょっと\n先にやらせて。", "text": "Hold on,\nlet me go first."},
-      {"offset": "0x630", "original": "ああ、いいよ。", "text": "Yeah, sure."},
-      {"offset": "0x684", "original": "う、うまい。", "text": "Sh-she's good."},
-      {"offset": "0x69c", "original": "どう？\nわりと、やるっしょー。", "text": "How's that?\nPretty good, huh?"},
-      {"offset": "0x6bc", "original": "す、すごいね。\n（やらなくてよかった。）", "text": "Th-that's amazing.\n(Glad I didn't go first.)"},
-      {"offset": "0x6e4", "original": "はい。\n次やっていいよ。", "text": "Here.\nYour turn."},
-      {"offset": "0x6fc", "original": "次ったって、\nもう変なのしか\n残ってないじゃん。", "text": "My turn? There's\nnothing left but\nthe weird ones."},
-      {"offset": "0x72c", "original": "ま、そうだけどね。\nじゃあ、\n別のゲームにしようよ。", "text": "Well, yeah.\nThen let's\nplay something else."},
-      {"offset": "0x760", "original": "あぁ、いいよ。", "text": "Yeah, sure."},
-      {"offset": "0x770", "original": "その前に\n袋もらってくるから。", "text": "First I'm gonna\ngo get a bag."},
-      {"offset": "0x790", "original": "はいはい。", "text": "Yeah, yeah."},
-      {"offset": "0x98c", "original": "パレードやってるよ。\nほら、見に行こう。", "text": "There's a parade on!\nC'mon, let's go see it."},
-      {"offset": "0x9b4", "original": "あっ、\n{G}待って。", "text": "Hey,\nwait, {G}"},
-      {"offset": "0x9d0", "original": "何度見ても\n超奇麗ねぇ。", "text": "Every time,\nit's sooo pretty."},
-      {"offset": "0x9e8", "original": "本当、奇麗だね。", "text": "Yeah, really pretty."},
-      {"offset": "0x9fc", "original": "私、何度もこのパレード\n見てるけど…。\n今日が一番奇麗。", "text": "I've seen this parade\nlots of times...\nbut today's the best."},
-      {"offset": "0xa34", "original": "どうして？", "text": "How come?"},
-      {"offset": "0xa40", "original": "だって、やっと願いが\nかなったっていうかぁ、\nとにかくそうなの。", "text": "'Cause my wish finally\ncame true, or like...\nit just is, okay?"},
-      {"offset": "0xa80", "original": "願いって？", "text": "What wish?"},
-      {"offset": "0xa8c", "original": "ずっと前から、\n好きな人と\n見たかったんだ。", "text": "I always wanted\nto see it with\nsomeone I like."},
-      {"offset": "0xab8", "original": "えっ？\nよく聞こえなかった。\nもう一度言ってよ。", "text": "Huh?\nI didn't catch that.\nSay it again?"},
-      {"offset": "0xae8", "original": "ほ、ほら、静かに見ようよ。\nもう終わっちゃうよ。", "text": "Sh-shh, let's just watch.\nIt's almost over."},
-      {"offset": "0xb18", "original": "静かにねぇ…。\n（何て言ったんだろう。）", "text": "Just watch, huh...\n(What did she say?)"},
-      {"offset": "0xb68", "original": "何か、\n夜が明けちゃったって感じ。\nま、いいか。", "text": "Feels like\nthe sun's coming up.\nOh well, whatever."},
-      {"offset": "0xd40", "original": "きゃーっ。", "text": "Kyaaa!"},
-      {"offset": "0xd4c", "original": "おあっ。\nび、びっくりしたぁ。", "text": "Whoa!\nY-you scared me."},
-      {"offset": "0xd6c", "original": "きゃーっ。\n素敵ぃ。", "text": "Kyaaa!\nSo awesome!"},
-      {"offset": "0xd80", "original": "うわ、すごいなこりゃ。", "text": "Wow, she's really into it."},
-      {"offset": "0xd98", "original": "もう最高。", "text": "The best!"},
-      {"offset": "0xda4", "original": "こりゃ、しばらく\nそっとしておこう。", "text": "Better leave her\nalone for a while."},
-      {"offset": "0xe20", "original": "なに一人で\nしらけてんの？", "text": "Why so bored,\nall by yourself?"},
-      {"offset": "0xe3c", "original": "何か、\nすごいなと思って…。", "text": "I just thought,\nwow..."},
-      {"offset": "0xe60", "original": "ほら一緒に。\n立って、立って。", "text": "C'mon, with me!\nUp, up!"},
-      {"offset": "0xe80", "original": "は、はい。", "text": "O-okay."},
-      {"offset": "0x100c", "original": "氷が溶けて、\nぐしょぐしょだね。\n{G}、気を付け…。", "text": "The ice is melting,\nit's all slushy.\nWatch it, {G}"},
-      {"offset": "0x103c", "original": "あーぁ。", "text": "Waaah!"},
-      {"offset": "0x1050", "original": "あっ、言ったそばから。", "text": "And right after I said it."},
-      {"offset": "0x1068", "original": "つめたーい。", "text": "Sooo cold!"},
-      {"offset": "0x1078", "original": "ほら、\n起き上がって。", "text": "Here,\nget up."},
-      {"offset": "0x1090", "original": "ありがとう。", "text": "Thanks."},
-      {"offset": "0x10b0", "original": "ひっどぉーい。\nもうパンツまで\nぐっしょぐしょ。", "text": "So mean!\nI'm soaked\nright to my undies."},
-      {"offset": "0x10e0", "original": "えっ？\nパンツ…？", "text": "Huh?\nYour undies...?"},
-      {"offset": "0x10f4", "original": "ちょださーっ。\nこれじゃ乾くまで\nどこにも行けないよ。", "text": "Sooo lame!\nI can't go anywhere\nuntil they're dry."},
-      {"offset": "0x112c", "original": "このスケート場には\n乾燥室があるみたいだよ。", "text": "Looks like this rink\nhas a drying room."},
-      {"offset": "0x1158", "original": "ホント？\nあ、じゃあ、ちょろっと\n行ってくんね。", "text": "Really?\nOh, then I'll be back\nin a teeny bit."},
-      {"offset": "0x119c", "original": "あっ、{G}。\nは、速い…。", "text": "Wait, {G}\nTh-that was fast..."},
-      {"offset": "0x1350", "original": "それじゃ、中に入ろうか。", "text": "Well, shall we go in?"},
-      {"offset": "0x136c", "original": "うん。ほんの、\nちょっとの我慢だよね。", "text": "Yeah. It's just\na teeny bit of torture."},
-      {"offset": "0x1394", "original": "えっ？、我慢って何を…", "text": "Wait, torture? What..."},
-      {"offset": "0x13b8", "original": "ほら、早くやっちゃおうよ。", "text": "C'mon, let's get it done."},
-      {"offset": "0x13d4", "original": "図書館に来て\nやることっていったら、\n一つじゃない。", "text": "There's only one\nthing you come to\nthe library for, duh."},
-      {"offset": "0x1418", "original": "ええっ、今日って、\nカンペ作りに\n来たんじゃないの？", "text": "Whaaat? Didn't we\ncome here today to\nmake cheat sheets?"},
-      {"offset": "0x144c", "original": "カンペって、\n明日からのテストの？", "text": "Cheat sheets?\nFor tomorrow's tests?"},
-      {"offset": "0x1470", "original": "そうよ。決まってるじゃん。", "text": "Yeah, obviously."},
-      {"offset": "0x148c", "original": "ほーら、早く早く。", "text": "C'mon, hurry, hurry."},
-      {"offset": "0x14a0", "original": "{G}って、\nいつもカンペ作ってるの？", "text": "{G}, do you\nalways make cheat sheets?"},
-      {"offset": "0x14c4", "original": "あったりまえじゃん。\nじゃ、こことこことここ、\nお願いね。", "text": "Well, duh.\nSo, this, this and this,\nthey're all yours."},
-      {"offset": "0x1558", "original": "あーん、苦しかった。\n私、活字恐怖症なのよ。", "text": "Ugh, that was torture.\nI've got a phobia of print."},
-      {"offset": "0x1584", "original": "そっ、そんな病気あるの？", "text": "Th-that's a real thing?"},
-      {"offset": "0x15a8", "original": "でも、これで試験も、\n超らくしょーだね。", "text": "But now the tests will\nbe a total breeze."},
-      {"offset": "0x15d0", "original": "そのわりには、\nあんまり成績が\n良くないような", "text": "Then how come\nher grades aren't\nall that great"},
-      {"offset": "0x1868", "original": "あれ？", "text": "Huh?"},
-      {"offset": "0x1870", "original": "何を？", "text": "Do what?"},
-      {"offset": "0x1878", "original": "…？", "text": "...?"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_AS.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "職員室は、\nいつ来ても緊張するなぁ。",
+          "text": "The staff room always\nmakes me so tense."
+        },
+        {
+          "offset": "0x24",
+          "original": "失礼します。",
+          "text": "Excuse me."
+        },
+        {
+          "offset": "0x40",
+          "original": "{G}だ。\n何か、怒られてるな。",
+          "text": "It's {G}.\nShe's in trouble."
+        },
+        {
+          "offset": "0x5c",
+          "original": "{>先生}おっ、{p}君\n待ってたよ。",
+          "text": "{>Tchr}Ah, {p}\nI've been expecting you."
+        },
+        {
+          "offset": "0x78",
+          "original": "ちっ、先生に\n呼ばれちまったぜ。",
+          "text": "Tch, the teacher\ncaught me."
+        },
+        {
+          "offset": "0xe4",
+          "original": "やっと、先生の用事が\n終わったよ。\n{G}は、\nもういないみたいだ。",
+          "text": "Finally done with\nthe teacher's errand.\nAnd {G}\nis already gone."
+        },
+        {
+          "offset": "0x124",
+          "original": "失礼しました。",
+          "text": "Pardon me."
+        },
+        {
+          "offset": "0x13c",
+          "original": "あれ？\n{G}。",
+          "text": "Huh?\n{G}."
+        },
+        {
+          "offset": "0x148",
+          "original": "あっ、\n職員室にいたの？",
+          "text": "Oh,\nyou were in there?"
+        },
+        {
+          "offset": "0x160",
+          "original": "今、怒られてた\nでしょう。",
+          "text": "You were getting\nscolded, right?"
+        },
+        {
+          "offset": "0x17c",
+          "original": "えっ。\nやばいとこ、\n見られちゃったなぁ。",
+          "text": "Huh?\nUgh, you saw\nthe embarrassing part."
+        },
+        {
+          "offset": "0x1a8",
+          "original": "何、怒られてたの？",
+          "text": "Scolded for what?"
+        },
+        {
+          "offset": "0x1bc",
+          "original": "ちょろっと、\n遅刻してね…。",
+          "text": "I was, like,\na teeny bit late..."
+        },
+        {
+          "offset": "0x1d8",
+          "original": "それで、あんなに\n怒られるって事は、\nかなりの常習犯だね。",
+          "text": "If you got chewed out\nthat much, you must be\na repeat offender."
+        },
+        {
+          "offset": "0x214",
+          "original": "そんなことないよ。\n週に３、４回かな。",
+          "text": "No way.\nThree, four times a week?"
+        },
+        {
+          "offset": "0x23c",
+          "original": "それを常習犯って\n言うんだよ。",
+          "text": "That's what a repeat\noffender IS."
+        },
+        {
+          "offset": "0x25c",
+          "original": "でも、あんぐらい\n我慢するだけで、\n遅刻ができんだもん。\n安いもんよ。",
+          "text": "But if I just\nsit through that,\nI get to be late.\nSo worth it."
+        },
+        {
+          "offset": "0x2a0",
+          "original": "はぁ…。\n反省の色が無い…。",
+          "text": "Sigh...\nNo remorse at all..."
+        },
+        {
+          "offset": "0x2bc",
+          "original": "それじゃ、\n私急ぐから。",
+          "text": "Well, gotta run.\nSee ya."
+        },
+        {
+          "offset": "0x5bc",
+          "original": "あっ、新しい\nぬいぐるみだ。",
+          "text": "Ooh, new\nplushies!"
+        },
+        {
+          "offset": "0x5d8",
+          "original": "クレーンゲームの景品か。\nよし、俺が取って\nあげようか？",
+          "text": "Crane game prizes, huh.\nOkay, want me to\nwin you one?"
+        },
+        {
+          "offset": "0x618",
+          "original": "ちょっと\n先にやらせて。",
+          "text": "Hold on,\nlet me go first."
+        },
+        {
+          "offset": "0x630",
+          "original": "ああ、いいよ。",
+          "text": "Yeah, sure."
+        },
+        {
+          "offset": "0x684",
+          "original": "う、うまい。",
+          "text": "Sh-she's good."
+        },
+        {
+          "offset": "0x69c",
+          "original": "どう？\nわりと、やるっしょー。",
+          "text": "How's that?\nPretty good, huh?"
+        },
+        {
+          "offset": "0x6bc",
+          "original": "す、すごいね。\n（やらなくてよかった。）",
+          "text": "Th-that's amazing.\n(Glad I didn't go first.)"
+        },
+        {
+          "offset": "0x6e4",
+          "original": "はい。\n次やっていいよ。",
+          "text": "Here.\nYour turn."
+        },
+        {
+          "offset": "0x6fc",
+          "original": "次ったって、\nもう変なのしか\n残ってないじゃん。",
+          "text": "My turn? There's\nnothing left but\nthe weird ones."
+        },
+        {
+          "offset": "0x72c",
+          "original": "ま、そうだけどね。\nじゃあ、\n別のゲームにしようよ。",
+          "text": "Well, yeah.\nThen let's\nplay something else."
+        },
+        {
+          "offset": "0x760",
+          "original": "あぁ、いいよ。",
+          "text": "Yeah, sure."
+        },
+        {
+          "offset": "0x770",
+          "original": "その前に\n袋もらってくるから。",
+          "text": "First I'm gonna\ngo get a bag."
+        },
+        {
+          "offset": "0x790",
+          "original": "はいはい。",
+          "text": "Yeah, yeah."
+        },
+        {
+          "offset": "0x98c",
+          "original": "パレードやってるよ。\nほら、見に行こう。",
+          "text": "There's a parade on!\nC'mon, let's go see it."
+        },
+        {
+          "offset": "0x9b4",
+          "original": "あっ、\n{G}待って。",
+          "text": "Hey,\nwait, {G}!"
+        },
+        {
+          "offset": "0x9d0",
+          "original": "何度見ても\n超奇麗ねぇ。",
+          "text": "Every time,\nit's sooo pretty."
+        },
+        {
+          "offset": "0x9e8",
+          "original": "本当、奇麗だね。",
+          "text": "Yeah, really pretty."
+        },
+        {
+          "offset": "0x9fc",
+          "original": "私、何度もこのパレード\n見てるけど…。\n今日が一番奇麗。",
+          "text": "I've seen this parade\nlots of times...\nbut today's the best."
+        },
+        {
+          "offset": "0xa34",
+          "original": "どうして？",
+          "text": "How come?"
+        },
+        {
+          "offset": "0xa40",
+          "original": "だって、やっと願いが\nかなったっていうかぁ、\nとにかくそうなの。",
+          "text": "'Cause my wish finally\ncame true, or like...\nit just is, okay?"
+        },
+        {
+          "offset": "0xa80",
+          "original": "願いって？",
+          "text": "What wish?"
+        },
+        {
+          "offset": "0xa8c",
+          "original": "ずっと前から、\n好きな人と\n見たかったんだ。",
+          "text": "I always wanted\nto see it with\nsomeone I like."
+        },
+        {
+          "offset": "0xab8",
+          "original": "えっ？\nよく聞こえなかった。\nもう一度言ってよ。",
+          "text": "Huh?\nI didn't catch that.\nSay it again?"
+        },
+        {
+          "offset": "0xae8",
+          "original": "ほ、ほら、静かに見ようよ。\nもう終わっちゃうよ。",
+          "text": "Sh-shh, let's just watch.\nIt's almost over."
+        },
+        {
+          "offset": "0xb18",
+          "original": "静かにねぇ…。\n（何て言ったんだろう。）",
+          "text": "Just watch, huh...\n(What did she say?)"
+        },
+        {
+          "offset": "0xb68",
+          "original": "何か、\n夜が明けちゃったって感じ。\nま、いいか。",
+          "text": "Feels like\nthe sun's coming up.\nOh well, whatever."
+        },
+        {
+          "offset": "0xd40",
+          "original": "きゃーっ。",
+          "text": "Kyaaa!"
+        },
+        {
+          "offset": "0xd4c",
+          "original": "おあっ。\nび、びっくりしたぁ。",
+          "text": "Whoa!\nY-you scared me."
+        },
+        {
+          "offset": "0xd6c",
+          "original": "きゃーっ。\n素敵ぃ。",
+          "text": "Kyaaa!\nSo awesome!"
+        },
+        {
+          "offset": "0xd80",
+          "original": "うわ、すごいなこりゃ。",
+          "text": "Wow, this is amazing!"
+        },
+        {
+          "offset": "0xd98",
+          "original": "もう最高。",
+          "text": "The best!"
+        },
+        {
+          "offset": "0xda4",
+          "original": "こりゃ、しばらく\nそっとしておこう。",
+          "text": "Better leave her\nalone for a while."
+        },
+        {
+          "offset": "0xe20",
+          "original": "なに一人で\nしらけてんの？",
+          "text": "Why so bored,\nall by yourself?"
+        },
+        {
+          "offset": "0xe3c",
+          "original": "何か、\nすごいなと思って…。",
+          "text": "I just thought,\nwow..."
+        },
+        {
+          "offset": "0xe60",
+          "original": "ほら一緒に。\n立って、立って。",
+          "text": "C'mon, with me!\nUp, up!"
+        },
+        {
+          "offset": "0xe80",
+          "original": "は、はい。",
+          "text": "O-okay."
+        },
+        {
+          "offset": "0x100c",
+          "original": "氷が溶けて、\nぐしょぐしょだね。\n{G}、気を付け…。",
+          "text": "The ice is melting.\nIt's slushy.\nWatch it, {G}!"
+        },
+        {
+          "offset": "0x103c",
+          "original": "あーぁ。",
+          "text": "Waaah!"
+        },
+        {
+          "offset": "0x1050",
+          "original": "あっ、言ったそばから。",
+          "text": "Just as I said it!"
+        },
+        {
+          "offset": "0x1068",
+          "original": "つめたーい。",
+          "text": "Sooo cold!"
+        },
+        {
+          "offset": "0x1078",
+          "original": "ほら、\n起き上がって。",
+          "text": "Here,\nget up."
+        },
+        {
+          "offset": "0x1090",
+          "original": "ありがとう。",
+          "text": "Thanks."
+        },
+        {
+          "offset": "0x10b0",
+          "original": "ひっどぉーい。\nもうパンツまで\nぐっしょぐしょ。",
+          "text": "So mean!\nI'm soaked\nright to my undies."
+        },
+        {
+          "offset": "0x10e0",
+          "original": "えっ？\nパンツ…？",
+          "text": "Huh?\nYour undies...?"
+        },
+        {
+          "offset": "0x10f4",
+          "original": "ちょださーっ。\nこれじゃ乾くまで\nどこにも行けないよ。",
+          "text": "Sooo lame!\nI can't go anywhere\nuntil they're dry."
+        },
+        {
+          "offset": "0x112c",
+          "original": "このスケート場には\n乾燥室があるみたいだよ。",
+          "text": "Looks like this rink\nhas a drying room."
+        },
+        {
+          "offset": "0x1158",
+          "original": "ホント？\nあ、じゃあ、ちょろっと\n行ってくんね。",
+          "text": "Really?\nOh, then I'll be back\nin a teeny bit."
+        },
+        {
+          "offset": "0x119c",
+          "original": "あっ、{G}。\nは、速い…。",
+          "text": "Wait, {G}\nTh-that was fast..."
+        },
+        {
+          "offset": "0x1350",
+          "original": "それじゃ、中に入ろうか。",
+          "text": "Well, shall we go in?"
+        },
+        {
+          "offset": "0x136c",
+          "original": "うん。ほんの、\nちょっとの我慢だよね。",
+          "text": "Yeah. Just a little\npatience, right?"
+        },
+        {
+          "offset": "0x1394",
+          "original": "えっ？、我慢って何を…",
+          "text": "Patience? For what...?"
+        },
+        {
+          "offset": "0x13b8",
+          "original": "ほら、早くやっちゃおうよ。",
+          "text": "C'mon, let's get it done."
+        },
+        {
+          "offset": "0x13d4",
+          "original": "図書館に来て\nやることっていったら、\n一つじゃない。",
+          "text": "There's only one\nthing you come to\nthe library for, duh."
+        },
+        {
+          "offset": "0x1418",
+          "original": "ええっ、今日って、\nカンペ作りに\n来たんじゃないの？",
+          "text": "Whaaat? Didn't we\ncome here today to\nmake cheat sheets?"
+        },
+        {
+          "offset": "0x144c",
+          "original": "カンペって、\n明日からのテストの？",
+          "text": "Cheat sheets?\nFor tomorrow's tests?"
+        },
+        {
+          "offset": "0x1470",
+          "original": "そうよ。決まってるじゃん。",
+          "text": "Yeah, obviously."
+        },
+        {
+          "offset": "0x148c",
+          "original": "ほーら、早く早く。",
+          "text": "C'mon, hurry, hurry."
+        },
+        {
+          "offset": "0x14a0",
+          "original": "{G}って、\nいつもカンペ作ってるの？",
+          "text": "{G}, do you\nalways make cheat sheets?"
+        },
+        {
+          "offset": "0x14c4",
+          "original": "あったりまえじゃん。\nじゃ、こことこことここ、\nお願いね。",
+          "text": "Well, duh.\nSo, this, this and this,\nthey're all yours."
+        },
+        {
+          "offset": "0x1558",
+          "original": "あーん、苦しかった。\n私、活字恐怖症なのよ。",
+          "text": "Ugh, that was torture.\nI've got a phobia of print."
+        },
+        {
+          "offset": "0x1584",
+          "original": "そっ、そんな病気あるの？",
+          "text": "Th-that's a real thing?"
+        },
+        {
+          "offset": "0x15a8",
+          "original": "でも、これで試験も、\n超らくしょーだね。",
+          "text": "But now the tests will\nbe a total breeze."
+        },
+        {
+          "offset": "0x15d0",
+          "original": "そのわりには、\nあんまり成績が\n良くないような",
+          "text": "Then why are\nher grades\nstill so bad...?"
+        },
+        {
+          "offset": "0x1868",
+          "original": "あれ？",
+          "text": "Huh?"
+        },
+        {
+          "offset": "0x1870",
+          "original": "何を？",
+          "text": "Do what?"
+        },
+        {
+          "offset": "0x1878",
+          "original": "…？",
+          "text": "...?"
+        }
+      ]
+    }
+  ]
 }

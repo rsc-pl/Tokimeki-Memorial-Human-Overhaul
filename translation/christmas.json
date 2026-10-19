@@ -264,7 +264,7 @@
         {
           "offset": "0x7ec",
           "original": "それじゃ\n私は行くわ。",
-          "text": "Well then,\nI'll be going."
+          "text": "Well,\nI should go."
         },
         {
           "offset": "0x818",
@@ -414,7 +414,7 @@
         {
           "offset": "0x11f0",
           "original": "あっ、急用を思い出したわ。\nもう、帰らなくっちゃ。",
-          "text": "Oh! Urgent business!\nI have to go home now."
+          "text": "Oops, an urgent errand!\nI have to get home!"
         },
         {
           "offset": "0x1230",
@@ -559,7 +559,7 @@
         {
           "offset": "0x1900",
           "original": "知ってると思うけど、\n私は鏡魅羅よ。\nそれじゃ、失礼。",
-          "text": "You surely know me,\nbut I'm Kagami Mira.\nNow, excuse me."
+          "text": "I'm Kagami Mira.\nI'm sure you know me.\nExcuse me."
         },
         {
           "offset": "0x1958",
@@ -639,12 +639,12 @@
         {
           "offset": "0x1e28",
           "original": "本当に大丈夫？\nいきなり倒れるもんだから、\nびっくりしちゃって。",
-          "text": "Are you really okay?\nYou suddenly collapsed,\nit gave me a scare."
+          "text": "Are you really okay?\nYou collapsed so suddenly,\nyou scared me!"
         },
         {
           "offset": "0x1e68",
           "original": "すいません。\n驚かせてしまった\nみたいで…。",
-          "text": "I'm sorry.\nIt seems I gave\nyou a fright..."
+          "text": "I'm sorry.\nI didn't mean\nto scare you..."
         },
         {
           "offset": "0x1e94",
@@ -759,12 +759,12 @@
         {
           "offset": "0x2504",
           "original": "大きなクリスマスツリーだと\n思いまして…。\nずっと見てました。",
-          "text": "I thought it was such\na big Christmas tree...\nI kept gazing at it."
+          "text": "It's such a big\nChristmas tree...\nI just kept staring."
         },
         {
           "offset": "0x2544",
           "original": "確かに大きいけど、\nこんな所で見てると、\n人にぶつかっちゃうよ。",
-          "text": "It sure is big, but\nif you stare at it here,\nyou'll bump into someone."
+          "text": "It's big, but don't\nstand here or you'll\nbump into someone."
         },
         {
           "offset": "0x2584",
@@ -869,7 +869,7 @@
         {
           "offset": "0x2b94",
           "original": "他に知り合いは、\n来てるのかな…。",
-          "text": "I wonder if anyone\nelse I know is here..."
+          "text": "Anyone else I know\nhere...?"
         },
         {
           "offset": "0x2bc0",
@@ -1464,7 +1464,7 @@
         {
           "offset": "0x503c",
           "original": "女の子のプレゼントの方が\n良かったなぁ。……帰るか。",
-          "text": "A girl's present would've\nbeen nicer... Home I go."
+          "text": "Wish I'd gotten\na girl's gift. Time to go."
         },
         {
           "offset": "0x57e0",

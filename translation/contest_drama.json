@@ -14,7 +14,7 @@
         {
           "offset": "0x58",
           "original": "３年間、演劇部で頑張った\n成果が出たぜ。",
-          "text": "Three years in Drama\nreally paid off."
+          "text": "Three years in Drama Club\nreally paid off."
         },
         {
           "offset": "0x80",
@@ -69,7 +69,7 @@
         {
           "offset": "0x1b0",
           "original": "私達が演劇グランプリ\nなんて…\n今でも信じられない。",
-          "text": "Us, winning the\nGrand Prix...\nI still can't believe it."
+          "text": "We won the\nGrand Prix...\nI still can't believe it."
         },
         {
           "offset": "0x1e4",
@@ -89,7 +89,7 @@
         {
           "offset": "0x240",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, {G}!"
         },
         {
           "offset": "0x24c",
@@ -139,7 +139,7 @@
         {
           "offset": "0x344",
           "original": "うん、そうだよ。",
-          "text": "Yeah, I am."
+          "text": "Yeah, that's right."
         },
         {
           "offset": "0x358",
@@ -199,7 +199,7 @@
         {
           "offset": "0x4cc",
           "original": "こんにちは、{P}。",
-          "text": "Good afternoon, {P}"
+          "text": "Hi, {P}."
         },
         {
           "offset": "0x4e0",
@@ -209,7 +209,7 @@
         {
           "offset": "0x4ec",
           "original": "この度は何か大きな賞を\nいただいたそうで、\nおめでとうございます。",
-          "text": "I hear you received\nsome great award.\nCongratulations."
+          "text": "I heard you won\na major award.\nCongratulations!"
         },
         {
           "offset": "0x530",
@@ -249,7 +249,7 @@
         {
           "offset": "0x604",
           "original": "うまく言えないけど…\nすごく素敵だった。",
-          "text": "I can't say it well...\nbut it was wonderful."
+          "text": "I can't quite explain it...\nIt was wonderful."
         },
         {
           "offset": "0x63c",

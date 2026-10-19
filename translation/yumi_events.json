@@ -1,166 +1,792 @@
 {
   "description": "Yumi's special events: all of SERIFU/EVENT_SA.BIN (entries 67-73: the salty lunches, the trip souvenir, the theme-park piggyback, the boat, pro wrestling, the stopped ski lift, the snowball fight). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_SA.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "さて、昼飯だ。\n早く学食に行かないと…。", "text": "Okay, lunchtime.\nTo the cafeteria, quick."},
-      {"offset": "0x28", "original": "{P}。\nこんにちはーっ。", "text": "{P}!\nHelloooo!"},
-      {"offset": "0x48", "original": "あっ、{G}。", "text": "Oh, {G}"},
-      {"offset": "0x58", "original": "お弁当作ってきたの。\n一緒に食べませんか？", "text": "I made lunch!\nWanna eat together?"},
-      {"offset": "0x84", "original": "えっ、いいけど。\n好雄は、どうするの？", "text": "Huh, sure, but\nwhat about Yoshio?"},
-      {"offset": "0xac", "original": "お兄ちゃんなんて、\nどうでもいいから。\n屋上に行きましょう。", "text": "Forget about\nmy brother.\nLet's go to the roof."},
-      {"offset": "0xe8", "original": "はいはい。\n（可哀想な好雄君。）", "text": "Okay, okay.\n(Poor Yoshio-kun.)"},
-      {"offset": "0x118", "original": "はい、どうぞ。\n頑張って\n作ったんですよ。", "text": "Here you go!\nI worked really\nhard on it."},
-      {"offset": "0x144", "original": "それじゃ、遠慮なく\nいただきます。", "text": "Then I'll dig\nright in."},
-      {"offset": "0x168", "original": "パクッ\nモグモグ\nゴックン", "text": "Chomp\nMunch munch\nGulp"},
-      {"offset": "0x184", "original": "ど、どうですか？", "text": "H-how is it?"},
-      {"offset": "0x198", "original": "‥‥‥‥。\n（砂糖と塩を、\n間違えてるぞ。）", "text": "........\n(She mixed up\nthe sugar and salt.)"},
-      {"offset": "0x1d8", "original": "おいしくないですか？", "text": "Isn't it good?"},
-      {"offset": "0x1f0", "original": "お、おいしいよ。\n{G}。\n（これが、男の優しさだぜ。）", "text": "I-it's delicious,\n{G}\n(That's a man's kindness.)"},
-      {"offset": "0x22c", "original": "ホントですか？\nやったーっ。\nたくさんあるから、\nどんどん食べて下さいね。", "text": "Really?\nYay!\nThere's lots, so\neat up, okay?"},
-      {"offset": "0x274", "original": "あ、ありがとう。\nでも、せっかく奇麗に作った\nお弁当が勿体無いね。", "text": "Th-thanks.\nBut it's a shame to eat\nsuch a pretty lunch."},
-      {"offset": "0x2b8", "original": "他の女の人のお弁当が\n食べれて、優美のは\n食べれないんですか？", "text": "You can eat other girls'\nlunches, but you can't\neat Yumi's?"},
-      {"offset": "0x2f8", "original": "そんなことないよ。\nただね、こんなに…。", "text": "It's not that.\nIt's just, this much..."},
-      {"offset": "0x320", "original": "食べれないんですか？", "text": "You can't eat it?"},
-      {"offset": "0x338", "original": "あぁ、嬉しいなぁ。\nこんなにおいしいお弁当を\n食べれるなんて。\n", "text": "Ahh, I'm so happy.\nTo get to eat\nsuch a tasty lunch.\n"},
-      {"offset": "0x378", "original": "死んだ気で、\n食うしかねぇな。", "text": "Guess I'll eat it\nand prepare for death."},
-      {"offset": "0x3f4", "original": "良かった。\n全部食べてくれて。", "text": "Yay.\nYou ate it all."},
-      {"offset": "0x414", "original": "ご、ごちそうさま。\nとても、おいしかったよ。", "text": "Th-thanks for the meal.\nIt was very good."},
-      {"offset": "0x440", "original": "いつでも言ってくださいね。\n他の女の人のお弁当なんて\n食べちゃ、嫌だから。", "text": "Just ask anytime, okay?\nI don't want you eating\nother girls' lunches."},
-      {"offset": "0x48c", "original": "はいはい。\n（さっきから、\n言ってる女の人って、\n虹野さんの事か…。\nどっかで、見てたんだ…。）", "text": "Okay, okay.\n(So this woman\nshe's talking about...\nwas Nijino-san...\nShe was watching us...)"},
-      {"offset": "0x4ec", "original": "それじゃ、\nまた作ってきますね。", "text": "Well then,\nI'll make you more!"},
-      {"offset": "0x530", "original": "また、お弁当作ってきたの。\n屋上で食べましょう？", "text": "I made lunch again!\nLet's eat on the roof?"},
-      {"offset": "0x560", "original": "あ、ありがとう。\nでも、今日は…。", "text": "Th-thanks.\nBut today..."},
-      {"offset": "0x584", "original": "私のお弁当…。\n食べられないんですか？", "text": "My lunch...\nYou can't eat it?"},
-      {"offset": "0x5ac", "original": "ゆ、{G}のお弁当なら\nいつでも大歓迎だよ。", "text": "Y-your lunch, {G}\nis always welcome."},
-      {"offset": "0x5d4", "original": "それじゃ。\n屋上に行きましょう。", "text": "Okay then.\nLet's go to the roof."},
-      {"offset": "0x5f4", "original": "とほほだよ。", "text": "Boo-hoo..."},
-      {"offset": "0x61c", "original": "はい、どうぞ。\nあまり、中身は\n変わらないですけど。", "text": "Here you go.\nIt's pretty much\nthe same as before."},
-      {"offset": "0x650", "original": "それじゃ、\nいただきます。", "text": "Well,\nlet's eat."},
-      {"offset": "0x674", "original": "おいしいですか？", "text": "Is it good?"},
-      {"offset": "0x688", "original": "すごくおいしいよ。\n（今度は、\nすごくしょっぱいぞ）", "text": "It's really good.\n(This time\nit's super salty.)"},
-      {"offset": "0x6c4", "original": "良かった。\nもう、他の女の人のお弁当は\n食べないでくださいね。", "text": "Yay.\nDon't eat other girls'\nlunches anymore, okay?"},
-      {"offset": "0x704", "original": "で、でもね。\nせっかく…。", "text": "B-but, see,\nwhen they go to..."},
-      {"offset": "0x720", "original": "食べないでくださいね。", "text": "Don't eat them, okay?"},
-      {"offset": "0x738", "original": "は、はい。", "text": "O-okay."},
-      {"offset": "0x744", "original": "私、絶対\n負けないんだから。", "text": "I'm never\ngonna lose."},
-      {"offset": "0xd20", "original": "{P}。\nこんにちはーっ。", "text": "{P}!\nHelloooo!"},
-      {"offset": "0xd38", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, {G}\nWhat's up?"},
-      {"offset": "0xd50", "original": "はい、どうぞ。\n修学旅行のお土産です。", "text": "Here you go!\nA school trip souvenir!"},
-      {"offset": "0xd78", "original": "ありがとう。\n嬉しいよ。", "text": "Thank you.\nI'm happy."},
-      {"offset": "0xd90", "original": "これ、優美と\nペアなんですよ。", "text": "It's a matching\nset with Yumi's!"},
-      {"offset": "0xdb0", "original": "そ、そう。", "text": "O-oh."},
-      {"offset": "0xdbc", "original": "あっ、お兄ちゃんに\n見つからないうちに\n戻らなきゃ。", "text": "Oh, I have to go\nback before my\nbrother sees me."},
-      {"offset": "0xdf0", "original": "ありがとう。\n大事にするよ。", "text": "Thanks.\nI'll treasure it."},
-      {"offset": "0xe0c", "original": "ずっと、身につけてて\nくださいね。", "text": "Wear it always,\nokay?"},
-      {"offset": "0xe58", "original": "{P}。\nこんにちはーっ。", "text": "{P}!\nHelloooo!"},
-      {"offset": "0xe70", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, {G}\nWhat's up?"},
-      {"offset": "0xe88", "original": "はい、どうぞ。\n修学旅行のお土産。", "text": "Here you go!\nA school trip souvenir."},
-      {"offset": "0xeac", "original": "ありがとう。\nぼ、木刀？\n（確か好雄も買ってたな…。\n兄妹でまったく…。）", "text": "Thank you.\nA w-wooden sword?\n(Yoshio bought one too...\nWhat a pair of siblings...)"},
-      {"offset": "0xef4", "original": "かっこいいでしょ。\n持ってくるの、\n大変だったんだから。", "text": "Cool, huh?\nIt was a pain\nbringing it back."},
-      {"offset": "0xf2c", "original": "そ、そう。\nそれは、大変だったね。", "text": "O-oh.\nThat must've been hard."},
-      {"offset": "0xf50", "original": "あっ、教室に戻らなきゃ。\nそれじゃ。", "text": "Oh, I gotta get to class.\nBye!"},
-      {"offset": "0xf90", "original": "どうやって、\n持って帰ろう…？", "text": "How am I going to\ncarry this thing home?"},
-      {"offset": "0x11f8", "original": "ワーイ、遊園地だ。\n今日は、天気がいいから、\nうきうきしますね。", "text": "Yay, the theme park!\nThe weather's so nice,\nI'm all excited!"},
-      {"offset": "0x1238", "original": "そうだね。", "text": "Yeah."},
-      {"offset": "0x1244", "original": "ほら、早く行こうよ。", "text": "Come on, let's hurry!"},
-      {"offset": "0x125c", "original": "{G}、そんなに\n急いだら、危ないよ。\nあっ。", "text": "{G}, don't rush,\nit's dangerous.\nOops."},
-      {"offset": "0x12a0", "original": "{G}。\n大丈夫？", "text": "Oh, {G}\nAre you okay?"},
-      {"offset": "0x12b0", "original": "エーン。\n痛いよぉ。", "text": "Waaah.\nIt huuurts."},
-      {"offset": "0x12c4", "original": "{G}。\nほら、泣かないの。\nみんなが見てるよ。", "text": "Look, {G}\ndon't cry.\nEveryone's looking."},
-      {"offset": "0x12f0", "original": "エーン。\nもう歩けないよぉ。\n死んじゃうよぉ。", "text": "Waaah.\nI can't walk anymore.\nI'm gonna die."},
-      {"offset": "0x1320", "original": "まいったな。\nどうしよう…。", "text": "Oh, man.\nWhat do I do..."},
-      {"offset": "0x133c", "original": "エーン。\nおんぶしてくれなきゃ、\n死んじゃうー。", "text": "Waaah.\nIf you don't carry me,\nI'm gonna diiie."},
-      {"offset": "0x136c", "original": "しょうがないな。\nおんぶしてあげるから、\nさあ立って。", "text": "Oh, all right.\nI'll carry you,\nso stand up."},
-      {"offset": "0x13c4", "original": "ホント？\nワーイ、おんぶだ。\n嬉しいな。", "text": "Really?\nYay, a piggyback!\nI'm so happy."},
-      {"offset": "0x13ec", "original": "‥‥‥‥。\n（頭痛くなってきた。）", "text": "........\n(I'm getting a headache.)"},
-      {"offset": "0x15dc", "original": "優美。\n今日、ボートに\n乗りたいです。", "text": "Yumi\nwants to ride\na boat today."},
-      {"offset": "0x1604", "original": "ボート？\n揺れるよ。\n転覆するかもよ。", "text": "A boat?\nThey rock.\nWe might capsize."},
-      {"offset": "0x1634", "original": "でも…、\n乗りたいもん。", "text": "But...\nI wanna ride one."},
-      {"offset": "0x164c", "original": "いいよ。\nじゃあ、\n池の方に行こう。", "text": "All right.\nThen let's go\nto the pond."},
-      {"offset": "0x167c", "original": "あっ、ボートだ。\n早く早く。", "text": "Oh, boats!\nHurry, hurry!"},
-      {"offset": "0x1698", "original": "ゆ、{G}。\nそんなに急がなくても、\nボートは逃げないよ。", "text": "Y-{G}\nNo need to rush,\nthe boats won't run off."},
-      {"offset": "0x16d4", "original": "{G}。\nこれで満足した？", "text": "So, {G}\nare you happy now?"},
-      {"offset": "0x16ec", "original": "うん。\nすっごく嬉しいです。", "text": "Yeah.\nI'm super happy."},
-      {"offset": "0x1708", "original": "それは、良かった。", "text": "That's good."},
-      {"offset": "0x171c", "original": "あっ、ほら。\nカップルが、\nいっぱい乗ってますよ。", "text": "Oh, look.\nThere are tons\nof couples out here."},
-      {"offset": "0x1750", "original": "そ、そうだね。", "text": "Y-yeah."},
-      {"offset": "0x1760", "original": "優美達も、\nそう見えるかな…。", "text": "I wonder if we\nlook like that too..."},
-      {"offset": "0x1780", "original": "{G}可愛いから、\n兄妹にみえるかもね。", "text": "{G}, you're so cute,\nwe might look related."},
-      {"offset": "0x17a4", "original": "優美って、\n子供っぽいですか？\nそんなのヤダな。", "text": "Is Yumi\nchildish?\nI don't want that."},
-      {"offset": "0x17d4", "original": "ほ、ほら、{G}。\n好雄の妹だからさ、\nそう思うとね。", "text": "W-well, {G}\nyou're Yoshio's sister,\nso that's how I see you."},
-      {"offset": "0x1804", "original": "じゃあ、\n子供っぽい女の子は\n嫌いですか？", "text": "Then do you\ndislike childish\ngirls?"},
-      {"offset": "0x1830", "original": "そ、そんなことないよ。", "text": "N-no, not at all."},
-      {"offset": "0x1848", "original": "そうですか？\nそれなら、いいです。", "text": "Really?\nThen it's okay."},
-      {"offset": "0x186c", "original": "{G}って、\nドキッとすること\n言うよなぁ…。", "text": "Gosh, {G}\nsays things that\nmake my heart pound."},
-      {"offset": "0x1b44", "original": "ワーッ、\nやってる。", "text": "Whoa,\nit's started!"},
-      {"offset": "0x1b58", "original": "{G}って、\nプロレス好きなんだね。", "text": "Gosh, {G}\nyou love pro wrestling."},
-      {"offset": "0x1b78", "original": "うん、だーい好き。\nお兄ちゃんと\nよく見るんだよ。", "text": "Yeah, I looove it.\nI watch it a lot\nwith my brother."},
-      {"offset": "0x1bac", "original": "好雄とね…。\nあいつも、\n好きなのかな…。", "text": "With Yoshio, huh...\nI wonder if\nhe likes it too..."},
-      {"offset": "0x1bd8", "original": "あっ、本日の\nメインイベントだ。\nこの試合見たかったんだ。", "text": "Oh, it's today's\nmain event!\nI wanted to see this one."},
-      {"offset": "0x1c14", "original": "そ、そう。\n良かったね。", "text": "O-oh.\nGood for you."},
-      {"offset": "0x1c44", "original": "そこだ。\n行けぇ。", "text": "Now!\nGo, go!"},
-      {"offset": "0x1c58", "original": "あ、あの…。", "text": "U-um..."},
-      {"offset": "0x1c68", "original": "でたぁ。\nＤＤＴ。", "text": "There it is!\nA DDT!"},
-      {"offset": "0x1c7c", "original": "あの、{G}？\n前の席の人に\nパンツ見られちゃうよ。", "text": "Um, {G}\nthe people in front\ncan see your panties."},
-      {"offset": "0x1cac", "original": "そこで、フォールだ。\nあっ、返されちゃった。", "text": "Now, go for the pin!\nAw, he kicked out."},
-      {"offset": "0x1cd8", "original": "駄目だ。\n全然聞こえてないよ。\nほっとくしかないな…。", "text": "No use.\nShe can't hear a thing.\nI'd better leave her be."},
-      {"offset": "0x1d28", "original": "やっと、気付いて\nくれたかな？", "text": "Did she finally\nnotice me?"},
-      {"offset": "0x1d4c", "original": "ね、\n今の技見てました？", "text": "Hey,\ndid you see that move?"},
-      {"offset": "0x1d64", "original": "へっ？\n見てたけど。", "text": "Huh?\nYeah, I saw."},
-      {"offset": "0x1d78", "original": "あれ、この前お兄ちゃんに\nかけたらね、\nしばらく動けなく\nなっちゃったんだよ。", "text": "When I did that on\nmy brother the other day,\nhe couldn't move\nfor a while."},
-      {"offset": "0x1dc4", "original": "そ、そう。\n（好雄の奴、結構ハードな\n家庭で育ってるんだな。）", "text": "O-oh.\n(Yoshio grew up in\na pretty rough home.)"},
-      {"offset": "0x1e04", "original": "あとね。\n最近は、お兄ちゃんで、\n新しい技を開発中なの。\nできたら見せてあげるね。", "text": "And also,\nI'm working on new moves\nusing my brother.\nI'll show you when done!"},
-      {"offset": "0x1e54", "original": "あ、ありがとう。\n（好雄のやつが、\n不敏に思えてきた。）", "text": "Th-thanks.\n(I'm starting to\nfeel sorry for Yoshio.)"},
-      {"offset": "0x1e8c", "original": "あっ、すごい。\nパワーボムが決まった。", "text": "Whoa, awesome!\nA powerbomb!"},
-      {"offset": "0x1eb4", "original": "駄目だ。\nまた熱中してしまった。", "text": "No use.\nShe's all into it again."},
-      {"offset": "0x2190", "original": "今日は、\nちょっと風が強いね。\n大丈夫かな？", "text": "It's pretty\nwindy today.\nWill it be okay?"},
-      {"offset": "0x21bc", "original": "そんなの平気ですよ。\n早く、行きましょうよ。", "text": "That's no problem!\nCome on, let's go!"},
-      {"offset": "0x21e8", "original": "う、うん。\n（リフトとか\n止まらなきゃいいけど…。）", "text": "Y-yeah.\n(I hope the lifts\ndon't stop or anything...)"},
-      {"offset": "0x221c", "original": "ほら、早くしないと。\n置いていっちゃいますよ。", "text": "Come on, hurry up,\nor I'll leave you behind!"},
-      {"offset": "0x224c", "original": "ちょっと待ってよ。\n{G}。", "text": "Hey, wait up,\n{G}"},
-      {"offset": "0x2278", "original": "あっ、リフトが\n止まった。", "text": "Oh, the lift\nstopped."},
-      {"offset": "0x2298", "original": "リフトが\n止まっちゃった…。", "text": "The lift\nstopped..."},
-      {"offset": "0x22b4", "original": "ゆ、{G}。\n大丈夫だからね。\nだから、泣かないでね。", "text": "Y-{G}\nIt's okay, really.\nSo don't cry, okay?"},
-      {"offset": "0x22e4", "original": "フェーン。\n優美達、\n死んじゃうのかな？", "text": "Waaah.\nAre we\ngonna die?"},
-      {"offset": "0x230c", "original": "そんな、おおげさな。\n大丈夫だよ。\n泣かないで。", "text": "Don't exaggerate.\nIt's fine.\nDon't cry."},
-      {"offset": "0x233c", "original": "もう、駄目だ。\nきっと死んじゃうんだ。\nエーン、エーン。", "text": "It's over.\nWe're gonna die for sure.\nWaaah, waaah."},
-      {"offset": "0x2374", "original": "‥‥‥‥。\n（動きだすまで、\nほっとくしかないな…。）", "text": "........\n(I'll just leave her be\nuntil it starts again...)"},
-      {"offset": "0x23ac", "original": "死ぬ前に、一つお願いが\nあるんですけど…。", "text": "Before we die, there's\none thing I want..."},
-      {"offset": "0x23d8", "original": "何？\n言ってごらん。\n（だから、死なないって…。）", "text": "What?\nGo ahead and say it.\n(We're not dying...)"},
-      {"offset": "0x240c", "original": "優美の事を大好き…。", "text": "Say you love Yumi..."},
-      {"offset": "0x2448", "original": "あっ、動いた。\n助かったみたい。", "text": "Oh, it moved!\nLooks like we're saved."},
-      {"offset": "0x246c", "original": "ほら、だから大丈夫って\n言っただろう。\nこんな事、良くあるんだよ。", "text": "See, I told you\nit was okay.\nThis happens all the time."},
-      {"offset": "0x24b0", "original": "うん。\nごめんなさい。\n迷惑かけました。", "text": "Yeah.\nI'm sorry.\nI caused you trouble."},
-      {"offset": "0x24d8", "original": "別に、いいよ。\nところで、お願いって\n一体何だったの？", "text": "It's fine.\nBy the way, what was\nthat thing you wanted?"},
-      {"offset": "0x251c", "original": "今日は、もういいの。\nまた、今度の\n機会にします。", "text": "Not today.\nI'll save it\nfor next time."},
-      {"offset": "0x2550", "original": "そう。\nそれなら、いいけど。\nじゃあ、滑ろう。", "text": "Okay.\nIf you say so.\nLet's ski, then."},
-      {"offset": "0x2860", "original": "今日は寒いな。\nあっ、雪が積もってるぞ", "text": "It's cold today.\nOh, the snow's piled up."},
-      {"offset": "0x2888", "original": "ピンポーン", "text": "Ding-dong"},
-      {"offset": "0x2894", "original": "あれ、何だろう？", "text": "Huh, who's that?"},
-      {"offset": "0x28b4", "original": "こんにちは、\n{P}。", "text": "Hello,\n{P}!"},
-      {"offset": "0x28c8", "original": "あれ、優美ちゃん。\nどうしたの。", "text": "Oh, Yumi-chan.\nWhat's up?"},
-      {"offset": "0x28e8", "original": "外、すっごく雪が\n積もってるんです。\n雪合戦しましょう。", "text": "There's tons of snow\npiled up outside!\nSnowball fight!"},
-      {"offset": "0x2920", "original": "雪合戦？", "text": "A snowball fight?"},
-      {"offset": "0x292c", "original": "早く、早く。", "text": "Hurry, hurry!"},
-      {"offset": "0x293c", "original": "あっ、優美ちゃん、\n引っ張らないで。", "text": "Hey, Yumi-chan,\ndon't pull me."},
-      {"offset": "0x2978", "original": "うー、すごく寒いぞ。", "text": "Brrr, it's freezing."},
-      {"offset": "0x2998", "original": "うわっ！？", "text": "Whoa!?"},
-      {"offset": "0x29a8", "original": "あはははは、やった、\nやった！", "text": "Ahahaha, got you,\ngot you!"},
-      {"offset": "0x29c8", "original": "や、やったなー！", "text": "Wh-why, you!"},
-      {"offset": "0x29dc", "original": "優美、昔から雪合戦は\n得意だったんです。", "text": "Yumi's always been great\nat snowball fights."},
-      {"offset": "0x2a04", "original": "俺だって自信はあるんだ。\n負けないよ。", "text": "I'm pretty good myself.\nI won't lose."},
-      {"offset": "0x2a2c", "original": "優美も\n手加減はしませんよ。", "text": "Yumi won't\ngo easy on you either!"},
-      {"offset": "0x2a48", "original": "よし、行くぞ！", "text": "Okay, here I come!"},
-      {"offset": "0x2a58", "original": "俺は、優美ちゃんと、\n楽しく雪合戦した。", "text": "Yumi-chan and I had a\nreally fun snowball fight."},
-      {"offset": "0x2a9c", "original": "すっごく楽しかったです。\n雪が降ったら、\nまたやりましょうね。", "text": "That was super fun!\nWhen it snows,\nlet's do it again!"},
-      {"offset": "0x2adc", "original": "そうだね。", "text": "Yeah."},
-      {"offset": "0x2ae8", "original": "それじゃ、\nさよなら。", "text": "Well,\nbye-bye!"},
-      {"offset": "0x2df0", "original": "うん。", "text": "Okay!"},
-      {"offset": "0x2df8", "original": "うん。", "text": "Okay!"},
-      {"offset": "0x2e00", "original": "ポカッ", "text": "Thwack"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_SA.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "さて、昼飯だ。\n早く学食に行かないと…。",
+          "text": "Okay, lunchtime.\nTo the cafeteria, quick."
+        },
+        {
+          "offset": "0x28",
+          "original": "{P}。\nこんにちはーっ。",
+          "text": "{P}!\nHelloooo!"
+        },
+        {
+          "offset": "0x48",
+          "original": "あっ、{G}。",
+          "text": "Oh, {G}"
+        },
+        {
+          "offset": "0x58",
+          "original": "お弁当作ってきたの。\n一緒に食べませんか？",
+          "text": "I made lunch!\nWanna eat together?"
+        },
+        {
+          "offset": "0x84",
+          "original": "えっ、いいけど。\n好雄は、どうするの？",
+          "text": "Huh, sure, but\nwhat about Yoshio?"
+        },
+        {
+          "offset": "0xac",
+          "original": "お兄ちゃんなんて、\nどうでもいいから。\n屋上に行きましょう。",
+          "text": "Forget about\nmy brother.\nLet's go to the roof."
+        },
+        {
+          "offset": "0xe8",
+          "original": "はいはい。\n（可哀想な好雄君。）",
+          "text": "Okay, okay.\n(Poor Yoshio-kun.)"
+        },
+        {
+          "offset": "0x118",
+          "original": "はい、どうぞ。\n頑張って\n作ったんですよ。",
+          "text": "Here you go!\nI worked really\nhard on it."
+        },
+        {
+          "offset": "0x144",
+          "original": "それじゃ、遠慮なく\nいただきます。",
+          "text": "Then I'll dig\nright in."
+        },
+        {
+          "offset": "0x168",
+          "original": "パクッ\nモグモグ\nゴックン",
+          "text": "Chomp\nMunch munch\nGulp"
+        },
+        {
+          "offset": "0x184",
+          "original": "ど、どうですか？",
+          "text": "H-how is it?"
+        },
+        {
+          "offset": "0x198",
+          "original": "‥‥‥‥。\n（砂糖と塩を、\n間違えてるぞ。）",
+          "text": "........\n(She mixed up\nthe sugar and salt.)"
+        },
+        {
+          "offset": "0x1d8",
+          "original": "おいしくないですか？",
+          "text": "Isn't it good?"
+        },
+        {
+          "offset": "0x1f0",
+          "original": "お、おいしいよ。\n{G}。\n（これが、男の優しさだぜ。）",
+          "text": "I-it's delicious,\n{G}.\n(A man's gotta be kind.)"
+        },
+        {
+          "offset": "0x22c",
+          "original": "ホントですか？\nやったーっ。\nたくさんあるから、\nどんどん食べて下さいね。",
+          "text": "Really?\nYay!\nThere's lots, so\neat up, okay?"
+        },
+        {
+          "offset": "0x274",
+          "original": "あ、ありがとう。\nでも、せっかく奇麗に作った\nお弁当が勿体無いね。",
+          "text": "Th-thanks.\nBut it's a shame to eat\nsuch a pretty lunch."
+        },
+        {
+          "offset": "0x2b8",
+          "original": "他の女の人のお弁当が\n食べれて、優美のは\n食べれないんですか？",
+          "text": "You can eat other girls'\nlunches, but you can't\neat Yumi's?"
+        },
+        {
+          "offset": "0x2f8",
+          "original": "そんなことないよ。\nただね、こんなに…。",
+          "text": "It's not that.\nIt's just, this much..."
+        },
+        {
+          "offset": "0x320",
+          "original": "食べれないんですか？",
+          "text": "You can't eat it?"
+        },
+        {
+          "offset": "0x338",
+          "original": "あぁ、嬉しいなぁ。\nこんなにおいしいお弁当を\n食べれるなんて。\n",
+          "text": "Ahh, I'm so happy.\nTo get to eat\nsuch a tasty lunch.\n"
+        },
+        {
+          "offset": "0x378",
+          "original": "死んだ気で、\n食うしかねぇな。",
+          "text": "Guess I've got to\neat it and hope I live."
+        },
+        {
+          "offset": "0x3f4",
+          "original": "良かった。\n全部食べてくれて。",
+          "text": "Yay.\nYou ate it all."
+        },
+        {
+          "offset": "0x414",
+          "original": "ご、ごちそうさま。\nとても、おいしかったよ。",
+          "text": "Th-thanks for the meal.\nIt was very good."
+        },
+        {
+          "offset": "0x440",
+          "original": "いつでも言ってくださいね。\n他の女の人のお弁当なんて\n食べちゃ、嫌だから。",
+          "text": "Just ask anytime, okay?\nI don't want you eating\nother girls' lunches."
+        },
+        {
+          "offset": "0x48c",
+          "original": "はいはい。\n（さっきから、\n言ってる女の人って、\n虹野さんの事か…。\nどっかで、見てたんだ…。）",
+          "text": "Okay, okay.\n(So this woman\nshe's talking about...\nwas Nijino-san...\nShe was watching us...)"
+        },
+        {
+          "offset": "0x4ec",
+          "original": "それじゃ、\nまた作ってきますね。",
+          "text": "Well then,\nI'll make you more!"
+        },
+        {
+          "offset": "0x530",
+          "original": "また、お弁当作ってきたの。\n屋上で食べましょう？",
+          "text": "I made lunch again!\nLet's eat on the roof?"
+        },
+        {
+          "offset": "0x560",
+          "original": "あ、ありがとう。\nでも、今日は…。",
+          "text": "Th-thanks.\nBut today..."
+        },
+        {
+          "offset": "0x584",
+          "original": "私のお弁当…。\n食べられないんですか？",
+          "text": "My lunch...\nYou can't eat it?"
+        },
+        {
+          "offset": "0x5ac",
+          "original": "ゆ、{G}のお弁当なら\nいつでも大歓迎だよ。",
+          "text": "Y-your lunch, {G}\nis always welcome."
+        },
+        {
+          "offset": "0x5d4",
+          "original": "それじゃ。\n屋上に行きましょう。",
+          "text": "Okay then.\nLet's go to the roof."
+        },
+        {
+          "offset": "0x5f4",
+          "original": "とほほだよ。",
+          "text": "Boo-hoo..."
+        },
+        {
+          "offset": "0x61c",
+          "original": "はい、どうぞ。\nあまり、中身は\n変わらないですけど。",
+          "text": "Here you go.\nIt's pretty much\nthe same as before."
+        },
+        {
+          "offset": "0x650",
+          "original": "それじゃ、\nいただきます。",
+          "text": "Well,\nlet's eat."
+        },
+        {
+          "offset": "0x674",
+          "original": "おいしいですか？",
+          "text": "Is it good?"
+        },
+        {
+          "offset": "0x688",
+          "original": "すごくおいしいよ。\n（今度は、\nすごくしょっぱいぞ）",
+          "text": "It's really good.\n(This time\nit's super salty.)"
+        },
+        {
+          "offset": "0x6c4",
+          "original": "良かった。\nもう、他の女の人のお弁当は\n食べないでくださいね。",
+          "text": "Yay.\nDon't eat other girls'\nlunches anymore, okay?"
+        },
+        {
+          "offset": "0x704",
+          "original": "で、でもね。\nせっかく…。",
+          "text": "B-but, you know...\nIt'd be such a waste..."
+        },
+        {
+          "offset": "0x720",
+          "original": "食べないでくださいね。",
+          "text": "Don't eat them, okay?"
+        },
+        {
+          "offset": "0x738",
+          "original": "は、はい。",
+          "text": "O-okay."
+        },
+        {
+          "offset": "0x744",
+          "original": "私、絶対\n負けないんだから。",
+          "text": "I'm never\ngonna lose."
+        },
+        {
+          "offset": "0xd20",
+          "original": "{P}。\nこんにちはーっ。",
+          "text": "{P}!\nHelloooo!"
+        },
+        {
+          "offset": "0xd38",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0xd50",
+          "original": "はい、どうぞ。\n修学旅行のお土産です。",
+          "text": "Here you go!\nA school trip souvenir!"
+        },
+        {
+          "offset": "0xd78",
+          "original": "ありがとう。\n嬉しいよ。",
+          "text": "Thank you.\nI'm happy."
+        },
+        {
+          "offset": "0xd90",
+          "original": "これ、優美と\nペアなんですよ。",
+          "text": "It's a matching\nset with Yumi's!"
+        },
+        {
+          "offset": "0xdb0",
+          "original": "そ、そう。",
+          "text": "O-oh."
+        },
+        {
+          "offset": "0xdbc",
+          "original": "あっ、お兄ちゃんに\n見つからないうちに\n戻らなきゃ。",
+          "text": "Oh, I have to go\nback before my\nbrother sees me."
+        },
+        {
+          "offset": "0xdf0",
+          "original": "ありがとう。\n大事にするよ。",
+          "text": "Thanks.\nI'll treasure it."
+        },
+        {
+          "offset": "0xe0c",
+          "original": "ずっと、身につけてて\nくださいね。",
+          "text": "Wear it always,\nokay?"
+        },
+        {
+          "offset": "0xe58",
+          "original": "{P}。\nこんにちはーっ。",
+          "text": "{P}!\nHelloooo!"
+        },
+        {
+          "offset": "0xe70",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0xe88",
+          "original": "はい、どうぞ。\n修学旅行のお土産。",
+          "text": "Here you go!\nA school trip souvenir."
+        },
+        {
+          "offset": "0xeac",
+          "original": "ありがとう。\nぼ、木刀？\n（確か好雄も買ってたな…。\n兄妹でまったく…。）",
+          "text": "Thanks.\nA wooden sword?\n(Yoshio got one too...\nThose siblings...)"
+        },
+        {
+          "offset": "0xef4",
+          "original": "かっこいいでしょ。\n持ってくるの、\n大変だったんだから。",
+          "text": "Cool, huh?\nIt was a pain\nbringing it back."
+        },
+        {
+          "offset": "0xf2c",
+          "original": "そ、そう。\nそれは、大変だったね。",
+          "text": "O-oh.\nThat must've been hard."
+        },
+        {
+          "offset": "0xf50",
+          "original": "あっ、教室に戻らなきゃ。\nそれじゃ。",
+          "text": "Oh, I gotta get to class.\nBye!"
+        },
+        {
+          "offset": "0xf90",
+          "original": "どうやって、\n持って帰ろう…？",
+          "text": "How am I going to\ncarry this thing home?"
+        },
+        {
+          "offset": "0x11f8",
+          "original": "ワーイ、遊園地だ。\n今日は、天気がいいから、\nうきうきしますね。",
+          "text": "Yay, the theme park!\nThe weather's so nice,\nI'm all excited!"
+        },
+        {
+          "offset": "0x1238",
+          "original": "そうだね。",
+          "text": "Yeah."
+        },
+        {
+          "offset": "0x1244",
+          "original": "ほら、早く行こうよ。",
+          "text": "Come on, let's hurry!"
+        },
+        {
+          "offset": "0x125c",
+          "original": "{G}、そんなに\n急いだら、危ないよ。\nあっ。",
+          "text": "{G}, don't rush,\nit's dangerous.\nOops."
+        },
+        {
+          "offset": "0x12a0",
+          "original": "{G}。\n大丈夫？",
+          "text": "Oh, {G}\nAre you okay?"
+        },
+        {
+          "offset": "0x12b0",
+          "original": "エーン。\n痛いよぉ。",
+          "text": "Waaah.\nIt huuurts."
+        },
+        {
+          "offset": "0x12c4",
+          "original": "{G}。\nほら、泣かないの。\nみんなが見てるよ。",
+          "text": "Look, {G}\ndon't cry.\nEveryone's looking."
+        },
+        {
+          "offset": "0x12f0",
+          "original": "エーン。\nもう歩けないよぉ。\n死んじゃうよぉ。",
+          "text": "Waaah.\nI can't walk anymore.\nI'm gonna die."
+        },
+        {
+          "offset": "0x1320",
+          "original": "まいったな。\nどうしよう…。",
+          "text": "Oh, man.\nWhat do I do..."
+        },
+        {
+          "offset": "0x133c",
+          "original": "エーン。\nおんぶしてくれなきゃ、\n死んじゃうー。",
+          "text": "Waaah.\nIf you don't carry me,\nI'm gonna diiie."
+        },
+        {
+          "offset": "0x136c",
+          "original": "しょうがないな。\nおんぶしてあげるから、\nさあ立って。",
+          "text": "Oh, all right.\nI'll carry you,\nso stand up."
+        },
+        {
+          "offset": "0x13c4",
+          "original": "ホント？\nワーイ、おんぶだ。\n嬉しいな。",
+          "text": "Really?\nYay, a piggyback!\nI'm so happy."
+        },
+        {
+          "offset": "0x13ec",
+          "original": "‥‥‥‥。\n（頭痛くなってきた。）",
+          "text": "........\n(I'm getting a headache.)"
+        },
+        {
+          "offset": "0x15dc",
+          "original": "優美。\n今日、ボートに\n乗りたいです。",
+          "text": "Yumi\nwants to ride\na boat today."
+        },
+        {
+          "offset": "0x1604",
+          "original": "ボート？\n揺れるよ。\n転覆するかもよ。",
+          "text": "A boat?\nThey rock.\nWe might capsize."
+        },
+        {
+          "offset": "0x1634",
+          "original": "でも…、\n乗りたいもん。",
+          "text": "But...\nI wanna ride one."
+        },
+        {
+          "offset": "0x164c",
+          "original": "いいよ。\nじゃあ、\n池の方に行こう。",
+          "text": "All right.\nThen let's go\nto the pond."
+        },
+        {
+          "offset": "0x167c",
+          "original": "あっ、ボートだ。\n早く早く。",
+          "text": "Oh, boats!\nHurry, hurry!"
+        },
+        {
+          "offset": "0x1698",
+          "original": "ゆ、{G}。\nそんなに急がなくても、\nボートは逃げないよ。",
+          "text": "Y-{G}\nNo need to rush,\nthe boats won't run off."
+        },
+        {
+          "offset": "0x16d4",
+          "original": "{G}。\nこれで満足した？",
+          "text": "{G},\nare you happy now?"
+        },
+        {
+          "offset": "0x16ec",
+          "original": "うん。\nすっごく嬉しいです。",
+          "text": "Yeah.\nI'm super happy."
+        },
+        {
+          "offset": "0x1708",
+          "original": "それは、良かった。",
+          "text": "That's good."
+        },
+        {
+          "offset": "0x171c",
+          "original": "あっ、ほら。\nカップルが、\nいっぱい乗ってますよ。",
+          "text": "Oh, look.\nThere are tons\nof couples out here."
+        },
+        {
+          "offset": "0x1750",
+          "original": "そ、そうだね。",
+          "text": "Y-yeah."
+        },
+        {
+          "offset": "0x1760",
+          "original": "優美達も、\nそう見えるかな…。",
+          "text": "Do we look\nlike a couple?"
+        },
+        {
+          "offset": "0x1780",
+          "original": "{G}可愛いから、\n兄妹にみえるかもね。",
+          "text": "{G}, you're so cute,\nWe'd look like siblings."
+        },
+        {
+          "offset": "0x17a4",
+          "original": "優美って、\n子供っぽいですか？\nそんなのヤダな。",
+          "text": "Is Yumi\nchildish?\nI don't want that."
+        },
+        {
+          "offset": "0x17d4",
+          "original": "ほ、ほら、{G}。\n好雄の妹だからさ、\nそう思うとね。",
+          "text": "W-well, {G}\nyou're Yoshio's sister,\nso that's how I see you."
+        },
+        {
+          "offset": "0x1804",
+          "original": "じゃあ、\n子供っぽい女の子は\n嫌いですか？",
+          "text": "Then do you\ndislike childish\ngirls?"
+        },
+        {
+          "offset": "0x1830",
+          "original": "そ、そんなことないよ。",
+          "text": "N-no, not at all."
+        },
+        {
+          "offset": "0x1848",
+          "original": "そうですか？\nそれなら、いいです。",
+          "text": "Really?\nThen it's okay."
+        },
+        {
+          "offset": "0x186c",
+          "original": "{G}って、\nドキッとすること\n言うよなぁ…。",
+          "text": "Gosh, {G}\nsays things that\nmake my heart pound."
+        },
+        {
+          "offset": "0x1b44",
+          "original": "ワーッ、\nやってる。",
+          "text": "Whoa,\nit's started!"
+        },
+        {
+          "offset": "0x1b58",
+          "original": "{G}って、\nプロレス好きなんだね。",
+          "text": "Gosh, {G}\nyou love pro wrestling."
+        },
+        {
+          "offset": "0x1b78",
+          "original": "うん、だーい好き。\nお兄ちゃんと\nよく見るんだよ。",
+          "text": "Yeah, I looove it.\nI watch it with\nmy brother."
+        },
+        {
+          "offset": "0x1bac",
+          "original": "好雄とね…。\nあいつも、\n好きなのかな…。",
+          "text": "With Yoshio, huh...\nI wonder if\nhe likes it too..."
+        },
+        {
+          "offset": "0x1bd8",
+          "original": "あっ、本日の\nメインイベントだ。\nこの試合見たかったんだ。",
+          "text": "Oh, it's today's\nmain event!\nI wanted to see this one."
+        },
+        {
+          "offset": "0x1c14",
+          "original": "そ、そう。\n良かったね。",
+          "text": "O-oh.\nGood for you."
+        },
+        {
+          "offset": "0x1c44",
+          "original": "そこだ。\n行けぇ。",
+          "text": "Now!\nGo, go!"
+        },
+        {
+          "offset": "0x1c58",
+          "original": "あ、あの…。",
+          "text": "U-um..."
+        },
+        {
+          "offset": "0x1c68",
+          "original": "でたぁ。\nＤＤＴ。",
+          "text": "There it is!\nA DDT!"
+        },
+        {
+          "offset": "0x1c7c",
+          "original": "あの、{G}？\n前の席の人に\nパンツ見られちゃうよ。",
+          "text": "Um, {G}\nthe people in front\ncan see your panties."
+        },
+        {
+          "offset": "0x1cac",
+          "original": "そこで、フォールだ。\nあっ、返されちゃった。",
+          "text": "Now, go for the pin!\nAw, he kicked out."
+        },
+        {
+          "offset": "0x1cd8",
+          "original": "駄目だ。\n全然聞こえてないよ。\nほっとくしかないな…。",
+          "text": "No use.\nShe can't hear a thing.\nI'd better leave her be."
+        },
+        {
+          "offset": "0x1d28",
+          "original": "やっと、気付いて\nくれたかな？",
+          "text": "Did she finally\nnotice me?"
+        },
+        {
+          "offset": "0x1d4c",
+          "original": "ね、\n今の技見てました？",
+          "text": "Hey,\ndid you see that move?"
+        },
+        {
+          "offset": "0x1d64",
+          "original": "へっ？\n見てたけど。",
+          "text": "Huh?\nYeah, I saw."
+        },
+        {
+          "offset": "0x1d78",
+          "original": "あれ、この前お兄ちゃんに\nかけたらね、\nしばらく動けなく\nなっちゃったんだよ。",
+          "text": "When I did that on\nmy brother the other day,\nhe couldn't move\nfor a while."
+        },
+        {
+          "offset": "0x1dc4",
+          "original": "そ、そう。\n（好雄の奴、結構ハードな\n家庭で育ってるんだな。）",
+          "text": "O-oh.\n(Yoshio grew up in\na pretty rough home.)"
+        },
+        {
+          "offset": "0x1e04",
+          "original": "あとね。\n最近は、お兄ちゃんで、\n新しい技を開発中なの。\nできたら見せてあげるね。",
+          "text": "And also,\nI'm working on new moves\nusing my brother.\nI'll show you when done!"
+        },
+        {
+          "offset": "0x1e54",
+          "original": "あ、ありがとう。\n（好雄のやつが、\n不敏に思えてきた。）",
+          "text": "Th-thanks.\n(I'm starting to\nfeel sorry for Yoshio.)"
+        },
+        {
+          "offset": "0x1e8c",
+          "original": "あっ、すごい。\nパワーボムが決まった。",
+          "text": "Whoa, awesome!\nA powerbomb!"
+        },
+        {
+          "offset": "0x1eb4",
+          "original": "駄目だ。\nまた熱中してしまった。",
+          "text": "No use.\nShe's all into it again."
+        },
+        {
+          "offset": "0x2190",
+          "original": "今日は、\nちょっと風が強いね。\n大丈夫かな？",
+          "text": "It's pretty\nwindy today.\nWill it be okay?"
+        },
+        {
+          "offset": "0x21bc",
+          "original": "そんなの平気ですよ。\n早く、行きましょうよ。",
+          "text": "That's no problem!\nCome on, let's go!"
+        },
+        {
+          "offset": "0x21e8",
+          "original": "う、うん。\n（リフトとか\n止まらなきゃいいけど…。）",
+          "text": "Y-yeah.\n(I hope the lifts\ndon't stop or anything...)"
+        },
+        {
+          "offset": "0x221c",
+          "original": "ほら、早くしないと。\n置いていっちゃいますよ。",
+          "text": "Come on, hurry up,\nor I'll leave you behind!"
+        },
+        {
+          "offset": "0x224c",
+          "original": "ちょっと待ってよ。\n{G}。",
+          "text": "Hey, wait up,\n{G}!"
+        },
+        {
+          "offset": "0x2278",
+          "original": "あっ、リフトが\n止まった。",
+          "text": "Oh, the lift\nstopped."
+        },
+        {
+          "offset": "0x2298",
+          "original": "リフトが\n止まっちゃった…。",
+          "text": "The lift\nstopped..."
+        },
+        {
+          "offset": "0x22b4",
+          "original": "ゆ、{G}。\n大丈夫だからね。\nだから、泣かないでね。",
+          "text": "Y-{G}\nIt's okay, really.\nSo don't cry, okay?"
+        },
+        {
+          "offset": "0x22e4",
+          "original": "フェーン。\n優美達、\n死んじゃうのかな？",
+          "text": "Waaah.\nAre we\ngonna die?"
+        },
+        {
+          "offset": "0x230c",
+          "original": "そんな、おおげさな。\n大丈夫だよ。\n泣かないで。",
+          "text": "Don't exaggerate.\nIt's fine.\nDon't cry."
+        },
+        {
+          "offset": "0x233c",
+          "original": "もう、駄目だ。\nきっと死んじゃうんだ。\nエーン、エーン。",
+          "text": "It's over.\nWe're gonna die for sure.\nWaaah, waaah."
+        },
+        {
+          "offset": "0x2374",
+          "original": "‥‥‥‥。\n（動きだすまで、\nほっとくしかないな…。）",
+          "text": "........\n(I'll just leave her be\nuntil it starts again...)"
+        },
+        {
+          "offset": "0x23ac",
+          "original": "死ぬ前に、一つお願いが\nあるんですけど…。",
+          "text": "Before we die, there's\none thing I want..."
+        },
+        {
+          "offset": "0x23d8",
+          "original": "何？\n言ってごらん。\n（だから、死なないって…。）",
+          "text": "What?\nGo ahead and say it.\n(We're not dying...)"
+        },
+        {
+          "offset": "0x240c",
+          "original": "優美の事を大好き…。",
+          "text": "Say you love Yumi..."
+        },
+        {
+          "offset": "0x2448",
+          "original": "あっ、動いた。\n助かったみたい。",
+          "text": "Oh, it moved!\nLooks like we're saved."
+        },
+        {
+          "offset": "0x246c",
+          "original": "ほら、だから大丈夫って\n言っただろう。\nこんな事、良くあるんだよ。",
+          "text": "See, I told you\nit was okay.\nThis happens all the time."
+        },
+        {
+          "offset": "0x24b0",
+          "original": "うん。\nごめんなさい。\n迷惑かけました。",
+          "text": "Yeah.\nI'm sorry.\nI caused you trouble."
+        },
+        {
+          "offset": "0x24d8",
+          "original": "別に、いいよ。\nところで、お願いって\n一体何だったの？",
+          "text": "It's fine.\nBy the way, what was\nthat thing you wanted?"
+        },
+        {
+          "offset": "0x251c",
+          "original": "今日は、もういいの。\nまた、今度の\n機会にします。",
+          "text": "Not today.\nI'll save it\nfor next time."
+        },
+        {
+          "offset": "0x2550",
+          "original": "そう。\nそれなら、いいけど。\nじゃあ、滑ろう。",
+          "text": "Okay.\nIf you say so.\nLet's ski, then."
+        },
+        {
+          "offset": "0x2860",
+          "original": "今日は寒いな。\nあっ、雪が積もってるぞ",
+          "text": "It's cold today.\nOh, the snow's piled up."
+        },
+        {
+          "offset": "0x2888",
+          "original": "ピンポーン",
+          "text": "Ding-dong"
+        },
+        {
+          "offset": "0x2894",
+          "original": "あれ、何だろう？",
+          "text": "Huh, who's that?"
+        },
+        {
+          "offset": "0x28b4",
+          "original": "こんにちは、\n{P}。",
+          "text": "Hello,\n{P}!"
+        },
+        {
+          "offset": "0x28c8",
+          "original": "あれ、優美ちゃん。\nどうしたの。",
+          "text": "Oh, Yumi-chan.\nWhat's up?"
+        },
+        {
+          "offset": "0x28e8",
+          "original": "外、すっごく雪が\n積もってるんです。\n雪合戦しましょう。",
+          "text": "There's tons of snow\npiled up outside!\nSnowball fight!"
+        },
+        {
+          "offset": "0x2920",
+          "original": "雪合戦？",
+          "text": "A snowball fight?"
+        },
+        {
+          "offset": "0x292c",
+          "original": "早く、早く。",
+          "text": "Hurry, hurry!"
+        },
+        {
+          "offset": "0x293c",
+          "original": "あっ、優美ちゃん、\n引っ張らないで。",
+          "text": "Hey, Yumi-chan,\ndon't pull me."
+        },
+        {
+          "offset": "0x2978",
+          "original": "うー、すごく寒いぞ。",
+          "text": "Brrr, it's freezing."
+        },
+        {
+          "offset": "0x2998",
+          "original": "うわっ！？",
+          "text": "Whoa!?"
+        },
+        {
+          "offset": "0x29a8",
+          "original": "あはははは、やった、\nやった！",
+          "text": "Ahahaha, got you,\ngot you!"
+        },
+        {
+          "offset": "0x29c8",
+          "original": "や、やったなー！",
+          "text": "Wh-why, you!"
+        },
+        {
+          "offset": "0x29dc",
+          "original": "優美、昔から雪合戦は\n得意だったんです。",
+          "text": "Yumi's always\nbeen good at this."
+        },
+        {
+          "offset": "0x2a04",
+          "original": "俺だって自信はあるんだ。\n負けないよ。",
+          "text": "I'm pretty good myself.\nI won't lose."
+        },
+        {
+          "offset": "0x2a2c",
+          "original": "優美も\n手加減はしませんよ。",
+          "text": "Yumi won't\ngo easy on you!"
+        },
+        {
+          "offset": "0x2a48",
+          "original": "よし、行くぞ！",
+          "text": "Here I come!"
+        },
+        {
+          "offset": "0x2a58",
+          "original": "俺は、優美ちゃんと、\n楽しく雪合戦した。",
+          "text": "Yumi-chan and I had a\nreally fun snowball fight."
+        },
+        {
+          "offset": "0x2a9c",
+          "original": "すっごく楽しかったです。\n雪が降ったら、\nまたやりましょうね。",
+          "text": "That was super fun!\nWhen it snows,\nlet's do it again!"
+        },
+        {
+          "offset": "0x2adc",
+          "original": "そうだね。",
+          "text": "Yeah."
+        },
+        {
+          "offset": "0x2ae8",
+          "original": "それじゃ、\nさよなら。",
+          "text": "Well,\nbye-bye!"
+        },
+        {
+          "offset": "0x2df0",
+          "original": "うん。",
+          "text": "Okay!"
+        },
+        {
+          "offset": "0x2df8",
+          "original": "うん。",
+          "text": "Okay!"
+        },
+        {
+          "offset": "0x2e00",
+          "original": "ポカッ",
+          "text": "Thwack"
+        }
+      ]
+    }
+  ]
 }

@@ -39,7 +39,7 @@
         {
           "offset": "0x8c",
           "original": "もう最高に楽しかったね。",
-          "text": "That was the best fun ever!"
+          "text": "That was amazing!"
         },
         {
           "offset": "0xac",
@@ -89,7 +89,7 @@
         {
           "offset": "0x194",
           "original": "もう最高に楽しかったね。",
-          "text": "That was the best fun ever!"
+          "text": "That was amazing!"
         },
         {
           "offset": "0x1b4",
@@ -139,7 +139,7 @@
         {
           "offset": "0x284",
           "original": "もう最高に楽しかったね。",
-          "text": "That was the best fun ever!"
+          "text": "That was amazing!"
         },
         {
           "offset": "0x2a4",
@@ -2019,7 +2019,7 @@
         {
           "offset": "0x7b78",
           "original": "好雄、お前なぁ、\nこんな所まで呼んで…。\nあれ？\n詩織に{G}。",
-          "text": "Yoshio, dragging\nme all the way here...\nHuh?\nShiori, and {G}"
+          "text": "Yoshio, dragging\nme all the way here...\nHuh?\nShiori and {G}!"
         },
         {
           "offset": "0x7bbc",
@@ -2109,7 +2109,7 @@
         {
           "offset": "0x7e04",
           "original": "えっ！？\n{G}のことかな？",
-          "text": "Huh!?\nCould it be {G}"
+          "text": "Huh!?\nCould it be {G}?"
         },
         {
           "offset": "0x7e1c",

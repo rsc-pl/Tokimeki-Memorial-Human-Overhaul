@@ -1,277 +1,277 @@
 {
- "description": "The karaoke date's chatter: all of SERIFU/KARADATA.BIN (DATE2.EXN, base 0x801B0000). Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: forcing state 0x5C jumps straight into a song and back to the title (testing.md).",
- "dialogue": [
-  {
-   "file": "CDROM/SERIFU/KARADATA.BIN",
-   "base": "0x801b0000",
-   "share_identical": true,
-   "lines": [
+  "description": "The karaoke date's chatter: all of SERIFU/KARADATA.BIN (DATE2.EXN, base 0x801B0000). Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: forcing state 0x5C jumps straight into a song and back to the title (testing.md).",
+  "dialogue": [
     {
-     "offset": "0x0",
-     "original": "ねぇ、歌ってよぉ。",
-     "text": "Hey, sing something!"
-    },
-    {
-     "offset": "0x18",
-     "original": "あっ、\nこの曲\n最近はやってんのよね。",
-     "text": "Oh,\nthis song's\nsuper big lately."
-    },
-    {
-     "offset": "0x44",
-     "original": "えっ、えっ、\nもう私の番？",
-     "text": "Huh, huh,\nmy turn already?"
-    },
-    {
-     "offset": "0x64",
-     "original": "えっ、えっ、\nもう私の番？",
-     "text": "Huh, huh,\nmy turn already?"
-    },
-    {
-     "offset": "0x84",
-     "original": "えっ、えっ、\nもう私の番？",
-     "text": "Huh, huh,\nmy turn already?"
-    },
-    {
-     "offset": "0x180",
-     "original": "ねぇ、\nあなたの歌も聞きたいな。",
-     "text": "Hey,\nI'd love to hear you sing."
-    },
-    {
-     "offset": "0x1a4",
-     "original": "わたしも、\nこの曲練習しようかな。",
-     "text": "Maybe I'll\npractice this song too."
-    },
-    {
-     "offset": "0x1cc",
-     "original": "わたしと、\nデュエットしようか？",
-     "text": "Want to sing\na duet with me?"
-    },
-    {
-     "offset": "0x1f0",
-     "original": "どうして\n途中でやめちゃったの。",
-     "text": "Why did you\nstop halfway?"
-    },
-    {
-     "offset": "0x214",
-     "original": "どうして\n途中でやめちゃったの。",
-     "text": "Why did you\nstop halfway?"
-    },
-    {
-     "offset": "0x314",
-     "original": "私が、聞いてあげるから\n歌ってみなさい。",
-     "text": "I'll listen,\nso go ahead and sing."
-    },
-    {
-     "offset": "0x340",
-     "original": "なかなかいい曲ね。",
-     "text": "A rather good song."
-    },
-    {
-     "offset": "0x358",
-     "original": "そうね、\nこの辺でやめておくのが\n正解ね。",
-     "text": "Yes,\nstopping there was\nthe right call."
-    },
-    {
-     "offset": "0x388",
-     "original": "次は、最後まで歌いなさい。",
-     "text": "Next time, sing it all."
-    },
-    {
-     "offset": "0x3a8",
-     "original": "次は、最後まで歌いなさい。",
-     "text": "Next time, sing it all."
-    },
-    {
-     "offset": "0x4a4",
-     "original": "レッツシング　ア　ソング。\nさああなたの番よ。",
-     "text": "Let's sing a song!\nNow it's your turn."
-    },
-    {
-     "offset": "0x4d8",
-     "original": "ブラボー、\n上手いじゃない。",
-     "text": "Bravo,\nyou're good!"
-    },
-    {
-     "offset": "0x4f8",
-     "original": "ホワイ？\n続き、知らないの？",
-     "text": "Why?\nDon't you know the rest?"
-    },
-    {
-     "offset": "0x518",
-     "original": "ホワイ？\n続き、知らないの？",
-     "text": "Why?\nDon't you know the rest?"
-    },
-    {
-     "offset": "0x538",
-     "original": "ホワイ？\n続き、知らないの？",
-     "text": "Why?\nDon't you know the rest?"
-    },
-    {
-     "offset": "0x634",
-     "original": "何か歌って下さらない？",
-     "text": "Won't you sing something?"
-    },
-    {
-     "offset": "0x650",
-     "original": "そうね、\nなかなかよかったわ。",
-     "text": "Well,\nthat was rather good."
-    },
-    {
-     "offset": "0x674",
-     "original": "なに？\nそんなに早く\n私の歌が聞きたいの？",
-     "text": "What?\nYou're that eager\nto hear me sing?"
-    },
-    {
-     "offset": "0x6a4",
-     "original": "なに？\nそんなに早く\n私の歌が聞きたいの？",
-     "text": "What?\nYou're that eager\nto hear me sing?"
-    },
-    {
-     "offset": "0x6d4",
-     "original": "なに？\nそんなに早く\n私の歌が聞きたいの？",
-     "text": "What?\nYou're that eager\nto hear me sing?"
-    },
-    {
-     "offset": "0x7e0",
-     "original": "{P}。\n歌を聞きたいです。",
-     "text": "{P}\nI'd like to hear you sing."
-    },
-    {
-     "offset": "0x7fc",
-     "original": "私にも、\n教えてもらえませんか？",
-     "text": "Could you\nteach me too?"
-    },
-    {
-     "offset": "0x820",
-     "original": "とても良い曲だったのに、\n残念です。",
-     "text": "It was such a lovely song.\nWhat a shame."
-    },
-    {
-     "offset": "0x848",
-     "original": "難しい曲ですね。",
-     "text": "It's a hard song."
-    },
-    {
-     "offset": "0x860",
-     "original": "難しい曲ですね。",
-     "text": "It's a hard song."
-    },
-    {
-     "offset": "0x954",
-     "original": "{P}。\n歌をお聞きしたいです。",
-     "text": "{P}\nI'd love to hear you sing."
-    },
-    {
-     "offset": "0x974",
-     "original": "お上手ですね。",
-     "text": "You sing well."
-    },
-    {
-     "offset": "0x988",
-     "original": "もう少し、\nお聞きしていたかったのに、\n残念です。",
-     "text": "I wanted to\nlisten a little longer.\nWhat a shame."
-    },
-    {
-     "offset": "0x9c0",
-     "original": "あら？\nもう、\n終わってしまったのですか？",
-     "text": "Oh?\nIs it\nover already?"
-    },
-    {
-     "offset": "0x9f0",
-     "original": "あら？\nもう、\n終わってしまったのですか？",
-     "text": "Oh?\nIs it\nover already?"
-    },
-    {
-     "offset": "0xafc",
-     "original": "歌、聞かせてくれない？",
-     "text": "Sing something for me?"
-    },
-    {
-     "offset": "0xb18",
-     "original": "結構うまいのね。",
-     "text": "You're pretty good."
-    },
-    {
-     "offset": "0xb30",
-     "original": "途中でやめるなんて、\n残念だな。",
-     "text": "Quitting halfway?\nToo bad."
-    },
-    {
-     "offset": "0xb54",
-     "original": "途中でやめるなんて、\n残念だな。",
-     "text": "Quitting halfway?\nToo bad."
-    },
-    {
-     "offset": "0xb78",
-     "original": "途中でやめるなんて、\n残念だな。",
-     "text": "Quitting halfway?\nToo bad."
-    },
-    {
-     "offset": "0xc78",
-     "original": "きょ、曲を探している間、\n先に歌って\nもらえませんか…。",
-     "text": "Wh-while I find a song,\ncould you sing\nfirst...?"
-    },
-    {
-     "offset": "0xcb4",
-     "original": "あ、あの、良かったです。",
-     "text": "U-um, that was good."
-    },
-    {
-     "offset": "0xcd4",
-     "original": "あっ、ご、ごめんなさい。\nまだ、\n歌う曲決まってません。",
-     "text": "Oh, s-sorry.\nI haven't\npicked a song yet."
-    },
-    {
-     "offset": "0xd10",
-     "original": "あっ、ご、ごめんなさい。\nまだ、\n歌う曲決まってません。",
-     "text": "Oh, s-sorry.\nI haven't\npicked a song yet."
-    },
-    {
-     "offset": "0xd4c",
-     "original": "あっ、ご、ごめんなさい。\nまだ、\n歌う曲決まってません。",
-     "text": "Oh, s-sorry.\nI haven't\npicked a song yet."
-    },
-    {
-     "offset": "0xe64",
-     "original": "{P}。\n歌、聞かせてくれるかな？",
-     "text": "{P}\nwill you sing for me?"
-    },
-    {
-     "offset": "0xe88",
-     "original": "上手…、\nどのくらい練習したの？",
-     "text": "You're good...\nHow much did you practice?"
-    },
-    {
-     "offset": "0xeac",
-     "original": "どうしたの。\n体の調子でも悪いの？",
-     "text": "What's wrong?\nAre you feeling sick?"
-    },
-    {
-     "offset": "0xed4",
-     "original": "うふふふ…。\n途中でやめるなんて、\n根性ないな。",
-     "text": "Hehehe...\nQuitting halfway?\nNo guts."
-    },
-    {
-     "offset": "0xf08",
-     "original": "中途半端はよくないわ。",
-     "text": "Don't do things by halves."
-    },
-    {
-     "offset": "0x1000",
-     "original": "優美に歌、\n聞かせて。",
-     "text": "Sing for\nYumi!"
-    },
-    {
-     "offset": "0x101c",
-     "original": "優美もこの曲\n練習してるんだよ。",
-     "text": "Yumi's practicing\nthis song too!"
-    },
-    {
-     "offset": "0x1040",
-     "original": "あっ、続き、\n優美に歌わせてください。",
-     "text": "Oh, let Yumi\nsing the rest!"
+      "file": "CDROM/SERIFU/KARADATA.BIN",
+      "base": "0x801b0000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "ねぇ、歌ってよぉ。",
+          "text": "Hey, sing something!"
+        },
+        {
+          "offset": "0x18",
+          "original": "あっ、\nこの曲\n最近はやってんのよね。",
+          "text": "Oh,\nthis song's been\nreally popular lately."
+        },
+        {
+          "offset": "0x44",
+          "original": "えっ、えっ、\nもう私の番？",
+          "text": "Huh, huh,\nmy turn already?"
+        },
+        {
+          "offset": "0x64",
+          "original": "えっ、えっ、\nもう私の番？",
+          "text": "Huh, huh,\nmy turn already?"
+        },
+        {
+          "offset": "0x84",
+          "original": "えっ、えっ、\nもう私の番？",
+          "text": "Huh, huh,\nmy turn already?"
+        },
+        {
+          "offset": "0x180",
+          "original": "ねぇ、\nあなたの歌も聞きたいな。",
+          "text": "Hey,\nI'd love to hear you sing."
+        },
+        {
+          "offset": "0x1a4",
+          "original": "わたしも、\nこの曲練習しようかな。",
+          "text": "Maybe I'll\npractice this song too."
+        },
+        {
+          "offset": "0x1cc",
+          "original": "わたしと、\nデュエットしようか？",
+          "text": "Want to sing\na duet with me?"
+        },
+        {
+          "offset": "0x1f0",
+          "original": "どうして\n途中でやめちゃったの。",
+          "text": "Why did you\nstop halfway?"
+        },
+        {
+          "offset": "0x214",
+          "original": "どうして\n途中でやめちゃったの。",
+          "text": "Why did you\nstop halfway?"
+        },
+        {
+          "offset": "0x314",
+          "original": "私が、聞いてあげるから\n歌ってみなさい。",
+          "text": "I'll listen,\nso go ahead and sing."
+        },
+        {
+          "offset": "0x340",
+          "original": "なかなかいい曲ね。",
+          "text": "A rather good song."
+        },
+        {
+          "offset": "0x358",
+          "original": "そうね、\nこの辺でやめておくのが\n正解ね。",
+          "text": "Yes,\nstopping there was\nthe right call."
+        },
+        {
+          "offset": "0x388",
+          "original": "次は、最後まで歌いなさい。",
+          "text": "Next time, sing it all."
+        },
+        {
+          "offset": "0x3a8",
+          "original": "次は、最後まで歌いなさい。",
+          "text": "Next time, sing it all."
+        },
+        {
+          "offset": "0x4a4",
+          "original": "レッツシング　ア　ソング。\nさああなたの番よ。",
+          "text": "Let's sing a song!\nNow it's your turn."
+        },
+        {
+          "offset": "0x4d8",
+          "original": "ブラボー、\n上手いじゃない。",
+          "text": "Bravo,\nyou're good!"
+        },
+        {
+          "offset": "0x4f8",
+          "original": "ホワイ？\n続き、知らないの？",
+          "text": "Why?\nDon't you know the rest?"
+        },
+        {
+          "offset": "0x518",
+          "original": "ホワイ？\n続き、知らないの？",
+          "text": "Why?\nDon't you know the rest?"
+        },
+        {
+          "offset": "0x538",
+          "original": "ホワイ？\n続き、知らないの？",
+          "text": "Why?\nDon't you know the rest?"
+        },
+        {
+          "offset": "0x634",
+          "original": "何か歌って下さらない？",
+          "text": "Won't you sing something?"
+        },
+        {
+          "offset": "0x650",
+          "original": "そうね、\nなかなかよかったわ。",
+          "text": "Well,\nthat was rather good."
+        },
+        {
+          "offset": "0x674",
+          "original": "なに？\nそんなに早く\n私の歌が聞きたいの？",
+          "text": "What?\nYou're that eager\nto hear me sing?"
+        },
+        {
+          "offset": "0x6a4",
+          "original": "なに？\nそんなに早く\n私の歌が聞きたいの？",
+          "text": "What?\nYou're that eager\nto hear me sing?"
+        },
+        {
+          "offset": "0x6d4",
+          "original": "なに？\nそんなに早く\n私の歌が聞きたいの？",
+          "text": "What?\nYou're that eager\nto hear me sing?"
+        },
+        {
+          "offset": "0x7e0",
+          "original": "{P}。\n歌を聞きたいです。",
+          "text": "{P}\nI'd like to hear you sing."
+        },
+        {
+          "offset": "0x7fc",
+          "original": "私にも、\n教えてもらえませんか？",
+          "text": "Could you\nteach me too?"
+        },
+        {
+          "offset": "0x820",
+          "original": "とても良い曲だったのに、\n残念です。",
+          "text": "It was such a lovely song.\nWhat a shame."
+        },
+        {
+          "offset": "0x848",
+          "original": "難しい曲ですね。",
+          "text": "It's a hard song."
+        },
+        {
+          "offset": "0x860",
+          "original": "難しい曲ですね。",
+          "text": "It's a hard song."
+        },
+        {
+          "offset": "0x954",
+          "original": "{P}。\n歌をお聞きしたいです。",
+          "text": "{P}\nI'd love to hear you sing."
+        },
+        {
+          "offset": "0x974",
+          "original": "お上手ですね。",
+          "text": "You sing well."
+        },
+        {
+          "offset": "0x988",
+          "original": "もう少し、\nお聞きしていたかったのに、\n残念です。",
+          "text": "I wanted to\nlisten a little longer.\nWhat a shame."
+        },
+        {
+          "offset": "0x9c0",
+          "original": "あら？\nもう、\n終わってしまったのですか？",
+          "text": "Oh?\nIs it\nover already?"
+        },
+        {
+          "offset": "0x9f0",
+          "original": "あら？\nもう、\n終わってしまったのですか？",
+          "text": "Oh?\nIs it\nover already?"
+        },
+        {
+          "offset": "0xafc",
+          "original": "歌、聞かせてくれない？",
+          "text": "Sing something for me?"
+        },
+        {
+          "offset": "0xb18",
+          "original": "結構うまいのね。",
+          "text": "You're pretty good."
+        },
+        {
+          "offset": "0xb30",
+          "original": "途中でやめるなんて、\n残念だな。",
+          "text": "Quitting halfway?\nToo bad."
+        },
+        {
+          "offset": "0xb54",
+          "original": "途中でやめるなんて、\n残念だな。",
+          "text": "Quitting halfway?\nToo bad."
+        },
+        {
+          "offset": "0xb78",
+          "original": "途中でやめるなんて、\n残念だな。",
+          "text": "Quitting halfway?\nToo bad."
+        },
+        {
+          "offset": "0xc78",
+          "original": "きょ、曲を探している間、\n先に歌って\nもらえませんか…。",
+          "text": "Wh-while I find a song,\ncould you sing\nfirst...?"
+        },
+        {
+          "offset": "0xcb4",
+          "original": "あ、あの、良かったです。",
+          "text": "U-um, that was good."
+        },
+        {
+          "offset": "0xcd4",
+          "original": "あっ、ご、ごめんなさい。\nまだ、\n歌う曲決まってません。",
+          "text": "Oh, s-sorry.\nI haven't\npicked a song yet."
+        },
+        {
+          "offset": "0xd10",
+          "original": "あっ、ご、ごめんなさい。\nまだ、\n歌う曲決まってません。",
+          "text": "Oh, s-sorry.\nI haven't\npicked a song yet."
+        },
+        {
+          "offset": "0xd4c",
+          "original": "あっ、ご、ごめんなさい。\nまだ、\n歌う曲決まってません。",
+          "text": "Oh, s-sorry.\nI haven't\npicked a song yet."
+        },
+        {
+          "offset": "0xe64",
+          "original": "{P}。\n歌、聞かせてくれるかな？",
+          "text": "{P}\nwill you sing for me?"
+        },
+        {
+          "offset": "0xe88",
+          "original": "上手…、\nどのくらい練習したの？",
+          "text": "You're good...\nHow much did you practice?"
+        },
+        {
+          "offset": "0xeac",
+          "original": "どうしたの。\n体の調子でも悪いの？",
+          "text": "What's wrong?\nAre you feeling sick?"
+        },
+        {
+          "offset": "0xed4",
+          "original": "うふふふ…。\n途中でやめるなんて、\n根性ないな。",
+          "text": "Hehehe...\nQuitting halfway?\nNo guts."
+        },
+        {
+          "offset": "0xf08",
+          "original": "中途半端はよくないわ。",
+          "text": "Don't stop halfway."
+        },
+        {
+          "offset": "0x1000",
+          "original": "優美に歌、\n聞かせて。",
+          "text": "Sing for\nYumi!"
+        },
+        {
+          "offset": "0x101c",
+          "original": "優美もこの曲\n練習してるんだよ。",
+          "text": "Yumi's practicing\nthis song too!"
+        },
+        {
+          "offset": "0x1040",
+          "original": "あっ、続き、\n優美に歌わせてください。",
+          "text": "Oh, let Yumi\nsing the rest!"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

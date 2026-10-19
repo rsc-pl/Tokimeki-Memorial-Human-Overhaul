@@ -1,111 +1,517 @@
 {
   "description": "Ayako's special events: all of SERIFU/EVENT_KA.BIN (entries 24-29: skipping swim class, karaoke, scared of water, the art museum, stargazing, lost in Okinawa on the school trip). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_KA.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "体育の当番は面倒くさいな。\nん？\n人の気配がする…。", "text": "Gym duty is such a pain.\nHm?\nI sense somebody here..."},
-      {"offset": "0x38", "original": "あっ…。", "text": "Oh..."},
-      {"offset": "0x44", "original": "あれ、{G}。\n何やってるのこんな所で？", "text": "Oh, {G}\nwhat are you doing here?"},
-      {"offset": "0x68", "original": "えっ？あっ、あ、\nちょっとね。", "text": "Huh? Oh, uh,\njust... stuff."},
-      {"offset": "0x88", "original": "そのかっこからすると、\n水泳の授業中だな。\nずばり、サボってるね。", "text": "Judging by that outfit,\nyou've got swim class.\nYou're skipping, right?"},
-      {"offset": "0xcc", "original": "ノー、ノー。\nそんなことないわよ。\n疲れて休んでただけよ。", "text": "No, no.\nNothing like that.\nI was just tired, resting."},
-      {"offset": "0x108", "original": "だったら、\n別にこんな体育館の裏で、\n休まなくてもいいじゃん。", "text": "Then you don't have to\nrest out here behind\nthe gym, do you?"},
-      {"offset": "0x148", "original": "ほ、ほら。\nオゾン層の破壊で、\n直射日光は身体にね…。", "text": "W-well, you see,\nwith the ozone layer gone,\ndirect sunlight is bad..."},
-      {"offset": "0x180", "original": "フーン。\nいつの間にそんなに\n病弱になったの。", "text": "Hmm.\nSince when are you\nso delicate?"},
-      {"offset": "0x1b0", "original": "え、エート…。\nつ、ついこの間からよ。", "text": "Uh, well...\nS-since just recently."},
-      {"offset": "0x1d8", "original": "そう言えば、\nさっき先生が、\n{G}を呼んでたよ。", "text": "Oh, by the way,\nthe teacher was just\ncalling {G}"},
-      {"offset": "0x204", "original": "えっ、嘘。\nＩｔ’ｓ　ｓｏ　\nｄａｎｇｅｒｏｕｓ", "text": "What, no way.\nThat's so,\nlike, dangerous!"},
-      {"offset": "0x234", "original": "と言うのは冗談で、\n焦ったという事は、\nやっぱりさぼりだね。", "text": "Just kidding.\nBut you panicked, so\nyou ARE skipping."},
-      {"offset": "0x270", "original": "あっ…。\nお願い。\n先生には黙ってて。", "text": "Oh...\nPlease.\nDon't tell the teacher."},
-      {"offset": "0x298", "original": "さーて、\nどうしようかな。", "text": "Hmm,\nwhat should I do?"},
-      {"offset": "0x2ec", "original": "{>先生}{p}何やってる。\n早くボール持って来い。", "text": "{>Tchr}{p}! What's the holdup?\nBring those balls, now!"},
-      {"offset": "0x318", "original": "{m}。\n何やってるんだよ。\n早くボール持って来いよ。", "text": "{m}!\nWhat are you doing?\nHurry up with the balls!"},
-      {"offset": "0x350", "original": "ほ、ほら、\n呼んでるわよ。", "text": "S-see,\nthey're calling you."},
-      {"offset": "0x36c", "original": "チェッ、先生には\n黙っててやるよ。\n感謝しなよ。", "text": "Tch, I won't tell\nthe teacher.\nYou owe me one."},
-      {"offset": "0x39c", "original": "サンキュー。\nありがとう、\n感謝するわ。", "text": "Thank you!\nThanks, really,\nI owe you."},
-      {"offset": "0x64c", "original": "ほら、{G}の\n番だよ。", "text": "Look, {G}\nit's your turn."},
-      {"offset": "0x664", "original": "私は恥ずかしいから\nいいわ。", "text": "I'm too embarrassed,\nI'll pass."},
-      {"offset": "0x680", "original": "どうしたの？\n恥ずかしがるなんて、\n{G}らしくないよ。", "text": "What's up?\nBeing shy just isn't\nlike you, {G}"},
-      {"offset": "0x6bc", "original": "失礼ね。\n私はナイーブなのよ。\nだから歌わないの。", "text": "How rude.\nI'm a sensitive soul.\nSo I don't sing."},
-      {"offset": "0x6f0", "original": "はいはい。\nでも、{G}の美声を\n聞いてみたいなぁ…。", "text": "Sure, sure.\nWell, {G}\nI'd love to hear you sing."},
-      {"offset": "0x728", "original": "えっ、そう？\nどうしようかな…。", "text": "Oh, really?\nWhat should I do..."},
-      {"offset": "0x748", "original": "きっと、天使のような、\n歌声なんだろうな…。", "text": "I bet you sing\nlike an angel..."},
-      {"offset": "0x77c", "original": "そこまで言われちゃ\nしかたないわね。", "text": "Well, if you put it\nthat way, I guess I must."},
-      {"offset": "0x7a0", "original": "やった。\n歌ってくれるんだ。\n（でも、顔が笑ってるぞ。）", "text": "All right!\nYou'll sing!\n(But she's grinning...)"},
-      {"offset": "0x7e0", "original": "‥‥‥‥。\n（無茶苦茶、\nうまいじゃないか…。）", "text": "........\n(She's\nincredibly good...)"},
-      {"offset": "0x810", "original": "そして、一時間後", "text": "One hour later"},
-      {"offset": "0x82c", "original": "さあのってきたわ。\n次は、これよ。", "text": "Now I'm warmed up.\nThis one's next."},
-      {"offset": "0x850", "original": "‥‥‥‥。\n（ずっと、歌いつづけてるよ、\n何がナイーブなんだか…。）", "text": "........\n(She's sung nonstop since.\nSensitive soul, my foot.)"},
-      {"offset": "0xa78", "original": "今日はちょっと\n涼しいわね。", "text": "It's a little\ncool today."},
-      {"offset": "0xa94", "original": "そ、そう？\n俺は、ものすごく\n暑いんだけど。", "text": "R-really?\nI'm totally\nroasting."},
-      {"offset": "0xac0", "original": "リアリー？\nそんなことないわよ。", "text": "Really?\nNot at all."},
-      {"offset": "0xae0", "original": "{G}。\nほら、泳ぎに行こうよ。", "text": "Look, {G}\nlet's go for a swim."},
-      {"offset": "0xb0c", "original": "わ、私は\nちょっと寒いから、\n遠慮しとくわ。", "text": "W-well, I'm\na little cold,\nso I'll pass."},
-      {"offset": "0xb38", "original": "寒いといいながら、\n汗かいてるじゃないか。\nほら、行こうよ。", "text": "You say you're cold,\nbut you're sweating.\nCome on, let's go."},
-      {"offset": "0xb7c", "original": "い、いや。\n暑いからじゃないわ。", "text": "N-no.\nIt's not from the heat."},
-      {"offset": "0xb9c", "original": "だったら、何の汗？", "text": "Then why the sweat?"},
-      {"offset": "0xbb0", "original": "こ、これは冷や汗なの。", "text": "Th-this is a cold sweat."},
-      {"offset": "0xbc8", "original": "えっ？\n何で冷や汗なんか…。", "text": "Huh?\nWhy a cold sweat..."},
-      {"offset": "0xbe4", "original": "私、水が怖いのよ。\nだからお願い。", "text": "I'm scared of water.\nSo please."},
-      {"offset": "0xc1c", "original": "それなら、そうと\n言ってくれればいいのに。", "text": "If that's it, you could\nhave just told me."},
-      {"offset": "0xc48", "original": "だって水が怖いなんて\n恥ずかしいじゃない。", "text": "But being scared of water\nis embarrassing."},
-      {"offset": "0xc74", "original": "そんなことないよ。\n誰にだって苦手なものは\nあるんだから。", "text": "Not at all.\nEveryone's scared\nof something."},
-      {"offset": "0xcb0", "original": "サンキュー、ありがとう。\nでも私だって、\n一緒に泳ぎたいわ。", "text": "Thank you, thanks.\nBut I want to\nswim with you too."},
-      {"offset": "0xcec", "original": "そんなに急がなくても、\nゆっくり、\n慣れていけばいいよ。", "text": "No need to rush.\nJust take it slow\nand get used to it."},
-      {"offset": "0xd38", "original": "そうね。\nそうするわ。", "text": "Yeah.\nI'll do that."},
-      {"offset": "0xf8c", "original": "ワンダフル。\n私この人の絵の\n大ファンなの。", "text": "Wonderful!\nI'm a huge fan\nof this artist."},
-      {"offset": "0xfb8", "original": "そ、そう。\n来てよかったね。", "text": "Oh, I see.\nGlad we came, then."},
-      {"offset": "0xfdc", "original": "ほらこれなんて、\nグレイトね。\nしびれちゃうわ。", "text": "Look at this one,\nit's great.\nIt gives me chills."},
-      {"offset": "0x100c", "original": "そうだね。", "text": "Yeah."},
-      {"offset": "0x1018", "original": "いいわねぇ…。\n私もこのぐらい\n描ければなぁ…。", "text": "So nice...\nIf only I could\npaint like this..."},
-      {"offset": "0x1094", "original": "よっぽど、\n好きなんだなぁ…。\nもう２時間も見てるよ。", "text": "She must\nreally love it...\nTwo hours staring now."},
-      {"offset": "0x10cc", "original": "よし覚えたわ。\nさあ、帰りましょう。", "text": "Okay, got it memorized.\nNow, let's go home."},
-      {"offset": "0x10f0", "original": "えっ？\n覚えたって？", "text": "Huh?\nMemorized?"},
-      {"offset": "0x1104", "original": "忘れないうちに\n家に帰って、\n絵にしておくのよ。", "text": "I'll go home and\npaint it before\nI forget it."},
-      {"offset": "0x12cc", "original": "都会じゃ\nこんな星空見れないね。", "text": "You can't see stars\nlike this in the city."},
-      {"offset": "0x12f8", "original": "無視しないでよ。\n{G}。", "text": "Don't ignore me,\n{G}"},
-      {"offset": "0x133c", "original": "何だ、寝てたのか。\nそれにしても、\n可愛い寝顔だな…。", "text": "Oh, she's asleep.\nStill, she looks\ncute asleep..."},
-      {"offset": "0x1374", "original": "優しく、起こす。{q}そのまま、眠らせておく。", "text": "Wake her gently.{q}Let her sleep."},
-      {"offset": "0x13ac", "original": "{G}…。\n起きて…。", "text": "{G}\nwake up..."},
-      {"offset": "0x13c0", "original": "う、ううん。\nむにゃむにゃ…君、\n大好きよ。", "text": "Mm, mmm...\nMumble mumble... I\nlove you so much."},
-      {"offset": "0x13ec", "original": "今なんて…。\n（しまった。\nよく聞き取れなかった。）", "text": "What was that...\n(Shoot.\nI didn't quite catch it.)"},
-      {"offset": "0x142c", "original": "わ、私眠っちゃったんだ。\nね、私なんか変なこと\n言わなかった？", "text": "I-I fell asleep.\nHey, did I say\nanything weird?"},
-      {"offset": "0x146c", "original": "言ってた、言ってた。", "text": "You sure did."},
-      {"offset": "0x1484", "original": "な、なんて言ったの？", "text": "Wh-what did I say?"},
-      {"offset": "0x149c", "original": "俺の事が好きだって。", "text": "That you love me."},
-      {"offset": "0x14b4", "original": "嘘よ、\nそんな事。\nいつもの冗談よねぇ？", "text": "No way,\nI never.\nYour usual joke, right?"},
-      {"offset": "0x14dc", "original": "そうだよ。\n何慌ててんの？", "text": "Yeah, I am.\nWhy so flustered?"},
-      {"offset": "0x14f8", "original": "べ、別に慌ててなんて\nいないわよ。\n良かったわ。", "text": "I-I'm not flustered\nat all.\nWhat a relief."},
-      {"offset": "0x1528", "original": "？？\n変な{G}。", "text": "??\nSo odd, {G}"},
-      {"offset": "0x1558", "original": "わ、私、眠っちゃったんだ。\n昨日、ちょっと徹夜\nしちゃって。", "text": "I-I fell asleep.\nI kind of pulled\nan all-nighter."},
-      {"offset": "0x1594", "original": "それだったら、\nもっと寝てても\nよかったのに…。", "text": "In that case,\nyou could've slept\nsome more..."},
-      {"offset": "0x15c4", "original": "せっかく\n一緒に来れたんだから、\n寝てなんていられないわ。", "text": "We finally got to\ncome here together,\nI can't waste it sleeping."},
-      {"offset": "0x1600", "original": "そ、そう。\n嬉しいよ。", "text": "Oh, really?\nThat makes me happy."},
-      {"offset": "0x1618", "original": "ところで、\n私の寝顔、\n変じゃなかった？", "text": "By the way,\ndid I look weird\nwhile I slept?"},
-      {"offset": "0x1640", "original": "別に変じゃなかったよ。\n可愛かったよ。", "text": "Not weird at all.\nYou looked cute."},
-      {"offset": "0x1668", "original": "えっ？\n恥ずかしい…。\nでも嬉しいわ。", "text": "Huh?\nHow embarrassing...\nBut I'm happy."},
-      {"offset": "0x16ac", "original": "いつもの{G}と\n反応が違う気がする。", "text": "Strange {G}\nNot her normal reaction."},
-      {"offset": "0x1a38", "original": "どうしたの\n{P}。", "text": "What's wrong,\n{P}?"},
-      {"offset": "0x1a48", "original": "どうも道に\n迷ったみたいなんだ。", "text": "Looks like\nwe got lost."},
-      {"offset": "0x1a68", "original": "ドントウォーリー。\nあそこに人がいるわ。", "text": "Don't worry.\nSomeone's over there."},
-      {"offset": "0x1a90", "original": "え、{G}、外国の人だよ。\nあ、もう話しかけてる。", "text": "Wait, {G}\nhe's foreign! Too late..."},
-      {"offset": "0x1ad4", "original": "エクスキューズミー。\nちょっと聞きたいんだけど。", "text": "Excuse me.\nCan I ask you something?"},
-      {"offset": "0x1b08", "original": "何だ？何か用か？", "text": "Yeah? What do you want?"},
-      {"offset": "0x1b20", "original": "プリーズ、\n宿への道を知りたいの？", "text": "Please,\nyou want to know the inn?"},
-      {"offset": "0x1b48", "original": "何を言っているか\nわからないよ。", "text": "I don't understand\nwhat you're saying."},
-      {"offset": "0x1b68", "original": "直進して右側に\n案内所があるから、\nそこにいきな。", "text": "Go straight, there's an\ninfo center on the right.\nGo ask there."},
-      {"offset": "0x1ba4", "original": "サンキュー。右折して、\nあとは直進すれば\nいいみたいよ。", "text": "Thank you. Seems we\nturn right, then just\ngo straight."},
-      {"offset": "0x1be0", "original": "すごいね、\n外国人と話せるなんて。", "text": "Amazing, you can\ntalk to foreigners."},
-      {"offset": "0x1c04", "original": "そうね、\n私、フィーリングが\n合うみたい。", "text": "Yeah,\nI guess we're on\nthe same wavelength."},
-      {"offset": "0x1c30", "original": "それじゃ、帰ろう。", "text": "Well, let's go back."},
-      {"offset": "0x1c50", "original": "そうね、帰りましょう。", "text": "Yeah, let's go back."},
-      {"offset": "0x1ca8", "original": "無事にホテルに\n帰ることができた。\nさすが、片桐さんだ。", "text": "We made it back to the hotel\nsafe and sound.\nLeave it to Katagiri-san!"},
-      {"offset": "0x1ce8", "original": "え、そんなこと言ってたかな？\n他の人にも聞いてみようよ？", "text": "Huh, is that what he said?\nLet's ask someone else?"},
-      {"offset": "0x1d24", "original": "ドントウォーリー、\n大丈夫よ。\nさあ、いきましょ。", "text": "Don't worry,\nit's fine.\nCome on, let's go."},
-      {"offset": "0x1d5c", "original": "なぜか、無事にホテルに\n帰ることができた。", "text": "Somehow, we made it\nback to the hotel, safely."},
-      {"offset": "0x2080", "original": "{G}？", "text": "{G}"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_KA.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "体育の当番は面倒くさいな。\nん？\n人の気配がする…。",
+          "text": "Gym duty is such a pain.\nHm?\nI sense somebody here..."
+        },
+        {
+          "offset": "0x38",
+          "original": "あっ…。",
+          "text": "Oh..."
+        },
+        {
+          "offset": "0x44",
+          "original": "あれ、{G}。\n何やってるのこんな所で？",
+          "text": "Oh, {G}.\nWhat are you doing here?"
+        },
+        {
+          "offset": "0x68",
+          "original": "えっ？あっ、あ、\nちょっとね。",
+          "text": "Huh? Oh, uh,\njust... stuff."
+        },
+        {
+          "offset": "0x88",
+          "original": "そのかっこからすると、\n水泳の授業中だな。\nずばり、サボってるね。",
+          "text": "Judging by that outfit,\nyou've got swim class.\nYou're skipping, right?"
+        },
+        {
+          "offset": "0xcc",
+          "original": "ノー、ノー。\nそんなことないわよ。\n疲れて休んでただけよ。",
+          "text": "No, no.\nNothing like that.\nI was just tired, resting."
+        },
+        {
+          "offset": "0x108",
+          "original": "だったら、\n別にこんな体育館の裏で、\n休まなくてもいいじゃん。",
+          "text": "Then you don't have to\nrest out here behind\nthe gym, do you?"
+        },
+        {
+          "offset": "0x148",
+          "original": "ほ、ほら。\nオゾン層の破壊で、\n直射日光は身体にね…。",
+          "text": "W-well, you see,\nwith the ozone layer gone,\ndirect sunlight is bad..."
+        },
+        {
+          "offset": "0x180",
+          "original": "フーン。\nいつの間にそんなに\n病弱になったの。",
+          "text": "Hmm.\nSince when are you\nso delicate?"
+        },
+        {
+          "offset": "0x1b0",
+          "original": "え、エート…。\nつ、ついこの間からよ。",
+          "text": "Uh, well...\nS-since just recently."
+        },
+        {
+          "offset": "0x1d8",
+          "original": "そう言えば、\nさっき先生が、\n{G}を呼んでたよ。",
+          "text": "Oh, by the way,\nthe teacher was just\ncalling {G}"
+        },
+        {
+          "offset": "0x204",
+          "original": "えっ、嘘。\nＩｔ’ｓ　ｓｏ　\nｄａｎｇｅｒｏｕｓ",
+          "text": "What? No way!\nIt's so\ndangerous!"
+        },
+        {
+          "offset": "0x234",
+          "original": "と言うのは冗談で、\n焦ったという事は、\nやっぱりさぼりだね。",
+          "text": "Just kidding.\nBut you panicked, so\nyou ARE skipping."
+        },
+        {
+          "offset": "0x270",
+          "original": "あっ…。\nお願い。\n先生には黙ってて。",
+          "text": "Oh...\nPlease.\nDon't tell the teacher."
+        },
+        {
+          "offset": "0x298",
+          "original": "さーて、\nどうしようかな。",
+          "text": "Hmm,\nwhat should I do?"
+        },
+        {
+          "offset": "0x2ec",
+          "original": "{>先生}{p}何やってる。\n早くボール持って来い。",
+          "text": "{>Tchr}{p}! What's the holdup?\nBring those balls, now!"
+        },
+        {
+          "offset": "0x318",
+          "original": "{m}。\n何やってるんだよ。\n早くボール持って来いよ。",
+          "text": "{m}!\nWhat are you doing?\nHurry up with the balls!"
+        },
+        {
+          "offset": "0x350",
+          "original": "ほ、ほら、\n呼んでるわよ。",
+          "text": "S-see,\nthey're calling you."
+        },
+        {
+          "offset": "0x36c",
+          "original": "チェッ、先生には\n黙っててやるよ。\n感謝しなよ。",
+          "text": "Tch, I won't tell\nthe teacher.\nYou owe me one."
+        },
+        {
+          "offset": "0x39c",
+          "original": "サンキュー。\nありがとう、\n感謝するわ。",
+          "text": "Thanks!\nArigato!\nI really appreciate it."
+        },
+        {
+          "offset": "0x64c",
+          "original": "ほら、{G}の\n番だよ。",
+          "text": "Look, {G}\nit's your turn."
+        },
+        {
+          "offset": "0x664",
+          "original": "私は恥ずかしいから\nいいわ。",
+          "text": "I'm too embarrassed,\nI'll pass."
+        },
+        {
+          "offset": "0x680",
+          "original": "どうしたの？\n恥ずかしがるなんて、\n{G}らしくないよ。",
+          "text": "What's wrong?\nBeing shy isn't\nlike you, {G}."
+        },
+        {
+          "offset": "0x6bc",
+          "original": "失礼ね。\n私はナイーブなのよ。\nだから歌わないの。",
+          "text": "How rude.\nI'm a sensitive soul.\nSo I don't sing."
+        },
+        {
+          "offset": "0x6f0",
+          "original": "はいはい。\nでも、{G}の美声を\n聞いてみたいなぁ…。",
+          "text": "Sure, sure.\nWell, {G}\nI'd love to hear you sing."
+        },
+        {
+          "offset": "0x728",
+          "original": "えっ、そう？\nどうしようかな…。",
+          "text": "Oh, really?\nWhat should I do..."
+        },
+        {
+          "offset": "0x748",
+          "original": "きっと、天使のような、\n歌声なんだろうな…。",
+          "text": "I bet you sing\nlike an angel..."
+        },
+        {
+          "offset": "0x77c",
+          "original": "そこまで言われちゃ\nしかたないわね。",
+          "text": "Well, if you put it\nthat way, I guess I must."
+        },
+        {
+          "offset": "0x7a0",
+          "original": "やった。\n歌ってくれるんだ。\n（でも、顔が笑ってるぞ。）",
+          "text": "All right!\nYou'll sing!\n(But she's grinning...)"
+        },
+        {
+          "offset": "0x7e0",
+          "original": "‥‥‥‥。\n（無茶苦茶、\nうまいじゃないか…。）",
+          "text": "........\n(She's\nincredibly good...)"
+        },
+        {
+          "offset": "0x810",
+          "original": "そして、一時間後",
+          "text": "One hour later"
+        },
+        {
+          "offset": "0x82c",
+          "original": "さあのってきたわ。\n次は、これよ。",
+          "text": "Now I'm warmed up.\nThis one's next."
+        },
+        {
+          "offset": "0x850",
+          "original": "‥‥‥‥。\n（ずっと、歌いつづけてるよ、\n何がナイーブなんだか…。）",
+          "text": "........\n(She's sung nonstop since.\nSensitive soul, my foot.)"
+        },
+        {
+          "offset": "0xa78",
+          "original": "今日はちょっと\n涼しいわね。",
+          "text": "It's a little\ncool today."
+        },
+        {
+          "offset": "0xa94",
+          "original": "そ、そう？\n俺は、ものすごく\n暑いんだけど。",
+          "text": "R-really?\nI'm totally\nroasting."
+        },
+        {
+          "offset": "0xac0",
+          "original": "リアリー？\nそんなことないわよ。",
+          "text": "Really?\nNot at all."
+        },
+        {
+          "offset": "0xae0",
+          "original": "{G}。\nほら、泳ぎに行こうよ。",
+          "text": "Look, {G}\nlet's go for a swim."
+        },
+        {
+          "offset": "0xb0c",
+          "original": "わ、私は\nちょっと寒いから、\n遠慮しとくわ。",
+          "text": "W-well, I'm\na little cold,\nso I'll pass."
+        },
+        {
+          "offset": "0xb38",
+          "original": "寒いといいながら、\n汗かいてるじゃないか。\nほら、行こうよ。",
+          "text": "You say you're cold,\nbut you're sweating.\nCome on, let's go."
+        },
+        {
+          "offset": "0xb7c",
+          "original": "い、いや。\n暑いからじゃないわ。",
+          "text": "N-no.\nIt's not from the heat."
+        },
+        {
+          "offset": "0xb9c",
+          "original": "だったら、何の汗？",
+          "text": "Then why the sweat?"
+        },
+        {
+          "offset": "0xbb0",
+          "original": "こ、これは冷や汗なの。",
+          "text": "Th-this is a cold sweat."
+        },
+        {
+          "offset": "0xbc8",
+          "original": "えっ？\n何で冷や汗なんか…。",
+          "text": "Huh?\nWhy a cold sweat..."
+        },
+        {
+          "offset": "0xbe4",
+          "original": "私、水が怖いのよ。\nだからお願い。",
+          "text": "I'm scared of water.\nSo please."
+        },
+        {
+          "offset": "0xc1c",
+          "original": "それなら、そうと\n言ってくれればいいのに。",
+          "text": "If that's it, you could\nhave just told me."
+        },
+        {
+          "offset": "0xc48",
+          "original": "だって水が怖いなんて\n恥ずかしいじゃない。",
+          "text": "But being scared of water\nis embarrassing."
+        },
+        {
+          "offset": "0xc74",
+          "original": "そんなことないよ。\n誰にだって苦手なものは\nあるんだから。",
+          "text": "Not at all.\nEveryone's scared\nof something."
+        },
+        {
+          "offset": "0xcb0",
+          "original": "サンキュー、ありがとう。\nでも私だって、\n一緒に泳ぎたいわ。",
+          "text": "Thanks! Arigato!\nBut I'd like to\nswim with you too."
+        },
+        {
+          "offset": "0xcec",
+          "original": "そんなに急がなくても、\nゆっくり、\n慣れていけばいいよ。",
+          "text": "No need to rush.\nJust take it slow\nand get used to it."
+        },
+        {
+          "offset": "0xd38",
+          "original": "そうね。\nそうするわ。",
+          "text": "Yeah.\nI'll do that."
+        },
+        {
+          "offset": "0xf8c",
+          "original": "ワンダフル。\n私この人の絵の\n大ファンなの。",
+          "text": "Wonderful!\nI'm a huge fan\nof this artist."
+        },
+        {
+          "offset": "0xfb8",
+          "original": "そ、そう。\n来てよかったね。",
+          "text": "Oh, I see.\nGlad we came, then."
+        },
+        {
+          "offset": "0xfdc",
+          "original": "ほらこれなんて、\nグレイトね。\nしびれちゃうわ。",
+          "text": "Look at this one,\nit's great.\nIt gives me chills."
+        },
+        {
+          "offset": "0x100c",
+          "original": "そうだね。",
+          "text": "Yeah."
+        },
+        {
+          "offset": "0x1018",
+          "original": "いいわねぇ…。\n私もこのぐらい\n描ければなぁ…。",
+          "text": "So nice...\nIf only I could\npaint like this..."
+        },
+        {
+          "offset": "0x1094",
+          "original": "よっぽど、\n好きなんだなぁ…。\nもう２時間も見てるよ。",
+          "text": "She must\nreally love it...\nTwo hours staring now."
+        },
+        {
+          "offset": "0x10cc",
+          "original": "よし覚えたわ。\nさあ、帰りましょう。",
+          "text": "Okay, got it memorized.\nNow, let's go home."
+        },
+        {
+          "offset": "0x10f0",
+          "original": "えっ？\n覚えたって？",
+          "text": "Huh?\nMemorized?"
+        },
+        {
+          "offset": "0x1104",
+          "original": "忘れないうちに\n家に帰って、\n絵にしておくのよ。",
+          "text": "I'll go home and\npaint it before\nI forget it."
+        },
+        {
+          "offset": "0x12cc",
+          "original": "都会じゃ\nこんな星空見れないね。",
+          "text": "You can't see stars\nlike this in the city."
+        },
+        {
+          "offset": "0x12f8",
+          "original": "無視しないでよ。\n{G}。",
+          "text": "Don't ignore me,\n{G}"
+        },
+        {
+          "offset": "0x133c",
+          "original": "何だ、寝てたのか。\nそれにしても、\n可愛い寝顔だな…。",
+          "text": "Oh, she fell asleep.\nShe looks so\ncute like that..."
+        },
+        {
+          "offset": "0x1374",
+          "original": "優しく、起こす。{q}そのまま、眠らせておく。",
+          "text": "Wake her gently.{q}Let her sleep."
+        },
+        {
+          "offset": "0x13ac",
+          "original": "{G}…。\n起きて…。",
+          "text": "{G}\nwake up..."
+        },
+        {
+          "offset": "0x13c0",
+          "original": "う、ううん。\nむにゃむにゃ…君、\n大好きよ。",
+          "text": "Mm, mmm...\nMumble mumble... I\nlove you so much."
+        },
+        {
+          "offset": "0x13ec",
+          "original": "今なんて…。\n（しまった。\nよく聞き取れなかった。）",
+          "text": "What was that...\n(Shoot.\nI didn't quite catch it.)"
+        },
+        {
+          "offset": "0x142c",
+          "original": "わ、私眠っちゃったんだ。\nね、私なんか変なこと\n言わなかった？",
+          "text": "I-I fell asleep.\nHey, did I say\nanything weird?"
+        },
+        {
+          "offset": "0x146c",
+          "original": "言ってた、言ってた。",
+          "text": "You sure did."
+        },
+        {
+          "offset": "0x1484",
+          "original": "な、なんて言ったの？",
+          "text": "Wh-what did I say?"
+        },
+        {
+          "offset": "0x149c",
+          "original": "俺の事が好きだって。",
+          "text": "That you love me."
+        },
+        {
+          "offset": "0x14b4",
+          "original": "嘘よ、\nそんな事。\nいつもの冗談よねぇ？",
+          "text": "No way!\nI never said that.\nYou're kidding, right?"
+        },
+        {
+          "offset": "0x14dc",
+          "original": "そうだよ。\n何慌ててんの？",
+          "text": "Yeah, just kidding.\nWhy so flustered?"
+        },
+        {
+          "offset": "0x14f8",
+          "original": "べ、別に慌ててなんて\nいないわよ。\n良かったわ。",
+          "text": "I-I'm not flustered\nat all.\nWhat a relief."
+        },
+        {
+          "offset": "0x1528",
+          "original": "？？\n変な{G}。",
+          "text": "Huh?\n{G}'s acting strange."
+        },
+        {
+          "offset": "0x1558",
+          "original": "わ、私、眠っちゃったんだ。\n昨日、ちょっと徹夜\nしちゃって。",
+          "text": "I-I fell asleep.\nI kind of pulled\nan all-nighter."
+        },
+        {
+          "offset": "0x1594",
+          "original": "それだったら、\nもっと寝てても\nよかったのに…。",
+          "text": "In that case,\nyou could've slept\nsome more..."
+        },
+        {
+          "offset": "0x15c4",
+          "original": "せっかく\n一緒に来れたんだから、\n寝てなんていられないわ。",
+          "text": "We finally got to\ncome here together,\nI can't waste it sleeping."
+        },
+        {
+          "offset": "0x1600",
+          "original": "そ、そう。\n嬉しいよ。",
+          "text": "Oh, really?\nThat makes me happy."
+        },
+        {
+          "offset": "0x1618",
+          "original": "ところで、\n私の寝顔、\n変じゃなかった？",
+          "text": "By the way,\ndid I look weird\nwhile I slept?"
+        },
+        {
+          "offset": "0x1640",
+          "original": "別に変じゃなかったよ。\n可愛かったよ。",
+          "text": "Not weird at all.\nYou looked cute."
+        },
+        {
+          "offset": "0x1668",
+          "original": "えっ？\n恥ずかしい…。\nでも嬉しいわ。",
+          "text": "Huh?\nHow embarrassing...\nBut I'm happy."
+        },
+        {
+          "offset": "0x16ac",
+          "original": "いつもの{G}と\n反応が違う気がする。",
+          "text": "Strange {G}\nNot her normal reaction."
+        },
+        {
+          "offset": "0x1a38",
+          "original": "どうしたの\n{P}。",
+          "text": "What's wrong,\n{P}?"
+        },
+        {
+          "offset": "0x1a48",
+          "original": "どうも道に\n迷ったみたいなんだ。",
+          "text": "Looks like\nwe got lost."
+        },
+        {
+          "offset": "0x1a68",
+          "original": "ドントウォーリー。\nあそこに人がいるわ。",
+          "text": "Don't worry.\nSomeone's over there."
+        },
+        {
+          "offset": "0x1a90",
+          "original": "え、{G}、外国の人だよ。\nあ、もう話しかけてる。",
+          "text": "Oh, {G}, a foreigner!\nShe's already talking..."
+        },
+        {
+          "offset": "0x1ad4",
+          "original": "エクスキューズミー。\nちょっと聞きたいんだけど。",
+          "text": "Excuse me.\nCan I ask you something?"
+        },
+        {
+          "offset": "0x1b08",
+          "original": "何だ？何か用か？",
+          "text": "Yeah? What do you want?"
+        },
+        {
+          "offset": "0x1b20",
+          "original": "プリーズ、\n宿への道を知りたいの？",
+          "text": "Please,\nhow do we get to the inn?"
+        },
+        {
+          "offset": "0x1b48",
+          "original": "何を言っているか\nわからないよ。",
+          "text": "I don't understand\nwhat you're saying."
+        },
+        {
+          "offset": "0x1b68",
+          "original": "直進して右側に\n案内所があるから、\nそこにいきな。",
+          "text": "Go straight, there's an\ninfo center on the right.\nGo ask there."
+        },
+        {
+          "offset": "0x1ba4",
+          "original": "サンキュー。右折して、\nあとは直進すれば\nいいみたいよ。",
+          "text": "Thank you. Seems we\nturn right, then just\ngo straight."
+        },
+        {
+          "offset": "0x1be0",
+          "original": "すごいね、\n外国人と話せるなんて。",
+          "text": "Amazing, you can\ntalk to foreigners."
+        },
+        {
+          "offset": "0x1c04",
+          "original": "そうね、\n私、フィーリングが\n合うみたい。",
+          "text": "Yeah,\nI guess we're on\nthe same wavelength."
+        },
+        {
+          "offset": "0x1c30",
+          "original": "それじゃ、帰ろう。",
+          "text": "Well, let's go back."
+        },
+        {
+          "offset": "0x1c50",
+          "original": "そうね、帰りましょう。",
+          "text": "Yeah, let's go back."
+        },
+        {
+          "offset": "0x1ca8",
+          "original": "無事にホテルに\n帰ることができた。\nさすが、片桐さんだ。",
+          "text": "We got back safely\nto the hotel.\nLeave it to Katagiri-san!"
+        },
+        {
+          "offset": "0x1ce8",
+          "original": "え、そんなこと言ってたかな？\n他の人にも聞いてみようよ？",
+          "text": "Huh, is that what he said?\nLet's ask someone else?"
+        },
+        {
+          "offset": "0x1d24",
+          "original": "ドントウォーリー、\n大丈夫よ。\nさあ、いきましょ。",
+          "text": "Don't worry,\nit's fine.\nCome on, let's go."
+        },
+        {
+          "offset": "0x1d5c",
+          "original": "なぜか、無事にホテルに\n帰ることができた。",
+          "text": "Somehow, we made it\nback to the hotel, safely."
+        },
+        {
+          "offset": "0x2080",
+          "original": "{G}？",
+          "text": "{G}"
+        }
+      ]
+    }
+  ]
 }

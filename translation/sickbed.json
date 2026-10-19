@@ -14,7 +14,7 @@
         {
           "offset": "0x10",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0x54",
@@ -44,7 +44,7 @@
         {
           "offset": "0x1d0",
           "original": "でも、良かった。\n元気そうで。\nその分なら大丈夫ね。",
-          "text": "I'm glad, though.\nYou look well.\nYou'll be fine like this."
+          "text": "Oh, good.\nYou're looking better.\nYou'll be fine."
         },
         {
           "offset": "0x204",
@@ -69,7 +69,7 @@
         {
           "offset": "0x360",
           "original": "何、もう良くなったの。\nせっかく、\n薬を調合してきたのに。",
-          "text": "What, better already?\nAnd after I\nmixed you medicine."
+          "text": "Already feeling better?\nAnd I went and\nmade you medicine!"
         },
         {
           "offset": "0x39c",
@@ -89,7 +89,7 @@
         {
           "offset": "0x4e4",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0x528",
@@ -114,7 +114,7 @@
         {
           "offset": "0x5e0",
           "original": "でも本当に良かった。\nそれじゃまた学校で。\nグッバイ、さよなら。",
-          "text": "But I'm really glad.\nSee you at school.\nGoodbye, bye."
+          "text": "But I'm really glad.\nSee you at school.\nGoodbye! Sayonara!"
         },
         {
           "offset": "0x714",
@@ -124,7 +124,7 @@
         {
           "offset": "0x728",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0x76c",
@@ -149,7 +149,7 @@
         {
           "offset": "0x900",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0x944",
@@ -174,7 +174,7 @@
         {
           "offset": "0xab0",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0xaf4",
@@ -204,7 +204,7 @@
         {
           "offset": "0xcac",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0xcf0",
@@ -229,7 +229,7 @@
         {
           "offset": "0xe70",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0xeb4",
@@ -279,7 +279,7 @@
         {
           "offset": "0x11c4",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0x1208",
@@ -304,7 +304,7 @@
         {
           "offset": "0x129c",
           "original": "学校の帰りに\n寄っただけだから…。\nそれじゃ、病気なんて\n根性で吹き飛ばしてね。",
-          "text": "I just stopped by\non my way home...\nNow blow that cold\naway with guts!"
+          "text": "I just stopped by\non my way home...\nNow beat that illness\nwith sheer grit!"
         },
         {
           "offset": "0x1308",
@@ -314,7 +314,7 @@
         {
           "offset": "0x1318",
           "original": "{G}だったのか。\nもう、かなり良くなったよ。\nまだ少し熱っぽいけど…。",
-          "text": "Oh, it's you, {G}\nI'm a lot better now.\nStill a little feverish..."
+          "text": "Oh, {G}.\nI'm feeling much better.\nStill a bit feverish..."
         },
         {
           "offset": "0x135c",

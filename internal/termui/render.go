@@ -241,13 +241,13 @@ func (s *state) frame(width, height int) string {
 				}
 			}
 		}
-		c.box(height-2, hint+"  ↑↓ / Enter / Esc / q")
+		c.box(height-2, hint+"  ↑↓ / Enter / c Copy error / Esc / q")
 		c.border(height-1, false)
 		return c.output()
 	}
 
 	c.box(1, ink+"  TOKIMEKI MEMORIAL"+reset+accent+"  /  "+magenta+"HUMAN OVERHAUL")
-	c.box(2, hint+"  PS1 • Go toolchain G33                         Original game and translation: read-only")
+	c.box(2, hint+"  PS1 • Go toolchain                         Original game and translation: read-only")
 	c.rule(3)
 	label := "CONTROL CENTER"
 	switch s.page {
@@ -314,7 +314,7 @@ func (s *state) frame(width, height int) string {
 				for _, ln := range wordsLines(sel.subtitle, rightW-5) {
 					detail = append(detail, "   "+ln)
 				}
-				detail = append(detail, "", hint+"   Enter   run/select", hint+"   ↑↓     navigate", hint+"   l      logs", hint+"   Esc    back", hint+"   q      quit")
+				detail = append(detail, "", hint+"   Enter   run/select", hint+"   ↑↓     navigate", hint+"   l      logs", hint+"   c      copy last error", hint+"   Esc    back", hint+"   q      quit")
 				if y-headerEnd < len(detail) {
 					right = detail[y-headerEnd]
 				}
@@ -343,9 +343,9 @@ func (s *state) frame(width, height int) string {
 	if footerRule > 4 {
 		c.rule(footerRule)
 	}
-	footer := hint + "  ↑↓ Navigate  Enter Select  l Logs  Esc Back  q Exit" + reset
+	footer := hint + "  ↑↓ Navigate  Enter Select  l Logs  c Copy error  Esc Back  q Exit" + reset
 	if s.page == "logs" {
-		footer = hint + "  ↑↓ Scroll  PgUp/PgDn  Esc Back  q Exit" + reset
+		footer = hint + "  ↑↓ Scroll  PgUp/PgDn  c Copy error  Esc Back  q Exit" + reset
 	}
 	if height >= 3 {
 		c.box(height-3, footer)
@@ -468,8 +468,11 @@ func (s *state) runFrame(w, h int) string {
 			c.box(y, "  "+truncateCells(cleanLine(s.logs[idx]), max(0, w-6)))
 		}
 	}
+	if h > 3 && h >= 10 {
+		c.box(h-3, hint+"  "+truncateCells(s.status, max(0, w-7)))
+	}
 	if h > 2 {
-		c.box(h-2, hint+"  ↑↓ Scroll • PgUp/PgDn • f Follow"+reset+map[bool]string{true: " • building...", false: " • Enter Back"}[s.running])
+		c.box(h-2, hint+"  ↑↓ Scroll • PgUp/PgDn • f Follow • c Copy last error"+reset+map[bool]string{true: " • building...", false: " • Enter Back"}[s.running])
 	}
 	if h > 1 {
 		c.border(h-1, false)

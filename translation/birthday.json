@@ -1,89 +1,407 @@
 {
   "description": "The player's birthday: all of SERIFU/P_BIRTH.BIN (base 0x801B0000; game-internals 6r), 79 strings. Thirteen sections (fill function in each overlay, e.g. GEKO 0x80134F84, KANGEI 0x80137B90): 0 Yuko, 1 Shiori, 2 a classmate calling 'a girl's here' (read only by KANGEI's copy of the flow), 3 Yuina, 4 Ayako, 5 Mira, 6 Mio, 7 Yukari, 8 Nozomi, 9 Megumi, 10 Saki, 11 nobody gave a present, 12 Yumi (the default for other girls). The girl with the best rank brings a present if that rank is below 2; otherwise section 11 plays. Lines that address a girl end on {G} ('Oh, hi, {G}', 'Gift from {G}') so odd-length names don't show their pair padding mid-line. Verified in DuckStation with tools/emu/force_birthday.py (player's birthday set to 4/25 on the test save, so the scene plays by itself in GEKO.EXN; the girl forced at its selector), hidden emulator: section 11 (natural, nobody) and every girl's present scene, sections 0, 1 and 3-10 and 12. Checked only statically: section 2 (KANGEI's flow), and natural affection-driven choice of the girl.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/P_BIRTH.BIN",
-    "base": "0x801B0000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0xc", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x2c", "original": "今日、誕生日だよね。\nプレゼントだよ。", "text": "It's your birthday, right?\nHere's a present."},
-      {"offset": "0x54", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0x64", "original": "なかなかいいのが\nなくってさ、\n大変だったんだから。", "text": "Finding a good one\nwas sooo hard,\nI'll have you know."},
-      {"offset": "0xa4", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x1b4", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x1c0", "original": "なんだ、詩織じゃないか。\nどうしたの？", "text": "Oh, it's you, Shiori.\nWhat's up?"},
-      {"offset": "0x1f0", "original": "お誕生日おめでとう。", "text": "Happy birthday."},
-      {"offset": "0x208", "original": "これ…プレゼントなの。", "text": "This... is a present."},
-      {"offset": "0x220", "original": "覚えててくれたんだ。\nありがとう。", "text": "You remembered.\nThank you."},
-      {"offset": "0x244", "original": "よかった。\n受け取ってもらえて。", "text": "I'm glad.\nThat you'll accept it."},
-      {"offset": "0x274", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x3a4", "original": "お〜い、{p}、女の子が来てるぜ。", "text": "Yo, {p}! A girl's here."},
-      {"offset": "0x3f4", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x400", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x420", "original": "今日は、\nあなたの誕生日のはずね。\nプレゼントよ。", "text": "Today should be\nyour birthday.\nHere is a present."},
-      {"offset": "0x454", "original": "{G}が、俺に？", "text": "From you, {G}"},
-      {"offset": "0x460", "original": "み、未来の部下に対する\n配慮よ。", "text": "J-just consideration for\nmy future subordinate."},
-      {"offset": "0x48c", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x59c", "original": "ハーイ、{P}。", "text": "Hi there, {P}."},
-      {"offset": "0x5a8", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x5c8", "original": "ハッピーバースデー。\nはい、プレゼントよ。", "text": "Happy birthday!\nHere, a present for you."},
-      {"offset": "0x5f4", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0x604", "original": "気に入ってもらえると\n思うけど。", "text": "I think you'll\nlike it."},
-      {"offset": "0x630", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x740", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x760", "original": "誕生日プレゼントよ。", "text": "A birthday present."},
-      {"offset": "0x778", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0x788", "original": "つ、ついでよ、ついで。\nこのあいだ、\n買い物に行ったから…。", "text": "I-it was on the way, okay?\nI just happened\nto be out shopping..."},
-      {"offset": "0x7d0", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x8e0", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x900", "original": "これ、誕生日プレゼントです。", "text": "Here, a birthday present."},
-      {"offset": "0x920", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0x930", "original": "はい…。\n迷惑だったでしょうか？", "text": "Yes...\nI hope it's no bother?"},
-      {"offset": "0x950", "original": "そんなことないよ。\nありがとう。", "text": "Not at all.\nThank you."},
-      {"offset": "0x970", "original": "喜んでもらえて、嬉しいです。", "text": "I'm so glad you like it."},
-      {"offset": "0x9a4", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0xaf0", "original": "こんにちは、{m}さん。", "text": "Good day, {m}."},
-      {"offset": "0xb04", "original": "あ、{G}。\nどうしたの？", "text": "Ah, {G}\nWhat's up?"},
-      {"offset": "0xb24", "original": "気に入っていただけるかどうか\nわかりませんが、\nよろしければ、どうぞ。", "text": "I'm not sure whether\nit will be to your liking,\nbut please, take it."},
-      {"offset": "0xb6c", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0xb7c", "original": "はい、\nお誕生日の、贈り物です。", "text": "Yes,\na gift for your birthday."},
-      {"offset": "0xba8", "original": "古式さんにプレゼントを\nもらえるなんて、\n俺は幸せ者だー！", "text": "Koshiki-san gave me\na birthday present!\nMan, I'm so lucky!"},
-      {"offset": "0xcc0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0xccc", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0xcec", "original": "今日、誕生日よね。\nこれ、プレゼント。", "text": "It's your birthday, right?\nHere, a present."},
-      {"offset": "0xd14", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0xd24", "original": "気に入ってもらえると\nいいんだけど。", "text": "I hope you\nlike it."},
-      {"offset": "0xd54", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0xe64", "original": "あの…。", "text": "Um..."},
-      {"offset": "0xe70", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0xe90", "original": "あの…これ、誕生日の…。\nあの…。", "text": "Um... this is, for your\nbirthday... um..."},
-      {"offset": "0xeb4", "original": "プレゼント？", "text": "A present?"},
-      {"offset": "0xec4", "original": "はい。受け取って…\nくれますか？", "text": "Yes. Will you...\naccept it?"},
-      {"offset": "0xee4", "original": "もちろんだよ。\nありがとう。", "text": "Of course.\nThank you."},
-      {"offset": "0xf00", "original": "良かった…。", "text": "I'm so glad..."},
-      {"offset": "0xf24", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x1070", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x107c", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x109c", "original": "今日、誕生日でしょう？\nこれ、\nプレゼントなんだけど。", "text": "It's your birthday, right?\nThis is\na present for you."},
-      {"offset": "0x10d4", "original": "えっ、俺に？", "text": "Huh, for me?"},
-      {"offset": "0x10e4", "original": "受け取ってくれるかな。", "text": "Will you take it?"},
-      {"offset": "0x10fc", "original": "もちろんだよ。", "text": "Of course."},
-      {"offset": "0x110c", "original": "良かった。", "text": "Oh, good."},
-      {"offset": "0x112c", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x1278", "original": "今日は俺の\n誕生日だ。", "text": "Today's my\nbirthday."},
-      {"offset": "0x1290", "original": "…けど、誰にもプレゼントを\nもらえなかった。", "text": "...But nobody gave me\na present."},
-      {"offset": "0x12bc", "original": "さびしいなぁ。", "text": "I'm so lonely..."},
-      {"offset": "0x133c", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, hi, {G}\nWhat's up?"},
-      {"offset": "0x135c", "original": "これ、誕生日プレゼントです。", "text": "Here, a birthday present."},
-      {"offset": "0x137c", "original": "ありがとう、嬉しいよ。", "text": "Thanks, I'm really happy."},
-      {"offset": "0x1394", "original": "気に入ってほしくて、\n一生懸命選んだんだよ。", "text": "I wanted you to love it,\nso I tried really hard!"},
-      {"offset": "0x13c0", "original": "優美ちゃんにもらえれば、\n何でも嬉しいよ。", "text": "Anything from you,\nYumi-chan, makes me happy."},
-      {"offset": "0x13ec", "original": "そうですか？\n嬉しいなぁ。", "text": "Really?\nYay!"},
-      {"offset": "0x141c", "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！", "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"},
-      {"offset": "0x1568", "original": "{P}。", "text": "{P}."},
-      {"offset": "0x156c", "original": "{P}。", "text": "{P}."},
-      {"offset": "0x1570", "original": "{P}。", "text": "{P}."}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/P_BIRTH.BIN",
+      "base": "0x801B0000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xc",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x2c",
+          "original": "今日、誕生日だよね。\nプレゼントだよ。",
+          "text": "It's your birthday, right?\nHere's a present."
+        },
+        {
+          "offset": "0x54",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0x64",
+          "original": "なかなかいいのが\nなくってさ、\n大変だったんだから。",
+          "text": "Finding a good one\nwas sooo hard,\nI'll have you know."
+        },
+        {
+          "offset": "0xa4",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x1b4",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x1c0",
+          "original": "なんだ、詩織じゃないか。\nどうしたの？",
+          "text": "Oh, Shiori!\nWhat's up?"
+        },
+        {
+          "offset": "0x1f0",
+          "original": "お誕生日おめでとう。",
+          "text": "Happy birthday."
+        },
+        {
+          "offset": "0x208",
+          "original": "これ…プレゼントなの。",
+          "text": "This... is a present."
+        },
+        {
+          "offset": "0x220",
+          "original": "覚えててくれたんだ。\nありがとう。",
+          "text": "You remembered.\nThank you."
+        },
+        {
+          "offset": "0x244",
+          "original": "よかった。\n受け取ってもらえて。",
+          "text": "I'm so glad\nyou accepted it."
+        },
+        {
+          "offset": "0x274",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x3a4",
+          "original": "お〜い、{p}、女の子が来てるぜ。",
+          "text": "Yo, {p}! A girl's here."
+        },
+        {
+          "offset": "0x3f4",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x400",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x420",
+          "original": "今日は、\nあなたの誕生日のはずね。\nプレゼントよ。",
+          "text": "If I'm not mistaken,\nit's your birthday.\nHere's a present."
+        },
+        {
+          "offset": "0x454",
+          "original": "{G}が、俺に？",
+          "text": "From you, {G}"
+        },
+        {
+          "offset": "0x460",
+          "original": "み、未来の部下に対する\n配慮よ。",
+          "text": "J-just consideration for\nmy future subordinate."
+        },
+        {
+          "offset": "0x48c",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x59c",
+          "original": "ハーイ、{P}。",
+          "text": "Hi there, {P}."
+        },
+        {
+          "offset": "0x5a8",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x5c8",
+          "original": "ハッピーバースデー。\nはい、プレゼントよ。",
+          "text": "Happy birthday!\nHere, a present for you."
+        },
+        {
+          "offset": "0x5f4",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0x604",
+          "original": "気に入ってもらえると\n思うけど。",
+          "text": "I think you'll\nlike it."
+        },
+        {
+          "offset": "0x630",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x740",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x760",
+          "original": "誕生日プレゼントよ。",
+          "text": "A birthday present."
+        },
+        {
+          "offset": "0x778",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0x788",
+          "original": "つ、ついでよ、ついで。\nこのあいだ、\n買い物に行ったから…。",
+          "text": "I-I was out shopping\nanyway, so I just\npicked something up..."
+        },
+        {
+          "offset": "0x7d0",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x8e0",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x900",
+          "original": "これ、誕生日プレゼントです。",
+          "text": "Here, a birthday present."
+        },
+        {
+          "offset": "0x920",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0x930",
+          "original": "はい…。\n迷惑だったでしょうか？",
+          "text": "Yes...\nI hope I'm not imposing."
+        },
+        {
+          "offset": "0x950",
+          "original": "そんなことないよ。\nありがとう。",
+          "text": "Not at all.\nThank you."
+        },
+        {
+          "offset": "0x970",
+          "original": "喜んでもらえて、嬉しいです。",
+          "text": "I'm so glad you like it."
+        },
+        {
+          "offset": "0x9a4",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0xaf0",
+          "original": "こんにちは、{m}さん。",
+          "text": "Hello, {m}-san."
+        },
+        {
+          "offset": "0xb04",
+          "original": "あ、{G}。\nどうしたの？",
+          "text": "Ah, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0xb24",
+          "original": "気に入っていただけるかどうか\nわかりませんが、\nよろしければ、どうぞ。",
+          "text": "I'm not sure\nif you'll like it,\nbut please accept it."
+        },
+        {
+          "offset": "0xb6c",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0xb7c",
+          "original": "はい、\nお誕生日の、贈り物です。",
+          "text": "Yes,\na gift for your birthday."
+        },
+        {
+          "offset": "0xba8",
+          "original": "古式さんにプレゼントを\nもらえるなんて、\n俺は幸せ者だー！",
+          "text": "Koshiki-san gave me\na birthday present!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0xcc0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xccc",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0xcec",
+          "original": "今日、誕生日よね。\nこれ、プレゼント。",
+          "text": "It's your birthday, right?\nHere, a present."
+        },
+        {
+          "offset": "0xd14",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0xd24",
+          "original": "気に入ってもらえると\nいいんだけど。",
+          "text": "I hope you\nlike it."
+        },
+        {
+          "offset": "0xd54",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0xe64",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0xe70",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0xe90",
+          "original": "あの…これ、誕生日の…。\nあの…。",
+          "text": "Um... this is, for your\nbirthday... um..."
+        },
+        {
+          "offset": "0xeb4",
+          "original": "プレゼント？",
+          "text": "A present?"
+        },
+        {
+          "offset": "0xec4",
+          "original": "はい。受け取って…\nくれますか？",
+          "text": "Yes. Will you...\naccept it?"
+        },
+        {
+          "offset": "0xee4",
+          "original": "もちろんだよ。\nありがとう。",
+          "text": "Of course.\nThank you."
+        },
+        {
+          "offset": "0xf00",
+          "original": "良かった…。",
+          "text": "I'm so glad..."
+        },
+        {
+          "offset": "0xf24",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x1070",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x107c",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x109c",
+          "original": "今日、誕生日でしょう？\nこれ、\nプレゼントなんだけど。",
+          "text": "It's your birthday, right?\nThis is\na present for you."
+        },
+        {
+          "offset": "0x10d4",
+          "original": "えっ、俺に？",
+          "text": "Huh, for me?"
+        },
+        {
+          "offset": "0x10e4",
+          "original": "受け取ってくれるかな。",
+          "text": "Will you take it?"
+        },
+        {
+          "offset": "0x10fc",
+          "original": "もちろんだよ。",
+          "text": "Of course."
+        },
+        {
+          "offset": "0x110c",
+          "original": "良かった。",
+          "text": "Oh, good."
+        },
+        {
+          "offset": "0x112c",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x1278",
+          "original": "今日は俺の\n誕生日だ。",
+          "text": "Today's my\nbirthday."
+        },
+        {
+          "offset": "0x1290",
+          "original": "…けど、誰にもプレゼントを\nもらえなかった。",
+          "text": "...But nobody gave me\na present."
+        },
+        {
+          "offset": "0x12bc",
+          "original": "さびしいなぁ。",
+          "text": "I'm so lonely..."
+        },
+        {
+          "offset": "0x133c",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, hi, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x135c",
+          "original": "これ、誕生日プレゼントです。",
+          "text": "Here, a birthday present."
+        },
+        {
+          "offset": "0x137c",
+          "original": "ありがとう、嬉しいよ。",
+          "text": "Thanks, I'm really happy."
+        },
+        {
+          "offset": "0x1394",
+          "original": "気に入ってほしくて、\n一生懸命選んだんだよ。",
+          "text": "I wanted you to like it,\nso I chose it carefully!"
+        },
+        {
+          "offset": "0x13c0",
+          "original": "優美ちゃんにもらえれば、\n何でも嬉しいよ。",
+          "text": "Anything from you,\nYumi-chan, makes me happy."
+        },
+        {
+          "offset": "0x13ec",
+          "original": "そうですか？\n嬉しいなぁ。",
+          "text": "Really?\nYay!"
+        },
+        {
+          "offset": "0x141c",
+          "original": "{G}にプレゼントを\nもらえるなんて、\nおれは幸せ者だー！",
+          "text": "Gift from {G}\nfor my birthday!\nMan, I'm so lucky!"
+        },
+        {
+          "offset": "0x1568",
+          "original": "{P}。",
+          "text": "{P}."
+        },
+        {
+          "offset": "0x156c",
+          "original": "{P}。",
+          "text": "{P}."
+        },
+        {
+          "offset": "0x1570",
+          "original": "{P}。",
+          "text": "{P}."
+        }
+      ]
+    }
+  ]
 }

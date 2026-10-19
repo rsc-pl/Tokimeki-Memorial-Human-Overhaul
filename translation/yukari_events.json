@@ -1,125 +1,587 @@
 {
   "description": "Yukari's special events: all of SERIFU/EVENT_KO.BIN (entries 42-48: the nurse's office, the knitted sweater, pitcher plants, the dolphin show, knitting in the park, the ski lift, the school-trip bath). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_KO.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "ちょっと、熱っぽいな…。\n保健室に行ってみるか…。", "text": "I feel a bit feverish...\nI'll go see the nurse..."},
-      {"offset": "0x38", "original": "あれ？\n{G}。\nどうしたの？", "text": "Huh?\nOh, {G}\nWhat happened?"},
-      {"offset": "0x50", "original": "{P}\n体育で、ちょっと怪我を\nしてしまいまして。", "text": "{P}\nI hurt myself a little\nin gym class."},
-      {"offset": "0x7c", "original": "大丈夫？\nまた、ボーッと\nしてたんでしょう？", "text": "Are you okay?\nWere you spacing\nout again?"},
-      {"offset": "0xa8", "original": "はい。\nバレーボールを\nしているときに。", "text": "Yes.\nWhile we were\nplaying volleyball."},
-      {"offset": "0xd0", "original": "プレイ中にそんな事\nしてたら危ないよ。\n気を付けなきゃ。", "text": "Doing that during\na game is dangerous.\nYou have to be careful."},
-      {"offset": "0x108", "original": "そうですね。\nご忠告、\nありがとうございます。", "text": "Quite so.\nThank you\nfor the advice."},
-      {"offset": "0x138", "original": "どういたしまして。\n礼を言われることじゃ\nないと思うけど。", "text": "You're welcome.\nNot that it's worth\nthanking me for."},
-      {"offset": "0x174", "original": "ところで、\n何をしに\nいらっしゃったのですか？", "text": "By the way,\nwhat brings\nyou here?"},
-      {"offset": "0x1a4", "original": "あっ、そうだ。\nちょっと、\n熱っぽかったんだっけ。", "text": "Oh, right.\nI was feeling\na bit feverish."},
-      {"offset": "0x1d8", "original": "それは、いけませんね。\n安静にしてなければ。", "text": "Oh dear, that won't do.\nYou must rest quietly."},
-      {"offset": "0x204", "original": "{G}の顔を見たら、\n治っちゃったよ。", "text": "I saw {G}\nand I'm all better."},
-      {"offset": "0x228", "original": "そうなんですか？\nこんなもので治るなら、\nいくらでも見てください。", "text": "Is that so?\nIf it cures you,\nplease look all you like."},
-      {"offset": "0x26c", "original": "そ、そう。\nありがとう。\n（そういう事じゃなくて…。）", "text": "O-okay.\nThanks.\n(Not what I meant...)"},
-      {"offset": "0x2a4", "original": "それでは、\nそろそろ教室に\n戻りますので。", "text": "Well then,\nI shall return\nto class now."},
-      {"offset": "0x2d0", "original": "それじゃ、{G}。\nあんまりボーッと\nしないようにね。", "text": "Okay, {G}\ntry not to\nspace out so much."},
-      {"offset": "0x300", "original": "はい、お身体の方、\nお大事にしてくださいね。\n失礼いたします。", "text": "Yes. Please take\ngood care of yourself.\nExcuse me."},
-      {"offset": "0x380", "original": "何か、ボーッとしてて\n怪我するなんて、\n{G}らしいや。", "text": "Getting hurt while\nspacing out... that's\nso very {G}"},
-      {"offset": "0x5f0", "original": "{P}\nこんにちは。", "text": "{P}\ngood afternoon."},
-      {"offset": "0x604", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, {G}\nWhat's up?"},
-      {"offset": "0x61c", "original": "この前、\n公園で編んでいた\nセーターです。", "text": "This is the sweater\nI was knitting\nin the park."},
-      {"offset": "0x648", "original": "えっ、俺に？\nありがとう。", "text": "Huh, for me?\nThank you."},
-      {"offset": "0x664", "original": "色は気に入って\nもらえたようでしたので\nいいのですが。\nサイズはどうでしょう？", "text": "You seemed to like\nthe color, so\nthat part is fine.\nHow is the size?"},
-      {"offset": "0x6b0", "original": "どれどれ？\n大丈夫。\nぴったりだよ。", "text": "Let's see...\nYep.\nIt fits perfectly."},
-      {"offset": "0x6d4", "original": "うまくできたみたいですね。\nどうですか？\n幸せになりましたか？", "text": "It seems it came out well.\nHow is it?\nDoes it make you happy?"},
-      {"offset": "0x714", "original": "う、うん。\nもちろん\n最高に幸せだよ。", "text": "Y-yeah.\nOf course,\nI couldn't be happier."},
-      {"offset": "0x73c", "original": "そうですか。\nそれは、頑張った\n甲斐がありました。", "text": "I see.\nThen all my effort\nwas worth it."},
-      {"offset": "0x770", "original": "{G}。\n本当に、これ\n貰っちゃっていいの？", "text": "Um, {G}\nis it really okay\nfor me to keep this?"},
-      {"offset": "0x798", "original": "もちろんです。\nそれでは、\n失礼いたします。", "text": "Of course.\nWell then,\nexcuse me."},
-      {"offset": "0x7ec", "original": "あぁ、幸せ。\n{G}の心みたいに、\nあったかいよ。", "text": "Ahh, bliss.\nWarm like {G}\nand her sweet heart."},
-      {"offset": "0x9a4", "original": "少々、見たいものが\nありますので、後から\nいらしてください。", "text": "There is something\nI wish to see, so please\ncome along later."},
-      {"offset": "0x9e4", "original": "は、速い。\n（{G}ってこんなに\n速く走れたんだ…。）", "text": "Sh-she's fast.\n(Who knew {G}\ncould run so fast...)"},
-      {"offset": "0xa50", "original": "{G}は、\nどこに行ったんだ…？\nあっ、いた。", "text": "Where did {G}\ngo off to...?\nOh, there she is."},
-      {"offset": "0xa84", "original": "{G}、探したよ。\n食虫植物コーナーに\nいるんだもんな。", "text": "Ah, {G}\nyou were at the\ncarnivorous plants."},
-      {"offset": "0xab8", "original": "ほら、見てください。\n面白い形をしていると\n思いませんか？", "text": "Look, please.\nDon't you think\nit has a funny shape?"},
-      {"offset": "0xaf4", "original": "それはね、\nウツボカズラと言って、\n虫を食べるんだよ。", "text": "That's called\na pitcher plant.\nIt eats bugs."},
-      {"offset": "0xb2c", "original": "お父様が、殿方は食虫植物\nだと言っておりましたが、\nよくわかりませんね。", "text": "Father once said men are\ncarnivorous plants, but\nI don't quite understand."},
-      {"offset": "0xb74", "original": "そ、それはね…。\nいいや、やめておこう。", "text": "W-well, that's...\nNo, never mind."},
-      {"offset": "0xb9c", "original": "どうしてでしょうね？\nこんなに可愛いし、\nふたまで付いてますよ。", "text": "Why would he say that?\nThey're so cute,\nand they even have lids."},
-      {"offset": "0xbdc", "original": "‥‥‥‥。\n（確かにふたは付いてる\nけどさ、可愛いか？）", "text": "........\n(Sure, it has a lid,\nbut is that cute?)"},
-      {"offset": "0xc14", "original": "見てるだけで、\n楽しいですねぇ。", "text": "Just looking at them\nis so much fun."},
-      {"offset": "0xc34", "original": "こ、{G}。\nそろそろ先に行かない？", "text": "Y-{G}\nshall we move on?"},
-      {"offset": "0xc54", "original": "そうですねぇ。\n参りましょうか。", "text": "Yes, indeed.\nShall we go?"},
-      {"offset": "0xe5c", "original": "今日は、イルカショーの\n特別イベントが\nあるみたいだね。", "text": "Looks like there's\na special dolphin\nshow today."},
-      {"offset": "0xe94", "original": "そうなんですか？\nそれは、是非拝見して\nみたいですね。", "text": "Is that so?\nI would very much\nlike to see it."},
-      {"offset": "0xecc", "original": "それじゃ、\n行ってみよう。", "text": "Then let's\ngo see it."},
-      {"offset": "0xee8", "original": "それでは、\n参りましょう。", "text": "Well then,\nlet us go."},
-      {"offset": "0xf04", "original": "悪いけど、\nちょっと先に行ってて\nくれるかな？", "text": "Sorry, but\ncould you go on\nahead of me?"},
-      {"offset": "0xf34", "original": "わかりました。\nそれでは、\n待っていますので。", "text": "Very well.\nThen I shall\nwait for you."},
-      {"offset": "0xf7c", "original": "さっきから、\nトイレに\n行きたかったんだよね。", "text": "I've needed\nthe restroom\nfor a while now."},
-      {"offset": "0xfe8", "original": "さて、{G}を\n待たせてるからな。\n早く行かなきゃ。", "text": "Okay, {G}\nis waiting for me.\nI'd better hurry up."},
-      {"offset": "0x1024", "original": "ザッパーン", "text": "SPLASH!"},
-      {"offset": "0x1030", "original": "きゃー。", "text": "Eeek!"},
-      {"offset": "0x1044", "original": "こ、{G}。\n大丈夫？", "text": "Y-{G}\nare you okay?"},
-      {"offset": "0x1058", "original": "水をかけられて\nしまいました。\nびしょ濡れです。", "text": "I got splashed\nwith water.\nI'm soaking wet."},
-      {"offset": "0x1088", "original": "みんな逃げているのに、\nどうして、{G}だけ\n水がかかってるの？", "text": "Everyone else ran,\nso why is {G}\nthe only one soaked?"},
-      {"offset": "0x10c4", "original": "どうしてでしょう？", "text": "I wonder why?"},
-      {"offset": "0x10d8", "original": "あっ、係の人がタオルを\n持ってきてくれたよ。\n（どうせまた、ボーッと\n見てたんだろうな…。）", "text": "Oh, a staff member\nbrought a towel.\n(I bet she was just\nspacing out again...)"},
-      {"offset": "0x1148", "original": "それにしても、\n夏でよかったね。", "text": "Anyway, good thing\nit's summer."},
-      {"offset": "0x1168", "original": "そうですね。\nもう服も\n乾いてしまいました。", "text": "Indeed.\nMy clothes have\nalready dried."},
-      {"offset": "0x1194", "original": "そ、そうだね。\n（残念だぜ、さっきは下着が\n透けて見えそう\nだったのにな…。）", "text": "Y-yeah.\n(Too bad, a while ago\nher underwear was\nalmost showing...)"},
-      {"offset": "0x11e0", "original": "それでは、\n参りましょう。", "text": "Well then,\nlet us go."},
-      {"offset": "0x1498", "original": "あれ、{G}。\nその荷物は？", "text": "Um, {G}\nwhat's that bag?"},
-      {"offset": "0x14b0", "original": "今、編み物をしていまして、\nどこでも編めるように、\n持ってきているんです。", "text": "I'm knitting something,\nso I bring it along to\nknit wherever I go."},
-      {"offset": "0x14fc", "original": "それじゃあ、\nベンチにでも座って、\n編み物してもいいよ。", "text": "Then go ahead,\nsit on a bench\nand knit if you like."},
-      {"offset": "0x1540", "original": "いいえ。\nそんな事をしては、\n失礼ですから。", "text": "Oh, no.\nThat would be\nrude of me."},
-      {"offset": "0x156c", "original": "編み物をしている女の子と\nお話するのって、\n一度してみたかったんだ。", "text": "I've always wanted to\ntalk with a girl\nwhile she knits."},
-      {"offset": "0x15b0", "original": "そうですか？\nそれでは、\n失礼いたしまして。", "text": "Is that so?\nThen, if you'll\nexcuse me."},
-      {"offset": "0x15e8", "original": "へぇ、器用だね。", "text": "Wow, you're so skilled."},
-      {"offset": "0x15fc", "original": "好きなので、\n家でよく編んでますから。", "text": "I love it, so\nI knit a lot at home."},
-      {"offset": "0x1624", "original": "そうなんだ。\n誰かへのプレゼント？", "text": "I see.\nIs it a present?"},
-      {"offset": "0x1648", "original": "そうですねぇ。\n内緒にしておきます。", "text": "Well now...\nI shall keep it a secret."},
-      {"offset": "0x166c", "original": "そ、そう。\nでも、いい色だね。", "text": "O-oh.\nBut it's a nice color."},
-      {"offset": "0x168c", "original": "そうですか？\n気に入ってもらえて\n嬉しいです。", "text": "Do you think so?\nI'm glad\nyou like it."},
-      {"offset": "0x16bc", "original": "嬉しい…？\n（どうしてだ？）", "text": "Glad...?\n(Why's that?)"},
-      {"offset": "0x16d8", "original": "ここの編み方が、\n難しいんですよ。", "text": "This stitch here\nis quite difficult."},
-      {"offset": "0x16fc", "original": "{G}に、\n編んでもらった物を\nもらう人は幸せだね。", "text": "Whoever {G}\nknits something for\nis a lucky person."},
-      {"offset": "0x172c", "original": "そうですか？\nそれでは、頑張らないと\nいけませんね。", "text": "Do you think so?\nThen I must\ntry my best."},
-      {"offset": "0x1760", "original": "本当に、器用だねぇ…。\n（もらえる人はいいなぁ…。）", "text": "You're really skilled...\n(Lucky whoever gets it...)"},
-      {"offset": "0x19d4", "original": "スキーに来るのは\n初めてなんです。", "text": "This is my first time\ngoing skiing."},
-      {"offset": "0x19f8", "original": "そ、そうなんだ？\nそれじゃあ、スキーウェア\nその他一式は…？", "text": "R-really?\nThen your ski wear\nand all that gear...?"},
-      {"offset": "0x1a3c", "original": "今日のために、\nお父様に買って\nいただきました。", "text": "Father bought\nit all for me\nfor today."},
-      {"offset": "0x1a70", "original": "そ、そう…。\n（金持ちだなぁ。）", "text": "O-oh...\n(So rich...)"},
-      {"offset": "0x1a94", "original": "そ、そう…。\n（さすが、\n金持ちは違うぜ…。）", "text": "O-oh...\n(The rich really\nare different...)"},
-      {"offset": "0x1ac8", "original": "このブランコみたいな、\nリフトと言うものに\n乗るんですね。", "text": "So we ride this\nswing-like thing\ncalled a lift."},
-      {"offset": "0x1b04", "original": "こ、{G}。\n初めてなら、\n下で練習したほうが…。", "text": "Y-{G}\nif it's your first time,\npractice down here..."},
-      {"offset": "0x1b30", "original": "楽しみですねぇ。\nさあ、乗りましょう。", "text": "How exciting.\nCome, let us ride."},
-      {"offset": "0x1b58", "original": "‥‥‥‥。\nま、いいか。", "text": "........\nOh, whatever."},
-      {"offset": "0x1b80", "original": "さあ、乗るよ。", "text": "Okay, here we go."},
-      {"offset": "0x1b90", "original": "きゃーっ。", "text": "Eeek!"},
-      {"offset": "0x1ba4", "original": "だ、大丈夫？\n{G}。\nほら、手に掴まって。", "text": "A-are you okay?\nOh, {G}\nHere, grab my hand."},
-      {"offset": "0x1bd0", "original": "び、びっくりしました。\nリフトって乗るのが\n難しいんですね。", "text": "Th-that startled me.\nLifts are hard\nto get on, aren't they?"},
-      {"offset": "0x1c0c", "original": "そ、そうだね。\n（{G}だけだって。）", "text": "Y-yeah.\n(Just {G})"},
-      {"offset": "0x1c30", "original": "それにしても、\n高いところまで、\n来てしまいましたね。", "text": "Still,\nwe've come up\nvery high."},
-      {"offset": "0x1c68", "original": "どう？\n{G}。\n降りれそう？", "text": "Well?\nSo, {G}\ncan you get down?"},
-      {"offset": "0x1c90", "original": "ちょっと、無理そうですね。\n下りのリフトに\n乗せてもらいましょう。", "text": "That seems a bit much.\nLet's ask them to let us\nride the lift down."},
-      {"offset": "0x1cd4", "original": "リフトは下りは\n乗せてもらえないんだよ。", "text": "They don't let you\nride the lift down."},
-      {"offset": "0x1d04", "original": "そうなんですか？\n困りましたね。\nどうしましょう？", "text": "Is that so?\nOh dear.\nWhat shall we do?"},
-      {"offset": "0x1d38", "original": "転びながら、\nゆっくり\n降りていくしかないね。", "text": "We'll just have to\ngo down slowly,\nfalling as we go."},
-      {"offset": "0x1d68", "original": "そ、そうですか…。\nそれでは、\nそういたしましょう。", "text": "I-I see...\nWell then,\nlet us do that."},
-      {"offset": "0x1d9c", "original": "大丈夫かな？\n{G}。", "text": "Is she okay?\nOh, {G}"},
-      {"offset": "0x20d8", "original": "あっ、こんばんわ。", "text": "Oh, good evening."},
-      {"offset": "0x20ec", "original": "ん？誰だろう。\nでも、この声は…？", "text": "Hm? Who's that?\nBut that voice...?"},
-      {"offset": "0x2118", "original": "申し訳ありません。\n少々、\nのぼせてしまいまして…。", "text": "I do apologize.\nI'm a little\nwoozy from the bath..."},
-      {"offset": "0x214c", "original": "こ、古式さんなの？\n全然別人のようだ。", "text": "K-Koshiki-san?\nYou look so different."},
-      {"offset": "0x2174", "original": "そうでしょうか？", "text": "Do I?"},
-      {"offset": "0x2188", "original": "お風呂行って来たんだ。\n湯加減はどうだった？", "text": "You went to the bath.\nHow was the water?"},
-      {"offset": "0x21b4", "original": "結構な、湯加減で\nございました。\nですけど…。", "text": "The water was\nvery nice.\nHowever..."},
-      {"offset": "0x21e4", "original": "ですけど？", "text": "However?"},
-      {"offset": "0x2208", "original": "少々、\n狭いお風呂でございました。", "text": "It was a\nrather small bath."},
-      {"offset": "0x222c", "original": "あれ？大浴場以外に\nお風呂ってあったかな？", "text": "Huh? Is there a bath\nbesides the big one?"},
-      {"offset": "0x2258", "original": "見た所、５０人程しか、\n御一緒にできない\n広さでしたけど…。", "text": "It looked big enough\nfor only about fifty\npeople at once..."},
-      {"offset": "0x22a4", "original": "お父様に電話する時間なので、\nそれでは、失礼します。", "text": "It's time to call Father,\nso please excuse me."},
-      {"offset": "0x22dc", "original": "もしかして、\n自宅の風呂が超巨大なのかな？", "text": "Could it be that\nher bath at home is giant?"},
-      {"offset": "0x2518", "original": "ドン", "text": "Bump"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_KO.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "ちょっと、熱っぽいな…。\n保健室に行ってみるか…。",
+          "text": "I feel a bit feverish...\nI'll go see the nurse..."
+        },
+        {
+          "offset": "0x38",
+          "original": "あれ？\n{G}。\nどうしたの？",
+          "text": "Oh?\n{G},\nwhat happened?"
+        },
+        {
+          "offset": "0x50",
+          "original": "{P}\n体育で、ちょっと怪我を\nしてしまいまして。",
+          "text": "{P}\nI hurt myself a little\nin gym class."
+        },
+        {
+          "offset": "0x7c",
+          "original": "大丈夫？\nまた、ボーッと\nしてたんでしょう？",
+          "text": "Are you okay?\nWere you spacing\nout again?"
+        },
+        {
+          "offset": "0xa8",
+          "original": "はい。\nバレーボールを\nしているときに。",
+          "text": "Yes.\nWhile we were\nplaying volleyball."
+        },
+        {
+          "offset": "0xd0",
+          "original": "プレイ中にそんな事\nしてたら危ないよ。\n気を付けなきゃ。",
+          "text": "Doing that during\na game is dangerous.\nYou have to be careful."
+        },
+        {
+          "offset": "0x108",
+          "original": "そうですね。\nご忠告、\nありがとうございます。",
+          "text": "You're right.\nThank you\nfor the advice."
+        },
+        {
+          "offset": "0x138",
+          "original": "どういたしまして。\n礼を言われることじゃ\nないと思うけど。",
+          "text": "You're welcome.\nNot that it's worth\nthanking me for."
+        },
+        {
+          "offset": "0x174",
+          "original": "ところで、\n何をしに\nいらっしゃったのですか？",
+          "text": "By the way,\nwhat brings\nyou here?"
+        },
+        {
+          "offset": "0x1a4",
+          "original": "あっ、そうだ。\nちょっと、\n熱っぽかったんだっけ。",
+          "text": "Oh, right.\nI was feeling\na bit feverish."
+        },
+        {
+          "offset": "0x1d8",
+          "original": "それは、いけませんね。\n安静にしてなければ。",
+          "text": "Oh dear, that won't do.\nYou must rest quietly."
+        },
+        {
+          "offset": "0x204",
+          "original": "{G}の顔を見たら、\n治っちゃったよ。",
+          "text": "I saw {G}\nand I'm all better."
+        },
+        {
+          "offset": "0x228",
+          "original": "そうなんですか？\nこんなもので治るなら、\nいくらでも見てください。",
+          "text": "Is that so?\nIf it cures you,\nplease look all you like."
+        },
+        {
+          "offset": "0x26c",
+          "original": "そ、そう。\nありがとう。\n（そういう事じゃなくて…。）",
+          "text": "O-okay.\nThanks.\n(Not what I meant...)"
+        },
+        {
+          "offset": "0x2a4",
+          "original": "それでは、\nそろそろ教室に\n戻りますので。",
+          "text": "Well then,\nI shall return\nto class now."
+        },
+        {
+          "offset": "0x2d0",
+          "original": "それじゃ、{G}。\nあんまりボーッと\nしないようにね。",
+          "text": "Okay, {G}\ntry not to\nspace out so much."
+        },
+        {
+          "offset": "0x300",
+          "original": "はい、お身体の方、\nお大事にしてくださいね。\n失礼いたします。",
+          "text": "Yes. Please take\ngood care of yourself.\nExcuse me."
+        },
+        {
+          "offset": "0x380",
+          "original": "何か、ボーッとしてて\n怪我するなんて、\n{G}らしいや。",
+          "text": "She got hurt\njust from daydreaming...\nThat's so {G}."
+        },
+        {
+          "offset": "0x5f0",
+          "original": "{P}\nこんにちは。",
+          "text": "{P}\ngood afternoon."
+        },
+        {
+          "offset": "0x604",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, {G}\nWhat's up?"
+        },
+        {
+          "offset": "0x61c",
+          "original": "この前、\n公園で編んでいた\nセーターです。",
+          "text": "This is the sweater\nI was knitting\nin the park."
+        },
+        {
+          "offset": "0x648",
+          "original": "えっ、俺に？\nありがとう。",
+          "text": "Huh, for me?\nThank you."
+        },
+        {
+          "offset": "0x664",
+          "original": "色は気に入って\nもらえたようでしたので\nいいのですが。\nサイズはどうでしょう？",
+          "text": "You seemed to like\nthe color, so\nthat part is fine.\nHow is the size?"
+        },
+        {
+          "offset": "0x6b0",
+          "original": "どれどれ？\n大丈夫。\nぴったりだよ。",
+          "text": "Let's see...\nYep.\nIt fits perfectly."
+        },
+        {
+          "offset": "0x6d4",
+          "original": "うまくできたみたいですね。\nどうですか？\n幸せになりましたか？",
+          "text": "It seems it came out well.\nHow is it?\nDoes it make you happy?"
+        },
+        {
+          "offset": "0x714",
+          "original": "う、うん。\nもちろん\n最高に幸せだよ。",
+          "text": "Y-yeah.\nOf course,\nI couldn't be happier."
+        },
+        {
+          "offset": "0x73c",
+          "original": "そうですか。\nそれは、頑張った\n甲斐がありました。",
+          "text": "I see.\nThen all my effort\nwas worth it."
+        },
+        {
+          "offset": "0x770",
+          "original": "{G}。\n本当に、これ\n貰っちゃっていいの？",
+          "text": "Um, {G}\nis it really okay\nfor me to keep this?"
+        },
+        {
+          "offset": "0x798",
+          "original": "もちろんです。\nそれでは、\n失礼いたします。",
+          "text": "Of course.\nWell then,\nexcuse me."
+        },
+        {
+          "offset": "0x7ec",
+          "original": "あぁ、幸せ。\n{G}の心みたいに、\nあったかいよ。",
+          "text": "Ah, so warm.\nJust like {G}'s\nkind heart."
+        },
+        {
+          "offset": "0x9a4",
+          "original": "少々、見たいものが\nありますので、後から\nいらしてください。",
+          "text": "There is something\nI wish to see, so please\ncome along later."
+        },
+        {
+          "offset": "0x9e4",
+          "original": "は、速い。\n（{G}ってこんなに\n速く走れたんだ…。）",
+          "text": "Sh-she's fast.\n(Who knew {G}\ncould run so fast...)"
+        },
+        {
+          "offset": "0xa50",
+          "original": "{G}は、\nどこに行ったんだ…？\nあっ、いた。",
+          "text": "Where did {G}\ngo off to...?\nOh, there she is."
+        },
+        {
+          "offset": "0xa84",
+          "original": "{G}、探したよ。\n食虫植物コーナーに\nいるんだもんな。",
+          "text": "I found you, {G},\nright by the\ncarnivorous plants."
+        },
+        {
+          "offset": "0xab8",
+          "original": "ほら、見てください。\n面白い形をしていると\n思いませんか？",
+          "text": "Look, please.\nDon't you think\nit has a funny shape?"
+        },
+        {
+          "offset": "0xaf4",
+          "original": "それはね、\nウツボカズラと言って、\n虫を食べるんだよ。",
+          "text": "That's called\na pitcher plant.\nIt eats bugs."
+        },
+        {
+          "offset": "0xb2c",
+          "original": "お父様が、殿方は食虫植物\nだと言っておりましたが、\nよくわかりませんね。",
+          "text": "Father once said men are\ncarnivorous plants, but\nI don't quite understand."
+        },
+        {
+          "offset": "0xb74",
+          "original": "そ、それはね…。\nいいや、やめておこう。",
+          "text": "W-well, that's...\nNo, never mind."
+        },
+        {
+          "offset": "0xb9c",
+          "original": "どうしてでしょうね？\nこんなに可愛いし、\nふたまで付いてますよ。",
+          "text": "Why would he say that?\nThey're so cute,\nand they even have lids."
+        },
+        {
+          "offset": "0xbdc",
+          "original": "‥‥‥‥。\n（確かにふたは付いてる\nけどさ、可愛いか？）",
+          "text": "........\n(Sure, it has a lid,\nbut is that cute?)"
+        },
+        {
+          "offset": "0xc14",
+          "original": "見てるだけで、\n楽しいですねぇ。",
+          "text": "Just looking at them\nis so much fun."
+        },
+        {
+          "offset": "0xc34",
+          "original": "こ、{G}。\nそろそろ先に行かない？",
+          "text": "Y-{G}\nshall we move on?"
+        },
+        {
+          "offset": "0xc54",
+          "original": "そうですねぇ。\n参りましょうか。",
+          "text": "Yes, indeed.\nShall we go?"
+        },
+        {
+          "offset": "0xe5c",
+          "original": "今日は、イルカショーの\n特別イベントが\nあるみたいだね。",
+          "text": "Looks like there's\na special dolphin\nshow today."
+        },
+        {
+          "offset": "0xe94",
+          "original": "そうなんですか？\nそれは、是非拝見して\nみたいですね。",
+          "text": "Is that so?\nI would very much\nlike to see it."
+        },
+        {
+          "offset": "0xecc",
+          "original": "それじゃ、\n行ってみよう。",
+          "text": "Then let's\ngo see it."
+        },
+        {
+          "offset": "0xee8",
+          "original": "それでは、\n参りましょう。",
+          "text": "Well then,\nlet us go."
+        },
+        {
+          "offset": "0xf04",
+          "original": "悪いけど、\nちょっと先に行ってて\nくれるかな？",
+          "text": "Sorry, but\ncould you go on\nahead of me?"
+        },
+        {
+          "offset": "0xf34",
+          "original": "わかりました。\nそれでは、\n待っていますので。",
+          "text": "Very well.\nThen I shall\nwait for you."
+        },
+        {
+          "offset": "0xf7c",
+          "original": "さっきから、\nトイレに\n行きたかったんだよね。",
+          "text": "I've needed\nthe restroom\nfor a while now."
+        },
+        {
+          "offset": "0xfe8",
+          "original": "さて、{G}を\n待たせてるからな。\n早く行かなきゃ。",
+          "text": "Okay, {G}\nis waiting for me.\nI'd better hurry up."
+        },
+        {
+          "offset": "0x1024",
+          "original": "ザッパーン",
+          "text": "SPLASH!"
+        },
+        {
+          "offset": "0x1030",
+          "original": "きゃー。",
+          "text": "Eeek!"
+        },
+        {
+          "offset": "0x1044",
+          "original": "こ、{G}。\n大丈夫？",
+          "text": "Y-{G}\nare you okay?"
+        },
+        {
+          "offset": "0x1058",
+          "original": "水をかけられて\nしまいました。\nびしょ濡れです。",
+          "text": "I got splashed\nwith water.\nI'm soaking wet."
+        },
+        {
+          "offset": "0x1088",
+          "original": "みんな逃げているのに、\nどうして、{G}だけ\n水がかかってるの？",
+          "text": "Everyone else ran off.\n{G}, why'd only you\nget soaked?"
+        },
+        {
+          "offset": "0x10c4",
+          "original": "どうしてでしょう？",
+          "text": "I wonder why?"
+        },
+        {
+          "offset": "0x10d8",
+          "original": "あっ、係の人がタオルを\n持ってきてくれたよ。\n（どうせまた、ボーッと\n見てたんだろうな…。）",
+          "text": "Oh, a staff member\nbrought a towel.\n(I bet she was just\nspacing out again...)"
+        },
+        {
+          "offset": "0x1148",
+          "original": "それにしても、\n夏でよかったね。",
+          "text": "Anyway, good thing\nit's summer."
+        },
+        {
+          "offset": "0x1168",
+          "original": "そうですね。\nもう服も\n乾いてしまいました。",
+          "text": "Indeed.\nMy clothes have\nalready dried."
+        },
+        {
+          "offset": "0x1194",
+          "original": "そ、そうだね。\n（残念だぜ、さっきは下着が\n透けて見えそう\nだったのにな…。）",
+          "text": "Y-yeah.\n(Too bad, a while ago\nher underwear was\nalmost showing...)"
+        },
+        {
+          "offset": "0x11e0",
+          "original": "それでは、\n参りましょう。",
+          "text": "Well then,\nlet us go."
+        },
+        {
+          "offset": "0x1498",
+          "original": "あれ、{G}。\nその荷物は？",
+          "text": "Um, {G}\nwhat's that bag?"
+        },
+        {
+          "offset": "0x14b0",
+          "original": "今、編み物をしていまして、\nどこでも編めるように、\n持ってきているんです。",
+          "text": "I'm knitting something,\nso I bring it along to\nknit wherever I go."
+        },
+        {
+          "offset": "0x14fc",
+          "original": "それじゃあ、\nベンチにでも座って、\n編み物してもいいよ。",
+          "text": "Then go ahead,\nsit on a bench\nand knit if you like."
+        },
+        {
+          "offset": "0x1540",
+          "original": "いいえ。\nそんな事をしては、\n失礼ですから。",
+          "text": "Oh, no.\nThat would be\nrude of me."
+        },
+        {
+          "offset": "0x156c",
+          "original": "編み物をしている女の子と\nお話するのって、\n一度してみたかったんだ。",
+          "text": "I've always wanted to\ntalk with a girl\nwhile she knits."
+        },
+        {
+          "offset": "0x15b0",
+          "original": "そうですか？\nそれでは、\n失礼いたしまして。",
+          "text": "Is that so?\nThen, if you'll\nexcuse me."
+        },
+        {
+          "offset": "0x15e8",
+          "original": "へぇ、器用だね。",
+          "text": "Wow, you're so skilled."
+        },
+        {
+          "offset": "0x15fc",
+          "original": "好きなので、\n家でよく編んでますから。",
+          "text": "I love it, so\nI knit a lot at home."
+        },
+        {
+          "offset": "0x1624",
+          "original": "そうなんだ。\n誰かへのプレゼント？",
+          "text": "I see.\nIs it a present?"
+        },
+        {
+          "offset": "0x1648",
+          "original": "そうですねぇ。\n内緒にしておきます。",
+          "text": "Well now...\nI shall keep it a secret."
+        },
+        {
+          "offset": "0x166c",
+          "original": "そ、そう。\nでも、いい色だね。",
+          "text": "O-oh.\nBut it's a nice color."
+        },
+        {
+          "offset": "0x168c",
+          "original": "そうですか？\n気に入ってもらえて\n嬉しいです。",
+          "text": "Do you think so?\nI'm glad\nyou like it."
+        },
+        {
+          "offset": "0x16bc",
+          "original": "嬉しい…？\n（どうしてだ？）",
+          "text": "Glad...?\n(Why's that?)"
+        },
+        {
+          "offset": "0x16d8",
+          "original": "ここの編み方が、\n難しいんですよ。",
+          "text": "This stitch here\nis quite difficult."
+        },
+        {
+          "offset": "0x16fc",
+          "original": "{G}に、\n編んでもらった物を\nもらう人は幸せだね。",
+          "text": "{G}, whoever gets\nsomething you knit\nis lucky."
+        },
+        {
+          "offset": "0x172c",
+          "original": "そうですか？\nそれでは、頑張らないと\nいけませんね。",
+          "text": "Do you think so?\nThen I must\ntry my best."
+        },
+        {
+          "offset": "0x1760",
+          "original": "本当に、器用だねぇ…。\n（もらえる人はいいなぁ…。）",
+          "text": "You're really skilled...\n(Lucky whoever gets it...)"
+        },
+        {
+          "offset": "0x19d4",
+          "original": "スキーに来るのは\n初めてなんです。",
+          "text": "This is my first time\ngoing skiing."
+        },
+        {
+          "offset": "0x19f8",
+          "original": "そ、そうなんだ？\nそれじゃあ、スキーウェア\nその他一式は…？",
+          "text": "R-really?\nThen your ski wear\nand all that gear...?"
+        },
+        {
+          "offset": "0x1a3c",
+          "original": "今日のために、\nお父様に買って\nいただきました。",
+          "text": "Father bought\nit all for me\nfor today."
+        },
+        {
+          "offset": "0x1a70",
+          "original": "そ、そう…。\n（金持ちだなぁ。）",
+          "text": "O-oh...\n(So rich...)"
+        },
+        {
+          "offset": "0x1a94",
+          "original": "そ、そう…。\n（さすが、\n金持ちは違うぜ…。）",
+          "text": "O-oh...\n(The rich really\nare different...)"
+        },
+        {
+          "offset": "0x1ac8",
+          "original": "このブランコみたいな、\nリフトと言うものに\n乗るんですね。",
+          "text": "So we ride this\nswing-like thing\ncalled a lift."
+        },
+        {
+          "offset": "0x1b04",
+          "original": "こ、{G}。\n初めてなら、\n下で練習したほうが…。",
+          "text": "Y-{G}\nif it's your first time,\npractice down here..."
+        },
+        {
+          "offset": "0x1b30",
+          "original": "楽しみですねぇ。\nさあ、乗りましょう。",
+          "text": "How exciting.\nCome, let us ride."
+        },
+        {
+          "offset": "0x1b58",
+          "original": "‥‥‥‥。\nま、いいか。",
+          "text": "........\nOh, whatever."
+        },
+        {
+          "offset": "0x1b80",
+          "original": "さあ、乗るよ。",
+          "text": "Okay, here we go."
+        },
+        {
+          "offset": "0x1b90",
+          "original": "きゃーっ。",
+          "text": "Eeek!"
+        },
+        {
+          "offset": "0x1ba4",
+          "original": "だ、大丈夫？\n{G}。\nほら、手に掴まって。",
+          "text": "A-are you okay?\nOh, {G}\nHere, grab my hand."
+        },
+        {
+          "offset": "0x1bd0",
+          "original": "び、びっくりしました。\nリフトって乗るのが\n難しいんですね。",
+          "text": "Th-that startled me.\nLifts are hard\nto get on, aren't they?"
+        },
+        {
+          "offset": "0x1c0c",
+          "original": "そ、そうだね。\n（{G}だけだって。）",
+          "text": "Y-yeah.\n(Only you, {G}...)"
+        },
+        {
+          "offset": "0x1c30",
+          "original": "それにしても、\n高いところまで、\n来てしまいましたね。",
+          "text": "Still,\nwe've come up\nvery high."
+        },
+        {
+          "offset": "0x1c68",
+          "original": "どう？\n{G}。\n降りれそう？",
+          "text": "Well?\nSo, {G},\nthink you can ski down?"
+        },
+        {
+          "offset": "0x1c90",
+          "original": "ちょっと、無理そうですね。\n下りのリフトに\n乗せてもらいましょう。",
+          "text": "That seems a bit much.\nLet's ask them to let us\nride the lift down."
+        },
+        {
+          "offset": "0x1cd4",
+          "original": "リフトは下りは\n乗せてもらえないんだよ。",
+          "text": "They don't let you\nride the lift down."
+        },
+        {
+          "offset": "0x1d04",
+          "original": "そうなんですか？\n困りましたね。\nどうしましょう？",
+          "text": "Is that so?\nOh dear.\nWhat shall we do?"
+        },
+        {
+          "offset": "0x1d38",
+          "original": "転びながら、\nゆっくり\n降りていくしかないね。",
+          "text": "We'll just have to\ngo down slowly,\nfalling as we go."
+        },
+        {
+          "offset": "0x1d68",
+          "original": "そ、そうですか…。\nそれでは、\nそういたしましょう。",
+          "text": "I-I see...\nWell then,\nlet us do that."
+        },
+        {
+          "offset": "0x1d9c",
+          "original": "大丈夫かな？\n{G}。",
+          "text": "Is she okay?\nOh, {G}"
+        },
+        {
+          "offset": "0x20d8",
+          "original": "あっ、こんばんわ。",
+          "text": "Oh, good evening."
+        },
+        {
+          "offset": "0x20ec",
+          "original": "ん？誰だろう。\nでも、この声は…？",
+          "text": "Hm? Who's that?\nBut that voice...?"
+        },
+        {
+          "offset": "0x2118",
+          "original": "申し訳ありません。\n少々、\nのぼせてしまいまして…。",
+          "text": "I do apologize.\nI'm a little\nwoozy from the bath..."
+        },
+        {
+          "offset": "0x214c",
+          "original": "こ、古式さんなの？\n全然別人のようだ。",
+          "text": "K-Koshiki-san?\nYou look so different."
+        },
+        {
+          "offset": "0x2174",
+          "original": "そうでしょうか？",
+          "text": "Do I?"
+        },
+        {
+          "offset": "0x2188",
+          "original": "お風呂行って来たんだ。\n湯加減はどうだった？",
+          "text": "You went to the bath.\nHow was the water?"
+        },
+        {
+          "offset": "0x21b4",
+          "original": "結構な、湯加減で\nございました。\nですけど…。",
+          "text": "The water was\nvery nice.\nHowever..."
+        },
+        {
+          "offset": "0x21e4",
+          "original": "ですけど？",
+          "text": "However?"
+        },
+        {
+          "offset": "0x2208",
+          "original": "少々、\n狭いお風呂でございました。",
+          "text": "It was a\nrather small bath."
+        },
+        {
+          "offset": "0x222c",
+          "original": "あれ？大浴場以外に\nお風呂ってあったかな？",
+          "text": "Huh? Is there a bath\nbesides the big one?"
+        },
+        {
+          "offset": "0x2258",
+          "original": "見た所、５０人程しか、\n御一緒にできない\n広さでしたけど…。",
+          "text": "It looked big enough\nfor only about fifty\npeople at once..."
+        },
+        {
+          "offset": "0x22a4",
+          "original": "お父様に電話する時間なので、\nそれでは、失礼します。",
+          "text": "It's time to call Father,\nso please excuse me."
+        },
+        {
+          "offset": "0x22dc",
+          "original": "もしかして、\n自宅の風呂が超巨大なのかな？",
+          "text": "Does she have\na huge bath at home?"
+        },
+        {
+          "offset": "0x2518",
+          "original": "ドン",
+          "text": "Bump"
+        }
+      ]
+    }
+  ]
 }

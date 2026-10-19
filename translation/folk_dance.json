@@ -1,202 +1,202 @@
 {
- "description": "The sports day's folk dance: all of TAIIKU/F_DANCE.BIN. Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: it plays after the spoon-relay minigame, which needs real input.",
- "dialogue": [
-  {
-   "file": "CDROM/TAIIKU/F_DANCE.BIN",
-   "base": "0x801e8000",
-   "share_identical": true,
-   "lines": [
+  "description": "The sports day's folk dance: all of TAIIKU/F_DANCE.BIN. Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: it plays after the spoon-relay minigame, which needs real input.",
+  "dialogue": [
     {
-     "offset": "0x0",
-     "original": "よし、フォークダンスだ。\nバッチリ、きめてやるぞ。",
-     "text": "All right, folk dance.\nI'll nail it."
-    },
-    {
-     "offset": "0x78",
-     "original": "よし、次は、{G}とだ。",
-     "text": "Okay, next it's {G}"
-    },
-    {
-     "offset": "0x90",
-     "original": "フォークダンスも\n捨てたもんじゃないな。",
-     "text": "Folk dancing isn't\nso bad after all."
-    },
-    {
-     "offset": "0xbc",
-     "original": "ああ、ついてない",
-     "text": "Ugh, no luck"
-    },
-    {
-     "offset": "0xd4",
-     "original": "あっ…。あなたとなの…？",
-     "text": "Oh... it's you...?"
-    },
-    {
-     "offset": "0xf4",
-     "original": "よろしくね。",
-     "text": "Nice to dance with you."
-    },
-    {
-     "offset": "0x10c",
-     "original": "あの、よろしくお願いします。",
-     "text": "Um, I'm in your hands."
-    },
-    {
-     "offset": "0x130",
-     "original": "よろしくお願いします。",
-     "text": "I'm in your hands."
-    },
-    {
-     "offset": "0x150",
-     "original": "私に触れられるなんて\n滅多にないことよ。",
-     "text": "Touching me is\na rare privilege."
-    },
-    {
-     "offset": "0x17c",
-     "original": "あなた、こんなこと好きなの？",
-     "text": "You like this sort of thing?"
-    },
-    {
-     "offset": "0x1a0",
-     "original": "ちょうどいいわ、\nここで終りにしましょう。",
-     "text": "Perfect timing.\nLet's end it here."
-    },
-    {
-     "offset": "0x1cc",
-     "original": "ああ、途中で帰っちゃったよ。",
-     "text": "Aw, she left midway."
-    },
-    {
-     "offset": "0x1f4",
-     "original": "レッツダンス。\nさあ、踊りましょう。",
-     "text": "Let's dance!\nCome on, let's go."
-    },
-    {
-     "offset": "0x21c",
-     "original": "ハ〜イ。\nこんどは、あなたとね。",
-     "text": "Hiii!\nNow it's you."
-    },
-    {
-     "offset": "0x240",
-     "original": "オーマイガー！\nついてないわ。",
-     "text": "Oh my god!\nWhat bad luck."
-    },
-    {
-     "offset": "0x264",
-     "original": "うれしい…。",
-     "text": "I'm so happy..."
-    },
-    {
-     "offset": "0x274",
-     "original": "さぁ、踊りましょう。",
-     "text": "Come, let's dance."
-    },
-    {
-     "offset": "0x294",
-     "original": "あっ、よろしくね。",
-     "text": "Oh, nice to dance with you."
-    },
-    {
-     "offset": "0x2ac",
-     "original": "よろしく。",
-     "text": "Hi there."
-    },
-    {
-     "offset": "0x2bc",
-     "original": "大変お上手だと\nお聞きしましたが…。",
-     "text": "I hear you're\nquite the dancer..."
-    },
-    {
-     "offset": "0x2e4",
-     "original": "よ〜ろ〜し〜く〜…",
-     "text": "Hel-lo-o..."
-    },
-    {
-     "offset": "0x2f8",
-     "original": "ああ、もう次の人との番だ。",
-     "text": "On to the next girl."
-    },
-    {
-     "offset": "0x31c",
-     "original": "よろしくお願いします。",
-     "text": "I'm in your hands."
-    },
-    {
-     "offset": "0x338",
-     "original": "失敗しても、笑わないでよ。",
-     "text": "Don't laugh if I mess up."
-    },
-    {
-     "offset": "0x358",
-     "original": "こういうのは、苦手だな。",
-     "text": "I'm bad at this stuff."
-    },
-    {
-     "offset": "0x37c",
-     "original": "あなたとの番を待ってたのよ。",
-     "text": "I've been waiting for you."
-    },
-    {
-     "offset": "0x3a0",
-     "original": "{P}。ついているわね。",
-     "text": "{P} you're in luck."
-    },
-    {
-     "offset": "0x3b8",
-     "original": "あまり、\nさわらないでもらえるかしら！",
-     "text": "Would you\nmind not touching me!"
-    },
-    {
-     "offset": "0x3e4",
-     "original": "ねぇ、二人で\nブッチしちゃおうか？",
-     "text": "Hey, wanna\nditch with me?"
-    },
-    {
-     "offset": "0x40c",
-     "original": "もっと、\n面白いことすればいいのに。",
-     "text": "They should do\nsomething more fun."
-    },
-    {
-     "offset": "0x434",
-     "original": "ぶ〜、…。",
-     "text": "Boo..."
-    },
-    {
-     "offset": "0x444",
-     "original": "あっ、あの…、あの…。",
-     "text": "Oh, um... um..."
-    },
-    {
-     "offset": "0x460",
-     "original": "あの、よろしくお願いします。",
-     "text": "Um, I'm in your hands."
-    },
-    {
-     "offset": "0x488",
-     "original": "{P}、\nいっしょに踊りたいので、\nこっちの輪に来ちゃいました。",
-     "text": "{P}\nI wanted to dance with you\nso I came to this circle."
-    },
-    {
-     "offset": "0x4c8",
-     "original": "{P}。\nあれぇ、どうして\nこっちにいるんですか？",
-     "text": "{P}\nHuh, why are\nyou over here?"
-    },
-    {
-     "offset": "0x4f4",
-     "original": "{G}、\n列を間違えてるみたい。",
-     "text": "{G}\nis in the wrong row."
-    },
-    {
-     "offset": "0x518",
-     "original": "あっ、優美、列間違えちゃった。",
-     "text": "Yumi's in the wrong row!"
-    },
-    {
-     "offset": "0x538",
-     "original": "踊ってから、\n戻ってもいいのに…。",
-     "text": "She could have\ndanced with me at least."
+      "file": "CDROM/TAIIKU/F_DANCE.BIN",
+      "base": "0x801e8000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "よし、フォークダンスだ。\nバッチリ、きめてやるぞ。",
+          "text": "All right, folk dance.\nI'll nail it."
+        },
+        {
+          "offset": "0x78",
+          "original": "よし、次は、{G}とだ。",
+          "text": "Okay, next it's {G}"
+        },
+        {
+          "offset": "0x90",
+          "original": "フォークダンスも\n捨てたもんじゃないな。",
+          "text": "Folk dancing isn't\nso bad after all."
+        },
+        {
+          "offset": "0xbc",
+          "original": "ああ、ついてない",
+          "text": "Ugh, no luck"
+        },
+        {
+          "offset": "0xd4",
+          "original": "あっ…。あなたとなの…？",
+          "text": "Oh... it's you...?"
+        },
+        {
+          "offset": "0xf4",
+          "original": "よろしくね。",
+          "text": "Nice to dance with you."
+        },
+        {
+          "offset": "0x10c",
+          "original": "あの、よろしくお願いします。",
+          "text": "Um, shall we dance?"
+        },
+        {
+          "offset": "0x130",
+          "original": "よろしくお願いします。",
+          "text": "Shall we dance?"
+        },
+        {
+          "offset": "0x150",
+          "original": "私に触れられるなんて\n滅多にないことよ。",
+          "text": "Touching me is\na rare privilege."
+        },
+        {
+          "offset": "0x17c",
+          "original": "あなた、こんなこと好きなの？",
+          "text": "You like this sort of thing?"
+        },
+        {
+          "offset": "0x1a0",
+          "original": "ちょうどいいわ、\nここで終りにしましょう。",
+          "text": "Perfect timing.\nLet's end it here."
+        },
+        {
+          "offset": "0x1cc",
+          "original": "ああ、途中で帰っちゃったよ。",
+          "text": "Aw, she left midway."
+        },
+        {
+          "offset": "0x1f4",
+          "original": "レッツダンス。\nさあ、踊りましょう。",
+          "text": "Let's dance!\nCome on, let's go."
+        },
+        {
+          "offset": "0x21c",
+          "original": "ハ〜イ。\nこんどは、あなたとね。",
+          "text": "Hiii!\nNow it's you."
+        },
+        {
+          "offset": "0x240",
+          "original": "オーマイガー！\nついてないわ。",
+          "text": "Oh my god!\nWhat bad luck."
+        },
+        {
+          "offset": "0x264",
+          "original": "うれしい…。",
+          "text": "I'm so happy..."
+        },
+        {
+          "offset": "0x274",
+          "original": "さぁ、踊りましょう。",
+          "text": "Come, let's dance."
+        },
+        {
+          "offset": "0x294",
+          "original": "あっ、よろしくね。",
+          "text": "Oh, nice to dance with you."
+        },
+        {
+          "offset": "0x2ac",
+          "original": "よろしく。",
+          "text": "Shall we?"
+        },
+        {
+          "offset": "0x2bc",
+          "original": "大変お上手だと\nお聞きしましたが…。",
+          "text": "I hear you're\nquite the dancer..."
+        },
+        {
+          "offset": "0x2e4",
+          "original": "よ〜ろ〜し〜く〜…",
+          "text": "Hel-lo-o..."
+        },
+        {
+          "offset": "0x2f8",
+          "original": "ああ、もう次の人との番だ。",
+          "text": "On to the next girl."
+        },
+        {
+          "offset": "0x31c",
+          "original": "よろしくお願いします。",
+          "text": "Shall we dance?"
+        },
+        {
+          "offset": "0x338",
+          "original": "失敗しても、笑わないでよ。",
+          "text": "Don't laugh if I mess up."
+        },
+        {
+          "offset": "0x358",
+          "original": "こういうのは、苦手だな。",
+          "text": "I'm bad at this stuff."
+        },
+        {
+          "offset": "0x37c",
+          "original": "あなたとの番を待ってたのよ。",
+          "text": "I've been waiting for you."
+        },
+        {
+          "offset": "0x3a0",
+          "original": "{P}。ついているわね。",
+          "text": "{P}, lucky you."
+        },
+        {
+          "offset": "0x3b8",
+          "original": "あまり、\nさわらないでもらえるかしら！",
+          "text": "Could you please\nnot touch me?"
+        },
+        {
+          "offset": "0x3e4",
+          "original": "ねぇ、二人で\nブッチしちゃおうか？",
+          "text": "Hey, wanna\nskip out together?"
+        },
+        {
+          "offset": "0x40c",
+          "original": "もっと、\n面白いことすればいいのに。",
+          "text": "They should do\nsomething more fun."
+        },
+        {
+          "offset": "0x434",
+          "original": "ぶ〜、…。",
+          "text": "Boo..."
+        },
+        {
+          "offset": "0x444",
+          "original": "あっ、あの…、あの…。",
+          "text": "Oh, um... um..."
+        },
+        {
+          "offset": "0x460",
+          "original": "あの、よろしくお願いします。",
+          "text": "Um, shall we dance?"
+        },
+        {
+          "offset": "0x488",
+          "original": "{P}、\nいっしょに踊りたいので、\nこっちの輪に来ちゃいました。",
+          "text": "{P},\nI hoped to dance with you,\nso I joined this circle."
+        },
+        {
+          "offset": "0x4c8",
+          "original": "{P}。\nあれぇ、どうして\nこっちにいるんですか？",
+          "text": "{P}\nHuh, why are\nyou over here?"
+        },
+        {
+          "offset": "0x4f4",
+          "original": "{G}、\n列を間違えてるみたい。",
+          "text": "{G}'s\nin the wrong row."
+        },
+        {
+          "offset": "0x518",
+          "original": "あっ、優美、列間違えちゃった。",
+          "text": "Yumi's in the wrong row!"
+        },
+        {
+          "offset": "0x538",
+          "original": "踊ってから、\n戻ってもいいのに…。",
+          "text": "She could've stayed\nfor a dance."
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

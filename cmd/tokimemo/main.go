@@ -453,24 +453,25 @@ func cmdBuild(root string, argv []string, preflight bool) error {
 	for _, t := range translations {
 		a = append(a, "-t", t)
 	}
+	// Record only the bounded Python log tail for automatic, read-only
+	// failure explanation. The normal unmodified Python output is still shown.
+	previous := commandOutput
+	tail := &buildErrorTail{}
+	targetOutput := io.MultiWriter(previous, tail)
 	if !preflight {
-		previous := commandOutput
-		commandOutput = &stageWriter{destination: previous}
-		defer func() { commandOutput = previous }()
+		commandOutput = &stageWriter{destination: targetOutput}
+	} else {
+		commandOutput = targetOutput
 	}
+	defer func() { commandOutput = previous }()
 	if e = runPython(root, a...); e != nil {
+		explainPythonPackingError(root, input, string(tail.data), previous)
 		return e
 	}
 	if !preflight {
 		fmt.Fprintf(commandOutput, "Verification: Python preflight and patch application passed; emulator runtime NOT verified by this command.\n")
 	}
 	return nil
-}
-func cmdTests(root string) error {
-	if e := runProcess(root, "go", "test", "./..."); e != nil {
-		return e
-	}
-	return runPython(root, "-m", "unittest", "discover", "-s", "tests", "-q")
 }
 func cmdExtract(root string, args []string) error {
 	fs := flag.NewFlagSet("extract", flag.ContinueOnError)
@@ -550,50 +551,31 @@ func cmdDoctor(root string) {
 }
 func usage() {
 	fmt.Print(bold + "Tokimeki Memorial — Human Overhaul\n" + reset)
-	fmt.Println("  tokimemo                  Interactive terminal dashboard")
-	fmt.Println("  tokimemo doctor           Check dependencies and configured game")
-	fmt.Println("  tokimemo status|validate  Validate translation resources (read-only)")
-	fmt.Println("  tokimemo inspect [CUE]    Inspect CUE/BIN structure (auto-discovers game)")
-	fmt.Println("  tokimemo preflight [CUE]  Validate patch sites without writing")
-	fmt.Println("  tokimemo build [CUE]      Build English image via legacy production backend")
-	fmt.Println("     --game CUE --output DIR --force --verbose --translation FILE.json")
-	fmt.Println("  tokimemo config           View private path configuration")
-	fmt.Println("  tokimemo config game CUE  Validate and save a game image")
-	fmt.Println("  tokimemo config output DIR Save a separate build directory")
-	fmt.Println("  tokimemo files [CUE]      List ISO9660 disc files in native Go")
-	fmt.Println("  tokimemo codec-check      Check encoding/structure; --compare-python for full parity")
-	fmt.Println("  tokimemo planner-check    Simulate Go dialogue relocation; --compare-python for parity")
-	fmt.Println("  tokimemo graphics-check   Validate indexed PNG and 4/8bpp edits; --compare-python for parity")
-	fmt.Println("  tokimemo renderer-check   Check native MIPS hook/font; --compare-python runs CPU simulation")
-	fmt.Println("  tokimemo native-plan      Read-only full-file Go patch plan; --compare-python for hash parity")
-	fmt.Println("  tokimemo name-tables      Read-only N10 surname capacity and pointer audit")
-	fmt.Println("  tokimemo name-label-bounds  Inspect N10 R07 label sources and candidate B byte limits (read-only)")
-	fmt.Println("  tokimemo name-combine-stage PRIVATE nonbootable G18+G24 N10 research merge")
-	fmt.Println("  tokimemo name-fixed-stage   PRIVATE nonbootable partial N10 literal source redirects (research only)")
-	fmt.Println("  tokimemo name-stage       PRIVATE experimental EXE-only N10 staging; never changes build")
-	fmt.Println("  tokimemo name-xrefs       Read-only original EXE/GEKO RAM-reference census")
-	fmt.Println("  tokimemo name-overlay-census  Read-only original disc-wide N10 executable/overlay A/B/C census")
-	fmt.Println("  tokimemo name-overlay-context  Read-only verified G31 per-site MIPS context capture")
-	fmt.Println("  tokimemo name-overlay-geometry  Read-only original-disc ISO/source-image geometry; NOT BSS proof")
-	fmt.Println("  tokimemo name-overlay-loader  Read-only PS-X EXE header / static overlay callsite analysis; NOT loader proof")
-	fmt.Println("  tokimemo name-overlay-followup  Original O.BIN A/B/C/C+64 and full main EXE loader-anchor context (read-only)")
-	fmt.Println("  tokimemo name-overlay-dispatch  Offline, SHA-verified G38 overlay entry-pointer classification (read-only)")
-	fmt.Println("  tokimemo name-overlay-trace  SHA-verified original-disc focused dispatch/3-callee trace (read-only)\n  tokimemo name-overlay-io     G42: sector LBA selector matches + original-disc I/O target code (read-only)\n  tokimemo name-overlay-transfer  G43: packed descriptor + I/O request consumer trace (read-only)\n  tokimemo name-overlay-route G44: original op-6 dispatch table and dependent code (read-only)\n  tokimemo name-overlay-queue G45: bounded queue consumer continuation (read-only)")
-	fmt.Println("  tokimemo name-source-export --out FILE.zip  Export complete original EXE + 26 EXN + O.BIN for offline analysis (private)")
-	fmt.Println("  tokimemo name-geko-provenance  Read-only derived/aliased GEKO name-source audit")
-	fmt.Println("  tokimemo name-ram-watch   Passive DuckStation N10 RAM snapshots (no writes)\n  tokimemo name-ram-review  Offline review of a saved N10 RAM report")
-	fmt.Println("  tokimemo name-buffer-stage  PRIVATE unbootable N10 A/B experimental byte candidates")
-	fmt.Println("  tokimemo cue-audit       Verify a safe two-track CUE layout for native builds")
-	fmt.Println("  tokimemo native-build     EXPERIMENTAL Go CUE/BIN builder; requires --experimental")
-	fmt.Println("  tokimemo native-verify    Compare two finished CUE/BIN images; optional original-sector audit")
-	fmt.Println("  tokimemo sectors [CUE]    Verify raw-sector EDC/ECC (read-only)")
-	fmt.Println("  tokimemo extract [CUE]    Native Go extraction (--python for legacy)")
-	fmt.Println("  tokimemo emulator [CUE]   Launch DuckStation")
-	fmt.Println("  tokimemo emulator-probe    Read PS1 state/RAM using DuckStation GDB stub (read-only)")
-	fmt.Println("  tokimemo screen-check      Detect title screen in a DuckStation PNG (read-only)")
-	fmt.Println("  tokimemo test             Go + inherited Python regression suites")
-	fmt.Println("  tokimemo legacy FILE.py   Run historic Python utility")
+	fmt.Println("  tokimemo                     Interactive terminal dashboard")
+	fmt.Println("  tokimemo doctor              Check dependencies and configuration")
+	fmt.Println("  tokimemo status|validate     Validate translation input (read-only)")
+	fmt.Println("  tokimemo inspect [CUE]       Inspect CUE/BIN structure")
+	fmt.Println("  tokimemo build [CUE]         Create English game image using the production backend")
+	fmt.Println("  tokimemo preflight [CUE]     Check patch sites without writing")
+	fmt.Println("  tokimemo config              Configure game and output locations")
+	fmt.Println("  tokimemo files [CUE]         List disc files")
+	fmt.Println("  tokimemo extract [CUE]       Extract game assets to a new directory")
+	fmt.Println("  tokimemo sectors [CUE]       Inspect disc sectors")
+	fmt.Println("  tokimemo codec-check         Validate codec parity")
+	fmt.Println("  tokimemo planner-check       Validate patch planning")
+	fmt.Println("  tokimemo graphics-check      Validate graphics processing")
+	fmt.Println("  tokimemo renderer-check      Validate font/renderer behavior")
+	fmt.Println("  tokimemo native-plan         Inspect proposed native build changes (read-only)")
+	fmt.Println("  tokimemo native-plan-parity  Compare native and production plan")
+	fmt.Println("  tokimemo dialogue-budget     Verify dialogue space limits")
+	fmt.Println("  tokimemo native-build        Experimental native build to a separate output")
+	fmt.Println("  tokimemo native-verify       Verify a native build")
+	fmt.Println("  tokimemo cue-audit           Validate disc track geometry")
+	fmt.Println("  tokimemo emulator [CUE]      Launch DuckStation")
+	fmt.Println("  tokimemo legacy SCRIPT.py    Run inherited tooling")
+	fmt.Println("  tokimemo help                Show this help")
 }
+
 func launchEmulator(root string, args []string) error {
 	if len(args) > 1 {
 		return errors.New("usage: tokimemo emulator [CUE]")
@@ -669,50 +651,10 @@ func entry(root, cmd string, args []string) error {
 		return cmdRendererCheck(root, args)
 	case "native-plan":
 		return cmdNativePlan(root, args)
-	case "name-tables":
-		return cmdNameTables(root, args)
-	case "name-label-bounds":
-		return cmdNameLabelBounds(root, args)
-	case "name-combine-stage":
-		return cmdNameCombineStage(root, args)
-	case "name-fixed-stage":
-		return cmdNameFixedStage(root, args)
-	case "name-stage":
-		return cmdNameStage(root, args)
-	case "name-overlay-census":
-		return cmdNameOverlayCensus(root, args)
-	case "name-overlay-context":
-		return cmdNameOverlayContext(root, args)
-	case "name-overlay-geometry":
-		return cmdNameOverlayGeometry(root, args)
-	case "name-overlay-loader":
-		return cmdNameOverlayLoader(root, args)
-	case "name-overlay-followup":
-		return cmdNameOverlayFollowup(root, args)
-	case "name-overlay-trace":
-		return cmdNameOverlayTrace(root, args)
-	case "name-overlay-io":
-		return cmdNameOverlayIO(root, args)
-	case "name-overlay-transfer":
-		return cmdNameOverlayTransfer(root, args)
-	case "name-overlay-route":
-		return cmdNameOverlayRoute(root, args)
-	case "name-overlay-queue":
-		return cmdNameOverlayQueue(root, args)
-	case "name-source-export":
-		return cmdNameSourceExport(root, args)
-	case "name-overlay-dispatch":
-		return cmdNameOverlayDispatch(root, args)
-	case "name-geko-provenance":
-		return cmdNameGEKOProvenance(root, args)
-	case "name-xrefs":
-		return cmdNameXrefs(root, args)
-	case "name-ram-watch":
-		return cmdNameRAMWatch(root, args)
-	case "name-ram-review":
-		return cmdNameRAMReview(root, args)
-	case "name-buffer-stage":
-		return cmdNameBufferStage(root, args)
+	case "dialogue-budget":
+		return cmdDialogueBudget(root, args)
+	case "native-plan-parity":
+		return cmdNativePlan(root, append([]string{"--compare-python", "--summary"}, args...))
 	case "cue-audit":
 		return cmdCueAudit(root, args)
 	case "native-build":
@@ -744,16 +686,12 @@ func entry(root, cmd string, args []string) error {
 		return cmdFiles(root, args)
 	case "sectors":
 		return cmdSectorCheck(root, args)
-	case "test":
-		return cmdTests(root)
 	case "legacy":
 		return cmdLegacy(root, args)
 	case "emulator":
 		return launchEmulator(root, args)
 	case "emulator-probe":
 		return cmdEmulatorProbe(args)
-	case "screen-check":
-		return cmdScreenCheck(args)
 	default:
 		usage()
 		return fmt.Errorf("unknown command %q", cmd)

@@ -103,7 +103,7 @@ func gatherPlannerProbes(root string, perBlock int) ([]plannerProbe, error) {
 			if maxCells == 0 {
 				maxCells = script.MaxCells
 			}
-			probes = append(probes, plannerProbe{Name: fmt.Sprintf("%s:dialogue[%d]", filepath.Base(path), blockNum), Data: base64.StdEncoding.EncodeToString(source), Block: script.DialogueBlock{File: "SYNTHETIC.BIN", Source: "G04", Base: base, MaxCells: maxCells, ShareIdentical: block.ShareIdentical, Lines: active}})
+			probes = append(probes, plannerProbe{Name: fmt.Sprintf("%s:dialogue[%d]", filepath.Base(path), blockNum), Data: base64.StdEncoding.EncodeToString(source), Block: script.DialogueBlock{File: "SYNTHETIC.BIN", Source: "synthetic", Base: base, MaxCells: maxCells, ShareIdentical: block.ShareIdentical, Lines: active}})
 		}
 	}
 	return probes, nil

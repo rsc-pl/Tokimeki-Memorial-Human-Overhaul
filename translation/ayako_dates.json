@@ -94,7 +94,7 @@
         {
           "offset": "0x390",
           "original": "ねぇねぇ、このブロンズ像、\n素晴らしい躍動感だと\n思わない？",
-          "text": "Hey, doesn't this\nbronze statue look\nlike it's moving?"
+          "text": "Hey, doesn't this\nbronze statue seem\nfull of life?"
         },
         {
           "offset": "0x3cc",
@@ -224,7 +224,7 @@
         {
           "offset": "0xedc",
           "original": "ほら、{G}、\nこっちこっち。",
-          "text": "Look, {G}\nover here."
+          "text": "Hey, {G}!\nOver here!"
         },
         {
           "offset": "0xf00",
@@ -439,7 +439,7 @@
         {
           "offset": "0x1b58",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x1ba4",
@@ -479,7 +479,7 @@
         {
           "offset": "0x1d20",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1d48",
@@ -489,7 +489,7 @@
         {
           "offset": "0x1d7c",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1da4",
@@ -499,7 +499,7 @@
         {
           "offset": "0x1dd4",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x230c",
@@ -649,12 +649,12 @@
         {
           "offset": "0x2b70",
           "original": "こういうゲームなら、\n私にもできそうね。{q}こういうのは、\nちょっと遠慮しとくわ。{q}面白そうだけど、\n私には無理みたいね。",
-          "text": "Games like this\nI think I can do.{q}I think I'll\npass on these.{q}They look fun,\nbut not for me."
+          "text": "I think I can\nplay games like these.{q}I think I'll\npass on these.{q}They look fun,\nbut not for me."
         },
         {
           "offset": "0x2be8",
           "original": "こういうゲームって駄目。\n癖になっちゃいそう。",
-          "text": "These games are trouble.\nI could get hooked!"
+          "text": "I shouldn't play these.\nI could get hooked!"
         },
         {
           "offset": "0x2c18",
@@ -814,7 +814,7 @@
         {
           "offset": "0x3428",
           "original": "時間にルーズね。\nもう、帰るところ\nだったわよ。",
-          "text": "You're terrible\nat being on time.\nI was about to leave."
+          "text": "You're not big on\nbeing on time, huh?\nI was about to leave."
         },
         {
           "offset": "0x3458",
@@ -974,7 +974,7 @@
         {
           "offset": "0x42fc",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x4320",
@@ -1074,7 +1074,7 @@
         {
           "offset": "0x4a88",
           "original": "あっ、\nあそこが空いてるみたいね。",
-          "text": "Oh,\nthere are free seats."
+          "text": "Oh,\nthose seats look open."
         },
         {
           "offset": "0x4ab0",
@@ -1109,7 +1109,7 @@
         {
           "offset": "0x4e2c",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x4e5c",
@@ -1659,7 +1659,7 @@
         {
           "offset": "0x78ec",
           "original": "本当。笑える顔だよね。{q}ちょっと、おかしいんじゃない？{q}気にした事無いなぁ…。",
-          "text": "Yeah, they're funny faces.{q}Isn't that a little weird?{q}I never noticed..."
+          "text": "Yeah, they look funny.{q}Isn't that a little weird?{q}I never noticed..."
         },
         {
           "offset": "0x7944",
@@ -1704,7 +1704,7 @@
         {
           "offset": "0x7d3c",
           "original": "あぁ、耐えられないわ。\nこの緊張感。",
-          "text": "Ugh, I can't stand it.\nThis tension."
+          "text": "Ugh, this tension\nis unbearable."
         },
         {
           "offset": "0x7d60",
@@ -1729,7 +1729,7 @@
         {
           "offset": "0x7e80",
           "original": "あぁ、耐えられないわ。\nこの緊張感。",
-          "text": "Ugh, I can't stand it.\nThis tension."
+          "text": "Ugh, this tension\nis unbearable."
         },
         {
           "offset": "0x7ea4",
@@ -1759,7 +1759,7 @@
         {
           "offset": "0x8154",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to join.{q}Ignore the show."
+          "text": "Ask {G} to go see it.{q}Ignore the show."
         },
         {
           "offset": "0x818c",
@@ -1799,12 +1799,12 @@
         {
           "offset": "0x8358",
           "original": "ねぇ、\nぬいぐるみって、\n大変そうよね。",
-          "text": "Hey,\nthose costumes look\nreally rough."
+          "text": "Hey,\nmascot suits look\nexhausting."
         },
         {
           "offset": "0x8380",
           "original": "大変だって、聞いたことあるよ。{q}着たことないからなぁ…。{q}撮影用より、楽なんだよ。",
-          "text": "I hear it's super tough.{q}I've never worn one, so...{q}Lighter than the TV suits."
+          "text": "I hear it's super tough.{q}I've never worn one, so...{q}Easier than the TV suits."
         },
         {
           "offset": "0x83dc",
@@ -2234,7 +2234,7 @@
         {
           "offset": "0xa924",
           "original": "よし、花見に行こう。",
-          "text": "Let's go see the blossoms!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0xa93c",

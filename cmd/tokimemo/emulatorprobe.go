@@ -1,6 +1,6 @@
 package main
 
-// G11: non-mutating scene/state diagnostics for DuckStation on Linux and other
+// Read-only scene/state inspector for DuckStation on Linux and other
 // platforms. No breakpoints, register writes, cheat patches, or memory writes.
 
 import (

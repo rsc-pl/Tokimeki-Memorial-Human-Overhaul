@@ -109,7 +109,7 @@
         {
           "offset": "0x3bc",
           "original": "よく見てるね。{q}目の錯覚じゃない？{q}有名な人だからね。",
-          "text": "You've got a good eye.{q}Your eyes fooling you?{q}They're famous, after all."
+          "text": "You've got a good eye.{q}Are you seeing things?{q}They're famous."
         },
         {
           "offset": "0x3fc",
@@ -209,7 +209,7 @@
         {
           "offset": "0xd0c",
           "original": "ほら、{G}、\nこっちこっち。",
-          "text": "Here, {G},\nover here."
+          "text": "Hey, {G}!\nOver here!"
         },
         {
           "offset": "0xd30",
@@ -424,7 +424,7 @@
         {
           "offset": "0x188c",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x18d8",
@@ -434,7 +434,7 @@
         {
           "offset": "0x1910",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1938",
@@ -464,7 +464,7 @@
         {
           "offset": "0x1a40",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1a68",
@@ -474,7 +474,7 @@
         {
           "offset": "0x1a9c",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1ac4",
@@ -484,7 +484,7 @@
         {
           "offset": "0x1af8",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1b20",
@@ -494,7 +494,7 @@
         {
           "offset": "0x1b48",
           "original": "俺でよかったら\nいつでも付き合うよ。",
-          "text": "If you'll have me,\nI'll come along anytime."
+          "text": "I'd be happy to\ncome along anytime."
         },
         {
           "offset": "0x1b74",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1bac",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x2198",
@@ -529,7 +529,7 @@
         {
           "offset": "0x2238",
           "original": "それじゃあ、\n金魚すくいでもしようか？",
-          "text": "Well then,\nwanna scoop some goldfish?"
+          "text": "Wanna try\ngoldfish scooping?"
         },
         {
           "offset": "0x2260",
@@ -559,7 +559,7 @@
         {
           "offset": "0x22e8",
           "original": "取れたら{G}にあげるね。",
-          "text": "{G}, for you!"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x230c",
@@ -689,7 +689,7 @@
         {
           "offset": "0x2df0",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2e10",
@@ -709,7 +709,7 @@
         {
           "offset": "0x2e9c",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2ebc",
@@ -729,7 +729,7 @@
         {
           "offset": "0x2f40",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2f60",
@@ -979,7 +979,7 @@
         {
           "offset": "0x3fec",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x4010",
@@ -1074,7 +1074,7 @@
         {
           "offset": "0x46fc",
           "original": "あそこが空いてるよ。\n座ろう。",
-          "text": "There are seats open there.\nLet's sit."
+          "text": "Look, empty seats.\nLet's sit."
         },
         {
           "offset": "0x4720",
@@ -1104,7 +1104,7 @@
         {
           "offset": "0x4a58",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x4a88",
@@ -1414,7 +1414,7 @@
         {
           "offset": "0x5f1c",
           "original": "いつも部活で忙しいから、\nついたくさん\n買っちゃったぜ。",
-          "text": "I'm always busy with\nclub, so I ended up\nbuying a ton."
+          "text": "Practice keeps me\nbusy, so I bought\na whole bunch."
         },
         {
           "offset": "0x5f54",
@@ -1424,7 +1424,7 @@
         {
           "offset": "0x5fa8",
           "original": "いいよ\n一人で運べるから。\nありがとう、嬉しいよ。{q}その言い方、気になるなぁ。{q}まとめ買いだからね。",
-          "text": "It's fine,\nI can carry them myself.\nThanks, though. I'm happy.{q}Not sure I like that remark.{q}I'm stocking up, see."
+          "text": "No, it's okay.\nI can carry them.\nThanks for offering!{q}That wording bugs me.{q}I was stocking up."
         },
         {
           "offset": "0x6010",
@@ -1574,7 +1574,7 @@
         {
           "offset": "0x6b40",
           "original": "このスキーウェア、\nどうかな？",
-          "text": "How does this\nski wear look?"
+          "text": "How's my\nski outfit?"
         },
         {
           "offset": "0x6b60",
@@ -1774,7 +1774,7 @@
         {
           "offset": "0x79f8",
           "original": "私、この雰囲気、\n駄目なんだ。",
-          "text": "I can't stand\nthis atmosphere."
+          "text": "This vibe\nisn't for me."
         },
         {
           "offset": "0x7a18",
@@ -1939,7 +1939,7 @@
         {
           "offset": "0x81ec",
           "original": "俺も、そう思うよ。{q}意外と、怖かったよ。{q}立体映像が奇麗だったね。",
-          "text": "Yep, I think so too.{q}Scarier than I expected.{q}The 3D images were pretty."
+          "text": "Me too.{q}Scarier than I thought.{q}The 3D was beautiful."
         },
         {
           "offset": "0x8238",
@@ -2059,7 +2059,7 @@
         {
           "offset": "0x872c",
           "original": "俺も、そう思うよ。{q}意外と、怖かったよ。{q}立体映像が奇麗だったね。",
-          "text": "Yep, I think so too.{q}Scarier than I expected.{q}The 3D images were pretty."
+          "text": "Me too.{q}Scarier than I thought.{q}The 3D was beautiful."
         },
         {
           "offset": "0x8778",
@@ -2304,7 +2304,7 @@
         {
           "offset": "0x9ea4",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0x9ebc",

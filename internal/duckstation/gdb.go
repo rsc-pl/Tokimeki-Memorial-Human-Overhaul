@@ -1,5 +1,4 @@
-// Package duckstation implements the read-only subset of DuckStation's PS1
-// GDB remote serial protocol. It never sends memory writes or breakpoints.
+// Package duckstation implements a read-only remote debugger inspector.
 package duckstation
 
 import (

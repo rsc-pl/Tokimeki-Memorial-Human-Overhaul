@@ -9,32 +9,32 @@
         {
           "offset": "0x0",
           "original": "そういえば、夕子も\nフリーターとして、\n気ままに生きるらしい\nお互いに\n時間はあるから、\nこれからのことは\nそのうち考えよう。",
-          "text": "By the way,\nYuko will freelance\ntoo, living carefree.\nWe both have\nplenty of time,\nso we'll think about\nthe future later."
+          "text": "Oh, right,\nYuko will work\npart-time, living\nas she pleases.\nWe both have time,\nso we can think\nabout our future."
         },
         {
           "offset": "0x7c",
           "original": "そういえば、夕子は\nフリーターとして、\n気ままに生きるらしい\n自由な時間が多くて\nちょっと\nうらやましいな。",
-          "text": "By the way,\nYuko will freelance,\nliving carefree.\nShe has lots of\nfree time, which\nI kind of envy."
+          "text": "Oh, right,\nYuko plans to work\npart-time and live\nas she pleases.\nI envy all the\nfree time she has."
         },
         {
           "offset": "0xe4",
           "original": "そういえば、夕子は\nフリーターとして、\n気ままに生きるらしい\n日本に帰って来るまで\n夕子には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nYuko will freelance,\nliving carefree.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nYuko plans to work\npart-time and live\nas she pleases.\nI'll miss her\nuntil I'm back\nin Japan, but I'm sure\nshe'll wait for me."
         },
         {
           "offset": "0x174",
           "original": "そういえば、夕子は\nフリーターとして、\n気ままに生きるらしい\n俺は学生だから\n会える機会も\nわりと多いと思う。",
-          "text": "By the way,\nYuko will freelance,\nliving carefree.\nI'm a student,\nso we should get\nto meet pretty often."
+          "text": "Oh, right,\nYuko plans to work\npart-time and live\nas she pleases.\nI'm still a student,\nso we'll meet often."
         },
         {
           "offset": "0x1e0",
           "original": "そういえば、夕子は\nフリーターとして、\n気ままに生きるらしい。",
-          "text": "By the way,\nYuko will freelance,\nliving carefree."
+          "text": "Oh, right,\nYuko plans to work\npart-time, carefree."
         },
         {
           "offset": "0x220",
           "original": "そういえば、夕子は\nフリーターとして、\n気ままに生きるらしい\n俺の追っかけを\nするとか言ってたな。",
-          "text": "By the way,\nYuko will freelance,\nliving carefree.\nShe said she'd be\nmy groupie, too."
+          "text": "Oh, and Yuko plans\nto work part-time,\nliving as she pleases.\nShe even said she'd\nbe my groupie."
         },
         {
           "offset": "0x280",
@@ -44,27 +44,27 @@
         {
           "offset": "0x3e0",
           "original": "そういえば、詩織も\n同じ一流大学に\n通うことになった。\nさっそく一緒に\n大学生活について\n相談している。",
-          "text": "By the way,\nShiori is going to\nthe same top college.\nWe're already\ntalking over our\ncollege life."
+          "text": "Oh, right,\nShiori is going to\nthe same top college.\nWe're already\ntalking over our\ncollege life."
         },
         {
           "offset": "0x444",
           "original": "そういえば、詩織は\n一流大学に\n通うことになった。\n選んだ道が違うから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nShiori is going to\na top college.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nShiori is going to\na top college.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x4c8",
           "original": "そういえば、詩織は\n一流大学に\n通うことになった。\n日本に帰って来るまで\n詩織には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nShiori is going to\na top college.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nShiori is going to\na top college.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x54c",
           "original": "そういえば、詩織は\n一流大学に\n通うことになった。\n学校は違うけれど\n学生どうしだ、\n会える時間は\n多いと思う。",
-          "text": "By the way,\nShiori is going to\na top college.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
+          "text": "Oh, right,\nShiori is going to\na top college.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
         },
         {
           "offset": "0x5b8",
           "original": "そういえば、詩織は\n一流大学に\n通うことになった。\n来年は一緒の大学に\n行けるように、\n頑張らなきゃ…。",
-          "text": "By the way,\nShiori is going to\na top college.\nI'd better work hard\nto get into her\ncollege next year..."
+          "text": "Oh, right,\nShiori is going to\na top college.\nI'd better work hard\nto get into her\ncollege next year..."
         },
         {
           "offset": "0x61c",
@@ -74,32 +74,32 @@
         {
           "offset": "0x6a8",
           "original": "詩織は、かわいくて、\n誰からも人気が\nあるから、\nちょっと心配だけど、\nいつまでも二人で\n歩んでいける。",
-          "text": "Shiori is cute and\neveryone likes\nher, so\nI worry a bit, but\nthe two of us can\nwalk on forever."
+          "text": "Shiori is cute and\neveryone likes\nher, so\nI worry a bit, but\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x800",
           "original": "そういえば、結奈も\n同じ一流企業に\n勤めることになった。\n一緒の部署に\nなれるといいね。\nなんて話している。",
-          "text": "By the way,\nYuina is joining\nthe same top company.\nWe're saying it'd be\nnice to land in\nthe same department."
+          "text": "Oh, right,\nYuina is joining\nthe same top company.\nWe're saying it'd be\nnice to land in\nthe same department."
         },
         {
           "offset": "0x868",
           "original": "そういえば、結奈は\n一流企業に\n勤めることになった。\n選んだ道が違うから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nYuina is joining\na top company.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nYuina is joining\na top company.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x8ec",
           "original": "そういえば、結奈は\n一流企業に\n勤めることになった。\n大学よりも設備が\nいいかららしい。\n日本に帰って来るまで\n結奈には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nYuina is joining\na top company.\nIts labs beat a\ncollege's, she says.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nYuina is joining\na top company.\nIts labs beat a\ncollege's, she says.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x994",
           "original": "そういえば、結奈は\n一流企業に\n勤めることになった。\n大学よりも設備が\nいいかららしい。\nお互いに忙しく\nなったら、\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nYuina is joining\na top company.\nIts labs beat a\ncollege's, she says.\nOnce we're both\nbusy, we may\nnot get to\nmeet very often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nYuina is joining\na top company.\nIts labs beat a\ncollege's, she says.\nOnce we're both\nbusy, we may\nnot get to\nmeet very often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0xa44",
           "original": "そういえば、結奈は\n一流企業に\n勤めることになった。\n来年は大学に\n行けるように、\n頑張らなきゃ…。",
-          "text": "By the way,\nYuina is joining\na top company.\nI'd better work hard\nto get into a\ncollege next year..."
+          "text": "Oh, right,\nYuina is joining\na top company.\nI'd better work hard\nto get into a\ncollege next year..."
         },
         {
           "offset": "0xaa4",
@@ -109,7 +109,7 @@
         {
           "offset": "0xb54",
           "original": "彼女は、いまだに\n怪しい研究を\nしているけど、\nこの娘となら、\nいつまでも二人で\n歩んでいける。",
-          "text": "She still does\nshady research,\nbut with\nthis girl,\nthe two of us can\nwalk on forever."
+          "text": "She still does\nshady research,\nbut with\nthis girl,\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0xca4",
@@ -119,27 +119,27 @@
         {
           "offset": "0xfac",
           "original": "そういえば、彩子も\n絵を本格的に\n勉強するため、\nパリに留学\nすることになった。\nさっそく、向こうで\n遊ぶことばかり\n話している。",
-          "text": "By the way,\nAyako is off to\nParis as well,\nto study painting\nfor real.\nAll we talk about\nis having fun\nover there."
+          "text": "Oh, right,\nAyako is off to\nParis as well,\nto study painting\nfor real.\nAll we talk about\nis having fun\nover there."
         },
         {
           "offset": "0x1028",
           "original": "そういえば、彩子は\n絵を本格的に\n勉強するため、\nパリに留学\nすることになった。\nしばらく会えなくて\n寂しいが、\n彼女の夢のためだ、\nいつまでも、\n待っていられる。",
-          "text": "By the way,\nAyako is off to\nParis to study\npainting\nfor real.\nI won't see her for\na while, which is\nlonely, but it's her\ndream, so I can\nwait forever."
+          "text": "Oh, right,\nAyako is off to\nParis to study\npainting\nfor real.\nI won't see her for\na while, which is\nlonely, but it's her\ndream, so I can\nwait forever."
         },
         {
           "offset": "0x10c4",
           "original": "そういえば、彩子は\n絵を本格的に\n勉強するため、\nパリに留学\nすることになった。\nお互いに、\n違う国で頑張って、\n日本に帰ってきたら、\nこの木の下で再会する\n約束をした。",
-          "text": "By the way,\nAyako is off to\nParis to study\npainting\nfor real.\nWe'll each work hard\nin our own country,\nand back in Japan,\nwe'll meet again\nunder this tree."
+          "text": "Oh, right,\nAyako is off to\nParis to study\npainting\nfor real.\nWe'll each work hard\nin our own country,\nand back in Japan,\nwe'll meet again\nunder this tree."
         },
         {
           "offset": "0x1168",
           "original": "そういえば、彩子は\n絵を本格的に\n勉強するため、\nパリに留学\nすることになった。\n今度、会えるときには\n大学生として、\nむかえられるように\n頑張らなきゃ…。",
-          "text": "By the way,\nAyako is off to\nParis to study\npainting\nfor real.\nBy the time we meet\nagain, I'd better\nbe a college student\nto greet her..."
+          "text": "Oh, right,\nAyako is off to\nParis to study\npainting\nfor real.\nBy the time we meet\nagain, I'd better\nbe a college student\nto greet her..."
         },
         {
           "offset": "0x1200",
           "original": "そういえば、彩子は\n絵を本格的に\n勉強するため、\nパリに留学\nすることになった。\n今度、会えるときまで\nちゃんと、職に\n就いてないとなぁ…。",
-          "text": "By the way,\nAyako is off to\nParis to study\npainting\nfor real.\nBy the time we meet\nagain, I'd better\nhave a proper job..."
+          "text": "Oh, right,\nAyako is off to\nParis to study\npainting\nfor real.\nBy the time we meet\nagain, I'd better\nhave a proper job..."
         },
         {
           "offset": "0x1288",
@@ -149,57 +149,57 @@
         {
           "offset": "0x13bc",
           "original": "そういえば、魅羅は\nモデルの道に進んだ。\nお互いに\nスキャンダルを\n気にして、あまり\n会えないかな…。\nでも、うまくやって\nいけると思う。",
-          "text": "By the way,\nMira became a model.\nWe both have\nto mind scandals,\nso we may not\nmeet much...\nBut I think we'll\nmake it work."
+          "text": "Oh, right,\nMira became a model.\nWe both have\nto mind scandals,\nso we may not\nmeet much...\nBut I think we'll\nmake it work."
         },
         {
           "offset": "0x1440",
           "original": "そういえば、魅羅は\nモデルの道に\n進むことになった。",
-          "text": "By the way,\nMira is going on\nto be a model."
+          "text": "Oh, right,\nMira is going on\nto be a model."
         },
         {
           "offset": "0x1474",
           "original": "そういえば、魅羅は\nモデルの道に\n進むことになった。\n日本に帰って来るまで\n魅羅には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nMira is going on\nto be a model.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nMira is going on\nto be a model.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x14fc",
           "original": "そういえば、魅羅は\nモデルの道に\n進むことになった。\n活躍を雑誌で見ながら、\n勉強するとしよう。",
-          "text": "By the way,\nMira is going on\nto be a model.\nI'll study while I\nfollow her in mags."
+          "text": "Oh, right,\nMira is going on\nto be a model.\nI'll study while I\nfollow her in mags."
         },
         {
           "offset": "0x155c",
           "original": "そういえば、魅羅は\nモデルの道に\n進むことになった。\n時間はありあまる程\nあるから、魅羅の\n追っかけでも\nしようかな…。",
-          "text": "By the way,\nMira is going on\nto be a model.\nI have time to spare,\nso maybe I'll be\nMira's groupie\nor something..."
+          "text": "Oh, right,\nMira is going on\nto be a model.\nI have time to spare,\nso maybe I'll be\nMira's groupie\nor something..."
         },
         {
           "offset": "0x15d0",
           "original": "彼女は、きっと\n人気が出ると思うから\nちょっと心配だけど、\nいつまでも二人で\n歩んでいける。",
-          "text": "She's sure to get\npopular, so\nI worry a bit, but\nthe two of us can\nwalk on forever."
+          "text": "She's sure to get\npopular, so\nI worry a bit, but\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x1720",
           "original": "そういえば、未緒も\n同じ一流大学に\n通うことになった。\nさっそく一緒に\n大学生活について\n相談している。",
-          "text": "By the way,\nMio is going to\nthe same top college.\nWe're already\ntalking over our\ncollege life."
+          "text": "Oh, right,\nMio is going to\nthe same top college.\nWe're already\ntalking over our\ncollege life."
         },
         {
           "offset": "0x1784",
           "original": "そういえば、未緒は\n一流大学に\n通うことになった。\n選んだ道が違うから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nMio is going to\na top college.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nMio is going to\na top college.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x1808",
           "original": "そういえば、未緒は\n一流大学に\n通うことになった。\n日本に帰って来るまで\n未緒には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nMio is going to\na top college.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nMio is going to\na top college.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x188c",
           "original": "そういえば、未緒は\n一流大学に\n通うことになった。\n学校は違うけれど\n学生どうしだ、\n会える時間は\n多いと思う。",
-          "text": "By the way,\nMio is going to\na top college.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
+          "text": "Oh, right,\nMio is going to\na top college.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
         },
         {
           "offset": "0x18f8",
           "original": "そういえば、未緒は\n一流大学に\n通うことになった。\n来年は一緒の大学に\n行けるように、\n頑張らなきゃ…。",
-          "text": "By the way,\nMio is going to\na top college.\nI'd better work hard\nto get into her\ncollege next year..."
+          "text": "Oh, right,\nMio is going to\na top college.\nI'd better work hard\nto get into her\ncollege next year..."
         },
         {
           "offset": "0x195c",
@@ -209,62 +209,62 @@
         {
           "offset": "0x1a08",
           "original": "身体が心配だから、\nあまり外には\n出れないけれど、\nこの娘となら、\nいつまでも二人で\n歩んでいける。",
-          "text": "Her health is frail,\nso we can't go out\nmuch, but\nwith this girl,\nthe two of us can\nwalk on forever."
+          "text": "Her health is frail,\nso we can't go out\nmuch, but\nwith this girl,\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x1b5c",
           "original": "そういえば、ゆかりも\n同じ二流大学に\n通うことになった。\nこれなら、大学生活も\n楽しく過ごすことが\nできそうだ。",
-          "text": "By the way,\nYukari is going to\nthe same mid college.\nWith her there,\ncollege life should\nbe a lot of fun."
+          "text": "Oh, right,\nYukari will attend\nthe same second-tier\ncollege as me.\nWith her there,\ncollege should be fun."
         },
         {
           "offset": "0x1bc8",
           "original": "そういえば、ゆかりは\n二流大学に\n通うことになった。\n選んだ道が違うから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nYukari is going to\na mid college.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nYukari is going to\na second-tier college.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x1c4c",
           "original": "そういえば、ゆかりは\n二流大学に\n通うことになった。\n日本に帰って来るまで\nゆかりには会えなくて\n寂しいけど、\nきっと、気ながに\n待っていてくれる。",
-          "text": "By the way,\nYukari is going to\na mid college.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know she'll\npatiently wait."
+          "text": "Oh, right,\nYukari is going to\na second-tier college.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know she'll\npatiently wait."
         },
         {
           "offset": "0x1cdc",
           "original": "そういえば、ゆかりは\n二流大学に\n通うことになった。\n学校は違うけれど\n学生どうしだ。\n会える時間は\n多いと思う。",
-          "text": "By the way,\nYukari is going to\na mid college.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
+          "text": "Oh, right,\nYukari is going to\na second-tier college.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
         },
         {
           "offset": "0x1d4c",
           "original": "そういえば、ゆかりは\n二流大学に\n通うことになった。\n来年は、俺も大学生に\nなれるように\n頑張らなきゃな…。",
-          "text": "By the way,\nYukari is going to\na mid college.\nI'd better work hard\nto be a college\nstudent next year..."
+          "text": "Oh, right,\nYukari is going to\na second-tier college.\nI'd better work hard\nto be a college\nstudent next year..."
         },
         {
           "offset": "0x1db4",
           "original": "時間はありあまる程\nあるから、ゆかりには\nいつでも会えるし、\n彼女もあまり気にして\nないみたいだから\nま、いっか。\nそうそう、彼女は\n二流大学に\n通うことになった。",
-          "text": "I have time to spare,\nso I can see Yukari\nany time, and she\ndoesn't seem to mind\nmuch at all,\nso, oh well.\nOh, right, she's\ngoing to a\nmid college."
+          "text": "I have time to spare,\nso I can see Yukari\nany time, and she\ndoesn't seem to mind\nmuch at all,\nso, oh well.\nOh, right, she's\ngoing to a\nsecond-tier college."
         },
         {
           "offset": "0x1e54",
           "original": "ゆかりは、今でも\nボーッとしてて、\nお父さんが\nちょっと恐いけど、\nいつまでも二人で\n歩んでいける。",
-          "text": "Yukari is still\nas dreamy as ever,\nand her father\nis a bit scary, but\nthe two of us can\nwalk on forever."
+          "text": "Yukari is still\nas dreamy as ever,\nand her father\nis a bit scary, but\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x1fa8",
           "original": "そういえば、望も\n同じく水泳の道に\nすすんだ。\nこれからお互いに\n鍛えあうことに\nなるのかな。",
-          "text": "By the way,\nNozomi is going on\nswimming too.\nI guess we'll keep\ntraining each other\nfrom now on."
+          "text": "Oh, right,\nNozomi is going on\nswimming too.\nI guess we'll keep\ntraining each other\nfrom now on."
         },
         {
           "offset": "0x2004",
           "original": "そういえば、望は\n実業団で水泳を\nすることになった。\n練習で忙しそうだから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nNozomi will swim for\na company team.\nShe'll be busy\npracticing, so we\nmay not meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nNozomi will swim for\na company team.\nShe'll be busy\npracticing, so we\nmay not meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x208c",
           "original": "そういえば、望は\n実業団で水泳を\nすることになった。\n日本に帰って来るまで\n望には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nNozomi will swim for\na company team.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nNozomi will swim for\na company team.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x2110",
           "original": "そういえば、望は\n実業団で水泳を\nすることになった。",
-          "text": "By the way,\nNozomi will swim for\na company team."
+          "text": "Oh, right,\nNozomi will swim for\na company team."
         },
         {
           "offset": "0x2144",
@@ -274,37 +274,37 @@
         {
           "offset": "0x21bc",
           "original": "最近、彼女は\nかなり女の子らしく\nなってきて\nけっこう、人の目を\nひくから、\nちょっと心配だけど。\nいつまでも二人で\n歩んでいける。",
-          "text": "Lately she's gotten\nquite girly,\nand she\nturns heads now,\nso\nI worry a bit, but\nthe two of us can\nwalk on forever."
+          "text": "Lately she's gotten\nquite girly,\nand she\nturns heads now,\nso\nI worry a bit, but\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x2330",
           "original": "そういえば、愛も\n同じ二流企業に\n勤めることになった。\n一緒の部署に\nなれるといいね。\nなんて話している。",
-          "text": "By the way,\nMegumi is joining\nthe same mid company.\nWe're saying it'd be\nnice to land in\nthe same department."
+          "text": "Oh, right,\nMegumi is joining\nmy second-tier firm.\nWe're saying it'd be\nnice to land in\nthe same department."
         },
         {
           "offset": "0x2398",
           "original": "そういえば、愛は\n二流企業に\n勤めることになった。\n選んだ道が違うから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nMegumi is joining\na mid company.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nMegumi is joining\na second-tier firm.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x241c",
           "original": "そういえば、愛は\n二流企業に\n勤めることになった。\n日本に帰って来るまで\n愛には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nMegumi is joining\na mid company.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nMegumi is joining\na second-tier firm.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x24a0",
           "original": "そういえば、愛は\n二流企業に\n勤めることになった。\nお互いに忙しく\nなったら、\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nMegumi is joining\na mid company.\nOnce we're both\nbusy, we may\nnot get to\nmeet very often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nMegumi is joining\na second-tier firm.\nOnce we're both\nbusy, we may\nnot get to\nmeet very often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x252c",
           "original": "そういえば、愛は\n二流企業に\n勤めることになった。",
-          "text": "By the way,\nMegumi is joining\na mid company."
+          "text": "Oh, right,\nMegumi is joining\na second-tier firm."
         },
         {
           "offset": "0x2560",
           "original": "時間はありあまる程\nあるから、愛には\nいつでも会えるけど、\n早く、定職を\n探さないとなぁ…。\nそうそう、愛は\n二流企業に\n勤めることになった。",
-          "text": "I have time to spare,\nso I can see Megumi\nany time, but I'd\nbetter find a steady\njob soon...\nOh, right, Megumi is\njoining a\nmid company."
+          "text": "I have time to spare,\nso I can see Megumi\nany time, but I'd\nbetter find a steady\njob soon...\nOh, right, Megumi is\njoining a\nsecond-tier firm."
         },
         {
           "offset": "0x25e8",
@@ -314,27 +314,27 @@
         {
           "offset": "0x275c",
           "original": "そういえば、沙希も\n料理の専門学校に\n通うことになった。\n学校が近くだから\nお昼には、お弁当を\n作ってきてくれるって\n言ってたな。",
-          "text": "By the way,\nSaki is going to\ncooking school.\nIt's close to mine,\nso she said she'd\nbring me lunch\nevery day."
+          "text": "Oh, right,\nSaki is going to\ncooking school.\nIt's close to mine,\nso she said she'd\nbring me lunch\nevery day."
         },
         {
           "offset": "0x27dc",
           "original": "そういえば、沙希は\n料理の専門学校に\n通うことになった。\n選んだ道が違うから\n会える機会も\n少ないかもしれない。\nしかし、\n心配はしていない。",
-          "text": "By the way,\nSaki is going to\ncooking school.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
+          "text": "Oh, right,\nSaki is going to\ncooking school.\nWe chose different\npaths, so we may\nnot meet often.\nBut I'm\nnot worried."
         },
         {
           "offset": "0x2864",
           "original": "そういえば、沙希は\n料理の専門学校に\n通うことになった。\n日本に帰って来るまで\n沙希には会えなくて、\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nSaki is going to\ncooking school.\nUntil I'm back in\nJapan I can't see\nher, which is lonely,\nbut I know\nshe'll wait for me."
+          "text": "Oh, right,\nSaki is going to\ncooking school.\nWe can't meet till\nI'm back in Japan.\nI'll miss her, but\nI know she'll\nwait for me."
         },
         {
           "offset": "0x28f0",
           "original": "そういえば、沙希は\n料理の専門学校に\n通うことになった。\n学校は違うけれど\n学生どうしだ。\n会える時間は\n多いと思う。",
-          "text": "By the way,\nSaki is going to\ncooking school.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
+          "text": "Oh, right,\nSaki is going to\ncooking school.\nDifferent schools,\nbut we're both\nstudents, so we'll\nmeet a lot."
         },
         {
           "offset": "0x2964",
           "original": "そういえば、沙希は\n料理の専門学校に\n通うことになった。",
-          "text": "By the way,\nSaki is going to\ncooking school."
+          "text": "Oh, right,\nSaki is going to\ncooking school."
         },
         {
           "offset": "0x299c",
@@ -344,7 +344,7 @@
         {
           "offset": "0x2a34",
           "original": "沙希は、\n誰にでも優しくて\n好かれやすいから、\nちょっと心配だけど。\nいつまでも二人で\n歩んでいける。",
-          "text": "Saki is\nkind to everyone\nand easy to like,\nso I worry a bit, but\nthe two of us can\nwalk on forever."
+          "text": "Saki is\nkind to everyone\nand easy to like,\nso I worry a bit, but\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x2b8c",
@@ -464,12 +464,12 @@
         {
           "offset": "0x3258",
           "original": "とりあえず二流大学に\n合格もできたし、\n何も言うことはないな。",
-          "text": "At least I got into\na mid college, so\nI've no complaints."
+          "text": "At least I got into\na second-tier college.\nI've no complaints."
         },
         {
           "offset": "0x3298",
           "original": "とりあえず三流大学に\n合格はできた。",
-          "text": "At least I got into\na low college."
+          "text": "At least I got into\na third-tier college."
         },
         {
           "offset": "0x32bc",
@@ -479,12 +479,12 @@
         {
           "offset": "0x32fc",
           "original": "とりあえず二流企業に\n入社も決まったし、\n何も言うことはないな。",
-          "text": "At least I'm joining\na mid company, so\nI've no complaints."
+          "text": "At least I'm joining\na second-tier firm, so\nI've no complaints."
         },
         {
           "offset": "0x333c",
           "original": "とりあえず三流企業に\n入社も決まった。",
-          "text": "At least I'm joining\na low company."
+          "text": "At least I'm joining\na third-tier firm."
         },
         {
           "offset": "0x3364",
@@ -529,37 +529,37 @@
         {
           "offset": "0x39e8",
           "original": "そういえば、優美は\n同じ学校に通うため\n勉強を頑張っている。",
-          "text": "By the way,\nYumi is studying hard\nto get into my school."
+          "text": "Oh, right,\nYumi is studying hard\nto get into my school."
         },
         {
           "offset": "0x3a24",
           "original": "そういえば、優美は\n同じ会社に通うため\n頑張っている。",
-          "text": "By the way,\nYumi is working hard\nto join my company."
+          "text": "Oh, right,\nYumi is working hard\nto join my company."
         },
         {
           "offset": "0x3a5c",
           "original": "そういえば、優美は\n会えなくて寂しいって\n泣いてたな…。\n俺も、ちょっと\n寂しいけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nYumi cried that she'd\nbe lonely...\nI'm a little\nlonely too, but\nI know\nshe'll wait for me."
+          "text": "Oh, right,\nYumi cried that she'd\nbe lonely...\nI'm a little\nlonely too, but\nI know\nshe'll wait for me."
         },
         {
           "offset": "0x3acc",
           "original": "そういえば、優美は\n俺が有名になったら\n会えなくなるかも\nしれないって、\n悲しそうにしてた。\nでも、心配は\nいらないと思う。",
-          "text": "By the way,\nYumi looked sad that\nif I got famous we\nmight not get to\nsee each other.\nBut I don't think\nshe needs to worry."
+          "text": "Oh, right,\nYumi looked sad that\nif I got famous we\nmight not get to\nsee each other.\nBut I don't think\nshe needs to worry."
         },
         {
           "offset": "0x3b44",
           "original": "そういえば、優美は\n一緒に受験が\nできるって\nよろこんでたな。\n少しぐらい、\nなぐめてくれても\nいいのに…。",
-          "text": "By the way,\nYumi was happy we'd\ntake the exams\ntogether.\nShe could at least\ntry to cheer\nme up..."
+          "text": "Oh, right,\nYumi was happy we'd\ntake the exams\ntogether.\nShe could at least\ntry to cheer\nme up..."
         },
         {
           "offset": "0x3bac",
           "original": "そういえば、優美は\n気楽な生活を\nうらやましがっている\nみたいだった。",
-          "text": "By the way,\nYumi seemed jealous\nof my easy\nlife."
+          "text": "Oh, right,\nYumi seemed jealous\nof my easy\nlife."
         },
         {
           "offset": "0x3bf0",
           "original": "まだ子供っぽくて\n家に遊びに行くと、\n好雄がうるさいけど、\nいつまでも二人で\n歩んでいける。",
-          "text": "She's still childish,\nand Yoshio nags when\nI visit them, but\nthe two of us can\nwalk on forever."
+          "text": "She's still childish,\nand Yoshio nags when\nI visit them, but\nwe'll always walk\nthrough life together."
         },
         {
           "offset": "0x3c4c",
@@ -569,32 +569,32 @@
         {
           "offset": "0x3dbc",
           "original": "そういえば、見晴は\n俺と同じ進路だった。\nいつのまに、\n調べてたんだろう…。",
-          "text": "By the way,\nMiharu chose my path.\nWhen did she\nfind that out...?"
+          "text": "Oh, right,\nMiharu chose my path.\nWhen did she\nfind that out...?"
         },
         {
           "offset": "0x3e08",
           "original": "そういえば、見晴は\n一流大学に\n通うことになった。\n本当は、同じ進路に\n進みたかった\nみたいだけど、\nさすがに\n駄目だったみたいだ。",
-          "text": "By the way,\nMiharu is going to\na top college.\nShe wanted to follow\nmy path, it\nseems, but\nthat just\ndidn't work out."
+          "text": "Oh, right,\nMiharu is going to\na top college.\nShe wanted to follow\nmy path, it\nseems, but\nthat just\ndidn't work out."
         },
         {
           "offset": "0x3e88",
           "original": "そういえば、見晴は\n一流大学に\n通うことになった。\n本当は、一緒に\nついてきたかった\nみたいだけど、\nきっと、\n待っていてくれる。",
-          "text": "By the way,\nMiharu is going to\na top college.\nShe wanted to\ncome with me, it\nseems, but\nI know\nshe'll wait for me."
+          "text": "Oh, right,\nMiharu is going to\na top college.\nShe wanted to\ncome with me, it\nseems, but\nI know\nshe'll wait for me."
         },
         {
           "offset": "0x3f04",
           "original": "そういえば、見晴も\n同じ予備校だった。\nでも、彼女って\n頭いいんだよなぁ…。",
-          "text": "By the way,\nMiharu's at my cram\nschool too. But\nshe's so smart..."
+          "text": "Oh, right,\nMiharu's at my cram\nschool too. But\nshe's so smart..."
         },
         {
           "offset": "0x3f50",
           "original": "そういえば、見晴も\n同じくフリーターで、\n一緒に、アルバイトを\n探している。",
-          "text": "By the way,\nMiharu works part-time\ntoo, and we're looking\nfor jobs together."
+          "text": "Oh, right,\nMiharu works part-time\ntoo, and we're looking\nfor jobs together."
         },
         {
           "offset": "0x3f9c",
           "original": "彼女とは\nお互いに、まだ\n理解しあえてないけど\nいつまでも二人で\n歩んでいける。",
-          "text": "She and I\nstill don't quite\nknow each other, but\nthe two of us can\nwalk on forever."
+          "text": "She and I\nstill don't quite\nknow each other, but\nwe'll always walk\nthrough life together."
         }
       ]
     }

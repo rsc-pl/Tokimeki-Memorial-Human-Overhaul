@@ -14,7 +14,7 @@
         {
           "offset": "0x60",
           "original": "３年間、文芸部で頑張った\n成果が出たぜ。",
-          "text": "Three years in Literature\nreally paid off."
+          "text": "Three years in the\nLiterature Club paid off."
         },
         {
           "offset": "0x88",
@@ -109,7 +109,7 @@
         {
           "offset": "0x278",
           "original": "植木賞、とったわね。\n読んだわよ。",
-          "text": "So you won the Ueki.\nI read it."
+          "text": "You won the Ueki Prize.\nI read it."
         },
         {
           "offset": "0x29c",
@@ -174,7 +174,7 @@
         {
           "offset": "0x410",
           "original": "こんにちは、{P}。",
-          "text": "Good afternoon, {P}"
+          "text": "Hi, {P}."
         },
         {
           "offset": "0x424",
@@ -184,7 +184,7 @@
         {
           "offset": "0x430",
           "original": "この度は、なにか大きな賞\nをいただいたそうで、\nおめでとうございます。",
-          "text": "I hear you received\nsome great award.\nCongratulations."
+          "text": "I heard you won\na major award.\nCongratulations!"
         },
         {
           "offset": "0x478",
@@ -224,7 +224,7 @@
         {
           "offset": "0x554",
           "original": "うまく言えないけど…\nすごく素敵だった。",
-          "text": "I can't say it well...\nbut it was wonderful."
+          "text": "I can't quite explain it...\nIt was wonderful."
         },
         {
           "offset": "0x58c",
@@ -324,7 +324,7 @@
         {
           "offset": "0x770",
           "original": "今度、サインくださいね。",
-          "text": "Give me an autograph!"
+          "text": "Can I get your autograph?"
         },
         {
           "offset": "0x78c",
@@ -384,7 +384,7 @@
         {
           "offset": "0x8f8",
           "original": "そのために、わざわざ？\n………。\nじゃあな、伊集院。",
-          "text": "All that way for this?\n......\nSee you, Ijuin."
+          "text": "You went out of your way\njust to check that?\nSee you, Ijuin."
         },
         {
           "offset": "0x92c",

@@ -1,449 +1,2227 @@
 {
   "description": "First meetings with the girls: all of SERIFU/G_APPEAR.BIN (base 0x80197000; game-internals 6p), 409 of 416 strings; the seven pure-punctuation pauses ('‥‥‥‥。', '…。') stay as they are. Nine sections from SHOUGATU.EXN's tables at 0x80144D90 (`tools/geko_sections.py --appear`): 0 Yuko (three collisions, then Yoshio's introduction), 1 Yuina (brain scan, problem, the lab, the dream, experiments, ICE), 2 Ayako (painting outside, art club, band), 3 Mira, 4 Mio (library, dropped book, literature club, drama club), 5 Yukari (tennis ball, mixed doubles), 6 Nozomi (morning run, swim team), 7 Saki (recruiting, the new baseball/soccer manager), 8 Yumi (Yoshio's sister). Speaker codes: 00 player, 01 girl, 06 thought (the game draws both brackets), 07 narration/sound (may start with a speaker label: {>Capt} for the drama captain's 4-byte label, {-???} for Yumi's 6-byte one), 09 the bump sound, 0A Yoshio, 0C/0D two girl strings in one box. The 'strings' entries translate SHOUGATU.EXN's in-place words the meeting code strcpy's: Yuko's label before she introduces herself (女生徒 -> Girl) and the location banners (Hall, Class, Lab, Quad, Art Rm, Music, Lib., Drama, Field, Local Park, Pool, School; 4-6 byte originals allow 6 letters). Yumi's {P} format '%sさん' is left alone, like the 君 other scenes add. Verified in DuckStation on forced meetings (meet_run.ps1, type-0x48 record, hidden emulator; docs/testing.md 'First meetings'): Yuko's first collision (the Girl label) and her whole introduction, Yuina's lab scene, Ayako painting outside, Mira, Mio's drama-club scene with the Capt labels, Yukari's tennis ball, Nozomi's morning run, Saki's baseball recruiting, Yumi's whole scene with the ??? labels; banners Hall, Local Park and Drama. Checked only statically: the other variants of each girl (the second and third collisions, Yuina's other scenes, Ayako's band and art-club scenes, Mio's library/book/literature scenes, Yukari's doubles, Nozomi's swim-team scenes, Saki's soccer and new-manager scenes, Yumi's other thought), the other banners, natural triggers. Odd-length names leave their pair padding before punctuation ('(It's Mio )').",
   "strings": [
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11760", "original": "女生徒", "text": "Girl"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11768", "original": "廊下", "text": "Hall"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11770", "original": "教室", "text": "Class"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11778", "original": "教室", "text": "Class"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11780", "original": "廊下", "text": "Hall"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11788", "original": "実験室", "text": "Lab"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11790", "original": "教室", "text": "Class"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11798", "original": "実験室", "text": "Lab"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x117A0", "original": "実験室", "text": "Lab"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x117A8", "original": "実験室", "text": "Lab"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x117D0", "original": "中庭", "text": "Quad"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x117D8", "original": "美術室", "text": "Art Rm"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x117E0", "original": "音楽室", "text": "Music"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x117F0", "original": "廊下", "text": "Hall"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11800", "original": "図書室", "text": "Lib."},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11808", "original": "図書室", "text": "Lib."},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11810", "original": "図書室", "text": "Lib."},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11818", "original": "図書室", "text": "Lib."},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11820", "original": "演劇部", "text": "Drama"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11830", "original": "グランド", "text": "Field"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x1183C", "original": "グランド", "text": "Field"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11850", "original": "近所の公園", "text": "Local Park"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x1185C", "original": "プール", "text": "Pool"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11870", "original": "教室", "text": "Class"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11878", "original": "グランド", "text": "Field"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11884", "original": "グランド", "text": "Field"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x11898", "original": "学校前", "text": "School"},
-    {"file": "CDROM/EXEDIR/SHOUGATU.EXN", "offset": "0x118A0", "original": "廊下", "text": "Hall"}
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11760",
+      "original": "女生徒",
+      "text": "Girl"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11768",
+      "original": "廊下",
+      "text": "Hall"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11770",
+      "original": "教室",
+      "text": "Class"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11778",
+      "original": "教室",
+      "text": "Class"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11780",
+      "original": "廊下",
+      "text": "Hall"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11788",
+      "original": "実験室",
+      "text": "Lab"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11790",
+      "original": "教室",
+      "text": "Class"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11798",
+      "original": "実験室",
+      "text": "Lab"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x117A0",
+      "original": "実験室",
+      "text": "Lab"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x117A8",
+      "original": "実験室",
+      "text": "Lab"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x117D0",
+      "original": "中庭",
+      "text": "Quad"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x117D8",
+      "original": "美術室",
+      "text": "Art Rm"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x117E0",
+      "original": "音楽室",
+      "text": "Music"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x117F0",
+      "original": "廊下",
+      "text": "Hall"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11800",
+      "original": "図書室",
+      "text": "Lib."
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11808",
+      "original": "図書室",
+      "text": "Lib."
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11810",
+      "original": "図書室",
+      "text": "Lib."
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11818",
+      "original": "図書室",
+      "text": "Lib."
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11820",
+      "original": "演劇部",
+      "text": "Drama"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11830",
+      "original": "グランド",
+      "text": "Field"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x1183C",
+      "original": "グランド",
+      "text": "Field"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11850",
+      "original": "近所の公園",
+      "text": "Local Park"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x1185C",
+      "original": "プール",
+      "text": "Pool"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11870",
+      "original": "教室",
+      "text": "Class"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11878",
+      "original": "グランド",
+      "text": "Field"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11884",
+      "original": "グランド",
+      "text": "Field"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x11898",
+      "original": "学校前",
+      "text": "School"
+    },
+    {
+      "file": "CDROM/EXEDIR/SHOUGATU.EXN",
+      "offset": "0x118A0",
+      "original": "廊下",
+      "text": "Hall"
+    }
   ],
-  "dialogue": [{
-    "file": "CDROM/SERIFU/G_APPEAR.BIN",
-    "base": "0x80197000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "放課後だ。\nあー眠いなぁ。", "text": "School's out.\nMan, I'm sleepy."},
-      {"offset": "0x24", "original": "あっ、ごめんなさい。", "text": "Oh, I'm sorry!"},
-      {"offset": "0x3c", "original": "いや、いい…。", "text": "No, it's fine..."},
-      {"offset": "0x4c", "original": "あー、映画に遅れるぅ。", "text": "Aah, I'll miss my movie!"},
-      {"offset": "0x70", "original": "何だろ、今の娘？", "text": "Who was that girl?"},
-      {"offset": "0x88", "original": "放課後だ。\n今日も疲れたなぁ。", "text": "School's out.\nTired again today."},
-      {"offset": "0xb0", "original": "あっ、ごめん…。", "text": "Oh, sorry..."},
-      {"offset": "0xc4", "original": "また、君か…。", "text": "You again...?"},
-      {"offset": "0xd4", "original": "あー、コンサートに\n間に合わないよぉ。", "text": "Aah, I'm gonna be\nlate for the concert!"},
-      {"offset": "0x108", "original": "何だよ、あの娘、２度も…。", "text": "Her again? That's twice..."},
-      {"offset": "0x128", "original": "放課後だ。\nなんか嫌な予感。", "text": "School's out.\nGot a bad feeling..."},
-      {"offset": "0x14c", "original": "あっ、ごめん…。", "text": "Oh, sorry..."},
-      {"offset": "0x160", "original": "いいかげんに…。", "text": "Give me a break..."},
-      {"offset": "0x174", "original": "あー、約束の時間に\n間に合わないよぉ。", "text": "Aah, I'm gonna be\nlate to meet someone!"},
-      {"offset": "0x1a8", "original": "一体、なんなんだよ！\n新手の当たり屋か？", "text": "What is her problem?!\nSome kind of con artist?"},
-      {"offset": "0x1d4", "original": "誰かが、俺を探している\n予感がする。", "text": "I've got a feeling\nsomebody's looking for me."},
-      {"offset": "0x1f8", "original": "いたいた\n探したぜ。", "text": "There you are.\nBeen looking for you."},
-      {"offset": "0x214", "original": "何だよ、好雄。\n何か用か？", "text": "What, Yoshio?\nYou need something?"},
-      {"offset": "0x230", "original": "何の酔狂か知らんけどさ…。\nお前と話がしたい\n女の子を連れてきたぜ。", "text": "Beats me why anyone would...\nbut I brought a girl who\nwants to talk to you."},
-      {"offset": "0x274", "original": "お前、それは酔狂じゃないよ。\n普通の女の子なら、当然の\n行為じゃないか。", "text": "Hey, why wouldn't she?\nAny normal girl would\nwant to, obviously."},
-      {"offset": "0x2bc", "original": "そうかい、後で後悔しても\n知らないぜ。", "text": "Fine, but don't blame me\nif you regret it."},
-      {"offset": "0x2e4", "original": "後悔…。\n何でだよ。", "text": "Regret it...?\nWhy?"},
-      {"offset": "0x2f8", "original": "おい、話つけたぜ。\nじゃあ\n俺は教室に帰るからな。", "text": "Okay, he's all yours.\nWell then,\nI'm heading back to class."},
-      {"offset": "0x344", "original": "こんにちは。\n朝日奈夕子でーす。\nあれ…、どっかで…？", "text": "Hiii.\nI'm Asahina Yuko.\nHuh... haven't we...?"},
-      {"offset": "0x37c", "original": "お、お前は、当たり屋！", "text": "Y-you! The con artist!"},
-      {"offset": "0x394", "original": "当たり屋とは失礼ね。\nあれはわざとじゃなくて、\nちょっと急いでたから…。", "text": "Con artist? How rude!\nI didn't do it on purpose.\nI was just in a hurry..."},
-      {"offset": "0x3dc", "original": "急ぎね…。\n別に、いいけどさ…。\nで、俺に用って何？", "text": "In a hurry, huh...\nWhatever, fine...\nSo what do you want?"},
-      {"offset": "0x410", "original": "好雄君から聞いたんだけど、\nあなたって色々と遊ぶ所\n知ってんでしょ？", "text": "Yoshio-kun told me you know\nall kinds of places\nto hang out, right?"},
-      {"offset": "0x454", "original": "まぁ、知ってると言えば、\n知ってるし…、\n知らないと言えば、\n知らないなぁ。", "text": "Well, I guess you could\nsay I do...\nOr you could\nsay I don't."},
-      {"offset": "0x4a0", "original": "ふーん。\n今度さ、どっか\n連れてってよ。", "text": "Hmm.\nSo, next time,\ntake me somewhere."},
-      {"offset": "0x4c8", "original": "えーっ、俺がー！\n何でだよ。", "text": "Whaaat, me?!\nWhy me?"},
-      {"offset": "0x4e4", "original": "ねぇいいじゃんか。\nお願ーい、どっか\n連れてってぇ。", "text": "Aw, c'mon.\nPleeease, take me\nsomewhere!"},
-      {"offset": "0x518", "original": "おい、変な声だすなよ！\nみんな見てるじゃないか。", "text": "Hey, don't use that voice!\nEveryone's staring!"},
-      {"offset": "0x548", "original": "約束してくれないと、\n大声で泣き出すわよ。", "text": "If you don't promise,\nI'll start bawling."},
-      {"offset": "0x574", "original": "わかった、わかったから\nそれだけは、やめてくれ。", "text": "Okay, okay, fine!\nJust don't do that."},
-      {"offset": "0x5a4", "original": "ホント！\n超ラッキー。\n絶対だよ。", "text": "Really?!\nSuper lucky!\nYou promised!"},
-      {"offset": "0x5c8", "original": "はいはい…。\n今度、電話するよ…。", "text": "Yeah, yeah...\nI'll call you sometime..."},
-      {"offset": "0x5ec", "original": "約束だからね。\nじゃ、電話待ってるから。", "text": "It's a promise.\nI'll wait for your call."},
-      {"offset": "0x650", "original": "はぁー。\n疲れた…。", "text": "Sigh...\nI'm beat..."},
-      {"offset": "0x664", "original": "約束だからな。\n近いうちに、\n電話しなくちゃ。", "text": "I promised.\nI'd better call her\nsometime soon."},
-      {"offset": "0x694", "original": "でも、俺、彼女の電話番号\n知らないよ。\nどうしよう…。", "text": "But I don't even\nknow her number.\nWhat now...?"},
-      {"offset": "0x6cc", "original": "後で好雄にでも聞くか…。", "text": "I'll ask Yoshio later..."},
-      {"offset": "0xcc8", "original": "こんな問題、ちょろいもんよ。\nふっ…、俺って天才。", "text": "These problems are a breeze.\nHeh... I'm a genius."},
-      {"offset": "0xcfc", "original": "今頃、教室に誰だろ…。\nあれ、なんか変な機械\n持ってるぞ。", "text": "Who'd be in the classroom\nnow...? Huh, she's holding\na weird machine."},
-      {"offset": "0xd44", "original": "あなた、{F}ね。", "text": "So you're {F}."},
-      {"offset": "0xd54", "original": "そ、そうだけど。\n君は…。", "text": "Y-yeah, that's me.\nAnd you are...?"},
-      {"offset": "0xd70", "original": "ちょっと、動かないで！\n誤差が出るじゃないの！", "text": "Hold still!\nYou'll skew the readings!"},
-      {"offset": "0xda0", "original": "‥‥‥‥。\n一体、何を…。", "text": "‥‥‥‥。\nWhat on earth...?"},
-      {"offset": "0xdbc", "original": "うるさいわね。\nもう少しで結果が出るから\n少し黙ってなさい。", "text": "Be quiet.\nThe results are almost in,\nso hush for a moment."},
-      {"offset": "0xe04", "original": "結果が出たわ。\nふーん。\nまあまあじゃない。", "text": "The results are in.\nHmm.\nNot bad."},
-      {"offset": "0xe30", "original": "まあまあ…って、\n君は、何者なんだ？", "text": "Not bad...?\nWho ARE you?"},
-      {"offset": "0xe54", "original": "私は、紐緒結奈。\nいずれ、あなたの頭脳は\n私のものよ。", "text": "I am Himoo Yuina.\nSomeday, your brain\nwill be mine."},
-      {"offset": "0xe8c", "original": "では、また会いましょう。\nふふふ…。", "text": "Until we meet again.\nHeh heh heh..."},
-      {"offset": "0xee0", "original": "今のは一体……。", "text": "What was that about...?"},
-      {"offset": "0xef8", "original": "こんな問題、ちょろいもんよ。\nふっ…、俺って天才。", "text": "These problems are a breeze.\nHeh... I'm a genius."},
-      {"offset": "0xf2c", "original": "今頃、教室に誰だろ…。", "text": "Who could that be, now...?"},
-      {"offset": "0xf50", "original": "あなた、{F}ね。", "text": "So you're {F}."},
-      {"offset": "0xf60", "original": "そ、そうだけど。\n君は…。", "text": "Y-yeah, that's me.\nAnd you are...?"},
-      {"offset": "0xf7c", "original": "ちょっと、この問題\n解いてみてくれる？", "text": "Say, would you\nsolve this problem?"},
-      {"offset": "0xfa4", "original": "えーっ、なんで…。", "text": "Huh? Why...?"},
-      {"offset": "0xfb8", "original": "つべこべ言わずに\nさっさと、解きなさいよ。", "text": "Stop grumbling\nand just solve it."},
-      {"offset": "0xff0", "original": "ほら、できたよ。", "text": "There, done."},
-      {"offset": "0x1004", "original": "ふーん。\nまあまあじゃない。", "text": "Hmm.\nNot bad."},
-      {"offset": "0x1020", "original": "まあまあ…って、\nあんた、誰？", "text": "Not bad...?\nWho are you?"},
-      {"offset": "0x1040", "original": "私は、紐緒結奈。\nいずれ、あなたの頭脳は\n私のものよ。", "text": "I am Himoo Yuina.\nSomeday, your brain\nwill be mine."},
-      {"offset": "0x1078", "original": "では、また会いましょう。\nふふふ…。", "text": "Until we meet again.\nHeh heh heh..."},
-      {"offset": "0x10cc", "original": "今のは一体……。", "text": "What was that about...?"},
-      {"offset": "0x10e4", "original": "ブオーン、ブオーン。", "text": "Vrrrm, vrrrm."},
-      {"offset": "0x10fc", "original": "ん？\n何の音だ？\n実験室からみたいだな…。", "text": "Hm?\nWhat's that noise?\nIt's from the lab..."},
-      {"offset": "0x1128", "original": "ブオーン、ピコピコ…。", "text": "Vrrrm, beep-boop..."},
-      {"offset": "0x1140", "original": "どうしよう…。\n‥‥‥‥。\nよし、ちょっと覗いてやれ。", "text": "What to do...\n‥‥‥‥。\nOkay, just a quick peek."},
-      {"offset": "0x1188", "original": "あなた！！\n見てはいけないものを\n見てしまったわね。", "text": "You!!\nYou saw something\nyou weren't meant to see."},
-      {"offset": "0x11bc", "original": "えっ、俺は何も…。", "text": "What? I didn't see..."},
-      {"offset": "0x11d0", "original": "この世には、人間が\n見てはいけないものが\nあるのよ。", "text": "There are things\nin this world that humans\nmust never see."},
-      {"offset": "0x1204", "original": "だから、俺は何も見て…", "text": "I'm telling you, I didn't..."},
-      {"offset": "0x121c", "original": "あなたは、\n見てしまったのよ。\nわかる？{F}君。", "text": "You\nsaw it.\nUnderstand, {F}?"},
-      {"offset": "0x1248", "original": "何も見てないって！\nそれにしても、何で、\n俺の名前知ってんだよ！？", "text": "I didn't see anything!\nAnd how come\nyou know my name?!"},
-      {"offset": "0x128c", "original": "いいえ、あなたは見たわ。\nもう、あなたはこの私\n紐緒結奈の下僕なのよ。", "text": "No, you saw it.\nFrom now on, you're\nHimoo Yuina's servant."},
-      {"offset": "0x12d4", "original": "下僕って…。", "text": "Servant...?"},
-      {"offset": "0x1304", "original": "あなたは、もう、私の\n所属している科学部の一員よ。\n嫌とは言わせないわよ。", "text": "You are now a member\nof my Science Club.\nNo is not an option."},
-      {"offset": "0x1354", "original": "あなたは、もう、私の\n所属している電脳部の一員よ。\n嫌とは言わせないわよ。", "text": "You are now a member\nof my Computer Club.\nNo is not an option."},
-      {"offset": "0x13a4", "original": "い、いや……。\n（どうしたんだ、口が…、\n口が動かない。）", "text": "N-no way...\n(What's wrong? My mouth...\nI can't move my mouth.)"},
-      {"offset": "0x13e0", "original": "ふふふ…。\n既にデータは書き換えたわ。", "text": "Heh heh heh...\nI've rewritten the data."},
-      {"offset": "0x1408", "original": "データって…。\n一体、何のデータだ？", "text": "Data...?\nWhat data?"},
-      {"offset": "0x142c", "original": "逆らうことは、許されない。\n逆らえば、死あるのみよ。\nでは、また会いましょう。", "text": "You will not defy me.\nDefy me, and you die.\nUntil we meet again."},
-      {"offset": "0x148c", "original": "は、いつの間にか廊下にいる。\nそれに、音も聞こえない。", "text": "Huh? I'm out in the hallway.\nAnd the noise has stopped."},
-      {"offset": "0x14c4", "original": "い、今のは何だったんだ。", "text": "W-what was that just now?"},
-      {"offset": "0x14e8", "original": "…もしかして、\n科学部に\n入部させられたんじゃぁ？", "text": "...Did I just\nget drafted into\nthe Science Club...?"},
-      {"offset": "0x1524", "original": "…もしかして、\n電脳部に\n入部させられたんじゃぁ？", "text": "...Did I just\nget drafted into\nthe Computer Club?"},
-      {"offset": "0x1560", "original": "こんな問題、ちょろいもんよ。\nふっ…、俺って天才。", "text": "These problems are a breeze.\nHeh... I'm a genius."},
-      {"offset": "0x1594", "original": "うっ…。\n（誰だ、後ろから…。\n意識が薄れていく……。）", "text": "Ugh...\n(Who's behind me...?\nI'm blacking out...)"},
-      {"offset": "0x15d4", "original": "はっ、ここは実験室！\nか、体が動かない…。", "text": "Huh? This is the lab!\nI-I can't move at all..."},
-      {"offset": "0x1600", "original": "あら、{F}君。", "text": "Oh, {F}."},
-      {"offset": "0x160c", "original": "目が覚めちゃったみたいね。\n", "text": "Oh, so you're awake.\n"},
-      {"offset": "0x1628", "original": "き、君は一体誰だ！？\n俺を、どうするつもりだ！？", "text": "W-who are you?!\nWhat will you do to me?!"},
-      {"offset": "0x1658", "original": "大丈夫、痛くないから。\nちょっと、じっとしてて。", "text": "Relax, it won't hurt.\nJust hold still a moment."},
-      {"offset": "0x1688", "original": "な、なにをするんだ！？\nやめろー！！", "text": "Wh-what are you doing?!\nStop iiit!!"},
-      {"offset": "0x16ac", "original": "わかったわよ。\n大きな声出さないでよ！\nしょうがないわね…。", "text": "All right, all right.\nDon't shout!\nHonestly..."},
-      {"offset": "0x16e8", "original": "早く、動けるように\nしてくれ！！", "text": "Hurry up and\nlet me move!!"},
-      {"offset": "0x1708", "original": "自分の体に飽きたら、\nこの紐緒結奈に相談しなさい。\nいつでも、待ってるわよ。", "text": "If you tire of your body,\ncome see me, Himoo Yuina.\nI'll be waiting, anytime."},
-      {"offset": "0x1754", "original": "うっ…。\n（また、意識が薄れていく…。）", "text": "Ugh...\n(Blacking out again...)"},
-      {"offset": "0x17a4", "original": "はっ、ゆ、夢か…。\nよかった…。\nん、ノートに落書きがあるぞ。\n何々、改造のご用命は、\n科学部、紐緒結奈まで…。", "text": "Huh? A-a dream...?\nPhew...\nA scribble in my notebook.\n'For body upgrades, see\nHimoo Yuina, Science Club.'"},
-      {"offset": "0x1818", "original": "はっ、ゆ、夢か…。\nよかった…。\nん、ノートに落書きがあるぞ。\n何々、改造のご用命は、\n電脳部、紐緒結奈まで…。", "text": "Huh? A-a dream...?\nPhew...\nA scribble in my notebook.\n'For body upgrades, see\nHimoo Yuina, Computer Club.'"},
-      {"offset": "0x188c", "original": "さーてと、\n今日は、何の実験を\nしようかな。", "text": "Now then,\nwhat experiment\nshall I run today?"},
-      {"offset": "0x18bc", "original": "{p}君。\n私の実験を、\nちょっと手伝ってくれる。", "text": "{p}.\nCome help me with\nmy experiment."},
-      {"offset": "0x18e8", "original": "あの…。\nあなたは…。", "text": "Um...\nAnd you are...?"},
-      {"offset": "0x1900", "original": "紐緒結奈よ。\n早く来なさい！！", "text": "Himoo Yuina.\nNow come here!!"},
-      {"offset": "0x1920", "original": "は、はい。", "text": "Y-yes."},
-      {"offset": "0x193c", "original": "うわああああ！", "text": "Waaaaaah!"},
-      {"offset": "0x194c", "original": "おおおおっ！", "text": "Whoooaaa!"},
-      {"offset": "0x195c", "original": "ぎゃああああ！", "text": "Gyaaaaah!"},
-      {"offset": "0x1978", "original": "はあ、はあ、はあ。", "text": "Pant, pant, pant..."},
-      {"offset": "0x198c", "original": "あなた、なかなか\nいい筋してるじゃない。\nじゃあ、また、頼むわね。", "text": "You show real\npromise, you know.\nI'll call on you again."},
-      {"offset": "0x19d8", "original": "‥‥‥‥。\nもう、いやだぁー！！", "text": "‥‥‥‥。\nNever agaaain!!"},
-      {"offset": "0x19fc", "original": "えーと、アイスって\nどういう意味かなあ。", "text": "Um, what does\n'ICE' mean, I wonder?"},
-      {"offset": "0x1a28", "original": "それはね、\nインサーキット\nエミュレータといって\n開発するターゲットを\n実環境に近い状態で\nリアルタイムに\nテストするための\n装置のことよ。", "text": "It's an in-circuit\nemulator. You use it\nto test a system\nwhile developing it,\nin real time,\nunder conditions\nthat closely match\nthe real thing."},
-      {"offset": "0x1ab0", "original": "あ、ありがとう。\nえーと…。", "text": "Th-thanks.\nUm..."},
-      {"offset": "0x1acc", "original": "紐緒結奈。\n同じ部にいる人の名前ぐらい、\n入部のときに覚えなさいよ。", "text": "Himoo Yuina.\nYou should've learned\nour names when you joined."},
-      {"offset": "0x1b10", "original": "ご、ごめんなさい…。\n紐緒さん。", "text": "S-sorry...\nHimoo-san."},
-      {"offset": "0x1b30", "original": "そんなことだから、\nこんな初歩的なことも\nわからないのよ。", "text": "That's exactly why\nyou don't understand\nsomething this basic."},
-      {"offset": "0x1b6c", "original": "それが、初歩的か？", "text": "THAT is basic?"},
-      {"offset": "0x1b80", "original": "もっと、しっかり\n勉強することね。\nそれじゃ、失礼するわ。", "text": "You'd better\nstudy harder.\nNow, excuse me."},
-      {"offset": "0x1bd8", "original": "はあ…、きつい女。", "text": "Yeesh, she's intense..."},
-      {"offset": "0x27a0", "original": "絵は、心が休まるぜ。\n（くーっ、しびれるセリフ。）", "text": "Painting soothes the soul.\n(Ooh, what a cool line.)"},
-      {"offset": "0x27d4", "original": "ビューティフル、\n素敵な絵ね。", "text": "Beautiful!\nWhat a lovely painting."},
-      {"offset": "0x27fc", "original": "あ、ありがとう。", "text": "Th-thanks."},
-      {"offset": "0x2814", "original": "あ、あなた\n美術部の…。\nえーと誰だっけ？", "text": "Oh, you're\nin the Art Club...\num, who are you again?"},
-      {"offset": "0x2840", "original": "{F}だよ。\nそういう君も、美術部の…。\nうーんと、誰だっけ？", "text": "I'm {F}.\nAnd you're in the Art Club\ntoo... um, who are you?"},
-      {"offset": "0x2878", "original": "あはははは…。\n片桐彩子よぉ。\nああ、おかしい…。", "text": "Ahahaha...\nI'm Katagiri Ayako.\nOh, that's funny..."},
-      {"offset": "0x28ac", "original": "あれ、部活はどうしたの？", "text": "Hey, what about the club?"},
-      {"offset": "0x28c8", "original": "それはこっちのセリフよ。\nどうして美術室で\n描かないの？", "text": "I could ask you the same.\nWhy aren't you painting\nin the art room?"},
-      {"offset": "0x2900", "original": "なんて言うの……。\n僕は芸術家だから、\n群れるのは嫌いなんだ。", "text": "How shall I put it...\nI'm an artist, so I\ndon't like crowds."},
-      {"offset": "0x2940", "original": "じゃあどうして、美術部に\n入部したのよ。", "text": "Then why did you\njoin the Art Club?"},
-      {"offset": "0x2968", "original": "なんて言うの……。\n僕は、芸術家だから\n矛盾が大好きなんだ。", "text": "How shall I put it...\nI'm an artist, so I\njust love contradictions."},
-      {"offset": "0x29a4", "original": "あはははは…。\nそんな芸術家いないわよ。", "text": "Ahahaha...\nNo artist talks like that!"},
-      {"offset": "0x29cc", "original": "やっぱりぃ……。\n単に、外で描きたかった\nだけなんだけどね。", "text": "Well, yeah...\nI just wanted to\npaint outside, really."},
-      {"offset": "0x2a08", "original": "ああ、涙出てきちゃった。\n今度は美術室で、\nお話しましょう。", "text": "Oh, I'm laughing so hard\nI'm crying. Next time,\ncome talk in the art room."},
-      {"offset": "0x2a70", "original": "すぐに笑う、面白い奴…。", "text": "She laughs a lot. She's fun."},
-      {"offset": "0x2a90", "original": "そんなに上手なんだから、\n美術部に入部すれば\nいいのに…。", "text": "You're so good,\nyou should join\nthe Art Club..."},
-      {"offset": "0x2acc", "original": "絵は、たまに描くぐらいが、\n健康にいいんだよ。", "text": "Painting now and then\nis good for your health."},
-      {"offset": "0x2afc", "original": "へえ…\n絵ってたまに描くと\n健康にいいんだ。", "text": "Huh...\nPainting now and then\nis good for your health?"},
-      {"offset": "0x2b28", "original": "そう、手のつぼを刺激されて、\nこう…。\n違うって。", "text": "Right, it stimulates\nthe points in your hand,\nlike... Wait, no."},
-      {"offset": "0x2b5c", "original": "あはははは…。\n私、片桐彩子って言うの。\nあなたは…？", "text": "Ahahaha...\nI'm Katagiri Ayako.\nAnd you are...?"},
-      {"offset": "0x2b94", "original": "あ、俺、{F}。", "text": "Oh, I'm {F}."},
-      {"offset": "0x2ba0", "original": "気が向いたら\n美術室に遊びに来てよ。\n歓迎するわよ。", "text": "Drop by the\nart room sometime.\nYou'll be welcome."},
-      {"offset": "0x2bd4", "original": "ああ、気が向いたらね。", "text": "Sure, if I feel like it."},
-      {"offset": "0x2bec", "original": "それじゃ、また。", "text": "See you later."},
-      {"offset": "0x2c24", "original": "面白い奴…。", "text": "Funny girl..."},
-      {"offset": "0x2c38", "original": "私も絵が好きで、\nたまに描いてるんだ。", "text": "I like painting too.\nI paint now and then."},
-      {"offset": "0x2c60", "original": "へぇ、今度見せてよ。", "text": "Oh? Show me sometime."},
-      {"offset": "0x2c78", "original": "駄目よ。\n私の絵は、人に見せると\n動きだすのよ。", "text": "No way.\nWhen people see my art,\nit starts moving."},
-      {"offset": "0x2ca8", "original": "それを、俺が縄で\n捕まえると…。\n俺は、一休さんか？", "text": "Then I catch it\nwith a rope...?\nWhat am I, Ikkyuu-san?"},
-      {"offset": "0x2cdc", "original": "あはははは…。\n私、片桐彩子。\nあなたは？\n", "text": "Ahahaha...\nI'm Katagiri Ayako.\nAnd you?\n"},
-      {"offset": "0x2d08", "original": "あ、俺、{F}。", "text": "Oh, I'm {F}."},
-      {"offset": "0x2d14", "original": "絵の事は考えておくわ。\n今度また、絵の話をしようよ。\nそれじゃ。", "text": "I'll think about it.\nLet's talk painting again.\nSee you."},
-      {"offset": "0x2d70", "original": "あっ、逃げた。\n片桐彩子、侮れん奴だ。", "text": "She slipped away!\nGotta watch out for her."},
-      {"offset": "0x2d9c", "original": "絵は、心が休まるぜ。\n（くーっ、しびれるセリフ。）", "text": "Painting soothes the soul.\n(Ooh, what a cool line.)"},
-      {"offset": "0x2dd0", "original": "ビューティフル、\n素敵な絵ね。", "text": "Beautiful!\nWhat a lovely painting."},
-      {"offset": "0x2df8", "original": "あ、ありがとう…。\n（えーと、この娘は誰だっけ？\n思い出せ、思い出すんだ。\n{m}よ！）", "text": "Th-thanks...\n(Um, who is she again?\nRemember, remember,\n{m}!)"},
-      {"offset": "0x2e4c", "original": "どうしたの？\n呆然としちゃって。\n", "text": "What's wrong?\nYou look dazed.\n"},
-      {"offset": "0x2e70", "original": "か、…。\n（いいや、勘で言っちゃえ。）", "text": "K-...\n(Eh, I'll just guess.)"},
-      {"offset": "0x2e98", "original": "片桐さん？", "text": "Katagiri-san?"},
-      {"offset": "0x2ea4", "original": "そうよ。\nどうしちゃったの。\nまさか忘れてたんじゃ…。", "text": "That's right.\nWhat's up with you?\nDid you forget me...?"},
-      {"offset": "0x2edc", "original": "そ、そんな事ないよ。\n（よーし、当たったぁ。\n入部のときの自己紹介\nだけだもんなぁ。\n思いっ切り、忘れてたよ。）", "text": "N-no, of course not.\n(Yes, nailed it!\nWe only met when we\nintroduced ourselves.\nI totally forgot.)"},
-      {"offset": "0x2f4c", "original": "それにしても、\n素敵な絵を描くのね。", "text": "Anyway,\nyou paint lovely pictures."},
-      {"offset": "0x2f70", "original": "お誉めにあずかり光栄です。\n片桐さんは、描かないの？", "text": "I'm flattered.\nDo you draw, Katagiri-san?"},
-      {"offset": "0x2fa4", "original": "私の絵は秘密なの。", "text": "My paintings are a secret."},
-      {"offset": "0x2fb8", "original": "１８才未満お断りとか。", "text": "Like, adults only?"},
-      {"offset": "0x2fd0", "original": "そう、細部までばっちり…。\n何で、私がそんな絵描くのよ。\nそのうちわかるわよ。", "text": "Yes, every last detail...\nWhy would I paint that?!\nYou'll find out someday."},
-      {"offset": "0x3020", "original": "ずるい、逃げる気だな。", "text": "No fair, you're dodging."},
-      {"offset": "0x3038", "original": "そのうちよ、そのうち…。\nじゃあ、私帰るね。", "text": "Someday, someday...\nWell, I'm heading home."},
-      {"offset": "0x3098", "original": "ちっ、逃げられたか…。", "text": "Tch, she got away..."},
-      {"offset": "0x30b4", "original": "心の安らぎは、音楽にあり。\n（くーっ、しびれるセリフ。）", "text": "Peace of mind lies in music.\n(Ooh, what a cool line.)"},
-      {"offset": "0x30ec", "original": "マーベラス、素敵な演奏ね。", "text": "Marvelous! Lovely playing."},
-      {"offset": "0x3110", "original": "あ、ありがとう…。\n（えーと、この娘は誰だっけ？\n思い出せ、思い出すんだ。\n{m}よ！）", "text": "Th-thanks...\n(Um, who is she again?\nRemember, remember,\n{m}!)"},
-      {"offset": "0x3164", "original": "どうしたの？\n呆然としちゃって。\n", "text": "What's wrong?\nYou look dazed.\n"},
-      {"offset": "0x3188", "original": "か、…。\n（いいや、勘で言っちゃえ。）", "text": "K-...\n(Eh, I'll just guess.)"},
-      {"offset": "0x31b0", "original": "片桐さん？", "text": "Katagiri-san?"},
-      {"offset": "0x31bc", "original": "そうよ。\nどうしちゃったの。\nまさか忘れてたんじゃ…。", "text": "That's right.\nWhat's up with you?\nDid you forget me...?"},
-      {"offset": "0x31f4", "original": "そ、そんな事ないよ。\n（よーし、当たったぁ。\n入部のときの自己紹介\nだけだもんなぁ。\n思いっ切り、忘れてたよ。）", "text": "N-no, of course not.\n(Yes, nailed it!\nWe only met when we\nintroduced ourselves.\nI totally forgot.)"},
-      {"offset": "0x3264", "original": "それにしても、\n素晴らしかったわね\n今の演奏。", "text": "Still,\nthat was a wonderful\nperformance!"},
-      {"offset": "0x3294", "original": "お誉めにあずかり光栄です。\n{G}のクラリネットも\n素晴らしい音色だね。", "text": "You're too kind.\n{G}, your clarinet\nsounds beautiful too."},
-      {"offset": "0x32d8", "original": "やっぱりそう思う。\nあはははは…。", "text": "You think so too?\nAhahaha..."},
-      {"offset": "0x3308", "original": "今度は個人的に演奏を\n聞かせてね。\nじゃあ私帰るから。", "text": "Next time, play\njust for me, okay?\nWell, I'm heading home."},
-      {"offset": "0x3b68", "original": "なあ、好雄…。\n最近なんか面白いことないか？", "text": "Hey, Yoshio...\nAnything fun lately?"},
-      {"offset": "0x3b94", "original": "そうだな…。\nあ、危ない。", "text": "Let's see...\nWhoa, look out!"},
-      {"offset": "0x3bb0", "original": "きゃっ。", "text": "Eek!"},
-      {"offset": "0x3bc8", "original": "いったーい。", "text": "Owww!"},
-      {"offset": "0x3bd8", "original": "だ、大丈夫ですか？", "text": "A-are you okay?"},
-      {"offset": "0x3bec", "original": "大丈夫じゃないわよ。\n早く起こしなさいよね。", "text": "No, I am NOT okay.\nHelp me up this instant."},
-      {"offset": "0x3c18", "original": "あ、はい。\nよいしょっと。", "text": "Oh, right.\nUp you go."},
-      {"offset": "0x3c44", "original": "ジロジロ", "text": "Stare, stare"},
-      {"offset": "0x3c50", "original": "何だろ。\n人の顔をジロジロと…。", "text": "What's with her?\nStaring right at me..."},
-      {"offset": "0x3c70", "original": "まあ、いいわ。\n許してあげる。\nあなた、お名前は？", "text": "Very well.\nI forgive you.\nWhat is your name?"},
-      {"offset": "0x3ca4", "original": "{F}だけど…。", "text": "Uh, {F}..."},
-      {"offset": "0x3cb0", "original": "それじゃ、また会いましょう。\n{p}君。", "text": "Until we meet again,\n{p}."},
-      {"offset": "0x3cd4", "original": "ほーほほほほほほ。", "text": "Oh-ho-ho-ho-ho!"},
-      {"offset": "0x3d00", "original": "…。\nなあ、好雄…。\n今の、誰？", "text": "...\nHey, Yoshio...\nWho was that?"},
-      {"offset": "0x3d20", "original": "お前、知らないのかよ。\nファンクラブまである、\n鏡魅羅を。", "text": "You really don't know\nKagami Mira? She's even\ngot a fan club."},
-      {"offset": "0x3d5c", "original": "へぇ、今の娘が、\nあの、鏡魅羅なんだ…。", "text": "Oh, so that was\nthe famous Kagami Mira..."},
-      {"offset": "0x3d84", "original": "いいよなあ、お前\n名前覚えてもらえて…。", "text": "Lucky you, man.\nShe knows your name now..."},
-      {"offset": "0x4010", "original": "ああ、読書は楽しいなあ。\nなんて、俺って\n勉強家なんだろう。", "text": "Ah, reading is such fun.\nMan, I'm such a\nstudious guy."},
-      {"offset": "0x404c", "original": "あの…。", "text": "Um..."},
-      {"offset": "0x4060", "original": "ハンカチが落ちてますよ。", "text": "You dropped a handkerchief."},
-      {"offset": "0x407c", "original": "え…。\nあ、ありがとう。\nいつの間に落ちたんだろう。", "text": "Huh...?\nOh, thank you.\nWhen did I drop that?"},
-      {"offset": "0x40b0", "original": "クスッ…。\n随分、熱心に\n読んでいたのですね。", "text": "Hee hee...\nYou were so\nabsorbed in your book."},
-      {"offset": "0x40e0", "original": "ほら、僕って好きなことに\n熱中するタイプだから。\nははは…。", "text": "Well, I'm the type who\ngets lost in what I love.\nHa ha ha..."},
-      {"offset": "0x411c", "original": "私も本を読みだすと、\nすぐ熱中して\nしまうんですよ。", "text": "When I start reading,\nI get lost in it\nright away too."},
-      {"offset": "0x4150", "original": "へー、そうなんだ。", "text": "Oh, really?"},
-      {"offset": "0x4164", "original": "あっ、もう行かなきゃ。", "text": "Oh, I have to go."},
-      {"offset": "0x417c", "original": "あ、俺…。\n{F}っていいます。\nハンカチありがとう。", "text": "Oh, I'm...\nmy name's {F}.\nThanks for the hanky."},
-      {"offset": "0x41ac", "original": "どういたしまして…。\n私、如月未緒といいます。\nまた、今度お話しましょう。", "text": "You're welcome...\nMy name is Kisaragi Mio.\nLet's talk again sometime."},
-      {"offset": "0x421c", "original": "如月未緒さんか…。\n結構、可愛かったな。", "text": "Kisaragi Mio-san, huh...\nShe was pretty cute."},
-      {"offset": "0x4248", "original": "ああ、読書は楽しいなあ。\nなんて、俺って\n勉強家なんだろう。", "text": "Ah, reading is such fun.\nMan, I'm such a\nstudious guy."},
-      {"offset": "0x4284", "original": "やや、こんな所に\n本が落ちてるぞ。", "text": "Whoa, someone\ndropped a book here."},
-      {"offset": "0x42a8", "original": "難しそうな、本だなあ。\n一体、誰の忘れ物だろう。", "text": "Looks like a tough read.\nWonder who left it here."},
-      {"offset": "0x42d8", "original": "あの…。", "text": "Um..."},
-      {"offset": "0x42f4", "original": "この辺りに、本が落ちて\nいなかったでしょうか？", "text": "Did you see a book\nlying around here?"},
-      {"offset": "0x4324", "original": "あ、これのこと？", "text": "Oh, this one?"},
-      {"offset": "0x4338", "original": "そうです！\n良かった、見つかって…。", "text": "Yes, that's it!\nThank goodness..."},
-      {"offset": "0x435c", "original": "随分、難しい本、\n読んでるんだね。", "text": "You read some\npretty tough books."},
-      {"offset": "0x4380", "original": "ご、ごめんなさい…。\nすごく大事な本だったので。\n私、如月未緒といいます。", "text": "I-I'm sorry...\nThat book means a lot.\nI'm Kisaragi Mio."},
-      {"offset": "0x43cc", "original": "{P}。\n本当に、ありがとう\nございました。", "text": "{P},\nthank you\nso much."},
-      {"offset": "0x43f4", "original": "いえ、どういたしまして。\n今度、またお話したいな。", "text": "Oh, it was nothing.\nI'd like to talk again."},
-      {"offset": "0x4428", "original": "こちらこそぜひ。\nあっ、もう行かなきゃ。", "text": "I'd like that too.\nOh, I have to go."},
-      {"offset": "0x4474", "original": "如月未緒さんか…。\n結構、可愛かったな。", "text": "Kisaragi Mio-san, huh...\nShe was pretty cute."},
-      {"offset": "0x44a0", "original": "部活に遅れちゃったよ。\n今日は、大事な話が\nあるって言ってたっけ。", "text": "I'm late for club.\nThey said there was\nsomething important today."},
-      {"offset": "0x44e8", "original": "ありゃ、\nもうミーティングは\n終わっちゃったのかな。", "text": "Uh-oh,\nis the meeting\nalready over?"},
-      {"offset": "0x451c", "original": "あの…。", "text": "Um..."},
-      {"offset": "0x4530", "original": "はい…。\nえーと、あなたは、たしか…。\n同じ文芸部の…。", "text": "Yes...?\nUm, you're, uh...\nin the Literature Club..."},
-      {"offset": "0x4568", "original": "私、如月未緒といいます。\n先程、文化祭の発表の事で\n話し合いがありまして…。", "text": "My name is Kisaragi Mio.\nWe just had a meeting\non our festival project..."},
-      {"offset": "0x45b4", "original": "そうか、今日の話って、\nその事だったんだ。", "text": "Oh, so that's what\ntoday was about."},
-      {"offset": "0x45e0", "original": "それで、私と一緒に、\n研究発表することに\nなりましたので、これから\nよろしくお願いします。", "text": "And so, you and I\nwill be giving a\nresearch presentation.\nI look forward to it."},
-      {"offset": "0x4638", "original": "へぇ、そうなんだ。\nこちらこそ、よろしく。", "text": "Oh, I see.\nI'm looking forward to it."},
-      {"offset": "0x4664", "original": "それでは、失礼します。", "text": "Well, please excuse me."},
-      {"offset": "0x4698", "original": "如月未緒さんか…。\n（あんな、可愛い娘と\n共同研究なんて、\n俺ってついてるなあ。）", "text": "Kisaragi Mio-san, huh...\n(A joint project with\na cute girl like that.\nAm I lucky or what?)"},
-      {"offset": "0x46ec", "original": "部活で読書…。\nうーん、俺ってなんて\n本が似合う男なんだろう。", "text": "Reading at club...\nMan, books really\nlook good on me."},
-      {"offset": "0x472c", "original": "あの…、{P}…。", "text": "Um... {P}..."},
-      {"offset": "0x4744", "original": "はい…。\nえーと、あなたは…。\n{G}…でしたよね。", "text": "Yes...?\nUm, you're...\n{G}, right?"},
-      {"offset": "0x4774", "original": "はい、そうです…。\nあの…、この本大変面白いので、\nよろしかったらどうぞ…。", "text": "Yes, that's right...\nUm, this book is great.\nPlease give it a try..."},
-      {"offset": "0x47c0", "original": "ありがとう、ありがたく\n読ませてもらうよ。\nでも…、難しそうな本だね。", "text": "Thanks, I'll gladly\ngive it a read.\nBut... it looks tough."},
-      {"offset": "0x4808", "original": "うふふ…。\nそんなことないですよ。\nきっと感動しますよ。", "text": "Hee hee...\nNot at all.\nI'm sure it will move you."},
-      {"offset": "0x4840", "original": "しばらく借りてて、\nいいのかな？", "text": "Is it okay if I\nborrow it a while?"},
-      {"offset": "0x4860", "original": "いつまででも結構ですよ。\nそれでは、そろそろ\n失礼します。", "text": "As long as you like.\nWell then, I'll\nbe going now."},
-      {"offset": "0x48b4", "original": "今まで、おとなしくて\n目立たなかったけど\n如月さんって、結構\n可愛いなあ…。", "text": "She's been so quiet\nI barely noticed her.\nBut Kisaragi-san's\npretty cute..."},
-      {"offset": "0x4900", "original": "話しかけられるなんて、\n超ラッキーだぜ。", "text": "And she talked to me!\nTotally lucky."},
-      {"offset": "0x4930", "original": "{>部長}はい、そこで廻って！\n駄目駄目、\nもう一度やり直し。", "text": "{>Capt}And... turn!\nNo, no, no,\nfrom the top."},
-      {"offset": "0x4968", "original": "あっ、大変だ！\n誰か倒れたぞ。\n（あれは{G}だ）", "text": "Oh no!\nSomeone collapsed!\n(It's {G})"},
-      {"offset": "0x49a0", "original": "{>部長}大丈夫、軽い貧血みたいね。", "text": "{>Capt}She's fine. Mild anemia."},
-      {"offset": "0x49c0", "original": "{>部長}君、悪いけど\nここで、見ててあげて。", "text": "{>Capt}Sorry, can you stay\nhere and watch her?"},
-      {"offset": "0x49ec", "original": "そんな強引な…", "text": "That's pushy..."},
-      {"offset": "0x49fc", "original": "{>部長}さあ、練習練習。", "text": "{>Capt}Okay, back to practice!"},
-      {"offset": "0x4a14", "original": "ああっ、みんな\n行ってしまった。", "text": "Aah, everyone's\ngone."},
-      {"offset": "0x4a34", "original": "でも、如月さんって\n結構、可愛いよな…。\nこれって、結構役得かな？", "text": "Still, Kisaragi-san's\npretty cute...\nIs this a lucky break?"},
-      {"offset": "0x4a90", "original": "う、うん…。", "text": "Mm... mmh..."},
-      {"offset": "0x4aa0", "original": "あ、気がついた？", "text": "Oh, you're awake?"},
-      {"offset": "0x4abc", "original": "介抱して下さったんですね。\nありがとうございました。", "text": "You took care of me...\nThank you so much."},
-      {"offset": "0x4af0", "original": "ああ、そんな事\n気にしなくていいよ。\n（部長にやらされたんだし…。）", "text": "Oh, don't\nworry about it.\n(The captain made me...)"},
-      {"offset": "0x4b34", "original": "{P}…。\n優しいんですね…。", "text": "{P}...\nyou're so kind..."},
-      {"offset": "0x4b50", "original": "そ、そんなことないって！\nじ、じゃあ俺、練習に、\n戻るから…。", "text": "N-not really!\nW-well, I'm heading\nback to practice..."},
-      {"offset": "0x4b90", "original": "私は、もう少し\n休んでから行きます。", "text": "I'll rest a little\nlonger before I go."},
-      {"offset": "0x4bc8", "original": "如月未緒さんか…。\nあれ、どうして、俺の名前\n知ってるんだ？", "text": "Kisaragi Mio-san, huh...\nWait, how does she\nknow my name?"},
-      {"offset": "0x4c04", "original": "まさか俺に気があるんじゃ…。\n…………。", "text": "Could she be into me...?\n…………。"},
-      {"offset": "0x4c2c", "original": "同じ部なんだから当たり前か。\n俺も彼女の名前だけは\n知ってるもんな…。", "text": "We're in the same club, duh.\nI know her name\ntoo, after all..."},
-      {"offset": "0x54fc", "original": "あーあ、今日も\n一日疲れたなぁ。", "text": "Man, another\ntiring day, huh."},
-      {"offset": "0x551c", "original": "あーっ…、あぶな…。", "text": "Ah... look ou..."},
-      {"offset": "0x5544", "original": "大丈夫ですか？", "text": "Are you all right?"},
-      {"offset": "0x5558", "original": "いてて…。", "text": "Ow, ow..."},
-      {"offset": "0x5564", "original": "あの…。\nお怪我は、\nございませんか？", "text": "Um...\nAre you\nhurt at all?"},
-      {"offset": "0x558c", "original": "ああ、何とか、\n生きてるみたい。", "text": "Yeah, somehow\nI'm still alive."},
-      {"offset": "0x55ac", "original": "申し訳ございません。\nでも、平気そうですね。", "text": "I'm terribly sorry.\nBut you seem all right."},
-      {"offset": "0x55d8", "original": "大丈夫じゃないよ。\nお詫びに、名前教えて？", "text": "I'm not! Make it up to me\nby telling me your name."},
-      {"offset": "0x5604", "original": "うふふ…。\n古式ゆかりと申します。\nあなたの名前は？", "text": "Hee hee...\nI am Koshiki Yukari.\nAnd your name is?"},
-      {"offset": "0x5638", "original": "それでは、私はそろそろ\nクラブに戻りますので、\n失礼いたします。", "text": "Well then, I should\nget back to practice.\nPlease excuse me."},
-      {"offset": "0x5698", "original": "ボールは、痛かったけど\n{G}と、知り合えたから\nいいか…。", "text": "The ball hurt, but\nI met {G},\nso I guess it's okay..."},
-      {"offset": "0x56d4", "original": "今日は、混成ダブルスの練習だ。\n早くコートに行かなくっちゃ。", "text": "It's mixed doubles today.\nGotta hurry to the court."},
-      {"offset": "0x5710", "original": "あのー…。", "text": "Excuse me..."},
-      {"offset": "0x5724", "original": "あっ、はい。\n何でしょう？", "text": "Oh, yes?\nWhat is it?"},
-      {"offset": "0x5740", "original": "お急ぎ中、失礼いたします。\n本日の混成ダブルスで、\nペアになる方を\n探しているのですが…。", "text": "Sorry to stop you\nwhen you're in a hurry.\nI'm looking for my\nmixed doubles partner..."},
-      {"offset": "0x5798", "original": "ペアの相手って。", "text": "Your partner?"},
-      {"offset": "0x57ac", "original": "お名前を忘れてしまって…。\n私、古式と申しますけれども\n聞き覚えございませんか？", "text": "I've forgotten his name...\nMy name is Koshiki.\nDoes it ring a bell?"},
-      {"offset": "0x57fc", "original": "あーっ！\n{G}って、\n古式ゆかりさん？", "text": "Ah!\n{G}...\nKoshiki Yukari-san?"},
-      {"offset": "0x5820", "original": "そう、ですけれども…。\n心当たりは、\nございますか？", "text": "Yes, that's me...\nDo you know\nwho it might be?"},
-      {"offset": "0x5854", "original": "はあ…？\nなんでしょう？", "text": "Pardon...?\nWhat is it?"},
-      {"offset": "0x586c", "original": "俺が、{G}のパートナー。\n名前は、{F}。", "text": "{G}, it's me.\nYour partner, {F}."},
-      {"offset": "0x5890", "original": "それは、失礼をいたしました。\nそれでは、今日は\nよろしくお願いいたします。", "text": "I'm terribly sorry.\nI look forward to\nplaying with you today."},
-      {"offset": "0x58dc", "original": "こちらこそ。", "text": "Likewise."},
-      {"offset": "0x5c8c", "original": "ふーっ、疲れた。\n（朝早く走るのは、\n気持ちがいいなあ。）", "text": "Phew, I'm beat.\n(Running early in the\nmorning feels great.)"},
-      {"offset": "0x5ccc", "original": "おはよう。", "text": "Morning!"},
-      {"offset": "0x5cdc", "original": "…！\nお、おはよう。\n（馴れ馴れしい奴だなあ。）", "text": "...!\nG-good morning.\n(She's awfully friendly.)"},
-      {"offset": "0x5d0c", "original": "君も今、走ってきたの？", "text": "Were you out running too?"},
-      {"offset": "0x5d24", "original": "ああ、そうだよ。\n君もそうなの？", "text": "Yeah, I was.\nYou too?"},
-      {"offset": "0x5d44", "original": "私、毎朝５０キロの\nロードワークを\n欠かしたことないから。", "text": "I never skip my\n50 km roadwork,\nevery single morning."},
-      {"offset": "0x5d80", "original": "ま、毎朝、５０キロ！\n君…、きらめき高校の人？", "text": "F-fifty km every morning?!\nYou go to Kirameki High?"},
-      {"offset": "0x5db0", "original": "うん、そう。\n私、清川望。\n君もそうなの？", "text": "Yeah, that's right.\nI'm Kiyokawa Nozomi.\nYou too?"},
-      {"offset": "0x5ddc", "original": "そう、俺、{F}。\n清川って…。\nあの、水泳部の清川さん？", "text": "Yeah, I'm {F}.\nKiyokawa...?\nKiyokawa-san from swim?"},
-      {"offset": "0x5e10", "original": "そうだけど…。\nへぇ…。\n私の事、知ってるんだ。", "text": "That's me...\nHuh...\nSo you know about me."},
-      {"offset": "0x5e40", "original": "知ってるも何も、\n超有名人じゃないか。", "text": "Know about you?\nYou're super famous!"},
-      {"offset": "0x5e68", "original": "超高校級の女スイマーだよ。\nもっと、無骨な娘だと\n思ってたけど…。", "text": "You're an elite swimmer.\nI thought you'd be\na lot more rugged..."},
-      {"offset": "0x5eac", "original": "超有名ね…。\nそれよりもさ、\n今度、一緒に走ろうよ。", "text": "Super famous, huh...\nMore importantly,\nlet's go running together."},
-      {"offset": "0x5f0c", "original": "ははは…。\n清川さんの足手まといに\nならなきゃいいけどね。", "text": "Ha ha ha...\nI hope I won't\nhold Kiyokawa-san back."},
-      {"offset": "0x5f48", "original": "はははは、ならないって。\nじゃあ私、もうひとっ走り\nしてくるから。", "text": "Ha ha, you won't.\nWell, I'm going for\nanother run."},
-      {"offset": "0x5f8c", "original": "俺は、もう少し休んでいくよ。", "text": "I'll rest a bit longer."},
-      {"offset": "0x5fac", "original": "このジュース、\n余ったからあげる。\nじゃあ。", "text": "Here, have this juice.\nI've got extra.\nSee ya."},
-      {"offset": "0x5fe8", "original": "…。\nんぐんぐんぐ…。\nプハーッ。", "text": "...\nGulp, gulp, gulp...\nAhhh!"},
-      {"offset": "0x600c", "original": "あっ、これって、\n間接キスでないの。\nラッキー。", "text": "Wait, isn't this\nan indirect kiss?\nLucky me!"},
-      {"offset": "0x6044", "original": "お、おはよう、清川さん。\n（彼女は、超高校級の\n女スイマーだ。）", "text": "M-morning, Kiyokawa-san.\n(She's an exceptional\nhigh-school swimmer.)"},
-      {"offset": "0x6084", "original": "あ、確か、水泳部の…。", "text": "Oh, from the swim team..."},
-      {"offset": "0x609c", "original": "{F}だよ。\n清川さん、こんなに早くから\nトレーニングかい？", "text": "I'm {F}.\nTraining this early,\nKiyokawa-san?"},
-      {"offset": "0x60d4", "original": "私、毎朝５０キロの\nロードワークを\n欠かしたことないから。", "text": "I never skip my\n50 km roadwork,\nevery single morning."},
-      {"offset": "0x6110", "original": "ま、毎朝、５０キロ！\nそんなに走ってるの？", "text": "F-fifty km every morning?!\nYou run that much?"},
-      {"offset": "0x613c", "original": "記録を維持するためには、\nこのぐらいやらないと…。", "text": "To keep my times down,\nI need to train this hard."},
-      {"offset": "0x6170", "original": "そうなんだ…。\n日本一ってのも大変だね。", "text": "I see...\nJapan's best has it tough."},
-      {"offset": "0x6198", "original": "うん…。\nそれよりもさ、\n今度、一緒に走ろうよ。", "text": "Yeah...\nMore importantly,\nlet's go running together."},
-      {"offset": "0x61e8", "original": "よーし、今日は\n良い記録が出たぞ。", "text": "All right, I got\na good time today."},
-      {"offset": "0x620c", "original": "へぇ…。\n君、結構やるじゃん。", "text": "Huh...\nYou're pretty good."},
-      {"offset": "0x6234", "original": "あ、ありがとう、{G}。\n（彼女は、この学校の水泳部の\n女の子で、日本記録まで\n持っているんだ。）", "text": "Thanks, {G}.\n(She's on our swim team,\nand she even holds\na national record.)"},
-      {"offset": "0x6290", "original": "えっと、\n名前なんて言ったっけ？", "text": "Um,\nwhat was your name?"},
-      {"offset": "0x62b0", "original": "ひどいなあ。\n{F}だよ。", "text": "That's harsh.\nI'm {F}."},
-      {"offset": "0x62c8", "original": "あ、悪い悪い。\nでも君って、高校に入ってから、\n水泳始めたんだよね？", "text": "Oh, sorry, sorry.\nBut you only took up\nswimming in high school?"},
-      {"offset": "0x630c", "original": "そう、本格的に始めたのは、\n高校に入学してから。", "text": "Yeah, I only got serious\nonce I got to high school."},
-      {"offset": "0x633c", "original": "それでこんな記録出せるなら、\n将来、かなりビッグな選手に\nなれるかもね？", "text": "If you can post times like\nthat already, you could be\na big star someday."},
-      {"offset": "0x6384", "original": "ははは、からかわないでくれよ。\n清川さんに言われると、\n本気にしちゃうぜ。", "text": "Ha ha, don't tease me.\nIf Kiyokawa-san says it,\nI might believe it."},
-      {"offset": "0x63d0", "original": "からかってないってば。\nあっ、私が泳ぐ番だ。\nそれじゃ、金の卵さん。", "text": "I'm not teasing.\nOh, it's my turn to swim.\nSee you, rising star!"},
-      {"offset": "0x6434", "original": "金の卵か…。\n頑張ってみるかな、水泳…。", "text": "Rising star, huh...\nMaybe I'll try swimming..."},
-      {"offset": "0x6934", "original": "ふーっ。\nやっと休み時間か…。", "text": "Phew.\nBreak time at last..."},
-      {"offset": "0x695c", "original": "は、はい。\nあの、君は…？", "text": "Y-yes?\nUm, and you are...?"},
-      {"offset": "0x697c", "original": "あっ、私、野球部で\nマネージャーをやっている\n虹野沙希なんだけど。", "text": "Oh, I'm Nijino Saki.\nI'm the manager\nof the baseball team."},
-      {"offset": "0x69c0", "original": "で、俺に何の用…？", "text": "So, what can I do for you?"},
-      {"offset": "0x69d4", "original": "あなたには、根性があるわ。\n私と一緒に、甲子園を\n目指しましょう！", "text": "You've got guts.\nLet's aim for Koshien\ntogether!"},
-      {"offset": "0x6a24", "original": "悪いけど、野球には\nあまり興味ないんだ。", "text": "Sorry, but I'm not\nreally into baseball."},
-      {"offset": "0x6a50", "original": "そう…。\nあなたが来てくれれば、\nかなりの戦力に…。", "text": "I see...\nIf you joined, you'd\nbe a real asset..."},
-      {"offset": "0x6a84", "original": "ごめんね、でもちょっと\n買いかぶりすぎだよ。", "text": "Sorry, but you're giving\nme too much credit."},
-      {"offset": "0x6ab0", "original": "そんなことない！\nでも…、\n無理強いはできないわね。", "text": "No, I'm not!\nBut...\nI can't force you."},
-      {"offset": "0x6ae4", "original": "気が向いたら、一度見に\n行こうかな？", "text": "Maybe I'll come take\na look sometime."},
-      {"offset": "0x6b08", "original": "うん、待ってるわ！\nそれじゃ。", "text": "Okay, I'll be waiting!\nBye."},
-      {"offset": "0x6b3c", "original": "おい、今の虹野沙希だろ？", "text": "Hey, was that Nijino Saki?"},
-      {"offset": "0x6b58", "original": "ああ、そうみたいだね。", "text": "Yeah, looks like it."},
-      {"offset": "0x6b70", "original": "運動部のアイドルが、\nお前なんかに\n何の用だったんだ。", "text": "What does the sports clubs'\nidol want with\nthe likes of you?"},
-      {"offset": "0x6ba8", "original": "なんか、\n部活の勧誘みたい。", "text": "Seems she's\nrecruiting for her club."},
-      {"offset": "0x6bc4", "original": "ふーん。\nあ、授業始まった。", "text": "Huh.\nOh, class is starting."},
-      {"offset": "0x6bf4", "original": "あっ、私、サッカー部で\nマネージャーをやっている\n虹野沙希なんだけど。", "text": "Oh, I'm Nijino Saki.\nI'm the manager\nof the soccer team."},
-      {"offset": "0x6c3c", "original": "で、俺に何の用…？。", "text": "So, what can I do for you?"},
-      {"offset": "0x6c54", "original": "あなたには、根性があるわ。\n私と一緒に、国立競技場を\n目指しましょう！", "text": "You've got guts.\nLet's aim for the National\nStadium together!"},
-      {"offset": "0x6ca8", "original": "悪いけど、サッカーには\nあまり興味ないんだ。", "text": "Sorry, but I'm not\nreally into soccer."},
-      {"offset": "0x6cd8", "original": "俺、野球部なんだけど…。", "text": "I'm on the baseball team..."},
-      {"offset": "0x6cf4", "original": "えっ…。", "text": "Huh...?"},
-      {"offset": "0x6d00", "original": "あんまり、\n出てないけどね。", "text": "Though I don't\nshow up much."},
-      {"offset": "0x6d1c", "original": "練習しなきゃ、甲子園に\n行けないじゃない。", "text": "If you don't practice,\nwe won't make Koshien!"},
-      {"offset": "0x6d48", "original": "そりゃそうだ。", "text": "Good point."},
-      {"offset": "0x6d58", "original": "今度から、真面目に\n練習に来なさいよ。", "text": "From now on, come\nto practice properly!"},
-      {"offset": "0x6d98", "original": "野球部に、\nあんな娘いたんだ…。", "text": "I never knew the baseball\nteam had a girl like that."},
-      {"offset": "0x6dbc", "original": "俺、サッカー部\nなんだけど…。", "text": "I'm on the\nsoccer team..."},
-      {"offset": "0x6ddc", "original": "えっ…。", "text": "Huh...?"},
-      {"offset": "0x6de8", "original": "あんまり、\n出てないけどね。", "text": "Though I don't\nshow up much."},
-      {"offset": "0x6e04", "original": "練習しなきゃ、国立競技場に\n行けないじゃない。", "text": "We have to train to reach\nthe National Stadium."},
-      {"offset": "0x6e34", "original": "そりゃそうだ。", "text": "Good point."},
-      {"offset": "0x6e44", "original": "今度から、真面目に\n練習に来なさいよ。", "text": "From now on, come\nto practice properly!"},
-      {"offset": "0x6e84", "original": "サッカー部に、\nあんな娘いたんだ…。", "text": "I never knew the soccer\nteam had a girl like that."},
-      {"offset": "0x6eac", "original": "遅くなっちゃったよ。\n（ん？\n見かけない娘がいるな。）", "text": "I'm running late.\n(Hm?\nWho's that girl?)"},
-      {"offset": "0x6ee8", "original": "あっ、野球部の方ですか？", "text": "You're on the baseball team?"},
-      {"offset": "0x6f04", "original": "そうだけど…。", "text": "Yeah, why...?"},
-      {"offset": "0x6f14", "original": "今日からマネージャーとして\n入部した、虹野沙希です。\nよろしくお願いします。", "text": "I'm Nijino Saki.\nI joined as manager today.\nNice to meet you."},
-      {"offset": "0x6f60", "original": "あ、俺、{F}。\nこちらこそよろしく。", "text": "Oh, I'm {F}.\nNice to meet you, too."},
-      {"offset": "0x6f84", "original": "それじゃ…。\n甲子園目指して、\n練習頑張ってね。", "text": "Well then...\nPractice hard,\nand on to Koshien!"},
-      {"offset": "0x6fc8", "original": "へぇ、あんな娘が\nマネージャーになったんだ。\n練習に気合が入るぜ。", "text": "Wow, a girl like that\nis our new manager?\nI'm fired up for practice!"},
-      {"offset": "0x7010", "original": "遅くなっちゃったよ。\n（ん？\n見かけない娘がいるな。）", "text": "I'm running late.\n(Hm?\nWho's that girl?)"},
-      {"offset": "0x704c", "original": "あっ、サッカー部の方ですか？", "text": "You're on the soccer team?"},
-      {"offset": "0x706c", "original": "そうだけど…。", "text": "Yeah, why...?"},
-      {"offset": "0x707c", "original": "今日からマネージャーとして\n入部した、虹野沙希です。\nよろしくお願いします。", "text": "I'm Nijino Saki.\nI joined as manager today.\nNice to meet you."},
-      {"offset": "0x70c8", "original": "あ、俺、{F}。\nこちらこそよろしく。", "text": "Oh, I'm {F}.\nNice to meet you, too."},
-      {"offset": "0x70ec", "original": "それじゃ…。\n国立競技場目指して、\n練習頑張ってね。", "text": "Well then...\nKeep training hard\nfor the National Stadium!"},
-      {"offset": "0x7134", "original": "へぇ、あんな娘が\nマネージャーになったんだ。\n", "text": "Wow, a girl like that\nis our new manager?\n"},
-      {"offset": "0x77fc", "original": "今日から、上級生だ。\n気を引き締めて、いこう。", "text": "I'm an upperclassman now.\nTime to buckle down."},
-      {"offset": "0x782c", "original": "{-？？？}こんにちは！\n{P}。", "text": "{-???}Hiii!\n{P}!"},
-      {"offset": "0x784c", "original": "？？\nあれ、どこかで\n会ったことある？", "text": "??\nHuh, have we\nmet somewhere?"},
-      {"offset": "0x7874", "original": "{-？？？}さて、私は誰でしょう？", "text": "{-???}So, guess who I am!"},
-      {"offset": "0x789c", "original": "んー…。\n声は、聞いたこと\nあるような…。", "text": "Hmm...\nI feel like I've\nheard this voice before."},
-      {"offset": "0x78cc", "original": "んー…。\n誰だったかな…。", "text": "Hmm...\nWho was it...?"},
-      {"offset": "0x78ec", "original": "{-？？？}ブーッ\n制限時間終了です。\n私は…。", "text": "{-???}Bzzzt!\nTime's up.\nI'm..."},
-      {"offset": "0x7918", "original": "おい、優美。\n何やってたんだ？", "text": "Hey, Yumi.\nWhat are you up to?"},
-      {"offset": "0x7938", "original": "{-？？？}あっ、お兄ちゃん。", "text": "{-???}Oh, Onii-chan!"},
-      {"offset": "0x7960", "original": "何だ、{m}。", "text": "Oh, {m}."},
-      {"offset": "0x796c", "original": "一緒にいたのか。", "text": "You were with her?"},
-      {"offset": "0x7980", "original": "お兄ちゃんって、\nお前の妹か？", "text": "Onii-chan?\nSo she is your sister?"},
-      {"offset": "0x79a0", "original": "そうだよ。\nあれ、お前に話して\nなかったっけ。", "text": "Yep.\nHuh, didn't I\ntell you?"},
-      {"offset": "0x79e0", "original": "そんなの、聞いてないよ。\n（どうりで、声を聞いたことが\nあると思った。）", "text": "You never told me that.\n(No wonder her voice\nsounded familiar.)"},
-      {"offset": "0x7a2c", "original": "そんなの、聞いてないよ。", "text": "You never told me that."},
-      {"offset": "0x7a4c", "original": "今年から、うちの高校に\n通うことになってたんだ。", "text": "She's starting at our\nschool this year."},
-      {"offset": "0x7a80", "original": "早乙女優美でーす。\nこれから、よろしくね。\n先輩。", "text": "I'm Saotome Yumi!\nNice to meet you,\nsenpai."},
-      {"offset": "0x7ab4", "original": "ほら帰るぞ。\n優美。", "text": "C'mon, we're going home,\nYumi."},
-      {"offset": "0x7ac8", "original": "ブー、わかったわよ。\nそれじゃね、先輩。\nバイバーイ！", "text": "Boo, fine.\nSee you, senpai.\nBye-byeee!"},
-      {"offset": "0x7b0c", "original": "あいつの妹って、\nあんな娘だったのか…。\nうるさかったな…。", "text": "So that's what\nhis sister's like...\nShe sure was loud..."},
-      {"offset": "0x7e30", "original": "ドン", "text": "Bump!"},
-      {"offset": "0x7e38", "original": "ドン", "text": "Bump!"},
-      {"offset": "0x7e40", "original": "ドン", "text": "Bump!"},
-      {"offset": "0x7e48", "original": "ガラッ", "text": "Clatter"},
-      {"offset": "0x7e50", "original": "ピピッ", "text": "Beep-beep!"},
-      {"offset": "0x7e58", "original": "はあ？", "text": "Huh?"},
-      {"offset": "0x7e60", "original": "ガラッ", "text": "Clatter"},
-      {"offset": "0x7e68", "original": "はあ？", "text": "Huh?"},
-      {"offset": "0x7e80", "original": "俺、{F}。", "text": "I'm {F}."},
-      {"offset": "0x7e88", "original": "{P}。", "text": "{P}."},
-      {"offset": "0x7e8c", "original": "ドスン", "text": "Thud!"},
-      {"offset": "0x7e94", "original": "ん？", "text": "Hm?"},
-      {"offset": "0x7e9c", "original": "ボカ", "text": "Bonk!"},
-      {"offset": "0x7ea4", "original": "俺、{F}。", "text": "I'm {F}."},
-      {"offset": "0x7eac", "original": "俺…。", "text": "Me..."},
-      {"offset": "0x7eb4", "original": "{p}君。", "text": "{p}."}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/G_APPEAR.BIN",
+      "base": "0x80197000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "放課後だ。\nあー眠いなぁ。",
+          "text": "School's out.\nMan, I'm sleepy."
+        },
+        {
+          "offset": "0x24",
+          "original": "あっ、ごめんなさい。",
+          "text": "Oh, I'm sorry!"
+        },
+        {
+          "offset": "0x3c",
+          "original": "いや、いい…。",
+          "text": "No, it's fine..."
+        },
+        {
+          "offset": "0x4c",
+          "original": "あー、映画に遅れるぅ。",
+          "text": "Aah, I'll miss my movie!"
+        },
+        {
+          "offset": "0x70",
+          "original": "何だろ、今の娘？",
+          "text": "Who was that girl?"
+        },
+        {
+          "offset": "0x88",
+          "original": "放課後だ。\n今日も疲れたなぁ。",
+          "text": "School's out.\nTired again today."
+        },
+        {
+          "offset": "0xb0",
+          "original": "あっ、ごめん…。",
+          "text": "Oh, sorry..."
+        },
+        {
+          "offset": "0xc4",
+          "original": "また、君か…。",
+          "text": "You again...?"
+        },
+        {
+          "offset": "0xd4",
+          "original": "あー、コンサートに\n間に合わないよぉ。",
+          "text": "Aah, I'm gonna be\nlate for the concert!"
+        },
+        {
+          "offset": "0x108",
+          "original": "何だよ、あの娘、２度も…。",
+          "text": "Her again? That's twice..."
+        },
+        {
+          "offset": "0x128",
+          "original": "放課後だ。\nなんか嫌な予感。",
+          "text": "School's out.\nGot a bad feeling..."
+        },
+        {
+          "offset": "0x14c",
+          "original": "あっ、ごめん…。",
+          "text": "Oh, sorry..."
+        },
+        {
+          "offset": "0x160",
+          "original": "いいかげんに…。",
+          "text": "Give me a break..."
+        },
+        {
+          "offset": "0x174",
+          "original": "あー、約束の時間に\n間に合わないよぉ。",
+          "text": "Aah, I'm gonna be\nlate to meet someone!"
+        },
+        {
+          "offset": "0x1a8",
+          "original": "一体、なんなんだよ！\n新手の当たり屋か？",
+          "text": "What is her problem?!\nSome kind of con artist?"
+        },
+        {
+          "offset": "0x1d4",
+          "original": "誰かが、俺を探している\n予感がする。",
+          "text": "I've got a feeling\nsomebody's looking for me."
+        },
+        {
+          "offset": "0x1f8",
+          "original": "いたいた\n探したぜ。",
+          "text": "There you are.\nBeen looking for you."
+        },
+        {
+          "offset": "0x214",
+          "original": "何だよ、好雄。\n何か用か？",
+          "text": "What, Yoshio?\nYou need something?"
+        },
+        {
+          "offset": "0x230",
+          "original": "何の酔狂か知らんけどさ…。\nお前と話がしたい\n女の子を連れてきたぜ。",
+          "text": "Beats me why anyone would...\nbut I brought a girl who\nwants to talk to you."
+        },
+        {
+          "offset": "0x274",
+          "original": "お前、それは酔狂じゃないよ。\n普通の女の子なら、当然の\n行為じゃないか。",
+          "text": "Hey, why wouldn't she?\nAny normal girl would\nwant to, obviously."
+        },
+        {
+          "offset": "0x2bc",
+          "original": "そうかい、後で後悔しても\n知らないぜ。",
+          "text": "Fine, but don't blame me\nif you regret it."
+        },
+        {
+          "offset": "0x2e4",
+          "original": "後悔…。\n何でだよ。",
+          "text": "Regret it...?\nWhy?"
+        },
+        {
+          "offset": "0x2f8",
+          "original": "おい、話つけたぜ。\nじゃあ\n俺は教室に帰るからな。",
+          "text": "Okay, he's all yours.\nWell then,\nI'm heading back to class."
+        },
+        {
+          "offset": "0x344",
+          "original": "こんにちは。\n朝日奈夕子でーす。\nあれ…、どっかで…？",
+          "text": "Hiii.\nI'm Asahina Yuko.\nHuh... haven't we...?"
+        },
+        {
+          "offset": "0x37c",
+          "original": "お、お前は、当たり屋！",
+          "text": "Y-you! The con artist!"
+        },
+        {
+          "offset": "0x394",
+          "original": "当たり屋とは失礼ね。\nあれはわざとじゃなくて、\nちょっと急いでたから…。",
+          "text": "Con artist? How rude!\nI didn't do it on purpose.\nI was just in a hurry..."
+        },
+        {
+          "offset": "0x3dc",
+          "original": "急ぎね…。\n別に、いいけどさ…。\nで、俺に用って何？",
+          "text": "In a hurry, huh...\nWhatever, fine...\nSo what do you want?"
+        },
+        {
+          "offset": "0x410",
+          "original": "好雄君から聞いたんだけど、\nあなたって色々と遊ぶ所\n知ってんでしょ？",
+          "text": "Yoshio-kun told me you know\nall kinds of places\nto hang out, right?"
+        },
+        {
+          "offset": "0x454",
+          "original": "まぁ、知ってると言えば、\n知ってるし…、\n知らないと言えば、\n知らないなぁ。",
+          "text": "Well, I guess you could\nsay I do...\nOr you could\nsay I don't."
+        },
+        {
+          "offset": "0x4a0",
+          "original": "ふーん。\n今度さ、どっか\n連れてってよ。",
+          "text": "Hmm.\nSo, next time,\ntake me somewhere."
+        },
+        {
+          "offset": "0x4c8",
+          "original": "えーっ、俺がー！\n何でだよ。",
+          "text": "Whaaat, me?!\nWhy me?"
+        },
+        {
+          "offset": "0x4e4",
+          "original": "ねぇいいじゃんか。\nお願ーい、どっか\n連れてってぇ。",
+          "text": "Aw, c'mon.\nPleeease, take me\nsomewhere!"
+        },
+        {
+          "offset": "0x518",
+          "original": "おい、変な声だすなよ！\nみんな見てるじゃないか。",
+          "text": "Hey, don't use that voice!\nEveryone's staring!"
+        },
+        {
+          "offset": "0x548",
+          "original": "約束してくれないと、\n大声で泣き出すわよ。",
+          "text": "If you don't promise,\nI'll start bawling."
+        },
+        {
+          "offset": "0x574",
+          "original": "わかった、わかったから\nそれだけは、やめてくれ。",
+          "text": "Okay, okay, fine!\nJust don't do that."
+        },
+        {
+          "offset": "0x5a4",
+          "original": "ホント！\n超ラッキー。\n絶対だよ。",
+          "text": "Really?!\nSuper lucky!\nYou promised!"
+        },
+        {
+          "offset": "0x5c8",
+          "original": "はいはい…。\n今度、電話するよ…。",
+          "text": "Yeah, yeah...\nI'll call you sometime..."
+        },
+        {
+          "offset": "0x5ec",
+          "original": "約束だからね。\nじゃ、電話待ってるから。",
+          "text": "It's a promise.\nI'll wait for your call."
+        },
+        {
+          "offset": "0x650",
+          "original": "はぁー。\n疲れた…。",
+          "text": "Sigh...\nI'm beat..."
+        },
+        {
+          "offset": "0x664",
+          "original": "約束だからな。\n近いうちに、\n電話しなくちゃ。",
+          "text": "I promised.\nI'd better call her\nsometime soon."
+        },
+        {
+          "offset": "0x694",
+          "original": "でも、俺、彼女の電話番号\n知らないよ。\nどうしよう…。",
+          "text": "But I don't even\nknow her number.\nWhat now...?"
+        },
+        {
+          "offset": "0x6cc",
+          "original": "後で好雄にでも聞くか…。",
+          "text": "I'll ask Yoshio later..."
+        },
+        {
+          "offset": "0xcc8",
+          "original": "こんな問題、ちょろいもんよ。\nふっ…、俺って天才。",
+          "text": "These problems are a breeze.\nHeh... I'm a genius."
+        },
+        {
+          "offset": "0xcfc",
+          "original": "今頃、教室に誰だろ…。\nあれ、なんか変な機械\n持ってるぞ。",
+          "text": "Who'd be in the classroom\nnow...? Huh, she's holding\na weird machine."
+        },
+        {
+          "offset": "0xd44",
+          "original": "あなた、{F}ね。",
+          "text": "So you're {F}."
+        },
+        {
+          "offset": "0xd54",
+          "original": "そ、そうだけど。\n君は…。",
+          "text": "Y-yeah, that's me.\nAnd you are...?"
+        },
+        {
+          "offset": "0xd70",
+          "original": "ちょっと、動かないで！\n誤差が出るじゃないの！",
+          "text": "Hold still!\nYou'll skew the readings!"
+        },
+        {
+          "offset": "0xda0",
+          "original": "‥‥‥‥。\n一体、何を…。",
+          "text": "‥‥‥‥。\nWhat on earth...?"
+        },
+        {
+          "offset": "0xdbc",
+          "original": "うるさいわね。\nもう少しで結果が出るから\n少し黙ってなさい。",
+          "text": "Be quiet.\nThe results are almost in,\nso hush for a moment."
+        },
+        {
+          "offset": "0xe04",
+          "original": "結果が出たわ。\nふーん。\nまあまあじゃない。",
+          "text": "The results are in.\nHmm.\nNot bad."
+        },
+        {
+          "offset": "0xe30",
+          "original": "まあまあ…って、\n君は、何者なんだ？",
+          "text": "Not bad...?\nWho ARE you?"
+        },
+        {
+          "offset": "0xe54",
+          "original": "私は、紐緒結奈。\nいずれ、あなたの頭脳は\n私のものよ。",
+          "text": "I am Himoo Yuina.\nSomeday, your brain\nwill be mine."
+        },
+        {
+          "offset": "0xe8c",
+          "original": "では、また会いましょう。\nふふふ…。",
+          "text": "Until we meet again.\nHeh heh heh..."
+        },
+        {
+          "offset": "0xee0",
+          "original": "今のは一体……。",
+          "text": "What was that about...?"
+        },
+        {
+          "offset": "0xef8",
+          "original": "こんな問題、ちょろいもんよ。\nふっ…、俺って天才。",
+          "text": "These problems are a breeze.\nHeh... I'm a genius."
+        },
+        {
+          "offset": "0xf2c",
+          "original": "今頃、教室に誰だろ…。",
+          "text": "Who could that be, now...?"
+        },
+        {
+          "offset": "0xf50",
+          "original": "あなた、{F}ね。",
+          "text": "So you're {F}."
+        },
+        {
+          "offset": "0xf60",
+          "original": "そ、そうだけど。\n君は…。",
+          "text": "Y-yeah, that's me.\nAnd you are...?"
+        },
+        {
+          "offset": "0xf7c",
+          "original": "ちょっと、この問題\n解いてみてくれる？",
+          "text": "Say, would you\nsolve this problem?"
+        },
+        {
+          "offset": "0xfa4",
+          "original": "えーっ、なんで…。",
+          "text": "Huh? Why...?"
+        },
+        {
+          "offset": "0xfb8",
+          "original": "つべこべ言わずに\nさっさと、解きなさいよ。",
+          "text": "Stop grumbling\nand just solve it."
+        },
+        {
+          "offset": "0xff0",
+          "original": "ほら、できたよ。",
+          "text": "There, done."
+        },
+        {
+          "offset": "0x1004",
+          "original": "ふーん。\nまあまあじゃない。",
+          "text": "Hmm.\nNot bad."
+        },
+        {
+          "offset": "0x1020",
+          "original": "まあまあ…って、\nあんた、誰？",
+          "text": "Not bad...?\nWho are you?"
+        },
+        {
+          "offset": "0x1040",
+          "original": "私は、紐緒結奈。\nいずれ、あなたの頭脳は\n私のものよ。",
+          "text": "I am Himoo Yuina.\nSomeday, your brain\nwill be mine."
+        },
+        {
+          "offset": "0x1078",
+          "original": "では、また会いましょう。\nふふふ…。",
+          "text": "Until we meet again.\nHeh heh heh..."
+        },
+        {
+          "offset": "0x10cc",
+          "original": "今のは一体……。",
+          "text": "What was that about...?"
+        },
+        {
+          "offset": "0x10e4",
+          "original": "ブオーン、ブオーン。",
+          "text": "Vrrrm, vrrrm."
+        },
+        {
+          "offset": "0x10fc",
+          "original": "ん？\n何の音だ？\n実験室からみたいだな…。",
+          "text": "Hm?\nWhat's that noise?\nIt's from the lab..."
+        },
+        {
+          "offset": "0x1128",
+          "original": "ブオーン、ピコピコ…。",
+          "text": "Vrrrm, beep-boop..."
+        },
+        {
+          "offset": "0x1140",
+          "original": "どうしよう…。\n‥‥‥‥。\nよし、ちょっと覗いてやれ。",
+          "text": "What to do...\n‥‥‥‥。\nOkay, just a quick peek."
+        },
+        {
+          "offset": "0x1188",
+          "original": "あなた！！\n見てはいけないものを\n見てしまったわね。",
+          "text": "You!!\nYou saw something\nyou weren't meant to see."
+        },
+        {
+          "offset": "0x11bc",
+          "original": "えっ、俺は何も…。",
+          "text": "What? I didn't see..."
+        },
+        {
+          "offset": "0x11d0",
+          "original": "この世には、人間が\n見てはいけないものが\nあるのよ。",
+          "text": "There are things\nin this world that humans\nmust never see."
+        },
+        {
+          "offset": "0x1204",
+          "original": "だから、俺は何も見て…",
+          "text": "I'm telling you, I didn't..."
+        },
+        {
+          "offset": "0x121c",
+          "original": "あなたは、\n見てしまったのよ。\nわかる？{F}君。",
+          "text": "You\nsaw it.\nGot it, {F}-kun?"
+        },
+        {
+          "offset": "0x1248",
+          "original": "何も見てないって！\nそれにしても、何で、\n俺の名前知ってんだよ！？",
+          "text": "I didn't see anything!\nAnd how come\nyou know my name?!"
+        },
+        {
+          "offset": "0x128c",
+          "original": "いいえ、あなたは見たわ。\nもう、あなたはこの私\n紐緒結奈の下僕なのよ。",
+          "text": "No, you saw it.\nFrom now on, you're\nHimoo Yuina's servant."
+        },
+        {
+          "offset": "0x12d4",
+          "original": "下僕って…。",
+          "text": "Servant...?"
+        },
+        {
+          "offset": "0x1304",
+          "original": "あなたは、もう、私の\n所属している科学部の一員よ。\n嫌とは言わせないわよ。",
+          "text": "You are now a member\nof my Science Club.\nNo is not an option."
+        },
+        {
+          "offset": "0x1354",
+          "original": "あなたは、もう、私の\n所属している電脳部の一員よ。\n嫌とは言わせないわよ。",
+          "text": "You are now a member\nof my Computer Club.\nNo is not an option."
+        },
+        {
+          "offset": "0x13a4",
+          "original": "い、いや……。\n（どうしたんだ、口が…、\n口が動かない。）",
+          "text": "N-no way...\n(What's wrong? My mouth...\nI can't move my mouth.)"
+        },
+        {
+          "offset": "0x13e0",
+          "original": "ふふふ…。\n既にデータは書き換えたわ。",
+          "text": "Heh heh heh...\nI've rewritten the data."
+        },
+        {
+          "offset": "0x1408",
+          "original": "データって…。\n一体、何のデータだ？",
+          "text": "Data...?\nWhat data?"
+        },
+        {
+          "offset": "0x142c",
+          "original": "逆らうことは、許されない。\n逆らえば、死あるのみよ。\nでは、また会いましょう。",
+          "text": "You will not defy me.\nDefy me, and you die.\nUntil we meet again."
+        },
+        {
+          "offset": "0x148c",
+          "original": "は、いつの間にか廊下にいる。\nそれに、音も聞こえない。",
+          "text": "Huh? I'm out in the hallway.\nAnd the noise has stopped."
+        },
+        {
+          "offset": "0x14c4",
+          "original": "い、今のは何だったんだ。",
+          "text": "W-what was that just now?"
+        },
+        {
+          "offset": "0x14e8",
+          "original": "…もしかして、\n科学部に\n入部させられたんじゃぁ？",
+          "text": "...Did I just\nget drafted into\nthe Science Club...?"
+        },
+        {
+          "offset": "0x1524",
+          "original": "…もしかして、\n電脳部に\n入部させられたんじゃぁ？",
+          "text": "...Did I just\nget drafted into\nthe Computer Club?"
+        },
+        {
+          "offset": "0x1560",
+          "original": "こんな問題、ちょろいもんよ。\nふっ…、俺って天才。",
+          "text": "These problems are a breeze.\nHeh... I'm a genius."
+        },
+        {
+          "offset": "0x1594",
+          "original": "うっ…。\n（誰だ、後ろから…。\n意識が薄れていく……。）",
+          "text": "Ugh...\n(Who's behind me...?\nI'm blacking out...)"
+        },
+        {
+          "offset": "0x15d4",
+          "original": "はっ、ここは実験室！\nか、体が動かない…。",
+          "text": "Huh? This is the lab!\nI-I can't move at all..."
+        },
+        {
+          "offset": "0x1600",
+          "original": "あら、{F}君。",
+          "text": "Oh, {F}-kun."
+        },
+        {
+          "offset": "0x160c",
+          "original": "目が覚めちゃったみたいね。\n",
+          "text": "Oh, so you're awake.\n"
+        },
+        {
+          "offset": "0x1628",
+          "original": "き、君は一体誰だ！？\n俺を、どうするつもりだ！？",
+          "text": "W-who are you?!\nWhat will you do to me?!"
+        },
+        {
+          "offset": "0x1658",
+          "original": "大丈夫、痛くないから。\nちょっと、じっとしてて。",
+          "text": "Relax, it won't hurt.\nJust hold still a moment."
+        },
+        {
+          "offset": "0x1688",
+          "original": "な、なにをするんだ！？\nやめろー！！",
+          "text": "Wh-what are you doing?!\nStop iiit!!"
+        },
+        {
+          "offset": "0x16ac",
+          "original": "わかったわよ。\n大きな声出さないでよ！\nしょうがないわね…。",
+          "text": "All right, all right.\nDon't shout!\nHonestly..."
+        },
+        {
+          "offset": "0x16e8",
+          "original": "早く、動けるように\nしてくれ！！",
+          "text": "Hurry up and\nlet me move!!"
+        },
+        {
+          "offset": "0x1708",
+          "original": "自分の体に飽きたら、\nこの紐緒結奈に相談しなさい。\nいつでも、待ってるわよ。",
+          "text": "If you tire of your body,\ncome see me, Himoo Yuina.\nI'll be waiting, anytime."
+        },
+        {
+          "offset": "0x1754",
+          "original": "うっ…。\n（また、意識が薄れていく…。）",
+          "text": "Ugh...\n(Blacking out again...)"
+        },
+        {
+          "offset": "0x17a4",
+          "original": "はっ、ゆ、夢か…。\nよかった…。\nん、ノートに落書きがあるぞ。\n何々、改造のご用命は、\n科学部、紐緒結奈まで…。",
+          "text": "Huh? A-a dream...?\nPhew...\nA scribble in my notebook.\n'For body upgrades, see\nHimoo Yuina, Science Club.'"
+        },
+        {
+          "offset": "0x1818",
+          "original": "はっ、ゆ、夢か…。\nよかった…。\nん、ノートに落書きがあるぞ。\n何々、改造のご用命は、\n電脳部、紐緒結奈まで…。",
+          "text": "Huh? A-a dream...?\nPhew...\nA scribble in my notebook.\n'For body upgrades, see\nHimoo Yuina, Computer Club.'"
+        },
+        {
+          "offset": "0x188c",
+          "original": "さーてと、\n今日は、何の実験を\nしようかな。",
+          "text": "Now then,\nwhat experiment\nshall I run today?"
+        },
+        {
+          "offset": "0x18bc",
+          "original": "{p}君。\n私の実験を、\nちょっと手伝ってくれる。",
+          "text": "{p}-kun.\nCome help me with\nmy experiment."
+        },
+        {
+          "offset": "0x18e8",
+          "original": "あの…。\nあなたは…。",
+          "text": "Um...\nAnd you are...?"
+        },
+        {
+          "offset": "0x1900",
+          "original": "紐緒結奈よ。\n早く来なさい！！",
+          "text": "Himoo Yuina.\nNow come here!!"
+        },
+        {
+          "offset": "0x1920",
+          "original": "は、はい。",
+          "text": "Y-yes."
+        },
+        {
+          "offset": "0x193c",
+          "original": "うわああああ！",
+          "text": "Waaaaaah!"
+        },
+        {
+          "offset": "0x194c",
+          "original": "おおおおっ！",
+          "text": "Whoooaaa!"
+        },
+        {
+          "offset": "0x195c",
+          "original": "ぎゃああああ！",
+          "text": "Gyaaaaah!"
+        },
+        {
+          "offset": "0x1978",
+          "original": "はあ、はあ、はあ。",
+          "text": "Pant, pant, pant..."
+        },
+        {
+          "offset": "0x198c",
+          "original": "あなた、なかなか\nいい筋してるじゃない。\nじゃあ、また、頼むわね。",
+          "text": "You show real\npromise, you know.\nI'll call on you again."
+        },
+        {
+          "offset": "0x19d8",
+          "original": "‥‥‥‥。\nもう、いやだぁー！！",
+          "text": "‥‥‥‥。\nNever agaaain!!"
+        },
+        {
+          "offset": "0x19fc",
+          "original": "えーと、アイスって\nどういう意味かなあ。",
+          "text": "Um, what does\n'ICE' mean, I wonder?"
+        },
+        {
+          "offset": "0x1a28",
+          "original": "それはね、\nインサーキット\nエミュレータといって\n開発するターゲットを\n実環境に近い状態で\nリアルタイムに\nテストするための\n装置のことよ。",
+          "text": "It's an in-circuit\nemulator. You use it\nto test a system\nwhile developing it,\nin real time,\nunder conditions\nthat closely match\nthe real thing."
+        },
+        {
+          "offset": "0x1ab0",
+          "original": "あ、ありがとう。\nえーと…。",
+          "text": "Th-thanks.\nUm..."
+        },
+        {
+          "offset": "0x1acc",
+          "original": "紐緒結奈。\n同じ部にいる人の名前ぐらい、\n入部のときに覚えなさいよ。",
+          "text": "Himoo Yuina.\nYou should've learned\nour names when you joined."
+        },
+        {
+          "offset": "0x1b10",
+          "original": "ご、ごめんなさい…。\n紐緒さん。",
+          "text": "S-sorry...\nHimoo-san."
+        },
+        {
+          "offset": "0x1b30",
+          "original": "そんなことだから、\nこんな初歩的なことも\nわからないのよ。",
+          "text": "That's exactly why\nyou don't understand\nsomething this basic."
+        },
+        {
+          "offset": "0x1b6c",
+          "original": "それが、初歩的か？",
+          "text": "THAT is basic?"
+        },
+        {
+          "offset": "0x1b80",
+          "original": "もっと、しっかり\n勉強することね。\nそれじゃ、失礼するわ。",
+          "text": "You'd better\nstudy harder.\nNow, excuse me."
+        },
+        {
+          "offset": "0x1bd8",
+          "original": "はあ…、きつい女。",
+          "text": "Yeesh, she's intense..."
+        },
+        {
+          "offset": "0x27a0",
+          "original": "絵は、心が休まるぜ。\n（くーっ、しびれるセリフ。）",
+          "text": "Painting soothes the soul.\n(Ooh, what a cool line.)"
+        },
+        {
+          "offset": "0x27d4",
+          "original": "ビューティフル、\n素敵な絵ね。",
+          "text": "Beautiful!\nWhat a lovely painting."
+        },
+        {
+          "offset": "0x27fc",
+          "original": "あ、ありがとう。",
+          "text": "Th-thanks."
+        },
+        {
+          "offset": "0x2814",
+          "original": "あ、あなた\n美術部の…。\nえーと誰だっけ？",
+          "text": "Oh, you're\nin the Art Club...\num, who are you again?"
+        },
+        {
+          "offset": "0x2840",
+          "original": "{F}だよ。\nそういう君も、美術部の…。\nうーんと、誰だっけ？",
+          "text": "I'm {F}.\nAnd you're in the Art Club\ntoo... um, who are you?"
+        },
+        {
+          "offset": "0x2878",
+          "original": "あはははは…。\n片桐彩子よぉ。\nああ、おかしい…。",
+          "text": "Ahahaha...\nI'm Katagiri Ayako.\nOh, that's funny..."
+        },
+        {
+          "offset": "0x28ac",
+          "original": "あれ、部活はどうしたの？",
+          "text": "What about practice?"
+        },
+        {
+          "offset": "0x28c8",
+          "original": "それはこっちのセリフよ。\nどうして美術室で\n描かないの？",
+          "text": "I could ask you the same.\nWhy aren't you painting\nin the art room?"
+        },
+        {
+          "offset": "0x2900",
+          "original": "なんて言うの……。\n僕は芸術家だから、\n群れるのは嫌いなんだ。",
+          "text": "How shall I put it...\nI'm an artist, so I\ndon't like crowds."
+        },
+        {
+          "offset": "0x2940",
+          "original": "じゃあどうして、美術部に\n入部したのよ。",
+          "text": "Then why did you\njoin the Art Club?"
+        },
+        {
+          "offset": "0x2968",
+          "original": "なんて言うの……。\n僕は、芸術家だから\n矛盾が大好きなんだ。",
+          "text": "How shall I put it...\nI'm an artist, so I\njust love contradictions."
+        },
+        {
+          "offset": "0x29a4",
+          "original": "あはははは…。\nそんな芸術家いないわよ。",
+          "text": "Ahahaha...\nNo artist talks like that!"
+        },
+        {
+          "offset": "0x29cc",
+          "original": "やっぱりぃ……。\n単に、外で描きたかった\nだけなんだけどね。",
+          "text": "Well, yeah...\nI just wanted to\npaint outside, really."
+        },
+        {
+          "offset": "0x2a08",
+          "original": "ああ、涙出てきちゃった。\n今度は美術室で、\nお話しましょう。",
+          "text": "Oh, I'm laughing so hard\nI'm crying. Next time,\ncome talk in the art room."
+        },
+        {
+          "offset": "0x2a70",
+          "original": "すぐに笑う、面白い奴…。",
+          "text": "She laughs a lot. She's fun."
+        },
+        {
+          "offset": "0x2a90",
+          "original": "そんなに上手なんだから、\n美術部に入部すれば\nいいのに…。",
+          "text": "You're so good,\nyou should join\nthe Art Club..."
+        },
+        {
+          "offset": "0x2acc",
+          "original": "絵は、たまに描くぐらいが、\n健康にいいんだよ。",
+          "text": "Painting now and then\nis good for your health."
+        },
+        {
+          "offset": "0x2afc",
+          "original": "へえ…\n絵ってたまに描くと\n健康にいいんだ。",
+          "text": "Huh...\nPainting now and then\nis good for your health?"
+        },
+        {
+          "offset": "0x2b28",
+          "original": "そう、手のつぼを刺激されて、\nこう…。\n違うって。",
+          "text": "Right, it stimulates\nthe points in your hand,\nlike... Wait, no."
+        },
+        {
+          "offset": "0x2b5c",
+          "original": "あはははは…。\n私、片桐彩子って言うの。\nあなたは…？",
+          "text": "Ahahaha...\nI'm Katagiri Ayako.\nAnd you are...?"
+        },
+        {
+          "offset": "0x2b94",
+          "original": "あ、俺、{F}。",
+          "text": "Oh, I'm {F}."
+        },
+        {
+          "offset": "0x2ba0",
+          "original": "気が向いたら\n美術室に遊びに来てよ。\n歓迎するわよ。",
+          "text": "Drop by the\nart room sometime.\nYou'll be welcome."
+        },
+        {
+          "offset": "0x2bd4",
+          "original": "ああ、気が向いたらね。",
+          "text": "Sure, if I feel like it."
+        },
+        {
+          "offset": "0x2bec",
+          "original": "それじゃ、また。",
+          "text": "See you later."
+        },
+        {
+          "offset": "0x2c24",
+          "original": "面白い奴…。",
+          "text": "Funny girl..."
+        },
+        {
+          "offset": "0x2c38",
+          "original": "私も絵が好きで、\nたまに描いてるんだ。",
+          "text": "I like painting too.\nI paint now and then."
+        },
+        {
+          "offset": "0x2c60",
+          "original": "へぇ、今度見せてよ。",
+          "text": "Oh? Show me sometime."
+        },
+        {
+          "offset": "0x2c78",
+          "original": "駄目よ。\n私の絵は、人に見せると\n動きだすのよ。",
+          "text": "No way.\nWhen people see my art,\nit starts moving."
+        },
+        {
+          "offset": "0x2ca8",
+          "original": "それを、俺が縄で\n捕まえると…。\n俺は、一休さんか？",
+          "text": "Then I catch it\nwith a rope...?\nWhat am I, Ikkyuu-san?"
+        },
+        {
+          "offset": "0x2cdc",
+          "original": "あはははは…。\n私、片桐彩子。\nあなたは？\n",
+          "text": "Ahahaha...\nI'm Katagiri Ayako.\nAnd you?\n"
+        },
+        {
+          "offset": "0x2d08",
+          "original": "あ、俺、{F}。",
+          "text": "Oh, I'm {F}."
+        },
+        {
+          "offset": "0x2d14",
+          "original": "絵の事は考えておくわ。\n今度また、絵の話をしようよ。\nそれじゃ。",
+          "text": "I'll think about it.\nLet's talk painting again.\nSee you."
+        },
+        {
+          "offset": "0x2d70",
+          "original": "あっ、逃げた。\n片桐彩子、侮れん奴だ。",
+          "text": "She slipped away!\nGotta watch out for her."
+        },
+        {
+          "offset": "0x2d9c",
+          "original": "絵は、心が休まるぜ。\n（くーっ、しびれるセリフ。）",
+          "text": "Painting soothes the soul.\n(Ooh, what a cool line.)"
+        },
+        {
+          "offset": "0x2dd0",
+          "original": "ビューティフル、\n素敵な絵ね。",
+          "text": "Beautiful!\nWhat a lovely painting."
+        },
+        {
+          "offset": "0x2df8",
+          "original": "あ、ありがとう…。\n（えーと、この娘は誰だっけ？\n思い出せ、思い出すんだ。\n{m}よ！）",
+          "text": "Th-thanks...\n(Um, who is she again?\nRemember, remember,\n{m}!)"
+        },
+        {
+          "offset": "0x2e4c",
+          "original": "どうしたの？\n呆然としちゃって。\n",
+          "text": "What's wrong?\nYou look dazed.\n"
+        },
+        {
+          "offset": "0x2e70",
+          "original": "か、…。\n（いいや、勘で言っちゃえ。）",
+          "text": "K-...\n(Eh, I'll just guess.)"
+        },
+        {
+          "offset": "0x2e98",
+          "original": "片桐さん？",
+          "text": "Katagiri-san?"
+        },
+        {
+          "offset": "0x2ea4",
+          "original": "そうよ。\nどうしちゃったの。\nまさか忘れてたんじゃ…。",
+          "text": "That's right.\nWhat's up with you?\nDid you forget me...?"
+        },
+        {
+          "offset": "0x2edc",
+          "original": "そ、そんな事ないよ。\n（よーし、当たったぁ。\n入部のときの自己紹介\nだけだもんなぁ。\n思いっ切り、忘れてたよ。）",
+          "text": "N-no, of course not.\n(Yes, nailed it!\nWe only met when we\nintroduced ourselves.\nI totally forgot.)"
+        },
+        {
+          "offset": "0x2f4c",
+          "original": "それにしても、\n素敵な絵を描くのね。",
+          "text": "Anyway,\nyou paint lovely pictures."
+        },
+        {
+          "offset": "0x2f70",
+          "original": "お誉めにあずかり光栄です。\n片桐さんは、描かないの？",
+          "text": "I'm flattered.\nDo you draw, Katagiri-san?"
+        },
+        {
+          "offset": "0x2fa4",
+          "original": "私の絵は秘密なの。",
+          "text": "My paintings are a secret."
+        },
+        {
+          "offset": "0x2fb8",
+          "original": "１８才未満お断りとか。",
+          "text": "Like, adults only?"
+        },
+        {
+          "offset": "0x2fd0",
+          "original": "そう、細部までばっちり…。\n何で、私がそんな絵描くのよ。\nそのうちわかるわよ。",
+          "text": "Yes, every last detail...\nWhy would I paint that?!\nYou'll find out someday."
+        },
+        {
+          "offset": "0x3020",
+          "original": "ずるい、逃げる気だな。",
+          "text": "No fair, you're dodging."
+        },
+        {
+          "offset": "0x3038",
+          "original": "そのうちよ、そのうち…。\nじゃあ、私帰るね。",
+          "text": "Someday, someday...\nWell, I'm heading home."
+        },
+        {
+          "offset": "0x3098",
+          "original": "ちっ、逃げられたか…。",
+          "text": "Tch, she got away..."
+        },
+        {
+          "offset": "0x30b4",
+          "original": "心の安らぎは、音楽にあり。\n（くーっ、しびれるセリフ。）",
+          "text": "Peace of mind lies in music.\n(Ooh, what a cool line.)"
+        },
+        {
+          "offset": "0x30ec",
+          "original": "マーベラス、素敵な演奏ね。",
+          "text": "Marvelous! Lovely playing."
+        },
+        {
+          "offset": "0x3110",
+          "original": "あ、ありがとう…。\n（えーと、この娘は誰だっけ？\n思い出せ、思い出すんだ。\n{m}よ！）",
+          "text": "Th-thanks...\n(Um, who is she again?\nRemember, remember,\n{m}!)"
+        },
+        {
+          "offset": "0x3164",
+          "original": "どうしたの？\n呆然としちゃって。\n",
+          "text": "What's wrong?\nYou look dazed.\n"
+        },
+        {
+          "offset": "0x3188",
+          "original": "か、…。\n（いいや、勘で言っちゃえ。）",
+          "text": "K-...\n(Eh, I'll just guess.)"
+        },
+        {
+          "offset": "0x31b0",
+          "original": "片桐さん？",
+          "text": "Katagiri-san?"
+        },
+        {
+          "offset": "0x31bc",
+          "original": "そうよ。\nどうしちゃったの。\nまさか忘れてたんじゃ…。",
+          "text": "That's right.\nWhat's up with you?\nDid you forget me...?"
+        },
+        {
+          "offset": "0x31f4",
+          "original": "そ、そんな事ないよ。\n（よーし、当たったぁ。\n入部のときの自己紹介\nだけだもんなぁ。\n思いっ切り、忘れてたよ。）",
+          "text": "N-no, of course not.\n(Yes, nailed it!\nWe only met when we\nintroduced ourselves.\nI totally forgot.)"
+        },
+        {
+          "offset": "0x3264",
+          "original": "それにしても、\n素晴らしかったわね\n今の演奏。",
+          "text": "Still,\nthat was a wonderful\nperformance!"
+        },
+        {
+          "offset": "0x3294",
+          "original": "お誉めにあずかり光栄です。\n{G}のクラリネットも\n素晴らしい音色だね。",
+          "text": "You're too kind.\n{G}, your clarinet\nsounds beautiful too."
+        },
+        {
+          "offset": "0x32d8",
+          "original": "やっぱりそう思う。\nあはははは…。",
+          "text": "You think so too?\nAhahaha..."
+        },
+        {
+          "offset": "0x3308",
+          "original": "今度は個人的に演奏を\n聞かせてね。\nじゃあ私帰るから。",
+          "text": "Next time, play\njust for me, okay?\nWell, I'm heading home."
+        },
+        {
+          "offset": "0x3b68",
+          "original": "なあ、好雄…。\n最近なんか面白いことないか？",
+          "text": "Hey, Yoshio...\nAnything fun lately?"
+        },
+        {
+          "offset": "0x3b94",
+          "original": "そうだな…。\nあ、危ない。",
+          "text": "Let's see...\nWhoa, look out!"
+        },
+        {
+          "offset": "0x3bb0",
+          "original": "きゃっ。",
+          "text": "Eek!"
+        },
+        {
+          "offset": "0x3bc8",
+          "original": "いったーい。",
+          "text": "Owww!"
+        },
+        {
+          "offset": "0x3bd8",
+          "original": "だ、大丈夫ですか？",
+          "text": "A-are you okay?"
+        },
+        {
+          "offset": "0x3bec",
+          "original": "大丈夫じゃないわよ。\n早く起こしなさいよね。",
+          "text": "No, I am NOT okay.\nHelp me up this instant."
+        },
+        {
+          "offset": "0x3c18",
+          "original": "あ、はい。\nよいしょっと。",
+          "text": "Oh, right.\nUp you go."
+        },
+        {
+          "offset": "0x3c44",
+          "original": "ジロジロ",
+          "text": "Stare, stare"
+        },
+        {
+          "offset": "0x3c50",
+          "original": "何だろ。\n人の顔をジロジロと…。",
+          "text": "What's with her?\nStaring right at me..."
+        },
+        {
+          "offset": "0x3c70",
+          "original": "まあ、いいわ。\n許してあげる。\nあなた、お名前は？",
+          "text": "Very well.\nI forgive you.\nWhat is your name?"
+        },
+        {
+          "offset": "0x3ca4",
+          "original": "{F}だけど…。",
+          "text": "Uh, {F}..."
+        },
+        {
+          "offset": "0x3cb0",
+          "original": "それじゃ、また会いましょう。\n{p}君。",
+          "text": "Until we meet again,\n{p}-kun."
+        },
+        {
+          "offset": "0x3cd4",
+          "original": "ほーほほほほほほ。",
+          "text": "Oh-ho-ho-ho-ho!"
+        },
+        {
+          "offset": "0x3d00",
+          "original": "…。\nなあ、好雄…。\n今の、誰？",
+          "text": "...\nHey, Yoshio...\nWho was that?"
+        },
+        {
+          "offset": "0x3d20",
+          "original": "お前、知らないのかよ。\nファンクラブまである、\n鏡魅羅を。",
+          "text": "You really don't know\nKagami Mira? She's even\ngot a fan club."
+        },
+        {
+          "offset": "0x3d5c",
+          "original": "へぇ、今の娘が、\nあの、鏡魅羅なんだ…。",
+          "text": "Oh, so that was\nthe famous Kagami Mira..."
+        },
+        {
+          "offset": "0x3d84",
+          "original": "いいよなあ、お前\n名前覚えてもらえて…。",
+          "text": "Lucky you, man.\nShe knows your name now..."
+        },
+        {
+          "offset": "0x4010",
+          "original": "ああ、読書は楽しいなあ。\nなんて、俺って\n勉強家なんだろう。",
+          "text": "Ah, reading is such fun.\nMan, I'm such a\nstudious guy."
+        },
+        {
+          "offset": "0x404c",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0x4060",
+          "original": "ハンカチが落ちてますよ。",
+          "text": "You dropped a handkerchief."
+        },
+        {
+          "offset": "0x407c",
+          "original": "え…。\nあ、ありがとう。\nいつの間に落ちたんだろう。",
+          "text": "Huh...?\nOh, thank you.\nWhen did I drop that?"
+        },
+        {
+          "offset": "0x40b0",
+          "original": "クスッ…。\n随分、熱心に\n読んでいたのですね。",
+          "text": "Hee hee...\nYou were so\nabsorbed in your book."
+        },
+        {
+          "offset": "0x40e0",
+          "original": "ほら、僕って好きなことに\n熱中するタイプだから。\nははは…。",
+          "text": "Well, I'm the type who\ngets lost in what I love.\nHa ha ha..."
+        },
+        {
+          "offset": "0x411c",
+          "original": "私も本を読みだすと、\nすぐ熱中して\nしまうんですよ。",
+          "text": "When I start reading,\nI get lost in it\nright away too."
+        },
+        {
+          "offset": "0x4150",
+          "original": "へー、そうなんだ。",
+          "text": "Oh, really?"
+        },
+        {
+          "offset": "0x4164",
+          "original": "あっ、もう行かなきゃ。",
+          "text": "Oh, I have to go."
+        },
+        {
+          "offset": "0x417c",
+          "original": "あ、俺…。\n{F}っていいます。\nハンカチありがとう。",
+          "text": "Oh, I'm...\nmy name's {F}.\nThanks for the hanky."
+        },
+        {
+          "offset": "0x41ac",
+          "original": "どういたしまして…。\n私、如月未緒といいます。\nまた、今度お話しましょう。",
+          "text": "You're welcome...\nMy name is Kisaragi Mio.\nLet's talk again sometime."
+        },
+        {
+          "offset": "0x421c",
+          "original": "如月未緒さんか…。\n結構、可愛かったな。",
+          "text": "Kisaragi Mio-san, huh...\nShe was pretty cute."
+        },
+        {
+          "offset": "0x4248",
+          "original": "ああ、読書は楽しいなあ。\nなんて、俺って\n勉強家なんだろう。",
+          "text": "Ah, reading is such fun.\nMan, I'm such a\nstudious guy."
+        },
+        {
+          "offset": "0x4284",
+          "original": "やや、こんな所に\n本が落ちてるぞ。",
+          "text": "Whoa, someone\ndropped a book here."
+        },
+        {
+          "offset": "0x42a8",
+          "original": "難しそうな、本だなあ。\n一体、誰の忘れ物だろう。",
+          "text": "Looks like a tough read.\nWonder who left it here."
+        },
+        {
+          "offset": "0x42d8",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0x42f4",
+          "original": "この辺りに、本が落ちて\nいなかったでしょうか？",
+          "text": "Did you see a book\nlying around here?"
+        },
+        {
+          "offset": "0x4324",
+          "original": "あ、これのこと？",
+          "text": "Oh, this one?"
+        },
+        {
+          "offset": "0x4338",
+          "original": "そうです！\n良かった、見つかって…。",
+          "text": "Yes, that's it!\nThank goodness..."
+        },
+        {
+          "offset": "0x435c",
+          "original": "随分、難しい本、\n読んでるんだね。",
+          "text": "You read some\npretty tough books."
+        },
+        {
+          "offset": "0x4380",
+          "original": "ご、ごめんなさい…。\nすごく大事な本だったので。\n私、如月未緒といいます。",
+          "text": "I-I'm sorry...\nThat book means a lot.\nI'm Kisaragi Mio."
+        },
+        {
+          "offset": "0x43cc",
+          "original": "{P}。\n本当に、ありがとう\nございました。",
+          "text": "{P},\nthank you\nso much."
+        },
+        {
+          "offset": "0x43f4",
+          "original": "いえ、どういたしまして。\n今度、またお話したいな。",
+          "text": "Oh, it was nothing.\nI'd like to talk again."
+        },
+        {
+          "offset": "0x4428",
+          "original": "こちらこそぜひ。\nあっ、もう行かなきゃ。",
+          "text": "I'd like that too.\nOh, I have to go."
+        },
+        {
+          "offset": "0x4474",
+          "original": "如月未緒さんか…。\n結構、可愛かったな。",
+          "text": "Kisaragi Mio-san, huh...\nShe was pretty cute."
+        },
+        {
+          "offset": "0x44a0",
+          "original": "部活に遅れちゃったよ。\n今日は、大事な話が\nあるって言ってたっけ。",
+          "text": "I'm late for club.\nThey said there was\nsomething important today."
+        },
+        {
+          "offset": "0x44e8",
+          "original": "ありゃ、\nもうミーティングは\n終わっちゃったのかな。",
+          "text": "Uh-oh,\nis the meeting\nalready over?"
+        },
+        {
+          "offset": "0x451c",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0x4530",
+          "original": "はい…。\nえーと、あなたは、たしか…。\n同じ文芸部の…。",
+          "text": "Yes...?\nUm, you're, uh...\nin the Literature Club..."
+        },
+        {
+          "offset": "0x4568",
+          "original": "私、如月未緒といいます。\n先程、文化祭の発表の事で\n話し合いがありまして…。",
+          "text": "My name is Kisaragi Mio.\nWe just had a meeting\non our festival project..."
+        },
+        {
+          "offset": "0x45b4",
+          "original": "そうか、今日の話って、\nその事だったんだ。",
+          "text": "Oh, so that's what\ntoday was about."
+        },
+        {
+          "offset": "0x45e0",
+          "original": "それで、私と一緒に、\n研究発表することに\nなりましたので、これから\nよろしくお願いします。",
+          "text": "And so, we'll be\ngiving a research\npresentation together.\nI look forward to it."
+        },
+        {
+          "offset": "0x4638",
+          "original": "へぇ、そうなんだ。\nこちらこそ、よろしく。",
+          "text": "Oh, I see.\nI'm looking forward to it."
+        },
+        {
+          "offset": "0x4664",
+          "original": "それでは、失礼します。",
+          "text": "Well, please excuse me."
+        },
+        {
+          "offset": "0x4698",
+          "original": "如月未緒さんか…。\n（あんな、可愛い娘と\n共同研究なんて、\n俺ってついてるなあ。）",
+          "text": "Kisaragi Mio-san, huh...\n(Working on research\nwith a girl that cute?\nLucky me!)"
+        },
+        {
+          "offset": "0x46ec",
+          "original": "部活で読書…。\nうーん、俺ってなんて\n本が似合う男なんだろう。",
+          "text": "Reading at club...\nMan, books really\nlook good on me."
+        },
+        {
+          "offset": "0x472c",
+          "original": "あの…、{P}…。",
+          "text": "Um... {P}..."
+        },
+        {
+          "offset": "0x4744",
+          "original": "はい…。\nえーと、あなたは…。\n{G}…でしたよね。",
+          "text": "Yes...?\nUm, you're...\n{G}, right?"
+        },
+        {
+          "offset": "0x4774",
+          "original": "はい、そうです…。\nあの…、この本大変面白いので、\nよろしかったらどうぞ…。",
+          "text": "Yes, that's right...\nUm, this book is great.\nPlease give it a try..."
+        },
+        {
+          "offset": "0x47c0",
+          "original": "ありがとう、ありがたく\n読ませてもらうよ。\nでも…、難しそうな本だね。",
+          "text": "Thanks, I'll gladly\ngive it a read.\nBut... it looks tough."
+        },
+        {
+          "offset": "0x4808",
+          "original": "うふふ…。\nそんなことないですよ。\nきっと感動しますよ。",
+          "text": "Hee hee...\nNot at all.\nI'm sure it will move you."
+        },
+        {
+          "offset": "0x4840",
+          "original": "しばらく借りてて、\nいいのかな？",
+          "text": "Is it okay if I\nborrow it a while?"
+        },
+        {
+          "offset": "0x4860",
+          "original": "いつまででも結構ですよ。\nそれでは、そろそろ\n失礼します。",
+          "text": "As long as you like.\nWell then, I'll\nbe going now."
+        },
+        {
+          "offset": "0x48b4",
+          "original": "今まで、おとなしくて\n目立たなかったけど\n如月さんって、結構\n可愛いなあ…。",
+          "text": "She's been so quiet\nI barely noticed her.\nBut Kisaragi-san's\npretty cute..."
+        },
+        {
+          "offset": "0x4900",
+          "original": "話しかけられるなんて、\n超ラッキーだぜ。",
+          "text": "And she talked to me!\nTotally lucky."
+        },
+        {
+          "offset": "0x4930",
+          "original": "{>部長}はい、そこで廻って！\n駄目駄目、\nもう一度やり直し。",
+          "text": "{>Capt}And... turn!\nNo, no, no,\nfrom the top."
+        },
+        {
+          "offset": "0x4968",
+          "original": "あっ、大変だ！\n誰か倒れたぞ。\n（あれは{G}だ）",
+          "text": "Oh no!\nSomeone collapsed!\n(It's {G})"
+        },
+        {
+          "offset": "0x49a0",
+          "original": "{>部長}大丈夫、軽い貧血みたいね。",
+          "text": "{>Capt}She's fine. Mild anemia."
+        },
+        {
+          "offset": "0x49c0",
+          "original": "{>部長}君、悪いけど\nここで、見ててあげて。",
+          "text": "{>Capt}Sorry, can you stay\nhere and watch her?"
+        },
+        {
+          "offset": "0x49ec",
+          "original": "そんな強引な…",
+          "text": "That's pushy..."
+        },
+        {
+          "offset": "0x49fc",
+          "original": "{>部長}さあ、練習練習。",
+          "text": "{>Capt}Okay, back to practice!"
+        },
+        {
+          "offset": "0x4a14",
+          "original": "ああっ、みんな\n行ってしまった。",
+          "text": "Aah, everyone's\ngone."
+        },
+        {
+          "offset": "0x4a34",
+          "original": "でも、如月さんって\n結構、可愛いよな…。\nこれって、結構役得かな？",
+          "text": "Still, Kisaragi-san's\npretty cute...\nIs this a lucky break?"
+        },
+        {
+          "offset": "0x4a90",
+          "original": "う、うん…。",
+          "text": "Y-yeah..."
+        },
+        {
+          "offset": "0x4aa0",
+          "original": "あ、気がついた？",
+          "text": "Oh, you're awake?"
+        },
+        {
+          "offset": "0x4abc",
+          "original": "介抱して下さったんですね。\nありがとうございました。",
+          "text": "You took care of me...\nThank you so much."
+        },
+        {
+          "offset": "0x4af0",
+          "original": "ああ、そんな事\n気にしなくていいよ。\n（部長にやらされたんだし…。）",
+          "text": "Oh, don't\nworry about it.\n(The captain made me...)"
+        },
+        {
+          "offset": "0x4b34",
+          "original": "{P}…。\n優しいんですね…。",
+          "text": "{P}...\nyou're so kind..."
+        },
+        {
+          "offset": "0x4b50",
+          "original": "そ、そんなことないって！\nじ、じゃあ俺、練習に、\n戻るから…。",
+          "text": "N-not really!\nW-well, I'm heading\nback to practice..."
+        },
+        {
+          "offset": "0x4b90",
+          "original": "私は、もう少し\n休んでから行きます。",
+          "text": "I'll rest a little\nlonger before I go."
+        },
+        {
+          "offset": "0x4bc8",
+          "original": "如月未緒さんか…。\nあれ、どうして、俺の名前\n知ってるんだ？",
+          "text": "Kisaragi Mio-san, huh...\nWait, how does she\nknow my name?"
+        },
+        {
+          "offset": "0x4c04",
+          "original": "まさか俺に気があるんじゃ…。\n…………。",
+          "text": "Could she be into me...?\n…………。"
+        },
+        {
+          "offset": "0x4c2c",
+          "original": "同じ部なんだから当たり前か。\n俺も彼女の名前だけは\n知ってるもんな…。",
+          "text": "We're in the same club, duh.\nI know her name\ntoo, after all..."
+        },
+        {
+          "offset": "0x54fc",
+          "original": "あーあ、今日も\n一日疲れたなぁ。",
+          "text": "Man, another\ntiring day, huh."
+        },
+        {
+          "offset": "0x551c",
+          "original": "あーっ…、あぶな…。",
+          "text": "Ah... look ou..."
+        },
+        {
+          "offset": "0x5544",
+          "original": "大丈夫ですか？",
+          "text": "Are you all right?"
+        },
+        {
+          "offset": "0x5558",
+          "original": "いてて…。",
+          "text": "Ow, ow..."
+        },
+        {
+          "offset": "0x5564",
+          "original": "あの…。\nお怪我は、\nございませんか？",
+          "text": "Um...\nAre you\nhurt at all?"
+        },
+        {
+          "offset": "0x558c",
+          "original": "ああ、何とか、\n生きてるみたい。",
+          "text": "Yeah, somehow\nI'm still alive."
+        },
+        {
+          "offset": "0x55ac",
+          "original": "申し訳ございません。\nでも、平気そうですね。",
+          "text": "I'm terribly sorry.\nBut you seem all right."
+        },
+        {
+          "offset": "0x55d8",
+          "original": "大丈夫じゃないよ。\nお詫びに、名前教えて？",
+          "text": "I'm not! Make it up to me\nby telling me your name."
+        },
+        {
+          "offset": "0x5604",
+          "original": "うふふ…。\n古式ゆかりと申します。\nあなたの名前は？",
+          "text": "Hee hee...\nI am Koshiki Yukari.\nAnd your name is?"
+        },
+        {
+          "offset": "0x5638",
+          "original": "それでは、私はそろそろ\nクラブに戻りますので、\n失礼いたします。",
+          "text": "Well then, I should\nget back to practice.\nPlease excuse me."
+        },
+        {
+          "offset": "0x5698",
+          "original": "ボールは、痛かったけど\n{G}と、知り合えたから\nいいか…。",
+          "text": "The ball hurt, but\nI met {G},\nso I guess it's okay..."
+        },
+        {
+          "offset": "0x56d4",
+          "original": "今日は、混成ダブルスの練習だ。\n早くコートに行かなくっちゃ。",
+          "text": "It's mixed doubles today.\nGotta hurry to the court."
+        },
+        {
+          "offset": "0x5710",
+          "original": "あのー…。",
+          "text": "Excuse me..."
+        },
+        {
+          "offset": "0x5724",
+          "original": "あっ、はい。\n何でしょう？",
+          "text": "Oh, yes?\nWhat is it?"
+        },
+        {
+          "offset": "0x5740",
+          "original": "お急ぎ中、失礼いたします。\n本日の混成ダブルスで、\nペアになる方を\n探しているのですが…。",
+          "text": "Sorry to stop you\nwhen you're in a hurry.\nI'm looking for my\nmixed doubles partner..."
+        },
+        {
+          "offset": "0x5798",
+          "original": "ペアの相手って。",
+          "text": "Your partner?"
+        },
+        {
+          "offset": "0x57ac",
+          "original": "お名前を忘れてしまって…。\n私、古式と申しますけれども\n聞き覚えございませんか？",
+          "text": "I've forgotten his name...\nMy name is Koshiki.\nDoes it ring a bell?"
+        },
+        {
+          "offset": "0x57fc",
+          "original": "あーっ！\n{G}って、\n古式ゆかりさん？",
+          "text": "Ah!\n{G}...\nKoshiki Yukari-san?"
+        },
+        {
+          "offset": "0x5820",
+          "original": "そう、ですけれども…。\n心当たりは、\nございますか？",
+          "text": "Yes, that's me...\nDo you know\nwho it might be?"
+        },
+        {
+          "offset": "0x5854",
+          "original": "はあ…？\nなんでしょう？",
+          "text": "Pardon...?\nWhat is it?"
+        },
+        {
+          "offset": "0x586c",
+          "original": "俺が、{G}のパートナー。\n名前は、{F}。",
+          "text": "{G}, it's me.\nYour partner, {F}."
+        },
+        {
+          "offset": "0x5890",
+          "original": "それは、失礼をいたしました。\nそれでは、今日は\nよろしくお願いいたします。",
+          "text": "I'm terribly sorry.\nI look forward to\nplaying with you today."
+        },
+        {
+          "offset": "0x58dc",
+          "original": "こちらこそ。",
+          "text": "Likewise."
+        },
+        {
+          "offset": "0x5c8c",
+          "original": "ふーっ、疲れた。\n（朝早く走るのは、\n気持ちがいいなあ。）",
+          "text": "Phew, I'm beat.\n(Running early in the\nmorning feels great.)"
+        },
+        {
+          "offset": "0x5ccc",
+          "original": "おはよう。",
+          "text": "Morning!"
+        },
+        {
+          "offset": "0x5cdc",
+          "original": "…！\nお、おはよう。\n（馴れ馴れしい奴だなあ。）",
+          "text": "...!\nG-good morning.\n(She's awfully friendly.)"
+        },
+        {
+          "offset": "0x5d0c",
+          "original": "君も今、走ってきたの？",
+          "text": "Were you out running too?"
+        },
+        {
+          "offset": "0x5d24",
+          "original": "ああ、そうだよ。\n君もそうなの？",
+          "text": "Yeah, I was.\nYou too?"
+        },
+        {
+          "offset": "0x5d44",
+          "original": "私、毎朝５０キロの\nロードワークを\n欠かしたことないから。",
+          "text": "I run 50 km\nevery morning.\nNever miss a day."
+        },
+        {
+          "offset": "0x5d80",
+          "original": "ま、毎朝、５０キロ！\n君…、きらめき高校の人？",
+          "text": "F-fifty km every morning?!\nYou go to Kirameki High?"
+        },
+        {
+          "offset": "0x5db0",
+          "original": "うん、そう。\n私、清川望。\n君もそうなの？",
+          "text": "Yeah, that's right.\nI'm Kiyokawa Nozomi.\nYou too?"
+        },
+        {
+          "offset": "0x5ddc",
+          "original": "そう、俺、{F}。\n清川って…。\nあの、水泳部の清川さん？",
+          "text": "Yeah, I'm {F}.\nKiyokawa...?\nKiyokawa-san from swim?"
+        },
+        {
+          "offset": "0x5e10",
+          "original": "そうだけど…。\nへぇ…。\n私の事、知ってるんだ。",
+          "text": "That's me...\nHuh...\nSo you know about me."
+        },
+        {
+          "offset": "0x5e40",
+          "original": "知ってるも何も、\n超有名人じゃないか。",
+          "text": "Know about you?\nYou're super famous!"
+        },
+        {
+          "offset": "0x5e68",
+          "original": "超高校級の女スイマーだよ。\nもっと、無骨な娘だと\n思ってたけど…。",
+          "text": "You're an elite swimmer.\nI thought you'd be\na lot more rugged..."
+        },
+        {
+          "offset": "0x5eac",
+          "original": "超有名ね…。\nそれよりもさ、\n今度、一緒に走ろうよ。",
+          "text": "Super famous, huh...\nMore importantly,\nlet's go running together."
+        },
+        {
+          "offset": "0x5f0c",
+          "original": "ははは…。\n清川さんの足手まといに\nならなきゃいいけどね。",
+          "text": "Ha ha ha...\nI hope I won't\nhold Kiyokawa-san back."
+        },
+        {
+          "offset": "0x5f48",
+          "original": "はははは、ならないって。\nじゃあ私、もうひとっ走り\nしてくるから。",
+          "text": "Ha ha, you won't.\nWell, I'm going for\nanother run."
+        },
+        {
+          "offset": "0x5f8c",
+          "original": "俺は、もう少し休んでいくよ。",
+          "text": "I'll rest a bit longer."
+        },
+        {
+          "offset": "0x5fac",
+          "original": "このジュース、\n余ったからあげる。\nじゃあ。",
+          "text": "Here, have this juice.\nI've got extra.\nSee ya."
+        },
+        {
+          "offset": "0x5fe8",
+          "original": "…。\nんぐんぐんぐ…。\nプハーッ。",
+          "text": "...\nGulp, gulp, gulp...\nAhhh!"
+        },
+        {
+          "offset": "0x600c",
+          "original": "あっ、これって、\n間接キスでないの。\nラッキー。",
+          "text": "Wait, isn't this\nan indirect kiss?\nLucky me!"
+        },
+        {
+          "offset": "0x6044",
+          "original": "お、おはよう、清川さん。\n（彼女は、超高校級の\n女スイマーだ。）",
+          "text": "M-morning, Kiyokawa-san.\n(She's an exceptional\nhigh-school swimmer.)"
+        },
+        {
+          "offset": "0x6084",
+          "original": "あ、確か、水泳部の…。",
+          "text": "Oh, from the swim team..."
+        },
+        {
+          "offset": "0x609c",
+          "original": "{F}だよ。\n清川さん、こんなに早くから\nトレーニングかい？",
+          "text": "I'm {F}.\nTraining this early,\nKiyokawa-san?"
+        },
+        {
+          "offset": "0x60d4",
+          "original": "私、毎朝５０キロの\nロードワークを\n欠かしたことないから。",
+          "text": "I run 50 km\nevery morning.\nNever miss a day."
+        },
+        {
+          "offset": "0x6110",
+          "original": "ま、毎朝、５０キロ！\nそんなに走ってるの？",
+          "text": "F-fifty km every morning?!\nYou run that much?"
+        },
+        {
+          "offset": "0x613c",
+          "original": "記録を維持するためには、\nこのぐらいやらないと…。",
+          "text": "To keep my times down,\nI need to train this hard."
+        },
+        {
+          "offset": "0x6170",
+          "original": "そうなんだ…。\n日本一ってのも大変だね。",
+          "text": "I see...\nJapan's best has it tough."
+        },
+        {
+          "offset": "0x6198",
+          "original": "うん…。\nそれよりもさ、\n今度、一緒に走ろうよ。",
+          "text": "Yeah...\nMore importantly,\nlet's go running together."
+        },
+        {
+          "offset": "0x61e8",
+          "original": "よーし、今日は\n良い記録が出たぞ。",
+          "text": "All right, I got\na good time today."
+        },
+        {
+          "offset": "0x620c",
+          "original": "へぇ…。\n君、結構やるじゃん。",
+          "text": "Huh...\nYou're pretty good."
+        },
+        {
+          "offset": "0x6234",
+          "original": "あ、ありがとう、{G}。\n（彼女は、この学校の水泳部の\n女の子で、日本記録まで\n持っているんだ。）",
+          "text": "Thanks, {G}.\n(She's on our swim team,\nand she even holds\na national record.)"
+        },
+        {
+          "offset": "0x6290",
+          "original": "えっと、\n名前なんて言ったっけ？",
+          "text": "Um,\nwhat was your name?"
+        },
+        {
+          "offset": "0x62b0",
+          "original": "ひどいなあ。\n{F}だよ。",
+          "text": "That's harsh.\nI'm {F}."
+        },
+        {
+          "offset": "0x62c8",
+          "original": "あ、悪い悪い。\nでも君って、高校に入ってから、\n水泳始めたんだよね？",
+          "text": "Oh, sorry, sorry.\nBut you only took up\nswimming in high school?"
+        },
+        {
+          "offset": "0x630c",
+          "original": "そう、本格的に始めたのは、\n高校に入学してから。",
+          "text": "Yeah, I only got serious\nonce I got to high school."
+        },
+        {
+          "offset": "0x633c",
+          "original": "それでこんな記録出せるなら、\n将来、かなりビッグな選手に\nなれるかもね？",
+          "text": "If you can post times like\nthat already, you could be\na big star someday."
+        },
+        {
+          "offset": "0x6384",
+          "original": "ははは、からかわないでくれよ。\n清川さんに言われると、\n本気にしちゃうぜ。",
+          "text": "Ha ha, don't tease me.\nIf Kiyokawa-san says it,\nI might believe it."
+        },
+        {
+          "offset": "0x63d0",
+          "original": "からかってないってば。\nあっ、私が泳ぐ番だ。\nそれじゃ、金の卵さん。",
+          "text": "I'm not teasing.\nOh, it's my turn to swim.\nSee you, rising star!"
+        },
+        {
+          "offset": "0x6434",
+          "original": "金の卵か…。\n頑張ってみるかな、水泳…。",
+          "text": "Rising star, huh...\nMaybe I'll try swimming..."
+        },
+        {
+          "offset": "0x6934",
+          "original": "ふーっ。\nやっと休み時間か…。",
+          "text": "Phew.\nBreak time at last..."
+        },
+        {
+          "offset": "0x695c",
+          "original": "は、はい。\nあの、君は…？",
+          "text": "Y-yes?\nUm, and you are...?"
+        },
+        {
+          "offset": "0x697c",
+          "original": "あっ、私、野球部で\nマネージャーをやっている\n虹野沙希なんだけど。",
+          "text": "Oh, I'm Nijino Saki.\nI'm the manager\nof the baseball team."
+        },
+        {
+          "offset": "0x69c0",
+          "original": "で、俺に何の用…？",
+          "text": "So, what can I do for you?"
+        },
+        {
+          "offset": "0x69d4",
+          "original": "あなたには、根性があるわ。\n私と一緒に、甲子園を\n目指しましょう！",
+          "text": "You've got guts.\nLet's aim for Koshien\ntogether!"
+        },
+        {
+          "offset": "0x6a24",
+          "original": "悪いけど、野球には\nあまり興味ないんだ。",
+          "text": "Sorry, but I'm not\nreally into baseball."
+        },
+        {
+          "offset": "0x6a50",
+          "original": "そう…。\nあなたが来てくれれば、\nかなりの戦力に…。",
+          "text": "I see...\nIf you joined, you'd\nbe a real asset..."
+        },
+        {
+          "offset": "0x6a84",
+          "original": "ごめんね、でもちょっと\n買いかぶりすぎだよ。",
+          "text": "Sorry, but you're giving\nme too much credit."
+        },
+        {
+          "offset": "0x6ab0",
+          "original": "そんなことない！\nでも…、\n無理強いはできないわね。",
+          "text": "No, I'm not!\nBut...\nI can't force you."
+        },
+        {
+          "offset": "0x6ae4",
+          "original": "気が向いたら、一度見に\n行こうかな？",
+          "text": "Maybe I'll come take\na look sometime."
+        },
+        {
+          "offset": "0x6b08",
+          "original": "うん、待ってるわ！\nそれじゃ。",
+          "text": "Okay, I'll be waiting!\nBye."
+        },
+        {
+          "offset": "0x6b3c",
+          "original": "おい、今の虹野沙希だろ？",
+          "text": "Hey, was that Nijino Saki?"
+        },
+        {
+          "offset": "0x6b58",
+          "original": "ああ、そうみたいだね。",
+          "text": "Yeah, looks like it."
+        },
+        {
+          "offset": "0x6b70",
+          "original": "運動部のアイドルが、\nお前なんかに\n何の用だったんだ。",
+          "text": "What does the sports clubs'\nidol want with\nthe likes of you?"
+        },
+        {
+          "offset": "0x6ba8",
+          "original": "なんか、\n部活の勧誘みたい。",
+          "text": "Seems she's\nrecruiting for her club."
+        },
+        {
+          "offset": "0x6bc4",
+          "original": "ふーん。\nあ、授業始まった。",
+          "text": "Huh.\nOh, class is starting."
+        },
+        {
+          "offset": "0x6bf4",
+          "original": "あっ、私、サッカー部で\nマネージャーをやっている\n虹野沙希なんだけど。",
+          "text": "Oh, I'm Nijino Saki.\nI'm the manager\nof the soccer team."
+        },
+        {
+          "offset": "0x6c3c",
+          "original": "で、俺に何の用…？。",
+          "text": "So, what can I do for you?"
+        },
+        {
+          "offset": "0x6c54",
+          "original": "あなたには、根性があるわ。\n私と一緒に、国立競技場を\n目指しましょう！",
+          "text": "You've got guts.\nLet's aim for the National\nStadium together!"
+        },
+        {
+          "offset": "0x6ca8",
+          "original": "悪いけど、サッカーには\nあまり興味ないんだ。",
+          "text": "Sorry, but I'm not\nreally into soccer."
+        },
+        {
+          "offset": "0x6cd8",
+          "original": "俺、野球部なんだけど…。",
+          "text": "I'm on the baseball team..."
+        },
+        {
+          "offset": "0x6cf4",
+          "original": "えっ…。",
+          "text": "Huh...?"
+        },
+        {
+          "offset": "0x6d00",
+          "original": "あんまり、\n出てないけどね。",
+          "text": "Though I don't\nshow up much."
+        },
+        {
+          "offset": "0x6d1c",
+          "original": "練習しなきゃ、甲子園に\n行けないじゃない。",
+          "text": "If you don't practice,\nwe won't make Koshien!"
+        },
+        {
+          "offset": "0x6d48",
+          "original": "そりゃそうだ。",
+          "text": "Good point."
+        },
+        {
+          "offset": "0x6d58",
+          "original": "今度から、真面目に\n練習に来なさいよ。",
+          "text": "Come to practice\nand work hard!"
+        },
+        {
+          "offset": "0x6d98",
+          "original": "野球部に、\nあんな娘いたんだ…。",
+          "text": "I never knew the baseball\nteam had a girl like that."
+        },
+        {
+          "offset": "0x6dbc",
+          "original": "俺、サッカー部\nなんだけど…。",
+          "text": "I'm on the\nsoccer team..."
+        },
+        {
+          "offset": "0x6ddc",
+          "original": "えっ…。",
+          "text": "Huh...?"
+        },
+        {
+          "offset": "0x6de8",
+          "original": "あんまり、\n出てないけどね。",
+          "text": "Though I don't\nshow up much."
+        },
+        {
+          "offset": "0x6e04",
+          "original": "練習しなきゃ、国立競技場に\n行けないじゃない。",
+          "text": "No practice, no\nNational Stadium!"
+        },
+        {
+          "offset": "0x6e34",
+          "original": "そりゃそうだ。",
+          "text": "Good point."
+        },
+        {
+          "offset": "0x6e44",
+          "original": "今度から、真面目に\n練習に来なさいよ。",
+          "text": "Come to practice\nand work hard!"
+        },
+        {
+          "offset": "0x6e84",
+          "original": "サッカー部に、\nあんな娘いたんだ…。",
+          "text": "I never knew the soccer\nteam had a girl like that."
+        },
+        {
+          "offset": "0x6eac",
+          "original": "遅くなっちゃったよ。\n（ん？\n見かけない娘がいるな。）",
+          "text": "I'm running late.\n(Hm?\nWho's that girl?)"
+        },
+        {
+          "offset": "0x6ee8",
+          "original": "あっ、野球部の方ですか？",
+          "text": "You're on the baseball team?"
+        },
+        {
+          "offset": "0x6f04",
+          "original": "そうだけど…。",
+          "text": "Yeah, why...?"
+        },
+        {
+          "offset": "0x6f14",
+          "original": "今日からマネージャーとして\n入部した、虹野沙希です。\nよろしくお願いします。",
+          "text": "I'm Nijino Saki.\nI joined as manager today.\nNice to meet you."
+        },
+        {
+          "offset": "0x6f60",
+          "original": "あ、俺、{F}。\nこちらこそよろしく。",
+          "text": "Oh, I'm {F}.\nNice to meet you, too."
+        },
+        {
+          "offset": "0x6f84",
+          "original": "それじゃ…。\n甲子園目指して、\n練習頑張ってね。",
+          "text": "Well then...\nPractice hard,\nand on to Koshien!"
+        },
+        {
+          "offset": "0x6fc8",
+          "original": "へぇ、あんな娘が\nマネージャーになったんだ。\n練習に気合が入るぜ。",
+          "text": "Wow, a girl like that\nis our new manager?\nI'm fired up for practice!"
+        },
+        {
+          "offset": "0x7010",
+          "original": "遅くなっちゃったよ。\n（ん？\n見かけない娘がいるな。）",
+          "text": "I'm running late.\n(Hm?\nWho's that girl?)"
+        },
+        {
+          "offset": "0x704c",
+          "original": "あっ、サッカー部の方ですか？",
+          "text": "You're on the soccer team?"
+        },
+        {
+          "offset": "0x706c",
+          "original": "そうだけど…。",
+          "text": "Yeah, why...?"
+        },
+        {
+          "offset": "0x707c",
+          "original": "今日からマネージャーとして\n入部した、虹野沙希です。\nよろしくお願いします。",
+          "text": "I'm Nijino Saki.\nI joined as manager today.\nNice to meet you."
+        },
+        {
+          "offset": "0x70c8",
+          "original": "あ、俺、{F}。\nこちらこそよろしく。",
+          "text": "Oh, I'm {F}.\nNice to meet you, too."
+        },
+        {
+          "offset": "0x70ec",
+          "original": "それじゃ…。\n国立競技場目指して、\n練習頑張ってね。",
+          "text": "Well then...\nKeep training hard\nfor the National Stadium!"
+        },
+        {
+          "offset": "0x7134",
+          "original": "へぇ、あんな娘が\nマネージャーになったんだ。\n",
+          "text": "Wow, a girl like that\nis our new manager?\n"
+        },
+        {
+          "offset": "0x77fc",
+          "original": "今日から、上級生だ。\n気を引き締めて、いこう。",
+          "text": "I'm an upperclassman now.\nTime to buckle down."
+        },
+        {
+          "offset": "0x782c",
+          "original": "{-？？？}こんにちは！\n{P}。",
+          "text": "{-???}Hiii!\n{P}!"
+        },
+        {
+          "offset": "0x784c",
+          "original": "？？\nあれ、どこかで\n会ったことある？",
+          "text": "??\nHuh, have we\nmet somewhere?"
+        },
+        {
+          "offset": "0x7874",
+          "original": "{-？？？}さて、私は誰でしょう？",
+          "text": "{-???}So, guess who I am!"
+        },
+        {
+          "offset": "0x789c",
+          "original": "んー…。\n声は、聞いたこと\nあるような…。",
+          "text": "Hmm...\nI feel like I've\nheard this voice before."
+        },
+        {
+          "offset": "0x78cc",
+          "original": "んー…。\n誰だったかな…。",
+          "text": "Hmm...\nWho was it...?"
+        },
+        {
+          "offset": "0x78ec",
+          "original": "{-？？？}ブーッ\n制限時間終了です。\n私は…。",
+          "text": "{-???}Bzzzt!\nTime's up.\nI'm..."
+        },
+        {
+          "offset": "0x7918",
+          "original": "おい、優美。\n何やってたんだ？",
+          "text": "Hey, Yumi.\nWhat are you up to?"
+        },
+        {
+          "offset": "0x7938",
+          "original": "{-？？？}あっ、お兄ちゃん。",
+          "text": "{-???}Oh, Onii-chan!"
+        },
+        {
+          "offset": "0x7960",
+          "original": "何だ、{m}。",
+          "text": "Oh, {m}."
+        },
+        {
+          "offset": "0x796c",
+          "original": "一緒にいたのか。",
+          "text": "You were with her?"
+        },
+        {
+          "offset": "0x7980",
+          "original": "お兄ちゃんって、\nお前の妹か？",
+          "text": "Onii-chan?\nSo she is your sister?"
+        },
+        {
+          "offset": "0x79a0",
+          "original": "そうだよ。\nあれ、お前に話して\nなかったっけ。",
+          "text": "Yep.\nHuh, didn't I\ntell you?"
+        },
+        {
+          "offset": "0x79e0",
+          "original": "そんなの、聞いてないよ。\n（どうりで、声を聞いたことが\nあると思った。）",
+          "text": "You never told me that.\n(No wonder her voice\nsounded familiar.)"
+        },
+        {
+          "offset": "0x7a2c",
+          "original": "そんなの、聞いてないよ。",
+          "text": "You never told me that."
+        },
+        {
+          "offset": "0x7a4c",
+          "original": "今年から、うちの高校に\n通うことになってたんだ。",
+          "text": "She's starting at our\nschool this year."
+        },
+        {
+          "offset": "0x7a80",
+          "original": "早乙女優美でーす。\nこれから、よろしくね。\n先輩。",
+          "text": "I'm Saotome Yumi!\nNice to meet you,\nSenpai."
+        },
+        {
+          "offset": "0x7ab4",
+          "original": "ほら帰るぞ。\n優美。",
+          "text": "C'mon, we're going home,\nYumi."
+        },
+        {
+          "offset": "0x7ac8",
+          "original": "ブー、わかったわよ。\nそれじゃね、先輩。\nバイバーイ！",
+          "text": "Boo, fine.\nSee you, Senpai.\nBye-byeee!"
+        },
+        {
+          "offset": "0x7b0c",
+          "original": "あいつの妹って、\nあんな娘だったのか…。\nうるさかったな…。",
+          "text": "So that's what\nhis sister's like...\nShe sure was loud..."
+        },
+        {
+          "offset": "0x7e30",
+          "original": "ドン",
+          "text": "Bump!"
+        },
+        {
+          "offset": "0x7e38",
+          "original": "ドン",
+          "text": "Bump!"
+        },
+        {
+          "offset": "0x7e40",
+          "original": "ドン",
+          "text": "Bump!"
+        },
+        {
+          "offset": "0x7e48",
+          "original": "ガラッ",
+          "text": "Clatter"
+        },
+        {
+          "offset": "0x7e50",
+          "original": "ピピッ",
+          "text": "Beep-beep!"
+        },
+        {
+          "offset": "0x7e58",
+          "original": "はあ？",
+          "text": "Huh?"
+        },
+        {
+          "offset": "0x7e60",
+          "original": "ガラッ",
+          "text": "Clatter"
+        },
+        {
+          "offset": "0x7e68",
+          "original": "はあ？",
+          "text": "Huh?"
+        },
+        {
+          "offset": "0x7e80",
+          "original": "俺、{F}。",
+          "text": "I'm {F}."
+        },
+        {
+          "offset": "0x7e88",
+          "original": "{P}。",
+          "text": "{P}."
+        },
+        {
+          "offset": "0x7e8c",
+          "original": "ドスン",
+          "text": "Thud!"
+        },
+        {
+          "offset": "0x7e94",
+          "original": "ん？",
+          "text": "Hm?"
+        },
+        {
+          "offset": "0x7e9c",
+          "original": "ボカ",
+          "text": "Bonk!"
+        },
+        {
+          "offset": "0x7ea4",
+          "original": "俺、{F}。",
+          "text": "I'm {F}."
+        },
+        {
+          "offset": "0x7eac",
+          "original": "俺…。",
+          "text": "Me..."
+        },
+        {
+          "offset": "0x7eb4",
+          "original": "{p}君。",
+          "text": "{p}."
+        }
+      ]
+    }
+  ]
 }

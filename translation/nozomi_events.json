@@ -1,157 +1,747 @@
 {
   "description": "Nozomi's special events: all of SERIFU/EVENT_KY.BIN (entries 49-53, most in a softer and a tomboyish version by mood: carrying books, the broken exhibit, the thunderstorm swim, cyclamens, the dodgeball). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_KY.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あっ、あれは{G}。\n重そうな本を抱えてるけど、\n軽々と運んでるなぁ。", "text": "There's {G}\nShe's got heavy books,\nbut carries them easily."},
-      {"offset": "0x44", "original": "大変そうだね、\n{G}。", "text": "That looks tough,\n{G}"},
-      {"offset": "0x58", "original": "{P}\n全然平気よ。", "text": "{P}\nI'm totally fine."},
-      {"offset": "0x68", "original": "俺が持ってあげるから、\nほら、貸して？", "text": "I'll carry them,\nhere, hand them over."},
-      {"offset": "0x90", "original": "だ、大丈夫よ。\nそんなにやわじゃ\nないから。", "text": "I-I'm fine.\nI'm not that\nfragile."},
-      {"offset": "0xbc", "original": "こういう事は、\n男に任せておけば\nいいの。", "text": "This sort of thing,\nyou leave to\nthe guys."},
-      {"offset": "0xe8", "original": "そんな事言われたの、初めて。\nあ、ありがとう。\nすっごく嬉しい…。", "text": "Nobody's said that before.\nTh-thanks.\nThat makes me so happy..."},
-      {"offset": "0x12c", "original": "いいから、いいから。\nよいしょ…。\nおおおおお。", "text": "It's fine, it's fine.\nHup...\nWhoooa."},
-      {"offset": "0x178", "original": "おおおお、重い…。\nよくこんなの\n持ってたな…。", "text": "Whoa, heavy...\nHow did she\ncarry these..."},
-      {"offset": "0x1ac", "original": "そ、それじゃ、\n職員室まで運んでくれる？", "text": "Th-then could you take\nthem to the staff room?"},
-      {"offset": "0x1d4", "original": "お、お安い…、\n御用だよ。", "text": "N-no...\nproblem."},
-      {"offset": "0x1f0", "original": "ちょっと、\nお安くないかもしれない。", "text": "Okay, maybe\nit is a problem."},
-      {"offset": "0x214", "original": "でも、男の子に\n荷物を持ってもらうなんて、\n初めてで、何か、照れるね。", "text": "But a boy carrying\nmy stuff is a first,\nit's kind of embarrassing."},
-      {"offset": "0x25c", "original": "な、何言ってるの。\n女の子にこんな重いもの\n持たせられないよ。", "text": "Wh-what are you saying?\nI can't let a girl\ncarry anything this heavy."},
-      {"offset": "0x29c", "original": "優しいんだね…。\n幸せって、こういう時\n感じるのかな…。", "text": "You're so kind...\nI guess this is\nhow happiness feels..."},
-      {"offset": "0x2d4", "original": "き、{G}。\nわ、悪いんだけど、\n早く職員室に行こうよ。", "text": "N-{G}\nS-sorry, but can we\nhurry to the staff room?"},
-      {"offset": "0x308", "original": "あっ、ごめん。\n嬉しくて…。\n半分持とうか？", "text": "Oh, sorry.\nI was just so happy...\nWant me to take half?"},
-      {"offset": "0x334", "original": "いや、いい。\nさあ、行くぞ。", "text": "No, I've got it.\nLet's go."},
-      {"offset": "0x5b8", "original": "よくできてるね。\n本当に生きてるみたい。", "text": "It's so well made.\nLike it's really alive."},
-      {"offset": "0x5e0", "original": "本当。\nよくできてるよね。", "text": "Yeah.\nIt's really well made."},
-      {"offset": "0x5fc", "original": "何で、\nできてるのかな？", "text": "I wonder\nwhat it's made of?"},
-      {"offset": "0x614", "original": "あっ、{G}。\n触っちゃ駄目だって。", "text": "Whoa, {G}\nyou can't touch it."},
-      {"offset": "0x634", "original": "そ、そう？\nあっ！", "text": "R-really?\nOops!"},
-      {"offset": "0x65c", "original": "と、取れちゃった。", "text": "I-it came off."},
-      {"offset": "0x670", "original": "えっ？\n（そ、それはやばいぞ。）", "text": "Huh?\n(Th-that's bad.)"},
-      {"offset": "0x690", "original": "ど、どうしよう…。", "text": "Wh-what do I do..."},
-      {"offset": "0x6a4", "original": "ほら、何やってんの。\n逃げるよ。", "text": "Come on, what are you doing?\nRun!"},
-      {"offset": "0x6d8", "original": "あのままで、\n大丈夫かな…。", "text": "Is it okay\nto just leave it...?"},
-      {"offset": "0x6f4", "original": "大丈夫。\n誰にも見られてないから。\n平気平気。", "text": "It's fine.\nNobody saw us.\nNo problem."},
-      {"offset": "0x724", "original": "でも、良心が痛むな…。", "text": "But my conscience hurts..."},
-      {"offset": "0x73c", "original": "ばれたときは、\nその時はその時。\n俺が何とかするよ。", "text": "If they find out,\nwe'll deal with it then.\nI'll figure something out."},
-      {"offset": "0x770", "original": "何とかって、\nどうするの？", "text": "Figure what out?\nHow?"},
-      {"offset": "0x78c", "original": "そのとき考えるけど…。", "text": "I'll think of it then..."},
-      {"offset": "0x7a4", "original": "やっぱり、\n謝りに行ってくる。", "text": "I'm going\nto go apologize."},
-      {"offset": "0x7e0", "original": "あっ、{G}。\nしょうがない、\n俺も行くか。", "text": "Wait, {G}\nOh well,\nguess I'll go too."},
-      {"offset": "0x80c", "original": "ありがとう。\n一緒に謝ってくれて。", "text": "Thanks for\napologizing with me."},
-      {"offset": "0x830", "original": "別にそんな事はいいよ。\nでも、良かったね。\n簡単に許してもらえて。", "text": "Don't mention it.\nBut that was lucky.\nThey forgave us so easily."},
-      {"offset": "0x874", "original": "本当。\n良かった。", "text": "Yeah.\nWhat a relief."},
-      {"offset": "0x888", "original": "あんなに貴重なものを\n壊したのに、なぜだ？\nま、いいか…。", "text": "We broke something that\nvaluable, so why...?\nOh, who cares."},
-      {"offset": "0x8d4", "original": "よくできてるよ。\n本当に生きてる\nみたいだもんな。", "text": "It's well made.\nIt looks like\nit's really alive."},
-      {"offset": "0x908", "original": "本当。\nよくできてるよね。", "text": "Yeah.\nIt's really well made."},
-      {"offset": "0x924", "original": "何で\nできてんだろう？", "text": "What's it\nmade of?"},
-      {"offset": "0x93c", "original": "あっ、{G}。\n触っちゃ駄目だって。", "text": "Whoa, {G}\nyou can't touch it."},
-      {"offset": "0x95c", "original": "大丈夫だよ。\n気がちっちゃいなぁ。", "text": "It's fine.\nYou worry too much."},
-      {"offset": "0x980", "original": "知らないよ。\n怒られても…。", "text": "Don't blame me\nif we get yelled at..."},
-      {"offset": "0x9b8", "original": "と、取れちゃった。", "text": "I-it came off."},
-      {"offset": "0x9cc", "original": "えっ？\n（そ、それはやばいぞ。）", "text": "Huh?\n(Th-that's bad.)"},
-      {"offset": "0x9ec", "original": "ど、どうしよう…。", "text": "Wh-what do I do..."},
-      {"offset": "0xa00", "original": "ほら、何やってんの。\n逃げるよ。", "text": "Come on, what are you doing?\nRun!"},
-      {"offset": "0xa34", "original": "あのままにして\nきちゃったよ。", "text": "We just left it\nlike that."},
-      {"offset": "0xa54", "original": "大丈夫。\n誰にも見られてないから。\n平気平気。", "text": "It's fine.\nNobody saw us.\nNo problem."},
-      {"offset": "0xa84", "original": "何か、良心が痛むよ。", "text": "My conscience kinda hurts."},
-      {"offset": "0xa9c", "original": "ばれたときは、\nその時はその時。\n俺が何とかするよ。", "text": "If they find out,\nwe'll deal with it then.\nI'll figure something out."},
-      {"offset": "0xad0", "original": "何とかって？", "text": "Figure what out?"},
-      {"offset": "0xae0", "original": "そのとき考えるけど…。", "text": "I'll think of it then..."},
-      {"offset": "0xaf8", "original": "なんか心配。\nやっぱり、\n謝りに行ってくるよ。", "text": "I'm kinda worried.\nI'm gonna go\napologize after all."},
-      {"offset": "0xb44", "original": "あっ、{G}。\nしょうがない、\n俺も行くか。", "text": "Wait, {G}\nOh well,\nguess I'll go too."},
-      {"offset": "0xb70", "original": "ありがとう。\n一緒に謝ってくれて。", "text": "Thanks for\napologizing with me."},
-      {"offset": "0xb94", "original": "別にそんな事はいいよ。\nでも、良かったね。\n簡単に許してもらえて。", "text": "Don't mention it.\nBut that was lucky.\nThey forgave us so easily."},
-      {"offset": "0xbd8", "original": "本当だね。\n良かった。", "text": "Yeah, really.\nWhat a relief."},
-      {"offset": "0xbf0", "original": "あんなに貴重なものを\n壊したのに、なぜだ？\nま、いいか…。", "text": "We broke something that\nvaluable, so why...?\nOh, who cares."},
-      {"offset": "0x1204", "original": "すごいね。\nここまで来れる人は、\nそうそういないよ。", "text": "Amazing.\nNot many people\ncan swim out this far."},
-      {"offset": "0x1238", "original": "ありがとう。\nあれ、雲行きが\n怪しくなってきたね。", "text": "Thanks.\nHuh, the sky's\nlooking iffy."},
-      {"offset": "0x126c", "original": "本当だ。\n急に、天気が\n悪くなってきたね。", "text": "You're right.\nThe weather turned\nbad all of a sudden."},
-      {"offset": "0x1298", "original": "一雨来そうだぞ。", "text": "Looks like rain."},
-      {"offset": "0x12bc", "original": "キャーッ。", "text": "Eeek!"},
-      {"offset": "0x12c8", "original": "ど、どうしたの？", "text": "Wh-what's wrong?"},
-      {"offset": "0x12dc", "original": "あ、あたし、雷は…。\nだ、駄目なの。", "text": "I-I can't...\nI can't stand thunder."},
-      {"offset": "0x130c", "original": "キャーッ。", "text": "Eeek!"},
-      {"offset": "0x1318", "original": "大丈夫。\n俺がついてるから。\n安心して。", "text": "It's okay.\nI'm right here.\nDon't worry."},
-      {"offset": "0x1340", "original": "う、うん。", "text": "O-okay."},
-      {"offset": "0x134c", "original": "何にしても、\nここは危ないから、\n岩場の影に行こう。", "text": "Either way,\nit's dangerous here.\nLet's go behind the rocks."},
-      {"offset": "0x1390", "original": "雨が上がったみたいだね。\n大丈夫？\n寒くない？", "text": "Looks like the rain stopped.\nAre you okay?\nNot cold?"},
-      {"offset": "0x13c0", "original": "だ、大丈夫。\n平気よ。\nでも、あの…。", "text": "I-I'm fine.\nReally.\nBut, um..."},
-      {"offset": "0x13e8", "original": "ごめんね。\n抱きついたりして。\n迷惑だったでしょう？", "text": "Sorry.\nFor clinging to you.\nIt was a bother, right?"},
-      {"offset": "0x141c", "original": "いや、迷惑じゃないよ。\nどちらかと言うと、\n嬉しかったかな。", "text": "No, not at all.\nIf anything,\nI kind of liked it."},
-      {"offset": "0x146c", "original": "ほ、本当に、\n嬉しかった？", "text": "R-really?\nYou liked it?"},
-      {"offset": "0x1488", "original": "もちろんだよ。", "text": "Of course."},
-      {"offset": "0x14a0", "original": "良かった…。\n元気づけてくれたとき、\n私も、嬉しかった…。", "text": "I'm glad...\nWhen you cheered me up,\nI was happy too..."},
-      {"offset": "0x14dc", "original": "そ、そう？\n良かった…。", "text": "R-really?\nI'm glad..."},
-      {"offset": "0x14f4", "original": "さあ、\nまた泳いで戻りましょう。", "text": "Okay,\nlet's swim back."},
-      {"offset": "0x17d8", "original": "あっ。\nもうシクラメンが\n咲いてるんだ。", "text": "Oh.\nThe cyclamens are\nalready blooming."},
-      {"offset": "0x1800", "original": "えっ？\nシクラメン？", "text": "Huh?\nCyclamens?"},
-      {"offset": "0x181c", "original": "ほら、ここにいっぱい\n咲いてるじゃない。", "text": "Look, there are lots\nblooming right here."},
-      {"offset": "0x1844", "original": "この花がそうなの？", "text": "That's what these are?"},
-      {"offset": "0x1858", "original": "そうよ。", "text": "Yep."},
-      {"offset": "0x1864", "original": "へぇ、\n意外と詳しいんだね。", "text": "Huh, you know\nmore than I expected."},
-      {"offset": "0x1880", "original": "私の好きな花なんだ。\n花言葉も、\n知ってるわよ。", "text": "They're my favorite.\nI even know what\nthey symbolize."},
-      {"offset": "0x18b0", "original": "えっ、花言葉？\n何て言うの？", "text": "Oh, what they symbolize?\nWhat is it?"},
-      {"offset": "0x18cc", "original": "シクラメンの花言葉はね、", "text": "The cyclamen stands for..."},
-      {"offset": "0x18e8", "original": "花言葉は？", "text": "Stands for?"},
-      {"offset": "0x1914", "original": "内気な心、って言うの。", "text": "A shy heart, they say."},
-      {"offset": "0x192c", "original": "内気な心？\nふーん。\nそうなんだ。", "text": "A shy heart?\nHuh.\nI see."},
-      {"offset": "0x1950", "original": "私の心と同じね。", "text": "Just like my heart."},
-      {"offset": "0x1964", "original": "えっ、なんか言った？", "text": "Huh, did you say something?"},
-      {"offset": "0x197c", "original": "ううん。\nなんにも…。\nさあ、先に行こうよ。", "text": "No.\nNothing...\nCome on, let's go on."},
-      {"offset": "0x19a8", "original": "そうしよう。\n（{G}って、\n女の子だよなぁ。）", "text": "Let's.\n(Wow, {G}\nis such a girl.)"},
-      {"offset": "0x19ec", "original": "あれ？\nもうシクラメンが\n咲いてるんだ。", "text": "Huh?\nThe cyclamens are\nalready blooming."},
-      {"offset": "0x1a14", "original": "えっ？\nシクラメン？", "text": "Huh?\nCyclamens?"},
-      {"offset": "0x1a30", "original": "ほら、ここにいっぱい\n咲いてるだろう？", "text": "Look, there are tons\nblooming right here."},
-      {"offset": "0x1a58", "original": "この花がそうなの？", "text": "That's what these are?"},
-      {"offset": "0x1a6c", "original": "そうだよ。", "text": "Yep."},
-      {"offset": "0x1a78", "original": "へぇ、\n意外と詳しいんだね。", "text": "Huh, you know\nmore than I expected."},
-      {"offset": "0x1a94", "original": "私の好きな花なんだ。\n花言葉も、\n私にぴったりだし。", "text": "They're my favorite.\nWhat they stand for\nfits me perfectly, too."},
-      {"offset": "0x1ac8", "original": "えっ、花言葉？\n何て言うの？", "text": "Oh, what they symbolize?\nWhat is it?"},
-      {"offset": "0x1ae4", "original": "シクラメンの花言葉はね、", "text": "The cyclamen stands for..."},
-      {"offset": "0x1b00", "original": "花言葉は？", "text": "Stands for?"},
-      {"offset": "0x1b2c", "original": "内気な心。", "text": "A shy heart."},
-      {"offset": "0x1b38", "original": "内気な心？\n誰に、ぴったりだって？", "text": "A shy heart?\nAnd who does that fit?"},
-      {"offset": "0x1b5c", "original": "私に決まってんだろ。\n傷つくなぁ、その言葉。", "text": "Me, obviously.\nOuch, that hurt."},
-      {"offset": "0x1b88", "original": "ごめん、ごめん。\nでも、内気な心…。\nくくくくっ。", "text": "Sorry, sorry.\nBut, a shy heart...\nPfft-heh-heh."},
-      {"offset": "0x1bbc", "original": "別に、そう思って\nくれなくてもいいけどさ。", "text": "You don't have to\nbelieve it, you know."},
-      {"offset": "0x1be8", "original": "あっ、信じるよ。\nうん、{G}は、\n何て内気なんだ。", "text": "No, I believe you.\nYeah, {G}\nis so very shy."},
-      {"offset": "0x1c18", "original": "なんか\n引っ掛かるんだよなぁ\nその言い方。", "text": "Something\nbugs me about\nthe way you said that."},
-      {"offset": "0x1c44", "original": "{G}が内気だって\nちょっと笑っちゃった。\nでも、花の事詳しいなぁ。", "text": "{G}, shy?\nI had to laugh.\nBut she knows flowers."},
-      {"offset": "0x20d8", "original": "それにしても、\n{G}って、\n力任せに投げてるな。", "text": "Man,\n{G} just\nthrows with brute force."},
-      {"offset": "0x2104", "original": "あっ。\nよけて！", "text": "Ah!\nDuck!"},
-      {"offset": "0x2114", "original": "おおおおおおおおっ。", "text": "Whoooooaaaa!"},
-      {"offset": "0x2138", "original": "あ、当たっちゃった。", "text": "I-I hit him."},
-      {"offset": "0x2154", "original": "いってぇ。", "text": "Owww."},
-      {"offset": "0x2160", "original": "ご、ごめんなさい。\n大丈夫？", "text": "I-I'm so sorry.\nAre you okay?"},
-      {"offset": "0x217c", "original": "だ、大丈夫だよ。", "text": "I-I'm fine."},
-      {"offset": "0x2190", "original": "血も出てないみたいだし、\n良かった…。", "text": "You're not bleeding,\nthank goodness..."},
-      {"offset": "0x21b8", "original": "気にしなくてもいいよ。\nほら、続きやろうよ。", "text": "Don't worry about it.\nCome on, let's play on."},
-      {"offset": "0x21e4", "original": "う、うん。\n本当にごめんね。", "text": "O-okay.\nI'm really sorry."},
-      {"offset": "0x2200", "original": "最近、女の子っぽく\nなってきたよな…。", "text": "She's gotten\nso girly lately."},
-      {"offset": "0x2244", "original": "それにしても、\n{G}って、\n力任せに投げてるな。", "text": "Man,\n{G} just\nthrows with brute force."},
-      {"offset": "0x2270", "original": "あっ。\nよけて！", "text": "Ah!\nDuck!"},
-      {"offset": "0x2280", "original": "おおおおおおおおっ。", "text": "Whoooooaaaa!"},
-      {"offset": "0x22a4", "original": "あ、当たっちゃった。", "text": "I-I hit him."},
-      {"offset": "0x22c0", "original": "いってぇ。", "text": "Owww."},
-      {"offset": "0x22cc", "original": "おっ、生き返った。\n悪い悪い\nちょっと手が滑って。", "text": "Oh, you're alive.\nSorry, sorry,\nmy hand slipped."},
-      {"offset": "0x2300", "original": "悪いじゃないよ。\n顔面もろだぜ。", "text": "Sorry isn't enough.\nRight in the face."},
-      {"offset": "0x2320", "original": "つばでもつければ治るって。\n何なら、\n私がつけてあげようか？", "text": "A little spit'll fix it.\nIf you like,\nshould I put some on?"},
-      {"offset": "0x235c", "original": "えっ？\nい、いいよ…。", "text": "Huh?\nN-no thanks..."},
-      {"offset": "0x2374", "original": "あははははは。\n真っ赤になって…。\n冗談に決まってるだろ。", "text": "Ahahahaha.\nYou're all red...\nI'm joking, obviously."},
-      {"offset": "0x23b0", "original": "‥‥‥‥。\nぜ、絶対に許さん。", "text": "........\nI-I'll never forgive you."},
-      {"offset": "0x23d0", "original": "ご、ごめん。\nそんなに怒るなよ。\nちゃんと謝るから。", "text": "S-sorry.\nDon't get so mad.\nI'll apologize properly."},
-      {"offset": "0x2404", "original": "ふんだ。", "text": "Hmph."},
-      {"offset": "0x2410", "original": "ごめんなさい。\n本当に悪かった。\n反省してるよ。", "text": "I'm sorry.\nI really am.\nI've learned my lesson."},
-      {"offset": "0x2440", "original": "そこまで言うなら、\n許してやっても\nいいけどさ。", "text": "If you put it that way,\nI guess I could\nforgive you."},
-      {"offset": "0x2470", "original": "本当？\nじゃ続きやろうぜ。", "text": "Really?\nThen let's keep playing."},
-      {"offset": "0x248c", "original": "本当に反省してるのか？", "text": "Is she really sorry?"},
-      {"offset": "0x2858", "original": "えっ？", "text": "Huh?"},
-      {"offset": "0x2860", "original": "あっ。", "text": "Oops."},
-      {"offset": "0x2868", "original": "えっ？", "text": "Huh?"},
-      {"offset": "0x2870", "original": "何？", "text": "What?"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_KY.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あっ、あれは{G}。\n重そうな本を抱えてるけど、\n軽々と運んでるなぁ。",
+          "text": "There's {G}.\nThose books look heavy,\nbut she lifts them easily."
+        },
+        {
+          "offset": "0x44",
+          "original": "大変そうだね、\n{G}。",
+          "text": "Looks heavy,\n{G}."
+        },
+        {
+          "offset": "0x58",
+          "original": "{P}\n全然平気よ。",
+          "text": "{P}\nI'm totally fine."
+        },
+        {
+          "offset": "0x68",
+          "original": "俺が持ってあげるから、\nほら、貸して？",
+          "text": "I'll carry them,\nhere, hand them over."
+        },
+        {
+          "offset": "0x90",
+          "original": "だ、大丈夫よ。\nそんなにやわじゃ\nないから。",
+          "text": "I-I'm fine.\nI'm not that\nfragile."
+        },
+        {
+          "offset": "0xbc",
+          "original": "こういう事は、\n男に任せておけば\nいいの。",
+          "text": "This sort of thing,\nyou leave to\nthe guys."
+        },
+        {
+          "offset": "0xe8",
+          "original": "そんな事言われたの、初めて。\nあ、ありがとう。\nすっごく嬉しい…。",
+          "text": "Nobody's said that before.\nTh-thanks.\nThat makes me so happy..."
+        },
+        {
+          "offset": "0x12c",
+          "original": "いいから、いいから。\nよいしょ…。\nおおおおお。",
+          "text": "It's fine, it's fine.\nHup...\nWhoooa."
+        },
+        {
+          "offset": "0x178",
+          "original": "おおおお、重い…。\nよくこんなの\n持ってたな…。",
+          "text": "Whoa, heavy...\nHow did she\ncarry these..."
+        },
+        {
+          "offset": "0x1ac",
+          "original": "そ、それじゃ、\n職員室まで運んでくれる？",
+          "text": "Th-then could you take\nthem to the staff room?"
+        },
+        {
+          "offset": "0x1d4",
+          "original": "お、お安い…、\n御用だよ。",
+          "text": "N-no...\nproblem."
+        },
+        {
+          "offset": "0x1f0",
+          "original": "ちょっと、\nお安くないかもしれない。",
+          "text": "Okay, maybe\nit is a problem."
+        },
+        {
+          "offset": "0x214",
+          "original": "でも、男の子に\n荷物を持ってもらうなんて、\n初めてで、何か、照れるね。",
+          "text": "But a boy carrying\nmy stuff is a first,\nit's kind of embarrassing."
+        },
+        {
+          "offset": "0x25c",
+          "original": "な、何言ってるの。\n女の子にこんな重いもの\n持たせられないよ。",
+          "text": "Wh-what are you saying?\nI can't let a girl\ncarry anything this heavy."
+        },
+        {
+          "offset": "0x29c",
+          "original": "優しいんだね…。\n幸せって、こういう時\n感じるのかな…。",
+          "text": "You're so kind...\nI guess this is\nhow happiness feels..."
+        },
+        {
+          "offset": "0x2d4",
+          "original": "き、{G}。\nわ、悪いんだけど、\n早く職員室に行こうよ。",
+          "text": "N-{G}\nS-sorry, but can we\nhurry to the staff room?"
+        },
+        {
+          "offset": "0x308",
+          "original": "あっ、ごめん。\n嬉しくて…。\n半分持とうか？",
+          "text": "Oh, sorry.\nI was just so happy...\nWant me to take half?"
+        },
+        {
+          "offset": "0x334",
+          "original": "いや、いい。\nさあ、行くぞ。",
+          "text": "No, I've got it.\nLet's go."
+        },
+        {
+          "offset": "0x5b8",
+          "original": "よくできてるね。\n本当に生きてるみたい。",
+          "text": "It's so well made.\nLike it's really alive."
+        },
+        {
+          "offset": "0x5e0",
+          "original": "本当。\nよくできてるよね。",
+          "text": "Yeah.\nIt's really well made."
+        },
+        {
+          "offset": "0x5fc",
+          "original": "何で、\nできてるのかな？",
+          "text": "I wonder\nwhat it's made of?"
+        },
+        {
+          "offset": "0x614",
+          "original": "あっ、{G}。\n触っちゃ駄目だって。",
+          "text": "Hey, {G}!\nDon't touch that."
+        },
+        {
+          "offset": "0x634",
+          "original": "そ、そう？\nあっ！",
+          "text": "R-really?\nOops!"
+        },
+        {
+          "offset": "0x65c",
+          "original": "と、取れちゃった。",
+          "text": "I-it came off."
+        },
+        {
+          "offset": "0x670",
+          "original": "えっ？\n（そ、それはやばいぞ。）",
+          "text": "Huh?\n(Th-that's bad.)"
+        },
+        {
+          "offset": "0x690",
+          "original": "ど、どうしよう…。",
+          "text": "Wh-what do I do..."
+        },
+        {
+          "offset": "0x6a4",
+          "original": "ほら、何やってんの。\n逃げるよ。",
+          "text": "Come on, what are you doing?\nRun!"
+        },
+        {
+          "offset": "0x6d8",
+          "original": "あのままで、\n大丈夫かな…。",
+          "text": "Is it okay\nto just leave it...?"
+        },
+        {
+          "offset": "0x6f4",
+          "original": "大丈夫。\n誰にも見られてないから。\n平気平気。",
+          "text": "It's fine.\nNobody saw us.\nNo problem."
+        },
+        {
+          "offset": "0x724",
+          "original": "でも、良心が痛むな…。",
+          "text": "But I feel guilty..."
+        },
+        {
+          "offset": "0x73c",
+          "original": "ばれたときは、\nその時はその時。\n俺が何とかするよ。",
+          "text": "If they find out,\nwe'll deal with it then.\nI'll figure something out."
+        },
+        {
+          "offset": "0x770",
+          "original": "何とかって、\nどうするの？",
+          "text": "Figure what out?\nHow?"
+        },
+        {
+          "offset": "0x78c",
+          "original": "そのとき考えるけど…。",
+          "text": "I'll think of it then..."
+        },
+        {
+          "offset": "0x7a4",
+          "original": "やっぱり、\n謝りに行ってくる。",
+          "text": "I'm going\nto apologize."
+        },
+        {
+          "offset": "0x7e0",
+          "original": "あっ、{G}。\nしょうがない、\n俺も行くか。",
+          "text": "Wait, {G}\nOh well,\nguess I'll go too."
+        },
+        {
+          "offset": "0x80c",
+          "original": "ありがとう。\n一緒に謝ってくれて。",
+          "text": "Thanks for\napologizing with me."
+        },
+        {
+          "offset": "0x830",
+          "original": "別にそんな事はいいよ。\nでも、良かったね。\n簡単に許してもらえて。",
+          "text": "Don't mention it.\nBut that was lucky.\nThey forgave us so easily."
+        },
+        {
+          "offset": "0x874",
+          "original": "本当。\n良かった。",
+          "text": "Yeah.\nWhat a relief."
+        },
+        {
+          "offset": "0x888",
+          "original": "あんなに貴重なものを\n壊したのに、なぜだ？\nま、いいか…。",
+          "text": "We broke something so\nvaluable... Why'd they\nforgive us? Oh well."
+        },
+        {
+          "offset": "0x8d4",
+          "original": "よくできてるよ。\n本当に生きてる\nみたいだもんな。",
+          "text": "It's well made.\nIt looks like\nit's really alive."
+        },
+        {
+          "offset": "0x908",
+          "original": "本当。\nよくできてるよね。",
+          "text": "Yeah.\nIt's really well made."
+        },
+        {
+          "offset": "0x924",
+          "original": "何で\nできてんだろう？",
+          "text": "What's it\nmade of?"
+        },
+        {
+          "offset": "0x93c",
+          "original": "あっ、{G}。\n触っちゃ駄目だって。",
+          "text": "Hey, {G}!\nDon't touch that."
+        },
+        {
+          "offset": "0x95c",
+          "original": "大丈夫だよ。\n気がちっちゃいなぁ。",
+          "text": "It's fine.\nYou worry too much."
+        },
+        {
+          "offset": "0x980",
+          "original": "知らないよ。\n怒られても…。",
+          "text": "Don't blame me\nif we get yelled at..."
+        },
+        {
+          "offset": "0x9b8",
+          "original": "と、取れちゃった。",
+          "text": "I-it came off."
+        },
+        {
+          "offset": "0x9cc",
+          "original": "えっ？\n（そ、それはやばいぞ。）",
+          "text": "Huh?\n(Th-that's bad.)"
+        },
+        {
+          "offset": "0x9ec",
+          "original": "ど、どうしよう…。",
+          "text": "Wh-what do I do..."
+        },
+        {
+          "offset": "0xa00",
+          "original": "ほら、何やってんの。\n逃げるよ。",
+          "text": "Come on, what are you doing?\nRun!"
+        },
+        {
+          "offset": "0xa34",
+          "original": "あのままにして\nきちゃったよ。",
+          "text": "We just left it\nlike that."
+        },
+        {
+          "offset": "0xa54",
+          "original": "大丈夫。\n誰にも見られてないから。\n平気平気。",
+          "text": "It's fine.\nNobody saw us.\nNo problem."
+        },
+        {
+          "offset": "0xa84",
+          "original": "何か、良心が痛むよ。",
+          "text": "I feel kinda guilty."
+        },
+        {
+          "offset": "0xa9c",
+          "original": "ばれたときは、\nその時はその時。\n俺が何とかするよ。",
+          "text": "If they find out,\nwe'll deal with it then.\nI'll figure something out."
+        },
+        {
+          "offset": "0xad0",
+          "original": "何とかって？",
+          "text": "Figure what out?"
+        },
+        {
+          "offset": "0xae0",
+          "original": "そのとき考えるけど…。",
+          "text": "I'll think of it then..."
+        },
+        {
+          "offset": "0xaf8",
+          "original": "なんか心配。\nやっぱり、\n謝りに行ってくるよ。",
+          "text": "I'm still worried.\nI'm going to\napologize after all."
+        },
+        {
+          "offset": "0xb44",
+          "original": "あっ、{G}。\nしょうがない、\n俺も行くか。",
+          "text": "Wait, {G}.\nOh well,\nI'll go too."
+        },
+        {
+          "offset": "0xb70",
+          "original": "ありがとう。\n一緒に謝ってくれて。",
+          "text": "Thanks for\napologizing with me."
+        },
+        {
+          "offset": "0xb94",
+          "original": "別にそんな事はいいよ。\nでも、良かったね。\n簡単に許してもらえて。",
+          "text": "Don't mention it.\nBut that was lucky.\nThey forgave us so easily."
+        },
+        {
+          "offset": "0xbd8",
+          "original": "本当だね。\n良かった。",
+          "text": "Yeah, really.\nWhat a relief."
+        },
+        {
+          "offset": "0xbf0",
+          "original": "あんなに貴重なものを\n壊したのに、なぜだ？\nま、いいか…。",
+          "text": "We broke something so\nvaluable... Why'd they\nforgive us? Oh well."
+        },
+        {
+          "offset": "0x1204",
+          "original": "すごいね。\nここまで来れる人は、\nそうそういないよ。",
+          "text": "Amazing.\nNot many people\ncan swim out this far."
+        },
+        {
+          "offset": "0x1238",
+          "original": "ありがとう。\nあれ、雲行きが\n怪しくなってきたね。",
+          "text": "Thanks.\nHuh, the sky's\nlooking iffy."
+        },
+        {
+          "offset": "0x126c",
+          "original": "本当だ。\n急に、天気が\n悪くなってきたね。",
+          "text": "You're right.\nThe weather turned\nbad all of a sudden."
+        },
+        {
+          "offset": "0x1298",
+          "original": "一雨来そうだぞ。",
+          "text": "Looks like rain."
+        },
+        {
+          "offset": "0x12bc",
+          "original": "キャーッ。",
+          "text": "Eeek!"
+        },
+        {
+          "offset": "0x12c8",
+          "original": "ど、どうしたの？",
+          "text": "Wh-what's wrong?"
+        },
+        {
+          "offset": "0x12dc",
+          "original": "あ、あたし、雷は…。\nだ、駄目なの。",
+          "text": "I-I can't...\nI can't stand thunder."
+        },
+        {
+          "offset": "0x130c",
+          "original": "キャーッ。",
+          "text": "Eeek!"
+        },
+        {
+          "offset": "0x1318",
+          "original": "大丈夫。\n俺がついてるから。\n安心して。",
+          "text": "It's okay.\nI'm right here.\nDon't worry."
+        },
+        {
+          "offset": "0x1340",
+          "original": "う、うん。",
+          "text": "O-okay."
+        },
+        {
+          "offset": "0x134c",
+          "original": "何にしても、\nここは危ないから、\n岩場の影に行こう。",
+          "text": "Either way,\nit's dangerous here.\nLet's go behind the rocks."
+        },
+        {
+          "offset": "0x1390",
+          "original": "雨が上がったみたいだね。\n大丈夫？\n寒くない？",
+          "text": "Rain's stopped.\nAre you okay?\nAre you cold?"
+        },
+        {
+          "offset": "0x13c0",
+          "original": "だ、大丈夫。\n平気よ。\nでも、あの…。",
+          "text": "I-I'm fine.\nReally.\nBut, um..."
+        },
+        {
+          "offset": "0x13e8",
+          "original": "ごめんね。\n抱きついたりして。\n迷惑だったでしょう？",
+          "text": "Sorry I clung\nto you like that.\nDid it bother you?"
+        },
+        {
+          "offset": "0x141c",
+          "original": "いや、迷惑じゃないよ。\nどちらかと言うと、\n嬉しかったかな。",
+          "text": "No, not at all.\nIf anything,\nI kind of liked it."
+        },
+        {
+          "offset": "0x146c",
+          "original": "ほ、本当に、\n嬉しかった？",
+          "text": "R-really?\nYou liked it?"
+        },
+        {
+          "offset": "0x1488",
+          "original": "もちろんだよ。",
+          "text": "Of course."
+        },
+        {
+          "offset": "0x14a0",
+          "original": "良かった…。\n元気づけてくれたとき、\n私も、嬉しかった…。",
+          "text": "I'm glad...\nWhen you cheered me up,\nI was happy too..."
+        },
+        {
+          "offset": "0x14dc",
+          "original": "そ、そう？\n良かった…。",
+          "text": "R-really?\nI'm glad..."
+        },
+        {
+          "offset": "0x14f4",
+          "original": "さあ、\nまた泳いで戻りましょう。",
+          "text": "Okay,\nlet's swim back."
+        },
+        {
+          "offset": "0x17d8",
+          "original": "あっ。\nもうシクラメンが\n咲いてるんだ。",
+          "text": "Oh.\nThe cyclamens are\nalready blooming."
+        },
+        {
+          "offset": "0x1800",
+          "original": "えっ？\nシクラメン？",
+          "text": "Huh?\nCyclamens?"
+        },
+        {
+          "offset": "0x181c",
+          "original": "ほら、ここにいっぱい\n咲いてるじゃない。",
+          "text": "Look, there are lots\nblooming right here."
+        },
+        {
+          "offset": "0x1844",
+          "original": "この花がそうなの？",
+          "text": "That's what these are?"
+        },
+        {
+          "offset": "0x1858",
+          "original": "そうよ。",
+          "text": "Yep."
+        },
+        {
+          "offset": "0x1864",
+          "original": "へぇ、\n意外と詳しいんだね。",
+          "text": "Huh, you know\nmore than I expected."
+        },
+        {
+          "offset": "0x1880",
+          "original": "私の好きな花なんだ。\n花言葉も、\n知ってるわよ。",
+          "text": "They're my favorite.\nI even know what\nthey symbolize."
+        },
+        {
+          "offset": "0x18b0",
+          "original": "えっ、花言葉？\n何て言うの？",
+          "text": "Oh, what they symbolize?\nWhat is it?"
+        },
+        {
+          "offset": "0x18cc",
+          "original": "シクラメンの花言葉はね、",
+          "text": "The cyclamen stands for..."
+        },
+        {
+          "offset": "0x18e8",
+          "original": "花言葉は？",
+          "text": "Stands for?"
+        },
+        {
+          "offset": "0x1914",
+          "original": "内気な心、って言うの。",
+          "text": "A shy heart, they say."
+        },
+        {
+          "offset": "0x192c",
+          "original": "内気な心？\nふーん。\nそうなんだ。",
+          "text": "A shy heart?\nHuh.\nI see."
+        },
+        {
+          "offset": "0x1950",
+          "original": "私の心と同じね。",
+          "text": "Just like my heart."
+        },
+        {
+          "offset": "0x1964",
+          "original": "えっ、なんか言った？",
+          "text": "Huh, did you say something?"
+        },
+        {
+          "offset": "0x197c",
+          "original": "ううん。\nなんにも…。\nさあ、先に行こうよ。",
+          "text": "No.\nNothing...\nCome on, let's go on."
+        },
+        {
+          "offset": "0x19a8",
+          "original": "そうしよう。\n（{G}って、\n女の子だよなぁ。）",
+          "text": "Let's go.\n({G} has a\ngirly side after all.)"
+        },
+        {
+          "offset": "0x19ec",
+          "original": "あれ？\nもうシクラメンが\n咲いてるんだ。",
+          "text": "Huh?\nThe cyclamens are\nalready blooming."
+        },
+        {
+          "offset": "0x1a14",
+          "original": "えっ？\nシクラメン？",
+          "text": "Huh?\nCyclamens?"
+        },
+        {
+          "offset": "0x1a30",
+          "original": "ほら、ここにいっぱい\n咲いてるだろう？",
+          "text": "Look, there are tons\nblooming right here."
+        },
+        {
+          "offset": "0x1a58",
+          "original": "この花がそうなの？",
+          "text": "That's what these are?"
+        },
+        {
+          "offset": "0x1a6c",
+          "original": "そうだよ。",
+          "text": "Yep."
+        },
+        {
+          "offset": "0x1a78",
+          "original": "へぇ、\n意外と詳しいんだね。",
+          "text": "Huh, you know\nmore than I expected."
+        },
+        {
+          "offset": "0x1a94",
+          "original": "私の好きな花なんだ。\n花言葉も、\n私にぴったりだし。",
+          "text": "They're my favorite.\nWhat they stand for\nfits me perfectly, too."
+        },
+        {
+          "offset": "0x1ac8",
+          "original": "えっ、花言葉？\n何て言うの？",
+          "text": "Oh, what they symbolize?\nWhat is it?"
+        },
+        {
+          "offset": "0x1ae4",
+          "original": "シクラメンの花言葉はね、",
+          "text": "The cyclamen stands for..."
+        },
+        {
+          "offset": "0x1b00",
+          "original": "花言葉は？",
+          "text": "Stands for?"
+        },
+        {
+          "offset": "0x1b2c",
+          "original": "内気な心。",
+          "text": "A shy heart."
+        },
+        {
+          "offset": "0x1b38",
+          "original": "内気な心？\n誰に、ぴったりだって？",
+          "text": "A shy heart?\nAnd who does that fit?"
+        },
+        {
+          "offset": "0x1b5c",
+          "original": "私に決まってんだろ。\n傷つくなぁ、その言葉。",
+          "text": "Me, obviously.\nOuch, that hurt."
+        },
+        {
+          "offset": "0x1b88",
+          "original": "ごめん、ごめん。\nでも、内気な心…。\nくくくくっ。",
+          "text": "Sorry, sorry.\nBut, a shy heart...\nPfft-heh-heh."
+        },
+        {
+          "offset": "0x1bbc",
+          "original": "別に、そう思って\nくれなくてもいいけどさ。",
+          "text": "You don't have to\nbelieve it, you know."
+        },
+        {
+          "offset": "0x1be8",
+          "original": "あっ、信じるよ。\nうん、{G}は、\n何て内気なんだ。",
+          "text": "Oh, I believe you.\nSure, {G}'s\nreally shy."
+        },
+        {
+          "offset": "0x1c18",
+          "original": "なんか\n引っ掛かるんだよなぁ\nその言い方。",
+          "text": "Something\nbugs me about\nthe way you said that."
+        },
+        {
+          "offset": "0x1c44",
+          "original": "{G}が内気だって\nちょっと笑っちゃった。\nでも、花の事詳しいなぁ。",
+          "text": "{G}, shy?\nI had to laugh.\nBut she knows flowers."
+        },
+        {
+          "offset": "0x20d8",
+          "original": "それにしても、\n{G}って、\n力任せに投げてるな。",
+          "text": "Man,\n{G} just\nthrows with brute force."
+        },
+        {
+          "offset": "0x2104",
+          "original": "あっ。\nよけて！",
+          "text": "Ah!\nDuck!"
+        },
+        {
+          "offset": "0x2114",
+          "original": "おおおおおおおおっ。",
+          "text": "Whoooooaaaa!"
+        },
+        {
+          "offset": "0x2138",
+          "original": "あ、当たっちゃった。",
+          "text": "I-I hit him."
+        },
+        {
+          "offset": "0x2154",
+          "original": "いってぇ。",
+          "text": "Owww."
+        },
+        {
+          "offset": "0x2160",
+          "original": "ご、ごめんなさい。\n大丈夫？",
+          "text": "I-I'm so sorry.\nAre you okay?"
+        },
+        {
+          "offset": "0x217c",
+          "original": "だ、大丈夫だよ。",
+          "text": "I-I'm fine."
+        },
+        {
+          "offset": "0x2190",
+          "original": "血も出てないみたいだし、\n良かった…。",
+          "text": "You're not bleeding,\nthank goodness..."
+        },
+        {
+          "offset": "0x21b8",
+          "original": "気にしなくてもいいよ。\nほら、続きやろうよ。",
+          "text": "Don't worry about it.\nCome on, let's play on."
+        },
+        {
+          "offset": "0x21e4",
+          "original": "う、うん。\n本当にごめんね。",
+          "text": "O-okay.\nI'm really sorry."
+        },
+        {
+          "offset": "0x2200",
+          "original": "最近、女の子っぽく\nなってきたよな…。",
+          "text": "She's gotten\nso girly lately."
+        },
+        {
+          "offset": "0x2244",
+          "original": "それにしても、\n{G}って、\n力任せに投げてるな。",
+          "text": "Man,\n{G} just\nthrows with brute force."
+        },
+        {
+          "offset": "0x2270",
+          "original": "あっ。\nよけて！",
+          "text": "Ah!\nDuck!"
+        },
+        {
+          "offset": "0x2280",
+          "original": "おおおおおおおおっ。",
+          "text": "Whoooooaaaa!"
+        },
+        {
+          "offset": "0x22a4",
+          "original": "あ、当たっちゃった。",
+          "text": "I-I hit him."
+        },
+        {
+          "offset": "0x22c0",
+          "original": "いってぇ。",
+          "text": "Owww."
+        },
+        {
+          "offset": "0x22cc",
+          "original": "おっ、生き返った。\n悪い悪い\nちょっと手が滑って。",
+          "text": "Oh, you're alive.\nSorry, sorry,\nmy hand slipped."
+        },
+        {
+          "offset": "0x2300",
+          "original": "悪いじゃないよ。\n顔面もろだぜ。",
+          "text": "Sorry isn't enough.\nRight in the face."
+        },
+        {
+          "offset": "0x2320",
+          "original": "つばでもつければ治るって。\n何なら、\n私がつけてあげようか？",
+          "text": "A little spit'll fix it.\nIf you like,\nshould I put some on?"
+        },
+        {
+          "offset": "0x235c",
+          "original": "えっ？\nい、いいよ…。",
+          "text": "Huh?\nN-no thanks..."
+        },
+        {
+          "offset": "0x2374",
+          "original": "あははははは。\n真っ赤になって…。\n冗談に決まってるだろ。",
+          "text": "Ahahahaha.\nYou're all red...\nI'm joking, obviously."
+        },
+        {
+          "offset": "0x23b0",
+          "original": "‥‥‥‥。\nぜ、絶対に許さん。",
+          "text": "........\nI-I'll never forgive you."
+        },
+        {
+          "offset": "0x23d0",
+          "original": "ご、ごめん。\nそんなに怒るなよ。\nちゃんと謝るから。",
+          "text": "S-sorry.\nDon't get so mad.\nI'll apologize properly."
+        },
+        {
+          "offset": "0x2404",
+          "original": "ふんだ。",
+          "text": "Hmph."
+        },
+        {
+          "offset": "0x2410",
+          "original": "ごめんなさい。\n本当に悪かった。\n反省してるよ。",
+          "text": "I'm sorry.\nI really am.\nI've learned my lesson."
+        },
+        {
+          "offset": "0x2440",
+          "original": "そこまで言うなら、\n許してやっても\nいいけどさ。",
+          "text": "If you put it that way,\nI guess I could\nforgive you."
+        },
+        {
+          "offset": "0x2470",
+          "original": "本当？\nじゃ続きやろうぜ。",
+          "text": "Really?\nThen let's keep playing."
+        },
+        {
+          "offset": "0x248c",
+          "original": "本当に反省してるのか？",
+          "text": "Is she really sorry?"
+        },
+        {
+          "offset": "0x2858",
+          "original": "えっ？",
+          "text": "Huh?"
+        },
+        {
+          "offset": "0x2860",
+          "original": "あっ。",
+          "text": "Oops."
+        },
+        {
+          "offset": "0x2868",
+          "original": "えっ？",
+          "text": "Huh?"
+        },
+        {
+          "offset": "0x2870",
+          "original": "何？",
+          "text": "What?"
+        }
+      ]
+    }
+  ]
 }

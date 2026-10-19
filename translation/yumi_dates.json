@@ -9,7 +9,7 @@
         {
           "offset": "0x0",
           "original": "それじゃあ、中に入ろう？",
-          "text": "Okay, let's go in?"
+          "text": "Shall we go in?"
         },
         {
           "offset": "0x1c",
@@ -34,7 +34,7 @@
         {
           "offset": "0x130",
           "original": "それじゃあ、中に入ろう？",
-          "text": "Okay, let's go in?"
+          "text": "Shall we go in?"
         },
         {
           "offset": "0x14c",
@@ -44,7 +44,7 @@
         {
           "offset": "0x170",
           "original": "この野原の絵、奇麗だね。\nどうやって描くんだろう。",
-          "text": "This meadow's so pretty.\nHow do you paint that?"
+          "text": "That meadow painting's\nlovely. How'd they do it?"
         },
         {
           "offset": "0x1a4",
@@ -59,7 +59,7 @@
         {
           "offset": "0x258",
           "original": "それじゃあ、中に入ろう？",
-          "text": "Okay, let's go in?"
+          "text": "Shall we go in?"
         },
         {
           "offset": "0x274",
@@ -84,7 +84,7 @@
         {
           "offset": "0x370",
           "original": "それじゃあ、中に入ろう？",
-          "text": "Okay, let's go in?"
+          "text": "Shall we go in?"
         },
         {
           "offset": "0x38c",
@@ -109,7 +109,7 @@
         {
           "offset": "0x49c",
           "original": "それじゃあ、中に入ろう？",
-          "text": "Okay, let's go in?"
+          "text": "Shall we go in?"
         },
         {
           "offset": "0x4b8",
@@ -139,7 +139,7 @@
         {
           "offset": "0x5f8",
           "original": "それじゃあ、中に入ろう？",
-          "text": "Okay, let's go in?"
+          "text": "Shall we go in?"
         },
         {
           "offset": "0x614",
@@ -269,7 +269,7 @@
         {
           "offset": "0x12ac",
           "original": "動物園ってペットが\nたくさんいるようで\n楽しいね。",
-          "text": "The zoo's like\nhaving tons of pets.\nIt's so fun!"
+          "text": "The zoo's like\nhaving lots of pets.\nIt's so fun!"
         },
         {
           "offset": "0x12e0",
@@ -324,7 +324,7 @@
         {
           "offset": "0x151c",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yes, it really was cute.{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "They were so cute!{q}Not cute at all!{q}Their eyes are creepy."
         },
         {
           "offset": "0x1560",
@@ -449,7 +449,7 @@
         {
           "offset": "0x1b70",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x1bc8",
@@ -469,7 +469,7 @@
         {
           "offset": "0x1c84",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1cac",
@@ -479,7 +479,7 @@
         {
           "offset": "0x1ce8",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x21cc",
@@ -634,7 +634,7 @@
         {
           "offset": "0x2df8",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2e18",
@@ -654,7 +654,7 @@
         {
           "offset": "0x2ea8",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2ec8",
@@ -674,7 +674,7 @@
         {
           "offset": "0x2f54",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x2f74",
@@ -954,7 +954,7 @@
         {
           "offset": "0x4274",
           "original": "アイドル系の音楽を好む。\nということを聞き出した。",
-          "text": "Found out she likes\nidol singers' music."
+          "text": "Found out she likes\nidol music."
         },
         {
           "offset": "0x42a8",
@@ -1019,7 +1019,7 @@
         {
           "offset": "0x471c",
           "original": "あそこが空いてるよ。",
-          "text": "There are seats over there!"
+          "text": "Look, empty seats!"
         },
         {
           "offset": "0x4738",
@@ -1054,7 +1054,7 @@
         {
           "offset": "0x4a7c",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x4aac",
@@ -1529,7 +1529,7 @@
         {
           "offset": "0x6e78",
           "original": "よーし、\nだったら優美と一緒に\n上級者コースだね。{q}エーッ、しょうがないなー。\nじゃあ、\n初心者コースに行こう。{q}それじゃあ、\n中級者コースに行こうよ。",
-          "text": "All right!\nThen it's the expert\ncourse with Yumi!{q}Aww, oh well.\nThen let's go\nto the bunny slope.{q}Then let's take\nthe intermediate course."
+          "text": "All right!\nThen it's the expert\ncourse with Yumi!{q}Aww, oh well.\nThen let's go\nto the beginner slope.{q}Then let's take\nthe intermediate course."
         },
         {
           "offset": "0x6f10",
@@ -1544,7 +1544,7 @@
         {
           "offset": "0x6f4c",
           "original": "優美のこのスキーウェア、\nカッコイイでしょう。",
-          "text": "Isn't Yumi's\nski wear cool?"
+          "text": "Isn't Yumi's\nski outfit cool?"
         },
         {
           "offset": "0x6f7c",
@@ -1849,7 +1849,7 @@
         {
           "offset": "0x84a0",
           "original": "撮影用より、楽なんだよ。{q}着たこと無いからなぁ…。{q}大変だって、聞いたことあるよ。",
-          "text": "Lighter than the TV suits.{q}I've never worn one, so...{q}I hear it's super tough."
+          "text": "Easier than the TV suits.{q}I've never worn one, so...{q}I hear it's super tough."
         },
         {
           "offset": "0x84fc",
@@ -2289,7 +2289,7 @@
         {
           "offset": "0xa81c",
           "original": "うん。\n優美もお腹ペコペコー。\n早く何か食べに行こうよ。{q}そういう事言うのって、\n先輩らしくないです。{q}うん。\n優美、そうなんだ。",
-          "text": "Yeah.\nYumi's starving too!\nLet's go eat, quick!{q}Saying stuff like that\nisn't like you, senpai.{q}Yeah.\nYumi doesn't."
+          "text": "Yeah.\nYumi's starving too!\nLet's go eat, quick!{q}Saying stuff like that\nisn't like you, Senpai.{q}Yeah.\nYumi doesn't."
         },
         {
           "offset": "0xa8a0",
@@ -2329,7 +2329,7 @@
         {
           "offset": "0xaa24",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0xaa3c",

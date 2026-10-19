@@ -14,7 +14,7 @@
         {
           "offset": "0x48",
           "original": "吹奏楽部で３年間頑張った\n成果が出たぜ。",
-          "text": "Three years in the Band\nreally paid off."
+          "text": "Three years in the band\nreally paid off."
         },
         {
           "offset": "0x70",
@@ -49,7 +49,7 @@
         {
           "offset": "0x120",
           "original": "私達…\n優勝しちゃったのよね。",
-          "text": "We...\nreally won, didn't we."
+          "text": "We...\nreally won, didn't we?"
         },
         {
           "offset": "0x140",
@@ -99,7 +99,7 @@
         {
           "offset": "0x234",
           "original": "国際吹奏楽コンクール優勝、\nおめでとうございます。\n素晴らしい演奏でした。",
-          "text": "Congratulations on\nwinning the Band Contest.\nIt was a splendid show."
+          "text": "Congratulations on\nwinning the Band Contest.\nWhat a great performance."
         },
         {
           "offset": "0x280",
@@ -169,7 +169,7 @@
         {
           "offset": "0x410",
           "original": "国際吹奏楽コンクール優勝、\nおめでとう。\n聞いてたわよ。",
-          "text": "Congrats on winning\nthe Band Contest.\nI was listening."
+          "text": "Congrats on winning\nthe Band Contest.\nI heard you play."
         },
         {
           "offset": "0x448",
@@ -194,7 +194,7 @@
         {
           "offset": "0x4b0",
           "original": "国際吹奏楽コンクール優勝、\nおめでとう。\n聞いてたよ。",
-          "text": "Congrats on winning\nthe Band Contest.\nI was listening."
+          "text": "Congrats on winning\nthe Band Contest.\nI heard you play."
         },
         {
           "offset": "0x4e8",
@@ -219,7 +219,7 @@
         {
           "offset": "0x55c",
           "original": "この度は、なにか大きな賞\nをいただいたそうで、\nおめでとうございます。",
-          "text": "I hear you received\nsome great award.\nCongratulations."
+          "text": "I heard you won\na major award.\nCongratulations!"
         },
         {
           "offset": "0x5a4",
@@ -229,7 +229,7 @@
         {
           "offset": "0x5d8",
           "original": "国際…長いですねぇ",
-          "text": "International... so long."
+          "text": "What a long name!"
         },
         {
           "offset": "0x5ec",
@@ -249,7 +249,7 @@
         {
           "offset": "0x628",
           "original": "国際吹奏楽コンクール優勝、\nおめでとう。\n聞いてたよ。",
-          "text": "Congrats on winning\nthe Band Contest.\nI was listening."
+          "text": "Congrats on winning\nthe Band Contest.\nI heard you play."
         },
         {
           "offset": "0x660",
@@ -259,7 +259,7 @@
         {
           "offset": "0x67c",
           "original": "うまく言えないけど…\nすごく素敵だった。",
-          "text": "I can't say it well...\nbut it was wonderful."
+          "text": "I can't quite explain it...\nIt was wonderful."
         },
         {
           "offset": "0x6b4",
@@ -284,7 +284,7 @@
         {
           "offset": "0x708",
           "original": "あなたが受賞するのは、\n悪い気分じゃないわね。",
-          "text": "You winning a prize\ndoesn't feel bad."
+          "text": "Seeing you win doesn't\nfeel half bad."
         },
         {
           "offset": "0x74c",
@@ -414,7 +414,7 @@
         {
           "offset": "0xa68",
           "original": "………。\nおまえも暇だな。\nじゃあな、伊集院。",
-          "text": "......\nYou've got time to kill.\nSee you, Ijuin."
+          "text": "......\nNothing better to do, huh?\nSee you, Ijuin."
         },
         {
           "offset": "0xa98",

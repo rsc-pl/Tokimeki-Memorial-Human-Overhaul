@@ -29,12 +29,12 @@
         {
           "offset": "0x90",
           "original": "あっ、丁度いいところに、\n{G}が現れたぞ。",
-          "text": "Oh, perfect timing!\nAnd there's {G}"
+          "text": "Oh, perfect timing!\n{G} just showed up!"
         },
         {
           "offset": "0xb8",
           "original": "おーい、{G}。",
-          "text": "Yo, {G}"
+          "text": "Hey, {G}!"
         },
         {
           "offset": "0xcc",
@@ -169,7 +169,7 @@
         {
           "offset": "0x5a4",
           "original": "電脳部は、ゲームの展示だ。\n早く、準備しなきゃ。",
-          "text": "Game exhibit today.\nBetter get ready."
+          "text": "We've got a game exhibit.\nBetter get ready."
         },
         {
           "offset": "0x5d8",
@@ -209,12 +209,12 @@
         {
           "offset": "0x798",
           "original": "あー、暇だなぁ。\n誰か来ないかなぁ。",
-          "text": "Man, so bored.\nAnyone coming?"
+          "text": "I'm bored...\nWill anyone show up?"
         },
         {
           "offset": "0x7c0",
           "original": "あー、客は来ないし、\n暇だなぁ。",
-          "text": "No visitors,\nso bored."
+          "text": "No one's coming...\nI'm bored."
         },
         {
           "offset": "0x7e4",
@@ -239,7 +239,7 @@
         {
           "offset": "0x914",
           "original": "人前で演技するのは\nすごく緊張するなぁ。\nミスをしませんように…。",
-          "text": "Acting for people\nis nerve-racking.\nNo mistakes..."
+          "text": "Acting in front of people\nis nerve-racking.\nHope I don't mess up..."
         },
         {
           "offset": "0x994",
@@ -254,7 +254,7 @@
         {
           "offset": "0x9f0",
           "original": "結構、\nお客さんが来るなぁ。",
-          "text": "Quite a\ncrowd here."
+          "text": "We're getting\nquite a crowd."
         },
         {
           "offset": "0xa10",
@@ -269,7 +269,7 @@
         {
           "offset": "0xa5c",
           "original": "あー、客は来ないし、\n暇だなぁ。",
-          "text": "No visitors,\nso bored."
+          "text": "No one's coming...\nI'm bored."
         },
         {
           "offset": "0xa80",
@@ -284,7 +284,7 @@
         {
           "offset": "0xb28",
           "original": "人前での演奏は\nすごく緊張するなぁ。\nミスをしませんように…。",
-          "text": "Playing for people\nis nerve-racking.\nNo mistakes..."
+          "text": "Playing in front of people\nis nerve-racking.\nHope I don't mess up..."
         },
         {
           "offset": "0xba4",
@@ -329,7 +329,7 @@
         {
           "offset": "0xd28",
           "original": "なんの主張なんだろう…。",
-          "text": "What was that about...?"
+          "text": "What was the point...?"
         },
         {
           "offset": "0xd48",
@@ -339,7 +339,7 @@
         {
           "offset": "0xd70",
           "original": "結構面白かったな。",
-          "text": "That was good."
+          "text": "That was pretty good."
         },
         {
           "offset": "0xd88",
@@ -349,7 +349,7 @@
         {
           "offset": "0xdc0",
           "original": "爆発したけど、\nあの人大丈夫かなぁ。",
-          "text": "It blew up...\nIs that guy okay?"
+          "text": "It blew up...\nIs the performer okay?"
         },
         {
           "offset": "0xde8",
@@ -561,32 +561,32 @@
         {
           "offset": "0x134",
           "original": "よし、\n{A}を、\nプレゼントしよう。",
-          "text": "Okay, I'll go with\n{A}\nfor her present."
+          "text": "I'll give her\n{A}\nfor her birthday."
         },
         {
           "offset": "0x158",
           "original": "俺は、\n応援に来ていた{G}を\n競技場前に呼び出した。",
-          "text": "I called\n{G}\nto the stadium entrance."
+          "text": "I asked\n{G}, here to cheer,\nto meet by the stadium."
         },
         {
           "offset": "0x18c",
           "original": "俺は、\n応援に来ていた{G}を\n球場前に呼び出した。",
-          "text": "I called\n{G}\nto the stadium entrance."
+          "text": "I asked\n{G}, here to cheer,\nto meet by the ballpark."
         },
         {
           "offset": "0x1c0",
           "original": "俺は、\n応援に来ていた{G}を\n控え室前に呼び出した。",
-          "text": "I called\n{G}\nto the waiting room."
+          "text": "I asked\n{G}, here to cheer,\nto meet by the greenroom."
         },
         {
           "offset": "0x1f4",
           "original": "俺は、\n後かたづけの暇を見て、\n{G}に話しかけた。",
-          "text": "In a break from\ncleanup, I went\nover to {G}"
+          "text": "In a break from\ncleanup, I went\nover to {G}."
         },
         {
           "offset": "0x228",
           "original": "俺は、\n後かたづけを抜け出して、\n{G}を探した。",
-          "text": "I slipped out\nof the cleanup\nto look for {G}"
+          "text": "I slipped out\nof the cleanup\nto look for {G}."
         },
         {
           "offset": "0x258",
@@ -601,7 +601,7 @@
         {
           "offset": "0x280",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}."
         },
         {
           "offset": "0x294",
@@ -611,7 +611,7 @@
         {
           "offset": "0x2c4",
           "original": "お待たせ。\nそれで、用事って？",
-          "text": "Sorry to keep you.\nSo, what's up?"
+          "text": "Sorry to keep you waiting.\nSo, what did you need?"
         },
         {
           "offset": "0x2e8",
@@ -791,7 +791,7 @@
         {
           "offset": "0x7f0",
           "original": "あっ、\nちょっと待ってよ、{G}。",
-          "text": "Oh,\nwait a sec, {G}"
+          "text": "Oh,\nwait a sec, {G}."
         },
         {
           "offset": "0x810",

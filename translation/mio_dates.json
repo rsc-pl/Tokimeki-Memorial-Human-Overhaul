@@ -224,7 +224,7 @@
         {
           "offset": "0xf68",
           "original": "ほら、{G}、\nこっちこっち。",
-          "text": "Look, {G}\nover here."
+          "text": "Hey, {G}!\nOver here!"
         },
         {
           "offset": "0xf8c",
@@ -344,12 +344,12 @@
         {
           "offset": "0x171c",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yeah, they're cute!{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "Yeah, so cute!{q}Not cute at all!{q}Their eyes are creepy."
         },
         {
           "offset": "0x1760",
           "original": "良かった。\nやっぱり、\nそう思いますよね。{q}そう思ってるんですね。{q}私、目が悪いから、\nよく見えませんでした。",
-          "text": "I'm glad.\nYou think so\ntoo, right?{q}So that's what you think.{q}My eyes are bad,\nso I couldn't see well."
+          "text": "I'm glad.\nYou think so\ntoo, right?{q}So that's what you think.{q}My eyesight's bad,\nI couldn't see well."
         },
         {
           "offset": "0x1aec",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1f14",
           "original": "はぁ、来たのが\n間違いでした…。",
-          "text": "Sigh, coming was\na mistake..."
+          "text": "Sigh...\nI shouldn't have come."
         },
         {
           "offset": "0x1f34",
@@ -539,7 +539,7 @@
         {
           "offset": "0x2028",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x2074",
@@ -549,7 +549,7 @@
         {
           "offset": "0x20b0",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x20d8",
@@ -599,7 +599,7 @@
         {
           "offset": "0x227c",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x22a4",
@@ -634,7 +634,7 @@
         {
           "offset": "0x2aa8",
           "original": "それじゃあ、\n金魚すくいでもしようか？",
-          "text": "Well then,\nwanna scoop some goldfish?"
+          "text": "Wanna try\ngoldfish scooping?"
         },
         {
           "offset": "0x2ad0",
@@ -664,7 +664,7 @@
         {
           "offset": "0x2b6c",
           "original": "取れたら{G}にあげるね。",
-          "text": "{G} gets it if I win."
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x2b90",
@@ -1089,7 +1089,7 @@
         {
           "offset": "0x4a80",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's\nnicer out now."
         },
         {
           "offset": "0x4aa4",
@@ -1194,7 +1194,7 @@
         {
           "offset": "0x5264",
           "original": "あっ、\nあそこが空いている\nみたいですね。",
-          "text": "Oh,\nlooks like there are\nseats over there."
+          "text": "Oh,\nthose seats look\nopen over there."
         },
         {
           "offset": "0x5294",
@@ -1229,7 +1229,7 @@
         {
           "offset": "0x5648",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x5678",
@@ -1514,7 +1514,7 @@
         {
           "offset": "0x6d2c",
           "original": "私、洋服とかを\n見に来ることは\nそんなに多くないんです。",
-          "text": "I don't come to\nlook at clothes\nvery often."
+          "text": "I don't come\nto look at clothes\nvery often."
         },
         {
           "offset": "0x6d64",
@@ -1544,7 +1544,7 @@
         {
           "offset": "0x6f24",
           "original": "いいから、いいから。\n貸して？",
-          "text": "It's fine, it's fine.\nHand them over."
+          "text": "It's fine.\nLet me take those."
         },
         {
           "offset": "0x6f48",
@@ -1709,7 +1709,7 @@
         {
           "offset": "0x7c8c",
           "original": "そうなると、\n終わるんですね。{q}それならいいです。{q}そうなんですか。\n見てて楽しいですか？",
-          "text": "So that's how\nit ends.{q}Then never mind.{q}Is that so.\nIs it fun to watch?"
+          "text": "Oh, so that's\nwhen it ends.{q}Then never mind.{q}Is that so.\nIs it fun to watch?"
         },
         {
           "offset": "0x7ce8",
@@ -1834,7 +1834,7 @@
         {
           "offset": "0x8540",
           "original": "そうですね。\n感心してしまいますね。{q}そのぐらい知ってますよ。{q}私、目が悪いから、\nよく見えませんでした。",
-          "text": "Yes.\nIt's impressive.{q}I know that much.{q}My eyes are bad,\nso I couldn't see well."
+          "text": "Yes.\nIt's impressive.{q}I know that much.{q}My eyesight's poor,\nI couldn't see well."
         },
         {
           "offset": "0x87e0",
@@ -1944,17 +1944,17 @@
         {
           "offset": "0x8df8",
           "original": "ぬいぐるみを着ている人、\n大変そうですね。",
-          "text": "The people in costumes\nlook like they have it hard."
+          "text": "Wearing mascot suits\nmust be exhausting."
         },
         {
           "offset": "0x8e24",
           "original": "大変だって、聞いたことあるよ。{q}着たこと無いからなぁ…。{q}撮影用より、楽なんだよ。",
-          "text": "I've heard it's tough.{q}Never worn one myself...{q}Easier than the film ones."
+          "text": "I've heard it's tough.{q}Never worn one myself...{q}Easier than the TV suits."
         },
         {
           "offset": "0x8e80",
           "original": "やっぱり、\nそうなんですね…。{q}それは、当たり前だと\n思いますけど…。{q}撮影用って何ですか？",
-          "text": "I thought\nas much...{q}Isn't that\nobvious, though...?{q}What do you mean, filming?"
+          "text": "I thought\nas much...{q}Isn't that\nobvious, though...?{q}Suits for filming?"
         },
         {
           "offset": "0x8ee0",
@@ -2029,7 +2029,7 @@
         {
           "offset": "0x925c",
           "original": "怖くて、ほとんど\n目を閉じてました。",
-          "text": "It was so scary, I had\nmy eyes shut most of it."
+          "text": "It was scary.\nI kept my eyes shut."
         },
         {
           "offset": "0x9280",
@@ -2139,7 +2139,7 @@
         {
           "offset": "0x9794",
           "original": "怖くて、ほとんど\n目を閉じてました。",
-          "text": "It was so scary, I had\nmy eyes shut most of it."
+          "text": "It was scary.\nI kept my eyes shut."
         },
         {
           "offset": "0x97b8",
@@ -2259,7 +2259,7 @@
         {
           "offset": "0x9d6c",
           "original": "本当に、そうなったら…、\nまた、一緒に来たいです…。{q}こういうのは、\n嫌いなんですね。{q}そうですね。\n大変そうですね。",
-          "text": "If that really happens...\nI'd like to come again...{q}So you don't\nlike this sort of thing.{q}Yes.\nIt does look hard."
+          "text": "If that happens...\nI'd come back with you...{q}So you don't\nlike this sort of thing.{q}Yes.\nIt does look hard."
         },
         {
           "offset": "0x9de4",
@@ -2364,7 +2364,7 @@
         {
           "offset": "0xb080",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0xb098",

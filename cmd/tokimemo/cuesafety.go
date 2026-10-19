@@ -1,6 +1,6 @@
 package main
 
-// G10: strict layout audit for operations that WRITE a complete PS1 disc.
+// Strict track-layout audit before writing a separate PS1 disc image.
 // The ordinary CUE inspector remains permissive; the native writer only
 // supports the two-independent-BINARY-file layout it can reproduce exactly.
 

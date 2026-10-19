@@ -1,144 +1,682 @@
 {
   "description": "Megumi's special events: all of SERIFU/EVENT_MI.BIN (entries 54-60: the shared umbrella and its return, the hero-show minions, her dog Muku, the monkeys, the observation deck, the kitten after the Christmas party). See docs/game-internals.md 6z.",
-  "dialogue": [{
-    "file": "CDROM/SERIFU/EVENT_MI.BIN",
-    "base": "0x80198000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "急に雨が降ってきたな。\n傘を持ってきてよかった。\nあっ、{G}だ。", "text": "It started raining.\nLucky I had an umbrella.\nThere's {G}"},
-      {"offset": "0x3c", "original": "{G}。\nどうしたの？", "text": "Oh, {G}\nwhat's wrong?"},
-      {"offset": "0x58", "original": "あ、あの…。\n急に雨が…。", "text": "U-um...\nThe rain, so sudden..."},
-      {"offset": "0x74", "original": "傘、持ってこなかったの？", "text": "No umbrella?"},
-      {"offset": "0x90", "original": "は、はい…。", "text": "N-no..."},
-      {"offset": "0xa0", "original": "良かったら、\n一緒に入っていかない？", "text": "If you like,\nwant to share mine?"},
-      {"offset": "0xc4", "original": "えっ。\nど、どうしよう…。", "text": "Oh.\nWh-what do I do..."},
-      {"offset": "0xe0", "original": "いいじゃない。\nそれとも、俺とじゃ嫌？", "text": "Come on.\nOr don't you like me?"},
-      {"offset": "0x120", "original": "そ、そんなこと…、\nありません。\nだって…。", "text": "Th-that's not...\ntrue at all.\nBecause..."},
-      {"offset": "0x14c", "original": "じゃあ、一緒に帰ろうよ。\nなかなか、\nやみそうにもないよ。", "text": "Then let's go home together.\nIt doesn't look like\nit'll stop soon."},
-      {"offset": "0x188", "original": "は、はい…。\nそれじゃ、一緒に…。", "text": "O-okay...\nThen, together..."},
-      {"offset": "0x1ac", "original": "よし、じゃあ、\n行こう。", "text": "All right, then,\nlet's go."},
-      {"offset": "0x1e0", "original": "{G}って、\n本当におとなしいな…。", "text": "Gosh, {G}\nis so quiet..."},
-      {"offset": "0x20c", "original": "{G}。\n俺と一緒でつまんない？", "text": "Um, {G}\nare you bored with me?"},
-      {"offset": "0x228", "original": "そ、そんなこと、\n無いです…。", "text": "N-no,\nnot at all..."},
-      {"offset": "0x248", "original": "だったら、どうして\n何も話さないの？", "text": "Then why\ndon't you say anything?"},
-      {"offset": "0x26c", "original": "そ、それは…。\nあの…。\n緊張しちゃって…。", "text": "Th-that's...\num...\nI'm just nervous..."},
-      {"offset": "0x298", "original": "そ、そう。\n（緊張してるのか…。\n可愛いな…。）", "text": "O-oh.\n(She's nervous...\nHow cute...)"},
-      {"offset": "0x2e8", "original": "そ、そんなこと…、\nありません。\nだって…。", "text": "Th-that's not...\ntrue at all.\nBecause..."},
-      {"offset": "0x314", "original": "じゃあ、一緒に帰ろうよ。\nなかなか、\nやみそうにもないよ。", "text": "Then let's go home together.\nIt doesn't look like\nit'll stop soon."},
-      {"offset": "0x350", "original": "で、でも…。\n恥ずかしいですから…。", "text": "B-but...\nit's embarrassing..."},
-      {"offset": "0x374", "original": "それじゃ、\nこの傘、貸してあげるよ。", "text": "Then here,\ntake my umbrella."},
-      {"offset": "0x398", "original": "えっ？\nそんな…。\n悪いですから…。", "text": "Huh?\nOh, no...\nI couldn't..."},
-      {"offset": "0x3bc", "original": "それじゃ、{G}。", "text": "Bye then, {G}"},
-      {"offset": "0x3cc", "original": "あ、あの…。", "text": "U-um..."},
-      {"offset": "0x3f8", "original": "くぅ…。\n俺ってかっこいい。", "text": "Man...\nI'm so cool."},
-      {"offset": "0x79c", "original": "あの…。", "text": "Um..."},
-      {"offset": "0x7a8", "original": "あっ、{G}。", "text": "Oh, {G}"},
-      {"offset": "0x7b4", "original": "き、昨日は…\nありがとうございました。\nと、とても、\n嬉しかったです…。", "text": "Th-thank you...\nfor yesterday.\nI-I was\nso happy..."},
-      {"offset": "0x7fc", "original": "別にいいよ。\n大した事じゃないから。", "text": "Don't mention it.\nIt was no big deal."},
-      {"offset": "0x820", "original": "か、身体の方は、\n大丈夫でしたか？", "text": "A-are you\nfeeling all right?"},
-      {"offset": "0x844", "original": "うん、大丈夫。\n全然、平気だよ。", "text": "Yeah, I'm fine.\nTotally okay."},
-      {"offset": "0x864", "original": "良かった…。\n風邪でもひいたら、\nどうしようかと…。", "text": "Thank goodness...\nI was worried\nyou'd catch a cold..."},
-      {"offset": "0x898", "original": "可愛い{G}のために、\n風邪をひくぐらい\n朝飯前だけどね。", "text": "For sweet {G}\ncatching a cold\nis a piece of cake."},
-      {"offset": "0x8cc", "original": "そ、そんなこと…。\nそ、それじゃ、\nこれお返しします…。", "text": "Oh, n-no...\nW-well, then,\nhere, this is yours..."},
-      {"offset": "0x904", "original": "わざわざ、\n持ってきてくれて、\nありがとう。", "text": "Thanks for\ngoing to the trouble\nto bring it back."},
-      {"offset": "0x930", "original": "本当に、\nありがとうございました。", "text": "Thank you\nso very much."},
-      {"offset": "0x980", "original": "本当、{G}って、\n可愛らしいな。", "text": "Really, {G}\nis totally adorable."},
-      {"offset": "0xb1c", "original": "{>幹部}子供達をさらって、\n戦闘員とするのだ。", "text": "{>Boss}Kidnap the children\nand make them minions!"},
-      {"offset": "0xb48", "original": "{-戦闘員}シャウシャウ…。", "text": "{-Minion}Shaw-shaw..."},
-      {"offset": "0xb60", "original": "あれ？\n戦闘員がこっちに\n向かって来るぞ。", "text": "Huh?\nThe minions are\ncoming this way."},
-      {"offset": "0xb98", "original": "きゃあーっ。", "text": "Eeeek!"},
-      {"offset": "0xba8", "original": "あっ、{G}。", "text": "Oh, {G}"},
-      {"offset": "0xbb4", "original": "あの、放してください。\nお願いします。", "text": "Um, please let me go.\nPlease."},
-      {"offset": "0xbdc", "original": "おい、放せよ。\n嫌がってるじゃないか。", "text": "Hey, let her go.\nShe doesn't like it!"},
-      {"offset": "0xc04", "original": "{-戦闘員}くそ、おぼえてやがれ。", "text": "{-Minion}Curses! You'll pay for this!"},
-      {"offset": "0xc38", "original": "だ、大丈夫だった？\n俺がこんな所に\n連れてきたから…。", "text": "A-are you okay?\nIt's my fault for\nbringing you here..."},
-      {"offset": "0xc74", "original": "いえ。\n大丈夫です。", "text": "No.\nI'm all right."},
-      {"offset": "0xc88", "original": "良かった。", "text": "Thank goodness."},
-      {"offset": "0xc9c", "original": "でも…。", "text": "But..."},
-      {"offset": "0xcb0", "original": "わ、私って、\nそ、そんなに…、\n子供っぽく見えますか？", "text": "D-do I...\nr-really look...\nthat childish?"},
-      {"offset": "0xce8", "original": "そ、そんなことないよ。\nきっと、{G}が\n可愛いからだよ。", "text": "N-no, not at all.\nMust be {G}\nbeing so cute."},
-      {"offset": "0xd24", "original": "か、可愛い…。\nは、恥ずかしいです…。", "text": "C-cute...\nTh-that's embarrassing..."},
-      {"offset": "0xd4c", "original": "俺が、戦闘員だったら、\nやっぱり、{G}を\n狙うかもよ。", "text": "If I were a minion,\nI'd nab {G}\ntoo, maybe."},
-      {"offset": "0xd80", "original": "そ、そうですか…。", "text": "Y-you think so..."},
-      {"offset": "0xd94", "original": "もう、顔が真っ赤だぞ。", "text": "Her face is all red now."},
-      {"offset": "0x1048", "original": "あれ？\n{G}は、まだ\n来てないみたいだな。", "text": "Huh?\nSeems {G}\nisn't here yet."},
-      {"offset": "0x1074", "original": "{+犬}ワンワン。", "text": "{+Mu}Woof woof!"},
-      {"offset": "0x1084", "original": "あれ？\n犬だ。", "text": "Huh?\nA dog."},
-      {"offset": "0x109c", "original": "す、すいません。\nお待たせしました。", "text": "I-I'm sorry.\nI kept you waiting."},
-      {"offset": "0x10c0", "original": "あっ、{G}。\n俺も、\n今来たところだよ。", "text": "Oh, {G}\nI just got\nhere myself."},
-      {"offset": "0x10e4", "original": "良かった。\nほら、ムク。\nこっち来なさい。", "text": "Good.\nCome on, Muku.\nCome here."},
-      {"offset": "0x111c", "original": "{+犬}ワンワン。", "text": "{+Mu}Woof woof!"},
-      {"offset": "0x1130", "original": "この犬、ムクって言うんだ。\n{G}家の\nペットなの？", "text": "So this dog's called Muku.\nIs he {G}'s\nfamily pet?"},
-      {"offset": "0x1160", "original": "そ、そうです…。\nほら、ムクも\nごあいさつなさい。", "text": "Y-yes...\nCome on, Muku,\nsay hello."},
-      {"offset": "0x119c", "original": "{+犬}ウーー、ワン。", "text": "{+Mu}Grrr, woof!"},
-      {"offset": "0x11b0", "original": "こら。\nそんな、ごあいさつが\nありますか。", "text": "Hey!\nThat's no way\nto say hello."},
-      {"offset": "0x11e4", "original": "{+犬}クゥーン。", "text": "{+Mu}Whine."},
-      {"offset": "0x11f4", "original": "{G}。\n可愛い犬だね。\n触ってもいいかな？", "text": "Gosh, {G}\nwhat a cute dog.\nCan I pet him?"},
-      {"offset": "0x121c", "original": "は、はい…。\nど、どうぞ。", "text": "Y-yes...\nG-go ahead."},
-      {"offset": "0x1238", "original": "よしよし。", "text": "Good boy, good boy."},
-      {"offset": "0x1254", "original": "{+犬}ワン。", "text": "{+Mu}Woof!"},
-      {"offset": "0x1264", "original": "いてっ。", "text": "Ow!"},
-      {"offset": "0x1278", "original": "こら、何て事するの。\nだ、大丈夫ですか？", "text": "Hey, what are you doing?\nA-are you all right?"},
-      {"offset": "0x12a0", "original": "大丈夫だよ。\n本気で噛んでない\nみたいだし。", "text": "I'm fine.\nHe didn't really\nbite down."},
-      {"offset": "0x12d4", "original": "いつもは、\nおとなしいんですけど…。\nムク、どうしたの？", "text": "He's usually\nso well-behaved...\nMuku, what's wrong?"},
-      {"offset": "0x1310", "original": "{+犬}クゥーン？", "text": "{+Mu}Whine?"},
-      {"offset": "0x1320", "original": "きっとね。\n俺が、{G}と\n仲良く話してるから、\n嫉妬してるんだよ。", "text": "I bet it's\nbecause {G}\nand I get along so well.\nHe's jealous."},
-      {"offset": "0x1360", "original": "そ、そうなのかな…。\nそうなの、ムク？", "text": "I-is that it...?\nIs that it, Muku?"},
-      {"offset": "0x1394", "original": "{+犬}ワン。", "text": "{+Mu}Woof!"},
-      {"offset": "0x13a0", "original": "そうだって。", "text": "He says yes."},
-      {"offset": "0x13b0", "original": "でも、噛んだりしちゃ\n駄目よ。\n特に私の大切な人には…。", "text": "But you mustn't\nbite.\nEspecially someone dear..."},
-      {"offset": "0x13e8", "original": "えっ？\n大切な人？", "text": "Huh?\nSomeone dear?"},
-      {"offset": "0x140c", "original": "えっ？\nわ、私、そんな事\n言いました？", "text": "Huh?\nD-did I\nsay that?"},
-      {"offset": "0x1434", "original": "言ったと思ったけど…。", "text": "I thought you did..."},
-      {"offset": "0x144c", "original": "き、きっと、空耳ですよ。\nね、ねっ、ムク。", "text": "Y-you must've misheard.\nR-right, Muku?"},
-      {"offset": "0x1484", "original": "{+犬}ワン。", "text": "{+Mu}Woof!"},
-      {"offset": "0x1494", "original": "ほ、ほら…。", "text": "S-see..."},
-      {"offset": "0x14a4", "original": "そ、そうかな。\nまっ、いいや。\nそれじゃ、\n散歩でもしようよ。", "text": "I-is that so?\nOh, well.\nThen let's\ngo for a walk."},
-      {"offset": "0x14e0", "original": "そ、そうですね…。\n良かった…。", "text": "Y-yes, let's...\nPhew..."},
-      {"offset": "0x1500", "original": "何か言った？", "text": "Did you say something?"},
-      {"offset": "0x1510", "original": "い、いえ…。\nな、何も…。", "text": "N-no...\nN-nothing..."},
-      {"offset": "0x1a58", "original": "{G}。\nあっちに\n変な動物がいるよ。", "text": "Look, {G}\nthere's a weird\nanimal over there."},
-      {"offset": "0x1a88", "original": "駄目だ。\n猿に熱中してて、\n声が聞こえないらしい。", "text": "No use.\nShe's so into the monkeys\nshe can't hear me."},
-      {"offset": "0x1ac8", "original": "しょうがない、\n俺も猿を見るかな。", "text": "Oh well, guess\nI'll watch monkeys, too."},
-      {"offset": "0x1b00", "original": "す、すいません…。\n動物が好きで…、\n見入ってしまって…。", "text": "I-I'm sorry...\nI love animals...\nI got carried away..."},
-      {"offset": "0x1b3c", "original": "別に、気にしてないよ。\nそれよりもさ、あっちに\n変な動物がいるんだ。", "text": "I don't mind at all.\nMore importantly, there's\na weird animal over there."},
-      {"offset": "0x1b80", "original": "へ、変な動物ですか…？", "text": "A w-weird animal...?"},
-      {"offset": "0x1b98", "original": "そう。\n早く見に行こうよ。", "text": "Yeah.\nLet's go see it."},
-      {"offset": "0x1bb4", "original": "は、はい…。", "text": "N-no..."},
-      {"offset": "0x1d44", "original": "それじゃ、\n少し、手すりから\n離れようよ。", "text": "Then let's\nstep back from\nthe railing a bit."},
-      {"offset": "0x1d74", "original": "あの…。\nこ、怖いので…。\n手を…。", "text": "Um...\nI-I'm scared...\nYour hand..."},
-      {"offset": "0x1d98", "original": "はい。\n手を出して。", "text": "Here.\nGive me your hand."},
-      {"offset": "0x1db4", "original": "は、はい…。\nきゃっ。", "text": "O-okay...\nEek!"},
-      {"offset": "0x1dd0", "original": "だ、大丈夫？", "text": "A-are you okay?"},
-      {"offset": "0x1dec", "original": "み、{G}？\nどうしたの？", "text": "M-{G}\nwhat's wrong?"},
-      {"offset": "0x1e04", "original": "えっ…\nだ、大丈夫です…。", "text": "Oh...\nI-I'm all right..."},
-      {"offset": "0x1e20", "original": "何だ、良かった。", "text": "Phew, good."},
-      {"offset": "0x1e34", "original": "あ、あの…。", "text": "U-um..."},
-      {"offset": "0x1e44", "original": "な、何？", "text": "Wh-what?"},
-      {"offset": "0x1e50", "original": "ま、まだ…、怖いので…。\nもう少し、このままで…。", "text": "I-I'm still scared...\nJust a little longer..."},
-      {"offset": "0x1e84", "original": "み、{G}さえ\n良ければ…。", "text": "So if {G}\nis okay with it..."},
-      {"offset": "0x1e9c", "original": "はい…。\n私、幸せです…。", "text": "Yes...\nI'm so happy..."},
-      {"offset": "0x1eb8", "original": "幸せ？\n怖いんじゃ無かったのか？", "text": "Happy?\nWasn't she scared?"},
-      {"offset": "0x20f0", "original": "あ、あの…。", "text": "U-um..."},
-      {"offset": "0x2104", "original": "あっ、{G}。", "text": "Oh, {G}"},
-      {"offset": "0x2110", "original": "あの…\nも、もし良かったら…\n一緒に帰りませんか？", "text": "Um...\ni-if it's okay...\nshall we go home together?"},
-      {"offset": "0x2144", "original": "うん、いいよ。\nもう、遅いしね。", "text": "Sure.\nIt's late anyway."},
-      {"offset": "0x2164", "original": "あ、ありがとうございます。", "text": "Th-thank you."},
-      {"offset": "0x2180", "original": "それじゃ、行こうか。", "text": "Well, let's go."},
-      {"offset": "0x2198", "original": "は、はい。", "text": "O-okay."},
-      {"offset": "0x21bc", "original": "あれ、どうしたの、\n{G}？\n（急いで走っていくぞ。）", "text": "Huh, what's wrong,\n{G}\n(She's running off.)"},
-      {"offset": "0x21f4", "original": "この子、捨てられちゃった\nみたいです…。", "text": "Looks like this little one\nwas abandoned..."},
-      {"offset": "0x221c", "original": "この子猫の\n鳴き声が聞こえたのか。", "text": "So she heard\nthe kitten crying."},
-      {"offset": "0x2248", "original": "かわいそう…。\nこんなに震えて…。", "text": "Poor thing...\nShivering like this..."},
-      {"offset": "0x226c", "original": "{G}て、\n本当に動物が好きなんだな。", "text": "Gosh, {G}\ntruly loves animals."},
-      {"offset": "0x2290", "original": "寒かったでしょう？\nすぐ、家につれてって\nあげるからね。", "text": "You were cold, weren't you?\nI'll take you\nhome right away."},
-      {"offset": "0x22d4", "original": "お腹も空いているのね。\n大丈夫よ、ミルクを\n温めてあげるから。", "text": "You're hungry too, huh.\nIt's okay, I'll warm\nsome milk for you."},
-      {"offset": "0x2314", "original": "{G}、\n早く連れてってあげよう。", "text": "Okay, {G}\nlet's take it home quick."},
-      {"offset": "0x233c", "original": "は、はい。そうですね。", "text": "Y-yes. Let's."},
-      {"offset": "0x2354", "original": "俺は、{G}を\n家まで送って帰った。", "text": "I saw {G}\nhome and then went home."},
-      {"offset": "0x25e8", "original": "でも？", "text": "But?"},
-      {"offset": "0x25f0", "original": "ガブッ", "text": "CHOMP"},
-      {"offset": "0x25f8", "original": "み、{G}？", "text": "M-{G}"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/EVENT_MI.BIN",
+      "base": "0x80198000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "急に雨が降ってきたな。\n傘を持ってきてよかった。\nあっ、{G}だ。",
+          "text": "It started raining.\nLucky I had an umbrella.\nThere's {G}"
+        },
+        {
+          "offset": "0x3c",
+          "original": "{G}。\nどうしたの？",
+          "text": "Oh, {G}\nwhat's wrong?"
+        },
+        {
+          "offset": "0x58",
+          "original": "あ、あの…。\n急に雨が…。",
+          "text": "U-um...\nThe rain, so sudden..."
+        },
+        {
+          "offset": "0x74",
+          "original": "傘、持ってこなかったの？",
+          "text": "No umbrella?"
+        },
+        {
+          "offset": "0x90",
+          "original": "は、はい…。",
+          "text": "N-no..."
+        },
+        {
+          "offset": "0xa0",
+          "original": "良かったら、\n一緒に入っていかない？",
+          "text": "If you like,\nwant to share mine?"
+        },
+        {
+          "offset": "0xc4",
+          "original": "えっ。\nど、どうしよう…。",
+          "text": "Oh.\nWh-what do I do..."
+        },
+        {
+          "offset": "0xe0",
+          "original": "いいじゃない。\nそれとも、俺とじゃ嫌？",
+          "text": "Or would you rather\nnot walk home with me?"
+        },
+        {
+          "offset": "0x120",
+          "original": "そ、そんなこと…、\nありません。\nだって…。",
+          "text": "Th-that's not...\ntrue at all.\nBecause..."
+        },
+        {
+          "offset": "0x14c",
+          "original": "じゃあ、一緒に帰ろうよ。\nなかなか、\nやみそうにもないよ。",
+          "text": "Then let's go home together.\nIt doesn't look like\nit'll stop soon."
+        },
+        {
+          "offset": "0x188",
+          "original": "は、はい…。\nそれじゃ、一緒に…。",
+          "text": "O-okay...\nThen, together..."
+        },
+        {
+          "offset": "0x1ac",
+          "original": "よし、じゃあ、\n行こう。",
+          "text": "All right, then,\nlet's go."
+        },
+        {
+          "offset": "0x1e0",
+          "original": "{G}って、\n本当におとなしいな…。",
+          "text": "Gosh, {G}\nis so quiet..."
+        },
+        {
+          "offset": "0x20c",
+          "original": "{G}。\n俺と一緒でつまんない？",
+          "text": "Um, {G}\nare you bored with me?"
+        },
+        {
+          "offset": "0x228",
+          "original": "そ、そんなこと、\n無いです…。",
+          "text": "N-no,\nnot at all..."
+        },
+        {
+          "offset": "0x248",
+          "original": "だったら、どうして\n何も話さないの？",
+          "text": "Then why\ndon't you say anything?"
+        },
+        {
+          "offset": "0x26c",
+          "original": "そ、それは…。\nあの…。\n緊張しちゃって…。",
+          "text": "Th-that's...\num...\nI'm just nervous..."
+        },
+        {
+          "offset": "0x298",
+          "original": "そ、そう。\n（緊張してるのか…。\n可愛いな…。）",
+          "text": "O-oh.\n(She's nervous...\nHow cute...)"
+        },
+        {
+          "offset": "0x2e8",
+          "original": "そ、そんなこと…、\nありません。\nだって…。",
+          "text": "Th-that's not...\ntrue at all.\nBecause..."
+        },
+        {
+          "offset": "0x314",
+          "original": "じゃあ、一緒に帰ろうよ。\nなかなか、\nやみそうにもないよ。",
+          "text": "Then let's go home together.\nIt doesn't look like\nit'll stop soon."
+        },
+        {
+          "offset": "0x350",
+          "original": "で、でも…。\n恥ずかしいですから…。",
+          "text": "B-but...\nit's embarrassing..."
+        },
+        {
+          "offset": "0x374",
+          "original": "それじゃ、\nこの傘、貸してあげるよ。",
+          "text": "Then here,\ntake my umbrella."
+        },
+        {
+          "offset": "0x398",
+          "original": "えっ？\nそんな…。\n悪いですから…。",
+          "text": "Huh?\nOh, no...\nI couldn't..."
+        },
+        {
+          "offset": "0x3bc",
+          "original": "それじゃ、{G}。",
+          "text": "Bye then, {G}"
+        },
+        {
+          "offset": "0x3cc",
+          "original": "あ、あの…。",
+          "text": "U-um..."
+        },
+        {
+          "offset": "0x3f8",
+          "original": "くぅ…。\n俺ってかっこいい。",
+          "text": "Man...\nI'm so cool."
+        },
+        {
+          "offset": "0x79c",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0x7a8",
+          "original": "あっ、{G}。",
+          "text": "Oh, {G}"
+        },
+        {
+          "offset": "0x7b4",
+          "original": "き、昨日は…\nありがとうございました。\nと、とても、\n嬉しかったです…。",
+          "text": "Th-thank you...\nfor yesterday.\nI-I was\nso happy..."
+        },
+        {
+          "offset": "0x7fc",
+          "original": "別にいいよ。\n大した事じゃないから。",
+          "text": "Don't mention it.\nIt was no big deal."
+        },
+        {
+          "offset": "0x820",
+          "original": "か、身体の方は、\n大丈夫でしたか？",
+          "text": "A-are you\nfeeling all right?"
+        },
+        {
+          "offset": "0x844",
+          "original": "うん、大丈夫。\n全然、平気だよ。",
+          "text": "Yeah, I'm fine.\nTotally okay."
+        },
+        {
+          "offset": "0x864",
+          "original": "良かった…。\n風邪でもひいたら、\nどうしようかと…。",
+          "text": "Thank goodness...\nI was worried\nyou'd catch a cold..."
+        },
+        {
+          "offset": "0x898",
+          "original": "可愛い{G}のために、\n風邪をひくぐらい\n朝飯前だけどね。",
+          "text": "You're so cute, {G}.\nI'd catch a cold\nfor you any day!"
+        },
+        {
+          "offset": "0x8cc",
+          "original": "そ、そんなこと…。\nそ、それじゃ、\nこれお返しします…。",
+          "text": "Oh, n-no...\nW-well, then,\nhere, this is yours..."
+        },
+        {
+          "offset": "0x904",
+          "original": "わざわざ、\n持ってきてくれて、\nありがとう。",
+          "text": "Thanks for\ngoing to the trouble\nto bring it back."
+        },
+        {
+          "offset": "0x930",
+          "original": "本当に、\nありがとうございました。",
+          "text": "Thank you\nso very much."
+        },
+        {
+          "offset": "0x980",
+          "original": "本当、{G}って、\n可愛らしいな。",
+          "text": "Really, {G}\nis totally adorable."
+        },
+        {
+          "offset": "0xb1c",
+          "original": "{>幹部}子供達をさらって、\n戦闘員とするのだ。",
+          "text": "{>Boss}Kidnap the children\nand make them minions!"
+        },
+        {
+          "offset": "0xb48",
+          "original": "{-戦闘員}シャウシャウ…。",
+          "text": "{-Minion}Shaw-shaw..."
+        },
+        {
+          "offset": "0xb60",
+          "original": "あれ？\n戦闘員がこっちに\n向かって来るぞ。",
+          "text": "Huh?\nThe minions are\ncoming this way."
+        },
+        {
+          "offset": "0xb98",
+          "original": "きゃあーっ。",
+          "text": "Eeeek!"
+        },
+        {
+          "offset": "0xba8",
+          "original": "あっ、{G}。",
+          "text": "Oh, {G}"
+        },
+        {
+          "offset": "0xbb4",
+          "original": "あの、放してください。\nお願いします。",
+          "text": "Um, please let me go.\nPlease."
+        },
+        {
+          "offset": "0xbdc",
+          "original": "おい、放せよ。\n嫌がってるじゃないか。",
+          "text": "Hey, let her go.\nShe doesn't like it!"
+        },
+        {
+          "offset": "0xc04",
+          "original": "{-戦闘員}くそ、おぼえてやがれ。",
+          "text": "{-Minion}Curses! You'll pay for this!"
+        },
+        {
+          "offset": "0xc38",
+          "original": "だ、大丈夫だった？\n俺がこんな所に\n連れてきたから…。",
+          "text": "A-are you okay?\nIt's my fault for\nbringing you here..."
+        },
+        {
+          "offset": "0xc74",
+          "original": "いえ。\n大丈夫です。",
+          "text": "No.\nI'm all right."
+        },
+        {
+          "offset": "0xc88",
+          "original": "良かった。",
+          "text": "Thank goodness."
+        },
+        {
+          "offset": "0xc9c",
+          "original": "でも…。",
+          "text": "But..."
+        },
+        {
+          "offset": "0xcb0",
+          "original": "わ、私って、\nそ、そんなに…、\n子供っぽく見えますか？",
+          "text": "D-do I really\nlook that much\nlike a child?"
+        },
+        {
+          "offset": "0xce8",
+          "original": "そ、そんなことないよ。\nきっと、{G}が\n可愛いからだよ。",
+          "text": "N-no, not at all.\n{G}, you're just\nso cute, that's why."
+        },
+        {
+          "offset": "0xd24",
+          "original": "か、可愛い…。\nは、恥ずかしいです…。",
+          "text": "C-cute...\nTh-that's embarrassing..."
+        },
+        {
+          "offset": "0xd4c",
+          "original": "俺が、戦闘員だったら、\nやっぱり、{G}を\n狙うかもよ。",
+          "text": "If I were a minion,\nI'd nab {G}\ntoo, maybe."
+        },
+        {
+          "offset": "0xd80",
+          "original": "そ、そうですか…。",
+          "text": "Y-you think so..."
+        },
+        {
+          "offset": "0xd94",
+          "original": "もう、顔が真っ赤だぞ。",
+          "text": "Her face is all red now."
+        },
+        {
+          "offset": "0x1048",
+          "original": "あれ？\n{G}は、まだ\n来てないみたいだな。",
+          "text": "Huh?\nSeems {G}\nisn't here yet."
+        },
+        {
+          "offset": "0x1074",
+          "original": "{+犬}ワンワン。",
+          "text": "{+Mu}Woof woof!"
+        },
+        {
+          "offset": "0x1084",
+          "original": "あれ？\n犬だ。",
+          "text": "Huh?\nA dog."
+        },
+        {
+          "offset": "0x109c",
+          "original": "す、すいません。\nお待たせしました。",
+          "text": "I-I'm sorry.\nI kept you waiting."
+        },
+        {
+          "offset": "0x10c0",
+          "original": "あっ、{G}。\n俺も、\n今来たところだよ。",
+          "text": "Oh, {G}\nI just got\nhere myself."
+        },
+        {
+          "offset": "0x10e4",
+          "original": "良かった。\nほら、ムク。\nこっち来なさい。",
+          "text": "Good.\nCome on, Muku.\nCome here."
+        },
+        {
+          "offset": "0x111c",
+          "original": "{+犬}ワンワン。",
+          "text": "{+Mu}Woof woof!"
+        },
+        {
+          "offset": "0x1130",
+          "original": "この犬、ムクって言うんだ。\n{G}家の\nペットなの？",
+          "text": "So this dog's called Muku.\nIs he {G}'s\nfamily pet?"
+        },
+        {
+          "offset": "0x1160",
+          "original": "そ、そうです…。\nほら、ムクも\nごあいさつなさい。",
+          "text": "Y-yes...\nCome on, Muku,\nsay hello."
+        },
+        {
+          "offset": "0x119c",
+          "original": "{+犬}ウーー、ワン。",
+          "text": "{+Mu}Grrr, woof!"
+        },
+        {
+          "offset": "0x11b0",
+          "original": "こら。\nそんな、ごあいさつが\nありますか。",
+          "text": "Hey!\nThat's no way\nto say hello."
+        },
+        {
+          "offset": "0x11e4",
+          "original": "{+犬}クゥーン。",
+          "text": "{+Mu}Whine."
+        },
+        {
+          "offset": "0x11f4",
+          "original": "{G}。\n可愛い犬だね。\n触ってもいいかな？",
+          "text": "Gosh, {G}\nwhat a cute dog.\nCan I pet him?"
+        },
+        {
+          "offset": "0x121c",
+          "original": "は、はい…。\nど、どうぞ。",
+          "text": "Y-yes...\nG-go ahead."
+        },
+        {
+          "offset": "0x1238",
+          "original": "よしよし。",
+          "text": "Good boy, good boy."
+        },
+        {
+          "offset": "0x1254",
+          "original": "{+犬}ワン。",
+          "text": "{+Mu}Woof!"
+        },
+        {
+          "offset": "0x1264",
+          "original": "いてっ。",
+          "text": "Ow!"
+        },
+        {
+          "offset": "0x1278",
+          "original": "こら、何て事するの。\nだ、大丈夫ですか？",
+          "text": "Hey, what are you doing?\nA-are you all right?"
+        },
+        {
+          "offset": "0x12a0",
+          "original": "大丈夫だよ。\n本気で噛んでない\nみたいだし。",
+          "text": "I'm fine.\nHe didn't really\nbite down."
+        },
+        {
+          "offset": "0x12d4",
+          "original": "いつもは、\nおとなしいんですけど…。\nムク、どうしたの？",
+          "text": "He's usually\nso well-behaved...\nMuku, what's wrong?"
+        },
+        {
+          "offset": "0x1310",
+          "original": "{+犬}クゥーン？",
+          "text": "{+Mu}Whine?"
+        },
+        {
+          "offset": "0x1320",
+          "original": "きっとね。\n俺が、{G}と\n仲良く話してるから、\n嫉妬してるんだよ。",
+          "text": "I bet it's\nbecause {G}\nand I get along so well.\nHe's jealous."
+        },
+        {
+          "offset": "0x1360",
+          "original": "そ、そうなのかな…。\nそうなの、ムク？",
+          "text": "I-is that it...?\nIs that it, Muku?"
+        },
+        {
+          "offset": "0x1394",
+          "original": "{+犬}ワン。",
+          "text": "{+Mu}Woof!"
+        },
+        {
+          "offset": "0x13a0",
+          "original": "そうだって。",
+          "text": "He says yes."
+        },
+        {
+          "offset": "0x13b0",
+          "original": "でも、噛んだりしちゃ\n駄目よ。\n特に私の大切な人には…。",
+          "text": "But don't bite.\nEspecially not\nsomeone I care about..."
+        },
+        {
+          "offset": "0x13e8",
+          "original": "えっ？\n大切な人？",
+          "text": "Huh?\nSomeone dear?"
+        },
+        {
+          "offset": "0x140c",
+          "original": "えっ？\nわ、私、そんな事\n言いました？",
+          "text": "Huh?\nD-did I\nsay that?"
+        },
+        {
+          "offset": "0x1434",
+          "original": "言ったと思ったけど…。",
+          "text": "I thought you did..."
+        },
+        {
+          "offset": "0x144c",
+          "original": "き、きっと、空耳ですよ。\nね、ねっ、ムク。",
+          "text": "Y-you must've misheard.\nR-right, Muku?"
+        },
+        {
+          "offset": "0x1484",
+          "original": "{+犬}ワン。",
+          "text": "{+Mu}Woof!"
+        },
+        {
+          "offset": "0x1494",
+          "original": "ほ、ほら…。",
+          "text": "S-see..."
+        },
+        {
+          "offset": "0x14a4",
+          "original": "そ、そうかな。\nまっ、いいや。\nそれじゃ、\n散歩でもしようよ。",
+          "text": "I-is that so?\nOh, well.\nThen let's\ngo for a walk."
+        },
+        {
+          "offset": "0x14e0",
+          "original": "そ、そうですね…。\n良かった…。",
+          "text": "Y-yes, let's...\nPhew..."
+        },
+        {
+          "offset": "0x1500",
+          "original": "何か言った？",
+          "text": "Did you say something?"
+        },
+        {
+          "offset": "0x1510",
+          "original": "い、いえ…。\nな、何も…。",
+          "text": "N-no...\nN-nothing..."
+        },
+        {
+          "offset": "0x1a58",
+          "original": "{G}。\nあっちに\n変な動物がいるよ。",
+          "text": "Look, {G}\nthere's a weird\nanimal over there."
+        },
+        {
+          "offset": "0x1a88",
+          "original": "駄目だ。\n猿に熱中してて、\n声が聞こえないらしい。",
+          "text": "No use.\nShe's so into the monkeys\nshe can't hear me."
+        },
+        {
+          "offset": "0x1ac8",
+          "original": "しょうがない、\n俺も猿を見るかな。",
+          "text": "Oh well, guess\nI'll watch monkeys, too."
+        },
+        {
+          "offset": "0x1b00",
+          "original": "す、すいません…。\n動物が好きで…、\n見入ってしまって…。",
+          "text": "I-I'm sorry...\nI love animals...\nI couldn't look away..."
+        },
+        {
+          "offset": "0x1b3c",
+          "original": "別に、気にしてないよ。\nそれよりもさ、あっちに\n変な動物がいるんだ。",
+          "text": "I don't mind at all.\nMore importantly, there's\na weird animal over there."
+        },
+        {
+          "offset": "0x1b80",
+          "original": "へ、変な動物ですか…？",
+          "text": "A w-weird animal...?"
+        },
+        {
+          "offset": "0x1b98",
+          "original": "そう。\n早く見に行こうよ。",
+          "text": "Yeah.\nLet's go see it."
+        },
+        {
+          "offset": "0x1bb4",
+          "original": "は、はい…。",
+          "text": "Y-yes..."
+        },
+        {
+          "offset": "0x1d44",
+          "original": "それじゃ、\n少し、手すりから\n離れようよ。",
+          "text": "Then let's\nstep back from\nthe railing a bit."
+        },
+        {
+          "offset": "0x1d74",
+          "original": "あの…。\nこ、怖いので…。\n手を…。",
+          "text": "Um...\nI-I'm scared...\nYour hand..."
+        },
+        {
+          "offset": "0x1d98",
+          "original": "はい。\n手を出して。",
+          "text": "Here.\nGive me your hand."
+        },
+        {
+          "offset": "0x1db4",
+          "original": "は、はい…。\nきゃっ。",
+          "text": "O-okay...\nEek!"
+        },
+        {
+          "offset": "0x1dd0",
+          "original": "だ、大丈夫？",
+          "text": "A-are you okay?"
+        },
+        {
+          "offset": "0x1dec",
+          "original": "み、{G}？\nどうしたの？",
+          "text": "M-{G}\nwhat's wrong?"
+        },
+        {
+          "offset": "0x1e04",
+          "original": "えっ…\nだ、大丈夫です…。",
+          "text": "Oh...\nI-I'm all right..."
+        },
+        {
+          "offset": "0x1e20",
+          "original": "何だ、良かった。",
+          "text": "Phew, good."
+        },
+        {
+          "offset": "0x1e34",
+          "original": "あ、あの…。",
+          "text": "U-um..."
+        },
+        {
+          "offset": "0x1e44",
+          "original": "な、何？",
+          "text": "Wh-what?"
+        },
+        {
+          "offset": "0x1e50",
+          "original": "ま、まだ…、怖いので…。\nもう少し、このままで…。",
+          "text": "I-I'm still scared...\nJust a little longer..."
+        },
+        {
+          "offset": "0x1e84",
+          "original": "み、{G}さえ\n良ければ…。",
+          "text": "So if {G}\nis okay with it..."
+        },
+        {
+          "offset": "0x1e9c",
+          "original": "はい…。\n私、幸せです…。",
+          "text": "Yes...\nI'm so happy..."
+        },
+        {
+          "offset": "0x1eb8",
+          "original": "幸せ？\n怖いんじゃ無かったのか？",
+          "text": "Happy?\nWasn't she scared?"
+        },
+        {
+          "offset": "0x20f0",
+          "original": "あ、あの…。",
+          "text": "U-um..."
+        },
+        {
+          "offset": "0x2104",
+          "original": "あっ、{G}。",
+          "text": "Oh, {G}"
+        },
+        {
+          "offset": "0x2110",
+          "original": "あの…\nも、もし良かったら…\n一緒に帰りませんか？",
+          "text": "Um...\ni-if it's okay...\nshall we go home together?"
+        },
+        {
+          "offset": "0x2144",
+          "original": "うん、いいよ。\nもう、遅いしね。",
+          "text": "Sure.\nIt's late anyway."
+        },
+        {
+          "offset": "0x2164",
+          "original": "あ、ありがとうございます。",
+          "text": "Th-thank you."
+        },
+        {
+          "offset": "0x2180",
+          "original": "それじゃ、行こうか。",
+          "text": "Well, let's go."
+        },
+        {
+          "offset": "0x2198",
+          "original": "は、はい。",
+          "text": "O-okay."
+        },
+        {
+          "offset": "0x21bc",
+          "original": "あれ、どうしたの、\n{G}？\n（急いで走っていくぞ。）",
+          "text": "Huh, what's wrong,\n{G}\n(She's running off.)"
+        },
+        {
+          "offset": "0x21f4",
+          "original": "この子、捨てられちゃった\nみたいです…。",
+          "text": "Looks like this little one\nwas abandoned..."
+        },
+        {
+          "offset": "0x221c",
+          "original": "この子猫の\n鳴き声が聞こえたのか。",
+          "text": "So she heard\nthe kitten crying."
+        },
+        {
+          "offset": "0x2248",
+          "original": "かわいそう…。\nこんなに震えて…。",
+          "text": "Poor thing...\nShivering like this..."
+        },
+        {
+          "offset": "0x226c",
+          "original": "{G}て、\n本当に動物が好きなんだな。",
+          "text": "Gosh, {G}\ntruly loves animals."
+        },
+        {
+          "offset": "0x2290",
+          "original": "寒かったでしょう？\nすぐ、家につれてって\nあげるからね。",
+          "text": "You were cold, weren't you?\nI'll take you\nhome right away."
+        },
+        {
+          "offset": "0x22d4",
+          "original": "お腹も空いているのね。\n大丈夫よ、ミルクを\n温めてあげるから。",
+          "text": "You're hungry too, huh.\nIt's okay, I'll warm\nsome milk for you."
+        },
+        {
+          "offset": "0x2314",
+          "original": "{G}、\n早く連れてってあげよう。",
+          "text": "Okay, {G}\nlet's take it home quick."
+        },
+        {
+          "offset": "0x233c",
+          "original": "は、はい。そうですね。",
+          "text": "Y-yes. Let's."
+        },
+        {
+          "offset": "0x2354",
+          "original": "俺は、{G}を\n家まで送って帰った。",
+          "text": "I walked {G}\nhome before heading back."
+        },
+        {
+          "offset": "0x25e8",
+          "original": "でも？",
+          "text": "But?"
+        },
+        {
+          "offset": "0x25f0",
+          "original": "ガブッ",
+          "text": "CHOMP"
+        },
+        {
+          "offset": "0x25f8",
+          "original": "み、{G}？",
+          "text": "M-{G}"
+        }
+      ]
+    }
+  ]
 }

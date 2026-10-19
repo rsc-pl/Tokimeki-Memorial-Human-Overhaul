@@ -314,7 +314,7 @@
         {
           "offset": "0x14cc",
           "original": "本当。可愛いよね。{q}すげー、可愛くねぇ。{q}でも、目は怖いよ。",
-          "text": "Yes, it really was cute.{q}Man, so not cute at all.{q}But its eyes are creepy."
+          "text": "They were so cute!{q}Not cute at all!{q}Their eyes are creepy."
         },
         {
           "offset": "0x1510",
@@ -489,7 +489,7 @@
         {
           "offset": "0x1ca8",
           "original": "俺でよかったら\nいつでも付き合うよ。",
-          "text": "If you don't mind me,\nI'll come along anytime."
+          "text": "I'd be happy to\ncome along anytime."
         },
         {
           "offset": "0x1cd4",
@@ -499,7 +499,7 @@
         {
           "offset": "0x1d00",
           "original": "そ、そうかな？\n（しまった、もうちょっと\nチェックしとくんだった。）",
-          "text": "R-really?\n(Darn, I should've\nplanned this better.)"
+          "text": "R-really?\n(I should've checked\nthis place out first.)"
         },
         {
           "offset": "0x1d4c",
@@ -509,7 +509,7 @@
         {
           "offset": "0x1d88",
           "original": "読んでくれたんだ。\nありがとう。",
-          "text": "You read it?\nThank you."
+          "text": "You read it!\nThank you."
         },
         {
           "offset": "0x1db0",
@@ -569,12 +569,12 @@
         {
           "offset": "0x2650",
           "original": "それじゃあ、\n金魚すくいでもしようか？",
-          "text": "Well then,\nwanna scoop some goldfish?"
+          "text": "Wanna try\ngoldfish scooping?"
         },
         {
           "offset": "0x2678",
           "original": "そうですね。\n頑張ってください。",
-          "text": "Yes.\nPlease do your best."
+          "text": "Sure.\nGood luck!"
         },
         {
           "offset": "0x26a0",
@@ -599,7 +599,7 @@
         {
           "offset": "0x271c",
           "original": "取れたら{G}にあげるね。",
-          "text": "{G}, for you!"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x2740",
@@ -684,7 +684,7 @@
         {
           "offset": "0x2d28",
           "original": "どんなゲームが\n面白いのでしょう？",
-          "text": "Which games are\nfun, I wonder?"
+          "text": "I wonder which\ngames are fun?"
         },
         {
           "offset": "0x2d4c",
@@ -729,7 +729,7 @@
         {
           "offset": "0x3290",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x32b0",
@@ -749,7 +749,7 @@
         {
           "offset": "0x334c",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x336c",
@@ -769,7 +769,7 @@
         {
           "offset": "0x3408",
           "original": "まだ{G}は、\n来ていないようだな。",
-          "text": "{G} isn't\nhere yet, it seems."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x3428",
@@ -934,7 +934,7 @@
         {
           "offset": "0x3e1c",
           "original": "ストレス解消になるよね。{q}その調子でがんがん行こう。{q}それで大声なの？",
-          "text": "It's good for stress, huh.{q}Keep belting it out!{q}You call that loud?"
+          "text": "Singing helps with stress.{q}Keep belting it out!{q}You call that loud?"
         },
         {
           "offset": "0x3e6c",
@@ -1014,7 +1014,7 @@
         {
           "offset": "0x4510",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x4534",
@@ -1024,7 +1024,7 @@
         {
           "offset": "0x4568",
           "original": "本当、\n過ごし易くなったよ。",
-          "text": "Yeah, it's getting\nreally comfortable."
+          "text": "Yeah, it's much\nnicer now."
         },
         {
           "offset": "0x458c",
@@ -1119,7 +1119,7 @@
         {
           "offset": "0x4ce8",
           "original": "あそこが空いてるよ。\n早く早く。",
-          "text": "There are seats there.\nQuick, quick."
+          "text": "Those seats are open.\nHurry!"
         },
         {
           "offset": "0x4d08",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x509c",
           "original": "そう言えば、\n今日はパレードを\nやってるはずだ。",
-          "text": "Come to think of it,\nthere's supposed to be\na parade on today."
+          "text": "Oh right, there should\nbe a parade\ntoday."
         },
         {
           "offset": "0x50cc",
@@ -1484,7 +1484,7 @@
         {
           "offset": "0x67f4",
           "original": "嬉しいですねぇ…。\nそれでは、\nこれにいたしましょう。{q}そうですか…。{q}本当ですねぇ。\nそれでは、両方とも、\n買うことにいたしましょう。",
-          "text": "How happy...\nThen I'll take\nthis one.{q}Is that so...{q}You're right.\nThen I'll buy\nboth of them."
+          "text": "I'm so glad...\nThen I'll take\nthis one.{q}Is that so...{q}You're right.\nThen I'll buy\nboth of them."
         },
         {
           "offset": "0x687c",
@@ -1544,7 +1544,7 @@
         {
           "offset": "0x6bfc",
           "original": "もうよろしいのですか？\nそれでは、\nそういたしましょう。{q}さいばあ、ですか…。{q}はぁ…。\nそうなのですか。",
-          "text": "Is it all right now?\nThen let us\ndo so.{q}Saibaa, you say...{q}Ah...\nIs that so."
+          "text": "Are we leaving\nalready?\nThen let us go.{q}Saibaa, you say...{q}Ah...\nIs that so."
         },
         {
           "offset": "0x6c68",
@@ -1954,7 +1954,7 @@
         {
           "offset": "0x8c50",
           "original": "ぬいぐるみを着ている人、\n大変そうですねぇ。",
-          "text": "Those people in costumes\nmust have it tough."
+          "text": "Wearing mascot suits\nlooks exhausting."
         },
         {
           "offset": "0x8c7c",
@@ -2389,7 +2389,7 @@
         {
           "offset": "0xadd4",
           "original": "よし、花見に行こう。",
-          "text": "Let's go blossom viewing!"
+          "text": "Let's go for hanami!"
         },
         {
           "offset": "0xadec",
@@ -2409,7 +2409,7 @@
         {
           "offset": "0xaeb8",
           "original": "そうですね。\n私でよろしければ…。{q}あっ…。\n‥‥‥‥。\nぶつかってしまいました。{q}そうですね。\n一句浮かびました。",
-          "text": "Yes.\nIf I'll do...{q}Oh...\n......\nI bumped into it.{q}Yes.\nA haiku came to me."
+          "text": "Yes.\nIf you'd like...{q}Oh...\n......\nI bumped into it.{q}Yes.\nA haiku came to me."
         }
       ]
     }

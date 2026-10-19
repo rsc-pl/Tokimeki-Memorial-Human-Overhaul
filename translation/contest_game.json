@@ -14,7 +14,7 @@
         {
           "offset": "0x5c",
           "original": "３年間、電脳部で頑張った\n成果が出たぜ。",
-          "text": "Three years in Computers\nreally paid off."
+          "text": "Three years in Computer Club\nreally paid off."
         },
         {
           "offset": "0x84",
@@ -59,7 +59,7 @@
         {
           "offset": "0x1d0",
           "original": "ゲームコンテスト大賞\nおめでとう。",
-          "text": "Congrats on the\nGame Contest prize."
+          "text": "Congrats on the Game\nContest Grand Prize!"
         },
         {
           "offset": "0x1f4",
@@ -84,7 +84,7 @@
         {
           "offset": "0x248",
           "original": "ゲームコンテスト大賞、\nおめでとうございます。",
-          "text": "Congratulations on\nthe Game Contest prize."
+          "text": "Congratulations on the\nGame Contest Grand Prize."
         },
         {
           "offset": "0x278",
@@ -114,7 +114,7 @@
         {
           "offset": "0x2fc",
           "original": "{G}のおかげだよ。",
-          "text": "I owe it all to {G}"
+          "text": "Thanks, {G}!"
         },
         {
           "offset": "0x30c",
@@ -134,7 +134,7 @@
         {
           "offset": "0x370",
           "original": "ゲームコンテスト大賞、\nおめでとう。",
-          "text": "Congrats on the\nGame Contest prize."
+          "text": "Congrats on the Game\nContest Grand Prize!"
         },
         {
           "offset": "0x394",
@@ -159,7 +159,7 @@
         {
           "offset": "0x3f4",
           "original": "ゲームコンテスト大賞、\nおめでとう。\nすごいね。",
-          "text": "Congrats on the\nGame Contest prize.\nAmazing."
+          "text": "Congrats on the Game\nContest Grand Prize.\nAmazing!"
         },
         {
           "offset": "0x424",
@@ -174,7 +174,7 @@
         {
           "offset": "0x464",
           "original": "こんにちは、{P}。",
-          "text": "Good afternoon, {P}"
+          "text": "Hi, {P}."
         },
         {
           "offset": "0x478",
@@ -184,7 +184,7 @@
         {
           "offset": "0x484",
           "original": "この度は、なにか\n大きな賞を頂いたそうで、\nおめでとうございます。",
-          "text": "I hear you\nreceived some great award.\nCongratulations."
+          "text": "I heard you won\na major award.\nCongratulations!"
         },
         {
           "offset": "0x4c8",
@@ -194,7 +194,7 @@
         {
           "offset": "0x4ec",
           "original": "ゲーム…なんですか？",
-          "text": "A game... what is that?"
+          "text": "A game? What's that?"
         },
         {
           "offset": "0x514",
@@ -209,7 +209,7 @@
         {
           "offset": "0x530",
           "original": "ゲームコンテスト大賞、\nおめでとう。",
-          "text": "Congrats on the\nGame Contest prize."
+          "text": "Congrats on the Game\nContest Grand Prize!"
         },
         {
           "offset": "0x554",
@@ -239,7 +239,7 @@
         {
           "offset": "0x5e8",
           "original": "ゲームコンテスト大賞、\nおめでとう。",
-          "text": "Congrats on the\nGame Contest prize."
+          "text": "Congrats on the Game\nContest Grand Prize!"
         },
         {
           "offset": "0x60c",
@@ -249,7 +249,7 @@
         {
           "offset": "0x61c",
           "original": "あなたが受賞するのは、\n悪い気分じゃないわね。",
-          "text": "You winning a prize\ndoesn't feel bad."
+          "text": "Seeing you win doesn't\nfeel half bad."
         },
         {
           "offset": "0x65c",
@@ -264,7 +264,7 @@
         {
           "offset": "0x678",
           "original": "ゲームコンテスト大賞って\n本当？",
-          "text": "You really won the\nGame Contest?"
+          "text": "You won the grand prize\nat the Game Contest?"
         },
         {
           "offset": "0x698",
@@ -274,7 +274,7 @@
         {
           "offset": "0x6ac",
           "original": "じゃあさ、\n今度それやらしてよ。\nねっ？",
-          "text": "Then hey,\nlet me play it sometime.\n'Kay?"
+          "text": "Then let me\ntry it sometime,\nokay?"
         },
         {
           "offset": "0x6e4",
@@ -289,7 +289,7 @@
         {
           "offset": "0x700",
           "original": "あの…\nゲームコンテスト大賞、\nおめでとうございます。",
-          "text": "Um...\ncongratulations on\nthe Game Contest prize."
+          "text": "Um...\ncongratulations on the\nGame Contest Grand Prize."
         },
         {
           "offset": "0x738",
@@ -314,7 +314,7 @@
         {
           "offset": "0x784",
           "original": "ゲームコンテスト大賞、\nおめでとうございます。",
-          "text": "Congratulations on\nthe Game Contest prize."
+          "text": "Congratulations on the\nGame Contest Grand Prize."
         },
         {
           "offset": "0x7b4",
@@ -324,7 +324,7 @@
         {
           "offset": "0x7d0",
           "original": "今度、優美にも\nやらせてくださいね。",
-          "text": "Let Yumi play\nit sometime, okay?"
+          "text": "Can Yumi play it\nsometime too?"
         },
         {
           "offset": "0x7f4",
@@ -384,7 +384,7 @@
         {
           "offset": "0x978",
           "original": "………。\nおまえも暇だな。\nじゃあな、伊集院。",
-          "text": "......\nYou've got time to kill.\nSee you, Ijuin."
+          "text": "......\nNothing better to do, huh?\nSee you, Ijuin."
         },
         {
           "offset": "0x9a8",

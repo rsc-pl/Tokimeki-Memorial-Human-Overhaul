@@ -8,7 +8,7 @@
         {
           "offset": "0x0",
           "original": "急に雨が降ってきたな。\n傘を持ってきてよかった。\nあっ、詩織がいるぞ。",
-          "text": "Rain, all of a sudden.\nGlad I brought my umbrella.\nHey, there's Shiori."
+          "text": "It started raining.\nGlad I had my umbrella.\nOh, there's Shiori."
         },
         {
           "offset": "0x48",
@@ -83,7 +83,7 @@
         {
           "offset": "0x27c",
           "original": "詩織と俺じゃ、\n月とスッポンだから、\nきっと見られないよ。",
-          "text": "Me next to you, Shiori?\nWe're total opposites.\nNobody would think that."
+          "text": "You and me?\nWe're worlds apart.\nNobody would think so."
         },
         {
           "offset": "0x2b8",
@@ -108,7 +108,7 @@
         {
           "offset": "0x360",
           "original": "ちょっとでも、\n長くいられて、\n嬉しいな…。",
-          "text": "Even a little longer\ntogether...\nThat makes me happy."
+          "text": "I'm happy we got\na little more\ntime together..."
         },
         {
           "offset": "0x62c",
@@ -128,7 +128,7 @@
         {
           "offset": "0x6a8",
           "original": "今日は楽しく登校できた。\n早起きは三文の得とは、\nよく言ったもんだぜ。",
-          "text": "Fun walk to school today.\nEarly bird gets the worm.\nSo true."
+          "text": "School was fun today.\nGetting up early\nreally paid off."
         },
         {
           "offset": "0x7b0",
@@ -158,7 +158,7 @@
         {
           "offset": "0x860",
           "original": "えっ、何があったって？",
-          "text": "Huh? Here what is?"
+          "text": "Huh? What did you find?"
         },
         {
           "offset": "0x884",
@@ -193,7 +193,7 @@
         {
           "offset": "0x9a0",
           "original": "一緒にか…。\nいつぐらい\nだろう…。",
-          "text": "Together, huh...\nWhen was\nthat...?"
+          "text": "Together, huh...\nHow long ago\nwas that...?"
         },
         {
           "offset": "0x9d4",
@@ -233,7 +233,7 @@
         {
           "offset": "0xd70",
           "original": "ほら、昔お父さんと\nお母さんに内緒で、\n遠くの公園に行ったことが\nあったじゃない。",
-          "text": "You know, the time we\nsnuck off to a faraway\npark without telling\nour parents."
+          "text": "Remember how we snuck\nto that distant park\nwithout telling\nour parents?"
         },
         {
           "offset": "0xdc0",
@@ -293,7 +293,7 @@
         {
           "offset": "0xfb8",
           "original": "他にも色々あったよね。\n‥‥‥‥‥‥‥。",
-          "text": "So many other things too.\n......."
+          "text": "We had so many\nother memories..."
         },
         {
           "offset": "0xfe0",
@@ -338,7 +338,7 @@
         {
           "offset": "0x1354",
           "original": "それとも、\n俺と一緒じゃやだ？",
-          "text": "Or do you hate\nbeing stuck with me?"
+          "text": "Or don't you want\nto be here with me?"
         },
         {
           "offset": "0x1388",
@@ -363,12 +363,12 @@
         {
           "offset": "0x1424",
           "original": "それよりもさ、\nさっき言いかけてた\n続きが聞きたいな。",
-          "text": "More importantly,\nI'd like to hear what\nyou were about to say."
+          "text": "Anyway, I want to hear\nwhat you were\nabout to say."
         },
         {
           "offset": "0x1464",
           "original": "えっ、な、何の事か\n忘れちゃった。\nそんな事いいじゃない。",
-          "text": "Huh? Wh-what was it?\nI forgot.\nNever mind that."
+          "text": "Huh? I-I don't\nremember what you mean.\nLet's drop it."
         },
         {
           "offset": "0x14a0",
@@ -413,7 +413,7 @@
         {
           "offset": "0x17dc",
           "original": "俺はまんまと\n驚かされたわけだ。",
-          "text": "And I fell for it\ncompletely."
+          "text": "You really\ngot me that time."
         },
         {
           "offset": "0x17fc",
@@ -423,7 +423,7 @@
         {
           "offset": "0x180c",
           "original": "き、急に。\n何がおかしいの？",
-          "text": "Wh-what's so\nfunny all of a sudden?"
+          "text": "W-what's so\nfunny?"
         },
         {
           "offset": "0x1828",
@@ -498,7 +498,7 @@
         {
           "offset": "0x1c28",
           "original": "小学生のとき、勝手に友達と\nクリスマスパーティーの約束\nしちゃったの誰だっけ？",
-          "text": "In grade school, who\nmade Christmas party plans\nwith friends on their own?"
+          "text": "Who made Christmas plans\nwith friends on their own\nback in grade school?"
         },
         {
           "offset": "0x1c78",
@@ -573,7 +573,7 @@
         {
           "offset": "0x20c0",
           "original": "あ、{G}？どうかしたの？",
-          "text": "Oh, {G}? Hi."
+          "text": "Oh, {G}? What's up?"
         },
         {
           "offset": "0x20d8",
@@ -683,7 +683,7 @@
         {
           "offset": "0x23e4",
           "original": "あなたのプレゼントよ、\n十年前の。",
-          "text": "It's your present,\nfrom ten years ago."
+          "text": "Your gift to me\nten years ago."
         },
         {
           "offset": "0x2408",

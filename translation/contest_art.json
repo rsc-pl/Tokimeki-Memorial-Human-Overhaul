@@ -14,7 +14,7 @@
         {
           "offset": "0x3c",
           "original": "３年間、美術部で頑張った\n成果が出たぜ。",
-          "text": "Three years in Art\nreally paid off."
+          "text": "Three years in Art Club\nreally paid off."
         },
         {
           "offset": "0x64",
@@ -44,12 +44,12 @@
         {
           "offset": "0x110",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x120",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x12c",
@@ -169,7 +169,7 @@
         {
           "offset": "0x400",
           "original": "こんにちは、{P}。",
-          "text": "Good afternoon, {P}"
+          "text": "Hi, {P}."
         },
         {
           "offset": "0x414",
@@ -179,17 +179,17 @@
         {
           "offset": "0x420",
           "original": "この度は、なにか大きな賞\nをいただいたそうで、\nおめでとうございます。",
-          "text": "I hear you received\nsome great award.\nCongratulations."
+          "text": "I heard you won\na major award.\nCongratulations!"
         },
         {
           "offset": "0x468",
           "original": "ははは、目展の大賞だよ。",
-          "text": "Hahaha, the Meten Prize."
+          "text": "Haha, it's the Meten Prize."
         },
         {
           "offset": "0x484",
           "original": "まぁ、そうなんですか。\nどうりで、素晴らしい絵\nだと思いました。",
-          "text": "Oh, is that so.\nNo wonder it seemed\nsuch a fine painting."
+          "text": "Oh, really?\nNo wonder I thought\nit was so beautiful."
         },
         {
           "offset": "0x4d4",
@@ -234,7 +234,7 @@
         {
           "offset": "0x5b0",
           "original": "目展大賞、おめでとう。",
-          "text": "Congrats on the Meten."
+          "text": "Congrats on your prize!"
         },
         {
           "offset": "0x5c8",
@@ -379,7 +379,7 @@
         {
           "offset": "0x938",
           "original": "………。\nおまえも暇だな。\nじゃあな、伊集院。",
-          "text": "......\nYou've got time to kill.\nSee you, Ijuin."
+          "text": "......\nNothing better to do, huh?\nSee you, Ijuin."
         },
         {
           "offset": "0x968",
