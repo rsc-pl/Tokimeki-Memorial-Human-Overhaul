@@ -1,83 +1,425 @@
 {
   "description": "Memory-card check text, concert/movie listings, town-news copy and the player's magazine reactions in SLPM_86.053. Fixed-width blank rows at 0x754F8, 0x75758, 0x757A0, 0x757C4, 0x7580C, 0x75830, 0x7589C, 0x75974, 0x759BC, 0x759E0, 0x75AB8, 0x75B00, 0x75B24, 0x75B90 and 0x75BFC are deliberately preserved. Unreferenced single-kanji data at 0x753DC/0x753EC/0x753FC and 0x75FDC/0x75FF4/0x75FFC is not treated as text. The control-label literals at 0x75F24-0x75F30 remain Japanese symbols because the game logic uses them directly.",
   "strings": [
-    {"file": "SLPM_86.053", "offset": "0x751F8", "original": "メモリーカードをチェックしています", "text": "Checking the memory card..."},
-    {"file": "SLPM_86.053", "offset": "0x7521C", "original": "・・・・・・・・・・・・・・・・・", "text": "............................."},
-    {"file": "SLPM_86.053", "offset": "0x7542C", "original": "ＫＮＭ交響楽団", "text": "KNM Symphony"},
-    {"file": "SLPM_86.053", "offset": "0x7543D", "original": "　盛田　智佐　", "text": "Chisa Morita"},
-    {"file": "SLPM_86.053", "offset": "0x7544E", "original": "　茶毛＆明日　", "text": "Chage & Aska"},
-    {"file": "SLPM_86.053", "offset": "0x7545F", "original": "ＷＩＺＡＲＤ　", "text": "WIZARD"},
-    {"file": "SLPM_86.053", "offset": "0x75470", "original": "　甲玉　リコ　", "text": "Riko Kodama"},
-    {"file": "SLPM_86.053", "offset": "0x75481", "original": "　ＸｅＸｅＸ　", "text": "XeXeX"},
-    {"file": "SLPM_86.053", "offset": "0x75492", "original": "ＫＮＭ交響楽団", "text": "KNM Symphony"},
-    {"file": "SLPM_86.053", "offset": "0x754A3", "original": "　Ｂｅｅｓ　　", "text": "Bees"},
-    {"file": "SLPM_86.053", "offset": "0x754B4", "original": "　ＳＮＡＣＫ　", "text": "SNACK"},
-    {"file": "SLPM_86.053", "offset": "0x754C5", "original": "ＫＮＭ交響楽団", "text": "KNM Symphony"},
-    {"file": "SLPM_86.053", "offset": "0x754D6", "original": "　　ｐｒｆ　　", "text": "prf"},
-    {"file": "SLPM_86.053", "offset": "0x754E7", "original": "　リンスー　　", "text": "Rinsu"},
-    {"file": "SLPM_86.053", "offset": "0x7551C", "original": "　　　休館　　　", "text": "Closed"},
-    {"file": "SLPM_86.053", "offset": "0x7552D", "original": "おいらやってるよ", "text": "I'm Doing It"},
-    {"file": "SLPM_86.053", "offset": "0x7553E", "original": "フォレスとガンプ", "text": "Forrest Gump"},
-    {"file": "SLPM_86.053", "offset": "0x7554F", "original": "　　サマソー　　", "text": "Summer Saw"},
-    {"file": "SLPM_86.053", "offset": "0x75560", "original": "　　フンガー　　", "text": "Fungaa"},
-    {"file": "SLPM_86.053", "offset": "0x75571", "original": "　カンパンマン　", "text": "Kanpanman"},
-    {"file": "SLPM_86.053", "offset": "0x75582", "original": "　　睡拳・痛　　", "text": "Sleep Fist II"},
-    {"file": "SLPM_86.053", "offset": "0x75593", "original": "　愛のメロディ　", "text": "Love Melody"},
-    {"file": "SLPM_86.053", "offset": "0x755A4", "original": "スピード／キング", "text": "Speed King"},
-    {"file": "SLPM_86.053", "offset": "0x755B5", "original": "　ＢＡＮＰＯ　　", "text": "BANPO"},
-    {"file": "SLPM_86.053", "offset": "0x755C6", "original": "　　おめん　　　", "text": "The Mask"},
-    {"file": "SLPM_86.053", "offset": "0x755D7", "original": "恋と青春の旅立ち", "text": "Love and Youth"},
-    {"file": "SLPM_86.053", "offset": "0x755E8", "original": "　　　休館　　　", "text": "Closed"},
-    {"file": "SLPM_86.053", "offset": "0x7560C", "original": "このコーナーで、最新", "text": "This section has the"},
-    {"file": "SLPM_86.053", "offset": "0x75625", "original": "スポットの情報を紹介", "text": "latest spot news."},
-    {"file": "SLPM_86.053", "offset": "0x7563E", "original": "今月号は、紹介できる", "text": "No new spots to"},
-    {"file": "SLPM_86.053", "offset": "0x75657", "original": "スポットがありません", "text": "show this month."},
-    {"file": "SLPM_86.053", "offset": "0x75670", "original": "本誌は、今号をもって", "text": "This magazine ends"},
-    {"file": "SLPM_86.053", "offset": "0x75689", "original": "休刊となります。", "text": "with this issue."},
-    {"file": "SLPM_86.053", "offset": "0x756A4", "original": "このコーナーでは、次号より", "text": "Starting next issue,"},
-    {"file": "SLPM_86.053", "offset": "0x756C8", "original": "盛沢山のイベント情報を", "text": "we'll bring lots of"},
-    {"file": "SLPM_86.053", "offset": "0x756EC", "original": "提供していきます。おたのしみに", "text": "event news. Stay tuned!"},
-    {"file": "SLPM_86.053", "offset": "0x75710", "original": "８月に遊園地でナイトパレード開催", "text": "Night parade at Theme Park"},
-    {"file": "SLPM_86.053", "offset": "0x75734", "original": "８月６日に神社で縁日があります", "text": "Shrine fair on Aug 6"},
-    {"file": "SLPM_86.053", "offset": "0x7577C", "original": "美術館で、有名画家展開催", "text": "Famous painter exhibit"},
-    {"file": "SLPM_86.053", "offset": "0x757E8", "original": "動物園にコアラがやって来る", "text": "Koalas come to the zoo"},
-    {"file": "SLPM_86.053", "offset": "0x75854", "original": "中央公園で桜が満開", "text": "Park cherry bloom"},
-    {"file": "SLPM_86.053", "offset": "0x75878", "original": "水族館でイルカのショー開催", "text": "Dolphin show at aquarium"},
-    {"file": "SLPM_86.053", "offset": "0x758C0", "original": "８月に遊園地でナイトパレード開催", "text": "Night parade at Theme Park"},
-    {"file": "SLPM_86.053", "offset": "0x758E4", "original": "８月４日に神社で縁日があります", "text": "Shrine fair on Aug 4"},
-    {"file": "SLPM_86.053", "offset": "0x75908", "original": "プールにウォータースライダー完成", "text": "Pool gets a water slide"},
-    {"file": "SLPM_86.053", "offset": "0x7592C", "original": "ゲームセンターにメダルコーナーが", "text": "Arcade medal area now"},
-    {"file": "SLPM_86.053", "offset": "0x75950", "original": "設置", "text": "open"},
-    {"file": "SLPM_86.053", "offset": "0x75998", "original": "次号に期待してくれ！", "text": "See you next issue!"},
-    {"file": "SLPM_86.053", "offset": "0x75A04", "original": "中央公園で桜が満開", "text": "Park cherry bloom"},
-    {"file": "SLPM_86.053", "offset": "0x75A28", "original": "遊園地に絶叫マシン完成", "text": "New Theme Park ride"},
-    {"file": "SLPM_86.053", "offset": "0x75A4C", "original": "美術館で彫刻展開催", "text": "Sculpture exhibit"},
-    {"file": "SLPM_86.053", "offset": "0x75A70", "original": "８月に遊園地でナイトパレード開催", "text": "Night parade at Theme Park"},
-    {"file": "SLPM_86.053", "offset": "0x75A94", "original": "８月３日に神社で縁日があります", "text": "Shrine fair on Aug 3"},
-    {"file": "SLPM_86.053", "offset": "0x75ADC", "original": "美術館でガーギー展が開催", "text": "Gargy exhibit at museum"},
-    {"file": "SLPM_86.053", "offset": "0x75B48", "original": "遊園地に体感マシーン", "text": "New Theme Park ride:"},
-    {"file": "SLPM_86.053", "offset": "0x75B6C", "original": "　バーチャルシップが完成", "text": "Virtual Ship is complete"},
-    {"file": "SLPM_86.053", "offset": "0x75BB4", "original": "長らくの御愛読", "text": "Thanks for"},
-    {"file": "SLPM_86.053", "offset": "0x75BD8", "original": "ありがとうございました", "text": "reading all this time."}
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x751F8",
+      "original": "メモリーカードをチェックしています",
+      "text": "Checking the memory card..."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7521C",
+      "original": "・・・・・・・・・・・・・・・・・",
+      "text": "............................."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7542C",
+      "original": "ＫＮＭ交響楽団",
+      "text": "KNM Symphony"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7543D",
+      "original": "　盛田　智佐　",
+      "text": "Chisa Morita"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7544E",
+      "original": "　茶毛＆明日　",
+      "text": "Chage & Aska"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7545F",
+      "original": "ＷＩＺＡＲＤ　",
+      "text": "WIZARD"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75470",
+      "original": "　甲玉　リコ　",
+      "text": "Riko Kodama"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75481",
+      "original": "　ＸｅＸｅＸ　",
+      "text": "XeXeX"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75492",
+      "original": "ＫＮＭ交響楽団",
+      "text": "KNM Symphony"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x754A3",
+      "original": "　Ｂｅｅｓ　　",
+      "text": "Bees"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x754B4",
+      "original": "　ＳＮＡＣＫ　",
+      "text": "SNACK"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x754C5",
+      "original": "ＫＮＭ交響楽団",
+      "text": "KNM Symphony"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x754D6",
+      "original": "　　ｐｒｆ　　",
+      "text": "prf"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x754E7",
+      "original": "　リンスー　　",
+      "text": "Rinsu"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7551C",
+      "original": "　　　休館　　　",
+      "text": "Closed"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7552D",
+      "original": "おいらやってるよ",
+      "text": "I'm Doing It"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7553E",
+      "original": "フォレスとガンプ",
+      "text": "Forrest Gump"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7554F",
+      "original": "　　サマソー　　",
+      "text": "Summer Saw"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75560",
+      "original": "　　フンガー　　",
+      "text": "Fungaa"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75571",
+      "original": "　カンパンマン　",
+      "text": "Kanpanman"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75582",
+      "original": "　　睡拳・痛　　",
+      "text": "Sleep Fist II"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75593",
+      "original": "　愛のメロディ　",
+      "text": "Love Melody"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x755A4",
+      "original": "スピード／キング",
+      "text": "Speed King"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x755B5",
+      "original": "　ＢＡＮＰＯ　　",
+      "text": "BANPO"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x755C6",
+      "original": "　　おめん　　　",
+      "text": "The Mask"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x755D7",
+      "original": "恋と青春の旅立ち",
+      "text": "Love and Youth"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x755E8",
+      "original": "　　　休館　　　",
+      "text": "Closed"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7560C",
+      "original": "このコーナーで、最新",
+      "text": "This section has the"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75625",
+      "original": "スポットの情報を紹介",
+      "text": "latest spot news."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7563E",
+      "original": "今月号は、紹介できる",
+      "text": "No new spots to"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75657",
+      "original": "スポットがありません",
+      "text": "show this month."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75670",
+      "original": "本誌は、今号をもって",
+      "text": "This magazine ends"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75689",
+      "original": "休刊となります。",
+      "text": "with this issue."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x756A4",
+      "original": "このコーナーでは、次号より",
+      "text": "Starting next issue,"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x756C8",
+      "original": "盛沢山のイベント情報を",
+      "text": "we'll bring lots of"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x756EC",
+      "original": "提供していきます。おたのしみに",
+      "text": "event news. Stay tuned!"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75710",
+      "original": "８月に遊園地でナイトパレード開催",
+      "text": "Night parade at Theme Park"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75734",
+      "original": "８月６日に神社で縁日があります",
+      "text": "Shrine fair on Aug 6"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7577C",
+      "original": "美術館で、有名画家展開催",
+      "text": "Famous painter exhibit"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x757E8",
+      "original": "動物園にコアラがやって来る",
+      "text": "Koalas come to the zoo"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75854",
+      "original": "中央公園で桜が満開",
+      "text": "Park cherry bloom"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75878",
+      "original": "水族館でイルカのショー開催",
+      "text": "Dolphin show at aquarium"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x758C0",
+      "original": "８月に遊園地でナイトパレード開催",
+      "text": "Night parade at Theme Park"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x758E4",
+      "original": "８月４日に神社で縁日があります",
+      "text": "Shrine fair on Aug 4"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75908",
+      "original": "プールにウォータースライダー完成",
+      "text": "Pool gets a water slide"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7592C",
+      "original": "ゲームセンターにメダルコーナーが",
+      "text": "Arcade medal area now"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75950",
+      "original": "設置",
+      "text": "open"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75998",
+      "original": "次号に期待してくれ！",
+      "text": "See you next issue!"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75A04",
+      "original": "中央公園で桜が満開",
+      "text": "Park cherry bloom"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75A28",
+      "original": "遊園地に絶叫マシン完成",
+      "text": "New Theme Park ride"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75A4C",
+      "original": "美術館で彫刻展開催",
+      "text": "Sculpture exhibit"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75A70",
+      "original": "８月に遊園地でナイトパレード開催",
+      "text": "Night parade at Theme Park"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75A94",
+      "original": "８月３日に神社で縁日があります",
+      "text": "Shrine fair on Aug 3"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75ADC",
+      "original": "美術館でガーギー展が開催",
+      "text": "Gargy exhibit at museum"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75B48",
+      "original": "遊園地に体感マシーン",
+      "text": "New Theme Park ride:"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75B6C",
+      "original": "　バーチャルシップが完成",
+      "text": "Virtual Ship is complete"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75BB4",
+      "original": "長らくの御愛読",
+      "text": "Thanks for"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x75BD8",
+      "original": "ありがとうございました",
+      "text": "reading all this time."
+    }
   ],
   "dialogue": [
     {
       "file": "SLPM_86.053",
       "base": "0x80040800",
       "lines": [
-        {"offset": "0x75C20", "original": "これが、こんど創刊された\n情報誌か。\nそうそう、カレンダーで\n自分のバイオリズムが、\n確認できるんだった。）", "text": "So this is the new\ninfo magazine.\nRight, the calendar\nshows my biorhythm.\nLet's check it.)"},
-        {"offset": "0x75C8C", "original": "きらめき中央公園か。）", "text": "Kirameki Park, huh.)"},
-        {"offset": "0x75CA4", "original": "美術館ができたのか。）", "text": "An art museum opened.)"},
-        {"offset": "0x75CBC", "original": "水族館があるのか。\nそういえば、\nシステムファイルを作ると\nアルバムのデータ管理が\n楽になるらしいぞ）", "text": "An aquarium, huh.\nCome to think of it,\na system file makes\nalbum data much easier\nto manage.)"},
-        {"offset": "0x75D20", "original": "スタジアムができたのか。\nん、フリーモードのアイコンは\nＬ２を押してつかめるのか。）", "text": "A stadium opened.\nIn Free icon mode, use L2\nto grab an icon.)"},
-        {"offset": "0x75D74", "original": "植物園かあ。そういえば詩織が\n夜に羊を数える癖があったな。\nどこかで聞けたんだけど。）", "text": "Botanical gardens...\nShiori counts sheep nightly.\nWhere did I hear that?)"},
-        {"offset": "0x75DCC", "original": "ボーリングかあ。）", "text": "Bowling, huh.)"},
-        {"offset": "0x75DE0", "original": "プラネタリウムかあ。）\n", "text": "Planetarium, huh.)\n"},
-        {"offset": "0x75DF8", "original": "カラオケかあ。）", "text": "Karaoke, huh.)"},
-        {"offset": "0x75E0C", "original": "情報誌を見ながら、コナミ\nコマンドを入力すると…。\n↑↑↓↓←→←→×○）", "text": "While reading the magazine,\nenter the Konami Code...\nU U D D L R L R X O)"},
-        {"offset": "0x75E58", "original": "ふーん。\nガーギー展かあ。）", "text": "Hmm.\nA Gargy exhibit, huh.)"},
-        {"offset": "0x75E74", "original": "この情報誌も、\nこれで最後か…。）", "text": "This magazine ends\nwith this issue...)"},
-        {"offset": "0x75E98", "original": "………。）", "text": "...)"}
+        {
+          "offset": "0x75C20",
+          "original": "これが、こんど創刊された\n情報誌か。\nそうそう、カレンダーで\n自分のバイオリズムが、\n確認できるんだった。）",
+          "text": "So this is the new\ninfo magazine.\nOh yeah, the calendar\nlets me check\nmy biorhythm.)"
+        },
+        {
+          "offset": "0x75C8C",
+          "original": "きらめき中央公園か。）",
+          "text": "Kirameki Park, huh.)"
+        },
+        {
+          "offset": "0x75CA4",
+          "original": "美術館ができたのか。）",
+          "text": "An art museum opened.)"
+        },
+        {
+          "offset": "0x75CBC",
+          "original": "水族館があるのか。\nそういえば、\nシステムファイルを作ると\nアルバムのデータ管理が\n楽になるらしいぞ）",
+          "text": "An aquarium, huh.\nCome to think of it,\na system file makes\nalbum data much easier\nto manage.)"
+        },
+        {
+          "offset": "0x75D20",
+          "original": "スタジアムができたのか。\nん、フリーモードのアイコンは\nＬ２を押してつかめるのか。）",
+          "text": "A stadium opened.\nPress L2 to grab an icon\nin Free Mode.)"
+        },
+        {
+          "offset": "0x75D74",
+          "original": "植物園かあ。そういえば詩織が\n夜に羊を数える癖があったな。\nどこかで聞けたんだけど。）",
+          "text": "Botanical gardens...\nShiori counts sheep nightly.\nWhere did I hear that?)"
+        },
+        {
+          "offset": "0x75DCC",
+          "original": "ボーリングかあ。）",
+          "text": "Bowling, huh.)"
+        },
+        {
+          "offset": "0x75DE0",
+          "original": "プラネタリウムかあ。）\n",
+          "text": "Planetarium, huh.)\n"
+        },
+        {
+          "offset": "0x75DF8",
+          "original": "カラオケかあ。）",
+          "text": "Karaoke, huh.)"
+        },
+        {
+          "offset": "0x75E0C",
+          "original": "情報誌を見ながら、コナミ\nコマンドを入力すると…。\n↑↑↓↓←→←→×○）",
+          "text": "While reading the magazine,\nenter the Konami Code...\nU U D D L R L R X O)"
+        },
+        {
+          "offset": "0x75E58",
+          "original": "ふーん。\nガーギー展かあ。）",
+          "text": "Hmm.\nA Gargy exhibit, huh.)"
+        },
+        {
+          "offset": "0x75E74",
+          "original": "この情報誌も、\nこれで最後か…。）",
+          "text": "This magazine ends\nwith this issue...)"
+        },
+        {
+          "offset": "0x75E98",
+          "original": "………。）",
+          "text": "...)"
+        }
       ]
     }
   ]

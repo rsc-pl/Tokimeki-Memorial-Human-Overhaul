@@ -9,7 +9,7 @@
         {
           "offset": "0x0",
           "original": "そういえば、夕子も\nフリーターとして、\n気ままに生きるらしい\nお互いに\n時間はあるから、\nこれからのことは\nそのうち考えよう。",
-          "text": "Oh, right,\nYuko will work\npart-time, living\nas she pleases.\nWe both have time,\nso we can think\nabout our future."
+          "text": "Oh, right,\nYuko will work\npart-time, living\nas she pleases.\nWe both have time,\nso we can figure\nout the rest later."
         },
         {
           "offset": "0x7c",
@@ -39,7 +39,7 @@
         {
           "offset": "0x280",
           "original": "彼女は、明るくて\nかわいいけど、\n飽きっぽいから、\nちょっと心配だ。\nだけど、\nいつまでも二人で\n歩んでいける。",
-          "text": "She's cheerful\nand cute, but she\ntires of things fast,\nso I worry a bit.\nStill, the two of\nus can walk on\ntogether forever."
+          "text": "She's cheerful\nand cute, but she\ngets bored quickly,\nso I worry a bit.\nStill, the two of\nus can make our\nway through life."
         },
         {
           "offset": "0x3e0",
@@ -74,7 +74,7 @@
         {
           "offset": "0x6a8",
           "original": "詩織は、かわいくて、\n誰からも人気が\nあるから、\nちょっと心配だけど、\nいつまでも二人で\n歩んでいける。",
-          "text": "Shiori is cute and\neveryone likes\nher, so\nI worry a bit, but\nwe'll always walk\nthrough life together."
+          "text": "Shiori is cute and\npopular with\neveryone, so\nI worry a bit, but\nwe can face life\ntogether forever."
         },
         {
           "offset": "0x800",
@@ -109,7 +109,7 @@
         {
           "offset": "0xb54",
           "original": "彼女は、いまだに\n怪しい研究を\nしているけど、\nこの娘となら、\nいつまでも二人で\n歩んでいける。",
-          "text": "She still does\nshady research,\nbut with\nthis girl,\nwe'll always walk\nthrough life together."
+          "text": "She still does\nshady research,\nbut with her,\nI know we can\nstay together\nforever."
         },
         {
           "offset": "0xca4",
@@ -144,7 +144,7 @@
         {
           "offset": "0x1288",
           "original": "フランス人は\n魅力的だから\n少し心配だけど、\nきっと、大丈夫だ。",
-          "text": "French guys are\ncharming, so\nI worry a bit, but\nit'll be all right."
+          "text": "People in France\nare charming, so\nI'm a little worried,\nbut it'll be okay."
         },
         {
           "offset": "0x13bc",
@@ -204,7 +204,7 @@
         {
           "offset": "0x195c",
           "original": "時間はありあまる程\nあるから、未緒には\nいつでも会えるけど、\nかなり心配を\nかけているみたいだ。\n身体を悪くしなきゃ\nいいけど…。\nそうそう、未緒は\n一流大学に\n通うことになった。",
-          "text": "I have time to spare,\nso I can see Mio\nany time, but I seem\nto be giving her\nquite a lot of worry.\nI hope she doesn't\nfall ill over it...\nOh, right, Mio is\ngoing to a\ntop college."
+          "text": "I have time to spare,\nso I can see Mio\nany time, but I seem\nto be making her\nworry so much.\nI hope she\ndoesn't get sick...\nOh, right, Mio is\ngoing to a\ntop college."
         },
         {
           "offset": "0x1a08",
@@ -309,12 +309,12 @@
         {
           "offset": "0x25e8",
           "original": "彼女は、\nいまだに内気で、\n俺以外の男の前だと、\n緊張するみたいだ。\nだから、いつまでも\n俺のことだけを\n見つづけて\nくれるだろう。",
-          "text": "She's\nstill shy, and\naround guys but me\nshe gets nervous.\nSo I bet she'll\nkeep her eyes\non me alone\nforever."
+          "text": "She's\nstill shy, and\nshe gets nervous\naround other guys.\nSo I guess she'll\nkeep her eyes\non me alone\nforever."
         },
         {
           "offset": "0x275c",
           "original": "そういえば、沙希も\n料理の専門学校に\n通うことになった。\n学校が近くだから\nお昼には、お弁当を\n作ってきてくれるって\n言ってたな。",
-          "text": "Oh, right,\nSaki is going to\ncooking school.\nIt's close to mine,\nso she said she'd\nbring me lunch\nevery day."
+          "text": "Oh, right,\nSaki is going to\ncooking school.\nIt's close to mine,\nso she offered to\nmake me a bento\nfor lunch."
         },
         {
           "offset": "0x27dc",
@@ -399,17 +399,17 @@
         {
           "offset": "0x2f1c",
           "original": "なにはともあれ、\n無事卒業できて\n本当に良かった。",
-          "text": "Anyway,\nI'm really glad I\ngraduated safely."
+          "text": "Anyway,\nI'm just glad\nI graduated."
         },
         {
           "offset": "0x2f50",
           "original": "俺はこれから、\n小説家として、\n頑張っていこうと\n思う。",
-          "text": "From now on,\nI'll do my best\nas a novelist,\nI think."
+          "text": "I think I'll\nwork hard\nas a novelist\nfrom here on."
         },
         {
           "offset": "0x2f88",
           "original": "俺はこれから、\n劇団で有名俳優めざし\n頑張っていこうと\n思う。",
-          "text": "From now on,\nI'll aim for stardom\nin a theater troupe,\nI think."
+          "text": "I'll work hard\nto become a\nfamous actor\nin a troupe."
         },
         {
           "offset": "0x2fc4",
@@ -449,7 +449,7 @@
         {
           "offset": "0x31b0",
           "original": "俺はこれから、\n実業団で水泳を、\n頑張っていこうと\n思う。",
-          "text": "From now on,\nI'll give my all\nswimming for a team,\nI think."
+          "text": "From now on,\nI'll train hard\non a company\nswim team."
         },
         {
           "offset": "0x31e8",
@@ -499,7 +499,7 @@
         {
           "offset": "0x33bc",
           "original": "俺の余分な知識を\n利用して、\n知り会いのつてで\nマスコミ関係の\n仕事につこうと思う。",
-          "text": "Using all my\nuseless trivia\nand a friend's\nconnections, I'll\nget a media job."
+          "text": "Using all my\nrandom trivia\nand a friend's\nconnections, I'll\nget a media job."
         },
         {
           "offset": "0x3410",
@@ -524,7 +524,7 @@
         {
           "offset": "0x3504",
           "original": "この学校の伝説が\n永遠に\n語り継がれるように、\n俺達二人の愛も、\n永遠なのだから…。",
-          "text": "Just as this school's\nlegend is told\nforever more,\nour love, too,\nwill last forever..."
+          "text": "Just as this school's\nlegend lives on\nforever,\nour love, too,\nwill last forever..."
         },
         {
           "offset": "0x39e8",
@@ -544,7 +544,7 @@
         {
           "offset": "0x3acc",
           "original": "そういえば、優美は\n俺が有名になったら\n会えなくなるかも\nしれないって、\n悲しそうにしてた。\nでも、心配は\nいらないと思う。",
-          "text": "Oh, right,\nYumi looked sad that\nif I got famous we\nmight not get to\nsee each other.\nBut I don't think\nshe needs to worry."
+          "text": "Oh, right,\nYumi looked sad.\nShe feared that\nif I got famous,\nwe might meet less.\nBut I think\nshe needn't worry."
         },
         {
           "offset": "0x3b44",
@@ -594,7 +594,7 @@
         {
           "offset": "0x3f9c",
           "original": "彼女とは\nお互いに、まだ\n理解しあえてないけど\nいつまでも二人で\n歩んでいける。",
-          "text": "She and I\nstill don't quite\nknow each other, but\nwe'll always walk\nthrough life together."
+          "text": "We still don't\ncompletely\nunderstand each other,\nbut I know we'll\nstay together forever."
         }
       ]
     }

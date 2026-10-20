@@ -1,127 +1,127 @@
 {
- "description": "Mio's sports-day scene (the three-legged race): all of TAIIKU/KISA23.BIN. Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: after the sports-day minigame.",
- "dialogue": [
-  {
-   "file": "CDROM/TAIIKU/KISA23.BIN",
-   "base": "0x801e8000",
-   "share_identical": true,
-   "lines": [
+  "description": "Mio's sports-day scene (the three-legged race): all of TAIIKU/KISA23.BIN. Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: after the sports-day minigame.",
+  "dialogue": [
     {
-     "offset": "0x0",
-     "original": "あのぅ…。",
-     "text": "Um..."
-    },
-    {
-     "offset": "0xc",
-     "original": "あっ、如月さんだ。\nどうしたの？。",
-     "text": "Oh, Kisaragi-san.\nWhat's up?"
-    },
-    {
-     "offset": "0x38",
-     "original": "あの…、すみません。\n今、お時間空いていますか？",
-     "text": "Um... excuse me.\nDo you have a moment?"
-    },
-    {
-     "offset": "0x68",
-     "original": "大丈夫だけど、何？\n",
-     "text": "Sure, what is it?\n"
-    },
-    {
-     "offset": "0x7c",
-     "original": "私の二人三脚の相手の人が\nお休みで、代わりに出て\nもらえないでしょうか？",
-     "text": "My three-legged partner\nis absent. Could you\nrun in their place?"
-    },
-    {
-     "offset": "0xc4",
-     "original": "えっ。俺が？\n",
-     "text": "Huh. Me?\n"
-    },
-    {
-     "offset": "0xd4",
-     "original": "それで、もしよかったら、\n少しの間練習に付き合って\n欲しいのですけど…。",
-     "text": "And if you don't mind,\nI'd like to practice\nwith you a little..."
-    },
-    {
-     "offset": "0x11c",
-     "original": "いいよ。喜んで。{q}わるいけど、ごめん。",
-     "text": "Sure, I'd love to.{q}Sorry, but no."
-    },
-    {
-     "offset": "0x15c",
-     "original": "よかった、嬉しいです。",
-     "text": "Oh good, I'm so glad."
-    },
-    {
-     "offset": "0x174",
-     "original": "じゃ、練習しようか？\n",
-     "text": "Then shall we practice?\n"
-    },
-    {
-     "offset": "0x18c",
-     "original": "転んだりするところを\n見られると恥ずかしいので、\n向うに行きたいのですが…。",
-     "text": "I'd be embarrassed if\nanyone saw me fall, so\ncould we go over there...?"
-    },
-    {
-     "offset": "0x1e4",
-     "original": "それじゃ、いくよ。\n",
-     "text": "Okay, here we go.\n"
-    },
-    {
-     "offset": "0x200",
-     "original": "大丈夫？\n",
-     "text": "You okay?\n"
-    },
-    {
-     "offset": "0x210",
-     "original": "ごめんなさい。\n急にお願いしても、やっぱり\n息が合いませんよね？",
-     "text": "I'm sorry.\nAsking so suddenly, we\ncan't be in step, can we?"
-    },
-    {
-     "offset": "0x254",
-     "original": "そんなことないよ、\nきっとできるって。\n",
-     "text": "That's not true,\nwe can do it.\n"
-    },
-    {
-     "offset": "0x280",
-     "original": "そうでしょうか？\n頑張ります。",
-     "text": "You think so?\nI'll do my best."
-    },
-    {
-     "offset": "0x2a4",
-     "original": "じゃ、もう一度。\n",
-     "text": "Okay, once more.\n"
-    },
-    {
-     "offset": "0x2f8",
-     "original": "なんだか\n二人一緒にならなんとか\n走れそうな気がしてきました。",
-     "text": "Somehow,\nI feel like together\nwe can manage to run."
-    },
-    {
-     "offset": "0x374",
-     "original": "よーし本番だ",
-     "text": "All right, showtime!"
-    },
-    {
-     "offset": "0x394",
-     "original": "そうですか…。",
-     "text": "I see..."
-    },
-    {
-     "offset": "0x3a4",
-     "original": "それでは、失礼します。",
-     "text": "Well, please excuse me."
-    },
-    {
-     "offset": "0x3c4",
-     "original": "やっぱり、\n付き合ってあげれば\nよかったかな…",
-     "text": "Maybe I\nshould have helped\nher after all..."
-    },
-    {
-     "offset": "0x77c",
-     "original": "きゃ、",
-     "text": "Eek,"
+      "file": "CDROM/TAIIKU/KISA23.BIN",
+      "base": "0x801e8000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あのぅ…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0xc",
+          "original": "あっ、如月さんだ。\nどうしたの？。",
+          "text": "Oh, Kisaragi-san.\nWhat's up?"
+        },
+        {
+          "offset": "0x38",
+          "original": "あの…、すみません。\n今、お時間空いていますか？",
+          "text": "Um... excuse me.\nDo you have a moment?"
+        },
+        {
+          "offset": "0x68",
+          "original": "大丈夫だけど、何？\n",
+          "text": "Sure, what is it?\n"
+        },
+        {
+          "offset": "0x7c",
+          "original": "私の二人三脚の相手の人が\nお休みで、代わりに出て\nもらえないでしょうか？",
+          "text": "My three-legged partner\nis absent. Could you\nrun in their place?"
+        },
+        {
+          "offset": "0xc4",
+          "original": "えっ。俺が？\n",
+          "text": "Huh. Me?\n"
+        },
+        {
+          "offset": "0xd4",
+          "original": "それで、もしよかったら、\n少しの間練習に付き合って\n欲しいのですけど…。",
+          "text": "And if you don't mind,\nI'd like to practice\nwith you a little..."
+        },
+        {
+          "offset": "0x11c",
+          "original": "いいよ。喜んで。{q}わるいけど、ごめん。",
+          "text": "Sure, I'd love to.{q}Sorry, but no."
+        },
+        {
+          "offset": "0x15c",
+          "original": "よかった、嬉しいです。",
+          "text": "Oh good, I'm so glad."
+        },
+        {
+          "offset": "0x174",
+          "original": "じゃ、練習しようか？\n",
+          "text": "Then shall we practice?\n"
+        },
+        {
+          "offset": "0x18c",
+          "original": "転んだりするところを\n見られると恥ずかしいので、\n向うに行きたいのですが…。",
+          "text": "I'd be embarrassed if\nanyone saw me fall, so\ncould we go over there...?"
+        },
+        {
+          "offset": "0x1e4",
+          "original": "それじゃ、いくよ。\n",
+          "text": "Okay, here we go.\n"
+        },
+        {
+          "offset": "0x200",
+          "original": "大丈夫？\n",
+          "text": "You okay?\n"
+        },
+        {
+          "offset": "0x210",
+          "original": "ごめんなさい。\n急にお願いしても、やっぱり\n息が合いませんよね？",
+          "text": "I'm sorry.\nI asked so suddenly.\nWe're not in sync, are we?"
+        },
+        {
+          "offset": "0x254",
+          "original": "そんなことないよ、\nきっとできるって。\n",
+          "text": "That's not true,\nwe can do it.\n"
+        },
+        {
+          "offset": "0x280",
+          "original": "そうでしょうか？\n頑張ります。",
+          "text": "You think so?\nI'll do my best."
+        },
+        {
+          "offset": "0x2a4",
+          "original": "じゃ、もう一度。\n",
+          "text": "Okay, once more.\n"
+        },
+        {
+          "offset": "0x2f8",
+          "original": "なんだか\n二人一緒にならなんとか\n走れそうな気がしてきました。",
+          "text": "Somehow,\nI think we could\nrun together now."
+        },
+        {
+          "offset": "0x374",
+          "original": "よーし本番だ",
+          "text": "All right, showtime!"
+        },
+        {
+          "offset": "0x394",
+          "original": "そうですか…。",
+          "text": "I see..."
+        },
+        {
+          "offset": "0x3a4",
+          "original": "それでは、失礼します。",
+          "text": "I'll be going, then."
+        },
+        {
+          "offset": "0x3c4",
+          "original": "やっぱり、\n付き合ってあげれば\nよかったかな…",
+          "text": "Maybe I\nshould have helped\nher after all..."
+        },
+        {
+          "offset": "0x77c",
+          "original": "きゃ、",
+          "text": "Eek,"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

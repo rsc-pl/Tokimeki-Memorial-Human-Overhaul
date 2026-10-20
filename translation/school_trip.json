@@ -254,7 +254,7 @@
         {
           "offset": "0x74",
           "original": "ねえ、ねえ、\n今日の自由行動、\n一緒に行きたいな。",
-          "text": "Hey, hey,\nfor today's free time,\nI wanna go with you."
+          "text": "Hey, hey!\nWanna spend our\nfree time together?"
         },
         {
           "offset": "0xa8",
@@ -269,7 +269,7 @@
         {
           "offset": "0x148",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0x168",
@@ -369,7 +369,7 @@
         {
           "offset": "0x484",
           "original": "本当？\nナイスタイミングだね。\n張り切って行こう。",
-          "text": "Really?\nNice timing, then.\nLet's make it a good one!"
+          "text": "Really?\nNice timing!\nLet's get going."
         },
         {
           "offset": "0x4d0",
@@ -494,12 +494,12 @@
         {
           "offset": "0x8a0",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late.\nIs she ever coming?"
+          "text": "She's late.\nWhere could she be?"
         },
         {
           "offset": "0x8c8",
           "original": "待たせちゃって\nごめーん。\nさあ、行こ。",
-          "text": "Sorry-y\nfor the wait!\nOkay, let's go."
+          "text": "Sorry!\nI kept you waiting.\nLet's go!"
         },
         {
           "offset": "0x8f4",
@@ -709,7 +709,7 @@
         {
           "offset": "0x1e48",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0x1e68",
@@ -759,12 +759,12 @@
         {
           "offset": "0x1fa8",
           "original": "ちょ、ちょっと待って。\n今、用意してくるから。",
-          "text": "W-wait a moment.\nLet me go get ready."
+          "text": "W-wait a second.\nI need to get ready."
         },
         {
           "offset": "0x202c",
           "original": "ごめんなさいね。\n遅くなっちゃった。\nさあ、行きましょう。",
-          "text": "Sorry I'm late.\nI took too long.\nLet's go."
+          "text": "Sorry about that.\nI took too long.\nLet's go."
         },
         {
           "offset": "0x206c",
@@ -809,12 +809,12 @@
         {
           "offset": "0x2164",
           "original": "ちょ、ちょっと待って。\n今、用意してくるから。",
-          "text": "W-wait a moment.\nLet me go get ready."
+          "text": "W-wait a second.\nI need to get ready."
         },
         {
           "offset": "0x21e8",
           "original": "ごめんなさいね。\n遅くなっちゃった。\nさあ、行きましょう。",
-          "text": "Sorry I'm late.\nI took too long.\nLet's go."
+          "text": "Sorry about that.\nI took too long.\nLet's go."
         },
         {
           "offset": "0x2228",
@@ -839,7 +839,7 @@
         {
           "offset": "0x22a8",
           "original": "でも、こういう日本文化の\n建造物を見ていると、\n心が安らぐわね。",
-          "text": "But seeing Japanese\narchitecture like this\nreally puts me at ease."
+          "text": "But Japanese buildings\nlike these really\nput me at ease."
         },
         {
           "offset": "0x22f0",
@@ -959,7 +959,7 @@
         {
           "offset": "0x2710",
           "original": "そうよね。\nしっかりした目標を持って\nいる人って、素敵よね。",
-          "text": "Yes, they are.\nPeople with firm goals\nare really wonderful."
+          "text": "You're right.\nPeople with real goals\nare admirable."
         },
         {
           "offset": "0x274c",
@@ -1044,7 +1044,7 @@
         {
           "offset": "0x36cc",
           "original": "えっ、ああ。\n{G}、おはよう。",
-          "text": "Huh? Oh.\nHi there, {G}"
+          "text": "Huh? Oh.\nMorning, {G}."
         },
         {
           "offset": "0x36e8",
@@ -1059,7 +1059,7 @@
         {
           "offset": "0x3718",
           "original": "危険よ、危険だわ。\n私が、一緒に\n行ってあげるわ。",
-          "text": "This is dangerous!\nI'll come\nwith you."
+          "text": "That's dangerous!\nI'll come\nwith you."
         },
         {
           "offset": "0x374c",
@@ -1179,7 +1179,7 @@
         {
           "offset": "0x3b00",
           "original": "よろしい。\n研究をかたずけて来るから、\n約１０分３２秒０５\n待っててちょうだい。",
-          "text": "Very well.\nI'll wrap up my research,\nso wait roughly 10 min,\n32.05 seconds."
+          "text": "Very well.\nI'll finish my research.\nWait about 10 minutes,\n32.05 seconds."
         },
         {
           "offset": "0x3b74",
@@ -1209,7 +1209,7 @@
         {
           "offset": "0x3c6c",
           "original": "そうね、私の物になる、\n文化遺産とやらを見に\n行くのも、悪くないわね。",
-          "text": "Well, going to see these\ncultural treasures that\nwill be mine isn't bad."
+          "text": "I might as well see\nthose cultural treasures\nthat'll be mine."
         },
         {
           "offset": "0x3cb4",
@@ -1229,7 +1229,7 @@
         {
           "offset": "0x3d2c",
           "original": "あの…、紐緒さ…。\nちょっと待って…。\nあぁ、行っちゃったよ。",
-          "text": "Um... Himoo...\nWait a sec...\nAw, she left."
+          "text": "Um... Himoo-sa...\nWait a sec...\nAw, she left."
         },
         {
           "offset": "0x3d6c",
@@ -1264,7 +1264,7 @@
         {
           "offset": "0x3e74",
           "original": "誰に向かって\n言ってるんだろう…。",
-          "text": "Who is she\neven talking to..."
+          "text": "Who is she\ntalking to...?"
         },
         {
           "offset": "0x3ea4",
@@ -1409,7 +1409,7 @@
         {
           "offset": "0x4348",
           "original": "ふう、何で逃げるのよ。\nつられて、逃げちゃった\nじゃないの。",
-          "text": "Phew, why did you run?\nYou made me run\ntoo, you know."
+          "text": "Phew, why\ndid you run?\nI ended up running too."
         },
         {
           "offset": "0x4384",
@@ -1499,7 +1499,7 @@
         {
           "offset": "0x55a8",
           "original": "あっ、\n{G}、おはよう。",
-          "text": "Oh, morning,\nhi there, {G}"
+          "text": "Oh, morning,\n{G}!"
         },
         {
           "offset": "0x55c0",
@@ -1529,7 +1529,7 @@
         {
           "offset": "0x56a0",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0x56c0",
@@ -1584,7 +1584,7 @@
         {
           "offset": "0x5888",
           "original": "ソーリー、ごめんなさい。\n準備に手間取っちゃって…。\nさあ行きましょう。",
-          "text": "Sorry, gomen nasai!\nGetting ready took time...\nLet's go!"
+          "text": "Sorry! Gomen nasai!\nI took too long...\nLet's go!"
         },
         {
           "offset": "0x58d4",
@@ -1614,7 +1614,7 @@
         {
           "offset": "0x59d8",
           "original": "ソーリー、ごめんなさい。\n準備に手間取っちゃって…。\nさあ行きましょう。",
-          "text": "Sorry, gomen nasai!\nGetting ready took time...\nLet's go!"
+          "text": "Sorry! Gomen nasai!\nI took too long...\nLet's go!"
         },
         {
           "offset": "0x5a24",
@@ -1759,12 +1759,12 @@
         {
           "offset": "0x5e54",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late.\nIs she ever coming?"
+          "text": "She's late.\nWhere could she be?"
         },
         {
           "offset": "0x5e7c",
           "original": "ソーリー、ごめんなさい。\n準備に手間取っちゃって…。\nさあ行きましょう。",
-          "text": "Sorry, gomen nasai!\nGetting ready took time...\nLet's go!"
+          "text": "Sorry! Gomen nasai!\nI took too long...\nLet's go!"
         },
         {
           "offset": "0x5ec8",
@@ -1859,12 +1859,12 @@
         {
           "offset": "0x6210",
           "original": "馬鹿！\n私を守ろうとなんて\nするから。",
-          "text": "Idiot!\nThat's what you get\nfor protecting me."
+          "text": "Idiot!\nYou got hurt\nprotecting me!"
         },
         {
           "offset": "0x6238",
           "original": "心配してくれてありがとう。\nじゃあ、\nそろそろ帰ろうか。",
-          "text": "Thanks for caring.\nWell,\nshall we head back?"
+          "text": "Thanks for worrying.\nWell,\nshall we head back?"
         },
         {
           "offset": "0x6270",
@@ -1984,7 +1984,7 @@
         {
           "offset": "0x7498",
           "original": "それじゃ、ちょっと\n待っていただける？",
-          "text": "In that case, would you\nkindly wait a moment?"
+          "text": "Could you wait\na moment?"
         },
         {
           "offset": "0x74c0",
@@ -1999,7 +1999,7 @@
         {
           "offset": "0x751c",
           "original": "ごめんなさいね、\n遅くなっちゃって\n女の子は、準備に色々と\n時間がかかるから。",
-          "text": "I'm sorry\nfor being late.\nA girl needs plenty\nof time to get ready."
+          "text": "Sorry I'm late.\nGirls need\nplenty of time\nto get ready."
         },
         {
           "offset": "0x7568",
@@ -2114,7 +2114,7 @@
         {
           "offset": "0x7914",
           "original": "私と一緒なんだから\nこのぐらい我慢しなきゃ。\nそれじゃ、行きましょ。",
-          "text": "You're with me, so\nyou must bear that much.\nNow, let's go."
+          "text": "If you're with me,\nyou'll have to be patient.\nNow, let's go."
         },
         {
           "offset": "0x7964",
@@ -2129,7 +2129,7 @@
         {
           "offset": "0x79a0",
           "original": "私、あなたに\n誘ってもらうほど\nおちぶれておりませんの。",
-          "text": "I have not sunk\nso low as to be\ninvited out by you."
+          "text": "I'm not so desperate\nI'd accept an invite\nfrom you."
         },
         {
           "offset": "0x79e4",
@@ -2189,7 +2189,7 @@
         {
           "offset": "0x7bb0",
           "original": "ま、いいでしょう。",
-          "text": "Well, very well."
+          "text": "All right, then."
         },
         {
           "offset": "0x7bc4",
@@ -2224,7 +2224,7 @@
         {
           "offset": "0x7cb0",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late.\nIs she ever coming?"
+          "text": "She's late.\nWhere could she be?"
         },
         {
           "offset": "0x7cd8",
@@ -2319,7 +2319,7 @@
         {
           "offset": "0x8008",
           "original": "何かっこつけてるの？\n私を守るのは当然だもの、\n礼なんて言わないわよ。",
-          "text": "Why act so cool?\nProtecting me is a given,\nso I won't thank you."
+          "text": "Quit showing off.\nOf course you'd protect me.\nDon't expect thanks."
         },
         {
           "offset": "0x8050",
@@ -2369,7 +2369,7 @@
         {
           "offset": "0x8fe0",
           "original": "おや、{G}。\nおはよう。",
-          "text": "Oh, hi, {G}\nGood morning."
+          "text": "Oh, {G}.\nMorning."
         },
         {
           "offset": "0x8ff8",
@@ -2399,7 +2399,7 @@
         {
           "offset": "0x90f4",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0x9114",
@@ -2594,7 +2594,7 @@
         {
           "offset": "0x96fc",
           "original": "遅いなぁ。\nまだ来ないのかなぁ。",
-          "text": "She's late.\nIs she ever coming?"
+          "text": "She's late.\nWhere could she be?"
         },
         {
           "offset": "0x9724",
@@ -2659,7 +2659,7 @@
         {
           "offset": "0x992c",
           "original": "はい、私の好きな言葉の\n一つです。",
-          "text": "Yes, those are some\nof my favorite words."
+          "text": "Yes, it's one of\nmy favorites."
         },
         {
           "offset": "0x9950",
@@ -2679,12 +2679,12 @@
         {
           "offset": "0x99b4",
           "original": "ど、どうしたの、\n{G}！",
-          "text": "What's wrong,\n{G}?"
+          "text": "W-what's wrong,\n{G}?"
         },
         {
           "offset": "0x99cc",
           "original": "あ、安心したら、\n力が抜けちゃって…。\nでも、良かった。",
-          "text": "I-I was so relieved,\nmy legs just gave out...\nBut I'm glad."
+          "text": "I-I was so relieved,\nI went weak...\nBut I'm glad."
         },
         {
           "offset": "0x9a10",
@@ -2709,7 +2709,7 @@
         {
           "offset": "0x9aa0",
           "original": "別に謝ることないよ。\nそれより、{G}は\n怪我はなかった？",
-          "text": "Don't apologize.\nAnd you, {G}?\nAre you hurt?"
+          "text": "Don't apologize.\n{G}, are you\nhurt at all?"
         },
         {
           "offset": "0x9ad4",
@@ -2754,7 +2754,7 @@
         {
           "offset": "0xaa00",
           "original": "{P}、\nおはようございます。",
-          "text": "{P},\ngood morning to you."
+          "text": "{P},\ngood morning."
         },
         {
           "offset": "0xaa20",
@@ -2789,7 +2789,7 @@
         {
           "offset": "0xab4c",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0xab6c",
@@ -2854,7 +2854,7 @@
         {
           "offset": "0xad68",
           "original": "はい、私でよろしければ\n御一緒させて下さい。",
-          "text": "Yes, if that's okay.\nI'd love to."
+          "text": "Yes, if you don't mind.\nI'd love to."
         },
         {
           "offset": "0xad94",
@@ -2889,7 +2889,7 @@
         {
           "offset": "0xae6c",
           "original": "はい、それでは、\n参りましょう。",
-          "text": "Yes, well then,\nlet us be off."
+          "text": "All right, then.\nLet's go."
         },
         {
           "offset": "0xaea8",
@@ -2949,7 +2949,7 @@
         {
           "offset": "0xb078",
           "original": "真っ赤で、奇麗でしたね。\nけれども、もう少し地味な\nほうが、落ち着きますね。",
-          "text": "It was red and lovely.\nYet something plainer\nis more calming to me."
+          "text": "The red was lovely.\nI'd feel more at ease\nwith something simpler."
         },
         {
           "offset": "0xb0c4",
@@ -3024,7 +3024,7 @@
         {
           "offset": "0xb33c",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late...\nIs she coming?"
+          "text": "She's late.\nWhere could she be?"
         },
         {
           "offset": "0xb364",
@@ -3039,7 +3039,7 @@
         {
           "offset": "0xb3b8",
           "original": "そうでございますか。\nそれでは、\n早速参りましょう。",
-          "text": "Is that so?\nWell then,\nlet us be off."
+          "text": "Oh, I see.\nWell then,\nlet's get going."
         },
         {
           "offset": "0xb3f8",
@@ -3069,7 +3069,7 @@
         {
           "offset": "0xb4c0",
           "original": "素敵ですね。\nはぁ、ボーッと\nしてしまいそうです。",
-          "text": "How lovely.\nI could just sit\nand stare..."
+          "text": "How lovely.\nI could just\nstare at it..."
         },
         {
           "offset": "0xb4f4",
@@ -3179,7 +3179,7 @@
         {
           "offset": "0xc6a8",
           "original": "あっ、\n{G}、おはよう。",
-          "text": "Oh,\n{G}, morning."
+          "text": "Oh,\nmorning, {G}!"
         },
         {
           "offset": "0xc6c0",
@@ -3194,7 +3194,7 @@
         {
           "offset": "0xc6f4",
           "original": "じゃあ、\n一緒に行かない？",
-          "text": "Then want\nto go together?"
+          "text": "Then, wanna\ngo together?"
         },
         {
           "offset": "0xc710",
@@ -3209,7 +3209,7 @@
         {
           "offset": "0xc7c4",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0xc7e4",
@@ -3314,7 +3314,7 @@
         {
           "offset": "0xcb08",
           "original": "あっ、いいね。\nそれじゃあ、早速\n今から行こうよ。",
-          "text": "Oh, sounds good.\nThen let's go\nright now."
+          "text": "Oh, sounds good.\nLet's go\nright now."
         },
         {
           "offset": "0xcb3c",
@@ -3419,12 +3419,12 @@
         {
           "offset": "0xce70",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late...\nIs she coming?"
+          "text": "She's late.\nWhere could she be?"
         },
         {
           "offset": "0xce98",
           "original": "悪い、待たせたね。\nそれじゃ、行こうか。",
-          "text": "Sorry for the wait.\nOkay, let's go."
+          "text": "Sorry I kept you waiting.\nLet's go."
         },
         {
           "offset": "0xcec4",
@@ -3454,7 +3454,7 @@
         {
           "offset": "0xcf80",
           "original": "こういうの、映画とかで\n見たことあるよ。\nすっごい奇麗だな。",
-          "text": "I've seen stuff like\nthis in movies.\nIt's really pretty."
+          "text": "I've seen sunsets\nlike this in movies.\nSo pretty."
         },
         {
           "offset": "0xcfbc",
@@ -3494,7 +3494,7 @@
         {
           "offset": "0xd128",
           "original": "逃げるなんて情けねぇけど、\nしょうがないか。\n相手があれじゃねぇ。",
-          "text": "Running away is lame,\nbut what can you do?\nNot against that thing."
+          "text": "Running away's lame,\nbut we had no choice.\nNot against that thing."
         },
         {
           "offset": "0xd174",
@@ -3589,7 +3589,7 @@
         {
           "offset": "0xe158",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0xe178",
@@ -3634,12 +3634,12 @@
         {
           "offset": "0xe2dc",
           "original": "‥‥‥。\n遅いな、一体\n何やってるんだろう？",
-          "text": "......\nShe's late. What on\nearth is she doing?"
+          "text": "......\nShe's late.\nWhat's she doing?"
         },
         {
           "offset": "0xe30c",
           "original": "お待たせ。\nさあ、行きましょう。",
-          "text": "Sorry I'm late.\nNow, let's go."
+          "text": "Sorry I'm late.\nLet's go."
         },
         {
           "offset": "0xe330",
@@ -3769,12 +3769,12 @@
         {
           "offset": "0xe718",
           "original": "良かったらさ、\n明後日の自由行動も\n一緒に行かないか？",
-          "text": "Wanna hang out\nagain the day after\ntomorrow?"
+          "text": "Wanna go out\nagain the day after\ntomorrow?"
         },
         {
           "offset": "0xe750",
           "original": "うん、いいよ。\nそれじゃ、ホテルの\nロビーで。",
-          "text": "Sure, okay.\nThen in the\nhotel lobby."
+          "text": "Sure, okay.\nSee you in the\nhotel lobby."
         },
         {
           "offset": "0xe790",
@@ -3799,7 +3799,7 @@
         {
           "offset": "0xe82c",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late...\nIs she coming?"
+          "text": "She's late...\nWonder where she is."
         },
         {
           "offset": "0xe854",
@@ -3884,7 +3884,7 @@
         {
           "offset": "0xeafc",
           "original": "逃げるなんていやだけど、\nしかたないよね。",
-          "text": "I hate running away,\nbut there was no choice."
+          "text": "I hate running away,\nbut we had no choice."
         },
         {
           "offset": "0xeb30",
@@ -3984,7 +3984,7 @@
         {
           "offset": "0xfb70",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0xfb90",
@@ -4114,7 +4114,7 @@
         {
           "offset": "0xfec8",
           "original": "恥ずかしがって、\n走って行っちゃった。\n‥‥‥‥違うか‥‥。",
-          "text": "She got all shy\nand ran off...\nOr maybe not."
+          "text": "She got embarrassed\nand ran off...\nOr maybe not."
         },
         {
           "offset": "0xff04",
@@ -4159,7 +4159,7 @@
         {
           "offset": "0x10004",
           "original": "あっ、ごめんなさい。\n見とれてしまって…。",
-          "text": "Oh, sorry.\nI was staring..."
+          "text": "Oh, sorry.\nI was mesmerized..."
         },
         {
           "offset": "0x10040",
@@ -4174,7 +4174,7 @@
         {
           "offset": "0x10088",
           "original": "良かったらさ、\n明後日の自由行動も\n一緒に行かないか？",
-          "text": "Wanna hang out\nagain the day after\ntomorrow?"
+          "text": "Wanna go out\nagain the day after\ntomorrow?"
         },
         {
           "offset": "0x100c0",
@@ -4214,7 +4214,7 @@
         {
           "offset": "0x101d8",
           "original": "遅いなぁ、\nまだ来ないのかなぁ。",
-          "text": "She's late...\nIs she coming?"
+          "text": "She's late...\nWonder where she is."
         },
         {
           "offset": "0x10200",
@@ -4344,7 +4344,7 @@
         {
           "offset": "0x105f4",
           "original": "いえ、いいんです。\nでも、助かって\n良かったですね…。",
-          "text": "No, it's all right.\nBut I'm glad\nwe made it..."
+          "text": "No, that's okay.\nI'm just glad\nwe got away..."
         },
         {
           "offset": "0x10644",
@@ -4439,7 +4439,7 @@
         {
           "offset": "0x1187c",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0x1189c",
@@ -4489,7 +4489,7 @@
         {
           "offset": "0x119ec",
           "original": "えっ、ちょっと\n準備してくるから、\n待ってて。",
-          "text": "Oh, let me go\nget ready, so\nwait for me."
+          "text": "Wait, I need\nto get ready.\nJust a minute."
         },
         {
           "offset": "0x11a70",
@@ -4614,7 +4614,7 @@
         {
           "offset": "0x11de8",
           "original": "良かったらさ、\n明後日の自由行動も\n一緒に行かないか？",
-          "text": "Wanna hang out\nagain the day after\ntomorrow?"
+          "text": "Wanna go out\nagain the day after\ntomorrow?"
         },
         {
           "offset": "0x11e20",
@@ -4644,7 +4644,7 @@
         {
           "offset": "0x11f1c",
           "original": "遅いなぁ。\nまだ来ないのかなぁ。",
-          "text": "She's late.\nIsn't she coming yet?"
+          "text": "She's late.\nWonder where she is."
         },
         {
           "offset": "0x11f44",
@@ -4729,7 +4729,7 @@
         {
           "offset": "0x12204",
           "original": "ああ、大丈夫。\n{G}こそ怪我はない？",
-          "text": "Yeah, I'm fine.\n{G}, are you?"
+          "text": "I'm fine.\nAre you hurt, {G}?"
         },
         {
           "offset": "0x12228",
@@ -4754,7 +4754,7 @@
         {
           "offset": "0x122b4",
           "original": "えっ、早く怪我を見せて。\nもう無理するんだから…。\nでも、ありがとう…。",
-          "text": "Huh? Show me, quick.\nYou always overdo it...\nBut thank you..."
+          "text": "Huh? Let me see.\nYou push yourself so hard...\nBut thanks..."
         },
         {
           "offset": "0x122fc",
@@ -4894,7 +4894,7 @@
         {
           "offset": "0x134fc",
           "original": "ちょっと、\n冷たかったかな。",
-          "text": "Was that\na little cold of me?"
+          "text": "Was I\na bit too cold?"
         },
         {
           "offset": "0x1351c",
@@ -5049,7 +5049,7 @@
         {
           "offset": "0x13a08",
           "original": "良かったらさ、\n明後日の自由行動も\n一緒に行かないか？",
-          "text": "Wanna hang out\nagain the day after\ntomorrow?"
+          "text": "Wanna go out\nagain the day after\ntomorrow?"
         },
         {
           "offset": "0x13a40",
@@ -5079,7 +5079,7 @@
         {
           "offset": "0x13b38",
           "original": "遅いなぁ。\nまだ来ないのかなぁ。",
-          "text": "She's late.\nIsn't she coming yet?"
+          "text": "She's late.\nWonder where she is."
         },
         {
           "offset": "0x13b60",
@@ -5134,7 +5134,7 @@
         {
           "offset": "0x13d14",
           "original": "そうよね。\nしっかりした目標を持って\nいる人って、素敵よね。",
-          "text": "Yes, they are.\nPeople with firm goals\nare really wonderful."
+          "text": "You're right.\nPeople with real goals\nare admirable."
         },
         {
           "offset": "0x13d50",
@@ -5289,12 +5289,12 @@
         {
           "offset": "0x14e68",
           "original": "えっ、なにを？",
-          "text": "Huh, at what?"
+          "text": "Huh, what?"
         },
         {
           "offset": "0x14e78",
           "original": "あれ、琉球王国の\n民族衣装かな。\nよし、ナンパしてこようぜ。",
-          "text": "Is that the folk dress\nof the Ryukyu Kingdom?\nCome on, let's hit on 'em."
+          "text": "Is that traditional\nRyukyuan dress?\nCome on, let's hit on 'em."
         },
         {
           "offset": "0x14ec4",
@@ -5414,7 +5414,7 @@
         {
           "offset": "0x152a8",
           "original": "優美には何買って\n行こうかな…。\nお、おい、何だあれ？",
-          "text": "What should I get\nfor Yumi...\nH-hey, what's that?"
+          "text": "What can I get\nfor Yumi...\nH-hey, what's that?"
         },
         {
           "offset": "0x152e0",
@@ -5454,7 +5454,7 @@
         {
           "offset": "0x15420",
           "original": "あっ、クラーク博士だ。\nボーイズ　ビー\nアンビシャス。\n少年よ大志を抱け。\nお前には、\n無縁の言葉かな。",
-          "text": "Oh, it's Dr. Clark.\nBoys, be\nambitious!\nYoung men, aim high.\nNot words that\napply to you, huh."
+          "text": "Oh, it's Dr. Clark.\nBoys, be\nambitious!\nYoung men, aim high.\nNot your sort of\nmotto, is it?"
         },
         {
           "offset": "0x15484",
@@ -5464,7 +5464,7 @@
         {
           "offset": "0x154b8",
           "original": "へーっ、そうなんだ。\nどんな志し？",
-          "text": "Oh, really?\nWhat ambitions?"
+          "text": "Oh, really?\nLike what?"
         },
         {
           "offset": "0x154dc",
@@ -5499,7 +5499,7 @@
         {
           "offset": "0x15620",
           "original": "勝った…。\nあれ、好雄は、\nどこまで逃げたのかな？",
-          "text": "I won...\nHuh, where did\nYoshio run off to?"
+          "text": "I won...\nHuh, how far\ndid Yoshio run?"
         },
         {
           "offset": "0x15658",
@@ -5574,7 +5574,7 @@
         {
           "offset": "0x15894",
           "original": "はい、そうですね。\nじゃあ、帰るか。",
-          "text": "Sure, whatever you say.\nWell, let's go back."
+          "text": "Yeah, sure.\nLet's just head back."
         },
         {
           "offset": "0x158d4",
@@ -5594,7 +5594,7 @@
         {
           "offset": "0x15964",
           "original": "あーあ、{S}まで行って、\n{Y}とツーショットじゃ\n悲しいよな…。",
-          "text": "Went to {S},\nbut a photo with {Y}?\nHow depressing..."
+          "text": "All the way to {S},\nand a photo with {Y}...\nHow depressing."
         },
         {
           "offset": "0x16410",

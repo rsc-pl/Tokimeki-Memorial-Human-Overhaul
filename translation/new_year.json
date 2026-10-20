@@ -218,7 +218,7 @@
         {
           "offset": "0x28",
           "original": "さて、\n早速お参りにいこうかな。",
-          "text": "Okay, let's go\npray right away."
+          "text": "Okay, time to\ngo say my prayers."
         },
         {
           "offset": "0x4c",
@@ -233,7 +233,7 @@
         {
           "offset": "0x88",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0xb0",
@@ -283,7 +283,7 @@
         {
           "offset": "0x234",
           "original": "おみくじでも、\n引きにいこうかな。",
-          "text": "Maybe I'll go\ndraw my fortune."
+          "text": "Maybe I'll draw\na fortune slip."
         },
         {
           "offset": "0x268",
@@ -303,7 +303,7 @@
         {
           "offset": "0x2d4",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x304",
@@ -353,7 +353,7 @@
         {
           "offset": "0x95c",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x980",
@@ -363,7 +363,7 @@
         {
           "offset": "0x998",
           "original": "明けまして、おめでとう。\n新年早々、どうしたの？\n{G}。",
-          "text": "Happy New Year.\nWhat brings you here,\n{G}"
+          "text": "Happy New Year.\nWhat brings you here,\n{G}?"
         },
         {
           "offset": "0x9cc",
@@ -463,7 +463,7 @@
         {
           "offset": "0xcd0",
           "original": "{P}。\n明けましておめでとう。",
-          "text": "{P}\nHappy New Year!"
+          "text": "{P}.\nHappy New Year!"
         },
         {
           "offset": "0xcec",
@@ -498,7 +498,7 @@
         {
           "offset": "0xde0",
           "original": "{P}。\n明けましておめでとう。\n何、どうしたの？",
-          "text": "{P}\nHappy New Year!\nWhat's up?"
+          "text": "{P}.\nHappy New Year!\nWhat's up?"
         },
         {
           "offset": "0xe0c",
@@ -533,7 +533,7 @@
         {
           "offset": "0xf00",
           "original": "{P}。\n明けまして、おめでとう。",
-          "text": "{P}\nHappy New Year."
+          "text": "{P}.\nHappy New Year."
         },
         {
           "offset": "0xf20",
@@ -603,7 +603,7 @@
         {
           "offset": "0x10cc",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x10f4",
@@ -703,7 +703,7 @@
         {
           "offset": "0x13f8",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x1418",
@@ -718,7 +718,7 @@
         {
           "offset": "0x1470",
           "original": "なんだ同じ。\n誰でも大吉って感じ。",
-          "text": "Same as mine.\nDo they all say 'best'?"
+          "text": "Same here.\nEveryone gets Best?"
         },
         {
           "offset": "0x1494",
@@ -743,7 +743,7 @@
         {
           "offset": "0x1514",
           "original": "{G}。\nそれはないんじゃない？",
-          "text": "{G}\nThat's harsh."
+          "text": "{G}.\nThat's harsh."
         },
         {
           "offset": "0x1530",
@@ -893,7 +893,7 @@
         {
           "offset": "0x27e0",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x2804",
@@ -1003,7 +1003,7 @@
         {
           "offset": "0x2b68",
           "original": "{P}。\nあ、明けまして、\nおめでとうございます。",
-          "text": "{P}\nH-happy\nNew Year."
+          "text": "{P}.\nH-happy\nNew Year."
         },
         {
           "offset": "0x2b94",
@@ -1033,7 +1033,7 @@
         {
           "offset": "0x2c20",
           "original": "ちょっと\n時間がかかると思うから、\n家の方に行くわ。",
-          "text": "It'll take me\na little while,\nso I'll come to you."
+          "text": "Give me a while,\nthen I'll come\nto your place."
         },
         {
           "offset": "0x2c54",
@@ -1048,7 +1048,7 @@
         {
           "offset": "0x2cb0",
           "original": "{P}。\n明けまして、おめでとう。\n今年もよろしくね。",
-          "text": "{P}\nHappy New Year.\nLet's have a good year."
+          "text": "{P}.\nHappy New Year.\nLet's have a good year."
         },
         {
           "offset": "0x2ce0",
@@ -1078,7 +1078,7 @@
         {
           "offset": "0x2d6c",
           "original": "ちょっと\n時間がかかると思うから、\n家の方に行くわ。",
-          "text": "It'll take me\na little while,\nso I'll come to you."
+          "text": "Give me a while,\nthen I'll come\nto your place."
         },
         {
           "offset": "0x2da0",
@@ -1093,7 +1093,7 @@
         {
           "offset": "0x2dfc",
           "original": "{P}。\n明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy\nNew Year."
+          "text": "{P}.\nHappy\nNew Year."
         },
         {
           "offset": "0x2e24",
@@ -1123,7 +1123,7 @@
         {
           "offset": "0x2ea8",
           "original": "ちょっと\n時間がかかると思うから、\n家の方に行くわ。",
-          "text": "It'll take me\na little while,\nso I'll come to you."
+          "text": "Give me a while,\nthen I'll come\nto your place."
         },
         {
           "offset": "0x2edc",
@@ -1163,7 +1163,7 @@
         {
           "offset": "0x2fdc",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x3004",
@@ -1268,7 +1268,7 @@
         {
           "offset": "0x3334",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x3354",
@@ -1303,12 +1303,12 @@
         {
           "offset": "0x3430",
           "original": "えっ…、\n別にいいけど。",
-          "text": "Oh...\nI don't mind."
+          "text": "Oh...\nSure, I guess."
         },
         {
           "offset": "0x3448",
           "original": "大吉じゃないか\n自分だけずるいなぁ。",
-          "text": "That's Best luck!\nNo fair."
+          "text": "You got Best!\nNo fair!"
         },
         {
           "offset": "0x346c",
@@ -1488,7 +1488,7 @@
         {
           "offset": "0x4b94",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x4bb8",
@@ -1498,7 +1498,7 @@
         {
           "offset": "0x4bd0",
           "original": "明けまして、おめでとう。\n紐緒さんが家に来るなんて、\n新年早々、めずらしいね。",
-          "text": "Happy New Year.\nHimoo-san at my house?\nWhat a surprise so early!"
+          "text": "Himoo-san?\nWhat a surprise\non New Year's Day!"
         },
         {
           "offset": "0x4c20",
@@ -1598,7 +1598,7 @@
         {
           "offset": "0x4f18",
           "original": "{P}。\nあ、明けまして、\nおめでとう。",
-          "text": "{P}\nH-happy\nNew Year."
+          "text": "{P}.\nH-happy\nNew Year."
         },
         {
           "offset": "0x4f3c",
@@ -1708,7 +1708,7 @@
         {
           "offset": "0x5210",
           "original": "待たせたわね。",
-          "text": "Had to wait, huh?"
+          "text": "Made you wait, huh?"
         },
         {
           "offset": "0x5224",
@@ -1733,7 +1733,7 @@
         {
           "offset": "0x52c0",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x52e8",
@@ -1838,7 +1838,7 @@
         {
           "offset": "0x5610",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x5630",
@@ -1923,7 +1923,7 @@
         {
           "offset": "0x5824",
           "original": "今年こそ、\nきっと、成功させて\n見せるわ。",
-          "text": "This year,\nI'll make it work.\nJust watch."
+          "text": "This year,\nI'll pull it off.\nWatch me."
         },
         {
           "offset": "0x5850",
@@ -1983,7 +1983,7 @@
         {
           "offset": "0x67ac",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x67d0",
@@ -2013,7 +2013,7 @@
         {
           "offset": "0x68c8",
           "original": "あっそう…。\nちょっぴり残念ね。\nそれじゃ…。",
-          "text": "Oh, okay...\nThat's a little sad.\nBye then..."
+          "text": "Oh, okay...\nThat's too bad.\nSee you, then..."
         },
         {
           "offset": "0x68fc",
@@ -2093,7 +2093,7 @@
         {
           "offset": "0x6b24",
           "original": "{P}。\n明けまして、\nおめでとう。",
-          "text": "{P}\nHappy\nNew Year."
+          "text": "{P}.\nHappy\nNew Year."
         },
         {
           "offset": "0x6b44",
@@ -2133,7 +2133,7 @@
         {
           "offset": "0x6c38",
           "original": "{P}。\nアハッピーニューイヤー。\n明けまして、おめでとう。",
-          "text": "{P}\nA Happy New Year!\nAkemashite omedetou!"
+          "text": "{P}.\nA Happy New Year!\nAkemashite omedetou!"
         },
         {
           "offset": "0x6c70",
@@ -2173,7 +2173,7 @@
         {
           "offset": "0x6d58",
           "original": "{P}。\nアハッピーニューイヤー。\n明けまして、おめでとう。",
-          "text": "{P}\nA Happy New Year!\nAkemashite omedetou!"
+          "text": "{P}.\nA Happy New Year!\nAkemashite omedetou!"
         },
         {
           "offset": "0x6d90",
@@ -2218,7 +2218,7 @@
         {
           "offset": "0x6e8c",
           "original": "ソーリー。\nお待たせー。",
-          "text": "Sorry!\nI kept you waiting."
+          "text": "Sorry!\nKept you waiting!"
         },
         {
           "offset": "0x6ea8",
@@ -2243,7 +2243,7 @@
         {
           "offset": "0x6f28",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x6f50",
@@ -2313,7 +2313,7 @@
         {
           "offset": "0x7174",
           "original": "私は素敵な恋人が\nできますようにって、\nお願いしたわ。\nだから、教えなさいよ。",
-          "text": "I wished for a\nwonderful sweetheart.\nThere,\nnow you tell me."
+          "text": "I wished for\na great boyfriend.\nNow tell me\nwhat you wished for."
         },
         {
           "offset": "0x71c0",
@@ -2358,7 +2358,7 @@
         {
           "offset": "0x7324",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x7344",
@@ -2383,12 +2383,12 @@
         {
           "offset": "0x73b4",
           "original": "大吉が出たから、\nあなたのを見て、大笑い\nしようと思ったのに。\nうふふふ…。",
-          "text": "I got Best, so I wanted\nto see yours and\nhave a good laugh.\nHee hee hee..."
+          "text": "I got the best one,\nso I wanted to\nlaugh at yours.\nHee hee..."
         },
         {
           "offset": "0x7400",
           "original": "新年早々から、\nそんな事考えて…。",
-          "text": "First day of the year\nand you think that..."
+          "text": "And you're thinking\nthat on New Year's Day...?"
         },
         {
           "offset": "0x7434",
@@ -2403,7 +2403,7 @@
         {
           "offset": "0x747c",
           "original": "当然、大吉よ。\n日頃の行いがいいから。",
-          "text": "Best fortune, of course.\nI've been good."
+          "text": "Best, of course.\nI always behave."
         },
         {
           "offset": "0x74a4",
@@ -2448,12 +2448,12 @@
         {
           "offset": "0x7610",
           "original": "くそ、すっげー。\n悔しい。",
-          "text": "Dang, that's\nso annoying."
+          "text": "Man, I'm\nso jealous!"
         },
         {
           "offset": "0x762c",
           "original": "きっと、\n日頃の行いの違いよねー。",
-          "text": "It must be how\nwe behave all year."
+          "text": "Guess I behave\nbetter than you."
         },
         {
           "offset": "0x7650",
@@ -2558,7 +2558,7 @@
         {
           "offset": "0x890c",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x8930",
@@ -2568,7 +2568,7 @@
         {
           "offset": "0x8948",
           "original": "明けまして、おめでとう。\n新年早々、どうしたの？\n{G}。",
-          "text": "Happy New Year.\nWhat brings you here,\n{G}"
+          "text": "Happy New Year.\nWhat brings you here,\n{G}?"
         },
         {
           "offset": "0x897c",
@@ -2583,12 +2583,12 @@
         {
           "offset": "0x89e4",
           "original": "私の誘いを断る男なんて\n見たこと無いけど。\nそれじゃ、行きましょう。",
-          "text": "No man has ever\nturned me down anyway.\nLet's go, then."
+          "text": "I've never met a man\nwho'd turn me down.\nLet's go, then."
         },
         {
           "offset": "0x8a2c",
           "original": "何よ！\nこの私がわざわざ\n来てあげたのに。\n失礼するわね。",
-          "text": "What?!\nI came all this way\njust for you!\nI'm leaving."
+          "text": "What?!\nI came all this way\njust for you!\nExcuse me!"
         },
         {
           "offset": "0x8a68",
@@ -2668,7 +2668,7 @@
         {
           "offset": "0x8c8c",
           "original": "{P}。\nあ、明けまして、\nおめでとう。",
-          "text": "{P}\nH-happy\nNew Year."
+          "text": "{P}.\nH-happy\nNew Year."
         },
         {
           "offset": "0x8cb0",
@@ -2683,12 +2683,12 @@
         {
           "offset": "0x8ce4",
           "original": "それじゃあ、\nこれから初詣に\n行かないか？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x8d10",
           "original": "そうね。\n別にいいわよ。",
-          "text": "Well.\nI don't mind."
+          "text": "Well,\nI don't mind."
         },
         {
           "offset": "0x8d28",
@@ -2703,7 +2703,7 @@
         {
           "offset": "0x8da0",
           "original": "{P}。\n明けましておめでとう。\n何の用かしら？",
-          "text": "{P}\nHappy New Year.\nWhat is it?"
+          "text": "{P}.\nHappy New Year.\nWhat is it?"
         },
         {
           "offset": "0x8dcc",
@@ -2718,12 +2718,12 @@
         {
           "offset": "0x8e00",
           "original": "それじゃあ、\nこれから初詣に\n行かないか？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x8e2c",
           "original": "そうね。\n別に、かまわないわよ。",
-          "text": "Well.\nI suppose it's fine."
+          "text": "Well,\nI don't mind."
         },
         {
           "offset": "0x8e4c",
@@ -2778,7 +2778,7 @@
         {
           "offset": "0x8ff0",
           "original": "おまたせ。\n結構、空いてるのね。",
-          "text": "Sorry for the wait.\nIt's so quiet."
+          "text": "Here I am.\nNot too crowded."
         },
         {
           "offset": "0x9014",
@@ -2803,7 +2803,7 @@
         {
           "offset": "0x908c",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x90b4",
@@ -2863,7 +2863,7 @@
         {
           "offset": "0x9274",
           "original": "私にふさわしい男性が、\n現れるようにね。",
-          "text": "For a man worthy\nof me to appear."
+          "text": "I wished for\na man worthy of me."
         },
         {
           "offset": "0x929c",
@@ -2933,7 +2933,7 @@
         {
           "offset": "0x94a4",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x94c4",
@@ -2978,7 +2978,7 @@
         {
           "offset": "0x95cc",
           "original": "こんなもの見れるなんて、\n今年はついてるわね。",
-          "text": "Getting to see this?\nI must be lucky this year."
+          "text": "I got to see this?\nIt's my lucky year!"
         },
         {
           "offset": "0x95fc",
@@ -2988,12 +2988,12 @@
         {
           "offset": "0x9630",
           "original": "今年は、特定の人と\n付き合おうかしら。",
-          "text": "Maybe this year I'll date\none certain person."
+          "text": "I might date\na certain someone."
         },
         {
           "offset": "0x9658",
           "original": "えっ？\n{G}のお眼鏡にかなう\n男がいるの？",
-          "text": "Huh?\n{G}, you know\na guy that good?"
+          "text": "Huh?\n{G} found someone\ngood enough?"
         },
         {
           "offset": "0x9680",
@@ -3068,7 +3068,7 @@
         {
           "offset": "0x9844",
           "original": "そうだね。\n新年早々、{G}と\n一緒だからね。",
-          "text": "Yeah.\nNext to {G}\non day one."
+          "text": "Yep.\nI'm with {G}\non New Year's Day."
         },
         {
           "offset": "0x986c",
@@ -3093,7 +3093,7 @@
         {
           "offset": "0x98f8",
           "original": "そうだね。\n新年早々、{G}と\n一緒だからね。",
-          "text": "Yeah.\nNext to {G}\non day one."
+          "text": "Yep.\nI'm with {G}\non New Year's Day."
         },
         {
           "offset": "0x9920",
@@ -3118,7 +3118,7 @@
         {
           "offset": "0xa8fc",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0xa920",
@@ -3128,7 +3128,7 @@
         {
           "offset": "0xa94c",
           "original": "あ、{G}。\n明けまして、おめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0xa984",
@@ -3228,7 +3228,7 @@
         {
           "offset": "0xac7c",
           "original": "{P}。\nあ、明けまして、\nおめでとうございます。",
-          "text": "{P}\nH-happy\nNew Year."
+          "text": "{P}.\nH-happy\nNew Year."
         },
         {
           "offset": "0xaca8",
@@ -3243,7 +3243,7 @@
         {
           "offset": "0xacd0",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0xacf8",
@@ -3268,7 +3268,7 @@
         {
           "offset": "0xada4",
           "original": "{P}。\n新年明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy New Year.\nBest wishes."
+          "text": "{P}.\nHappy New Year.\nBest wishes."
         },
         {
           "offset": "0xadd0",
@@ -3283,7 +3283,7 @@
         {
           "offset": "0xae00",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0xae28",
@@ -3308,7 +3308,7 @@
         {
           "offset": "0xaed0",
           "original": "{P}。\n明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy\nNew Year."
+          "text": "{P}.\nHappy\nNew Year."
         },
         {
           "offset": "0xaef8",
@@ -3378,7 +3378,7 @@
         {
           "offset": "0xb0d4",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0xb0fc",
@@ -3438,7 +3438,7 @@
         {
           "offset": "0xb2bc",
           "original": "わ、私だって秘密です。\nだって、\n恥ずかしいですから…。",
-          "text": "M-mine's a secret too.\nBecause\nit's embarrassing..."
+          "text": "M-mine's a secret too.\nIt's a little\nembarrassing..."
         },
         {
           "offset": "0xb2f4",
@@ -3498,7 +3498,7 @@
         {
           "offset": "0xb478",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0xb498",
@@ -3583,12 +3583,12 @@
         {
           "offset": "0xb6d0",
           "original": "{G}て、正直だね…。",
-          "text": "Bad liar, {G}"
+          "text": "You're honest, {G}."
         },
         {
           "offset": "0xb6fc",
           "original": "元日から、良いことが\nありましたので、\n最高の年になりそうです。",
-          "text": "Something good happened\non New Year's Day, so\nit'll be the best year."
+          "text": "Something good happened\ntoday. This year\nlooks promising."
         },
         {
           "offset": "0xb73c",
@@ -3658,7 +3658,7 @@
         {
           "offset": "0xb918",
           "original": "今年もいい年に\nなりますように、\nお互い頑張りましょう。",
-          "text": "Let's both do our best\nso this year will be\na good one too."
+          "text": "Let's make this\na good year,\nboth of us."
         },
         {
           "offset": "0xb950",
@@ -3703,7 +3703,7 @@
         {
           "offset": "0xca58",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0xca7c",
@@ -3713,7 +3713,7 @@
         {
           "offset": "0xcaa4",
           "original": "あ、{G}。\n明けまして、おめでとう。\n晴着がいいね。",
-          "text": "Oh, {G}\nHappy New Year.\nLovely kimono."
+          "text": "Oh, {G}.\nHappy New Year.\nLove your kimono!"
         },
         {
           "offset": "0xcad4",
@@ -3823,7 +3823,7 @@
         {
           "offset": "0xce34",
           "original": "{P}。\n新年明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy New Year.\nBest wishes."
+          "text": "{P}.\nHappy New Year.\nBest wishes."
         },
         {
           "offset": "0xce60",
@@ -3838,12 +3838,12 @@
         {
           "offset": "0xce88",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0xceb0",
           "original": "はい。\n私でよろしければ…。",
-          "text": "Yes.\nIf you'll have me..."
+          "text": "Yes.\nIf you don't mind."
         },
         {
           "offset": "0xcecc",
@@ -3868,7 +3868,7 @@
         {
           "offset": "0xcf84",
           "original": "{P}。\n新年明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy New Year.\nBest wishes."
+          "text": "{P}.\nHappy New Year.\nBest wishes."
         },
         {
           "offset": "0xcfb0",
@@ -3913,7 +3913,7 @@
         {
           "offset": "0xd0e4",
           "original": "{P}。\n新年明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy New Year.\nBest wishes."
+          "text": "{P}.\nHappy New Year.\nBest wishes."
         },
         {
           "offset": "0xd110",
@@ -3933,7 +3933,7 @@
         {
           "offset": "0xd174",
           "original": "私でよろしければ、\n行きますけれども。",
-          "text": "If you'll have me,\nI'll come along."
+          "text": "If you don't mind,\nI'll come along."
         },
         {
           "offset": "0xd19c",
@@ -3968,7 +3968,7 @@
         {
           "offset": "0xd2a0",
           "original": "{G}。\n晴着を着てきたんだ。",
-          "text": "{G}\nYou wore a kimono."
+          "text": "{G}.\nYou wore a kimono."
         },
         {
           "offset": "0xd2bc",
@@ -3993,7 +3993,7 @@
         {
           "offset": "0xd3a4",
           "original": "それでは、\nゆっくりと、\n参りましょう。",
-          "text": "Well then,\nlet's take\nour time."
+          "text": "Well then,\nlet's take\nour time there."
         },
         {
           "offset": "0xd3d0",
@@ -4008,7 +4008,7 @@
         {
           "offset": "0xd40c",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0xd434",
@@ -4123,7 +4123,7 @@
         {
           "offset": "0xd800",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0xd820",
@@ -4183,7 +4183,7 @@
         {
           "offset": "0xd968",
           "original": "今年は、元日から\n良い事がありましたので、\nいい年になりますね。",
-          "text": "Something good happened\non New Year's Day, so\nit will be a good year."
+          "text": "Something good happened\ntoday. Looks like\na good year ahead."
         },
         {
           "offset": "0xd9a8",
@@ -4193,7 +4193,7 @@
         {
           "offset": "0xd9bc",
           "original": "一緒に初詣に\n来られましたから。",
-          "text": "We visited the\nshrine together."
+          "text": "I got to come\nhere with you."
         },
         {
           "offset": "0xd9dc",
@@ -4203,7 +4203,7 @@
         {
           "offset": "0xda04",
           "original": "今年は、元日から\n良い事がありましたので、\nいい年になりますね。",
-          "text": "Something good happened\non New Year's Day, so\nit will be a good year."
+          "text": "Something good happened\ntoday. Looks like\na good year ahead."
         },
         {
           "offset": "0xda44",
@@ -4213,7 +4213,7 @@
         {
           "offset": "0xda58",
           "original": "一緒に初詣に\n来られましたから。",
-          "text": "We visited the\nshrine together."
+          "text": "I got to come\nhere with you."
         },
         {
           "offset": "0xda78",
@@ -4268,17 +4268,17 @@
         {
           "offset": "0xeb6c",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0xeb90",
           "original": "明けまして、\nおめでとう。\n{P}。",
-          "text": "Happy\nNew Year,\n{P}"
+          "text": "Happy\nNew Year,\n{P}."
         },
         {
           "offset": "0xebb0",
           "original": "あっ、{G}。\n明けまして、おめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0xebec",
@@ -4293,7 +4293,7 @@
         {
           "offset": "0xec50",
           "original": "えっ、ホントに！\n良かった。",
-          "text": "Huh, really!\nGreat."
+          "text": "Really?\nThat's great!"
         },
         {
           "offset": "0xec70",
@@ -4368,7 +4368,7 @@
         {
           "offset": "0xee6c",
           "original": "はい、清川です。",
-          "text": "Hello, Kiyokawa residence."
+          "text": "Kiyokawa here."
         },
         {
           "offset": "0xee80",
@@ -4393,7 +4393,7 @@
         {
           "offset": "0xef24",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0xef4c",
@@ -4403,7 +4403,7 @@
         {
           "offset": "0xef68",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0xef98",
@@ -4433,7 +4433,7 @@
         {
           "offset": "0xf030",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0xf058",
@@ -4443,7 +4443,7 @@
         {
           "offset": "0xf06c",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0xf09c",
@@ -4483,7 +4483,7 @@
         {
           "offset": "0xf164",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0xf194",
@@ -4498,7 +4498,7 @@
         {
           "offset": "0xf1d4",
           "original": "まだ、{G}は\n来てないみたいだな。",
-          "text": "Seems {G}\nisn't here yet."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0xf1f8",
@@ -4528,7 +4528,7 @@
         {
           "offset": "0xf2b0",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0xf2d8",
@@ -4648,7 +4648,7 @@
         {
           "offset": "0xf63c",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0xf65c",
@@ -4663,7 +4663,7 @@
         {
           "offset": "0xf694",
           "original": "そうなの？\nもしかしたら、\n大吉しかないのかもね。",
-          "text": "Did you?\nMaybe the only\nfortune is Best."
+          "text": "Really?\nMaybe they all\nsay Best."
         },
         {
           "offset": "0xf6c8",
@@ -4793,7 +4793,7 @@
         {
           "offset": "0xfa88",
           "original": "何だよ。\n{G}らしくないよ。",
-          "text": "What is it?\n{G}, come on."
+          "text": "What's wrong?\n{G}, this isn't like you."
         },
         {
           "offset": "0xfaa4",
@@ -4858,17 +4858,17 @@
         {
           "offset": "0x10c7c",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x10ca0",
           "original": "明けまして、\nおめでとう。\n{P}。",
-          "text": "Happy\nNew Year,\n{P}"
+          "text": "Happy\nNew Year,\n{P}."
         },
         {
           "offset": "0x10cc0",
           "original": "あっ、{G}。\n明けまして、おめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0x10cfc",
@@ -4883,7 +4883,7 @@
         {
           "offset": "0x10d60",
           "original": "えっ、ホントに！\n良かった。",
-          "text": "Huh, really!\nGreat."
+          "text": "Really?\nThat's great!"
         },
         {
           "offset": "0x10d80",
@@ -4958,7 +4958,7 @@
         {
           "offset": "0x10f7c",
           "original": "はい、清川です。",
-          "text": "Hello, Kiyokawa residence."
+          "text": "Kiyokawa here."
         },
         {
           "offset": "0x10f90",
@@ -4983,7 +4983,7 @@
         {
           "offset": "0x11034",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x1105c",
@@ -4993,7 +4993,7 @@
         {
           "offset": "0x11078",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x110a8",
@@ -5023,7 +5023,7 @@
         {
           "offset": "0x11140",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x11168",
@@ -5033,7 +5033,7 @@
         {
           "offset": "0x1117c",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x111ac",
@@ -5073,7 +5073,7 @@
         {
           "offset": "0x11274",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x112a4",
@@ -5088,7 +5088,7 @@
         {
           "offset": "0x112e4",
           "original": "まだ、{G}は\n来てないみたいだな。",
-          "text": "Seems {G}\nisn't here yet."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x11308",
@@ -5118,7 +5118,7 @@
         {
           "offset": "0x113ac",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x113d4",
@@ -5238,7 +5238,7 @@
         {
           "offset": "0x11734",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x11754",
@@ -5253,7 +5253,7 @@
         {
           "offset": "0x11790",
           "original": "そうなの？\nもしかしたら、\n大吉しかないのかもね。",
-          "text": "Really?\nMaybe they're all\nBest fortunes."
+          "text": "Really?\nMaybe they all\nsay Best."
         },
         {
           "offset": "0x117c4",
@@ -5273,7 +5273,7 @@
         {
           "offset": "0x11818",
           "original": "大吉じゃないか。",
-          "text": "That's Best!"
+          "text": "You got Best!"
         },
         {
           "offset": "0x1182c",
@@ -5388,7 +5388,7 @@
         {
           "offset": "0x11b3c",
           "original": "何だよ。\n{G}らしくないよ。",
-          "text": "What is it?\n{G}, come on."
+          "text": "What's wrong?\n{G}, this isn't like you."
         },
         {
           "offset": "0x11b58",
@@ -5453,7 +5453,7 @@
         {
           "offset": "0x12d6c",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x12d90",
@@ -5463,12 +5463,12 @@
         {
           "offset": "0x12dc8",
           "original": "あ、{G}。\n明けまして、おめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0x12e00",
           "original": "あの…、良かったら…、\nあの…、初詣に…、\n行きませんか…？",
-          "text": "Um, if you'd like...\nw-would you go\nto the shrine with me?"
+          "text": "Um, if you're free,\nwould you go\nto the shrine with me?"
         },
         {
           "offset": "0x12e3c",
@@ -5478,7 +5478,7 @@
         {
           "offset": "0x12e78",
           "original": "良かった…。\n断られると思って…、\nどきどきしちゃった…。",
-          "text": "I'm glad...\nI thought you'd say no...\nmy heart was racing..."
+          "text": "I'm relieved...\nI thought you'd say no...\nMy heart was racing..."
         },
         {
           "offset": "0x12ebc",
@@ -5573,7 +5573,7 @@
         {
           "offset": "0x13144",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x1316c",
@@ -5583,7 +5583,7 @@
         {
           "offset": "0x13180",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x131b0",
@@ -5613,7 +5613,7 @@
         {
           "offset": "0x13270",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x13298",
@@ -5623,7 +5623,7 @@
         {
           "offset": "0x132ac",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x132dc",
@@ -5663,7 +5663,7 @@
         {
           "offset": "0x133c8",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x133f8",
@@ -5678,7 +5678,7 @@
         {
           "offset": "0x1344c",
           "original": "まだ、{G}は\n来てないみたいだな。",
-          "text": "Seems {G}\nisn't here yet."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x13470",
@@ -5708,7 +5708,7 @@
         {
           "offset": "0x1351c",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x13544",
@@ -5768,7 +5768,7 @@
         {
           "offset": "0x13708",
           "original": "ご、ごめんね。\nべ、別に\n言わなくていいよ。",
-          "text": "S-sorry.\nY-you don't\nhave to say."
+          "text": "S-sorry.\nY-you don't\nhave to tell me."
         },
         {
           "offset": "0x13734",
@@ -5788,7 +5788,7 @@
         {
           "offset": "0x13790",
           "original": "あの…。\n私は、内気な性格が\n治るように…。",
-          "text": "Um...\nI wished to get\nover my shyness..."
+          "text": "Um...\nI wish I weren't\nso shy..."
         },
         {
           "offset": "0x137bc",
@@ -5843,7 +5843,7 @@
         {
           "offset": "0x1392c",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x1394c",
@@ -5863,7 +5863,7 @@
         {
           "offset": "0x139a8",
           "original": "そうなの？\nもしかしたら、\n大吉しかないのかもね。",
-          "text": "Really?\nMaybe they're all\nBest fortunes."
+          "text": "Really?\nMaybe they all\nsay Best."
         },
         {
           "offset": "0x139dc",
@@ -5963,7 +5963,7 @@
         {
           "offset": "0x13c58",
           "original": "‥‥‥。\nそれが、嬉しいです…。",
-          "text": "...\nThat makes me happy..."
+          "text": "...\nThat's why I'm happy..."
         },
         {
           "offset": "0x13c78",
@@ -6083,7 +6083,7 @@
         {
           "offset": "0x150c8",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x150ec",
@@ -6093,12 +6093,12 @@
         {
           "offset": "0x1510c",
           "original": "あっ、{G}。\n明けまして、おめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0x15148",
           "original": "暇だったらでいいんだけど、\nこれから初詣に行かない？",
-          "text": "Only if you're free, but\nshall we go to the shrine?"
+          "text": "If you're free,\nwant to go to the shrine?"
         },
         {
           "offset": "0x1517c",
@@ -6183,7 +6183,7 @@
         {
           "offset": "0x153d8",
           "original": "はい、虹野です。",
-          "text": "Hello, Nijino residence."
+          "text": "Nijino speaking."
         },
         {
           "offset": "0x153ec",
@@ -6208,7 +6208,7 @@
         {
           "offset": "0x1548c",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x154b4",
@@ -6218,7 +6218,7 @@
         {
           "offset": "0x154c4",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x154f4",
@@ -6248,7 +6248,7 @@
         {
           "offset": "0x155a0",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x155c8",
@@ -6258,7 +6258,7 @@
         {
           "offset": "0x155d8",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x15608",
@@ -6298,7 +6298,7 @@
         {
           "offset": "0x156d4",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x15704",
@@ -6313,7 +6313,7 @@
         {
           "offset": "0x15754",
           "original": "まだ、{G}は\n来てないみたいだな。",
-          "text": "Seems {G}\nisn't here yet."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x15778",
@@ -6343,7 +6343,7 @@
         {
           "offset": "0x15818",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x15840",
@@ -6418,12 +6418,12 @@
         {
           "offset": "0x15a64",
           "original": "私は、野球部が\n甲子園に行けるように\n必勝祈願よ。",
-          "text": "I prayed that the\nbaseball team wins its\nway to Koshien."
+          "text": "I prayed our team\nwould make it\nto Koshien."
         },
         {
           "offset": "0x15a98",
           "original": "私は、サッカー部が\n国立競技場に行けるように\n必勝祈願よ。",
-          "text": "I prayed our soccer\nteam would reach\nNational Stadium."
+          "text": "I prayed our soccer\nteam would make it\nto Nat'l Stadium."
         },
         {
           "offset": "0x15ad4",
@@ -6438,12 +6438,12 @@
         {
           "offset": "0x15b1c",
           "original": "私は、野球部が\n甲子園に行けるように\nお願いしたわ。",
-          "text": "I wished for the\nbaseball team to\nmake it to Koshien."
+          "text": "I wished our\nteam could make it\nto Koshien."
         },
         {
           "offset": "0x15b50",
           "original": "私は、サッカー部が\n国立競技場に行けるように\nお願いしたわ。",
-          "text": "I wished our soccer\nteam would reach\nNational Stadium."
+          "text": "I wished our soccer\nteam would make it\nto Nat'l Stadium."
         },
         {
           "offset": "0x15b8c",
@@ -6473,7 +6473,7 @@
         {
           "offset": "0x15c44",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x15c64",
@@ -6488,7 +6488,7 @@
         {
           "offset": "0x15c9c",
           "original": "そうなの？\nもしかしたら、\n大吉しかないのかもね。",
-          "text": "Really?\nMaybe they're all\nBest fortunes."
+          "text": "Really?\nMaybe they all\nsay Best."
         },
         {
           "offset": "0x15cd0",
@@ -6528,7 +6528,7 @@
         {
           "offset": "0x15db4",
           "original": "大吉じゃないか\n自分だけずるいなぁ。",
-          "text": "That's Best luck!\nNo fair."
+          "text": "You got Best!\nNo fair!"
         },
         {
           "offset": "0x15dd8",
@@ -6638,12 +6638,12 @@
         {
           "offset": "0x160e0",
           "original": "勉強と、恋かな…。",
-          "text": "Studying, and love..."
+          "text": "School and love."
         },
         {
           "offset": "0x160f4",
           "original": "それは、\n頑張らないとね。\n応援するよ。",
-          "text": "Then you'd\nbetter try hard.\nI'm rooting for you."
+          "text": "Then go for it!\nI'm rooting\nfor you!"
         },
         {
           "offset": "0x1611c",
@@ -6698,7 +6698,7 @@
         {
           "offset": "0x173b4",
           "original": "あれ、{G}、\nまだ何か？",
-          "text": "Oh, {G}\nsomething else?"
+          "text": "Oh, {G}.\nDid you need something?"
         },
         {
           "offset": "0x173fc",
@@ -6708,7 +6708,7 @@
         {
           "offset": "0x1740c",
           "original": "あれ、お客さんかな？\nはーい。",
-          "text": "Huh, a visitor?\nComing!"
+          "text": "Someone at the door?\nComing!"
         },
         {
           "offset": "0x17430",
@@ -6718,7 +6718,7 @@
         {
           "offset": "0x17458",
           "original": "あっ、{G}。\n明けましておめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0x17490",
@@ -6833,7 +6833,7 @@
         {
           "offset": "0x177b0",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x177d8",
@@ -6843,7 +6843,7 @@
         {
           "offset": "0x177ec",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x1781c",
@@ -6858,7 +6858,7 @@
         {
           "offset": "0x17878",
           "original": "{P}。\n明けまして、\nおめでとうございます。",
-          "text": "{P}\nHappy\nNew Year."
+          "text": "{P}.\nHappy\nNew Year."
         },
         {
           "offset": "0x178a0",
@@ -6873,7 +6873,7 @@
         {
           "offset": "0x178d0",
           "original": "それじゃあ、\nこれから初詣に\n行かない？",
-          "text": "Then do you\nwant to go to\nthe shrine now?"
+          "text": "Want to go\nto the shrine\nwith me?"
         },
         {
           "offset": "0x178f8",
@@ -6883,7 +6883,7 @@
         {
           "offset": "0x17908",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x17938",
@@ -6923,7 +6923,7 @@
         {
           "offset": "0x17a38",
           "original": "それじゃ、\n神社の前で待ち合わせで\nいいかな？",
-          "text": "Then how about\nwe meet in front\nof the shrine?"
+          "text": "Let's meet\nin front of\nthe shrine, okay?"
         },
         {
           "offset": "0x17a68",
@@ -6938,7 +6938,7 @@
         {
           "offset": "0x17ab8",
           "original": "まだ、{G}は\n来てないみたいだな。",
-          "text": "Seems {G}\nisn't here yet."
+          "text": "Looks like {G}\nisn't here yet."
         },
         {
           "offset": "0x17adc",
@@ -6968,7 +6968,7 @@
         {
           "offset": "0x17b84",
           "original": "神様、何とぞ、\n成績が上がりますように。",
-          "text": "Dear God, please\nlet my grades go up."
+          "text": "God, please\nhelp my grades improve."
         },
         {
           "offset": "0x17bac",
@@ -7033,7 +7033,7 @@
         {
           "offset": "0x17dac",
           "original": "そ、そう。\nあっ、おみくじでも\n引きに行こうよ。",
-          "text": "O-oh.\nOh, let's go\ndraw fortunes."
+          "text": "O-oh.\nLet's go\ndraw fortunes."
         },
         {
           "offset": "0x17ddc",
@@ -7048,7 +7048,7 @@
         {
           "offset": "0x17e38",
           "original": "そ、そう。\nあっ、おみくじでも\n引きに行かない？",
-          "text": "O-oh.\nOh, want to\ndraw fortunes?"
+          "text": "O-oh.\nWant to go\ndraw fortunes?"
         },
         {
           "offset": "0x17e68",
@@ -7083,7 +7083,7 @@
         {
           "offset": "0x17f44",
           "original": "新年早々、\nついてないな…。",
-          "text": "The year's barely begun\nand I'm unlucky..."
+          "text": "A lousy\nstart to the year..."
         },
         {
           "offset": "0x17f64",
@@ -7103,7 +7103,7 @@
         {
           "offset": "0x17fac",
           "original": "そうなの？\nもしかしたら、\n大吉しかないのかもね。",
-          "text": "Did you?\nMaybe the only\nfortune is Best."
+          "text": "Really?\nMaybe they all\nsay Best."
         },
         {
           "offset": "0x17fe0",
@@ -7133,7 +7133,7 @@
         {
           "offset": "0x18064",
           "original": "あっ、そう。\n良かったね。",
-          "text": "Oh, really.\nGood for you."
+          "text": "Oh, I see.\nGood for you."
         },
         {
           "offset": "0x18080",
@@ -7303,7 +7303,7 @@
         {
           "offset": "0x19620",
           "original": "と思ったけど、\n{G}の電話番号を\n知らないや。",
-          "text": "...Or not. I don't know\n{G}'s\nphone number."
+          "text": "Wait, I don't even\nhave {G}'s\nphone number."
         },
         {
           "offset": "0x19698",

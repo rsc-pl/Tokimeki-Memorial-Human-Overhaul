@@ -1,82 +1,82 @@
 {
- "description": "Nozomi's sports-day scene (the flower bed): all of TAIIKU/KIYOTAI.BIN. Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: after the sports-day minigame.",
- "dialogue": [
-  {
-   "file": "CDROM/TAIIKU/KIYOTAI.BIN",
-   "base": "0x801e8000",
-   "share_identical": true,
-   "lines": [
+  "description": "Nozomi's sports-day scene (the flower bed): all of TAIIKU/KIYOTAI.BIN. Promoted into the normal build on the user's request without an on-screen check (only the static checks: draft.py --check, packing, and a whole-set build). Not reached: after the sports-day minigame.",
+  "dialogue": [
     {
-     "offset": "0x0",
-     "original": "午後からの競技を\n見に行くか。\nちょっと近道をしていこう。",
-     "text": "Let's go watch\nthe afternoon events.\nI'll take a shortcut."
-    },
-    {
-     "offset": "0x40",
-     "original": "あっ、{P}、\n入っちゃ駄目！",
-     "text": "Ah, {P}\ndon't go in there!"
-    },
-    {
-     "offset": "0x5c",
-     "original": "えっ、おっとっとっと。",
-     "text": "Huh? Whoa, whoa, whoa."
-    },
-    {
-     "offset": "0x7c",
-     "original": "\n　　　　　　　ドシン。",
-     "text": "\n              Thud."
-    },
-    {
-     "offset": "0x98",
-     "original": "いってー。",
-     "text": "Owww."
-    },
-    {
-     "offset": "0xa8",
-     "original": "{P}、大丈夫？",
-     "text": "{P} you okay?"
-    },
-    {
-     "offset": "0xb4",
-     "original": "どうしたの、\nいきなり大声を出して。",
-     "text": "What's wrong,\nshouting all of a sudden?"
-    },
-    {
-     "offset": "0xd8",
-     "original": "ごめんなさい。\nでも、そこは花壇なの。\nほら。",
-     "text": "Sorry.\nBut that's a flower bed.\nLook."
-    },
-    {
-     "offset": "0x114",
-     "original": "まだ芽は小さいけど、\nこれから大きくなって、\n花を咲かせるのよ。",
-     "text": "The sprouts are small,\nbut they'll grow\nand bloom."
-    },
-    {
-     "offset": "0x154",
-     "original": "そうだったんだ、ごめんね。\n芽を踏むところだったよ。\nでも、よく知ってるね。",
-     "text": "Oh, I'm sorry.\nI almost stepped on them.\nBut how'd you know?"
-    },
-    {
-     "offset": "0x1a0",
-     "original": "うん。実はこの芽の種は、\n私が春に蒔いたものなの。",
-     "text": "Well, actually, I sowed\nthese seeds in spring."
-    },
-    {
-     "offset": "0x1d4",
-     "original": "へーえ、全然知らなかったよ。\n今度から気を付けるね。",
-     "text": "Wow, I had no idea.\nI'll be more careful."
-    },
-    {
-     "offset": "0x208",
-     "original": "うん、ありがとう。\nそれじゃ、午後の競技を\n見に行きましょう。",
-     "text": "Yeah, thanks.\nNow let's go watch\nthe afternoon events."
-    },
-    {
-     "offset": "0x248",
-     "original": "そうしよう。\n（清川さんって\nやさしいんだなぁ。）",
-     "text": "Let's.\n(Kiyokawa-san is\nreally kind.)"
+      "file": "CDROM/TAIIKU/KIYOTAI.BIN",
+      "base": "0x801e8000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "午後からの競技を\n見に行くか。\nちょっと近道をしていこう。",
+          "text": "Let's go watch\nthe afternoon events.\nI'll take a shortcut."
+        },
+        {
+          "offset": "0x40",
+          "original": "あっ、{P}、\n入っちゃ駄目！",
+          "text": "Ah, {P}\ndon't go in there!"
+        },
+        {
+          "offset": "0x5c",
+          "original": "えっ、おっとっとっと。",
+          "text": "Huh? Whoa, whoa, whoa."
+        },
+        {
+          "offset": "0x7c",
+          "original": "\n　　　　　　　ドシン。",
+          "text": "\n              Thud."
+        },
+        {
+          "offset": "0x98",
+          "original": "いってー。",
+          "text": "Owww."
+        },
+        {
+          "offset": "0xa8",
+          "original": "{P}、大丈夫？",
+          "text": "{P} you okay?"
+        },
+        {
+          "offset": "0xb4",
+          "original": "どうしたの、\nいきなり大声を出して。",
+          "text": "What's wrong,\nshouting all of a sudden?"
+        },
+        {
+          "offset": "0xd8",
+          "original": "ごめんなさい。\nでも、そこは花壇なの。\nほら。",
+          "text": "Sorry.\nBut that's a flower bed.\nLook."
+        },
+        {
+          "offset": "0x114",
+          "original": "まだ芽は小さいけど、\nこれから大きくなって、\n花を咲かせるのよ。",
+          "text": "The sprouts are small,\nbut they'll grow\nand bloom."
+        },
+        {
+          "offset": "0x154",
+          "original": "そうだったんだ、ごめんね。\n芽を踏むところだったよ。\nでも、よく知ってるね。",
+          "text": "Oh, sorry.\nI nearly stepped on them.\nHow'd you know?"
+        },
+        {
+          "offset": "0x1a0",
+          "original": "うん。実はこの芽の種は、\n私が春に蒔いたものなの。",
+          "text": "Well, actually, I sowed\nthese seeds in spring."
+        },
+        {
+          "offset": "0x1d4",
+          "original": "へーえ、全然知らなかったよ。\n今度から気を付けるね。",
+          "text": "Wow, I had no idea.\nI'll be more careful."
+        },
+        {
+          "offset": "0x208",
+          "original": "うん、ありがとう。\nそれじゃ、午後の競技を\n見に行きましょう。",
+          "text": "Yeah, thanks.\nNow let's go watch\nthe afternoon events."
+        },
+        {
+          "offset": "0x248",
+          "original": "そうしよう。\n（清川さんって\nやさしいんだなぁ。）",
+          "text": "Let's.\n(Kiyokawa-san is\nreally kind.)"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

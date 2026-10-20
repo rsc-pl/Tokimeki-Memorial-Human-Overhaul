@@ -3002,7 +3002,7 @@
         {
           "offset": "0xa1dc",
           "original": "さあ、練習再開だ。\n{G}も\n立ち直ったみたいだし。",
-          "text": "Back to practice.\nI see {G}\nhas recovered too."
+          "text": "Back to practice.\n{G} seems\nback to normal."
         },
         {
           "offset": "0xa214",
@@ -3027,7 +3027,7 @@
         {
           "offset": "0xa2e0",
           "original": "あっ、そうだよ。",
-          "text": "Oh, that's right."
+          "text": "Yeah, that's me."
         },
         {
           "offset": "0xa2f4",
@@ -3037,7 +3037,7 @@
         {
           "offset": "0xa33c",
           "original": "あっ、俺、\n{F}。\nこちらこそ、よろしく。\n（おとなしい感じの娘だな。）",
-          "text": "Oh, I'm\n{F}\nNice to meet you.\n(She seems pretty quiet.)"
+          "text": "Oh, I'm\n{F}.\nNice to meet you.\n(She seems pretty quiet.)"
         },
         {
           "offset": "0xa390",
@@ -3062,7 +3062,7 @@
         {
           "offset": "0xa3fc",
           "original": "おわっ。\nど、どうしたの？\n{G}。",
-          "text": "Whoa!\nWh-what's wrong,\n{G}"
+          "text": "Whoa!\nWh-what's wrong,\n{G}?"
         },
         {
           "offset": "0xa41c",
@@ -3127,7 +3127,7 @@
         {
           "offset": "0xa674",
           "original": "今度、本を持って来ますから\nよかったら、\n是非読んでください。",
-          "text": "I'll bring you some books,\nso please read them\nif you like."
+          "text": "I'll bring some books.\nGive them a read\nif you like."
         },
         {
           "offset": "0xa6b4",
@@ -3167,7 +3167,7 @@
         {
           "offset": "0xa80c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa818",
@@ -3202,7 +3202,7 @@
         {
           "offset": "0xa974",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa980",
@@ -3212,7 +3212,7 @@
         {
           "offset": "0xa9a8",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not confident.\nWill you critique it?"
+          "text": "H-how was it?\nI'm not too sure.\nCan you give me feedback?"
         },
         {
           "offset": "0xa9e4",
@@ -3222,12 +3222,12 @@
         {
           "offset": "0xaa3c",
           "original": "そうかぁ、\nわかりやすい文章か…。\nありがとう、{G}。",
-          "text": "I see,\nclearer writing...\nThanks, {G}"
+          "text": "I see,\nclearer writing...\nThanks, {G}."
         },
         {
           "offset": "0xaa70",
           "original": "ごめんなさい。\n偉そうなこと言っちゃった\nみたいで…。",
-          "text": "S-sorry.\nI sounded like\nsuch a know-it-all..."
+          "text": "I'm sorry.\nI sounded like\nsuch a know-it-all..."
         },
         {
           "offset": "0xaaa8",
@@ -3242,7 +3242,7 @@
         {
           "offset": "0xab30",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xab3c",
@@ -3252,7 +3252,7 @@
         {
           "offset": "0xab64",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not confident.\nWill you critique it?"
+          "text": "H-how was it?\nI'm not too sure.\nCan you give me feedback?"
         },
         {
           "offset": "0xaba0",
@@ -3262,7 +3262,7 @@
         {
           "offset": "0xabe4",
           "original": "そうかぁ、\nわかりやすい文章か…。\nありがとう、{G}。",
-          "text": "I see,\nclearer writing...\nThanks, {G}"
+          "text": "I see,\nclearer writing...\nThanks, {G}."
         },
         {
           "offset": "0xac18",
@@ -3282,7 +3282,7 @@
         {
           "offset": "0xacc0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xaccc",
@@ -3292,7 +3292,7 @@
         {
           "offset": "0xacf4",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not confident.\nWill you critique it?"
+          "text": "H-how was it?\nI'm not too sure.\nCan you give me feedback?"
         },
         {
           "offset": "0xad30",
@@ -3302,7 +3302,7 @@
         {
           "offset": "0xad74",
           "original": "そうかぁ、\nわかりやすい文章か…。\nありがとう、{G}。",
-          "text": "I see,\nclearer writing...\nThanks, {G}"
+          "text": "I see,\nclearer writing...\nThanks, {G}."
         },
         {
           "offset": "0xada8",
@@ -3312,12 +3312,12 @@
         {
           "offset": "0xade0",
           "original": "あっ、{G}。\n昨日書いた短編、\n読んでくれた？",
-          "text": "Oh, {G}\nDid you read the\nstory I wrote?"
+          "text": "Oh, {G}.\nDid you read the\nstory I wrote?"
         },
         {
           "offset": "0xae0c",
           "original": "‥‥‥‥‥。\n読む人の事を、\n考えて無いと思います。",
-          "text": ".....\nI don't think you\nthought of the reader."
+          "text": ".....\nI don't think you\nconsidered the reader."
         },
         {
           "offset": "0xae40",
@@ -3327,7 +3327,7 @@
         {
           "offset": "0xae90",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xae9c",
@@ -3337,7 +3337,7 @@
         {
           "offset": "0xaec8",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not confident.\nWill you critique it?"
+          "text": "H-how was it?\nI'm not too sure.\nCan you give me feedback?"
         },
         {
           "offset": "0xaf04",
@@ -3377,7 +3377,7 @@
         {
           "offset": "0xb044",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb050",
@@ -3387,7 +3387,7 @@
         {
           "offset": "0xb07c",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not confident.\nWill you critique it?"
+          "text": "H-how was it?\nI'm not too sure.\nCan you give me feedback?"
         },
         {
           "offset": "0xb0b8",
@@ -3417,7 +3417,7 @@
         {
           "offset": "0xb1c0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb1cc",
@@ -3427,7 +3427,7 @@
         {
           "offset": "0xb1f8",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not confident.\nWill you critique it?"
+          "text": "H-how was it?\nI'm not too sure.\nCan you give me feedback?"
         },
         {
           "offset": "0xb234",
@@ -3437,7 +3437,7 @@
         {
           "offset": "0xb274",
           "original": "テーマかぁ。\nよし頑張ってみるかな。\nありがとう、{G}。",
-          "text": "A theme, huh.\nOkay, I'll work on it.\nThanks, {G}"
+          "text": "A theme, huh.\nOkay, I'll work on it.\nThanks, {G}."
         },
         {
           "offset": "0xb2a8",
@@ -3447,7 +3447,7 @@
         {
           "offset": "0xb2e0",
           "original": "あっ、{G}。\nこの前書いた小説\n読んでくれた？",
-          "text": "Oh, {G}\nDid you read the\nnovel I wrote?"
+          "text": "Oh, {G}.\nDid you read the\nnovel I wrote?"
         },
         {
           "offset": "0xb30c",
@@ -3462,7 +3462,7 @@
         {
           "offset": "0xb380",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb38c",
@@ -3502,7 +3502,7 @@
         {
           "offset": "0xb4f0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb4fc",
@@ -3542,7 +3542,7 @@
         {
           "offset": "0xb670",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb67c",
@@ -3572,7 +3572,7 @@
         {
           "offset": "0xb754",
           "original": "あっ、{G}。\nこの前書いた小説\n読んでくれた？",
-          "text": "Oh, {G}\nDid you read the\nnovel I wrote?"
+          "text": "Oh, {G}.\nDid you read the\nnovel I wrote?"
         },
         {
           "offset": "0xb780",
@@ -3587,7 +3587,7 @@
         {
           "offset": "0xb7f4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb800",
@@ -3637,7 +3637,7 @@
         {
           "offset": "0xb99c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb9a8",
@@ -3677,7 +3677,7 @@
         {
           "offset": "0xbb1c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xbb28",
@@ -3717,7 +3717,7 @@
         {
           "offset": "0xbcac",
           "original": "あっ、{G}。\nこの前書いた小説\n読んでくれた？",
-          "text": "Oh, {G}\nDid you read the\nnovel I wrote?"
+          "text": "Oh, {G}.\nDid you read the\nnovel I wrote?"
         },
         {
           "offset": "0xbcd8",
@@ -3862,7 +3862,7 @@
         {
           "offset": "0xc1e8",
           "original": "いや、俺もそれで\nやってみるよ。\nありがとう、{G}。",
-          "text": "No, I'll try\nthat too.\nThanks, {G}"
+          "text": "No, I'll try\nthat too.\nThanks, {G}."
         },
         {
           "offset": "0xc218",
@@ -3872,7 +3872,7 @@
         {
           "offset": "0xc260",
           "original": "あっ、{G}。\nうまく演技ができないんだ、\nどうしたらいいかな？",
-          "text": "Oh, {G}\nI can't act well.\nWhat should I do?"
+          "text": "Oh, {G}.\nI can't act well.\nWhat should I do?"
         },
         {
           "offset": "0xc29c",
@@ -3892,7 +3892,7 @@
         {
           "offset": "0xc338",
           "original": "いや、十分参考になったよ。\nありがとう、{G}。",
-          "text": "No, it really helped.\nThanks, {G}"
+          "text": "No, it really helped.\nThanks, {G}."
         },
         {
           "offset": "0xc364",
@@ -3902,7 +3902,7 @@
         {
           "offset": "0xc3b8",
           "original": "あっ、{G}。\nうまく演技ができないんだ、\nどうしたらいいかな？",
-          "text": "Oh, {G}\nI can't act well.\nWhat should I do?"
+          "text": "Oh, {G}.\nI can't act well.\nWhat should I do?"
         },
         {
           "offset": "0xc3f4",
@@ -3922,7 +3922,7 @@
         {
           "offset": "0xc48c",
           "original": "あっ、{G}。\nうまく演技ができないんだ、\nどうしたらいいかな？",
-          "text": "Oh, {G}\nI can't act well.\nWhat should I do?"
+          "text": "Oh, {G}.\nI can't act well.\nWhat should I do?"
         },
         {
           "offset": "0xc4c8",
@@ -3952,7 +3952,7 @@
         {
           "offset": "0xc58c",
           "original": "でも、{G}だって、\n素晴らしい演技を\nするじゃない。",
-          "text": "But {G}, you're\nan amazing actor\nyourself."
+          "text": "But {G},\nyour acting is\namazing too."
         },
         {
           "offset": "0xc5bc",
@@ -4022,7 +4022,7 @@
         {
           "offset": "0xc7f4",
           "original": "いやいや。\n{G}ぐらい\n頑張らなきゃ…。",
-          "text": "No, no.\n{G}'s my bar.\nI have to try harder..."
+          "text": "No, no.\nLike {G},\nI must work hard."
         },
         {
           "offset": "0xc818",
@@ -4032,7 +4032,7 @@
         {
           "offset": "0xc870",
           "original": "あっ、{G}。\n昨日の俺の演技\nどうだった？",
-          "text": "Oh, {G}\nHow was my acting\nyesterday?"
+          "text": "Oh, {G}.\nHow was my acting\nyesterday?"
         },
         {
           "offset": "0xc898",
@@ -4157,7 +4157,7 @@
         {
           "offset": "0xcd18",
           "original": "あっ、{G}。\n昨日の俺の演技\nどうだった？",
-          "text": "Oh, {G}\nHow was my acting\nyesterday?"
+          "text": "Oh, {G}.\nHow was my acting\nyesterday?"
         },
         {
           "offset": "0xcd40",
@@ -4192,7 +4192,7 @@
         {
           "offset": "0xce28",
           "original": "頑張れば、きっと大賞も\n夢じゃないと思いますよ。",
-          "text": "Keep at it, and\nwe might win the prize."
+          "text": "Keep at it and\nwe might win the top prize."
         },
         {
           "offset": "0xce58",
@@ -4232,17 +4232,17 @@
         {
           "offset": "0xcfa0",
           "original": "頑張れば、\n大賞も夢じゃないと\n思いますよ。",
-          "text": "If we work hard,\nthe grand prize\nisn't a dream."
+          "text": "Keep at it.\nThe grand prize\ncould be ours."
         },
         {
           "offset": "0xcfcc",
           "original": "{G}がそう言うなら、\n何とかなるかも\nしれないね。",
-          "text": "Since {G}\nsays so, maybe we\ncan pull it off."
+          "text": "If {G} says so,\nmaybe we can\ndo it."
         },
         {
           "offset": "0xcffc",
           "original": "出場目指して\n頑張りましょう。",
-          "text": "Let's aim to enter\nand do our best."
+          "text": "Let's work hard\nto qualify."
         },
         {
           "offset": "0xd01c",
@@ -4287,7 +4287,7 @@
         {
           "offset": "0xd188",
           "original": "あっ、{G}。\n昨日の俺の演技\nどうだった？",
-          "text": "Oh, {G}\nHow was my acting\nyesterday?"
+          "text": "Oh, {G}.\nHow was my acting\nyesterday?"
         },
         {
           "offset": "0xd1b0",
@@ -4312,7 +4312,7 @@
         {
           "offset": "0xf510",
           "original": "えーと…。\n皆さんが苦しんでるのは、\n私のせいでしょうか？",
-          "text": "Let me see...\nIs everyone suffering\nbecause of me?"
+          "text": "Um...\nIs everyone sick\nbecause of me?"
         },
         {
           "offset": "0xf54c",
@@ -4327,7 +4327,7 @@
         {
           "offset": "0xf5a4",
           "original": "得意とか、不得意とか、\nそういう問題じゃ\nないんだ。",
-          "text": "Strong point or not,\nthat's not\nthe problem."
+          "text": "Being good at it\nisn't the issue\nhere!"
         },
         {
           "offset": "0xf5e8",
@@ -4337,7 +4337,7 @@
         {
           "offset": "0xf618",
           "original": "さあ、練習再開だ。\n{G}は、昨日の事を\nまだ理解してないな。",
-          "text": "Back to practice.\n{G} still\nhas no clue."
+          "text": "Back to practice.\n{G} still doesn't\nget what happened."
         },
         {
           "offset": "0xf658",
@@ -4397,7 +4397,7 @@
         {
           "offset": "0xf82c",
           "original": "ありがとう、{G}。\n俺、{F}。",
-          "text": "Thanks, {G}\nI'm {F}"
+          "text": "Thanks, {G}.\nI'm {F}."
         },
         {
           "offset": "0xf844",
@@ -4542,7 +4542,7 @@
         {
           "offset": "0xfcec",
           "original": "あっ、{G}。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, {G}\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, {G}.\nPractice wore\nme out."
         },
         {
           "offset": "0xfd10",
@@ -4557,7 +4557,7 @@
         {
           "offset": "0xfd44",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0xfd7c",
@@ -4592,7 +4592,7 @@
         {
           "offset": "0xfe74",
           "original": "でも、そういう時は、\n初心にかえると\nいいと聞きましたけど。",
-          "text": "But I've heard that at\nsuch times, it's good to\ngo back to basics."
+          "text": "But I've heard\nit helps to go\nback to basics."
         },
         {
           "offset": "0xfeb0",
@@ -4607,7 +4607,7 @@
         {
           "offset": "0xff24",
           "original": "それじゃ。\nありがとう、{G}。\n参考になったよ。",
-          "text": "Well then.\nThanks, {G}\nThat helped."
+          "text": "Well then.\nThanks, {G}.\nThat helped."
         },
         {
           "offset": "0xff50",
@@ -4622,7 +4622,7 @@
         {
           "offset": "0xffc8",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x10000",
@@ -4642,12 +4642,12 @@
         {
           "offset": "0x10064",
           "original": "あっ、\n身体の調子じゃなくて\nテニスの事だよ。",
-          "text": "Oh,\nnot my health,\nmy tennis."
+          "text": "Oh,\nI meant my tennis,\nnot my health."
         },
         {
           "offset": "0x10094",
           "original": "はぁ、そうなんですか。\nテニスの調子ですか。",
-          "text": "Oh, I see.\nYour tennis."
+          "text": "Oh, I see.\nYour tennis game."
         },
         {
           "offset": "0x100c0",
@@ -4672,7 +4672,7 @@
         {
           "offset": "0x1019c",
           "original": "それじゃ。\nありがとう、{G}。",
-          "text": "Well then.\nThanks, {G}"
+          "text": "Well then.\nThanks, {G}."
         },
         {
           "offset": "0x101b8",
@@ -4682,7 +4682,7 @@
         {
           "offset": "0x101fc",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x10234",
@@ -4692,7 +4692,7 @@
         {
           "offset": "0x10260",
           "original": "どうも、困っちゃって。\n何かいい\n方法はないかな？",
-          "text": "I'm really stuck.\nIs there any good\nway out?"
+          "text": "I'm really stuck.\nAny idea what\nI should do?"
         },
         {
           "offset": "0x10294",
@@ -4712,7 +4712,7 @@
         {
           "offset": "0x10348",
           "original": "それじゃ。\nありがとう、{G}。",
-          "text": "Well then.\nThanks, {G}"
+          "text": "Well then.\nThanks, {G}."
         },
         {
           "offset": "0x10364",
@@ -4722,12 +4722,12 @@
         {
           "offset": "0x10398",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x103d0",
           "original": "どうしたら\nいいのでしょうね？",
-          "text": "What should\nyou do, I wonder?"
+          "text": "What could you\ndo, I wonder?"
         },
         {
           "offset": "0x103f0",
@@ -4797,7 +4797,7 @@
         {
           "offset": "0x10678",
           "original": "そうですねぇ。\n頑張れば、どうにかなると\n思いますけれども…。",
-          "text": "Let me see.\nIf you work hard, I think\nyou'll manage..."
+          "text": "Let me see.\nIf you work hard,\nyou might make it..."
         },
         {
           "offset": "0x106b8",
@@ -4822,7 +4822,7 @@
         {
           "offset": "0x10784",
           "original": "あっ、{G}。\nこんにちは。\n上達してると思う？",
-          "text": "Oh, {G}\nGood afternoon.\nAm I improving?"
+          "text": "Oh, {G}.\nGood afternoon.\nAm I improving?"
         },
         {
           "offset": "0x107b0",
@@ -4857,12 +4857,12 @@
         {
           "offset": "0x108c8",
           "original": "あっ、{G}。\n上達はしてきてると\n思うんだけど…。",
-          "text": "Oh, {G}\nI think I'm\nimproving..."
+          "text": "Oh, {G}.\nI think I'm\nimproving..."
         },
         {
           "offset": "0x108f8",
           "original": "インターハイには\n行けるといいですねぇ。",
-          "text": "I hope you make\nthe Inter-High."
+          "text": "I hope you make it\nto the Inter-High."
         },
         {
           "offset": "0x10920",
@@ -4872,17 +4872,17 @@
         {
           "offset": "0x10940",
           "original": "{P}。\nこんにちは。\nすごく上手ですねぇ。",
-          "text": "{P}\nGood afternoon.\nYou're very good."
+          "text": "{P}.\nGood afternoon.\nYou're very good."
         },
         {
           "offset": "0x10968",
           "original": "ありがとう、\n{G}。\nでも、まだまだだよ。",
-          "text": "Thanks,\n{G}\nBut I'm not there yet."
+          "text": "Thanks,\n{G}.\nBut I'm not there yet."
         },
         {
           "offset": "0x10990",
           "original": "あれだけ上手でも、\nまだまだなんですか？",
-          "text": "Even that good,\nyou're not there yet?"
+          "text": "You're that good,\nand still not there?"
         },
         {
           "offset": "0x109b8",
@@ -4912,12 +4912,12 @@
         {
           "offset": "0x10aa0",
           "original": "{P}。\nこんにちは。\nすごく上手ですねぇ。",
-          "text": "{P}\nGood afternoon.\nYou're very good."
+          "text": "{P}.\nGood afternoon.\nYou're very good."
         },
         {
           "offset": "0x10ac8",
           "original": "ありがとう、\n{G}。\nでも、まだまだだよ。",
-          "text": "Thanks,\n{G}\nBut I'm not there yet."
+          "text": "Thanks,\n{G}.\nBut I'm not there yet."
         },
         {
           "offset": "0x10af0",
@@ -4952,17 +4952,17 @@
         {
           "offset": "0x10bf4",
           "original": "{P}。\nこんにちは。\nすごく上手ですねぇ。",
-          "text": "{P}\nGood afternoon.\nYou're very good."
+          "text": "{P}.\nGood afternoon.\nYou're very good."
         },
         {
           "offset": "0x10c1c",
           "original": "ありがとう、\n{G}。\nでも、まだまだだよ。",
-          "text": "Thanks,\n{G}\nBut I'm not there yet."
+          "text": "Thanks,\n{G}.\nBut I'm not there yet."
         },
         {
           "offset": "0x10c44",
           "original": "あれだけ上手でも、\nまだまだなんですか…。",
-          "text": "Even that good, you're\nnot there yet..."
+          "text": "You're so good,\nyet still not there..."
         },
         {
           "offset": "0x10c70",
@@ -4977,7 +4977,7 @@
         {
           "offset": "0x10cf0",
           "original": "あっ、{G}。\n最近、うまくなってきたと\n思わない？",
-          "text": "Oh, {G}\nDon't you think I've\ngotten better lately?"
+          "text": "Oh, {G}.\nHave I gotten\nbetter lately?"
         },
         {
           "offset": "0x10d20",
@@ -4992,7 +4992,7 @@
         {
           "offset": "0x10d5c",
           "original": "{P}。\nロンドン旅行に\n行くのですか？",
-          "text": "{P}\nAre you taking a\ntrip to London?"
+          "text": "{P}.\nGoing to London\non vacation?"
         },
         {
           "offset": "0x10d80",
@@ -5042,7 +5042,7 @@
         {
           "offset": "0x10f54",
           "original": "{P}。\nウィンブルドンに、\n旅行に行くのですか？",
-          "text": "{P}\nAre you taking a\ntrip to Wimbledon?"
+          "text": "{P}.\nAre you taking a\ntrip to Wimbledon?"
         },
         {
           "offset": "0x10f80",
@@ -5052,7 +5052,7 @@
         {
           "offset": "0x10fa0",
           "original": "皆さんが、\nおっしゃってたの\nですけれども…。\nそうなんですか。",
-          "text": "That's what\neveryone has\nbeen saying...\nIs it true?"
+          "text": "That's what\npeople were\nsaying...\nOh, really?"
         },
         {
           "offset": "0x10fe0",
@@ -5082,7 +5082,7 @@
         {
           "offset": "0x110fc",
           "original": "{P}。\nロンドン旅行に\n行くのですか？",
-          "text": "{P}\nAre you taking a\ntrip to London?"
+          "text": "{P}.\nGoing to London\non vacation?"
         },
         {
           "offset": "0x11120",
@@ -5122,7 +5122,7 @@
         {
           "offset": "0x11270",
           "original": "海外旅行なんて、\nいいですね。",
-          "text": "A trip abroad,\nhow nice."
+          "text": "A trip abroad!\nHow lovely."
         },
         {
           "offset": "0x11290",
@@ -5147,12 +5147,12 @@
         {
           "offset": "0x12798",
           "original": "{G}が、今朝の食事を\n作ったのか…。",
-          "text": "{G} cooked\nbreakfast today?"
+          "text": "So {G} made\nbreakfast..."
         },
         {
           "offset": "0x127bc",
           "original": "ほら、あんまり\n料理なんて作らないから。\nいや、悪かったと\n思ってるよ。",
-          "text": "See, I don't\ncook much.\nI know it was\nmy fault."
+          "text": "Look, I hardly\never cook.\nBut yeah, I do\nfeel bad about it."
         },
         {
           "offset": "0x12804",
@@ -5167,7 +5167,7 @@
         {
           "offset": "0x12878",
           "original": "さあ、練習再開だ。\n{G}は、あまり\n気にしてないみたいだ。",
-          "text": "Back to practice.\n{G} looks\njust fine with it."
+          "text": "Back to practice.\nLooks like {G}\nisn't too bothered."
         },
         {
           "offset": "0x128b8",
@@ -5217,7 +5217,7 @@
         {
           "offset": "0x129ec",
           "original": "介抱してくれたんだ。\nありがとう…。\nあっ、{G}。",
-          "text": "You looked after me.\nThanks...\nOh, {G}"
+          "text": "You looked after me.\nThanks...\nOh, {G}."
         },
         {
           "offset": "0x12a1c",
@@ -5237,7 +5237,7 @@
         {
           "offset": "0x12ad4",
           "original": "あっ、ごめん。\n俺、{F}。\nよろしく。",
-          "text": "Oh, sorry.\nI'm {F}\nNice to meet you."
+          "text": "Sorry.\nI'm {F}.\nNice to meet you."
         },
         {
           "offset": "0x12af8",
@@ -5252,12 +5252,12 @@
         {
           "offset": "0x12b6c",
           "original": "やったぁ。\nあの有名な{G}と、\n話しちゃったよ。\nこれからの部活が\n楽しみだぜ。",
-          "text": "Yes!\nTalked to {G}\nthe famous one!\nClub practice is going\nto be fun now."
+          "text": "Yes!\nI talked to {G},\nthe famous swimmer!\nNow I can't wait\nfor club practice."
         },
         {
           "offset": "0x12bc0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x12bcc",
@@ -5272,7 +5272,7 @@
         {
           "offset": "0x12c10",
           "original": "最初はそうかもしれないけど、\n頑張らなきゃね。",
-          "text": "It may be like that at\nfirst, but stick with it."
+          "text": "It's tough at first,\nbut keep at it."
         },
         {
           "offset": "0x12c40",
@@ -5292,7 +5292,7 @@
         {
           "offset": "0x12ca8",
           "original": "一緒に、特別練習が\nできるといいね。",
-          "text": "It'd be nice to do\nspecial training together."
+          "text": "Hope we can train\ntogether someday."
         },
         {
           "offset": "0x12ccc",
@@ -5312,7 +5312,7 @@
         {
           "offset": "0x12d40",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x12d4c",
@@ -5347,7 +5347,7 @@
         {
           "offset": "0x12e34",
           "original": "一緒に特別練習が\nできるように\nならなきゃな。",
-          "text": "I want to join\nher in special\ntraining."
+          "text": "I'll work hard\nto join her in\nspecial training."
         },
         {
           "offset": "0x12e64",
@@ -5367,7 +5367,7 @@
         {
           "offset": "0x12edc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x12ee8",
@@ -5402,7 +5402,7 @@
         {
           "offset": "0x12fdc",
           "original": "あっ、{G}。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, {G}\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, {G}.\nPractice has\nworn me out."
         },
         {
           "offset": "0x13000",
@@ -5417,7 +5417,7 @@
         {
           "offset": "0x13048",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x13080",
@@ -5457,7 +5457,7 @@
         {
           "offset": "0x13214",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x1324c",
@@ -5487,7 +5487,7 @@
         {
           "offset": "0x13358",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x13390",
@@ -5507,12 +5507,12 @@
         {
           "offset": "0x13424",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x1345c",
           "original": "‥‥‥‥‥。\n基本からやりなおしたら？",
-          "text": ".....\nWhy not redo the basics?"
+          "text": ".....\nTry the basics again?"
         },
         {
           "offset": "0x13484",
@@ -5522,7 +5522,7 @@
         {
           "offset": "0x134a0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x134ac",
@@ -5582,7 +5582,7 @@
         {
           "offset": "0x136b4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x136c0",
@@ -5632,7 +5632,7 @@
         {
           "offset": "0x13814",
           "original": "ありがとう。\n{G}。",
-          "text": "Thanks,\n{G}"
+          "text": "Thanks,\n{G}."
         },
         {
           "offset": "0x13828",
@@ -5642,7 +5642,7 @@
         {
           "offset": "0x13874",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x13880",
@@ -5682,7 +5682,7 @@
         {
           "offset": "0x13974",
           "original": "ありがとう。\n{G}。",
-          "text": "Thanks,\n{G}"
+          "text": "Thanks,\n{G}."
         },
         {
           "offset": "0x13988",
@@ -5692,7 +5692,7 @@
         {
           "offset": "0x139bc",
           "original": "あっ、{G}。\n上達はしてきてると\n思うんだけど…。",
-          "text": "Oh, {G}\nI think I'm\nimproving..."
+          "text": "Oh, {G}.\nI think I'm\nimproving..."
         },
         {
           "offset": "0x139ec",
@@ -5707,7 +5707,7 @@
         {
           "offset": "0x13a3c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x13a48",
@@ -5727,7 +5727,7 @@
         {
           "offset": "0x13ad4",
           "original": "ありがとう。\n{G}と一緒に練習\nできるなんて\n夢みたいだよ。",
-          "text": "Thanks.\n{G} and me,\ntraining together...\nIt's like a dream."
+          "text": "Thanks.\nTraining with {G}\nfeels just like\na dream."
         },
         {
           "offset": "0x13b0c",
@@ -5752,7 +5752,7 @@
         {
           "offset": "0x13bc0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x13bcc",
@@ -5802,12 +5802,12 @@
         {
           "offset": "0x13d6c",
           "original": "何かいけにえの\n気分だなぁ。",
-          "text": "I feel like\na sacrifice..."
+          "text": "Feels like I'm\na sacrificial lamb..."
         },
         {
           "offset": "0x13db4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x13dc0",
@@ -5842,7 +5842,7 @@
         {
           "offset": "0x13ef8",
           "original": "あっ、{G}。\n最近、上達してきたと\n思わない？",
-          "text": "Oh, {G}\nDon't you think I've\nimproved lately?"
+          "text": "Oh, {G}.\nI'm improving,\ndon't you think?"
         },
         {
           "offset": "0x13f24",
@@ -5857,7 +5857,7 @@
         {
           "offset": "0x13f74",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x13f80",
@@ -5872,12 +5872,12 @@
         {
           "offset": "0x13fd8",
           "original": "デマなんだ。\n私も行こうかと\n思ったのに…。",
-          "text": "It's a rumor?\nAnd I was thinking\nof going too..."
+          "text": "Just a rumor?\nI thought about\ngoing too..."
         },
         {
           "offset": "0x14004",
           "original": "{G}と一緒だったら、\n考えてもいいなぁ。",
-          "text": "{G}, I'd try it\nif we went together."
+          "text": "If {G} came too,\nI'd think about it."
         },
         {
           "offset": "0x1402c",
@@ -5887,7 +5887,7 @@
         {
           "offset": "0x14050",
           "original": "そ、それもいいけど、\n{G}と一緒に日本一に\nなるのが先だから。",
-          "text": "That'd be nice, but\n{G}, I want us\nto be No. 1 first."
+          "text": "T-that'd be nice, but\n{G}, let's become\nNo. 1 first."
         },
         {
           "offset": "0x1408c",
@@ -5902,7 +5902,7 @@
         {
           "offset": "0x14104",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x14110",
@@ -5937,7 +5937,7 @@
         {
           "offset": "0x1422c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x14238",
@@ -6002,7 +6002,7 @@
         {
           "offset": "0x158fc",
           "original": "{G}が、\n今朝の食事を\n作ったのか…。",
-          "text": "{G}\ncooked\nbreakfast today?"
+          "text": "{G} made\nbreakfast\nthis morning..."
         },
         {
           "offset": "0x15920",
@@ -6022,7 +6022,7 @@
         {
           "offset": "0x159bc",
           "original": "さあ、練習再開だ。\n{G}も\n立ち直ったみたいだし。",
-          "text": "Back to practice.\nLooks like {G}\nis over it, too."
+          "text": "Back to practice.\nLooks like {G}\nhas bounced back."
         },
         {
           "offset": "0x159f4",
@@ -6077,7 +6077,7 @@
         {
           "offset": "0x15b88",
           "original": "ありがとう、{G}。\n俺、{F}。",
-          "text": "Thanks, {G}\nI'm {F}"
+          "text": "Thanks, {G}.\nI'm {F}."
         },
         {
           "offset": "0x15ba0",
@@ -6117,7 +6117,7 @@
         {
           "offset": "0x15d4c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x15d58",
@@ -6152,7 +6152,7 @@
         {
           "offset": "0x15e38",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x15e44",
@@ -6187,7 +6187,7 @@
         {
           "offset": "0x15f24",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x15f30",
@@ -6212,7 +6212,7 @@
         {
           "offset": "0x15fd8",
           "original": "あっ、{G}。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, {G}\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, {G}.\nPractice wore\nme out."
         },
         {
           "offset": "0x15ffc",
@@ -6227,7 +6227,7 @@
         {
           "offset": "0x16040",
           "original": "あっ、{G}。\n最近どうも、スランプぎみで\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x16078",
@@ -6262,7 +6262,7 @@
         {
           "offset": "0x161a8",
           "original": "あっ、{G}。\n最近どうも、スランプぎみで\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x161e0",
@@ -6297,7 +6297,7 @@
         {
           "offset": "0x162f0",
           "original": "あっ、{G}。\n最近どうも、スランプぎみで\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x16328",
@@ -6322,7 +6322,7 @@
         {
           "offset": "0x163cc",
           "original": "あっ、{G}。\n最近どうも、スランプぎみで\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x16404",
@@ -6337,7 +6337,7 @@
         {
           "offset": "0x16460",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1646c",
@@ -6372,7 +6372,7 @@
         {
           "offset": "0x16570",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1657c",
@@ -6407,7 +6407,7 @@
         {
           "offset": "0x1667c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16688",
@@ -6442,7 +6442,7 @@
         {
           "offset": "0x16778",
           "original": "あっ、{G}。\n上達はしてると\n思うんだけど…。",
-          "text": "Oh, {G}\nI think I'm\nimproving..."
+          "text": "Oh, {G}.\nI think I'm\nimproving..."
         },
         {
           "offset": "0x167a4",
@@ -6457,7 +6457,7 @@
         {
           "offset": "0x167ec",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x167f8",
@@ -6492,7 +6492,7 @@
         {
           "offset": "0x16964",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16970",
@@ -6527,7 +6527,7 @@
         {
           "offset": "0x16aa0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16aac",
@@ -6562,7 +6562,7 @@
         {
           "offset": "0x16bd4",
           "original": "あっ、{G}。\n最近、上手くなってきたと\n思わない？",
-          "text": "Oh, {G}\nDon't you think I've\ngotten better lately?"
+          "text": "Oh, {G}.\nI've improved lately,\nhaven't I?"
         },
         {
           "offset": "0x16c04",
@@ -6577,7 +6577,7 @@
         {
           "offset": "0x16c4c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16c58",
@@ -6612,7 +6612,7 @@
         {
           "offset": "0x16d50",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16d5c",
@@ -6647,7 +6647,7 @@
         {
           "offset": "0x16e44",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16e50",
@@ -6697,7 +6697,7 @@
         {
           "offset": "0x16fa8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16fb4",
@@ -6722,12 +6722,12 @@
         {
           "offset": "0x1705c",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "Well then,\nI'll go coach the juniors."
+          "text": "I'll go coach\nthe younger players."
         },
         {
           "offset": "0x17098",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x170a4",
@@ -6757,12 +6757,12 @@
         {
           "offset": "0x17168",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "Well then,\nI'll go coach the juniors."
+          "text": "I'll go coach\nthe younger players."
         },
         {
           "offset": "0x171a8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x171b4",
@@ -6792,7 +6792,7 @@
         {
           "offset": "0x17278",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "Well then,\nI'll go coach the juniors."
+          "text": "I'll go coach\nthe younger players."
         },
         {
           "offset": "0x172b8",
@@ -6812,7 +6812,7 @@
         {
           "offset": "0x17314",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17320",
@@ -6847,7 +6847,7 @@
         {
           "offset": "0x17408",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17414",
@@ -6882,7 +6882,7 @@
         {
           "offset": "0x174f8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17504",
@@ -6907,7 +6907,7 @@
         {
           "offset": "0x175b0",
           "original": "あっ、{G}。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, {G}\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, {G}.\nPractice wore\nme out."
         },
         {
           "offset": "0x175d4",
@@ -6922,7 +6922,7 @@
         {
           "offset": "0x17618",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x17650",
@@ -6957,7 +6957,7 @@
         {
           "offset": "0x17784",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x177bc",
@@ -6992,7 +6992,7 @@
         {
           "offset": "0x178cc",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x17904",
@@ -7017,7 +7017,7 @@
         {
           "offset": "0x179a8",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x179e0",
@@ -7032,7 +7032,7 @@
         {
           "offset": "0x17a3c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17a48",
@@ -7067,7 +7067,7 @@
         {
           "offset": "0x17b50",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17b5c",
@@ -7102,7 +7102,7 @@
         {
           "offset": "0x17c68",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17c74",
@@ -7137,7 +7137,7 @@
         {
           "offset": "0x17d68",
           "original": "あっ、{G}。\n上達はしてると\n思うんだけど…。",
-          "text": "Oh, {G}\nI think I'm\nimproving..."
+          "text": "Oh, {G}.\nI think I'm\nimproving..."
         },
         {
           "offset": "0x17d94",
@@ -7152,7 +7152,7 @@
         {
           "offset": "0x17de4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17df0",
@@ -7187,7 +7187,7 @@
         {
           "offset": "0x17f5c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x17f68",
@@ -7222,7 +7222,7 @@
         {
           "offset": "0x180a0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x180ac",
@@ -7237,7 +7237,7 @@
         {
           "offset": "0x1810c",
           "original": "国立競技場に\n行けるといいね。",
-          "text": "Hope you make\nthe Nationals."
+          "text": "Hope you get to\nNat'l Stadium."
         },
         {
           "offset": "0x1812c",
@@ -7257,12 +7257,12 @@
         {
           "offset": "0x181e0",
           "original": "あっ、{G}。\n最近、上手くなってきたと\n思わない？",
-          "text": "Oh, {G}\nDon't you think I've\ngotten better lately?"
+          "text": "Oh, {G}.\nI've improved lately,\nhaven't I?"
         },
         {
           "offset": "0x18210",
           "original": "‥‥‥‥‥。\n国立競技場に\n行けるといいね。",
-          "text": ".....\nHope you reach\nNational Stadium."
+          "text": ".....\nHope you make it\nto National Stadium."
         },
         {
           "offset": "0x1823c",
@@ -7272,12 +7272,12 @@
         {
           "offset": "0x1825c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x18268",
           "original": "Ｊリーグに行くって噂、\n本当？",
-          "text": "Is it true you're going\nto the J.League?"
+          "text": "You might join\nthe J.League?"
         },
         {
           "offset": "0x18288",
@@ -7307,12 +7307,12 @@
         {
           "offset": "0x18374",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x18380",
           "original": "Ｊリーグに行くって噂、\n聞いたよ。",
-          "text": "I heard you're going\nto the J.League."
+          "text": "Heard you're joining\nthe J.League."
         },
         {
           "offset": "0x183a4",
@@ -7342,12 +7342,12 @@
         {
           "offset": "0x18480",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1848c",
           "original": "Ｊリーグに行くって噂、\n聞いたよ。",
-          "text": "I heard you're going\nto the J.League."
+          "text": "Heard you're joining\nthe J.League."
         },
         {
           "offset": "0x184b0",
@@ -7392,7 +7392,7 @@
         {
           "offset": "0x1a878",
           "original": "合宿所に着いたぞ。",
-          "text": "Here's the camp lodge."
+          "text": "We're at the lodge."
         },
         {
           "offset": "0x1a890",
@@ -7442,7 +7442,7 @@
         {
           "offset": "0x1a9f8",
           "original": "しまった。\nあまりの嬉しさに\n声を出してしまった。",
-          "text": "Oops.\nI was so happy\nI blurted it out loud."
+          "text": "Oh no.\nI got so excited\nI yelled!"
         },
         {
           "offset": "0x1aa30",
@@ -7557,12 +7557,12 @@
         {
           "offset": "0x1b220",
           "original": "さあ、練習再開だ。\n{G}も\n立ち直ったみたいだし。",
-          "text": "Back to practice.\nLooks like {G}\nis feeling better too."
+          "text": "Back to practice.\nLooks like {G}\nhas cheered up, too."
         },
         {
           "offset": "0x1b258",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1b264",
@@ -7597,7 +7597,7 @@
         {
           "offset": "0x1b344",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1b350",
@@ -7627,7 +7627,7 @@
         {
           "offset": "0x1b434",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1b440",
@@ -7647,7 +7647,7 @@
         {
           "offset": "0x1b4d4",
           "original": "あっ、{G}。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, {G}\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, {G}.\nPractice was\nexhausting."
         },
         {
           "offset": "0x1b4f8",
@@ -7662,7 +7662,7 @@
         {
           "offset": "0x1b54c",
           "original": "あっ、{G}。\n最近どうも、スランプぎみで\n調子が悪いんだよ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x1b584",
@@ -7672,7 +7672,7 @@
         {
           "offset": "0x1b5c8",
           "original": "そうだね。\n思い込むのは良くないね。",
-          "text": "Yeah, I shouldn't\nthink that way."
+          "text": "Yeah, I shouldn't\nobsess over it."
         },
         {
           "offset": "0x1b5ec",
@@ -7687,7 +7687,7 @@
         {
           "offset": "0x1b658",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんよ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x1b690",
@@ -7712,7 +7712,7 @@
         {
           "offset": "0x1b744",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだよ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x1b77c",
@@ -7737,7 +7737,7 @@
         {
           "offset": "0x1b828",
           "original": "あっ、{G}。\n最近どうも、スランプ気味で\n調子が悪いんだよ。",
-          "text": "Oh, {G}\nI've been in a slump\nlately. I'm off my game."
+          "text": "Oh, {G}.\nI've been in a slump\nlately. I'm off my game."
         },
         {
           "offset": "0x1b860",
@@ -7752,7 +7752,7 @@
         {
           "offset": "0x1b8b4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1b8c0",
@@ -7772,7 +7772,7 @@
         {
           "offset": "0x1b92c",
           "original": "それは、どうかな。\nやってみないと\nわかんないよ。",
-          "text": "I don't know.\nWe'll see\nwhen we get there."
+          "text": "I don't know.\nI won't know till\nI give it a try."
         },
         {
           "offset": "0x1b960",
@@ -7787,7 +7787,7 @@
         {
           "offset": "0x1b9d8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1b9e4",
@@ -7822,7 +7822,7 @@
         {
           "offset": "0x1bac4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1bad0",
@@ -7862,7 +7862,7 @@
         {
           "offset": "0x1bbd8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1bbe4",
@@ -7877,12 +7877,12 @@
         {
           "offset": "0x1bc48",
           "original": "やっぱり、\nお兄ちゃんと違って、\nかっこいいなぁ。",
-          "text": "You're so cool,\nnot like my\nbrother."
+          "text": "You're so cool,\nnot like my\nolder brother."
         },
         {
           "offset": "0x1bc7c",
           "original": "えっ、好雄と…？\nそ、そう。\nありがとう。",
-          "text": "Huh? Yoshio...?\nW-well.\nThanks."
+          "text": "Huh? Compared\nto Yoshio...?\nW-well, thanks."
         },
         {
           "offset": "0x1bca8",
@@ -7897,7 +7897,7 @@
         {
           "offset": "0x1bd0c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1bd18",
@@ -7927,7 +7927,7 @@
         {
           "offset": "0x1be00",
           "original": "そ、そう？\n照れるな。\nれ、練習頑張るかな…。",
-          "text": "R-really?\nI'm blushing.\nB-back to practice!"
+          "text": "R-really?\nI'm embarrassed.\nB-back to practice!"
         },
         {
           "offset": "0x1be30",
@@ -7972,12 +7972,12 @@
         {
           "offset": "0x1bf98",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1bfa4",
           "original": "アメリカに行っちゃ\nヤダーッ。",
-          "text": "Don't go to America,\nnoooo!"
+          "text": "Don't go to America!\nNoooo!"
         },
         {
           "offset": "0x1bfc4",
@@ -7987,7 +7987,7 @@
         {
           "offset": "0x1bfe4",
           "original": "何それって…、\n嘘なんですか？",
-          "text": "What's that...?\nSo it's not true?"
+          "text": "Wait, what?\nSo it's not true?"
         },
         {
           "offset": "0x1c004",
@@ -8017,7 +8017,7 @@
         {
           "offset": "0x1c0f0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1c0fc",
@@ -8047,7 +8047,7 @@
         {
           "offset": "0x1c1b4",
           "original": "とりあえず、\nその予定はないよ。",
-          "text": "I haven't\nplanned on it."
+          "text": "I don't have\nany plans to."
         },
         {
           "offset": "0x1c1d4",
@@ -8062,7 +8062,7 @@
         {
           "offset": "0x1c21c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1c228",
@@ -8082,7 +8082,7 @@
         {
           "offset": "0x1c2a4",
           "original": "とりあえず、\nその予定はないよ。",
-          "text": "Well, there's no\nsuch plan."
+          "text": "I don't have\nplans for that."
         },
         {
           "offset": "0x1c2c4",
@@ -8224,7 +8224,7 @@
         {
           "offset": "0x8c",
           "original": "{G}が、今朝の食事を\n作ったのか…。",
-          "text": "{G} cooked\nbreakfast today?"
+          "text": "So {G} made\nbreakfast..."
         },
         {
           "offset": "0xb0",
@@ -8249,7 +8249,7 @@
         {
           "offset": "0x184",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x190",
@@ -8284,7 +8284,7 @@
         {
           "offset": "0x2e0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2ec",
@@ -8299,7 +8299,7 @@
         {
           "offset": "0x348",
           "original": "色々な人の本を\nたくさん読んで、\n勉強しなくちゃね。",
-          "text": "You should read lots\nof different authors\nand learn from them."
+          "text": "Read lots of books\nby many authors\nto learn more."
         },
         {
           "offset": "0x37c",
@@ -8319,7 +8319,7 @@
         {
           "offset": "0x428",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x434",
@@ -8334,7 +8334,7 @@
         {
           "offset": "0x488",
           "original": "色々な本をたくさん読んで\n勉強しなくちゃ。\nそれじゃ。",
-          "text": "You should read lots of\nbooks and learn.\nBye."
+          "text": "Read plenty of books\nand learn from them.\nSee you."
         },
         {
           "offset": "0x4c0",
@@ -8359,7 +8359,7 @@
         {
           "offset": "0x598",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x5a4",
@@ -8369,7 +8369,7 @@
         {
           "offset": "0x5d0",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not so sure.\nTell me what you think."
+          "text": "H-how was it?\nI'm not confident.\nCould you review it?"
         },
         {
           "offset": "0x60c",
@@ -8399,7 +8399,7 @@
         {
           "offset": "0x71c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x728",
@@ -8409,7 +8409,7 @@
         {
           "offset": "0x750",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not so sure.\nTell me what you think."
+          "text": "H-how was it?\nI'm not confident.\nCould you review it?"
         },
         {
           "offset": "0x78c",
@@ -8439,7 +8439,7 @@
         {
           "offset": "0x884",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x890",
@@ -8449,7 +8449,7 @@
         {
           "offset": "0x8b8",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not so sure.\nTell me what you think."
+          "text": "H-how was it?\nI'm not confident.\nCould you review it?"
         },
         {
           "offset": "0x8f4",
@@ -8484,7 +8484,7 @@
         {
           "offset": "0xa44",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa50",
@@ -8494,7 +8494,7 @@
         {
           "offset": "0xa78",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not so sure.\nTell me what you think."
+          "text": "H-how was it?\nI'm not confident.\nCould you review it?"
         },
         {
           "offset": "0xab4",
@@ -8514,7 +8514,7 @@
         {
           "offset": "0xb40",
           "original": "いや、とりあえず\n正義、友情、愛で\n書いてみるか。",
-          "text": "No, for now I'll\ntry justice, friendship\nand love."
+          "text": "I'll write about\njustice, friendship\nand love."
         },
         {
           "offset": "0xb74",
@@ -8524,7 +8524,7 @@
         {
           "offset": "0xba8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xbb4",
@@ -8534,7 +8534,7 @@
         {
           "offset": "0xbdc",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not so sure.\nTell me what you think."
+          "text": "H-how was it?\nI'm not confident.\nCould you review it?"
         },
         {
           "offset": "0xc18",
@@ -8554,7 +8554,7 @@
         {
           "offset": "0xca0",
           "original": "いや、とりあえず\n正義、友情、愛で\n書いてみるか。",
-          "text": "No, for now I'll\ntry justice, friendship\nand love."
+          "text": "I'll write about\njustice, friendship\nand love."
         },
         {
           "offset": "0xcd4",
@@ -8564,7 +8564,7 @@
         {
           "offset": "0xd04",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xd10",
@@ -8574,7 +8574,7 @@
         {
           "offset": "0xd38",
           "original": "ど、どうだった？\n自信はないんだけど、\n批評してくれるかな。",
-          "text": "H-how was it?\nI'm not so sure.\nTell me what you think."
+          "text": "H-how was it?\nI'm not confident.\nCould you review it?"
         },
         {
           "offset": "0xd74",
@@ -8609,7 +8609,7 @@
         {
           "offset": "0xec8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xed4",
@@ -8649,7 +8649,7 @@
         {
           "offset": "0x100c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1018",
@@ -8689,7 +8689,7 @@
         {
           "offset": "0x1178",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1184",
@@ -8734,7 +8734,7 @@
         {
           "offset": "0x1318",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1324",
@@ -8784,7 +8784,7 @@
         {
           "offset": "0x14f4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1500",
@@ -8834,7 +8834,7 @@
         {
           "offset": "0x16a8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x16b4",
@@ -8889,7 +8889,7 @@
         {
           "offset": "0x18ac",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x18b8",
@@ -8929,7 +8929,7 @@
         {
           "offset": "0x1a1c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1a28",
@@ -8969,7 +8969,7 @@
         {
           "offset": "0x1b64",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1b70",
@@ -9014,7 +9014,7 @@
         {
           "offset": "0x1cf0",
           "original": "あっ、詩織。\nうまく演技ができないんだ、\n何か良い方法ないかな？",
-          "text": "Oh, Shiori.\nI can't act well.\nAny good tips?"
+          "text": "Oh, Shiori.\nI'm having trouble acting.\nAny advice?"
         },
         {
           "offset": "0x1d30",
@@ -9029,7 +9029,7 @@
         {
           "offset": "0x1d80",
           "original": "他の人の演技を見て、\nそれを、自分に取り入れて\nみるのはどうかなぁ…。",
-          "text": "Why not watch\nother actors and\nlearn from them?"
+          "text": "Why not watch\nother actors and\ntry their methods?"
         },
         {
           "offset": "0x1dc8",
@@ -9059,7 +9059,7 @@
         {
           "offset": "0x1ee8",
           "original": "他の人の演技を見て、\nそれを、自分に取り入れて\nみるのはどう？",
-          "text": "Why not watch\nother actors and\nlearn from them?"
+          "text": "Why not watch\nother actors and\ntry their methods?"
         },
         {
           "offset": "0x1f28",
@@ -9094,7 +9094,7 @@
         {
           "offset": "0x206c",
           "original": "他の人の演技を見て、\nそれを自分に取り入れて\nみるのがいいと思うけど。",
-          "text": "Why not watch\nother actors and\nlearn from them?"
+          "text": "It might help to\nwatch other actors\nand try their methods."
         },
         {
           "offset": "0x20b4",
@@ -9124,7 +9124,7 @@
         {
           "offset": "0x21ac",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x21b8",
@@ -9164,7 +9164,7 @@
         {
           "offset": "0x22e0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x22ec",
@@ -9204,7 +9204,7 @@
         {
           "offset": "0x245c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2468",
@@ -9249,7 +9249,7 @@
         {
           "offset": "0x25b8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x25c4",
@@ -9294,7 +9294,7 @@
         {
           "offset": "0x271c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2728",
@@ -9309,7 +9309,7 @@
         {
           "offset": "0x2774",
           "original": "特に感情表現が\n良かったね。",
-          "text": "Your acting\nfelt so real!"
+          "text": "You were so\nexpressive!"
         },
         {
           "offset": "0x2790",
@@ -9329,7 +9329,7 @@
         {
           "offset": "0x2838",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2844",
@@ -9344,7 +9344,7 @@
         {
           "offset": "0x2890",
           "original": "特に感情表現が\n良かったね。",
-          "text": "Your acting\nfelt so real!"
+          "text": "You were so\nexpressive!"
         },
         {
           "offset": "0x28ac",
@@ -9379,7 +9379,7 @@
         {
           "offset": "0x29d0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x29dc",
@@ -9394,7 +9394,7 @@
         {
           "offset": "0x2a28",
           "original": "今年は全日本演劇\nグランプリ出場の夢が\nかないそう。",
-          "text": "This year our dream of\nthe All-Japan Drama Grand\nPrix may come true."
+          "text": "We might make it\nto the All-Japan\nDrama Grand Prix!"
         },
         {
           "offset": "0x2a5c",
@@ -9409,7 +9409,7 @@
         {
           "offset": "0x2abc",
           "original": "詩織がそう言うなら、\nみんなで頑張れば、\nいけるかもしれないね。",
-          "text": "If you say so, Shiori,\nmaybe we can get there\nif we all work hard."
+          "text": "If you think so, Shiori,\nwe might make it\nif we work hard."
         },
         {
           "offset": "0x2afc",
@@ -9424,7 +9424,7 @@
         {
           "offset": "0x2b50",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2b5c",
@@ -9439,7 +9439,7 @@
         {
           "offset": "0x2ba8",
           "original": "今年は、全日本演劇\nグランプリ出場の希望が\n出てきたみたい。",
-          "text": "This year it looks like\nwe've got a shot at the\nAll-Japan Grand Prix."
+          "text": "Looks like we might\nmake the All-Japan\nDrama Grand Prix."
         },
         {
           "offset": "0x2be4",
@@ -9454,7 +9454,7 @@
         {
           "offset": "0x2c4c",
           "original": "詩織がそう言うなら、\n何とかなるかも\nしれないね。",
-          "text": "If you say so, Shiori,\nmaybe we can\npull it off."
+          "text": "If you think so, Shiori,\nmaybe we can\npull it off."
         },
         {
           "offset": "0x2c80",
@@ -9469,7 +9469,7 @@
         {
           "offset": "0x2cd8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2ce4",
@@ -9484,7 +9484,7 @@
         {
           "offset": "0x2d30",
           "original": "今年は、全日本演劇\nグランプリ出場の希望が\n出てきたみたい。",
-          "text": "This year it looks like\nwe've got a shot at the\nAll-Japan Grand Prix."
+          "text": "Looks like we might\nmake the All-Japan\nDrama Grand Prix."
         },
         {
           "offset": "0x2d6c",
@@ -9524,7 +9524,7 @@
         {
           "offset": "0x2edc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2ee8",
@@ -9544,7 +9544,7 @@
         {
           "offset": "0x2f64",
           "original": "そうだね。\n器具の使い方を覚えないと、\n事故につながるもんね。",
-          "text": "Right. If I\nuse the gear wrong,\nsomeone could get hurt."
+          "text": "Right. If I don't\nlearn to use it,\nwe risk an accident."
         },
         {
           "offset": "0x2fa4",
@@ -9564,7 +9564,7 @@
         {
           "offset": "0x3030",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x303c",
@@ -9589,7 +9589,7 @@
         {
           "offset": "0x30f4",
           "original": "怪我とかしたら、\n馬鹿みたいだからね。",
-          "text": "Getting hurt\nwould be so stupid."
+          "text": "It'd be silly to\nget hurt over it."
         },
         {
           "offset": "0x311c",
@@ -9609,7 +9609,7 @@
         {
           "offset": "0x31b0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x31bc",
@@ -9654,12 +9654,12 @@
         {
           "offset": "0x334c",
           "original": "あっ、詩織。\n実験が失敗ばっかりで\n困っちゃうよ。",
-          "text": "Oh, Shiori.\nMy tests keep failing.\nWhat a pain."
+          "text": "Oh, Shiori.\nMy experiments\nkeep going wrong."
         },
         {
           "offset": "0x3380",
           "original": "どうして失敗したのかを、\nよく考えてみた？",
-          "text": "Did you think hard\nabout why they failed?"
+          "text": "Have you thought about\nwhy they failed?"
         },
         {
           "offset": "0x33ac",
@@ -9669,7 +9669,7 @@
         {
           "offset": "0x33c0",
           "original": "それを考えてみなくちゃ、\n何度やっても、\n無駄だと思うけど…。",
-          "text": "If you don't know why,\nyou'll just keep\nfailing."
+          "text": "If you don't know why,\nthere's no point\nin trying again."
         },
         {
           "offset": "0x3400",
@@ -9694,12 +9694,12 @@
         {
           "offset": "0x34dc",
           "original": "あっ、詩織。\n実験が失敗ばっかりで\n困っちゃうよ。",
-          "text": "Oh, Shiori.\nMy tests keep failing.\nWhat a pain."
+          "text": "Oh, Shiori.\nMy experiments\nkeep going wrong."
         },
         {
           "offset": "0x3510",
           "original": "どうして失敗したのかを、\nよく考えてみた？",
-          "text": "Did you think hard\nabout why they failed?"
+          "text": "Have you thought about\nwhy they failed?"
         },
         {
           "offset": "0x353c",
@@ -9709,7 +9709,7 @@
         {
           "offset": "0x3550",
           "original": "それを考えてみなくちゃ、\n何度やっても\n無駄だと思うな。",
-          "text": "If you don't know why,\nyou'll just keep\nfailing."
+          "text": "If you don't know why,\ntrying again is\npointless."
         },
         {
           "offset": "0x3588",
@@ -9719,7 +9719,7 @@
         {
           "offset": "0x35b4",
           "original": "偉そうな事言って、\nごめんね。",
-          "text": "Sorry for sounding\nso full of myself."
+          "text": "Sorry if I\nsounded preachy."
         },
         {
           "offset": "0x35d4",
@@ -9734,12 +9734,12 @@
         {
           "offset": "0x3644",
           "original": "あっ、詩織。\n実験が失敗ばっかりで\n困っちゃうよ。",
-          "text": "Oh, Shiori.\nMy tests keep failing.\nWhat a pain."
+          "text": "Oh, Shiori.\nMy experiments\nkeep going wrong."
         },
         {
           "offset": "0x3678",
           "original": "どうして失敗したのかを\nよく考えてみた？",
-          "text": "Did you think hard\nabout why they failed?"
+          "text": "Have you thought about\nwhy they failed?"
         },
         {
           "offset": "0x36a0",
@@ -9749,7 +9749,7 @@
         {
           "offset": "0x36b4",
           "original": "それを考えてみなくちゃ、\n何度やっても、\n無駄だと思うな。",
-          "text": "If you don't know why,\nyou'll just keep\nfailing."
+          "text": "If you don't know why,\nthere's no point\nin trying again."
         },
         {
           "offset": "0x36f0",
@@ -9764,7 +9764,7 @@
         {
           "offset": "0x3764",
           "original": "あっ、詩織。\n実験が失敗ばっかりで\n困っちゃうよ。",
-          "text": "Oh, Shiori.\nMy tests keep failing.\nWhat a pain."
+          "text": "Oh, Shiori.\nMy experiments\nkeep going wrong."
         },
         {
           "offset": "0x3798",
@@ -9784,12 +9784,12 @@
         {
           "offset": "0x382c",
           "original": "テーマを持って、\n自分なりの研究を\nしたらいいと思うな…。",
-          "text": "I think you should pick\na theme and do your\nown research..."
+          "text": "Try picking a topic\nand doing some\nresearch of your own..."
         },
         {
           "offset": "0x3868",
           "original": "テーマか…。\n何がいいかなぁ。",
-          "text": "A topic...\nWhat would work?"
+          "text": "A topic...\nWhich one?"
         },
         {
           "offset": "0x3888",
@@ -9819,12 +9819,12 @@
         {
           "offset": "0x39a4",
           "original": "テーマを持って、\n自分なりの研究を\nしてみたらどうかな？",
-          "text": "Why not pick a theme\nand do your own\nresearch?"
+          "text": "Why not pick a topic\nand do your own\nresearch?"
         },
         {
           "offset": "0x39dc",
           "original": "テーマか…。\n何がいいかなぁ。",
-          "text": "A topic...\nWhat would work?"
+          "text": "A topic...\nWhich one?"
         },
         {
           "offset": "0x39fc",
@@ -9854,12 +9854,12 @@
         {
           "offset": "0x3b1c",
           "original": "テーマを持って、\n自分なりの研究を\nしてみたらどうかな？",
-          "text": "Why not pick a theme\nand do your own\nresearch?"
+          "text": "Why not pick a topic\nand do your own\nresearch?"
         },
         {
           "offset": "0x3b54",
           "original": "テーマか…。\n何がいいかなぁ。",
-          "text": "A topic...\nWhat would work?"
+          "text": "A topic...\nWhich one?"
         },
         {
           "offset": "0x3b74",
@@ -9889,7 +9889,7 @@
         {
           "offset": "0x3c74",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x3c80",
@@ -9904,7 +9904,7 @@
         {
           "offset": "0x3ce4",
           "original": "そんな弱気なこと言わないで\nあなたなら\nきっとできるから。",
-          "text": "Don't be so timid.\nI know you\ncan do it."
+          "text": "Don't talk like that.\nI know you\ncan do it."
         },
         {
           "offset": "0x3d20",
@@ -9929,7 +9929,7 @@
         {
           "offset": "0x3e24",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x3e30",
@@ -9969,7 +9969,7 @@
         {
           "offset": "0x3f9c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x3fa8",
@@ -10014,7 +10014,7 @@
         {
           "offset": "0x4124",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4130",
@@ -10054,7 +10054,7 @@
         {
           "offset": "0x4290",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x429c",
@@ -10094,7 +10094,7 @@
         {
           "offset": "0x43dc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x43e8",
@@ -10144,7 +10144,7 @@
         {
           "offset": "0x4584",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4590",
@@ -10154,7 +10154,7 @@
         {
           "offset": "0x45a0",
           "original": "電脳部に入ったのは\nいいけど、コンピュータが\nうまく扱えなくて…。",
-          "text": "I joined Computer Club,\nbut I can't handle the\ncomputers very well..."
+          "text": "I joined Computer Club,\nbut I'm still\nbad with computers..."
         },
         {
           "offset": "0x45e4",
@@ -10184,7 +10184,7 @@
         {
           "offset": "0x4704",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4710",
@@ -10194,7 +10194,7 @@
         {
           "offset": "0x4720",
           "original": "電脳部に入ったのは\nいいけど、コンピュータが\nうまく扱えなくて…。",
-          "text": "I joined Computer Club,\nbut I can't handle the\ncomputers very well..."
+          "text": "I joined Computer Club,\nbut I'm still\nbad with computers..."
         },
         {
           "offset": "0x4764",
@@ -10224,7 +10224,7 @@
         {
           "offset": "0x4878",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4884",
@@ -10234,7 +10234,7 @@
         {
           "offset": "0x4894",
           "original": "電脳部に入ったのは\nいいけど、コンピュータが\nうまく扱えなくて…。",
-          "text": "I joined Computer Club,\nbut I can't handle the\ncomputers very well..."
+          "text": "I joined Computer Club,\nbut I'm still\nbad with computers..."
         },
         {
           "offset": "0x48d8",
@@ -10269,7 +10269,7 @@
         {
           "offset": "0x4a14",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4a20",
@@ -10284,7 +10284,7 @@
         {
           "offset": "0x4a64",
           "original": "他の人のプログラムを\n参考にしたり、色々な本で\n勉強したらどうかな…？",
-          "text": "Why not learn from other\npeople's programs and\nall sorts of books...?"
+          "text": "Why not study other\npeople's programs and\nread some books?"
         },
         {
           "offset": "0x4aac",
@@ -10309,7 +10309,7 @@
         {
           "offset": "0x4bac",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4bb8",
@@ -10324,7 +10324,7 @@
         {
           "offset": "0x4bfc",
           "original": "他の人のプログラムを\n参考にしたり、色々な本で\n勉強するのがいいよ。",
-          "text": "Learn from other people's\nprograms and all\nsorts of books."
+          "text": "Try studying other\npeople's programs\nand reading books."
         },
         {
           "offset": "0x4c40",
@@ -10349,7 +10349,7 @@
         {
           "offset": "0x4d30",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4d3c",
@@ -10364,7 +10364,7 @@
         {
           "offset": "0x4d80",
           "original": "他の人のプログラムを\n参考にしたり、色々な本で\n勉強したらいいと思うわ。",
-          "text": "I think you should learn\nfrom other programs and\nall sorts of books."
+          "text": "You could study other\npeople's programs and\nread some books."
         },
         {
           "offset": "0x4dc8",
@@ -10394,7 +10394,7 @@
         {
           "offset": "0x4ee0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4eec",
@@ -10409,7 +10409,7 @@
         {
           "offset": "0x4f3c",
           "original": "わりといいと思うけど、\nもう少し、使う人の事を\n考えたほうが…。",
-          "text": "It's pretty good, but you\nshould think a bit more\nabout the users..."
+          "text": "It's pretty good,\nbut think more about\nwho'll use it..."
         },
         {
           "offset": "0x4f7c",
@@ -10434,7 +10434,7 @@
         {
           "offset": "0x5044",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x5050",
@@ -10449,7 +10449,7 @@
         {
           "offset": "0x50a4",
           "original": "わりといいんだけど、\nもう少し、使う人の事を\n考えないとね。",
-          "text": "It's pretty good, but\nyou need to think more\nabout the users."
+          "text": "It's pretty good,\nbut think more about\nwho'll use it."
         },
         {
           "offset": "0x50e0",
@@ -10459,7 +10459,7 @@
         {
           "offset": "0x5110",
           "original": "何も知らないつもりで、\n使ってみてどう思うか、\nやってみるといいよ。",
-          "text": "Try using it as if you\nknew nothing and see\nhow it feels."
+          "text": "Try it like you're\na beginner and see\nhow it feels."
         },
         {
           "offset": "0x5154",
@@ -10474,7 +10474,7 @@
         {
           "offset": "0x51b0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x51bc",
@@ -10489,7 +10489,7 @@
         {
           "offset": "0x5210",
           "original": "わりといいんだけど、\nもう少し、使う人の事を\n考えた方がいいよ。",
-          "text": "It's pretty good, but\nthink a bit more\nabout the users."
+          "text": "It's pretty good,\nbut think more about\nwho'll use it."
         },
         {
           "offset": "0x5250",
@@ -10519,7 +10519,7 @@
         {
           "offset": "0x5334",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x5340",
@@ -10534,7 +10534,7 @@
         {
           "offset": "0x5390",
           "original": "あれだけできれば\n十分すごいと思うな。\nプロじゃないんだし…。",
-          "text": "That's amazing,\nespecially since\nyou're not a pro."
+          "text": "That's impressive,\nespecially since\nyou're not a pro."
         },
         {
           "offset": "0x53d0",
@@ -10559,7 +10559,7 @@
         {
           "offset": "0x54d4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x54e0",
@@ -10574,7 +10574,7 @@
         {
           "offset": "0x5530",
           "original": "あれだけできれば、\n十分すごいよ。\nプロじゃないんだから。",
-          "text": "That's amazing,\nespecially since\nyou're not a pro."
+          "text": "That's impressive,\nespecially since\nyou're not a pro."
         },
         {
           "offset": "0x556c",
@@ -10599,7 +10599,7 @@
         {
           "offset": "0x5670",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x567c",
@@ -10644,7 +10644,7 @@
         {
           "offset": "0x5808",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x5814",
@@ -10684,7 +10684,7 @@
         {
           "offset": "0x599c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x59a8",
@@ -10709,7 +10709,7 @@
         {
           "offset": "0x5a6c",
           "original": "そんなことないと思うな。\nもう少し手直しすれば、\n大賞も夢じゃないわよ。",
-          "text": "I don't think so.\nWith a few tweaks,\nyou could win top prize!"
+          "text": "I don't think so.\nWith a few tweaks,\nyou could win the top prize!"
         },
         {
           "offset": "0x5ab4",
@@ -10724,7 +10724,7 @@
         {
           "offset": "0x5b28",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x5b34",
@@ -10779,7 +10779,7 @@
         {
           "offset": "0x5d1c",
           "original": "あっ、詩織。\n昨日描いてた絵の事だけど、\nどうしたらよくなるかな？",
-          "text": "Oh, Shiori.\nAbout my painting yesterday,\nhow can I improve it?"
+          "text": "Oh, Shiori.\nHow can I improve\nmy painting from yesterday?"
         },
         {
           "offset": "0x5d60",
@@ -10809,12 +10809,12 @@
         {
           "offset": "0x5e94",
           "original": "あっ、詩織。\n昨日描いてた絵の事だけど、\nどうしたらよくなるかな？",
-          "text": "Oh, Shiori.\nAbout my painting yesterday,\nhow can I improve it?"
+          "text": "Oh, Shiori.\nHow can I improve\nmy painting from yesterday?"
         },
         {
           "offset": "0x5ed8",
           "original": "とりあえず、\n形をうまく捉えることに\n重点を置いて、何度も\n描くのがいいと思うよ。",
-          "text": "For now, I think you\nshould focus on capturing\nshapes well, and draw\nit again and again."
+          "text": "Focus on getting\nthe shapes right.\nKeep drawing them\nover and over."
         },
         {
           "offset": "0x5f28",
@@ -10839,7 +10839,7 @@
         {
           "offset": "0x5fcc",
           "original": "あっ、詩織。\n昨日描いてた絵の事だけど、\nどうしたらよくなるかな？",
-          "text": "Oh, Shiori.\nAbout my painting yesterday,\nhow can I improve it?"
+          "text": "Oh, Shiori.\nHow can I improve\nmy painting from yesterday?"
         },
         {
           "offset": "0x6010",
@@ -10859,7 +10859,7 @@
         {
           "offset": "0x60c0",
           "original": "あっ、詩織。\n昨日描いてた絵の事だけど、\nどうしたらよくなるかな？",
-          "text": "Oh, Shiori.\nAbout my painting yesterday,\nhow can I improve it?"
+          "text": "Oh, Shiori.\nHow can I improve\nmy painting from yesterday?"
         },
         {
           "offset": "0x6104",
@@ -10874,7 +10874,7 @@
         {
           "offset": "0x6164",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6170",
@@ -10889,7 +10889,7 @@
         {
           "offset": "0x61d0",
           "original": "もう少し、陰影に気を付けて\n描いたらいいんじゃないかと\n思うけど…。",
-          "text": "I think it'd be good if\nyou paid more attention\nto the shading..."
+          "text": "I think it'd help\nif you worked more\non the shading..."
         },
         {
           "offset": "0x6214",
@@ -10914,7 +10914,7 @@
         {
           "offset": "0x62dc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x62e8",
@@ -10954,7 +10954,7 @@
         {
           "offset": "0x6434",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6440",
@@ -10989,7 +10989,7 @@
         {
           "offset": "0x6564",
           "original": "‥‥‥‥‥。\n陰影に気を付けて\n描いてみたら？",
-          "text": ".....\nWhy not watch\nthe shading?"
+          "text": ".....\nWhy not work\non the shading?"
         },
         {
           "offset": "0x6594",
@@ -10999,7 +10999,7 @@
         {
           "offset": "0x65b8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x65c4",
@@ -11039,7 +11039,7 @@
         {
           "offset": "0x6774",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6780",
@@ -11079,7 +11079,7 @@
         {
           "offset": "0x68dc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x68e8",
@@ -11114,7 +11114,7 @@
         {
           "offset": "0x6a24",
           "original": "‥‥‥‥‥。\n構図を気を付ければ、\nまあまあじゃない？",
-          "text": ".....\nIf you watch the\ncomposition, it's okay."
+          "text": ".....\nWork on the composition\nand it'll be decent."
         },
         {
           "offset": "0x6a5c",
@@ -11124,7 +11124,7 @@
         {
           "offset": "0x6a80",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6a8c",
@@ -11144,7 +11144,7 @@
         {
           "offset": "0x6b24",
           "original": "とりあえず、\n何かの展覧会に\n応募してみようかな…。",
-          "text": "Maybe I'll try\nentering some\nexhibition..."
+          "text": "Maybe I'll enter\nthis in an\nart show..."
         },
         {
           "offset": "0x6b58",
@@ -11164,7 +11164,7 @@
         {
           "offset": "0x6c34",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6c40",
@@ -11184,7 +11184,7 @@
         {
           "offset": "0x6cd8",
           "original": "とりあえず、\n何かの展覧会に\n応募してみようかな。",
-          "text": "Maybe I'll try\nentering some\nexhibition."
+          "text": "Maybe I'll enter\nthis in an\nart show."
         },
         {
           "offset": "0x6d0c",
@@ -11204,7 +11204,7 @@
         {
           "offset": "0x6de0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6dec",
@@ -11224,7 +11224,7 @@
         {
           "offset": "0x6e80",
           "original": "とりあえず、\n何かの展覧会に\n応募してみようかな。",
-          "text": "Maybe I'll try\nentering some\nexhibition."
+          "text": "Maybe I'll enter\nthis in an\nart show."
         },
         {
           "offset": "0x6eb4",
@@ -11254,12 +11254,12 @@
         {
           "offset": "0x6fc8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6fd4",
           "original": "この前描いてた絵は、\n完成したの？",
-          "text": "Is that painting you\nwere doing finished?"
+          "text": "Have you finished\nthat painting yet?"
         },
         {
           "offset": "0x6ff8",
@@ -11299,12 +11299,12 @@
         {
           "offset": "0x716c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7178",
           "original": "この前描いてた絵は、\n完成した？",
-          "text": "Is that painting you\nwere doing finished?"
+          "text": "Have you finished\nthat painting yet?"
         },
         {
           "offset": "0x7198",
@@ -11324,7 +11324,7 @@
         {
           "offset": "0x721c",
           "original": "きっと大丈夫よ。\n自分で思ってるよりも、\n絵の評価は高いわよ。",
-          "text": "You'll be fine. Your\npaintings are rated higher\nthan you think."
+          "text": "You'll be fine.\nYour art gets more praise\nthan you realize."
         },
         {
           "offset": "0x725c",
@@ -11339,12 +11339,12 @@
         {
           "offset": "0x72c0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x72cc",
           "original": "この前描いてた絵は、\n完成した？",
-          "text": "Is that painting you\nwere doing finished?"
+          "text": "Have you finished\nthat painting yet?"
         },
         {
           "offset": "0x72ec",
@@ -11384,7 +11384,7 @@
         {
           "offset": "0x7430",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x743c",
@@ -11414,7 +11414,7 @@
         {
           "offset": "0x7518",
           "original": "詩織の知ってる範囲だと\n多すぎるかもしれないけど。\nとりあえず、よろしく。",
-          "text": "You might know\nway more than I do,\nbut I'd love your help."
+          "text": "You know so much,\nI might not keep up,\nbut help me out, okay?"
         },
         {
           "offset": "0x7564",
@@ -11424,7 +11424,7 @@
         {
           "offset": "0x759c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x75a8",
@@ -11454,7 +11454,7 @@
         {
           "offset": "0x7688",
           "original": "それで十分です。\n基本的なことから\nゆっくりとね。",
-          "text": "That's plenty.\nLet's start with\nthe basics."
+          "text": "That's enough.\nLet's start slow\nwith the basics."
         },
         {
           "offset": "0x76bc",
@@ -11464,7 +11464,7 @@
         {
           "offset": "0x76f4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7700",
@@ -11514,22 +11514,22 @@
         {
           "offset": "0x7880",
           "original": "それは、何度も\n練習しないと、\n駄目だと思うな…。",
-          "text": "You just have to\npractice again\nand again..."
+          "text": "I think you need\nto practice\nover and over..."
         },
         {
           "offset": "0x78b4",
           "original": "それなりに、\n練習してるつもり\nなんだけどなぁ。",
-          "text": "I think I'm\npracticing a\nfair amount, though."
+          "text": "I thought I was\npracticing a lot,\nthough."
         },
         {
           "offset": "0x78e4",
           "original": "自分の演奏を録音して\n悪い所をチェックするのも\nいいと思うけど…。",
-          "text": "You could record yourself\nand check your weak\nspots, too..."
+          "text": "Record yourself,\nthen listen for\nwhat needs work..."
         },
         {
           "offset": "0x7928",
           "original": "よし、それをやってみよう。\n早速準備にとりかかるか。",
-          "text": "Okay, I'll try that.\nI'll get it ready now."
+          "text": "I'll try that.\nI'll set things up now."
         },
         {
           "offset": "0x795c",
@@ -11549,7 +11549,7 @@
         {
           "offset": "0x79f0",
           "original": "それなりに、\n練習してるつもり\nなんだけどなぁ。",
-          "text": "I think I'm\npracticing a\nfair amount, though."
+          "text": "I thought I was\npracticing a lot,\nthough."
         },
         {
           "offset": "0x7a20",
@@ -11559,7 +11559,7 @@
         {
           "offset": "0x7a64",
           "original": "そうか。\n今度から気を付けて\n練習しよう。",
-          "text": "I see.\nFrom now on I'll\npractice carefully."
+          "text": "Right.\nI'll look for\nmistakes next time."
         },
         {
           "offset": "0x7a90",
@@ -11599,7 +11599,7 @@
         {
           "offset": "0x7bf8",
           "original": "‥‥‥‥‥。\n練習不足じゃないの？",
-          "text": ".....\nIsn't it lack of practice?"
+          "text": ".....\nNot practicing enough?"
         },
         {
           "offset": "0x7c1c",
@@ -11609,7 +11609,7 @@
         {
           "offset": "0x7c3c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7c48",
@@ -11619,7 +11619,7 @@
         {
           "offset": "0x7c68",
           "original": "そう？\nでも、まだまだだよ。\nもっと練習しなくちゃ。",
-          "text": "Really?\nBut it's not there yet.\nI need more practice."
+          "text": "Really?\nI'm not there yet.\nNeed more practice."
         },
         {
           "offset": "0x7c9c",
@@ -11634,7 +11634,7 @@
         {
           "offset": "0x7d20",
           "original": "えっ、私なんて、\nそんなに大したこと\nないよ。",
-          "text": "Huh, me? I'm not\nanything\nspecial."
+          "text": "Me? I'm really\nnot that good,\nyou know."
         },
         {
           "offset": "0x7d50",
@@ -11654,7 +11654,7 @@
         {
           "offset": "0x7df4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7e00",
@@ -11664,12 +11664,12 @@
         {
           "offset": "0x7e20",
           "original": "そう？\nでも、まだまだだよ。\nもっと練習しなくちゃ。",
-          "text": "Really?\nBut it's not there yet.\nI need more practice."
+          "text": "Really?\nI'm not there yet.\nNeed more practice."
         },
         {
           "offset": "0x7e54",
           "original": "それはそうだけど。\nこのぐらいできれば、\n普通よ。",
-          "text": "That's true, but\nplaying like that\nis normal."
+          "text": "True, but\nthat's just\nabout average."
         },
         {
           "offset": "0x7e88",
@@ -11699,7 +11699,7 @@
         {
           "offset": "0x7f98",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7fa4",
@@ -11709,12 +11709,12 @@
         {
           "offset": "0x7fc4",
           "original": "そう？\nでも、まだまだだよ。\nもっと練習しなくちゃ。",
-          "text": "Really?\nBut it's not there yet.\nI need more practice."
+          "text": "Really?\nI'm not there yet.\nNeed more practice."
         },
         {
           "offset": "0x7ff8",
           "original": "それは、そうだけど。\nこのぐらいできれば、\n普通だと思うわよ。",
-          "text": "That's true, but\nplaying like that\nis normal, I think."
+          "text": "True, but I think\nthat's just about\naverage."
         },
         {
           "offset": "0x8038",
@@ -11749,7 +11749,7 @@
         {
           "offset": "0x816c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x8178",
@@ -11764,7 +11764,7 @@
         {
           "offset": "0x81c0",
           "original": "もうソロパートも\n平気でしょう？",
-          "text": "Solos are fine\nnow, right?"
+          "text": "Can you handle\nsolos now?"
         },
         {
           "offset": "0x81e0",
@@ -11794,7 +11794,7 @@
         {
           "offset": "0x82e0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x82ec",
@@ -11809,7 +11809,7 @@
         {
           "offset": "0x8334",
           "original": "もうソロパートも\n平気だね？",
-          "text": "Solos are fine\nnow, huh?"
+          "text": "Handling solos\nokay now?"
         },
         {
           "offset": "0x8350",
@@ -11839,7 +11839,7 @@
         {
           "offset": "0x8444",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x8450",
@@ -11889,7 +11889,7 @@
         {
           "offset": "0x85e4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x85f0",
@@ -11899,7 +11899,7 @@
         {
           "offset": "0x8614",
           "original": "えーっ、知らないよ俺。\nどこからそういう話が\n出てくるんだ？",
-          "text": "Whaaat? News to me.\nWhere'd that story\ncome from?"
+          "text": "What?! That's news to me.\nWhere'd that story\ncome from?"
         },
         {
           "offset": "0x8650",
@@ -11919,12 +11919,12 @@
         {
           "offset": "0x8718",
           "original": "その為には、\n練習、練習。",
-          "text": "For that,\npractice, practice."
+          "text": "So, practice,\npractice!"
         },
         {
           "offset": "0x8750",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x875c",
@@ -11934,7 +11934,7 @@
         {
           "offset": "0x877c",
           "original": "えーっ、知らないよ俺。\nどこからそういう話が\n出てくるんだ？",
-          "text": "Whaaat? News to me.\nWhere'd that story\ncome from?"
+          "text": "What?! That's news to me.\nWhere'd that story\ncome from?"
         },
         {
           "offset": "0x87b8",
@@ -11954,7 +11954,7 @@
         {
           "offset": "0x8878",
           "original": "その為には、\n練習、練習。",
-          "text": "For that,\npractice, practice."
+          "text": "So, practice,\npractice!"
         },
         {
           "offset": "0x8894",
@@ -11964,7 +11964,7 @@
         {
           "offset": "0x88d0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x88dc",
@@ -11974,7 +11974,7 @@
         {
           "offset": "0x88fc",
           "original": "えーっ、知らないよ俺。\nどこからそういう話が\n出てくるんだ？",
-          "text": "Whaaat? News to me.\nWhere'd that story\ncome from?"
+          "text": "What?! That's news to me.\nWhere'd that story\ncome from?"
         },
         {
           "offset": "0x8938",
@@ -12004,12 +12004,12 @@
         {
           "offset": "0x8a50",
           "original": "まったく、\nどこからそういう話が…。",
-          "text": "Honestly,\nwhere do these come from..."
+          "text": "Honestly,\nwhere do these rumors start?"
         },
         {
           "offset": "0x8a80",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x8a8c",
@@ -12044,7 +12044,7 @@
         {
           "offset": "0x8b5c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x8b68",
@@ -12059,7 +12059,7 @@
         {
           "offset": "0x8ba8",
           "original": "頑張って練習して、\n早く上手くなってね。",
-          "text": "Practice hard and\nyou'll get better."
+          "text": "Keep at it.\nYou'll improve fast!"
         },
         {
           "offset": "0x8bd0",
@@ -12079,7 +12079,7 @@
         {
           "offset": "0x8c34",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x8c40",
@@ -12104,7 +12104,7 @@
         {
           "offset": "0x8ce4",
           "original": "あっ、詩織。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, Shiori.\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, Shiori.\nPractice wore\nme out."
         },
         {
           "offset": "0x8d0c",
@@ -12134,12 +12134,12 @@
         {
           "offset": "0x8df4",
           "original": "実力はあるんだから、\n頑張ってね。\n応援してるから。",
-          "text": "You've got the ability,\nso hang in there.\nI'm rooting for you."
+          "text": "You're good.\nKeep at it.\nI'm rooting for you."
         },
         {
           "offset": "0x8e28",
           "original": "ありがとう。\n詩織にそう言われると、\n元気出てくるよ。",
-          "text": "Thanks.\nHearing that from you,\nShiori, cheers me up."
+          "text": "Thanks.\nHearing you say that\nreally cheers me up."
         },
         {
           "offset": "0x8e60",
@@ -12169,12 +12169,12 @@
         {
           "offset": "0x8f48",
           "original": "実力はあるんだから、\n頑張ってね。\n期待してるから。",
-          "text": "You've got the ability,\nso hang in there.\nI'm counting on you."
+          "text": "You're good.\nKeep at it.\nI'm counting on you."
         },
         {
           "offset": "0x8f7c",
           "original": "ありがとう。\n詩織にそう言われると、\n元気出てくるよ。",
-          "text": "Thanks.\nHearing that from you,\nShiori, cheers me up."
+          "text": "Thanks.\nHearing you say that\nreally cheers me up."
         },
         {
           "offset": "0x8fb4",
@@ -12194,7 +12194,7 @@
         {
           "offset": "0x904c",
           "original": "上手に息抜きをするのも、\n上達する早道だと思うな。",
-          "text": "Breaks might help you\nimprove faster."
+          "text": "A little break could\nhelp you improve faster."
         },
         {
           "offset": "0x9080",
@@ -12229,7 +12229,7 @@
         {
           "offset": "0x9194",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x91a0",
@@ -12264,7 +12264,7 @@
         {
           "offset": "0x92b0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x92bc",
@@ -12299,7 +12299,7 @@
         {
           "offset": "0x93c8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x93d4",
@@ -12349,7 +12349,7 @@
         {
           "offset": "0x953c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9548",
@@ -12379,12 +12379,12 @@
         {
           "offset": "0x9630",
           "original": "ありがとう。\nよし、甲子園目指して、\nもう一頑張りだ。",
-          "text": "Thanks.\nAll right, for Koshien,\none more push."
+          "text": "Thanks.\nOne more push\ntoward Koshien!"
         },
         {
           "offset": "0x9684",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9690",
@@ -12399,7 +12399,7 @@
         {
           "offset": "0x96f0",
           "original": "どう？\n甲子園は狙えそうなの？",
-          "text": "Well?\nCan you aim for Koshien?"
+          "text": "Well?\nCan you make Koshien?"
         },
         {
           "offset": "0x9710",
@@ -12414,12 +12414,12 @@
         {
           "offset": "0x9774",
           "original": "ありがとう。\nよし、甲子園目指して、\nもう一頑張りだ。",
-          "text": "Thanks.\nAll right, for Koshien,\none more push."
+          "text": "Thanks.\nOne more push\ntoward Koshien!"
         },
         {
           "offset": "0x97c8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x97d4",
@@ -12434,7 +12434,7 @@
         {
           "offset": "0x9834",
           "original": "どう？\n甲子園は狙えそう？",
-          "text": "Well?\nCan you aim for Koshien?"
+          "text": "Well?\nKoshien in sight?"
         },
         {
           "offset": "0x9850",
@@ -12449,12 +12449,12 @@
         {
           "offset": "0x98a4",
           "original": "ありがとう。\nよし、甲子園目指して、\nもう一頑張りだ。",
-          "text": "Thanks.\nAll right, for Koshien,\none more push."
+          "text": "Thanks.\nOne more push\ntoward Koshien!"
         },
         {
           "offset": "0x98f8",
           "original": "あっ、詩織。\n最近、上手くなってきたと\n思わない？",
-          "text": "Oh, Shiori.\nDon't you think I've\ngotten better lately?"
+          "text": "Oh, Shiori.\nThink I've gotten\nbetter lately?"
         },
         {
           "offset": "0x992c",
@@ -12469,7 +12469,7 @@
         {
           "offset": "0x9970",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x997c",
@@ -12504,7 +12504,7 @@
         {
           "offset": "0x9a94",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9aa0",
@@ -12529,7 +12529,7 @@
         {
           "offset": "0x9b30",
           "original": "今の実力なら、\n甲子園ぐらい行けるわよ。",
-          "text": "At your level now, you\ncan make Koshien, easy."
+          "text": "You're good enough\nto make Koshien!"
         },
         {
           "offset": "0x9b58",
@@ -12539,7 +12539,7 @@
         {
           "offset": "0x9bb4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9bc0",
@@ -12564,7 +12564,7 @@
         {
           "offset": "0x9c50",
           "original": "今の実力なら、\n甲子園ぐらい行けると\n思うわよ。",
-          "text": "At your level now,\nI think you can make\nKoshien, easy."
+          "text": "At your level,\nI think you can\nmake Koshien."
         },
         {
           "offset": "0x9c80",
@@ -12589,7 +12589,7 @@
         {
           "offset": "0x9d40",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9d4c",
@@ -12624,7 +12624,7 @@
         {
           "offset": "0x9e20",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9e2c",
@@ -12659,7 +12659,7 @@
         {
           "offset": "0x9efc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x9f08",
@@ -12684,7 +12684,7 @@
         {
           "offset": "0x9fb0",
           "original": "あっ、詩織。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, Shiori.\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, Shiori.\nPractice wore\nme out."
         },
         {
           "offset": "0x9fd8",
@@ -12714,12 +12714,12 @@
         {
           "offset": "0xa0c0",
           "original": "実力はあるんだから、\n頑張ってね。\n応援してるから。",
-          "text": "You've got the ability,\nso hang in there.\nI'm rooting for you."
+          "text": "You're good.\nKeep at it.\nI'm rooting for you."
         },
         {
           "offset": "0xa0f4",
           "original": "ありがとう。\n詩織にそう言われると、\n元気出てくるよ。",
-          "text": "Thanks.\nHearing that from you,\nShiori, cheers me up."
+          "text": "Thanks.\nHearing you say that\nreally cheers me up."
         },
         {
           "offset": "0xa12c",
@@ -12749,12 +12749,12 @@
         {
           "offset": "0xa214",
           "original": "実力はあるんだから、\n頑張ってね。\n期待してるから。",
-          "text": "You've got the ability,\nso hang in there.\nI'm counting on you."
+          "text": "You're good.\nKeep at it.\nI'm counting on you."
         },
         {
           "offset": "0xa248",
           "original": "ありがとう。\n詩織にそう言われると、\n元気出てくるよ。",
-          "text": "Thanks.\nHearing that from you,\nShiori, cheers me up."
+          "text": "Thanks.\nHearing you say that\nreally cheers me up."
         },
         {
           "offset": "0xa280",
@@ -12809,7 +12809,7 @@
         {
           "offset": "0xa45c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa468",
@@ -12834,7 +12834,7 @@
         {
           "offset": "0xa4f8",
           "original": "国立競技場に\n行けるといいね。",
-          "text": "Hope you make\nthe Nationals."
+          "text": "Hope you get to\nNat'l Stadium."
         },
         {
           "offset": "0xa518",
@@ -12849,7 +12849,7 @@
         {
           "offset": "0xa5a0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa5ac",
@@ -12874,7 +12874,7 @@
         {
           "offset": "0xa634",
           "original": "国立競技場に行けたら\nいいんだけどな。",
-          "text": "I hope we'll reach\nNational Stadium."
+          "text": "Hope we make it\nto Nat'l Stadium."
         },
         {
           "offset": "0xa65c",
@@ -12889,7 +12889,7 @@
         {
           "offset": "0xa6d0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa6dc",
@@ -12914,7 +12914,7 @@
         {
           "offset": "0xa768",
           "original": "国立競技場目指して\n頑張ってね。",
-          "text": "Aim for the\nNational Stadium!"
+          "text": "Aim for\nNat'l Stadium!"
         },
         {
           "offset": "0xa788",
@@ -12929,7 +12929,7 @@
         {
           "offset": "0xa804",
           "original": "‥‥‥‥‥。\n国立競技場には\n行けるのかしら？",
-          "text": ".....\nThink you'll reach\nNational Stadium?"
+          "text": ".....\nThink you'll make it\nto Nat'l Stadium?"
         },
         {
           "offset": "0xa834",
@@ -12939,7 +12939,7 @@
         {
           "offset": "0xa854",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa860",
@@ -12954,7 +12954,7 @@
         {
           "offset": "0xa8bc",
           "original": "国立競技場へは\n行けそう…？",
-          "text": "Can you make\nthe Nationals...?"
+          "text": "Nat'l Stadium,\nmaybe...?"
         },
         {
           "offset": "0xa8d8",
@@ -12969,12 +12969,12 @@
         {
           "offset": "0xa930",
           "original": "ありがとう。\n国立競技場目指して、\nもう一頑張りするか。",
-          "text": "Thanks.\nI'll keep training\nfor National Stadium."
+          "text": "Thanks.\nI'll train harder\nto reach Nat'l Stadium."
         },
         {
           "offset": "0xa984",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xa990",
@@ -12989,7 +12989,7 @@
         {
           "offset": "0xa9f0",
           "original": "どう？\n国立競技場には\n行けそうなの？",
-          "text": "Well?\nCan you make\nthe Nationals?"
+          "text": "Well?\nMake it to\nNat'l Stadium?"
         },
         {
           "offset": "0xaa18",
@@ -13004,12 +13004,12 @@
         {
           "offset": "0xaa78",
           "original": "ありがとう。\n国立競技場目指して、\nもう一頑張りするか。",
-          "text": "Thanks.\nI'll keep training\nfor National Stadium."
+          "text": "Thanks.\nI'll train harder\nto reach Nat'l Stadium."
         },
         {
           "offset": "0xaacc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xaad8",
@@ -13024,7 +13024,7 @@
         {
           "offset": "0xab38",
           "original": "どう？\n国立競技場には\n行けそう？",
-          "text": "Well?\nCan you make\nthe Nationals?"
+          "text": "Well?\nMake it to\nNat'l Stadium?"
         },
         {
           "offset": "0xab5c",
@@ -13039,17 +13039,17 @@
         {
           "offset": "0xabac",
           "original": "ありがとう。\n国立競技場目指して、\nもう一頑張りするか。",
-          "text": "Thanks.\nI'll keep training\nfor National Stadium."
+          "text": "Thanks.\nI'll train harder\nto reach Nat'l Stadium."
         },
         {
           "offset": "0xac00",
           "original": "あっ、詩織。\n最近、上手くなってきたと\n思わない？",
-          "text": "Oh, Shiori.\nDon't you think I've\ngotten better lately?"
+          "text": "Oh, Shiori.\nThink I've gotten\nbetter lately?"
         },
         {
           "offset": "0xac34",
           "original": "‥‥‥‥‥。\n国立競技場に\n行けるかもしれないわね。",
-          "text": ".....\nYou might reach\nNational Stadium."
+          "text": ".....\nYou might make it\nto Nat'l Stadium."
         },
         {
           "offset": "0xac68",
@@ -13059,7 +13059,7 @@
         {
           "offset": "0xac88",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xac94",
@@ -13069,7 +13069,7 @@
         {
           "offset": "0xacb8",
           "original": "えっ、俺そんな話\n聞いたこともないよ。",
-          "text": "Huh? I've never\nheard of that."
+          "text": "Huh? That's\nnews to me."
         },
         {
           "offset": "0xace0",
@@ -13079,7 +13079,7 @@
         {
           "offset": "0xacfc",
           "original": "考えてないこともないけど。\nとりあえず、\n目の前の目標をね。",
-          "text": "I've thought about it.\nBut first,\nthe goal in front of me."
+          "text": "I've thought about it.\nBut first,\nI've got a goal."
         },
         {
           "offset": "0xad38",
@@ -13099,7 +13099,7 @@
         {
           "offset": "0xaddc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xade8",
@@ -13109,7 +13109,7 @@
         {
           "offset": "0xae10",
           "original": "えっ、俺そんな話\n聞いたこともないよ。",
-          "text": "Huh? I've never\nheard of that."
+          "text": "Huh? That's\nnews to me."
         },
         {
           "offset": "0xae38",
@@ -13119,7 +13119,7 @@
         {
           "offset": "0xae50",
           "original": "考えてないこともないけど。\nとりあえず、\n目の前の目標をね。",
-          "text": "I've thought about it.\nBut first,\nthe goal in front of me."
+          "text": "I've thought about it.\nBut first,\nI've got a goal."
         },
         {
           "offset": "0xae8c",
@@ -13129,7 +13129,7 @@
         {
           "offset": "0xaec0",
           "original": "とりあえず、\n国立競技場目指して、\n練習するか。",
-          "text": "For now I'll\ntrain to reach\nNational Stadium."
+          "text": "For now,\nI'll train to reach\nNat'l Stadium."
         },
         {
           "offset": "0xaef0",
@@ -13139,7 +13139,7 @@
         {
           "offset": "0xaf30",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xaf3c",
@@ -13149,7 +13149,7 @@
         {
           "offset": "0xaf68",
           "original": "えっ、俺そんな話\n聞いたこともないよ。",
-          "text": "Huh? I've never\nheard of that."
+          "text": "Huh? That's\nnews to me."
         },
         {
           "offset": "0xaf90",
@@ -13159,7 +13159,7 @@
         {
           "offset": "0xafa8",
           "original": "考えてないこともないけど。\nとりあえず、\n目の前の目標をね。",
-          "text": "I've thought about it.\nBut first,\nthe goal in front of me."
+          "text": "I've thought about it.\nBut first,\nI've got a goal."
         },
         {
           "offset": "0xafe4",
@@ -13169,7 +13169,7 @@
         {
           "offset": "0xb010",
           "original": "とりあえず、\n国立競技場目指して、\n練習するか。",
-          "text": "For now I'll\ntrain to reach\nNational Stadium."
+          "text": "For now,\nI'll train to reach\nNat'l Stadium."
         },
         {
           "offset": "0xb040",
@@ -13194,7 +13194,7 @@
         {
           "offset": "0xb0d8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb0e4",
@@ -13234,7 +13234,7 @@
         {
           "offset": "0xb1c8",
           "original": "早く上手くなれるよう、\nお互いに\n頑張りましょう。",
-          "text": "Let's both work hard\nto get good\nfast."
+          "text": "Let's both train hard\nand get better\nquickly."
         },
         {
           "offset": "0xb1fc",
@@ -13244,7 +13244,7 @@
         {
           "offset": "0xb238",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb244",
@@ -13294,7 +13294,7 @@
         {
           "offset": "0xb37c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb388",
@@ -13344,7 +13344,7 @@
         {
           "offset": "0xb4b0",
           "original": "あっ、詩織。\n練習がきつくて\n参ったよ。",
-          "text": "Oh, Shiori.\nPractice is so tough,\nI'm worn out."
+          "text": "Oh, Shiori.\nPractice wore\nme out."
         },
         {
           "offset": "0xb4d8",
@@ -13414,7 +13414,7 @@
         {
           "offset": "0xb740",
           "original": "それじゃ、\n練習が終わったらね。",
-          "text": "Then after\npractice."
+          "text": "See you after\npractice, then."
         },
         {
           "offset": "0xb778",
@@ -13454,7 +13454,7 @@
         {
           "offset": "0xb8c8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb8d4",
@@ -13499,7 +13499,7 @@
         {
           "offset": "0xba1c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xba28",
@@ -13529,7 +13529,7 @@
         {
           "offset": "0xbad4",
           "original": "一緒に行きたいけど、\nまだまだ道は険しいよ。",
-          "text": "I want to go too, but\nit's still a long road."
+          "text": "I'd love to, but\nI'm not there yet."
         },
         {
           "offset": "0xbb00",
@@ -13544,7 +13544,7 @@
         {
           "offset": "0xbb74",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xbb80",
@@ -13569,7 +13569,7 @@
         {
           "offset": "0xbc0c",
           "original": "インターハイ目指して\n頑張ってね。",
-          "text": "Aim for the Inter-High\nand do your best."
+          "text": "Keep at it for\nthe Inter-High!"
         },
         {
           "offset": "0xbc30",
@@ -13594,7 +13594,7 @@
         {
           "offset": "0xbce4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xbcf0",
@@ -13629,7 +13629,7 @@
         {
           "offset": "0xbe04",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xbe10",
@@ -13664,7 +13664,7 @@
         {
           "offset": "0xbf00",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xbf0c",
@@ -13704,7 +13704,7 @@
         {
           "offset": "0xc050",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc05c",
@@ -13749,7 +13749,7 @@
         {
           "offset": "0xc1cc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc1d8",
@@ -13794,7 +13794,7 @@
         {
           "offset": "0xc2f8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc304",
@@ -13834,7 +13834,7 @@
         {
           "offset": "0xc408",
           "original": "まったく、\nどこからそういう話が…。",
-          "text": "Come on.\nWhere'd that come from...?"
+          "text": "Sheesh.\nWhere'd that come from?"
         },
         {
           "offset": "0xc42c",
@@ -13844,7 +13844,7 @@
         {
           "offset": "0xc44c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc458",
@@ -13889,7 +13889,7 @@
         {
           "offset": "0xc5c0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc5cc",
@@ -13934,7 +13934,7 @@
         {
           "offset": "0xc6ec",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc6f8",
@@ -13974,7 +13974,7 @@
         {
           "offset": "0xc80c",
           "original": "まったく、\nどこからそういう話が…。",
-          "text": "Come on.\nWhere'd that come from...?"
+          "text": "Sheesh.\nWhere'd that come from?"
         },
         {
           "offset": "0xc830",
@@ -13984,7 +13984,7 @@
         {
           "offset": "0xc850",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc85c",
@@ -13994,7 +13994,7 @@
         {
           "offset": "0xc884",
           "original": "えっ、俺そんな話\n聞いたこともないよ。",
-          "text": "Huh? I've never\nheard of that."
+          "text": "What? That's\nnews to me!"
         },
         {
           "offset": "0xc8ac",
@@ -14029,7 +14029,7 @@
         {
           "offset": "0xc9b8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xc9c4",
@@ -14039,7 +14039,7 @@
         {
           "offset": "0xc9f4",
           "original": "えっ、俺そんな話\n聞いたこともないよ。",
-          "text": "Huh? I've never\nheard of that."
+          "text": "What? That's\nnews to me!"
         },
         {
           "offset": "0xca1c",
@@ -14074,7 +14074,7 @@
         {
           "offset": "0xcaf8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xcb04",
@@ -14084,7 +14084,7 @@
         {
           "offset": "0xcb34",
           "original": "えっ、俺そんな話\n聞いたこともないよ。",
-          "text": "Huh? I've never\nheard of that."
+          "text": "What? That's\nnews to me!"
         },
         {
           "offset": "0xcb5c",
@@ -14119,12 +14119,12 @@
         {
           "offset": "0xcc54",
           "original": "まったく、\nどこからそういう話が…。",
-          "text": "Come on.\nWhere'd that come from...?"
+          "text": "Sheesh.\nWhere'd that come from?"
         },
         {
           "offset": "0xcc84",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xcc90",
@@ -14154,12 +14154,12 @@
         {
           "offset": "0xcd40",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "Well then,\nI'll go coach the juniors."
+          "text": "I'll go coach\nthe younger players."
         },
         {
           "offset": "0xcd80",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xcd8c",
@@ -14189,12 +14189,12 @@
         {
           "offset": "0xce50",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "Well then,\nI'll go coach the juniors."
+          "text": "I'll go coach\nthe younger players."
         },
         {
           "offset": "0xce90",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xce9c",
@@ -14224,7 +14224,7 @@
         {
           "offset": "0xcf54",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "Well then,\nI'll go coach the juniors."
+          "text": "I'll go coach\nthe younger players."
         },
         {
           "offset": "0xcf94",
@@ -14234,7 +14234,7 @@
         {
           "offset": "0xcfbc",
           "original": "‥‥‥‥‥。\n別に気にしてないわよ。",
-          "text": ".....\nIt's not a big deal."
+          "text": ".....\nIt doesn't bother me."
         },
         {
           "offset": "0xcfe0",

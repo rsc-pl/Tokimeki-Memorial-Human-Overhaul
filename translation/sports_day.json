@@ -9,7 +9,7 @@
         {
           "offset": "0x0",
           "original": "今日は体育祭だ。\nどの競技に参加しようかな？",
-          "text": "Today's sports day.\nWhich event to enter?"
+          "text": "It's sports day.\nWhich event should I enter?"
         },
         {
           "offset": "0x30",
@@ -39,7 +39,7 @@
         {
           "offset": "0x128",
           "original": "今日は体育祭だ。\n病気なんかくそくらえだ。\n競技に参加するぞ。",
-          "text": "Sports day today.\nSick or not,\nI'm entering!"
+          "text": "Sports day!\nSick or not,\nI'm taking part!"
         }
       ]
     }
