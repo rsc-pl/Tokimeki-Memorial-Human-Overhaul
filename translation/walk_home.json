@@ -879,7 +879,7 @@
         {
           "offset": "0x2538",
           "original": "後輩ができるんだから、\n頑張らなくっちゃ。",
-          "text": "We'll have juniors.\nI'd better work hard."
+          "text": "We'll have underclassmen.\nI'll do my best."
         },
         {
           "offset": "0x2564",
@@ -3279,7 +3279,7 @@
         {
           "offset": "0xb938",
           "original": "そうだ。\n{M}に\n見学に来てよ。",
-          "text": "Hey,\nvisit {M}\nat the fair!"
+          "text": "Hey,\ncome see {M}\nat the festival!"
         },
         {
           "offset": "0xb954",
@@ -3924,7 +3924,7 @@
         {
           "offset": "0xd760",
           "original": "せ、先輩として…。\n頑張らないと…。",
-          "text": "A-as a senior,\nI have to work hard."
+          "text": "A-as a senpai,\nI must do my best."
         },
         {
           "offset": "0xd784",
@@ -4379,7 +4379,7 @@
         {
           "offset": "0xf1f8",
           "original": "後輩ができるんだから、\n頑張らないとね。",
-          "text": "We'll have juniors,\nso let's work hard."
+          "text": "We'll be senpai soon.\nLet's work hard."
         },
         {
           "offset": "0xf220",

@@ -1,348 +1,348 @@
 {
- "description": "Recurring main-loop notices and command labels in SLPM_86.053: joining/leaving clubs, club-day advice, term and holiday changes, health conditions, the Christmas/New Year prompts, sound-effect captions, and phone/news labels. Debug strings at 0x6F610, 0x70940, 0x709AC and 0x70D90, the obsolete album-creation fragments at 0x6EB40-0x6EB67, and renderer punctuation literals at 0x71804-0x71A3F are deliberately left unchanged.",
- "strings": [
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x6F3FC",
-   "original": "ときめきメモリアル",
-   "text": "Tokimeki Memorial"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x6F410",
-   "original": "・システム",
-   "text": " System"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x6F420",
-   "original": "ときめきメモリアル",
-   "text": "Tokimeki Memorial"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x6F434",
-   "original": "・システム",
-   "text": " System"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70284",
-   "original": "部に入部した。",
-   "text": " club joined."
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70294",
-   "original": "部長",
-   "text": "Capt."
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7029C",
-   "original": "「毎月",
-   "text": " Each "
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x702A4",
-   "original": "第３日曜日",
-   "text": "3rd Sunday"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x702B0",
-   "original": "は、",
-   "text": " is"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x702B8",
-   "original": "クラブの日なので、",
-   "text": " Club Day, so"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x702CC",
-   "original": "休まない",
-   "text": "don't   "
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x702D8",
-   "original": "ように。",
-   "text": "miss it."
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x702E4",
-   "original": "自宅",
-   "text": "Home"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7031C",
-   "original": "自宅",
-   "text": "Home"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70364",
-   "original": "正月",
-   "text": "New Yr"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7036C",
-   "original": "ピ〜ンポ〜ン",
-   "text": "Ding-dong"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7038C",
-   "original": "〒配達",
-   "text": "Mail"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70394",
-   "original": "年賀状でーす。",
-   "text": "New Year card!"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70854",
-   "original": "部活一覧",
-   "text": "Club List"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70860",
-   "original": "取り消し",
-   "text": "Cancel"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7086C",
-   "original": "入部する部活を選択してください",
-   "text": "Choose a club to join."
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x709C8",
-   "original": "怪我",
-   "text": "Injury"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x709E8",
-   "original": "ノイローゼ",
-   "text": "Burnout"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70A14",
-   "original": "病気",
-   "text": "Sick"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70A34",
-   "original": "治癒",
-   "text": "Healed"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70A4C",
-   "original": "治癒",
-   "text": "Healed"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70A6C",
-   "original": "治癒",
-   "text": "Healed"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70EF0",
-   "original": "情報誌",
-   "text": "News"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x70F14",
-   "original": "電話番号",
-   "text": "Phone No."
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x71840",
-   "original": "そして…",
-   "text": "And..."
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x71854",
-   "original": "ガチャ",
-   "text": "Click"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7185C",
-   "original": "カチャ",
-   "text": "Clack"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x71864",
-   "original": "ガラッ",
-   "text": "Slide"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7186C",
-   "original": "ごそごそ",
-   "text": "Rustle"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x71880",
-   "original": "ジロジロ",
-   "text": "Stare"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7188C",
-   "original": "ドン",
-   "text": "Thud"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x7189C",
-   "original": "ピンポーン",
-   "text": "Ding-dong"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x718C8",
-   "original": "ドン",
-   "text": "Thud"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x71A6C",
-   "original": "やめる",
-   "text": "Stop"
-  },
-  {
-   "file": "SLPM_86.053",
-   "offset": "0x761BC",
-   "original": "で、待ち合わせ』",
-   "text": ", meet there』"
-  }
- ],
- "dialogue": [
-  {
-   "file": "SLPM_86.053",
-   "base": "0x80040800",
-   "lines": [
+  "description": "Recurring main-loop notices and command labels in SLPM_86.053: joining/leaving clubs, club-day advice, term and holiday changes, health conditions, the Christmas/New Year prompts, sound-effect captions, and phone/news labels. Debug strings at 0x6F610, 0x70940, 0x709AC and 0x70D90, the obsolete album-creation fragments at 0x6EB40-0x6EB67, and renderer punctuation literals at 0x71804-0x71A3F are deliberately left unchanged.",
+  "strings": [
     {
-     "offset": "0x702EC",
-     "original": "最近女の子の間で\n変な噂が流れているらしい…）",
-     "text": "A strange rumor is\nspreading among girls...)"
+      "file": "SLPM_86.053",
+      "offset": "0x6F3FC",
+      "original": "ときめきメモリアル",
+      "text": "Tokimeki Memorial"
     },
     {
-     "offset": "0x70324",
-     "original": "今日は伊集院の家で、\nクリスマスパーティだ。\n会場に行こうかな）",
-     "text": "A Christmas party at\nIjuin's house today.\nShall I go?)"
+      "file": "SLPM_86.053",
+      "offset": "0x6F410",
+      "original": "・システム",
+      "text": " System"
     },
     {
-     "offset": "0x7037C",
-     "original": "ん？\n誰だろう）",
-     "text": "Huh?\nWho's it?)"
+      "file": "SLPM_86.053",
+      "offset": "0x6F420",
+      "original": "ときめきメモリアル",
+      "text": "Tokimeki Memorial"
     },
     {
-     "offset": "0x703A4",
-     "original": "やった！\n",
-     "text": "Great!\n"
+      "file": "SLPM_86.053",
+      "offset": "0x6F434",
+      "original": "・システム",
+      "text": " System"
     },
     {
-     "offset": "0x703B0",
-     "original": "と、\n",
-     "text": " and\n"
+      "file": "SLPM_86.053",
+      "offset": "0x70284",
+      "original": "部に入部した。",
+      "text": " club joined."
     },
     {
-     "offset": "0x703B8",
-     "original": "から、\n年賀状をもらったラッキー。）",
-     "text": " sent me\nNew Year's cards! Lucky.)"
+      "file": "SLPM_86.053",
+      "offset": "0x70294",
+      "original": "部長",
+      "text": "Capt."
     },
     {
-     "offset": "0x70948",
-     "original": "明日から新学期だ）",
-     "text": "New term starts!)"
+      "file": "SLPM_86.053",
+      "offset": "0x7029C",
+      "original": "「毎月",
+      "text": " Each "
     },
     {
-     "offset": "0x7095C",
-     "original": "明日から新学期だ）",
-     "text": "New term starts!)"
+      "file": "SLPM_86.053",
+      "offset": "0x702A4",
+      "original": "第３日曜日",
+      "text": "3rd Sunday"
     },
     {
-     "offset": "0x70970",
-     "original": "明日から夏休みだ）",
-     "text": "Summer break!)"
+      "file": "SLPM_86.053",
+      "offset": "0x702B0",
+      "original": "は、",
+      "text": " is"
     },
     {
-     "offset": "0x70984",
-     "original": "明日から冬休みだ）",
-     "text": "Winter break!)"
+      "file": "SLPM_86.053",
+      "offset": "0x702B8",
+      "original": "クラブの日なので、",
+      "text": " Club Day, so"
     },
     {
-     "offset": "0x70998",
-     "original": "明日から春休みだ）",
-     "text": "Spring break!)"
+      "file": "SLPM_86.053",
+      "offset": "0x702CC",
+      "original": "休まない",
+      "text": "don't   "
     },
     {
-     "offset": "0x709B4",
-     "original": "明日から新学期だ）",
-     "text": "New term starts!)"
+      "file": "SLPM_86.053",
+      "offset": "0x702D8",
+      "original": "ように。",
+      "text": "miss it."
     },
     {
-     "offset": "0x709D0",
-     "original": "怪我をしてしまった）",
-     "text": "I got injured...)"
+      "file": "SLPM_86.053",
+      "offset": "0x702E4",
+      "original": "自宅",
+      "text": "Home"
     },
     {
-     "offset": "0x709F4",
-     "original": "ノイローゼになってしまった）",
-     "text": "I'm burned out...)"
+      "file": "SLPM_86.053",
+      "offset": "0x7031C",
+      "original": "自宅",
+      "text": "Home"
     },
     {
-     "offset": "0x70A1C",
-     "original": "病気になってしまった）",
-     "text": "I got sick...)"
+      "file": "SLPM_86.053",
+      "offset": "0x70364",
+      "original": "正月",
+      "text": "New Yr"
     },
     {
-     "offset": "0x70A3C",
-     "original": "怪我が治った）",
-     "text": "All healed!)"
+      "file": "SLPM_86.053",
+      "offset": "0x7036C",
+      "original": "ピ〜ンポ〜ン",
+      "text": "Ding-dong"
     },
     {
-     "offset": "0x70A54",
-     "original": "ノイローゼが治った）",
-     "text": "I'm over my burnout!)"
+      "file": "SLPM_86.053",
+      "offset": "0x7038C",
+      "original": "〒配達",
+      "text": "Mail"
     },
     {
-     "offset": "0x70A74",
-     "original": "病気が治った）",
-     "text": "I'm better!)"
+      "file": "SLPM_86.053",
+      "offset": "0x70394",
+      "original": "年賀状でーす。",
+      "text": "New Year card!"
     },
     {
-     "offset": "0x70F50",
-     "original": "部を退部した。",
-     "text": " club left."
+      "file": "SLPM_86.053",
+      "offset": "0x70854",
+      "original": "部活一覧",
+      "text": "Club List"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70860",
+      "original": "取り消し",
+      "text": "Cancel"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7086C",
+      "original": "入部する部活を選択してください",
+      "text": "Choose a club to join."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x709C8",
+      "original": "怪我",
+      "text": "Injury"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x709E8",
+      "original": "ノイローゼ",
+      "text": "Burnout"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70A14",
+      "original": "病気",
+      "text": "Sick"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70A34",
+      "original": "治癒",
+      "text": "Healed"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70A4C",
+      "original": "治癒",
+      "text": "Healed"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70A6C",
+      "original": "治癒",
+      "text": "Healed"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70EF0",
+      "original": "情報誌",
+      "text": "News"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x70F14",
+      "original": "電話番号",
+      "text": "Phone No."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71840",
+      "original": "そして…",
+      "text": "And..."
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71854",
+      "original": "ガチャ",
+      "text": "Click"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7185C",
+      "original": "カチャ",
+      "text": "Clack"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71864",
+      "original": "ガラッ",
+      "text": "Slide"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7186C",
+      "original": "ごそごそ",
+      "text": "Rustle"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71880",
+      "original": "ジロジロ",
+      "text": "Stare"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7188C",
+      "original": "ドン",
+      "text": "Thud"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7189C",
+      "original": "ピンポーン",
+      "text": "Ding-dong"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x718C8",
+      "original": "ドン",
+      "text": "Thud"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71A6C",
+      "original": "やめる",
+      "text": "Stop"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x761BC",
+      "original": "で、待ち合わせ』",
+      "text": ", meet there』"
     }
-   ]
-  }
- ]
+  ],
+  "dialogue": [
+    {
+      "file": "SLPM_86.053",
+      "base": "0x80040800",
+      "lines": [
+        {
+          "offset": "0x702EC",
+          "original": "最近女の子の間で\n変な噂が流れているらしい…）",
+          "text": "A strange rumor is\nspreading among girls...)"
+        },
+        {
+          "offset": "0x70324",
+          "original": "今日は伊集院の家で、\nクリスマスパーティだ。\n会場に行こうかな）",
+          "text": "A Christmas party at\nIjuin's house today.\nShall I go?)"
+        },
+        {
+          "offset": "0x7037C",
+          "original": "ん？\n誰だろう）",
+          "text": "Huh?\nWho is it?)"
+        },
+        {
+          "offset": "0x703A4",
+          "original": "やった！\n",
+          "text": "Great!\n"
+        },
+        {
+          "offset": "0x703B0",
+          "original": "と、\n",
+          "text": " and\n"
+        },
+        {
+          "offset": "0x703B8",
+          "original": "から、\n年賀状をもらったラッキー。）",
+          "text": " sent me\nNew Year's cards! Lucky.)"
+        },
+        {
+          "offset": "0x70948",
+          "original": "明日から新学期だ）",
+          "text": "New term starts!)"
+        },
+        {
+          "offset": "0x7095C",
+          "original": "明日から新学期だ）",
+          "text": "New term starts!)"
+        },
+        {
+          "offset": "0x70970",
+          "original": "明日から夏休みだ）",
+          "text": "Summer break!)"
+        },
+        {
+          "offset": "0x70984",
+          "original": "明日から冬休みだ）",
+          "text": "Winter break!)"
+        },
+        {
+          "offset": "0x70998",
+          "original": "明日から春休みだ）",
+          "text": "Spring break tomorrow!)"
+        },
+        {
+          "offset": "0x709B4",
+          "original": "明日から新学期だ）",
+          "text": "Term starts tomorrow!)"
+        },
+        {
+          "offset": "0x709D0",
+          "original": "怪我をしてしまった）",
+          "text": "I got injured...)"
+        },
+        {
+          "offset": "0x709F4",
+          "original": "ノイローゼになってしまった）",
+          "text": "I'm burned out...)"
+        },
+        {
+          "offset": "0x70A1C",
+          "original": "病気になってしまった）",
+          "text": "I got sick...)"
+        },
+        {
+          "offset": "0x70A3C",
+          "original": "怪我が治った）",
+          "text": "All healed!)"
+        },
+        {
+          "offset": "0x70A54",
+          "original": "ノイローゼが治った）",
+          "text": "Recovered from neurosis!)"
+        },
+        {
+          "offset": "0x70A74",
+          "original": "病気が治った）",
+          "text": "I'm better!)"
+        },
+        {
+          "offset": "0x70F50",
+          "original": "部を退部した。",
+          "text": " club left."
+        }
+      ]
+    }
+  ]
 }

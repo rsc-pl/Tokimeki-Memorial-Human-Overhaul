@@ -1094,7 +1094,7 @@
         {
           "offset": "0x236c",
           "original": "こんなものなのかなぁ。",
-          "text": "Is that all there is?"
+          "text": "So that's how it is?"
         },
         {
           "offset": "0x2384",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x24f8",
           "original": "そういう訳じゃないけど、\n嬉しい？",
-          "text": "Not exactly,\nbut happy?"
+          "text": "Not really, but\nare you happy?"
         },
         {
           "offset": "0x252c",
@@ -1724,7 +1724,7 @@
         {
           "offset": "0x3618",
           "original": "公開デッサンって、\nヌードデッサン\nだったんだ…。",
-          "text": "So the live\nsketching was\nnude sketching..."
+          "text": "So that public\ndrawing demo\nhad nude models..."
         },
         {
           "offset": "0x364c",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x394c",
           "original": "公開デッサンって、\nヌードデッサン\nだったんだ…。",
-          "text": "So the live\nsketching was\nnude sketching..."
+          "text": "So that public\ndrawing demo\nhad nude models..."
         },
         {
           "offset": "0x3980",
@@ -2896,7 +2896,7 @@
         {
           "offset": "0x1500",
           "original": "初めての舞台だから、\nすごく緊張するね？",
-          "text": "It's our first show.\nI'm so nervous!"
+          "text": "Our first show.\nNervous, aren't you?"
         },
         {
           "offset": "0x1528",
@@ -2931,7 +2931,7 @@
         {
           "offset": "0x1634",
           "original": "初めての舞台だから、\nすっごく緊張するね？",
-          "text": "It's our first show.\nI'm so nervous!"
+          "text": "Our first show.\nNervous, aren't you?"
         },
         {
           "offset": "0x1660",
@@ -2956,7 +2956,7 @@
         {
           "offset": "0x1734",
           "original": "初めての舞台だから、\nすごく緊張するね？",
-          "text": "It's our first show.\nI'm so nervous!"
+          "text": "Our first show.\nNervous, aren't you?"
         },
         {
           "offset": "0x175c",
@@ -4026,7 +4026,7 @@
         {
           "offset": "0x3af4",
           "original": "{G}。\n占いのプログラム\n作ってきたんだけど…。",
-          "text": "{G}.\nI brought the\nfortune program..."
+          "text": "{G}.\nI made a\nfortune-telling program..."
         },
         {
           "offset": "0x3b20",
@@ -5673,7 +5673,7 @@
         {
           "offset": "0x7b0",
           "original": "私、電脳部だから、\n今日は見学できないの。",
-          "text": "I'm in the Computer Club.\nI can't go."
+          "text": "I'm in the Computer Club.\nI can't go today."
         },
         {
           "offset": "0x7e0",
@@ -5723,7 +5723,7 @@
         {
           "offset": "0x94c",
           "original": "私は、電脳部なのよ。\n今日は見学できるわけ\nないじゃない。",
-          "text": "I'm in the Computer Club!\nI can't just\nlook around."
+          "text": "I'm in the Computer Club!\nI can't just\nlook around today."
         },
         {
           "offset": "0x98c",
@@ -8889,7 +8889,7 @@
         {
           "offset": "0x124",
           "original": "微かな木洩れ陽の中、\n二人、寄り添い歩く道、\nで始まる詩よ。",
-          "text": "The one that starts,\n\"Two walk close, through\nfaint dappled sun.\""
+          "text": "It begins,\n\"Two walk side by side\nin the faint sunlight.\""
         },
         {
           "offset": "0x160",
@@ -8949,7 +8949,7 @@
         {
           "offset": "0x2e4",
           "original": "微かな木洩れ陽の中、\n二人、寄り添い歩く道、\nで始まる詩よ。",
-          "text": "The one that starts,\n\"Two walk close, through\nfaint dappled sun.\""
+          "text": "It begins,\n\"Two walk side by side\nin the faint sunlight.\""
         },
         {
           "offset": "0x320",
@@ -9324,7 +9324,7 @@
         {
           "offset": "0xda0",
           "original": "つまらなくはないけど…。\nやっぱり、抵抗があるね。",
-          "text": "It wasn't boring...\nI still can't get into it."
+          "text": "It wasn't boring...\nBut it's not really for me."
         },
         {
           "offset": "0xdd4",

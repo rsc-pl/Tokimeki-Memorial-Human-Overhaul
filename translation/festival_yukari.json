@@ -29,7 +29,7 @@
         {
           "offset": "0xa0",
           "original": "あ、急用を思い出しました。",
-          "text": "I forgot something urgent!"
+          "text": "I remembered an urgent errand!"
         },
         {
           "offset": "0xc0",
@@ -929,7 +929,7 @@
         {
           "offset": "0x21c8",
           "original": "やっぱり、\nそうなのかなぁ。",
-          "text": "So it's\ntrue, huh..."
+          "text": "Maybe it\nis, after all..."
         },
         {
           "offset": "0x21e8",
@@ -2188,7 +2188,7 @@
         {
           "offset": "0x10b8",
           "original": "{G}って、\n時代劇好きなんだ？",
-          "text": "{G},\nlike period dramas?"
+          "text": "Are you into\nperiod dramas?"
         },
         {
           "offset": "0x10d4",
@@ -2213,7 +2213,7 @@
         {
           "offset": "0x1178",
           "original": "{G}って、\n時代劇好きなんだ？",
-          "text": "{G},\nlike period dramas?"
+          "text": "Are you into\nperiod dramas?"
         },
         {
           "offset": "0x1194",
@@ -2238,7 +2238,7 @@
         {
           "offset": "0x124c",
           "original": "{G}って、\n時代劇好きなんだ？",
-          "text": "{G},\nlike period dramas?"
+          "text": "Are you into\nperiod dramas?"
         },
         {
           "offset": "0x1268",
@@ -3223,7 +3223,7 @@
         {
           "offset": "0x360c",
           "original": "似てないとかで、\nいただけないそうです。",
-          "text": "They won't give it to me.\nIt doesn't look like me."
+          "text": "They say it doesn't\nlook like me."
         },
         {
           "offset": "0x3634",

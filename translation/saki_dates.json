@@ -1814,7 +1814,7 @@
         {
           "offset": "0x82dc",
           "original": "この文学書を探してるんだ。{q}漫画はあるかな？{q}いや、特にないよ。",
-          "text": "I want this literary book.{q}Is there any manga here?{q}Nothing in particular."
+          "text": "I'm after this literary book{q}Any manga?{q}Nothing in particular."
         },
         {
           "offset": "0x8324",

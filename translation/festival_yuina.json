@@ -839,7 +839,7 @@
         {
           "offset": "0x1cfc",
           "original": "愛とか友情が正義の力なんて\n虫酸が走る言葉を平気で言う\n人は信用できないのよ。",
-          "text": "I can't trust anyone who\nsays love and friendship\npower justice. Disgusting."
+          "text": "I can't trust people who\nsay love and friendship\nfuel justice. Disgusting."
         },
         {
           "offset": "0x1d4c",
@@ -2059,7 +2059,7 @@
         {
           "offset": "0x4450",
           "original": "自分で言う…。",
-          "text": "She said that..."
+          "text": "Says the genius..."
         },
         {
           "offset": "0x4464",
@@ -2949,7 +2949,7 @@
         {
           "offset": "0x6170",
           "original": "{G}から\nそんな言葉を聞けるとは\n思わなかった…。",
-          "text": "Hey, {G}...\nI never thought I'd\nhear you say that."
+          "text": "{G}...\nI never expected\nyou to say that."
         },
         {
           "offset": "0x61a0",
@@ -4446,7 +4446,7 @@
         {
           "offset": "0x2288",
           "original": "本当に、悪いわよ。\n見てるだけならいいわよ。",
-          "text": "It really is a bother.\nI'll watch, at least."
+          "text": "I'm no good at it.\nI'll just watch."
         },
         {
           "offset": "0x22b4",
@@ -4636,7 +4636,7 @@
         {
           "offset": "0x2988",
           "original": "見た？\n私の天才的プログラムを。",
-          "text": "See that?\nMy genius program!"
+          "text": "Did you see\nmy genius program?"
         },
         {
           "offset": "0x29a8",
@@ -4651,7 +4651,7 @@
         {
           "offset": "0x29f8",
           "original": "見た？\n私の天才的プログラムを。",
-          "text": "See that?\nMy genius program!"
+          "text": "Did you see\nmy genius program?"
         },
         {
           "offset": "0x2a18",
@@ -4666,7 +4666,7 @@
         {
           "offset": "0x2a68",
           "original": "やったわ。\nもうすぐ全てが\n私の物に…。",
-          "text": "I did it.\nSoon it all\nbelongs to me..."
+          "text": "I did it.\nSoon it'll all\nbe mine..."
         },
         {
           "offset": "0x2a90",
@@ -5725,7 +5725,7 @@
         {
           "offset": "0x1a40",
           "original": "なにそれ？",
-          "text": "What?!"
+          "text": "What is it?"
         },
         {
           "offset": "0x1a4c",
@@ -5750,7 +5750,7 @@
         {
           "offset": "0x1abc",
           "original": "なにそれ？",
-          "text": "What?!"
+          "text": "What is it?"
         },
         {
           "offset": "0x1ac8",
@@ -5765,7 +5765,7 @@
         {
           "offset": "0x1b3c",
           "original": "なにそれ？",
-          "text": "What?!"
+          "text": "What is it?"
         },
         {
           "offset": "0x1b48",
@@ -6005,7 +6005,7 @@
         {
           "offset": "0x22ac",
           "original": "某Ａ国の軍事衛星を借りて、\nレーザー攻撃したのよ。",
-          "text": "I borrowed a satellite\nto fire a laser."
+          "text": "I borrowed A's military\nsatellite to fire a laser."
         },
         {
           "offset": "0x22e0",

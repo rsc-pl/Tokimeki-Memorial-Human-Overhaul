@@ -1644,7 +1644,7 @@
         {
           "offset": "0x3ad8",
           "original": "{G}、演劇部なんだ…。\n大丈夫？\n舞台なんて、立てる？",
-          "text": "So, it's Drama, {G}\nAre you okay?\nCan you go on stage?"
+          "text": "You're in Drama, {G}?\nYou okay?\nCan you perform?"
         },
         {
           "offset": "0x3b0c",
@@ -1664,7 +1664,7 @@
         {
           "offset": "0x3bac",
           "original": "{G}、演劇部なんだ…。\n大丈夫？\n舞台なんて、立てる？",
-          "text": "So, it's Drama, {G}\nAre you okay?\nCan you go on stage?"
+          "text": "You're in Drama, {G}?\nYou okay?\nCan you perform?"
         },
         {
           "offset": "0x3be0",
@@ -1684,7 +1684,7 @@
         {
           "offset": "0x3c74",
           "original": "{G}、演劇部なんだ…。\n大丈夫？\n舞台なんて、立てる？",
-          "text": "So, it's Drama, {G}\nAre you okay?\nCan you go on stage?"
+          "text": "You're in Drama, {G}?\nYou okay?\nCan you perform?"
         },
         {
           "offset": "0x3ca8",
@@ -1724,7 +1724,7 @@
         {
           "offset": "0x3e20",
           "original": "奇麗ですね。\nまるで、光の妖精の\nダンスを見ているみたい。",
-          "text": "How pretty.\nLike watching fairies\nof light dance."
+          "text": "How beautiful.\nLike watching fairies\nof light dancing."
         },
         {
           "offset": "0x3e5c",
@@ -1734,7 +1734,7 @@
         {
           "offset": "0x3e94",
           "original": "奇麗ですね。\nまるで、光の妖精の\nダンスを見ているみたい。",
-          "text": "How pretty.\nLike watching fairies\nof light dance."
+          "text": "How beautiful.\nLike watching fairies\nof light dancing."
         },
         {
           "offset": "0x3ed0",
@@ -1744,7 +1744,7 @@
         {
           "offset": "0x3f08",
           "original": "奇麗ですね。\nまるで、光の妖精の\nダンスを見ているみたい。",
-          "text": "How pretty.\nLike watching fairies\nof light dance."
+          "text": "How beautiful.\nLike watching fairies\nof light dancing."
         },
         {
           "offset": "0x3f44",
@@ -5193,7 +5193,7 @@
         {
           "offset": "0xf04",
           "original": "来年は…、\n他の人のぶんも\n頑張らなくっちゃ…。",
-          "text": "Next year...\nI'll have to work for\nsomeone else too..."
+          "text": "Next year...\nI'll work harder\nfor everyone else, too..."
         },
         {
           "offset": "0xf40",
@@ -6185,12 +6185,12 @@
         {
           "offset": "0x230",
           "original": "ごめんなさい…。\n文芸部のほうが…。\n誘っていただいたのに…。",
-          "text": "I'm sorry...\nI have Literature Club...\nAnd you invited me..."
+          "text": "I'm sorry...\nI've got Literature Club.\nThanks for inviting me."
         },
         {
           "offset": "0x274",
           "original": "ごめんなさい…。\n演劇部のほうが…。\n誘っていただいたのに…。",
-          "text": "I'm sorry...\nI've got Drama Club...\nAnd you invited me..."
+          "text": "I'm sorry...\nI've got Drama Club.\nThanks for inviting me."
         },
         {
           "offset": "0x2b8",

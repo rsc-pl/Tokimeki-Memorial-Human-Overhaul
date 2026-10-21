@@ -754,7 +754,7 @@
         {
           "offset": "0x1a2c",
           "original": "他の部の\n展示も見ないとね。",
-          "text": "Got more\nexhibits to see."
+          "text": "I need to see\nother clubs' exhibits."
         },
         {
           "offset": "0x1a48",
@@ -784,7 +784,7 @@
         {
           "offset": "0x1b38",
           "original": "他の部の\n展示も見ないとね。",
-          "text": "Got more\nexhibits to see."
+          "text": "I need to see\nother clubs' exhibits."
         },
         {
           "offset": "0x1b54",
@@ -814,7 +814,7 @@
         {
           "offset": "0x1c44",
           "original": "他の部の\n展示も見ないとね。",
-          "text": "Got more\nexhibits to see."
+          "text": "I need to see\nother clubs' exhibits."
         },
         {
           "offset": "0x1c60",
@@ -1194,7 +1194,7 @@
         {
           "offset": "0x2908",
           "original": "あっ、急用を思い出したわ。\nもう帰らなくちゃ。",
-          "text": "Oh! I just remembered!\nI need to hurry home."
+          "text": "Oh! I just remembered!\nI have an errand. Gotta go!"
         },
         {
           "offset": "0x2944",
@@ -2284,7 +2284,7 @@
         {
           "offset": "0x4e34",
           "original": "あっ、急用を思い出したわ。\nもう、帰らなくちゃ。",
-          "text": "Oh! I just remembered!\nI need to hurry home."
+          "text": "Oh! I just remembered!\nI have an errand. Gotta go!"
         },
         {
           "offset": "0x4e70",
@@ -2779,7 +2779,7 @@
         {
           "offset": "0x5fc8",
           "original": "忙しくなかったら、\n何だったんだろう。",
-          "text": "If I weren't busy,\nwhat did she want?"
+          "text": "If I weren't busy,\nwhat was that about?"
         },
         {
           "offset": "0x5ff4",
@@ -2809,7 +2809,7 @@
         {
           "offset": "0x6088",
           "original": "いや、今日は忙しくて、\n他の部の見学も\nできないよ。",
-          "text": "Busy today.\nCan't even see\nother exhibits."
+          "text": "I'm too busy\nto even see\nother clubs' exhibits."
         },
         {
           "offset": "0x60bc",
@@ -2899,7 +2899,7 @@
         {
           "offset": "0x63e0",
           "original": "時間があったら、\n何だったんだろう。",
-          "text": "If I'd had time,\nwhat did she want?"
+          "text": "If I'd had time,\nwhat was that about?"
         },
         {
           "offset": "0x6408",
@@ -2929,7 +2929,7 @@
         {
           "offset": "0x64d8",
           "original": "いや、今日は忙しくて、\n他の部の見学も\nできないよ。",
-          "text": "Busy today.\nCan't even see\nother exhibits."
+          "text": "I'm too busy\nto even see\nother clubs' exhibits."
         },
         {
           "offset": "0x650c",
@@ -3571,7 +3571,7 @@
         {
           "offset": "0xab4",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother exhibits."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0xad4",
@@ -3601,7 +3601,7 @@
         {
           "offset": "0xbc8",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother exhibits."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0xbe8",
@@ -3631,7 +3631,7 @@
         {
           "offset": "0xce0",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother exhibits."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0xd00",
@@ -5886,7 +5886,7 @@
         {
           "offset": "0x5630",
           "original": "なんか喜んでない？",
-          "text": "You seem happy."
+          "text": "You seem pleased?"
         },
         {
           "offset": "0x5644",
@@ -6311,7 +6311,7 @@
         {
           "offset": "0x6498",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother exhibits."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0x64b8",
@@ -6723,7 +6723,7 @@
         {
           "offset": "0xc30",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I've got more\nexhibits to see."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0xc50",
@@ -6753,7 +6753,7 @@
         {
           "offset": "0xd44",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I've got more\nexhibits to see."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0xd64",
@@ -6783,7 +6783,7 @@
         {
           "offset": "0xe5c",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I've got more\nexhibits to see."
+          "text": "I need to see\nother clubs' too."
         },
         {
           "offset": "0xe7c",
@@ -7828,7 +7828,7 @@
         {
           "offset": "0x312c",
           "original": "忙しくなかったら、\n何だったんだろう。",
-          "text": "If I weren't busy,\nwhat would she say?"
+          "text": "If I weren't busy,\nwhat was that about?"
         },
         {
           "offset": "0x3158",
@@ -7948,7 +7948,7 @@
         {
           "offset": "0x3570",
           "original": "時間があったら、\n何だったんだろう。",
-          "text": "If I'd had time,\nwhat would she say?"
+          "text": "If I'd had time,\nwhat was that about?"
         },
         {
           "offset": "0x3598",
@@ -9135,7 +9135,7 @@
         {
           "offset": "0x1d88",
           "original": "この曲、\n{G}が作ったんだ。\nへーっ。",
-          "text": "So that tune's\nyours, {G}?\nWow."
+          "text": "You wrote\nit, {G}?\nWow."
         },
         {
           "offset": "0x1dac",
@@ -9185,7 +9185,7 @@
         {
           "offset": "0x1f48",
           "original": "この曲、\n{G}が作ったんだ。\nへーっ。",
-          "text": "So that tune's\nyours, {G}?\nWow."
+          "text": "You wrote\nit, {G}?\nWow."
         },
         {
           "offset": "0x1f6c",
@@ -9235,7 +9235,7 @@
         {
           "offset": "0x20cc",
           "original": "この曲、\n{G}が作ったんだ。",
-          "text": "That tune's\nyours, {G}?"
+          "text": "You wrote\nit, {G}?"
         },
         {
           "offset": "0x20e8",

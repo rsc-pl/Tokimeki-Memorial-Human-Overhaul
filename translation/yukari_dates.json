@@ -674,7 +674,7 @@
         {
           "offset": "0x2c6c",
           "original": "最近は、女の子も結構来てるよ。{q}時代遅れなんじゃない。{q}不良になっちゃう？",
-          "text": "Lots of girls come lately.{q}Aren't you behind the times?{q}Afraid you'll turn punk?"
+          "text": "More girls come here now.{q}Isn't that old-fashioned?{q}Afraid you'll turn punk?"
         },
         {
           "offset": "0x2cc0",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x82a0",
           "original": "{G}泳げるの？{q}頭、大丈夫？{q}{G}っておもしろいね。",
-          "text": "Can you swim, {G}{q}Are you right in the head?{q}You're funny, {G}"
+          "text": "Can you swim, {G}?{q}You okay?{q}You're funny, {G}."
         },
         {
           "offset": "0x82d8",
@@ -1944,7 +1944,7 @@
         {
           "offset": "0x8b78",
           "original": "子供に夢を与えるショーだからね。{q}そんなの気にしない、気にしない。{q}見るのやめればよかったかな…。",
-          "text": "It gives dreams to kids.{q}Pay it no mind at all.{q}Should we have skipped it?"
+          "text": "It's meant to inspire kids.{q}Don't worry about it.{q}Should we have skipped it?"
         },
         {
           "offset": "0x8be4",

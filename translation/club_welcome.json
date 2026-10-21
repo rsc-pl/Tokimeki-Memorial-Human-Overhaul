@@ -104,7 +104,7 @@
         {
           "offset": "0x204",
           "original": "こちらこそ。\n国立競技場目指して、\n頑張ってね。",
-          "text": "You too.\nSet your sights on\nthe National Stadium!"
+          "text": "You too.\nAim for Nat'l Stadium!\nGive it your all!"
         },
         {
           "offset": "0x244",
@@ -124,7 +124,7 @@
         {
           "offset": "0x284",
           "original": "そうよ。\n国立競技場目指して、\n頑張ってね。",
-          "text": "That's right.\nSet your sights on\nthe National Stadium!"
+          "text": "That's right.\nAim for Nat'l Stadium!\nGive it your all!"
         },
         {
           "offset": "0x2c0",
@@ -389,7 +389,7 @@
         {
           "offset": "0x14a8",
           "original": "こちらこそ、よろしくね。\n国立競技場目指して\n頑張ってね。",
-          "text": "Same here!\nMake it to the National\nStadium! Give it your all!"
+          "text": "Same here!\nAim for Nat'l Stadium!\nGive it your all!"
         },
         {
           "offset": "0x15fc",

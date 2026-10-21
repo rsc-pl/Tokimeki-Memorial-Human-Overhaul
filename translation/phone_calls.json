@@ -615,7 +615,7 @@
         {
           "offset": "0x10074",
           "original": "悪いんだけど、\nまた今度誘ってくんない？\nごめんね。",
-          "text": "Sorry about this,\nbut ask me again sometime?\nMy bad."
+          "text": "Sorry, but\ncould you ask me again?\nI'm sorry."
         },
         {
           "offset": "0x100a8",
@@ -1210,7 +1210,7 @@
         {
           "offset": "0x117e8",
           "original": "何？\n用がないなら切るわよ。",
-          "text": "What?\nNo reason? I'll hang up."
+          "text": "What?\nNothing? Hanging up."
         },
         {
           "offset": "0x11804",
@@ -1220,7 +1220,7 @@
         {
           "offset": "0x11824",
           "original": "時間の無駄よ。\n用がないなら切るわよ。",
-          "text": "This is a waste of time.\nNothing? I'm hanging up."
+          "text": "Waste of time.\nNothing? I'm hanging up."
         },
         {
           "offset": "0x1184c",

@@ -1,63 +1,256 @@
 {
-  "description": "Speaker labels and character-name tables in SLPM_86.053. The speaker-label builder at 0x80051438 uses Shiori at 0x800AFB7C or the 16-entry table at 0x800B35F4, then appends ちゃん/さん; the suffixes are blanked for English. The dialogue renderer's fixed {Y} expansion uses 0x800B2240. The four Shiori and four Yoshio literals around 0x800B2180 are used by special speaker-label paths. Full list names are abbreviated only where the original pooled region cannot hold every unabbreviated Romanized name. NAME_ENT.EXN defaults and cheat-name comparisons are deliberately untouched.",
+  "description": "Speaker labels and character-name tables in SLPM_86.053. The speaker-label builder at 0x80051438 uses Shiori at 0x800AFB7C or the 16-entry table at 0x800B35F4, then appends ちゃん/さん; the source-backed suffixes are restored in the English text as -chan/-san (runtime joining still requires Go QA). The dialogue renderer's fixed {Y} expansion uses 0x800B2240. The four Shiori and four Yoshio literals around 0x800B2180 are used by special speaker-label paths. Full list names are abbreviated only where the original pooled region cannot hold every unabbreviated Romanized name. NAME_ENT.EXN defaults and cheat-name comparisons are deliberately untouched.",
   "strings": [
-    {"file": "SLPM_86.053", "offset": "0x6F37C", "original": "詩織", "text": "Shiori"},
-    {"file": "SLPM_86.053", "offset": "0x6F384", "original": "ちゃん", "text": ""},
-    {"file": "SLPM_86.053", "offset": "0x6F38C", "original": "さん", "text": ""},
-    {"file": "SLPM_86.053", "offset": "0x71980", "original": "藤崎", "text": "Shiori"},
-    {"file": "SLPM_86.053", "offset": "0x71988", "original": "藤崎", "text": "Shiori"},
-    {"file": "SLPM_86.053", "offset": "0x7199C", "original": "藤崎", "text": "Shiori"},
-    {"file": "SLPM_86.053", "offset": "0x719A4", "original": "藤崎", "text": "Shiori"},
-    {"file": "SLPM_86.053", "offset": "0x719B8", "original": "好雄", "text": "Yoshio"},
-    {"file": "SLPM_86.053", "offset": "0x719C0", "original": "好雄", "text": "Yoshio"},
-    {"file": "SLPM_86.053", "offset": "0x719D4", "original": "好雄", "text": "Yoshio"},
-    {"file": "SLPM_86.053", "offset": "0x719DC", "original": "好雄", "text": "Yoshio"},
-    {"file": "SLPM_86.053", "offset": "0x71A40", "original": "好雄", "text": "Yoshio"},
-    {"file": "SLPM_86.053", "offset": "0x71A50", "original": "好雄", "text": "Yoshio"}
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x6F37C",
+      "original": "詩織",
+      "text": "Shiori"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x6F384",
+      "original": "ちゃん",
+      "text": "-chan"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x6F38C",
+      "original": "さん",
+      "text": "-san"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71980",
+      "original": "藤崎",
+      "text": "Shiori"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71988",
+      "original": "藤崎",
+      "text": "Shiori"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x7199C",
+      "original": "藤崎",
+      "text": "Shiori"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x719A4",
+      "original": "藤崎",
+      "text": "Shiori"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x719B8",
+      "original": "好雄",
+      "text": "Yoshio"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x719C0",
+      "original": "好雄",
+      "text": "Yoshio"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x719D4",
+      "original": "好雄",
+      "text": "Yoshio"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x719DC",
+      "original": "好雄",
+      "text": "Yoshio"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71A40",
+      "original": "好雄",
+      "text": "Yoshio"
+    },
+    {
+      "file": "SLPM_86.053",
+      "offset": "0x71A50",
+      "original": "好雄",
+      "text": "Yoshio"
+    }
   ],
   "dialogue": [
     {
       "file": "SLPM_86.053",
       "base": "0x80040800",
       "lines": [
-        {"offset": "0x72C80", "original": "藤崎詩織", "text": "Fujisaki S."},
-        {"offset": "0x72C8C", "original": "如月未緒", "text": "Kisaragi Mio"},
-        {"offset": "0x72C98", "original": "紐緒結奈", "text": "Himoo Y."},
-        {"offset": "0x72CA4", "original": "片桐彩子", "text": "Katagiri A"},
-        {"offset": "0x72CB0", "original": "虹野沙希", "text": "Nijino S."},
-        {"offset": "0x72CBC", "original": "古式ゆかり", "text": "Koshiki Y."},
-        {"offset": "0x72CC8", "original": "清川望", "text": "Kiyokawa N."},
-        {"offset": "0x72CD0", "original": "鏡魅羅", "text": "Kagami Mira"},
-        {"offset": "0x72CD8", "original": "朝日奈夕子", "text": "Asahina Yuko"},
-        {"offset": "0x72CE4", "original": "美樹原愛", "text": "Mikihara M."},
-        {"offset": "0x72CF0", "original": "早乙女優美", "text": "Saotome Y."},
-        {"offset": "0x72CFC", "original": "館林見晴", "text": "Tatebayashi M."},
-        {"offset": "0x72D08", "original": "伊集院レイ", "text": "Ijuin Rei"},
-        {"offset": "0x72D14", "original": "早乙女好雄", "text": "Saotome Y."},
-        {"offset": "0x72D20", "original": "外井雪之丞", "text": "Sotoi Y."},
-        {"offset": "0x72D2C", "original": "ぷれいやー", "text": "Player"}
+        {
+          "offset": "0x72C80",
+          "original": "藤崎詩織",
+          "text": "Fujisaki S."
+        },
+        {
+          "offset": "0x72C8C",
+          "original": "如月未緒",
+          "text": "Kisaragi Mio"
+        },
+        {
+          "offset": "0x72C98",
+          "original": "紐緒結奈",
+          "text": "Himoo Y."
+        },
+        {
+          "offset": "0x72CA4",
+          "original": "片桐彩子",
+          "text": "Katagiri A"
+        },
+        {
+          "offset": "0x72CB0",
+          "original": "虹野沙希",
+          "text": "Nijino S."
+        },
+        {
+          "offset": "0x72CBC",
+          "original": "古式ゆかり",
+          "text": "Koshiki Y."
+        },
+        {
+          "offset": "0x72CC8",
+          "original": "清川望",
+          "text": "Kiyokawa N."
+        },
+        {
+          "offset": "0x72CD0",
+          "original": "鏡魅羅",
+          "text": "Kagami Mira"
+        },
+        {
+          "offset": "0x72CD8",
+          "original": "朝日奈夕子",
+          "text": "Asahina Yuko"
+        },
+        {
+          "offset": "0x72CE4",
+          "original": "美樹原愛",
+          "text": "Mikihara M."
+        },
+        {
+          "offset": "0x72CF0",
+          "original": "早乙女優美",
+          "text": "Saotome Y."
+        },
+        {
+          "offset": "0x72CFC",
+          "original": "館林見晴",
+          "text": "Tatebayashi M."
+        },
+        {
+          "offset": "0x72D08",
+          "original": "伊集院レイ",
+          "text": "Ijuin Rei"
+        },
+        {
+          "offset": "0x72D14",
+          "original": "早乙女好雄",
+          "text": "Saotome Y."
+        },
+        {
+          "offset": "0x72D20",
+          "original": "外井雪之丞",
+          "text": "Sotoi Y."
+        },
+        {
+          "offset": "0x72D2C",
+          "original": "ぷれいやー",
+          "text": "Player"
+        }
       ]
     },
     {
       "file": "SLPM_86.053",
       "base": "0x80040800",
       "lines": [
-        {"offset": "0x72D78", "original": "藤崎", "text": "Shiori"},
-        {"offset": "0x72D80", "original": "如月", "text": "Mio"},
-        {"offset": "0x72D88", "original": "紐緒", "text": "Himoo"},
-        {"offset": "0x72D90", "original": "片桐", "text": "Ayako"},
-        {"offset": "0x72D98", "original": "虹野", "text": "Nijino"},
-        {"offset": "0x72DA0", "original": "古式", "text": "Yukari"},
-        {"offset": "0x72DA8", "original": "清川", "text": "Nozomi"},
-        {"offset": "0x72DB0", "original": "鏡", "text": "Mira"},
-        {"offset": "0x72DB4", "original": "朝日奈", "text": "Yuko"},
-        {"offset": "0x72DBC", "original": "美樹原", "text": "Megumi"},
-        {"offset": "0x72DC4", "original": "早乙女", "text": "Yumi"},
-        {"offset": "0x72DCC", "original": "館林", "text": "Miharu"},
-        {"offset": "0x72DD4", "original": "伊集院", "text": "Ijuin"},
-        {"offset": "0x72DDC", "original": "好雄", "text": "Yoshio"},
-        {"offset": "0x72DE4", "original": "外井", "text": "Sotoi"},
-        {"offset": "0x72DEC", "original": "優美", "text": "Yumi"}
+        {
+          "offset": "0x72D78",
+          "original": "藤崎",
+          "text": "Shiori"
+        },
+        {
+          "offset": "0x72D80",
+          "original": "如月",
+          "text": "Mio"
+        },
+        {
+          "offset": "0x72D88",
+          "original": "紐緒",
+          "text": "Himoo"
+        },
+        {
+          "offset": "0x72D90",
+          "original": "片桐",
+          "text": "Ayako"
+        },
+        {
+          "offset": "0x72D98",
+          "original": "虹野",
+          "text": "Nijino"
+        },
+        {
+          "offset": "0x72DA0",
+          "original": "古式",
+          "text": "Yukari"
+        },
+        {
+          "offset": "0x72DA8",
+          "original": "清川",
+          "text": "Nozomi"
+        },
+        {
+          "offset": "0x72DB0",
+          "original": "鏡",
+          "text": "Mira"
+        },
+        {
+          "offset": "0x72DB4",
+          "original": "朝日奈",
+          "text": "Yuko"
+        },
+        {
+          "offset": "0x72DBC",
+          "original": "美樹原",
+          "text": "Megumi"
+        },
+        {
+          "offset": "0x72DC4",
+          "original": "早乙女",
+          "text": "Yumi"
+        },
+        {
+          "offset": "0x72DCC",
+          "original": "館林",
+          "text": "Miharu"
+        },
+        {
+          "offset": "0x72DD4",
+          "original": "伊集院",
+          "text": "Ijuin"
+        },
+        {
+          "offset": "0x72DDC",
+          "original": "好雄",
+          "text": "Yoshio"
+        },
+        {
+          "offset": "0x72DE4",
+          "original": "外井",
+          "text": "Sotoi"
+        },
+        {
+          "offset": "0x72DEC",
+          "original": "優美",
+          "text": "Yumi"
+        }
       ]
     }
   ]

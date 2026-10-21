@@ -264,7 +264,7 @@
         {
           "offset": "0x10fc",
           "original": "俺も、そう思うよ。{q}ガキなんじゃない？{q}{G}と一緒ならどこでも…。",
-          "text": "I think so, too.{q}What are you, a kid?{q}Next to {G}"
+          "text": "I think so, too.{q}What are you, a kid?{q}Anywhere with {G}..."
         },
         {
           "offset": "0x1144",
@@ -444,7 +444,7 @@
         {
           "offset": "0x1978",
           "original": "そう言えば、\nこの間もらった詩集、\nわりと読めたよ。",
-          "text": "Oh, by the way,\nthat poetry book you\ngave me wasn't half bad."
+          "text": "By the way,\nI managed to read\nthat poetry book."
         },
         {
           "offset": "0x19ac",
@@ -474,7 +474,7 @@
         {
           "offset": "0x1a94",
           "original": "そう言えば、\nこの間もらった文集、\nわりと読めたよ。",
-          "text": "Oh, by the way,\nthe anthology you gave me\nwasn't half bad."
+          "text": "By the way,\nI managed to read\nthat anthology."
         },
         {
           "offset": "0x1ac8",
@@ -1819,7 +1819,7 @@
         {
           "offset": "0x7b6c",
           "original": "やっぱそうなんだ。{q}普通いないよ。{q}えっ？\n撮影用って何。",
-          "text": "Figured as much.{q}Who has?{q}Huh?\nWhat film ones?"
+          "text": "Figured as much.{q}Not many have.{q}Huh?\nWhat film ones?"
         },
         {
           "offset": "0x7ba8",
@@ -1984,7 +1984,7 @@
         {
           "offset": "0x823c",
           "original": "こればっかり乗ろうぜ。{q}楽しいのは{G}だけだよ。{q}怖くないの？",
-          "text": "Let's ride this all day!{q}Fun for {G}{q}Aren't you scared?"
+          "text": "Ride this all day!{q}Only you enjoy this, {G}.{q}Aren't you scared?"
         },
         {
           "offset": "0x8280",
@@ -2109,7 +2109,7 @@
         {
           "offset": "0x874c",
           "original": "こればっかり乗ろうぜ。{q}楽しいのは{G}だけだよ。{q}怖くないの？",
-          "text": "Let's ride this all day!{q}Fun for {G}{q}Aren't you scared?"
+          "text": "Ride this all day!{q}Only you enjoy this, {G}.{q}Aren't you scared?"
         },
         {
           "offset": "0x8790",

@@ -718,7 +718,7 @@
         {
           "offset": "0x1470",
           "original": "なんだ同じ。\n誰でも大吉って感じ。",
-          "text": "Same here.\nEveryone gets Best?"
+          "text": "Same.\nGuess everyone gets Best."
         },
         {
           "offset": "0x1494",
@@ -1498,7 +1498,7 @@
         {
           "offset": "0x4bd0",
           "original": "明けまして、おめでとう。\n紐緒さんが家に来るなんて、\n新年早々、めずらしいね。",
-          "text": "Himoo-san?\nWhat a surprise\non New Year's Day!"
+          "text": "Happy New Year.\nHimoo-san, at my door?\nWhat a surprise!"
         },
         {
           "offset": "0x4c20",
@@ -2313,7 +2313,7 @@
         {
           "offset": "0x7174",
           "original": "私は素敵な恋人が\nできますようにって、\nお願いしたわ。\nだから、教えなさいよ。",
-          "text": "I wished for\na great boyfriend.\nNow tell me\nwhat you wished for."
+          "text": "I wished to find\nsomeone special.\nNow tell me\nwhat you wished for."
         },
         {
           "offset": "0x71c0",
@@ -2403,7 +2403,7 @@
         {
           "offset": "0x747c",
           "original": "当然、大吉よ。\n日頃の行いがいいから。",
-          "text": "Best, of course.\nI always behave."
+          "text": "Best, of course.\nI'm well-behaved."
         },
         {
           "offset": "0x74a4",
@@ -6423,7 +6423,7 @@
         {
           "offset": "0x15a98",
           "original": "私は、サッカー部が\n国立競技場に行けるように\n必勝祈願よ。",
-          "text": "I prayed our soccer\nteam would make it\nto Nat'l Stadium."
+          "text": "I prayed our soccer\nteam would reach\nthe National Stadium."
         },
         {
           "offset": "0x15ad4",
@@ -6443,7 +6443,7 @@
         {
           "offset": "0x15b50",
           "original": "私は、サッカー部が\n国立競技場に行けるように\nお願いしたわ。",
-          "text": "I wished our soccer\nteam would make it\nto Nat'l Stadium."
+          "text": "I wished our soccer\nteam could reach\nthe National Stadium."
         },
         {
           "offset": "0x15b8c",

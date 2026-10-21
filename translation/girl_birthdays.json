@@ -4352,7 +4352,7 @@
         {
           "offset": "0xc98",
           "original": "‥‥。\nと、とりあえず、\n貰っておくわね…。",
-          "text": "...\nF-for now,\nI'll keep it..."
+          "text": "...\nW-well, I guess\nI'll take it..."
         },
         {
           "offset": "0xcc8",
@@ -4487,7 +4487,7 @@
         {
           "offset": "0x112c",
           "original": "ハイ、藤崎です。",
-          "text": "Hello, Fujisaki."
+          "text": "Hi, Fujisaki here."
         },
         {
           "offset": "0x1140",
@@ -4512,7 +4512,7 @@
         {
           "offset": "0x11c8",
           "original": "ハイ、藤崎です。",
-          "text": "Hello, Fujisaki."
+          "text": "Hi, Fujisaki here."
         },
         {
           "offset": "0x11dc",
@@ -4527,7 +4527,7 @@
         {
           "offset": "0x121c",
           "original": "ハイ、藤崎です。",
-          "text": "Hello, Fujisaki."
+          "text": "Hi, Fujisaki here."
         },
         {
           "offset": "0x1230",
@@ -4547,7 +4547,7 @@
         {
           "offset": "0x1284",
           "original": "ハイ、藤崎です。",
-          "text": "Hello, Fujisaki."
+          "text": "Hi, Fujisaki here."
         },
         {
           "offset": "0x1298",
@@ -4762,7 +4762,7 @@
         {
           "offset": "0x23dc",
           "original": "待たせたわね。\n用件は、何？",
-          "text": "I made you wait.\nWhat is it?"
+          "text": "Kept you waiting.\nWhat is it?"
         },
         {
           "offset": "0x23fc",
@@ -4787,7 +4787,7 @@
         {
           "offset": "0x24ac",
           "original": "待たせたわね。\n用件は、何？",
-          "text": "I made you wait.\nWhat is it?"
+          "text": "Kept you waiting.\nWhat is it?"
         },
         {
           "offset": "0x24cc",
@@ -5837,7 +5837,7 @@
         {
           "offset": "0x6314",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x6328",
@@ -5857,7 +5857,7 @@
         {
           "offset": "0x6378",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x638c",
@@ -5877,7 +5877,7 @@
         {
           "offset": "0x63d8",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x63ec",
@@ -5897,7 +5897,7 @@
         {
           "offset": "0x6434",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x6448",
@@ -5907,7 +5907,7 @@
         {
           "offset": "0x6468",
           "original": "……。\n何か用かよ。",
-          "text": "...\nWhat is it?"
+          "text": "...\nNeed something?"
         },
         {
           "offset": "0x647c",
@@ -6072,7 +6072,7 @@
         {
           "offset": "0x7488",
           "original": "なんだこりゃ？\nと、とりあえず、\n貰っとくよ。",
-          "text": "What the heck?\nW-well, for now,\nI'll take it."
+          "text": "What the heck?\nW-well, I guess\nI'll take it."
         },
         {
           "offset": "0x74bc",
@@ -6207,7 +6207,7 @@
         {
           "offset": "0x7928",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x793c",
@@ -6227,7 +6227,7 @@
         {
           "offset": "0x798c",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x79a0",
@@ -6247,7 +6247,7 @@
         {
           "offset": "0x79ec",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x7a00",
@@ -6267,7 +6267,7 @@
         {
           "offset": "0x7a48",
           "original": "ハイ、清川です。",
-          "text": "Hello, Kiyokawa."
+          "text": "Hi, Kiyokawa here."
         },
         {
           "offset": "0x7a5c",
@@ -6277,7 +6277,7 @@
         {
           "offset": "0x7a7c",
           "original": "……。\n何か用かよ。",
-          "text": "...\nWhat is it?"
+          "text": "...\nNeed something?"
         },
         {
           "offset": "0x7a90",
@@ -6407,7 +6407,7 @@
         {
           "offset": "0x8988",
           "original": "そんな…。\n開けてもいいですか？",
-          "text": "Oh, no...\nMay I open it?"
+          "text": "Really...?\nMay I open it?"
         },
         {
           "offset": "0x89a8",

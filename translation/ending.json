@@ -119,7 +119,7 @@
         {
           "offset": "0x4c4",
           "original": "卒業したら、どっか旅行に行こうよ。",
-          "text": "Let's go on a trip after!"
+          "text": "Let's go after graduation!"
         },
         {
           "offset": "0x4e8",
@@ -1979,7 +1979,7 @@
         {
           "offset": "0x7ea0",
           "original": "やっぱり、一目ぼれを信じます。\n私と付き合ってください。",
-          "text": "Love at first sight is real.\nPlease go out with me."
+          "text": "I believe in love at\nfirst sight. Please date me."
         },
         {
           "offset": "0x7ed8",
@@ -2019,12 +2019,12 @@
         {
           "offset": "0x8190",
           "original": "あっ。",
-          "text": "Oops."
+          "text": "Oh."
         },
         {
           "offset": "0x8198",
           "original": "あっ。",
-          "text": "Oops."
+          "text": "Oh."
         }
       ]
     }

@@ -1059,7 +1059,7 @@
         {
           "offset": "0x4a8c",
           "original": "電気の無駄遣いね。\nもっと、知的な物を\n造って欲しいわ",
-          "text": "What a waste of power.\nThey should build\nsomething intelligent."
+          "text": "Such a waste of power.\nWhy not build\nsomething smarter?"
         },
         {
           "offset": "0x4ac8",
@@ -1864,7 +1864,7 @@
         {
           "offset": "0x8124",
           "original": "本当、眠かったよ。{q}いい眺めじゃなかった？{q}{G}ばかり見てたから…。",
-          "text": "Yeah, I was so sleepy.{q}Wasn't the view great?{q}My eyes were on {G}"
+          "text": "I was so sleepy.{q}Wasn't the view great?{q}I only saw you, {G}."
         },
         {
           "offset": "0x816c",
@@ -1984,7 +1984,7 @@
         {
           "offset": "0x875c",
           "original": "本当、眠かったよ。{q}いい眺めじゃなかった？{q}{G}ばかり見てたから…。",
-          "text": "Yeah, I was so sleepy.{q}Wasn't the view great?{q}My eyes were on {G}"
+          "text": "I was so sleepy.{q}Wasn't the view great?{q}I only saw you, {G}."
         },
         {
           "offset": "0x87a4",
@@ -2104,7 +2104,7 @@
         {
           "offset": "0x8d90",
           "original": "本当、眠かったよ。{q}いい眺めじゃなかった？{q}{G}ばかり見てたから…。",
-          "text": "Yeah, I was so sleepy.{q}Wasn't the view great?{q}My eyes were on {G}"
+          "text": "I was so sleepy.{q}Wasn't the view great?{q}I only saw you, {G}."
         },
         {
           "offset": "0x8dd8",

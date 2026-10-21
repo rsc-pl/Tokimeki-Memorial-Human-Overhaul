@@ -2283,7 +2283,7 @@
         {
           "offset": "0x6fc",
           "original": "私もう駄目。\nこれ以上読むなら、\n一人で読んでくれない。",
-          "text": "If you want to\nread more, do it\non your own."
+          "text": "I'm done. If you\nwant to read more,\ndo it on your own."
         },
         {
           "offset": "0x734",
@@ -2723,7 +2723,7 @@
         {
           "offset": "0x16c8",
           "original": "この私の美貌が\n一途な愛を妨げているのよ。\nあぁ、神様を呪うわ。",
-          "text": "My beauty stands in\nthe way of devoted love.\nAh, I curse the gods."
+          "text": "My beauty keeps me\nfrom loving just one.\nCurse the heavens!"
         },
         {
           "offset": "0x1708",
@@ -3093,7 +3093,7 @@
         {
           "offset": "0x2498",
           "original": "お待たせしたわね。\nさあ、帰りましょう。",
-          "text": "I kept you waiting.\nLet's go home."
+          "text": "Kept you waiting.\nLet's go home."
         },
         {
           "offset": "0x24c0",
@@ -3668,7 +3668,7 @@
         {
           "offset": "0x39b8",
           "original": "別に。\n正体さえわかれば\n関係ないわ。",
-          "text": "Not really.\nI know now.\nDoesn't matter."
+          "text": "No.\nI know what it is.\nDoesn't matter."
         },
         {
           "offset": "0x39e0",
