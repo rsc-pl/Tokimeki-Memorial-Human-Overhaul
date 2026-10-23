@@ -41,6 +41,8 @@ def main(argv=None) -> int:
     ap.add_argument("-f", "--force", action="store_true", help="overwrite an existing output folder")
     ap.add_argument("-v", "--verbose", action="store_true",
                     help="list every patched string, not just a summary per file")
+    ap.add_argument("--all-errors", action="store_true",
+                    help="report all independent patch planning errors before aborting (no output is written)")
     args = ap.parse_args(argv)
     # The log contains Japanese and English; a console or file that can't show
     # a character must not stop the patcher halfway through writing the copy.
@@ -80,7 +82,8 @@ def main(argv=None) -> int:
         data_src = next(f for f in to_copy if f.name == data_name)
         with Track(data_src) as track:
             edits = patcher.plan(track, strings, images, byte_patches, dialogue,
-                                 log=progress.line, progress=progress.status)
+                                 log=progress.line, progress=progress.status,
+                                 collect_errors=args.all_errors)
     except (ValueError, OSError) as e:
         progress.clear()
         print(f"error: {e}", file=sys.stderr)

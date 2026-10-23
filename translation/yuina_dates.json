@@ -24,7 +24,7 @@
         {
           "offset": "0x70",
           "original": "この絵、素晴らしいと思わない？{q}あの人、奇麗だな…。{q}この絵、{G}に似てない？",
-          "text": "Isn't this painting great?{q}That woman's pretty...{q}Looks just like {G}"
+          "text": "Isn't this painting great?{q}That woman's pretty...{q}Looks like you, {G}?"
         },
         {
           "offset": "0xc4",
@@ -174,12 +174,12 @@
         {
           "offset": "0xb0c",
           "original": "{G}なら取れるって。{q}{G}には絶対取れないね。{q}何とかなるんじゃない。",
-          "text": "You can get it, {G}{q}You can't get it, {G}{q}You'll manage somehow."
+          "text": "You can get it, {G}{q}You can't, {G}{q}You'll manage somehow."
         },
         {
           "offset": "0xb54",
           "original": "玉の回転モーメントと、\nそれに伴うピンの\n反射を計算して…。{q}失礼ね。\n不愉快だわ。{q}しっかり計算しないと\n取れないわ。",
-          "text": "Calculate the ball's spin\nmoment and the pins'\nresulting deflection...{q}How rude.\nMost unpleasant.{q}Only careful calculation\nwill get it."
+          "text": "Calculate the ball's spin\nand how the pins\nrebound...{q}How rude.\nMost unpleasant.{q}Only careful calculation\nwill get it."
         },
         {
           "offset": "0xbcc",
@@ -544,7 +544,7 @@
         {
           "offset": "0x2404",
           "original": "はい、{G}にあげるよ。",
-          "text": "Here, this is for {G}"
+          "text": "Here, for you, {G}."
         },
         {
           "offset": "0x241c",
@@ -564,7 +564,7 @@
         {
           "offset": "0x2478",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}."
+          "text": "Yours if I win, {G}"
         },
         {
           "offset": "0x249c",
@@ -639,7 +639,7 @@
         {
           "offset": "0x29f4",
           "original": "そ、それじゃ、帰ろうか…。{q}最近は、女の子も多いんだよ。{q}{G}は、嫌いなの？",
-          "text": "Th-then shall we leave...?{q}Lots of girls come lately.{q}You hate it here, {G}"
+          "text": "Th-then shall we leave...?{q}Lots of girls come lately.{q}You hate it, {G}?"
         },
         {
           "offset": "0x2a44",
@@ -859,7 +859,7 @@
         {
           "offset": "0x3b20",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3ba8",
@@ -874,7 +874,7 @@
         {
           "offset": "0x3be0",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3c68",
@@ -889,7 +889,7 @@
         {
           "offset": "0x3ca8",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3ee0",
@@ -1059,7 +1059,7 @@
         {
           "offset": "0x4a8c",
           "original": "電気の無駄遣いね。\nもっと、知的な物を\n造って欲しいわ",
-          "text": "Such a waste of power.\nWhy not build\nsomething smarter?"
+          "text": "Such a waste of power.\nI wish they'd build\nsomething smarter."
         },
         {
           "offset": "0x4ac8",
@@ -1329,7 +1329,7 @@
         {
           "offset": "0x5da4",
           "original": "俺も、そう思うよ。{q}たまには、おしゃれでもしたら。{q}{G}に似合うかもよ。",
-          "text": "I really think so too.{q}Dress up for once, though.{q}It might suit {G}"
+          "text": "I really think so too.{q}Dress up for once, though.{q}Might suit you, {G}."
         },
         {
           "offset": "0x5df0",
@@ -1394,7 +1394,7 @@
         {
           "offset": "0x6170",
           "original": "あなたにも\nこの良さがわかるなんて\n意外ね。{q}凡人のくせに失礼ね。\n不愉快だわ。{q}当たり前よ。\n他に買う物がある？",
-          "text": "Surprising that even\nyou can see what's\ngood about it.{q}Rude, for a commoner.\nMost unpleasant.{q}Of course.\nAnything else to buy?"
+          "text": "Surprising that even\nyou can see what's\ngood about it.{q}How rude for a mere mortal.\nMost unpleasant.{q}Of course.\nAnything else to buy?"
         },
         {
           "offset": "0x61e4",
@@ -1554,7 +1554,7 @@
         {
           "offset": "0x6d54",
           "original": "どうしたの、突然。{q}エッチだね。{q}筋肉質がタイプなの？",
-          "text": "Hey, where'd that come from?{q}You're so naughty.{q}You're into muscular guys?"
+          "text": "Hey, where'd that come from?{q}You're such a perv.{q}You're into muscular guys?"
         },
         {
           "offset": "0x6d94",
@@ -1749,12 +1749,12 @@
         {
           "offset": "0x7c3c",
           "original": "待たせたわね。\nさあ、行くわよ。",
-          "text": "I kept you waiting.\nLet's go."
+          "text": "Kept you waiting.\nLet's go."
         },
         {
           "offset": "0x7c5c",
           "original": "{-男の声}大変だ。\nヒーローが気絶してるぞ。",
-          "text": "{-Voice}This is bad!\nThe hero's passed out!"
+          "text": "{-Man}This is bad!\nThe hero's passed out!"
         },
         {
           "offset": "0x7c88",
@@ -1879,7 +1879,7 @@
         {
           "offset": "0x8214",
           "original": "頭を休めたら？{q}景色でも見たら？{q}{G}と一緒だから楽しいよ。",
-          "text": "Why not rest your brain?{q}Why not enjoy the scenery?{q}It's fun with {G}"
+          "text": "Why not rest your brain?{q}Why not enjoy the scenery?{q}I'm having fun, {G}."
         },
         {
           "offset": "0x8254",
@@ -1999,7 +1999,7 @@
         {
           "offset": "0x884c",
           "original": "頭を休めたら？{q}景色でも見たら？{q}{G}と一緒だから楽しいよ。",
-          "text": "Why not rest your brain?{q}Why not enjoy the scenery?{q}It's fun with {G}"
+          "text": "Why not rest your brain?{q}Why not enjoy the scenery?{q}I'm having fun, {G}."
         },
         {
           "offset": "0x888c",
@@ -2119,7 +2119,7 @@
         {
           "offset": "0x8e80",
           "original": "頭を休めたら？{q}景色でも見たら？{q}{G}と一緒だから楽しいよ。",
-          "text": "Why not rest your brain?{q}Why not enjoy the scenery?{q}It's fun with {G}"
+          "text": "Why not rest your brain?{q}Why not enjoy the scenery?{q}I'm having fun, {G}."
         },
         {
           "offset": "0x8ec0",
@@ -2209,7 +2209,7 @@
         {
           "offset": "0x9f64",
           "original": "後で、道路が汚くなるんだよね。{q}{G}らしくないよ。{q}さすが日本を代表する花だね。",
-          "text": "The roads get messy after.{q}That's not like {G}{q}Japan's iconic flower!"
+          "text": "The roads get messy after.{q}Not like you, {G}.{q}Japan's iconic flower!"
         },
         {
           "offset": "0x9fb8",

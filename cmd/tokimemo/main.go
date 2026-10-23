@@ -81,6 +81,7 @@ func getInt(v any) (int64, error) {
 }
 func validate(root string) (counter, error) {
 	var n counter
+	var issues []error
 	paths, e := filepath.Glob(filepath.Join(root, "translation", "*.json"))
 	if e != nil {
 		return n, e
@@ -92,11 +93,13 @@ func validate(root string) (counter, error) {
 	for _, p := range paths {
 		raw, e := os.ReadFile(p)
 		if e != nil {
-			return n, e
+			issues = append(issues, fmt.Errorf("%s: %w", filepath.Base(p), e))
+			continue
 		}
 		var doc map[string]json.RawMessage
 		if e = json.Unmarshal(raw, &doc); e != nil {
-			return n, fmt.Errorf("%s: %w", filepath.Base(p), e)
+			issues = append(issues, fmt.Errorf("%s: %w", filepath.Base(p), e))
+			continue
 		}
 		n.Files++
 		for _, key := range []string{"strings", "dialogue", "images", "bytes"} {
@@ -106,55 +109,66 @@ func validate(root string) (counter, error) {
 			}
 			var items []map[string]any
 			if e = json.Unmarshal(b, &items); e != nil {
-				return n, fmt.Errorf("%s/%s: %w", filepath.Base(p), key, e)
+				issues = append(issues, fmt.Errorf("%s/%s: %w", filepath.Base(p), key, e))
+				continue
 			}
 			for i, item := range items {
 				label := fmt.Sprintf("%s:%s[%d]", filepath.Base(p), key, i)
 				file, ok := item["file"].(string)
 				if !ok || file == "" {
-					return n, fmt.Errorf("%s: missing file", label)
+					issues = append(issues, fmt.Errorf("%s: missing file", label))
+					continue
 				}
 				if !strings.HasPrefix(file, "/") && !strings.Contains(file, "..") {
 				} else {
-					return n, fmt.Errorf("%s: unsafe disc path", label)
+					issues = append(issues, fmt.Errorf("%s: unsafe disc path", label))
+					continue
 				}
 				switch key {
 				case "strings":
 					n.Strings++
 					if _, e = getInt(item["offset"]); e != nil {
-						return n, fmt.Errorf("%s: offset: %w", label, e)
+						issues = append(issues, fmt.Errorf("%s: offset: %w", label, e))
+						continue
 					}
 					for _, k := range []string{"original", "text"} {
 						if _, ok := item[k].(string); !ok {
-							return n, fmt.Errorf("%s: %s not text", label, k)
+							issues = append(issues, fmt.Errorf("%s: %s not text", label, k))
+							continue
 						}
 					}
 					if slot, ok := item["slot"]; ok {
 						v, e := getInt(slot)
 						if e != nil || v < 2 {
-							return n, fmt.Errorf("%s: bad slot", label)
+							issues = append(issues, fmt.Errorf("%s: bad slot", label))
+							continue
 						}
 					}
 				case "dialogue":
 					n.Blocks++
 					if _, e = getInt(item["base"]); e != nil {
-						return n, fmt.Errorf("%s: base: %w", label, e)
+						issues = append(issues, fmt.Errorf("%s: base: %w", label, e))
+						continue
 					}
 					lines, ok := item["lines"].([]any)
 					if !ok {
-						return n, fmt.Errorf("%s: missing lines", label)
+						issues = append(issues, fmt.Errorf("%s: missing lines", label))
+						continue
 					}
 					for j, l := range lines {
 						m, ok := l.(map[string]any)
 						if !ok {
-							return n, fmt.Errorf("%s line %d: invalid", label, j)
+							issues = append(issues, fmt.Errorf("%s line %d: invalid", label, j))
+							continue
 						}
 						if _, e = getInt(m["offset"]); e != nil {
-							return n, fmt.Errorf("%s line %d: offset: %w", label, j, e)
+							issues = append(issues, fmt.Errorf("%s line %d: offset: %w", label, j, e))
+							continue
 						}
 						for _, k := range []string{"original", "text"} {
 							if _, ok := m[k].(string); !ok {
-								return n, fmt.Errorf("%s line %d: %s invalid", label, j, k)
+								issues = append(issues, fmt.Errorf("%s line %d: %s invalid", label, j, k))
+								continue
 							}
 						}
 						n.Lines++
@@ -163,31 +177,36 @@ func validate(root string) (counter, error) {
 					n.Images++
 					relative, ok := item["png"].(string)
 					if !ok || relative == "" {
-						return n, fmt.Errorf("%s: missing png", label)
+						issues = append(issues, fmt.Errorf("%s: missing png", label))
+						continue
 					}
 					png := filepath.Clean(filepath.Join(filepath.Dir(p), relative))
 					parent := filepath.Join(root, "translation") + string(os.PathSeparator)
 					if !strings.HasPrefix(png, parent) {
-						return n, fmt.Errorf("%s: unsafe png path", label)
+						issues = append(issues, fmt.Errorf("%s: unsafe png path", label))
+						continue
 					}
 					if _, e = os.Stat(png); e != nil {
-						return n, fmt.Errorf("%s: PNG %s: %w", label, relative, e)
+						issues = append(issues, fmt.Errorf("%s: PNG %s: %w", label, relative, e))
+						continue
 					}
 				case "bytes":
 					n.Bytes++
 					if _, e = getInt(item["offset"]); e != nil {
-						return n, fmt.Errorf("%s: offset: %w", label, e)
+						issues = append(issues, fmt.Errorf("%s: offset: %w", label, e))
+						continue
 					}
 					for _, k := range []string{"original", "replacement"} {
 						if _, ok := item[k].(string); !ok {
-							return n, fmt.Errorf("%s: missing %s", label, k)
+							issues = append(issues, fmt.Errorf("%s: missing %s", label, k))
+							continue
 						}
 					}
 				}
 			}
 		}
 	}
-	return n, nil
+	return n, errors.Join(issues...)
 }
 func showCounts(n counter) {
 	say("JSON files", strconv.Itoa(n.Files))
@@ -392,6 +411,18 @@ func (w *stageWriter) Write(p []byte) (int, error) {
 	w.tail = combined
 	return n, e
 }
+
+// productionPlannerArgs keeps public Go CLI/TUI builds on the authoritative
+// Python planner while requesting all independent errors in one pass.
+// The writer is never entered if validation fails.
+func productionPlannerArgs(input string, preflight bool) []string {
+	module := "tokipatch"
+	if preflight {
+		module = "tokipatch.preflight"
+	}
+	return []string{"-m", module, input, "--all-errors"}
+}
+
 func cmdBuild(root string, argv []string, preflight bool) error {
 	fs := flag.NewFlagSet("build", flag.ContinueOnError)
 	out := fs.String("output", "", "separate output directory (default: .local/build/ps1-english)")
@@ -419,11 +450,7 @@ func cmdBuild(root string, argv []string, preflight bool) error {
 		return e
 	}
 	fmt.Fprintf(commandOutput, "Corpus check passed: %d files / %d dialogue lines\n", n.Files, n.Lines)
-	a := []string{"-m", "tokipatch"}
-	if preflight {
-		a = []string{"-m", "tokipatch.preflight"}
-	}
-	a = append(a, input)
+	a := productionPlannerArgs(input, preflight)
 	if !preflight {
 		target := *out
 		if target == "" {

@@ -64,7 +64,7 @@
         {
           "offset": "0x10",
           "original": "{G}も\n来てたのか。",
-          "text": "Hey, it's {G}\nYou came too?"
+          "text": "Oh, {G},\nyou came too?"
         },
         {
           "offset": "0x24",
@@ -89,7 +89,7 @@
         {
           "offset": "0xac",
           "original": "{G}も来てたんだ。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0xbc",
@@ -279,7 +279,7 @@
         {
           "offset": "0xb48",
           "original": "{G}もいたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0xb58",
@@ -304,12 +304,12 @@
         {
           "offset": "0xbd8",
           "original": "{G}もいたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0xbe8",
           "original": "研究があるから、\nもう行くわ。",
-          "text": "I have research,\nso I'm leaving."
+          "text": "I have research to do,\nso I have to go."
         },
         {
           "offset": "0xc14",
@@ -384,7 +384,7 @@
         {
           "offset": "0x1124",
           "original": "{G}もいたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x1134",
@@ -409,7 +409,7 @@
         {
           "offset": "0x11e0",
           "original": "{G}もいたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x11f0",
@@ -484,7 +484,7 @@
         {
           "offset": "0x16f8",
           "original": "{G}も\n来てたのか。",
-          "text": "Hey, it's {G}\nYou came too?"
+          "text": "Oh, {G},\nyou came too?"
         },
         {
           "offset": "0x170c",
@@ -509,7 +509,7 @@
         {
           "offset": "0x179c",
           "original": "{G}も来てたんだ。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x17ac",
@@ -579,7 +579,7 @@
         {
           "offset": "0x1c7c",
           "original": "{G}も、\n来てたのか。",
-          "text": "Hey, it's {G}\nYou came too?"
+          "text": "Oh, {G},\nyou came too?"
         },
         {
           "offset": "0x1c90",
@@ -604,7 +604,7 @@
         {
           "offset": "0x1d20",
           "original": "{G}も来てたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x1d30",
@@ -679,7 +679,7 @@
         {
           "offset": "0x2284",
           "original": "{G}も、\n来てたのか。",
-          "text": "Hey, it's {G}\nYou came too?"
+          "text": "Oh, {G},\nyou came too?"
         },
         {
           "offset": "0x2298",
@@ -804,7 +804,7 @@
         {
           "offset": "0x2a14",
           "original": "{G}もいたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x2a24",
@@ -829,7 +829,7 @@
         {
           "offset": "0x2aac",
           "original": "{G}もいたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x2abc",
@@ -954,7 +954,7 @@
         {
           "offset": "0x3298",
           "original": "{G}も、\n来てたのか。",
-          "text": "Hey, it's {G}\nYou came too?"
+          "text": "Oh, {G},\nyou came too?"
         },
         {
           "offset": "0x32ac",
@@ -1089,7 +1089,7 @@
         {
           "offset": "0x3a5c",
           "original": "{G}も、来てたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x3a70",
@@ -1114,7 +1114,7 @@
         {
           "offset": "0x3b10",
           "original": "{G}も来てたのか。",
-          "text": "Hey, it's {G}"
+          "text": "You came too, {G}."
         },
         {
           "offset": "0x3b20",

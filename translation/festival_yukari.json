@@ -29,7 +29,7 @@
         {
           "offset": "0xa0",
           "original": "あ、急用を思い出しました。",
-          "text": "I remembered an urgent errand!"
+          "text": "I recalled an urgent errand!"
         },
         {
           "offset": "0xc0",
@@ -104,7 +104,7 @@
         {
           "offset": "0x344",
           "original": "あっ、{G}。\n来てくれたんだ。",
-          "text": "Oh, {G}\nYou came."
+          "text": "Oh, {G}.\nYou came."
         },
         {
           "offset": "0x360",
@@ -214,7 +214,7 @@
         {
           "offset": "0x738",
           "original": "和歌や、俳句はたしなんで\nおりますけれども、\n詩はまだ…。",
-          "text": "I dabble in waka\nand haiku, but\nnot poetry..."
+          "text": "I dabble in waka\nand haiku, but\nnot modern poetry..."
         },
         {
           "offset": "0x774",
@@ -369,7 +369,7 @@
         {
           "offset": "0xd80",
           "original": "あっ、{G}。\n来てくれたんだ。\n嬉しいな。",
-          "text": "Oh, {G}\nYou came.\nI'm glad."
+          "text": "Oh, {G}.\nYou came.\nI'm glad."
         },
         {
           "offset": "0xda8",
@@ -399,7 +399,7 @@
         {
           "offset": "0xe8c",
           "original": "あっ、{G}。\n来てくれたんだ。\n嬉しいな。",
-          "text": "Oh, {G}\nYou came.\nI'm glad."
+          "text": "Oh, {G}.\nYou came.\nI'm glad."
         },
         {
           "offset": "0xeb4",
@@ -439,7 +439,7 @@
         {
           "offset": "0xfdc",
           "original": "あっ、{G}\n来てくれたんだ。\n感想を聞かせてよ。",
-          "text": "Oh, {G}\nYou came.\nWhat did you think?"
+          "text": "Oh, {G}.\nYou came.\nWhat did you think?"
         },
         {
           "offset": "0x1008",
@@ -459,7 +459,7 @@
         {
           "offset": "0x1090",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x10bc",
@@ -479,7 +479,7 @@
         {
           "offset": "0x1168",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x1194",
@@ -499,7 +499,7 @@
         {
           "offset": "0x120c",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x1238",
@@ -519,7 +519,7 @@
         {
           "offset": "0x12bc",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x12e8",
@@ -539,7 +539,7 @@
         {
           "offset": "0x1390",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x13bc",
@@ -559,7 +559,7 @@
         {
           "offset": "0x1454",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x1480",
@@ -579,7 +579,7 @@
         {
           "offset": "0x1530",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x155c",
@@ -599,7 +599,7 @@
         {
           "offset": "0x1604",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x1630",
@@ -619,7 +619,7 @@
         {
           "offset": "0x16a8",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x16d4",
@@ -1089,7 +1089,7 @@
         {
           "offset": "0x2724",
           "original": "あっ、{G}。\n良かったら、似顔絵どう？",
-          "text": "Oh, {G}\nWant a portrait?"
+          "text": "Oh, {G}.\nWant a portrait?"
         },
         {
           "offset": "0x274c",
@@ -1179,7 +1179,7 @@
         {
           "offset": "0x2a5c",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x2a80",
@@ -1369,7 +1369,7 @@
         {
           "offset": "0x30f8",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x3128",
@@ -1389,7 +1389,7 @@
         {
           "offset": "0x31d0",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x3200",
@@ -1409,7 +1409,7 @@
         {
           "offset": "0x3278",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nどうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nHow was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nHow was it?"
         },
         {
           "offset": "0x32a4",
@@ -1429,7 +1429,7 @@
         {
           "offset": "0x3360",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x3390",
@@ -1449,7 +1449,7 @@
         {
           "offset": "0x3438",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x3468",
@@ -1469,7 +1469,7 @@
         {
           "offset": "0x34e0",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x3510",
@@ -1494,7 +1494,7 @@
         {
           "offset": "0x35c4",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x35f4",
@@ -1514,7 +1514,7 @@
         {
           "offset": "0x36b4",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x36e4",
@@ -1534,7 +1534,7 @@
         {
           "offset": "0x375c",
           "original": "あっ、{G}。\n聴きに来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came to listen.\nHow was it?"
+          "text": "Oh, {G}.\nYou came to listen.\nHow was it?"
         },
         {
           "offset": "0x378c",
@@ -1586,12 +1586,12 @@
         {
           "offset": "0x0",
           "original": "{P}。\nおはようございます。",
-          "text": "{P}\nGood morning."
+          "text": "{P}.\nGood morning."
         },
         {
           "offset": "0x1c",
           "original": "あっ、\n{G}、おはよう。",
-          "text": "Oh,\ngood morning, {G}"
+          "text": "Oh,\ngood morning, {G}."
         },
         {
           "offset": "0x34",
@@ -2188,7 +2188,7 @@
         {
           "offset": "0x10b8",
           "original": "{G}って、\n時代劇好きなんだ？",
-          "text": "Are you into\nperiod dramas?"
+          "text": "{G},\ninto period dramas?"
         },
         {
           "offset": "0x10d4",
@@ -2208,12 +2208,12 @@
         {
           "offset": "0x115c",
           "original": "時代劇は、\n面白いですねぇ。",
-          "text": "Samurai dramas\nare such fun."
+          "text": "Period dramas\nare such fun."
         },
         {
           "offset": "0x1178",
           "original": "{G}って、\n時代劇好きなんだ？",
-          "text": "Are you into\nperiod dramas?"
+          "text": "{G},\ninto period dramas?"
         },
         {
           "offset": "0x1194",
@@ -2233,12 +2233,12 @@
         {
           "offset": "0x1230",
           "original": "時代劇は、面白いですね。",
-          "text": "Samurai dramas are fun."
+          "text": "Period dramas are fun."
         },
         {
           "offset": "0x124c",
           "original": "{G}って、\n時代劇好きなんだ？",
-          "text": "Are you into\nperiod dramas?"
+          "text": "{G},\ninto period dramas?"
         },
         {
           "offset": "0x1268",
@@ -2353,7 +2353,7 @@
         {
           "offset": "0x1648",
           "original": "{G}って、\nこういうの\n好きなんだね？",
-          "text": "{G}\nyou really like\nthis stuff, huh?"
+          "text": "{G},\nyou really like\nthis stuff, huh?"
         },
         {
           "offset": "0x166c",
@@ -2378,7 +2378,7 @@
         {
           "offset": "0x1738",
           "original": "{G}って、\nこういうの\n好きなんだね？",
-          "text": "{G}\nyou really like\nthis stuff, huh?"
+          "text": "{G},\nyou really like\nthis stuff, huh?"
         },
         {
           "offset": "0x175c",
@@ -2403,7 +2403,7 @@
         {
           "offset": "0x181c",
           "original": "{G}って、\nこういうの\n好きなんだね？",
-          "text": "{G}\nyou really like\nthis stuff, huh?"
+          "text": "{G},\nyou really like\nthis stuff, huh?"
         },
         {
           "offset": "0x1840",
@@ -2563,7 +2563,7 @@
         {
           "offset": "0x1de4",
           "original": "こ、{G}、\nそういう事は\n家でゆっくりとね…。",
-          "text": "Uh, {G}\nsave that sort of\nthing for home..."
+          "text": "Uh, {G},\nsave that sort of\nthing for home..."
         },
         {
           "offset": "0x1e10",
@@ -3223,7 +3223,7 @@
         {
           "offset": "0x360c",
           "original": "似てないとかで、\nいただけないそうです。",
-          "text": "They say it doesn't\nlook like me."
+          "text": "It didn't look like me,\nso I couldn't have it."
         },
         {
           "offset": "0x3634",

@@ -39,7 +39,7 @@
         {
           "offset": "0x1ac",
           "original": "あ、{G}…。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}..."
         },
         {
           "offset": "0x1b8",
@@ -104,7 +104,7 @@
         {
           "offset": "0x444",
           "original": "実は、俺も\n{G}の事が…。",
-          "text": "Truth is, I...\n{G} I love you too."
+          "text": "Actually, I...\nfeel the same, {G}."
         },
         {
           "offset": "0x45c",
@@ -349,7 +349,7 @@
         {
           "offset": "0x1330",
           "original": "あなたに好かれることに変わったから…。",
-          "text": "is now to win your love..."
+          "text": "is to win your love..."
         },
         {
           "offset": "0x1358",
@@ -394,7 +394,7 @@
         {
           "offset": "0x1814",
           "original": "わ、私…。\n{G}です。",
-          "text": "I-I'm...\n{G}"
+          "text": "I-I'm...\n{G}."
         },
         {
           "offset": "0x1828",
@@ -514,7 +514,7 @@
         {
           "offset": "0x1ce4",
           "original": "{G}…。\nいや、伊集院さん…。",
-          "text": "{G}\nI mean... Ijuin-san..."
+          "text": "{G}...\nI mean... Ijuin-san..."
         },
         {
           "offset": "0x1d00",
@@ -709,7 +709,7 @@
         {
           "offset": "0x2cd0",
           "original": "か、{G}…。",
-          "text": "M-{G}"
+          "text": "M-{G}..."
         },
         {
           "offset": "0x2cdc",
@@ -834,7 +834,7 @@
         {
           "offset": "0x31a4",
           "original": "俺でよかったら…。",
-          "text": "I'd love to..."
+          "text": "If you're okay with me..."
         },
         {
           "offset": "0x31b8",
@@ -959,7 +959,7 @@
         {
           "offset": "0x3a40",
           "original": "もちろんだよ。\n好きだよ、{G}。",
-          "text": "Of course.\nI love you, {G}"
+          "text": "Of course.\nI love you, {G}."
         },
         {
           "offset": "0x3a60",
@@ -1099,7 +1099,7 @@
         {
           "offset": "0x3fbc",
           "original": "もちろんだよ。\n好きだよ、{G}。",
-          "text": "Of course.\nI love you, {G}"
+          "text": "Of course.\nI love you, {G}."
         },
         {
           "offset": "0x3fdc",
@@ -1324,7 +1324,7 @@
         {
           "offset": "0x5410",
           "original": "{G}。\n俺も好きだよ。",
-          "text": "{G}\nI love you too."
+          "text": "{G}.\nI love you too."
         },
         {
           "offset": "0x5424",
@@ -1474,7 +1474,7 @@
         {
           "offset": "0x5a54",
           "original": "{G}。\n俺も好きだよ。",
-          "text": "{G}\nI love you too."
+          "text": "{G}.\nI love you too."
         },
         {
           "offset": "0x5a68",
@@ -1574,7 +1574,7 @@
         {
           "offset": "0x64e0",
           "original": "あっ、待って。\n{G}。",
-          "text": "Ah, wait!\n{G}"
+          "text": "Ah, wait!\n{G}."
         },
         {
           "offset": "0x64f4",
@@ -1584,7 +1584,7 @@
         {
           "offset": "0x6510",
           "original": "俺も、{G}の事\n好きだよ。",
-          "text": "Me too, {G}\nI love you."
+          "text": "Me too, {G}.\nI love you."
         },
         {
           "offset": "0x6528",
@@ -1594,7 +1594,7 @@
         {
           "offset": "0x6564",
           "original": "{G}も、\n伝説知ってたんだ…。",
-          "text": "{G}\nyou knew the legend too..."
+          "text": "{G},\nyou knew the legend too..."
         },
         {
           "offset": "0x6580",
@@ -1609,7 +1609,7 @@
         {
           "offset": "0x6600",
           "original": "俺も{G}に\n告白されて最高だよ。",
-          "text": "Hearing it from {G}\nis the best thing ever."
+          "text": "You confessed, {G}.\nI'm so happy!"
         },
         {
           "offset": "0x6620",
@@ -1734,7 +1734,7 @@
         {
           "offset": "0x7118",
           "original": "ゆ、{G}…。",
-          "text": "Y-{G}"
+          "text": "Y-{G}..."
         },
         {
           "offset": "0x7124",
@@ -1774,7 +1774,7 @@
         {
           "offset": "0x730c",
           "original": "だから、\nお兄ちゃんの妹としてじゃなくて、\n一人の女の子として付き合って下さい。",
-          "text": "So please, not as\nmy brother's kid sister,\nbut as a girl, date me."
+          "text": "So please, not as\nYoshio's younger sister,\nbut as a girl, date me."
         },
         {
           "offset": "0x735c",
@@ -1794,7 +1794,7 @@
         {
           "offset": "0x73e0",
           "original": "当然だよ。\n好きだよ、{G}。",
-          "text": "Of course.\nI love you, {G}"
+          "text": "Of course.\nI love you, {G}."
         },
         {
           "offset": "0x73fc",
@@ -1984,7 +1984,7 @@
         {
           "offset": "0x7ed8",
           "original": "実は俺も{G}が、\n気になってたんだ。",
-          "text": "Actually, {G}\nI liked you too."
+          "text": "Actually, {G},\nI liked you too."
         },
         {
           "offset": "0x7efc",

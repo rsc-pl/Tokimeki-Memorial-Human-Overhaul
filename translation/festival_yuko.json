@@ -989,7 +989,7 @@
         {
           "offset": "0x21e8",
           "original": "あっ、{G}\n来てくれたんだ。\nつまんなかった？",
-          "text": "Oh, {G}\nYou came.\nWas it boring?"
+          "text": "Oh, {G}.\nYou came.\nWas it boring?"
         },
         {
           "offset": "0x2214",
@@ -1454,7 +1454,7 @@
         {
           "offset": "0x31c4",
           "original": "あっ、\n{G}待ってよ。",
-          "text": "Hey,\n{G} wait."
+          "text": "Hey,\n{G}, wait."
         },
         {
           "offset": "0x31e4",
@@ -1694,7 +1694,7 @@
         {
           "offset": "0x39e4",
           "original": "あっ、\n{G}待ってよ。",
-          "text": "Hey,\n{G} wait."
+          "text": "Hey,\n{G}, wait."
         },
         {
           "offset": "0x3a04",
@@ -1739,7 +1739,7 @@
         {
           "offset": "0x3b44",
           "original": "{G}だって、\nちょっとやりこめば、\nこのぐらい、すぐだよ。",
-          "text": "{G}\nwith a bit of practice,\nyou'd get there fast."
+          "text": "{G},\nwith a bit of practice,\nyou'd get there fast."
         },
         {
           "offset": "0x3b84",
@@ -1749,7 +1749,7 @@
         {
           "offset": "0x3ba4",
           "original": "だって、{G}、\nうますぎだよ。",
-          "text": "But {G}\nyou're too good."
+          "text": "But {G},\nyou're too good."
         },
         {
           "offset": "0x3bc8",
@@ -1769,7 +1769,7 @@
         {
           "offset": "0x3c2c",
           "original": "だって、{G}、\nうますぎだよ。",
-          "text": "But {G}\nyou're too good."
+          "text": "But {G},\nyou're too good."
         },
         {
           "offset": "0x3c50",
@@ -1789,7 +1789,7 @@
         {
           "offset": "0x3ccc",
           "original": "だって、{G}、\nうますぎだよ。",
-          "text": "But {G}\nyou're too good."
+          "text": "But {G},\nyou're too good."
         },
         {
           "offset": "0x3cf0",
@@ -1934,7 +1934,7 @@
         {
           "offset": "0x41ac",
           "original": "あっ、\n{G}待ってよ。",
-          "text": "Hey,\n{G} wait."
+          "text": "Hey,\n{G}, wait."
         },
         {
           "offset": "0x41cc",
@@ -1949,7 +1949,7 @@
         {
           "offset": "0x41f8",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x4218",
@@ -1989,7 +1989,7 @@
         {
           "offset": "0x4360",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x4380",
@@ -2029,7 +2029,7 @@
         {
           "offset": "0x44cc",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x44ec",
@@ -2059,17 +2059,17 @@
         {
           "offset": "0x45c4",
           "original": "あっ、{G}、\n誤解だよ。\n行っちゃった…。",
-          "text": "Wait, {G}\nyou've got it wrong.\nShe's gone..."
+          "text": "Wait, {G},\nyou've got it wrong.\nShe's gone..."
         },
         {
           "offset": "0x45f0",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x4628",
           "original": "{G}、\n何しに来たんだろう？",
-          "text": "{G}\nwhat did she come for?"
+          "text": "Why'd {G}\ncome by?"
         },
         {
           "offset": "0x4648",
@@ -2254,7 +2254,7 @@
         {
           "offset": "0x4b7c",
           "original": "あっ、{G}待ってよ。",
-          "text": "Wait, {G} hold on."
+          "text": "Wait, {G}!"
         },
         {
           "offset": "0x4b94",
@@ -2866,7 +2866,7 @@
         {
           "offset": "0x3b4",
           "original": "あ、おい、\nちょっと待ってくれよ。\nどこに行くか決めようぜ。",
-          "text": "Hey, wait,\nhold on a sec.\nLet's decide where to go."
+          "text": "Hey, hold on!\nLet's decide\nwhere we're going."
         },
         {
           "offset": "0x3f4",
@@ -4008,7 +4008,7 @@
         {
           "offset": "0x2330",
           "original": "もろ当たってる。\nまったくそのとうし。",
-          "text": "Totally on the nose.\nExactly so-ly."
+          "text": "Spot on!\nExactly right."
         },
         {
           "offset": "0x2358",
@@ -4178,7 +4178,7 @@
         {
           "offset": "0x285c",
           "original": "だって、{G}、\nうますぎだよ。",
-          "text": "But {G}\nyou're too good."
+          "text": "But {G},\nyou're too good."
         },
         {
           "offset": "0x2880",
@@ -4198,7 +4198,7 @@
         {
           "offset": "0x28d0",
           "original": "だって、{G}、\nうますぎだよ。",
-          "text": "But {G}\nyou're too good."
+          "text": "But {G},\nyou're too good."
         },
         {
           "offset": "0x28f4",
@@ -4218,7 +4218,7 @@
         {
           "offset": "0x2954",
           "original": "だって、{G}、\nうますぎだよ。",
-          "text": "But {G}\nyou're too good."
+          "text": "But {G},\nyou're too good."
         },
         {
           "offset": "0x2978",
@@ -4518,7 +4518,7 @@
         {
           "offset": "0x3364",
           "original": "ちょっと、そんなに…。\nん、{G}。\nどうしたの？",
-          "text": "Hey, not so...\nHm, {G}\nWhat's wrong?"
+          "text": "Hey, not so...\nHm, {G}.\nWhat's wrong?"
         },
         {
           "offset": "0x3390",
@@ -4568,7 +4568,7 @@
         {
           "offset": "0x351c",
           "original": "ちょっと、そんなに…。\nん、{G}。\nどうしたの？",
-          "text": "Hey, not so...\nHm, {G}\nWhat's wrong?"
+          "text": "Hey, not so...\nHm, {G}.\nWhat's wrong?"
         },
         {
           "offset": "0x3548",
@@ -4628,7 +4628,7 @@
         {
           "offset": "0x376c",
           "original": "ちょっと、そんなに…。\nん、{G}。\nどうしたの？",
-          "text": "Hey, not so...\nHm, {G}\nWhat's wrong?"
+          "text": "Hey, not so...\nHm, {G}.\nWhat's wrong?"
         },
         {
           "offset": "0x37a4",
@@ -4983,7 +4983,7 @@
         {
           "offset": "0x430c",
           "original": "超はまりぃ。\n古臭くて、もう聴かなくても\nいいって感じ。",
-          "text": "I'm soooo hooked.\nSo dated, I'm done\nlistening to it."
+          "text": "I'm SO into it.\nIt's so dated,\nI've heard enough."
         },
         {
           "offset": "0x4344",

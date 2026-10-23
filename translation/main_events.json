@@ -260,7 +260,7 @@
         {
           "offset": "0x7037C",
           "original": "ん？\n誰だろう）",
-          "text": "Huh?\nWho is it?)"
+          "text": "Hm\nWho is it?)"
         },
         {
           "offset": "0x703A4",
@@ -300,12 +300,12 @@
         {
           "offset": "0x70998",
           "original": "明日から春休みだ）",
-          "text": "Spring break tomorrow!)"
+          "text": "Spring break soon)"
         },
         {
           "offset": "0x709B4",
           "original": "明日から新学期だ）",
-          "text": "Term starts tomorrow!)"
+          "text": "New term starts!)"
         },
         {
           "offset": "0x709D0",
@@ -330,7 +330,7 @@
         {
           "offset": "0x70A54",
           "original": "ノイローゼが治った）",
-          "text": "Recovered from neurosis!)"
+          "text": "Neurosis is gone!)"
         },
         {
           "offset": "0x70A74",

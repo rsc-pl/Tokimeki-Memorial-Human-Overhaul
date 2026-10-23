@@ -1199,7 +1199,7 @@
         {
           "offset": "0x4b10",
           "original": "{P}、\nこんにちは。",
-          "text": "{P}\ngood afternoon."
+          "text": "{P},\ngood afternoon."
         },
         {
           "offset": "0x4b28",
@@ -1249,7 +1249,7 @@
         {
           "offset": "0x4c50",
           "original": "{P}、\nこんにちは。",
-          "text": "{P}\ngood afternoon."
+          "text": "{P},\ngood afternoon."
         },
         {
           "offset": "0x4c68",
@@ -1974,7 +1974,7 @@
         {
           "offset": "0x7a04",
           "original": "はい、{p}です。",
-          "text": "Hello, it's {p}"
+          "text": "Hello, it's {p}."
         },
         {
           "offset": "0x7a14",

@@ -374,7 +374,7 @@
         {
           "offset": "0x1528",
           "original": "？？\n変な{G}。",
-          "text": "Huh?\n{G}'s acting strange."
+          "text": "Huh?\n{G}'s being odd."
         },
         {
           "offset": "0x1558",
@@ -434,7 +434,7 @@
         {
           "offset": "0x1a90",
           "original": "え、{G}、外国の人だよ。\nあ、もう話しかけてる。",
-          "text": "Oh, {G}, a foreigner!\nShe's already talking..."
+          "text": "A foreigner, {G}!\nShe's already talking..."
         },
         {
           "offset": "0x1ad4",

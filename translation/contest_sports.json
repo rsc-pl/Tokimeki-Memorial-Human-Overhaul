@@ -209,12 +209,12 @@
         {
           "offset": "0x7c0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7d0",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x7dc",
@@ -249,7 +249,7 @@
         {
           "offset": "0x8a4",
           "original": "{G}の応援のおかげだよ。\nありがとう。",
-          "text": "All thanks to {G}\nThank you."
+          "text": "Your cheers, {G},\nmeant a lot. Thanks."
         },
         {
           "offset": "0x8c8",
@@ -394,7 +394,7 @@
         {
           "offset": "0xc6c",
           "original": "あれ、\n{G}泣いてるのかな？",
-          "text": "Huh,\nare you crying, {G}?"
+          "text": "Huh...\nIs {G} crying?"
         },
         {
           "offset": "0xc88",
@@ -439,7 +439,7 @@
         {
           "offset": "0xd88",
           "original": "ありがとう、{G}の\n応援のおかげだよ。",
-          "text": "Thanks, {G}\nYour cheering did it."
+          "text": "Thanks, {G}.\nYour cheering did it."
         },
         {
           "offset": "0xdac",
@@ -559,12 +559,12 @@
         {
           "offset": "0x1114",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1124",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x1130",
@@ -599,12 +599,12 @@
         {
           "offset": "0x11f0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1200",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x120c",
@@ -669,7 +669,7 @@
         {
           "offset": "0x13c4",
           "original": "{G}も、優勝だよ。",
-          "text": "Your win too, {G}"
+          "text": "Your win too, {G}."
         },
         {
           "offset": "0x13d4",
@@ -679,7 +679,7 @@
         {
           "offset": "0x13f8",
           "original": "{P}、\nおめでとう！",
-          "text": "{P}\ncongratulations!"
+          "text": "{P},\ncongratulations!"
         },
         {
           "offset": "0x140c",
@@ -739,7 +739,7 @@
         {
           "offset": "0x15bc",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x15c8",
@@ -824,12 +824,12 @@
         {
           "offset": "0x1804",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1814",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x1820",
@@ -899,12 +899,12 @@
         {
           "offset": "0x1a08",
           "original": "おめでとう、{P}。\nやったね。",
-          "text": "Congrats, {P}\nYou did it."
+          "text": "Congrats, {P}.\nYou did it."
         },
         {
           "offset": "0x1a24",
           "original": "{G}のおかげだよ。",
-          "text": "I owe it to {G}"
+          "text": "Thanks to you, {G}."
         },
         {
           "offset": "0x1a3c",
@@ -914,7 +914,7 @@
         {
           "offset": "0x1a58",
           "original": "{G}が応援して\nくれたから勝てたんだよ。",
-          "text": "I won because {G}\ncheered me on."
+          "text": "Your cheers, {G},\nhelped me win."
         },
         {
           "offset": "0x1a80",
@@ -964,7 +964,7 @@
         {
           "offset": "0x1bb8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1bc8",
@@ -1019,7 +1019,7 @@
         {
           "offset": "0x1cf8",
           "original": "大丈夫だよ、{G}が\n応援してくれてたから。",
-          "text": "I was fine, {G}\nsince you cheered me on."
+          "text": "I was fine, {G},\nthanks to your cheers."
         },
         {
           "offset": "0x1d20",
@@ -1069,7 +1069,7 @@
         {
           "offset": "0x1e6c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1e7c",
@@ -1119,7 +1119,7 @@
         {
           "offset": "0x1f94",
           "original": "{G}の応援の\nおかげだよ。",
-          "text": "I owe it to {G}\nand your cheering."
+          "text": "Your cheers, {G},\nhelped me win."
         },
         {
           "offset": "0x1fac",
@@ -1164,7 +1164,7 @@
         {
           "offset": "0x2154",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2164",
@@ -1199,7 +1199,7 @@
         {
           "offset": "0x2218",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}."
         },
         {
           "offset": "0x2230",
@@ -1279,7 +1279,7 @@
         {
           "offset": "0x2448",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2458",
@@ -1424,7 +1424,7 @@
         {
           "offset": "0x278c",
           "original": "げ、{G}。\n何しに来たんだ？",
-          "text": "Ugh. It's {G}\nWhat are you doing here?"
+          "text": "Ugh, {G}.\nWhat are you doing here?"
         },
         {
           "offset": "0x27a8",
@@ -1454,7 +1454,7 @@
         {
           "offset": "0x28b8",
           "original": "お誉めに与り、光栄の至り。\nじゃあな、{G}。",
-          "text": "I'm honored by your praise.\nSee ya, {G}"
+          "text": "I'm honored by your praise.\nSee ya, {G}."
         },
         {
           "offset": "0x28e4",
@@ -1469,7 +1469,7 @@
         {
           "offset": "0x2920",
           "original": "うるせぇぞ、{G}。",
-          "text": "Can it, {G}"
+          "text": "Can it, {G}."
         },
         {
           "offset": "0x2930",
@@ -1509,7 +1509,7 @@
         {
           "offset": "0x537c",
           "original": "に、{G}？",
-          "text": "N-{G}"
+          "text": "N-{G}?"
         },
         {
           "offset": "0x5384",

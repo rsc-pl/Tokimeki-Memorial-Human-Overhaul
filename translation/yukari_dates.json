@@ -24,7 +24,7 @@
         {
           "offset": "0x58",
           "original": "この絵、奇麗だと思わない？{q}あの人、奇麗だな…。{q}この絵、{G}に似てるね。",
-          "text": "Isn't this one pretty?{q}That lady is pretty...{q}It looks like {G}."
+          "text": "Isn't this one pretty?{q}That lady is pretty...{q}Looks like you, {G}."
         },
         {
           "offset": "0xa8",
@@ -174,7 +174,7 @@
         {
           "offset": "0xb38",
           "original": "フォームを直すといいかな。{q}{G}には絶対無理だね。{q}どうしたらいいかな…？",
-          "text": "Work on your form a bit.{q}{G}, it's hopeless.{q}Hmm, what would help...?"
+          "text": "Work on your form a bit.{q}You can't, {G}.{q}Hmm, what would help...?"
         },
         {
           "offset": "0xb88",
@@ -334,7 +334,7 @@
         {
           "offset": "0x1808",
           "original": "はい。\n私でよろしければ、\n喜んで。",
-          "text": "Yes.\nIf you'd like me to,\nI'd be delighted."
+          "text": "Yes.\nIf you don't mind,\nI'd love to."
         },
         {
           "offset": "0x182c",
@@ -354,7 +354,7 @@
         {
           "offset": "0x18b4",
           "original": "はい。\n私でよろしければ、\n喜んで。",
-          "text": "Yes.\nIf you'd like me to,\nI'd be delighted."
+          "text": "Yes.\nIf you don't mind,\nI'd love to."
         },
         {
           "offset": "0x18d8",
@@ -374,7 +374,7 @@
         {
           "offset": "0x194c",
           "original": "はい。\n私でよろしければ、\n喜んで。",
-          "text": "Yes.\nIf you'd like me to,\nI'd be delighted."
+          "text": "Yes.\nIf you don't mind,\nI'd love to."
         },
         {
           "offset": "0x1970",
@@ -579,7 +579,7 @@
         {
           "offset": "0x26a0",
           "original": "はい、\n{G}にあげるよ。",
-          "text": "Here,\nthis is for {G}"
+          "text": "Here,\nit's for you, {G}."
         },
         {
           "offset": "0x26bc",
@@ -599,7 +599,7 @@
         {
           "offset": "0x271c",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}."
+          "text": "Yours if I win, {G}"
         },
         {
           "offset": "0x2740",
@@ -954,7 +954,7 @@
         {
           "offset": "0x4084",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x410c",
@@ -969,7 +969,7 @@
         {
           "offset": "0x414c",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x41d4",
@@ -984,7 +984,7 @@
         {
           "offset": "0x4214",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x444c",
@@ -1479,7 +1479,7 @@
         {
           "offset": "0x67b0",
           "original": "{G}に似合いそうだね。{q}そう？全然。{q}あっちも結構いいと思うな。",
-          "text": "That suits you, {G}{q}Huh? Not at all, really.{q}That one's nice too."
+          "text": "That suits you, {G}.{q}Huh? Not at all, really.{q}That one's nice too."
         },
         {
           "offset": "0x67f4",
@@ -1509,7 +1509,7 @@
         {
           "offset": "0x69b0",
           "original": "{G}に似合いそうだね。{q}そう？全然。{q}恥ずかしいから外で待ってるよ。",
-          "text": "That suits you, {G}{q}Huh? Not at all, really.{q}Too embarrassing. I'll wait."
+          "text": "That suits you, {G}.{q}Huh? Not at all, really.{q}Too embarrassing. I'll wait."
         },
         {
           "offset": "0x69f8",
@@ -1914,7 +1914,7 @@
         {
           "offset": "0x8a7c",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to go see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x8ab4",
@@ -2059,7 +2059,7 @@
         {
           "offset": "0x9178",
           "original": "うん、いい眺めだったね。{q}あーっ、眠かった。{q}{G}の顔ばかり見てたから…。",
-          "text": "Yeah, it was a great view.{q}Man, I was sleepy.{q}My eyes were on {G}"
+          "text": "Yeah, it was a great view.{q}Man, I was sleepy.{q}I saw only you, {G}."
         },
         {
           "offset": "0x91c8",
@@ -2124,7 +2124,7 @@
         {
           "offset": "0x9488",
           "original": "うん、楽しいね。{q}楽しいのは{G}だけだよ。{q}怖くないの？",
-          "text": "Yeah, it's so fun.{q}Only fun for you, {G}{q}Aren't you scared?"
+          "text": "Yeah, it's so fun.{q}Fun? Just you, {G}.{q}Aren't you scared?"
         },
         {
           "offset": "0x94c4",
@@ -2179,7 +2179,7 @@
         {
           "offset": "0x9724",
           "original": "うん、いい眺めだったね。{q}あーっ、眠かった。{q}{G}の顔ばかり見てたから…。",
-          "text": "Yeah, it was a great view.{q}Man, I was sleepy.{q}My eyes were on {G}"
+          "text": "Yeah, it was a great view.{q}Man, I was sleepy.{q}I saw only you, {G}."
         },
         {
           "offset": "0x9774",
@@ -2244,7 +2244,7 @@
         {
           "offset": "0x9a34",
           "original": "うん、楽しいね。{q}楽しいのは{G}だけだよ。{q}怖くないの？",
-          "text": "Yeah, it's so fun.{q}Only fun for you, {G}{q}Aren't you scared?"
+          "text": "Yeah, it's so fun.{q}Fun? Just you, {G}.{q}Aren't you scared?"
         },
         {
           "offset": "0x9a70",
@@ -2299,7 +2299,7 @@
         {
           "offset": "0x9ce0",
           "original": "うん、いい眺めだったね。{q}あーっ、眠かった。{q}{G}の顔ばかり見てたから…。",
-          "text": "Yeah, it was a great view.{q}Man, I was sleepy.{q}My eyes were on {G}"
+          "text": "Yeah, it was a great view.{q}Man, I was sleepy.{q}I saw only you, {G}."
         },
         {
           "offset": "0x9d30",

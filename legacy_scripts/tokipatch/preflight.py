@@ -15,6 +15,8 @@ def main():
     ap=argparse.ArgumentParser(description="Validate patch against original game without writing")
     ap.add_argument("input",type=Path)
     ap.add_argument("-t","--translation",type=Path,action="append")
+    ap.add_argument("--all-errors", action="store_true",
+                    help="report all independent planning errors instead of stopping at the first")
     args=ap.parse_args()
     source=args.input.resolve()
     if not source.is_file(): ap.error("input does not exist")
@@ -27,7 +29,8 @@ def main():
     print(f"Read-only preflight: {len(trans)} translation files, {sum(len(d.lines) for d in dialogue)} dialogue lines",flush=True)
     try:
         with Track(source) as track:
-            edits=patcher.plan(track,strings,images,byte_patches,dialogue,log=print)
+            edits=patcher.plan(track,strings,images,byte_patches,dialogue,
+                               log=print, collect_errors=args.all_errors)
     except (ValueError, OSError) as exc:
         print(f"FAIL: preflight rejected source image: {exc}", file=sys.stderr)
         return 1

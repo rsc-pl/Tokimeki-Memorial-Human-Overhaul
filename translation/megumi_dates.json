@@ -289,7 +289,7 @@
         {
           "offset": "0x1348",
           "original": "{G}可愛いからね。{q}にらんでるんじゃない？{q}餌にみえるのかな？",
-          "text": "Because {G}'s cute.{q}Is it glaring at us?{q}Maybe we look like food?"
+          "text": "You're cute, {G}.{q}Is it glaring at us?{q}Maybe we look like food?"
         },
         {
           "offset": "0x138c",
@@ -979,7 +979,7 @@
         {
           "offset": "0x3f88",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x4010",
@@ -994,7 +994,7 @@
         {
           "offset": "0x4048",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x40d0",
@@ -1009,7 +1009,7 @@
         {
           "offset": "0x4114",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x434c",
@@ -1554,7 +1554,7 @@
         {
           "offset": "0x67a4",
           "original": "あんまり好きじゃない？{q}サイバーでかっこいいでしょ。{q}大丈夫だよ。危なくないから。",
-          "text": "Not really your thing?{q}Isn't it cyber and cool?{q}Relax, it's not dangerous."
+          "text": "Not really your thing?{q}Cyber and cool, right?{q}Relax, it's not dangerous."
         },
         {
           "offset": "0x6800",
@@ -1594,7 +1594,7 @@
         {
           "offset": "0x6cf4",
           "original": "俺が教えてあげるよ。{q}氷の上なんて、ずるいよね。{q}一緒に練習しようよ。",
-          "text": "I can teach you.{q}Ice is so unfair, huh?{q}Let's practice together."
+          "text": "I can teach you.{q}Ice makes it tricky, huh?{q}Let's practice together."
         },
         {
           "offset": "0x6d44",
@@ -1649,7 +1649,7 @@
         {
           "offset": "0x70f0",
           "original": "そうなんですか。{q}そ、そうですか…。{q}私は、あまり…。",
-          "text": "Is that so.{q}O-oh...{q}I don't really..."
+          "text": "Oh, really?{q}O-oh...{q}I don't really..."
         },
         {
           "offset": "0x712c",
@@ -1869,7 +1869,7 @@
         {
           "offset": "0x80ec",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x8124",
@@ -2029,7 +2029,7 @@
         {
           "offset": "0x87c0",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I only saw you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8810",
@@ -2149,7 +2149,7 @@
         {
           "offset": "0x8d60",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I only saw you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8db0",
@@ -2269,7 +2269,7 @@
         {
           "offset": "0x9320",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I only saw you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x9370",

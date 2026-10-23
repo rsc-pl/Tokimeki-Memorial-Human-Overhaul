@@ -159,7 +159,7 @@
         {
           "offset": "0x9bc",
           "original": "{G}なら取れるって。{q}{G}には絶対取れないね。{q}何とかなるんじゃない。",
-          "text": "You can get it, {G}{q}You can't get it, {G}{q}You'll manage somehow."
+          "text": "You can get it, {G}{q}You can't, {G}{q}You'll manage somehow."
         },
         {
           "offset": "0xa04",
@@ -539,7 +539,7 @@
         {
           "offset": "0x2274",
           "original": "はい、{G}にあげるよ。",
-          "text": "{G}, for you."
+          "text": "Here, for you, {G}."
         },
         {
           "offset": "0x228c",
@@ -559,7 +559,7 @@
         {
           "offset": "0x22e8",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}."
+          "text": "Yours if I win, {G}"
         },
         {
           "offset": "0x230c",
@@ -679,7 +679,7 @@
         {
           "offset": "0x2b08",
           "original": "{G}だって、来てるじゃない。{q}知らなかったの？{q}最近は結構来てるよ。",
-          "text": "You're here, too, {G}{q}You didn't know?{q}Lots of them come now."
+          "text": "You came too, {G}{q}You didn't know?{q}Lots of them come now."
         },
         {
           "offset": "0x2b50",
@@ -919,7 +919,7 @@
         {
           "offset": "0x3b74",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3bfc",
@@ -934,7 +934,7 @@
         {
           "offset": "0x3c54",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3cdc",
@@ -949,7 +949,7 @@
         {
           "offset": "0x3d0c",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3f44",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x4d08",
           "original": "さあ、ばりばり泳ぐわよ。",
-          "text": "Okay, time to swim hard!"
+          "text": "Let's swim our hearts out!"
         },
         {
           "offset": "0x4d24",
@@ -1339,7 +1339,7 @@
         {
           "offset": "0x59f4",
           "original": "花好きなんだね。{q}{G}に花は似合わないよ。{q}食べれるのかな。",
-          "text": "So you like flowers.{q}Flowers? Not you, {G}{q}Can you eat these?"
+          "text": "So you like flowers.{q}Not your style, {G}{q}Can you eat these?"
         },
         {
           "offset": "0x5a34",
@@ -1404,7 +1404,7 @@
         {
           "offset": "0x5e60",
           "original": "{G}、可愛いから似合うよ。{q}{G}はジャージが一番。{q}きっと、女の子っぽく見えるぜ。",
-          "text": "So cute on you, {G}{q}{G}, wear a tracksuit{q}You'd look like a real girl."
+          "text": "So cute on you, {G}{q}Best in sweats, {G}{q}You'd look like a real girl."
         },
         {
           "offset": "0x5eb4",
@@ -1704,7 +1704,7 @@
         {
           "offset": "0x74cc",
           "original": "{G}なら、きっとできるよ。{q}水泳なんてやめたら？{q}今だって、十分じゃないか。",
-          "text": "You'll do it, {G}{q}Why not quit swimming?{q}You're fast enough now, huh?"
+          "text": "You can do it, {G}.{q}Why not quit swimming?{q}You're fast enough now, huh?"
         },
         {
           "offset": "0x751c",
@@ -1729,7 +1729,7 @@
         {
           "offset": "0x75e0",
           "original": "{G}もね。{q}そんな事言うの似合わないよ。{q}本当だ、いるいる。",
-          "text": "So are you, {G}{q}That doesn't sound like you.{q}You're right, there it is."
+          "text": "So are you, {G}.{q}That doesn't sound like you.{q}You're right, there it is."
         },
         {
           "offset": "0x7620",
@@ -1829,7 +1829,7 @@
         {
           "offset": "0x7d60",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to go see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x7d98",
@@ -1974,7 +1974,7 @@
         {
           "offset": "0x8340",
           "original": "{G}ばかり見てたから…。{q}眠かったよ。{q}うん、いい眺めだったね。",
-          "text": "Only had eyes for {G}{q}I was so sleepy.{q}Yeah, it was a great view."
+          "text": "I only saw you, {G}.{q}I was so sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8384",
@@ -1989,7 +1989,7 @@
         {
           "offset": "0x83f4",
           "original": "{G}に気を取られててたから。{q}全然、気がつかなかったよ。{q}わりと怖かったよね。",
-          "text": "Too busy watching {G}{q}I didn't notice it at all.{q}That was kinda scary, huh."
+          "text": "Distracted by {G}{q}I didn't notice it at all.{q}That was kinda scary, huh."
         },
         {
           "offset": "0x8448",
@@ -2094,7 +2094,7 @@
         {
           "offset": "0x8880",
           "original": "{G}ばかり見てたから…。{q}眠かったよ。{q}うん、いい眺めだったね。",
-          "text": "Only had eyes for {G}{q}I was so sleepy.{q}Yeah, it was a great view."
+          "text": "I only saw you, {G}.{q}I was so sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x88c4",
@@ -2109,7 +2109,7 @@
         {
           "offset": "0x8934",
           "original": "{G}に気を取られててたから。{q}全然、気がつかなかったよ。{q}わりと怖かったよね。",
-          "text": "Too busy watching {G}{q}I didn't notice it at all.{q}That was kinda scary, huh."
+          "text": "Distracted by {G}{q}I didn't notice it at all.{q}That was kinda scary, huh."
         },
         {
           "offset": "0x8988",
@@ -2214,7 +2214,7 @@
         {
           "offset": "0x8e10",
           "original": "{G}ばかり見てたから…。{q}眠かったよ。{q}うん、いい眺めだったね。",
-          "text": "Only had eyes for {G}{q}I was so sleepy.{q}Yeah, it was a great view."
+          "text": "I only saw you, {G}.{q}I was so sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8e54",
@@ -2229,7 +2229,7 @@
         {
           "offset": "0x8ec4",
           "original": "{G}に気を取られててたから。{q}全然、気がつかなかったよ。{q}わりと怖かったよね。",
-          "text": "Too busy watching {G}{q}I didn't notice it at all.{q}That was kinda scary, huh."
+          "text": "Distracted by {G}{q}I didn't notice it at all.{q}That was kinda scary, huh."
         },
         {
           "offset": "0x8f18",
@@ -2319,7 +2319,7 @@
         {
           "offset": "0x9ef0",
           "original": "{G}も奇麗だよ。{q}何それ？{G}らしくないよ。{q}後で、道路が汚くなるんだよね。",
-          "text": "So are you, {G}{q}That's not you, {G}{q}The roads get messy after."
+          "text": "So are you, {G}.{q}That's not you, {G}.{q}The roads get messy after."
         },
         {
           "offset": "0x9f40",

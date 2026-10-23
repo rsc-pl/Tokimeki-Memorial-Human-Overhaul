@@ -34,7 +34,7 @@
         {
           "offset": "0x8c",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0xb0",
@@ -79,7 +79,7 @@
         {
           "offset": "0x1a4",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x1c8",
@@ -479,7 +479,7 @@
         {
           "offset": "0x1adc",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x1b00",
@@ -529,7 +529,7 @@
         {
           "offset": "0x1c1c",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x1c40",
@@ -959,7 +959,7 @@
         {
           "offset": "0x34f8",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x351c",
@@ -1004,7 +1004,7 @@
         {
           "offset": "0x3610",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x3634",
@@ -1404,7 +1404,7 @@
         {
           "offset": "0x4e64",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x4e88",
@@ -1449,7 +1449,7 @@
         {
           "offset": "0x4f88",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x4fac",
@@ -1494,7 +1494,7 @@
         {
           "offset": "0x5084",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x50a8",
@@ -1859,7 +1859,7 @@
         {
           "offset": "0x6828",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x684c",
@@ -1904,7 +1904,7 @@
         {
           "offset": "0x6960",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x6984",
@@ -2299,7 +2299,7 @@
         {
           "offset": "0x831c",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x8340",
@@ -2344,7 +2344,7 @@
         {
           "offset": "0x8454",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x8478",
@@ -2724,7 +2724,7 @@
         {
           "offset": "0x9d28",
           "original": "あれ？\n{G}、どうしたの？",
-          "text": "Huh?\n{G}?"
+          "text": "Huh?\nWhat's wrong, {G}?"
         },
         {
           "offset": "0x9d40",
@@ -2744,7 +2744,7 @@
         {
           "offset": "0x9dd4",
           "original": "俺は、{G}と、\n楽しく下校した。",
-          "text": "{G} and I\nhad a nice walk home"
+          "text": "{G} and I\nhad a nice walk home."
         },
         {
           "offset": "0x9df8",
@@ -4809,7 +4809,7 @@
         {
           "offset": "0x10ccc",
           "original": "優美はお兄ちゃんと\n海水浴に行くの。",
-          "text": "Yumi's going to the\nbeach with her brother."
+          "text": "Yumi's going to the beach\nwith her older brother."
         },
         {
           "offset": "0x10cf0",
@@ -4829,7 +4829,7 @@
         {
           "offset": "0x10d6c",
           "original": "優美はお兄ちゃんと\nスキーに行くの。",
-          "text": "Yumi's going skiing\nwith her brother."
+          "text": "Yumi's going skiing\nwith her older brother."
         },
         {
           "offset": "0x10d90",

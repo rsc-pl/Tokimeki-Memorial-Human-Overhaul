@@ -289,7 +289,7 @@
         {
           "offset": "0x8c8",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x8f0",
@@ -314,7 +314,7 @@
         {
           "offset": "0x970",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x998",
@@ -349,7 +349,7 @@
         {
           "offset": "0xa90",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0xab8",
@@ -369,7 +369,7 @@
         {
           "offset": "0xb64",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0xb8c",
@@ -399,12 +399,12 @@
         {
           "offset": "0xc2c",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0xc54",
           "original": "あんなことして、\n恥ずかしくないですか？",
-          "text": "Doing that,\nweren't you embarrassed?"
+          "text": "Weren't you embarrassed\ndoing that?"
         },
         {
           "offset": "0xc7c",
@@ -414,7 +414,7 @@
         {
           "offset": "0xc90",
           "original": "あっ、ごめんなさい。\nそういう意味じゃなくて…。",
-          "text": "Oh, I'm sorry.\nI didn't mean it like..."
+          "text": "Oh, I'm sorry.\nThat's not what I meant..."
         },
         {
           "offset": "0xcc0",
@@ -454,7 +454,7 @@
         {
           "offset": "0xe18",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0xe40",
@@ -484,7 +484,7 @@
         {
           "offset": "0xf30",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0xf58",
@@ -514,7 +514,7 @@
         {
           "offset": "0xff8",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x1020",
@@ -539,7 +539,7 @@
         {
           "offset": "0x10c0",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x10e8",
@@ -599,7 +599,7 @@
         {
           "offset": "0x12a4",
           "original": "あっ、{G}。\n来てくれたんだ。",
-          "text": "Oh, {G}\nYou came."
+          "text": "Oh, {G}.\nYou came."
         },
         {
           "offset": "0x12c0",
@@ -629,7 +629,7 @@
         {
           "offset": "0x1384",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x13bc",
@@ -659,7 +659,7 @@
         {
           "offset": "0x1490",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x14c8",
@@ -689,7 +689,7 @@
         {
           "offset": "0x15a4",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x15dc",
@@ -719,7 +719,7 @@
         {
           "offset": "0x16c0",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x16f8",
@@ -744,7 +744,7 @@
         {
           "offset": "0x17b8",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x17f0",
@@ -769,7 +769,7 @@
         {
           "offset": "0x18d8",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x1910",
@@ -789,7 +789,7 @@
         {
           "offset": "0x19c0",
           "original": "あっ、{G}。\nねぇ、コンピュータゲーム\nやってみない？",
-          "text": "Oh, {G}\nHey, want to try\na computer game?"
+          "text": "Oh, {G}.\nHey, want to try\na computer game?"
         },
         {
           "offset": "0x19f4",
@@ -854,7 +854,7 @@
         {
           "offset": "0x1b98",
           "original": "あっ、{G}。\nねぇ、コンピュータゲーム\nやってみない？",
-          "text": "Oh, {G}\nHey, want to try\na computer game?"
+          "text": "Oh, {G}.\nHey, want to try\na computer game?"
         },
         {
           "offset": "0x1bcc",
@@ -954,7 +954,7 @@
         {
           "offset": "0x1e94",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x1ebc",
@@ -974,7 +974,7 @@
         {
           "offset": "0x1f24",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x1f4c",
@@ -994,7 +994,7 @@
         {
           "offset": "0x1fa8",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x1fd0",
@@ -1009,7 +1009,7 @@
         {
           "offset": "0x2020",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x2044",
@@ -1019,7 +1019,7 @@
         {
           "offset": "0x2064",
           "original": "あっ、{G}。\n誤解だよー。",
-          "text": "Oh, {G}\nYou've got it wrong!"
+          "text": "Oh, {G}.\nYou've got it wrong!"
         },
         {
           "offset": "0x208c",
@@ -1184,7 +1184,7 @@
         {
           "offset": "0x2534",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x255c",
@@ -1214,7 +1214,7 @@
         {
           "offset": "0x2600",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x2628",
@@ -1239,7 +1239,7 @@
         {
           "offset": "0x26a0",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x26c8",
@@ -1269,7 +1269,7 @@
         {
           "offset": "0x2774",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x279c",
@@ -1299,7 +1299,7 @@
         {
           "offset": "0x283c",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x2864",
@@ -1324,7 +1324,7 @@
         {
           "offset": "0x28d4",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x28fc",
@@ -1828,7 +1828,7 @@
         {
           "offset": "0x838",
           "original": "あんなことして、\n恥ずかしくないのかなぁ…。",
-          "text": "Doing that, aren't\nthey embarrassed...?"
+          "text": "Aren't they embarrassed\ndoing that...?"
         },
         {
           "offset": "0x864",
@@ -1868,7 +1868,7 @@
         {
           "offset": "0x960",
           "original": "あんなことして、\n恥ずかしくないのかなぁ…。",
-          "text": "Doing that, aren't\nthey embarrassed...?"
+          "text": "Aren't they embarrassed\ndoing that...?"
         },
         {
           "offset": "0x98c",
@@ -1988,7 +1988,7 @@
         {
           "offset": "0xd20",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0xd58",
@@ -2018,7 +2018,7 @@
         {
           "offset": "0xe20",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0xe58",
@@ -2048,7 +2048,7 @@
         {
           "offset": "0xf2c",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0xf64",
@@ -2083,7 +2083,7 @@
         {
           "offset": "0x1054",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x108c",
@@ -2118,7 +2118,7 @@
         {
           "offset": "0x1150",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x1188",
@@ -2153,7 +2153,7 @@
         {
           "offset": "0x1280",
           "original": "{G}、どうしたの？\n何度呼んでも、\nボーッとしちゃって…。",
-          "text": "{G} what's up?\nI kept calling, but\nyou were in a daze..."
+          "text": "{G}, what's up?\nI kept calling, but\nyou were in a daze..."
         },
         {
           "offset": "0x12b8",
@@ -2398,7 +2398,7 @@
         {
           "offset": "0x1964",
           "original": "あっ、{G}。\nどこに…。\nおおおおおおおっ！！",
-          "text": "Oh, {G}\nWhere are...\nOoooooooh!!"
+          "text": "Oh, {G}.\nWhere are...\nOoooooooh!!"
         },
         {
           "offset": "0x1990",
@@ -2418,7 +2418,7 @@
         {
           "offset": "0x19f8",
           "original": "あっ、{G}。\nどこに…。\nおおおおおおおっ！！",
-          "text": "Oh, {G}\nWhere are...\nOoooooooh!!"
+          "text": "Oh, {G}.\nWhere are...\nOoooooooh!!"
         },
         {
           "offset": "0x1a24",

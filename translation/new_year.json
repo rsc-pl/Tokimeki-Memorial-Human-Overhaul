@@ -4793,7 +4793,7 @@
         {
           "offset": "0xfa88",
           "original": "何だよ。\n{G}らしくないよ。",
-          "text": "What's wrong?\n{G}, this isn't like you."
+          "text": "Huh?\nNot like you, {G}."
         },
         {
           "offset": "0xfaa4",
@@ -5388,7 +5388,7 @@
         {
           "offset": "0x11b3c",
           "original": "何だよ。\n{G}らしくないよ。",
-          "text": "What's wrong?\n{G}, this isn't like you."
+          "text": "Huh?\nNot like you, {G}."
         },
         {
           "offset": "0x11b58",

@@ -394,7 +394,7 @@
         {
           "offset": "0xc9c",
           "original": "あっ、{G}見てたの？\nはは…。\nど、どうだった？",
-          "text": "Oh, {G}, you watched?\nHaha...\nH-how was it?"
+          "text": "You saw it, {G}?\nHaha...\nH-how was it?"
         },
         {
           "offset": "0xcc8",
@@ -474,7 +474,7 @@
         {
           "offset": "0xf24",
           "original": "あっ、{G}見てたの？\nはは…。\nど、どうだった？",
-          "text": "Oh, {G}, you watched?\nHaha...\nH-how was it?"
+          "text": "You saw it, {G}?\nHaha...\nH-how was it?"
         },
         {
           "offset": "0xf50",
@@ -554,7 +554,7 @@
         {
           "offset": "0x11b0",
           "original": "あっ、{G}見てたの？\nど、どうだった？",
-          "text": "Oh, you saw it, {G}?\nH-how was it?"
+          "text": "You saw it, {G}?\nH-how was it?"
         },
         {
           "offset": "0x11d4",
@@ -634,7 +634,7 @@
         {
           "offset": "0x1468",
           "original": "あっ、{G}見てたの？\nど、どうだった？",
-          "text": "Oh, you saw it, {G}?\nH-how was it?"
+          "text": "You saw it, {G}?\nH-how was it?"
         },
         {
           "offset": "0x148c",
@@ -4126,7 +4126,7 @@
         {
           "offset": "0x3e18",
           "original": "どう？\n{G}もやってみない。",
-          "text": "Well?\nWant to try it, {G}?"
+          "text": "Well?\nTry it, {G}?"
         },
         {
           "offset": "0x3e34",
@@ -4196,7 +4196,7 @@
         {
           "offset": "0x4044",
           "original": "どう？\n{G}もやってみない。",
-          "text": "Well?\nWant to try it, {G}?"
+          "text": "Well?\nTry it, {G}?"
         },
         {
           "offset": "0x4060",
@@ -4266,7 +4266,7 @@
         {
           "offset": "0x426c",
           "original": "どう？\n{G}もやってみない。",
-          "text": "Well?\nWant to try it, {G}?"
+          "text": "Well?\nTry it, {G}?"
         },
         {
           "offset": "0x4288",
@@ -6215,7 +6215,7 @@
         {
           "offset": "0xe90",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere'd she go?"
+          "text": "{G}'s not here.\nWhere'd she go?"
         },
         {
           "offset": "0xec0",
@@ -6345,7 +6345,7 @@
         {
           "offset": "0x1320",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere'd she go?"
+          "text": "{G}'s not here.\nWhere'd she go?"
         },
         {
           "offset": "0x1350",
@@ -6470,7 +6470,7 @@
         {
           "offset": "0x171c",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere'd she go?"
+          "text": "{G}'s not here.\nWhere'd she go?"
         },
         {
           "offset": "0x174c",
@@ -6565,7 +6565,7 @@
         {
           "offset": "0x1a74",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere'd she go?"
+          "text": "{G}'s not here.\nWhere'd she go?"
         },
         {
           "offset": "0x1aa4",
@@ -8200,7 +8200,7 @@
         {
           "offset": "0x50d8",
           "original": "{G}がいなけりゃ、\nゆっくり\n見るんだけどなぁ…。",
-          "text": "If it weren't for {G}\nI'd stay\nand look..."
+          "text": "Without {G},\nI'd stay\nand look..."
         },
         {
           "offset": "0x510c",
@@ -8530,7 +8530,7 @@
         {
           "offset": "0x5b74",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere'd she go?"
+          "text": "{G}'s not here.\nWhere'd she go?"
         },
         {
           "offset": "0x5ba4",
@@ -8625,7 +8625,7 @@
         {
           "offset": "0x5ec0",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere'd she go?"
+          "text": "{G}'s not here.\nWhere'd she go?"
         },
         {
           "offset": "0x5ef0",
@@ -10439,7 +10439,7 @@
         {
           "offset": "0x2de0",
           "original": "横目で、ちょっと見ちゃえ。\nなるほど{G}が隠す訳だ。",
-          "text": "I'll sneak a peek...\nNo wonder {G} hid it."
+          "text": "I'll sneak a peek...\nSo {G} hid it."
         },
         {
           "offset": "0x2e18",
@@ -10479,7 +10479,7 @@
         {
           "offset": "0x2eec",
           "original": "横目で、ちょっと見ちゃえ。\nなるほど{G}が隠す訳だ。",
-          "text": "I'll sneak a peek...\nNo wonder {G} hid it."
+          "text": "I'll sneak a peek...\nSo {G} hid it."
         },
         {
           "offset": "0x2f24",

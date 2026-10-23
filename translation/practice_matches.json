@@ -199,7 +199,7 @@
         {
           "offset": "0x4fc",
           "original": "せっかく勝ったけど、\n応援が伊集院じゃなぁ。",
-          "text": "We won, but...\nIjuin cheered for me."
+          "text": "We won, but Ijuin\nwas the one cheering."
         },
         {
           "offset": "0x52c",
@@ -214,7 +214,7 @@
         {
           "offset": "0x584",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x594",
@@ -269,7 +269,7 @@
         {
           "offset": "0x6e8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6f8",
@@ -324,7 +324,7 @@
         {
           "offset": "0x838",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x848",
@@ -434,7 +434,7 @@
         {
           "offset": "0xb3c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xb4c",
@@ -539,7 +539,7 @@
         {
           "offset": "0xdc0",
           "original": "あっ、{G}。\n見に来てくれたんだ。",
-          "text": "Oh, {G}\nYou came to watch."
+          "text": "Oh, {G}.\nYou came to watch."
         },
         {
           "offset": "0xde0",
@@ -589,7 +589,7 @@
         {
           "offset": "0xf6c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0xf7c",
@@ -699,7 +699,7 @@
         {
           "offset": "0x1298",
           "original": "{G}が来てたから、\n頑張ったんだけど…",
-          "text": "You came, {G}\nso I tried hard, but..."
+          "text": "You came, {G},\nso I tried hard, but..."
         },
         {
           "offset": "0x12bc",
@@ -709,7 +709,7 @@
         {
           "offset": "0x12ec",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x12fc",
@@ -754,7 +754,7 @@
         {
           "offset": "0x13f4",
           "original": "{G}に\n勝ったところを\n見てほしかったんだけど…",
-          "text": "I wanted you, {G}\nto see me\nwin, but..."
+          "text": "I wanted you, {G},\nto see me\nwin, but..."
         },
         {
           "offset": "0x1420",
@@ -764,7 +764,7 @@
         {
           "offset": "0x1448",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1458",
@@ -824,7 +824,7 @@
         {
           "offset": "0x1598",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x15a8",

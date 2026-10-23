@@ -302,7 +302,7 @@
         {
           "offset": "0x160",
           "original": "さあ、練習再開だ。\n{G}には、\n怖いから文句言えないし。",
-          "text": "Back to practice.\nI'm too scared of {G}\nto complain."
+          "text": "Back to practice.\nToo scared of {G}\nto complain."
         },
         {
           "offset": "0x19c",
@@ -412,7 +412,7 @@
         {
           "offset": "0x468",
           "original": "こうして、\n肝試しは終わった。",
-          "text": "And so, the\ntest was over."
+          "text": "The test of\ncourage was over."
         },
         {
           "offset": "0x488",
@@ -1707,7 +1707,7 @@
         {
           "offset": "0x5190",
           "original": "こうして、\n肝試しは終わった。",
-          "text": "And so, the\ntest was over."
+          "text": "The test of\ncourage was over."
         },
         {
           "offset": "0x51b0",
@@ -3097,7 +3097,7 @@
         {
           "offset": "0xa550",
           "original": "こうして、\n肝試しは終わった。",
-          "text": "And so, the\ntest was over."
+          "text": "The test of\ncourage was over."
         },
         {
           "offset": "0xa570",
@@ -6722,7 +6722,7 @@
         {
           "offset": "0x1705c",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "I'll go coach\nthe younger players."
+          "text": "I'll go coach\nthe newer members."
         },
         {
           "offset": "0x17098",
@@ -6757,7 +6757,7 @@
         {
           "offset": "0x17168",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "I'll go coach\nthe younger players."
+          "text": "I'll go coach\nthe newer members."
         },
         {
           "offset": "0x171a8",
@@ -6792,7 +6792,7 @@
         {
           "offset": "0x17278",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "I'll go coach\nthe younger players."
+          "text": "I'll go coach\nthe newer members."
         },
         {
           "offset": "0x172b8",
@@ -7237,7 +7237,7 @@
         {
           "offset": "0x1810c",
           "original": "国立競技場に\n行けるといいね。",
-          "text": "Hope you get to\nNat'l Stadium."
+          "text": "Hope you reach\nNational Stadium"
         },
         {
           "offset": "0x1812c",
@@ -12834,7 +12834,7 @@
         {
           "offset": "0xa4f8",
           "original": "国立競技場に\n行けるといいね。",
-          "text": "Hope you get to\nNat'l Stadium."
+          "text": "Hope you reach\nNational Stadium"
         },
         {
           "offset": "0xa518",
@@ -12874,7 +12874,7 @@
         {
           "offset": "0xa634",
           "original": "国立競技場に行けたら\nいいんだけどな。",
-          "text": "Hope we make it\nto Nat'l Stadium."
+          "text": "Hope we make it\nto National Stadium."
         },
         {
           "offset": "0xa65c",
@@ -12914,7 +12914,7 @@
         {
           "offset": "0xa768",
           "original": "国立競技場目指して\n頑張ってね。",
-          "text": "Aim for\nNat'l Stadium!"
+          "text": "Aim for\nNational Stadium!"
         },
         {
           "offset": "0xa788",
@@ -12929,7 +12929,7 @@
         {
           "offset": "0xa804",
           "original": "‥‥‥‥‥。\n国立競技場には\n行けるのかしら？",
-          "text": ".....\nThink you'll make it\nto Nat'l Stadium?"
+          "text": ".....\nThink you'll make it\nto National Stadium?"
         },
         {
           "offset": "0xa834",
@@ -12954,7 +12954,7 @@
         {
           "offset": "0xa8bc",
           "original": "国立競技場へは\n行けそう…？",
-          "text": "Nat'l Stadium,\nmaybe...?"
+          "text": "National Stadium,\nmaybe...?"
         },
         {
           "offset": "0xa8d8",
@@ -12969,7 +12969,7 @@
         {
           "offset": "0xa930",
           "original": "ありがとう。\n国立競技場目指して、\nもう一頑張りするか。",
-          "text": "Thanks.\nI'll train harder\nto reach Nat'l Stadium."
+          "text": "Thanks.\nI'll train harder\nto reach National Stadium."
         },
         {
           "offset": "0xa984",
@@ -12989,7 +12989,7 @@
         {
           "offset": "0xa9f0",
           "original": "どう？\n国立競技場には\n行けそうなの？",
-          "text": "Well?\nMake it to\nNat'l Stadium?"
+          "text": "Well?\nMake it to\nNational Stadium?"
         },
         {
           "offset": "0xaa18",
@@ -13004,7 +13004,7 @@
         {
           "offset": "0xaa78",
           "original": "ありがとう。\n国立競技場目指して、\nもう一頑張りするか。",
-          "text": "Thanks.\nI'll train harder\nto reach Nat'l Stadium."
+          "text": "Thanks.\nI'll train harder\nto reach National Stadium."
         },
         {
           "offset": "0xaacc",
@@ -13024,7 +13024,7 @@
         {
           "offset": "0xab38",
           "original": "どう？\n国立競技場には\n行けそう？",
-          "text": "Well?\nMake it to\nNat'l Stadium?"
+          "text": "Well?\nMake it to\nNational Stadium?"
         },
         {
           "offset": "0xab5c",
@@ -13039,7 +13039,7 @@
         {
           "offset": "0xabac",
           "original": "ありがとう。\n国立競技場目指して、\nもう一頑張りするか。",
-          "text": "Thanks.\nI'll train harder\nto reach Nat'l Stadium."
+          "text": "Thanks.\nI'll train harder\nto reach National Stadium."
         },
         {
           "offset": "0xac00",
@@ -13049,7 +13049,7 @@
         {
           "offset": "0xac34",
           "original": "‥‥‥‥‥。\n国立競技場に\n行けるかもしれないわね。",
-          "text": ".....\nYou might make it\nto Nat'l Stadium."
+          "text": ".....\nYou might make it\nto National Stadium."
         },
         {
           "offset": "0xac68",
@@ -13129,7 +13129,7 @@
         {
           "offset": "0xaec0",
           "original": "とりあえず、\n国立競技場目指して、\n練習するか。",
-          "text": "For now,\nI'll train to reach\nNat'l Stadium."
+          "text": "For now,\nI'll train to reach\nNational Stadium."
         },
         {
           "offset": "0xaef0",
@@ -13169,7 +13169,7 @@
         {
           "offset": "0xb010",
           "original": "とりあえず、\n国立競技場目指して、\n練習するか。",
-          "text": "For now,\nI'll train to reach\nNat'l Stadium."
+          "text": "For now,\nI'll train to reach\nNational Stadium."
         },
         {
           "offset": "0xb040",
@@ -14154,7 +14154,7 @@
         {
           "offset": "0xcd40",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "I'll go coach\nthe younger players."
+          "text": "I'll go coach\nthe newer members."
         },
         {
           "offset": "0xcd80",
@@ -14189,7 +14189,7 @@
         {
           "offset": "0xce50",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "I'll go coach\nthe younger players."
+          "text": "I'll go coach\nthe newer members."
         },
         {
           "offset": "0xce90",
@@ -14224,7 +14224,7 @@
         {
           "offset": "0xcf54",
           "original": "それじゃあ、\n後輩の指導に行くよ。",
-          "text": "I'll go coach\nthe younger players."
+          "text": "I'll go coach\nthe newer members."
         },
         {
           "offset": "0xcf94",

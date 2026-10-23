@@ -1,382 +1,1902 @@
 {
   "description": "A girl asking the player out for Sunday: all of SERIFU/G_INVITE.BIN (base 0x80197000; game-internals 6o), 351 strings, plus the 19 meeting-place names in EXEDIR/GEKO.EXN (0x15988, 19 x 33-byte records, \"slot\": 33) that {M} inserts. Thirteen sections: one per girl (girl ids 0-10 map to sections 1,5,2,3,10,6,8,4,0,9,12), section 11 the player's thoughts after turning her down, section 7 selected by no girl id (translated anyway). Each girl's section: greeting and \"are you free Sunday?\" with the player's choice, one invitation per place (parts 1-19 = places 2-20), his answer, \"Meet at {M}?\", her goodbye, and her reaction when refused (part 23). Lines identical to walk_home.json reuse its English. Verified in DuckStation with force_event.py --type 0x46 from the 95/4/23 Sunday state: Shiori's invitation (zoo) accepted through \"Meet at {M}\" and the thought, Shiori refused (her reply and the regret thought), Yuko's invitation (arcade) accepted with the English meeting place \"the arcade\", after which her Sunday date starts. Checked only statically: the other nine girls, the other places and meeting-place names, the unused section 7, natural triggers.",
   "strings": [
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15988", "original": "ショッピング街", "text": "the mall", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x159A9", "original": "水族館の前", "text": "the aquarium", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x159CA", "original": "動物園の前", "text": "the zoo gate", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x159EB", "original": "植物園の前", "text": "the botanic garden", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15A0C", "original": "プラネタリウムの前", "text": "the planetarium", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15A2D", "original": "美術館の前", "text": "the art museum", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15A4E", "original": "図書館の前", "text": "the library gate", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15A6F", "original": "ゲームセンターの前", "text": "the arcade", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15A90", "original": "ボーリング場の前", "text": "the bowling center", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15AB1", "original": "カラオケＢＯＸの前", "text": "the karaoke shop", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15AD2", "original": "遊園地の前", "text": "the theme park", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15AF3", "original": "スタジアムの前", "text": "the stadium gate", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15B14", "original": "スタジアムの前", "text": "the stadium gate", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15B35", "original": "映画館の前", "text": "the cinema", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15B56", "original": "コンサート会場の前", "text": "the concert hall", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15B77", "original": "プールの前", "text": "the pool", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15B98", "original": "海岸", "text": "the beachfront", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15BB9", "original": "スケート場の前", "text": "the skating rink", "slot": 33},
-    {"file": "CDROM/EXEDIR/GEKO.EXN", "offset": "0x15BDA", "original": "スキー場の前", "text": "the ski resort", "slot": 33}
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15988",
+      "original": "ショッピング街",
+      "text": "the mall",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x159A9",
+      "original": "水族館の前",
+      "text": "the aquarium",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x159CA",
+      "original": "動物園の前",
+      "text": "the zoo gate",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x159EB",
+      "original": "植物園の前",
+      "text": "the botanic garden",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15A0C",
+      "original": "プラネタリウムの前",
+      "text": "the planetarium",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15A2D",
+      "original": "美術館の前",
+      "text": "the art museum",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15A4E",
+      "original": "図書館の前",
+      "text": "the library gate",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15A6F",
+      "original": "ゲームセンターの前",
+      "text": "the arcade",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15A90",
+      "original": "ボーリング場の前",
+      "text": "the bowling center",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15AB1",
+      "original": "カラオケＢＯＸの前",
+      "text": "the karaoke shop",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15AD2",
+      "original": "遊園地の前",
+      "text": "the theme park",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15AF3",
+      "original": "スタジアムの前",
+      "text": "the stadium gate",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15B14",
+      "original": "スタジアムの前",
+      "text": "the stadium gate",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15B35",
+      "original": "映画館の前",
+      "text": "the cinema",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15B56",
+      "original": "コンサート会場の前",
+      "text": "the concert hall",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15B77",
+      "original": "プールの前",
+      "text": "the pool",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15B98",
+      "original": "海岸",
+      "text": "the beachfront",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15BB9",
+      "original": "スケート場の前",
+      "text": "the skating rink",
+      "slot": 33
+    },
+    {
+      "file": "CDROM/EXEDIR/GEKO.EXN",
+      "offset": "0x15BDA",
+      "original": "スキー場の前",
+      "text": "the ski resort",
+      "slot": 33
+    }
   ],
-  "dialogue": [{
-    "file": "CDROM/SERIFU/G_INVITE.BIN",
-    "base": "0x80197000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0xc", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x20", "original": "ねぇねぇ、\n今度の日曜日、\n空いてるでしょう？", "text": "Hey, hey,\nyou're free\nthis Sunday, right?"},
-      {"offset": "0x50", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x94", "original": "ラッキー。\n買い物に行こうよ。", "text": "Lucky!\nLet's go shopping."},
-      {"offset": "0xb8", "original": "ラッキー。\n一緒に水族館に\n行こうよ。", "text": "Lucky!\nLet's go to the\naquarium together."},
-      {"offset": "0xe4", "original": "ラッキー。\n一緒に動物園に\n行こうよ。", "text": "Lucky!\nLet's go to the\nzoo together."},
-      {"offset": "0x110", "original": "ラッキー。\n一緒に植物園に\n行こうよ。", "text": "Lucky!\nLet's go to the\nbotanical garden."},
-      {"offset": "0x13c", "original": "ラッキー。\nプラネタリウムに\n行こうよ。", "text": "Lucky!\nLet's go to the\nplanetarium."},
-      {"offset": "0x168", "original": "ラッキー。\n美術館に行こうよ。", "text": "Lucky!\nLet's go to the art museum."},
-      {"offset": "0x18c", "original": "ラッキー。\nちょろっと、図書館で、\n勉強教えてくんない？", "text": "Lucky!\nCould you help me study\na bit at the library?"},
-      {"offset": "0x1c8", "original": "ラッキー。\nゲームセンター\n行こうよ。", "text": "Lucky!\nLet's hit\nthe arcade."},
-      {"offset": "0x1f4", "original": "ラッキー。\n一緒にボーリングに\n行こうよ。", "text": "Lucky!\nLet's go\nbowling together."},
-      {"offset": "0x224", "original": "ラッキー。\n一緒にカラオケに\n行こうよ。", "text": "Lucky!\nLet's go\nto karaoke together."},
-      {"offset": "0x250", "original": "ラッキー。\n遊園地の入場券があるんだ。\n一緒に行こうよ。", "text": "Lucky!\nI've got theme park passes.\nLet's go together."},
-      {"offset": "0x28c", "original": "野球のチケットが\nあるんだけど、\n一緒に行こうよ。", "text": "I've got tickets\nto a baseball game.\nLet's go together."},
-      {"offset": "0x2c4", "original": "プロレスのチケットが\nあるんだけど、\n一緒に行こうよ。", "text": "I've got tickets\nto a wrestling show.\nLet's go together."},
-      {"offset": "0x300", "original": "映画のチケットが\n２枚あるんだ。\n一緒に行こうよ。", "text": "I've got two\nmovie tickets.\nLet's go together."},
-      {"offset": "0x338", "original": "コンサートのチケットが\n２枚あるんだ。\n一緒に行こうよ。", "text": "I've got two\nconcert tickets.\nLet's go together."},
-      {"offset": "0x374", "original": "ラッキー。\n一緒にプールに\n行こうよ。", "text": "Lucky!\nLet's go to the\npool together."},
-      {"offset": "0x3a0", "original": "ラッキー。\n一緒に海水浴に\n行こうよ。", "text": "Lucky!\nLet's go to the\nbeach together."},
-      {"offset": "0x3cc", "original": "ラッキー。\n一緒にスケートに\n行こうよ。", "text": "Lucky!\nLet's go\nskating together."},
-      {"offset": "0x3f8", "original": "ラッキー。\n一緒にスキーに\n行こうよ。", "text": "Lucky!\nLet's go\nskiing together."},
-      {"offset": "0x424", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x458", "original": "じゃ、決まりね。", "text": "Then it's settled."},
-      {"offset": "0x46c", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x484", "original": "うん、それでいいよ。\nそれじゃ、\n今度の日曜日が楽しみ。", "text": "Yeah, that works.\nOkay, I can't wait\nfor Sunday."},
-      {"offset": "0x4c8", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x500", "original": "えぇー、駄目ぇ。\n超がっかり。\nじゃあ、いいわよ。", "text": "Whaaat, no?\nTotal bummer.\nFine, whatever."},
-      {"offset": "0x538", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0xa34", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0xa40", "original": "あっ、詩織。\nどうしたの？", "text": "Oh, Shiori.\nWhat's up?"},
-      {"offset": "0xa5c", "original": "ねぇ、\n今度の日曜日、\n空いてるかな…？", "text": "Hey,\nare you free\nthis Sunday...?"},
-      {"offset": "0xa84", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0xac8", "original": "買い物に付き合って\n欲しいんだけど…。\n駄目？", "text": "Would you go\nshopping with me...?\nIs that okay?"},
-      {"offset": "0xafc", "original": "それなら、\n一緒に水族館に\n行かない？", "text": "Then would you\ncome to the aquarium\nwith me?"},
-      {"offset": "0xb28", "original": "それなら、\n一緒に動物園に\n行かない？", "text": "Then would you\ncome to the zoo\nwith me?"},
-      {"offset": "0xb54", "original": "それなら、\n一緒に植物園に\n行かない？", "text": "Then would you\ncome to the botanical\ngarden with me?"},
-      {"offset": "0xb80", "original": "それなら、\nプラネタリウムに\n行かない？", "text": "Then would you\ngo to the planetarium\nwith me?"},
-      {"offset": "0xbac", "original": "それなら、\n絵を見に\n美術館に行かない？", "text": "Then would you like\nto see the paintings\nat the art museum?"},
-      {"offset": "0xbd8", "original": "それなら、図書館で\n一緒に勉強しない？", "text": "Want to study together\nat the library, then?"},
-      {"offset": "0xc04", "original": "ゲームセンターに\n連れて行ってくれない？", "text": "Would you take me\nto the arcade?"},
-      {"offset": "0xc30", "original": "それなら、\n一緒にボーリングに\n行かない？", "text": "Then would you\ngo bowling\nwith me?"},
-      {"offset": "0xc60", "original": "それなら、\n一緒にカラオケに\n行かない？", "text": "Then would you\ngo to karaoke\nwith me?"},
-      {"offset": "0xc8c", "original": "遊園地の入場券があるの。\n一緒に行かない？", "text": "I have theme park passes.\nWant to come with me?"},
-      {"offset": "0xcbc", "original": "野球のチケットが\nあるんだけど、\n一緒に行かない？", "text": "I have tickets\nto a baseball game.\nWant to come with me?"},
-      {"offset": "0xcf4", "original": "プロレスのチケットが\nあるんだけど、\n一緒に行かない？", "text": "I have tickets\nto a wrestling show.\nWant to come with me?"},
-      {"offset": "0xd30", "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かない？", "text": "I have two\nmovie tickets.\nWant to come with me?"},
-      {"offset": "0xd6c", "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かない？", "text": "I have two\nconcert tickets.\nWant to come with me?"},
-      {"offset": "0xdac", "original": "それなら、\n一緒にプールに\n行かない？", "text": "Then would you\ngo to the pool\nwith me?"},
-      {"offset": "0xdd8", "original": "それなら、\n一緒に海水浴に\n行かない？", "text": "Then would you\ngo to the beach\nwith me?"},
-      {"offset": "0xe04", "original": "それなら、\n一緒にスケートに\n行かない？", "text": "Then would you\ngo skating\nwith me?"},
-      {"offset": "0xe30", "original": "それなら、\n一緒にスキーに\n行かない？", "text": "Then would you\ngo skiing\nwith me?"},
-      {"offset": "0xe5c", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0xe90", "original": "本当？\nそれじゃ、えーと…。", "text": "Really?\nThen, um..."},
-      {"offset": "0xeac", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0xec4", "original": "うん、それでいいわ。\n忘れないでね。", "text": "Yes, that's fine.\nDon't forget."},
-      {"offset": "0xef4", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0xf2c", "original": "そう…。\nそれならしかたないね。\nそれじゃ…。", "text": "I see...\nWell, it can't be helped.\nBye, then..."},
-      {"offset": "0x1410", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x1424", "original": "今度の日曜日\n空いてるわよね？", "text": "You're free\nthis Sunday, aren't you?"},
-      {"offset": "0x1444", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x1488", "original": "だったら、\n買い物に付き合いなさい。", "text": "Then you'll come\nshopping with me."},
-      {"offset": "0x14b0", "original": "だったら、\n水族館に行くわよ。", "text": "Then we're going\nto the aquarium."},
-      {"offset": "0x14d4", "original": "だったら、\n動物園に行くわよ。", "text": "Then we're going\nto the zoo."},
-      {"offset": "0x14f8", "original": "だったら、\n植物園に行くわよ。", "text": "Then we're going to\nthe botanical garden."},
-      {"offset": "0x151c", "original": "だったら、\nプラネタリウムに\n行くわよ。", "text": "Then we're\ngoing to the\nplanetarium."},
-      {"offset": "0x1548", "original": "だったら、\n美術館に行くわよ。", "text": "Then we're going\nto the art museum."},
-      {"offset": "0x156c", "original": "だったら、\n図書館で勉強よ。", "text": "Then we're studying\nat the library."},
-      {"offset": "0x158c", "original": "だったら、\nゲームセンターに\n行くわよ。", "text": "Then we're\ngoing to the\narcade."},
-      {"offset": "0x15b8", "original": "だったら、\nボーリングに\n行くわよ", "text": "Then,\nwe're going\nbowling."},
-      {"offset": "0x15e0", "original": "だったら、\nカラオケに行くわよ。", "text": "Then we're going\nto karaoke."},
-      {"offset": "0x1604", "original": "だったら\n遊園地に行くわよ。", "text": "Then we're going\nto the theme park."},
-      {"offset": "0x1624", "original": "だったら、\n野球を観に行くわよ。", "text": "Then we're going\nto a baseball game."},
-      {"offset": "0x1648", "original": "だったら、\nプロレスを観に行くわよ。", "text": "Then we're going\nto see pro wrestling."},
-      {"offset": "0x1670", "original": "だったら、\n映画を観に行くわよ。", "text": "Then we're going\nto see a movie."},
-      {"offset": "0x1694", "original": "だったら、\nコンサートを\n聴きに行くわよ。", "text": "Then we're\ngoing to\na concert."},
-      {"offset": "0x16c4", "original": "だったら、\nプールに行くわよ。", "text": "Then we're going\nto the pool."},
-      {"offset": "0x16e8", "original": "だったら、\n海に行くわよ。", "text": "Then we're going\nto the beach."},
-      {"offset": "0x1708", "original": "だったら、\nスケートに行くわよ。", "text": "Then we're going\nskating."},
-      {"offset": "0x1730", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x1764", "original": "当然ね。", "text": "Naturally."},
-      {"offset": "0x1770", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x1788", "original": "それでいいわ。\n忘れたら、\n覚悟しなさいよ。", "text": "That's fine.\nIf you forget,\nwatch out!"},
-      {"offset": "0x17c0", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x17f8", "original": "不愉快よ。\n失礼するわ。", "text": "How unpleasant.\nBye."},
-      {"offset": "0x1814", "original": "不愉快よ。\n失礼するわ。", "text": "How unpleasant.\nBye."},
-      {"offset": "0x1d0c", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x1d18", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, {G}.\nWhat's up?"},
-      {"offset": "0x1d30", "original": "ねぇ、\n今度の日曜日、\n空いてる？", "text": "Hey,\nare you free\nthis Sunday?"},
-      {"offset": "0x1d54", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x1d98", "original": "買い物に付き合って\n欲しいんだけど…。\n駄目？", "text": "Would you go\nshopping with me...?\nIs that okay?"},
-      {"offset": "0x1dcc", "original": "それなら\n一緒に、水族館に\n行かない？", "text": "Wanna go\nto the aquarium\nwith me?"},
-      {"offset": "0x1df8", "original": "それなら\n一緒に、動物園に\n行かない？", "text": "Then, wanna\ngo to the zoo\nwith me?"},
-      {"offset": "0x1e24", "original": "それなら\n一緒に、植物園に\n行かない？", "text": "Wanna go\nto the botanical\ngarden?"},
-      {"offset": "0x1e50", "original": "それなら、\nプラネタリウムに\n行かない？", "text": "Then would you\ngo to the planetarium\nwith me?"},
-      {"offset": "0x1e7c", "original": "それなら、\n絵を見に、\n美術館に行かない？", "text": "Then how about\nlooking at paintings\nat the art museum?"},
-      {"offset": "0x1eac", "original": "それなら、図書館で、\n一緒に勉強しない？", "text": "Then how about studying\ntogether at the library?"},
-      {"offset": "0x1ed8", "original": "ゲームセンターに\n連れてってくれない？", "text": "Would you take me\nto the arcade?"},
-      {"offset": "0x1f04", "original": "それなら\n一緒にボーリングに\n行かない？", "text": "Then how about\nbowling\nwith me?"},
-      {"offset": "0x1f30", "original": "それなら\n一緒に、カラオケに\n行かない？", "text": "How about\nsome karaoke\ntogether?"},
-      {"offset": "0x1f5c", "original": "遊園地の入場券があるの。\n一緒にどう？", "text": "I have theme park passes.\nWant to come along?"},
-      {"offset": "0x1f88", "original": "野球のチケットが\nあるんだけど、\n一緒にどう？", "text": "I have tickets\nto a baseball game.\nWant to come along?"},
-      {"offset": "0x1fbc", "original": "プロレスのチケットが\nあるんだけど、\n一緒にどう？", "text": "I have tickets\nto a wrestling show.\nWant to come along?"},
-      {"offset": "0x1ff4", "original": "映画のチケットが\n２枚あるんだけど、\n一緒にどう？", "text": "I have two\nmovie tickets.\nWant to come along?"},
-      {"offset": "0x202c", "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒にどう？", "text": "I have two\nconcert tickets.\nWant to come along?"},
-      {"offset": "0x2070", "original": "それなら\n一緒に、スケートに\n行かない？", "text": "How about\nwe go skating\ntogether?"},
-      {"offset": "0x20a0", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x20d4", "original": "リアリー、本当に？\nそれじゃ、\nどうしようか？", "text": "Really? Hontou ni?\nThen, what\nshould we do?"},
-      {"offset": "0x2104", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x211c", "original": "ＯＫ。\nそれでいいわ。", "text": "OK.\nThat works."},
-      {"offset": "0x2140", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x2178", "original": "そう…。\nちょっぴり残念ね。\nそれじゃ…。", "text": "I see...\nThat's a shame.\nBye, then..."},
-      {"offset": "0x2658", "original": "あら、{P}。", "text": "Well, {P}."},
-      {"offset": "0x2664", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x2678", "original": "今度の日曜日、\n空いてるかしら？", "text": "Are you free\nthis Sunday?"},
-      {"offset": "0x2698", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x26dc", "original": "それなら、\n買い物に付き合って\n下さるわね。", "text": "Then you're coming\nshopping with me,\naren't you?"},
-      {"offset": "0x270c", "original": "それなら、\n一緒に水族館に\n付き合って下さるわね。", "text": "Then you're coming\nto the aquarium with me,\naren't you?"},
-      {"offset": "0x2744", "original": "それなら、\n動物園に付き合って\n下さるわね。", "text": "Then you're coming\nto the zoo with me,\naren't you?"},
-      {"offset": "0x2774", "original": "それなら、\n植物園に付き合って\n下さるわね。", "text": "Then you're coming\nto the botanical garden\nwith me, aren't you?"},
-      {"offset": "0x27a4", "original": "それなら、\nプラネタリウムに\n付き合って下さるわね。", "text": "Then you're coming\nto the planetarium\nwith me, aren't you?"},
-      {"offset": "0x27dc", "original": "それなら、\n美術館に付き合って\n下さるわね。", "text": "Then you're coming\nto the art museum with me,\naren't you?"},
-      {"offset": "0x280c", "original": "それなら、\n図書館で勉強を教えて\n下さらない？", "text": "Then won't you help\nme study at\nthe library?"},
-      {"offset": "0x2840", "original": "それなら、\nゲームセンターに\n付き合って下さるわね。", "text": "Then you're coming\nto the arcade with me,\naren't you?"},
-      {"offset": "0x2878", "original": "それなら、\nボーリングに付き合って\n下さるわね。", "text": "Then you're coming\nbowling with me,\naren't you?"},
-      {"offset": "0x28ac", "original": "それなら、\nカラオケに付き合って\n下さるわね。", "text": "Then you're coming\nto karaoke with me,\naren't you?"},
-      {"offset": "0x28e0", "original": "それなら、\n遊園地に付き合って\n下さるわね。", "text": "Then you're coming\nto the theme park\nwith me, aren't you?"},
-      {"offset": "0x2910", "original": "野球のチケットが\nあるのよ。\n付き合って下さるわね。", "text": "I have tickets\nto a baseball game.\nYou'll come, won't you?"},
-      {"offset": "0x2948", "original": "プロレスのチケットが\nあるのよ。\n付き合って下さるわね。", "text": "I have tickets\nto a wrestling show.\nYou'll come, won't you?"},
-      {"offset": "0x2984", "original": "映画のチケットが\n２枚あるのよ。\n付き合って下さるわね。", "text": "I have two\nmovie tickets.\nYou'll come, won't you?"},
-      {"offset": "0x29c0", "original": "コンサートのチケットが\n２枚あるのよ。\n付き合って下さるわね。", "text": "I have two\nconcert tickets.\nYou'll come, won't you?"},
-      {"offset": "0x2a04", "original": "それなら、\nプールに付き合って\n下さるわね。", "text": "Then you're coming\nto the pool with me,\naren't you?"},
-      {"offset": "0x2a34", "original": "それなら、\n海水浴に付き合って\n下さるわね。", "text": "Then you're coming\nto the beach with me,\naren't you?"},
-      {"offset": "0x2a64", "original": "それなら、\nスケートに付き合って\n下さるわね。", "text": "Then you're coming\nskating with me,\naren't you?"},
-      {"offset": "0x2a98", "original": "それなら、\nスキーに付き合って\n下さるわね。", "text": "Then you're coming\nskiing with me,\naren't you?"},
-      {"offset": "0x2ac8", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x2afc", "original": "私の誘いを断るのは、\n男として罪よね。", "text": "A man turning me down?\nThat's a crime, you know!"},
-      {"offset": "0x2b24", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x2b3c", "original": "それでいいわ。\n遅れず来なさいよ。", "text": "That will do.\nDon't be late."},
-      {"offset": "0x2b6c", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x2ba4", "original": "信じられない。\nこの私の誘いを断るなんて。\n失礼するわ。", "text": "Unbelievable!\nYou turned me down?\nWell, excuse me."},
-      {"offset": "0x2be0", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x30dc", "original": "ちょっといいですか？", "text": "Do you have a moment?"},
-      {"offset": "0x30f4", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x3108", "original": "あの…\n今度の日曜日、\n空いていますか…？", "text": "Um...\nare you free\nthis Sunday...?"},
-      {"offset": "0x3134", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x317c", "original": "買い物に付き合って\n欲しいんですけど…。\n駄目ですよね？", "text": "Would you go\nshopping with me...?\nYou'd rather not, right?"},
-      {"offset": "0x31b8", "original": "一緒に、水族館に\n行きませんか？", "text": "Would you come to\nthe aquarium with me?"},
-      {"offset": "0x31dc", "original": "一緒に、動物園に\n行きませんか？", "text": "Would you come to\nthe zoo with me?"},
-      {"offset": "0x3200", "original": "一緒に、植物園に\n行きませんか？", "text": "Would you come to the\nbotanical garden with me?"},
-      {"offset": "0x3224", "original": "プラネタリウムに\n行きませんか？", "text": "Would you like to go\nto the planetarium?"},
-      {"offset": "0x3248", "original": "それなら、\n美術館に\n行きませんか？", "text": "Then,\nwould you like to go\nto the art museum?"},
-      {"offset": "0x3270", "original": "図書館で、一緒に\n勉強しませんか？", "text": "Would you study with\nme at the library?"},
-      {"offset": "0x3298", "original": "ゲームセンターに、\n行ってみたいの\nですけど…。", "text": "I'd like to try\ngoing to\nthe arcade..."},
-      {"offset": "0x32cc", "original": "一緒にボーリングに\n行きませんか？", "text": "Would you go\nbowling with me?"},
-      {"offset": "0x32f4", "original": "一緒にカラオケに\n連れて行って\nくれませんか？", "text": "Would you take me\nto karaoke\nwith you?"},
-      {"offset": "0x3328", "original": "遊園地の入場券が\nあるんですけど…、\n一緒に行きませんか？", "text": "I have passes to\nthe theme park...\nWould you come with me?"},
-      {"offset": "0x3368", "original": "野球のチケットが\nあるんですけど…、\n一緒に行きませんか？", "text": "I have tickets to\na baseball game...\nWould you come with me?"},
-      {"offset": "0x33ac", "original": "映画のチケットが、\n２枚あるんですけど、\n一緒に行きませんか？", "text": "I have two\nmovie tickets.\nWould you come with me?"},
-      {"offset": "0x33f0", "original": "コンサートのチケットが、\n２枚あるんですけど、\n一緒に行きませんか？", "text": "I have two\nconcert tickets.\nWould you come with me?"},
-      {"offset": "0x3440", "original": "スケートを教えて\n欲しいんですけど…。", "text": "Would you teach me\nhow to skate...?"},
-      {"offset": "0x3470", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x34a4", "original": "本当ですか？\n嬉しいです。", "text": "Really?\nI'm so happy."},
-      {"offset": "0x34c0", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x34d8", "original": "はい、それでいいです。\nそれでは、失礼します。", "text": "Yes, that's fine.\nGoodbye, then."},
-      {"offset": "0x3514", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x354c", "original": "そうですか…。\nそれでは、失礼します。", "text": "I see...\nGoodbye, then."},
-      {"offset": "0x3578", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x3a90", "original": "こんにちは。\n少々、\nよろしいでしょうか？", "text": "Good day.\nMight I have\na moment?"},
-      {"offset": "0x3abc", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x3ad0", "original": "今度の日曜日ですが…。\n予定は、空いております\nでしょうか？", "text": "About this Sunday...\nWould you happen\nto be free?"},
-      {"offset": "0x3b0c", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x3b50", "original": "よろしければ、\n買い物に付き合って\nいただけませんか？", "text": "If it's no trouble,\nwould you accompany\nme shopping?"},
-      {"offset": "0x3b8c", "original": "よろしければ、\n一緒に水族館に\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\naquarium together?"},
-      {"offset": "0x3bc0", "original": "よろしければ、\n一緒に動物園に\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\nzoo together?"},
-      {"offset": "0x3bf4", "original": "よろしければ、\n一緒に植物園に\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\nbotanical garden?"},
-      {"offset": "0x3c28", "original": "よろしければ、\nプラネタリウムに\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\nplanetarium?"},
-      {"offset": "0x3c5c", "original": "よろしければ、\n一緒に美術館に\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\nart museum together?"},
-      {"offset": "0x3c90", "original": "よろしければ、\n一緒に図書館に\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\nlibrary together?"},
-      {"offset": "0x3cc4", "original": "よろしければ、\nゲームセンターに\n連れて行って\nいただけませんか？", "text": "If it's no trouble,\ncould you take me\nto the arcade,\nplease?"},
-      {"offset": "0x3d08", "original": "よろしければ、\nボーリングに\n連れて行って\nいただけませんか？", "text": "If it's no trouble,\ncould you take me\nbowling,\nplease?"},
-      {"offset": "0x3d48", "original": "よろしければ、\nカラオケに\n連れて行って\nいただけませんか？", "text": "If you don't mind,\ncan you take me\nto karaoke,\nplease?"},
-      {"offset": "0x3d88", "original": "遊園地の入場券が\nありますので、\nよろしければ、\nご一緒しませんか？", "text": "I have passes\nto the theme park,\nso if you like,\nshall we go together?"},
-      {"offset": "0x3dd0", "original": "野球のチケットが\nありますので、\nよろしければ、\nご一緒しませんか？", "text": "I have tickets\nto a baseball game,\nso if you like,\nshall we go together?"},
-      {"offset": "0x3e1c", "original": "映画のチケットが\n２枚ありますので、\nよろしければ、\nご一緒しませんか？", "text": "I have two\nmovie tickets,\nso if you like,\nshall we go together?"},
-      {"offset": "0x3e68", "original": "コンサートのチケットが\n２枚ありますので、\nよろしければ、\nご一緒しませんか？", "text": "I have two\nconcert tickets,\nso if you like,\nshall we go together?"},
-      {"offset": "0x3eb8", "original": "よろしければ、\n一緒に海に\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\nbeach together?"},
-      {"offset": "0x3ee8", "original": "よろしければ、\n一緒にプールに\n行きませんか？", "text": "If it's no trouble,\nshall we go to the\npool together?"},
-      {"offset": "0x3f1c", "original": "よろしければ、\nスケートを教えて\n下さいませんか？", "text": "If it's no trouble,\nwould you teach me\nto skate?"},
-      {"offset": "0x3f54", "original": "よろしければ、\nスキーを教えて\n下さいませんか？", "text": "If it's no trouble,\nwould you teach me\nto ski?"},
-      {"offset": "0x3f88", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x3fbc", "original": "本当ですか？\n嬉しいです。", "text": "Really?\nI'm so happy."},
-      {"offset": "0x3fd8", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x3ff0", "original": "はい、それで結構です。\nそれでは、楽しみにして\nおりますので。", "text": "Yes, that's fine.\nI'm looking\nforward to it."},
-      {"offset": "0x403c", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x4074", "original": "そうですか…。\nそれは、とても残念です。\n失礼いたします。", "text": "I see...\nThat's very unfortunate.\nPlease excuse me."},
-      {"offset": "0x40b4", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x45b0", "original": "あっ、{P}。", "text": "Oh, {P}."},
-      {"offset": "0x45bc", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x45d0", "original": "今度の日曜日、\n空いてるかな…？", "text": "Are you free\nthis Sunday...?"},
-      {"offset": "0x45f0", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x4634", "original": "買い物に、付き合って\n欲しいんだけど…。", "text": "Would you come\nshopping with me...?"},
-      {"offset": "0x4660", "original": "それなら、\n一緒に水族館に\n行かない？", "text": "Then would you\ncome to the aquarium\nwith me?"},
-      {"offset": "0x468c", "original": "それなら、\n一緒に動物園に\n行かない？", "text": "Then would you\ncome to the zoo\nwith me?"},
-      {"offset": "0x46b8", "original": "それなら、\n一緒に植物園に\n行かない？", "text": "Then would you\ncome to the botanical\ngarden with me?"},
-      {"offset": "0x46e4", "original": "それなら、\nプラネタリウムに\n行かない？", "text": "Then would you\ngo to the planetarium\nwith me?"},
-      {"offset": "0x4710", "original": "それなら、\n絵を見に\n美術館に行かない？", "text": "Then would you like\nto see the paintings\nat the art museum?"},
-      {"offset": "0x473c", "original": "それなら、図書館で、\n勉強教えてくれない？", "text": "Then would you help me\nstudy at the library?"},
-      {"offset": "0x476c", "original": "ゲームセンターに\n連れて行ってくれない？", "text": "Would you take me\nto the arcade?"},
-      {"offset": "0x4798", "original": "それなら、\n一緒にボーリングに\n行かない？", "text": "Then would you\ngo bowling\nwith me?"},
-      {"offset": "0x47c8", "original": "それなら、\n一緒にカラオケに\n行かない？", "text": "Then would you\ngo to karaoke\nwith me?"},
-      {"offset": "0x47f4", "original": "遊園地の入場券があるんだ。\n一緒に行かない？", "text": "I've got theme park passes.\nWant to come with me?"},
-      {"offset": "0x4824", "original": "野球のチケットが\nあるんだけど、\n一緒に行かない？", "text": "I have tickets\nto a baseball game.\nWant to come with me?"},
-      {"offset": "0x485c", "original": "プロレスのチケットが\nあるんだけど、\n一緒に行かない？", "text": "I have tickets\nto a wrestling show.\nWant to come with me?"},
-      {"offset": "0x4898", "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かない？", "text": "I have two\nmovie tickets.\nWant to come with me?"},
-      {"offset": "0x48d4", "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かない？", "text": "I have two\nconcert tickets.\nWant to come with me?"},
-      {"offset": "0x4914", "original": "それなら、\n一緒にプールに\n行かない？", "text": "Then would you\ngo to the pool\nwith me?"},
-      {"offset": "0x4940", "original": "それなら、\n一緒に海水浴に\n行かない？", "text": "Then would you\ngo to the beach\nwith me?"},
-      {"offset": "0x496c", "original": "それなら、\n一緒にスケートに\n行かない？", "text": "Then would you\ngo skating\nwith me?"},
-      {"offset": "0x4998", "original": "それなら、\n一緒にスキーに\n行かない？", "text": "Then would you\ngo skiing\nwith me?"},
-      {"offset": "0x49c4", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x49f8", "original": "良かった。\nそれじゃ、どこで\n待ち合わせよっか？", "text": "Great.\nSo, where\nshould we meet?"},
-      {"offset": "0x4a28", "original": "{M}で\nいいかな？", "text": "At {M},\nokay?"},
-      {"offset": "0x4a38", "original": "うん、それでいいわ。\n忘れないでね。", "text": "Yes, that's fine.\nDon't forget."},
-      {"offset": "0x4a68", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x4aa0", "original": "そう…。\nそれは、残念ね。\nそれじゃ…。", "text": "I see...\nThat's too bad.\nBye, then..."},
-      {"offset": "0x4acc", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x4fc8", "original": "やあ、{P}。", "text": "Yo, {P}."},
-      {"offset": "0x4fd4", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x4fe8", "original": "今度の日曜日、\n空いてるかな…？", "text": "Are you free\nthis Sunday...?"},
-      {"offset": "0x5008", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x504c", "original": "買い物に付き合って\n欲しいんだけど、\n駄目かな？", "text": "Would you go\nshopping with me?\nOr is that no good?"},
-      {"offset": "0x5080", "original": "だったら、\n一緒に水族館に\n行かないか？", "text": "Then want to\ngo to the aquarium\nwith me?"},
-      {"offset": "0x50ac", "original": "だったら、\n一緒に動物園に\n行かないか？", "text": "Then want to\ngo to the zoo\nwith me?"},
-      {"offset": "0x50d8", "original": "だったら、\n一緒に植物園に\n行かないか？", "text": "Then want to\ngo to the botanical\ngarden with me?"},
-      {"offset": "0x5104", "original": "だったら、\nプラネタリウムに\n行かないか？", "text": "Then want to\ngo to the planetarium\nwith me?"},
-      {"offset": "0x5134", "original": "だったら、\n絵を見に\n美術館に行かないか？", "text": "Then want to\nsee some paintings\nat the art museum?"},
-      {"offset": "0x5164", "original": "だったら、図書館で\n勉強教えてくれないか？", "text": "Then would you help me\nstudy at the library?"},
-      {"offset": "0x5194", "original": "ゲームセンターに\n行かないか？", "text": "Want to hit\nthe arcade?"},
-      {"offset": "0x51b8", "original": "だったら、\n一緒にボーリングに\n行かないか？", "text": "Then want to\ngo bowling\nwith me?"},
-      {"offset": "0x51e8", "original": "だったら、\n一緒にカラオケに\n行かないか？", "text": "Then want to\ngo to karaoke\nwith me?"},
-      {"offset": "0x5218", "original": "遊園地の入場券が\nあるんだ。\n一緒に行かないか？", "text": "I've got passes\nto the theme park.\nWant to come with me?"},
-      {"offset": "0x524c", "original": "野球のチケットが\nあるんだ。\n一緒に行かないか？", "text": "I've got tickets\nto a baseball game.\nWant to come with me?"},
-      {"offset": "0x5280", "original": "プロレスのチケットが\nあるんだ。\n一緒に行かないか？", "text": "I've got tickets\nto a wrestling show.\nWant to come with me?"},
-      {"offset": "0x52b8", "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かないか？", "text": "I've got two\nmovie tickets.\nWant to come with me?"},
-      {"offset": "0x52f4", "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かないか？", "text": "I've got two\nconcert tickets.\nWant to come with me?"},
-      {"offset": "0x5338", "original": "だったら、\n一緒にプールに\n行かないか？", "text": "Then want to\nhit the pool\nwith me?"},
-      {"offset": "0x5364", "original": "だったら、\n一緒に海に\n行かないか？", "text": "Then want to\nhit the beach\nwith me?"},
-      {"offset": "0x538c", "original": "だったら、\n一緒にスケートに\n行かないか？", "text": "Then want to\ngo skating\nwith me?"},
-      {"offset": "0x53bc", "original": "だったら、\n一緒にスキーに\n行かないか？", "text": "Then want to\ngo skiing\nwith me?"},
-      {"offset": "0x53e8", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x541c", "original": "よし。\nそれじゃ、\nどこで待ち合わせる？", "text": "All right.\nSo where\nshould we meet?"},
-      {"offset": "0x5444", "original": "{M}で\nいいかな？", "text": "At {M},\nokay?"},
-      {"offset": "0x5454", "original": "それでいいよ。\n忘れるなよ。", "text": "That works.\nDon't forget."},
-      {"offset": "0x547c", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x54b4", "original": "そうか、しょうがないな。\nじゃあな。", "text": "I see. Oh well.\nSee ya."},
-      {"offset": "0x54dc", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x59d8", "original": "あの…。\nち、ちょっと、\nいいでしょうか…？", "text": "Um...\nD-do you have\na moment...?"},
-      {"offset": "0x5a04", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x5a18", "original": "あの…\n今度の日曜日、\n空いていますか…？", "text": "Um...\nare you free\nthis Sunday...?"},
-      {"offset": "0x5a44", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x5a88", "original": "あの…。\n買い物に付き合って、\nくれませんか…？", "text": "Um...\nwould you go\nshopping with me...?"},
-      {"offset": "0x5abc", "original": "あの…。\n一緒に水族館に\n行きませんか…？", "text": "Um...\nwould you go to the\naquarium with me...?"},
-      {"offset": "0x5aec", "original": "あの…。\n一緒に動物園に\n行きませんか…？", "text": "Um...\nwould you go to the\nzoo with me...?"},
-      {"offset": "0x5b1c", "original": "あの…。\n一緒に植物園に\n行きませんか…？", "text": "Um...\nwould you go to the\nbotanical garden...?"},
-      {"offset": "0x5b4c", "original": "あの…。\nプラネタリウムに\n行きませんか…？", "text": "Um...\nwould you go to the\nplanetarium...?"},
-      {"offset": "0x5b7c", "original": "あの…。\n一緒に美術館に\n行きませんか…？", "text": "Um...\nwould you go to the\nart museum with me...?"},
-      {"offset": "0x5bac", "original": "あの…。\n図書館で一緒に\n勉強しませんか？", "text": "Um...\nwould you study with\nme at the library?"},
-      {"offset": "0x5bdc", "original": "あの…。\nゲームセンターに\n行ってみたくて…。", "text": "Um...\nI've been wanting to\ntry the arcade..."},
-      {"offset": "0x5c10", "original": "あの…。\n一緒にボーリングに\n行きませんか…？", "text": "Um...\nwould you go\nbowling with me...?"},
-      {"offset": "0x5c44", "original": "あの…。\n一緒にカラオケに\n連れて行って\nくれませんか？", "text": "Um...\nwould you take me\nto karaoke\nwith you?"},
-      {"offset": "0x5c80", "original": "あの…。\n遊園地の入場券が\nあるんですけど…、\n一緒に行きませんか…？", "text": "Um...\nI have passes\nto the theme park...\nwould you come with me...?"},
-      {"offset": "0x5cc8", "original": "あの…。\n野球のチケットが\nあるんですけど…、\n一緒に行きませんか…？", "text": "Um...\nI have tickets\nto a baseball game...\nwould you come with me...?"},
-      {"offset": "0x5d14", "original": "あの…。\n映画のチケットが\n２枚あるんですけど、\n一緒に行きませんか…？", "text": "Um...\nI have two\nmovie tickets...\nwould you come with me...?"},
-      {"offset": "0x5d60", "original": "あの…。\nコンサートのチケットが\n２枚あるんですけど、\n一緒に行きませんか…？", "text": "Um...\nI have two\nconcert tickets...\nwould you come with me...?"},
-      {"offset": "0x5db0", "original": "あの…。\n一緒に、プールに\n行きませんか…？", "text": "Um...\nwould you go to the\npool with me...?"},
-      {"offset": "0x5de0", "original": "あの…。\n一緒に、海水浴に\n行きませんか…？", "text": "Um...\nwould you go to the\nbeach with me...?"},
-      {"offset": "0x5e10", "original": "あの…。\nスケートに\n行きませんか…？", "text": "Um...\nwould you go\nskating...?"},
-      {"offset": "0x5e40", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x5e74", "original": "良かった…。\n断られるかと\n思っちゃった…。", "text": "Thank goodness...\nI thought you'd\nsay no..."},
-      {"offset": "0x5ea0", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x5eb8", "original": "は、はい…。\nそれでいいです…。\nそれじゃ…。", "text": "Y-yes...\nThat's fine...\nGoodbye..."},
-      {"offset": "0x5ef4", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x5f2c", "original": "…！\nそ、そんな…。", "text": "...!\nB-but..."},
-      {"offset": "0x5f44", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x6440", "original": "ちょっと\n聞きたいんだけど…。", "text": "Can I ask you\nsomething...?"},
-      {"offset": "0x6460", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x6474", "original": "今度の日曜日\n空いてるかな…？", "text": "Are you free\nthis Sunday...?"},
-      {"offset": "0x6494", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x64dc", "original": "よかったら、\n買い物に付き合って\n欲しいんだけど…。", "text": "If you like,\nwould you go shopping\nwith me...?"},
-      {"offset": "0x6514", "original": "よかったら、\n一緒に水族館に\n行かない？", "text": "If you like,\nwant to go to the\naquarium together?"},
-      {"offset": "0x6540", "original": "よかったら、\n一緒に動物園に\n行かない？", "text": "If you like,\nwant to go to the\nzoo together?"},
-      {"offset": "0x656c", "original": "よかったら、\n一緒に植物園に\n行かない？", "text": "If you like, want to\ngo to the botanical\ngarden together?"},
-      {"offset": "0x6598", "original": "よかったら、\nプラネタリウムに\n行かない？", "text": "If you like,\nwant to go to the\nplanetarium?"},
-      {"offset": "0x65cc", "original": "よかったら、\n一緒に図書館に\n行かない？", "text": "If you like,\nwant to go to the\nlibrary together?"},
-      {"offset": "0x65f8", "original": "ゲームセンターに、\n一緒に行ってくれない？", "text": "Would you go to the\narcade with me?"},
-      {"offset": "0x6628", "original": "よかったら、\n一緒にボーリングに\n行かない？", "text": "If you like,\nwant to go\nbowling together?"},
-      {"offset": "0x6658", "original": "よかったら\nカラオケで歌を\n教えてくれない？", "text": "If you like,\nwould you teach me\nto sing at karaoke?"},
-      {"offset": "0x6688", "original": "遊園地の入場券が\nあるんだけど…、\n一緒に行かない？", "text": "I have passes to\nthe theme park...\nWant to come with me?"},
-      {"offset": "0x66c0", "original": "野球のチケットが\nあるんだけど…、\n一緒に行かない？", "text": "I have tickets to\na baseball game...\nWant to come with me?"},
-      {"offset": "0x66f8", "original": "プロレスのチケットが\nあるんだけど…、\n一緒に行かない？", "text": "I have tickets to\na wrestling show...\nWant to come with me?"},
-      {"offset": "0x6734", "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かない？", "text": "I have two\nmovie tickets.\nWant to come with me?"},
-      {"offset": "0x6770", "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かない？", "text": "I have two\nconcert tickets.\nWant to come with me?"},
-      {"offset": "0x67b0", "original": "よかったら、\n一緒にプールに\n行かない？", "text": "If you like,\nwant to go to the\npool together?"},
-      {"offset": "0x67dc", "original": "よかったら、\n一緒に海に行かない？", "text": "If you like, want to\ngo to the beach together?"},
-      {"offset": "0x6804", "original": "よかったら、\n一緒にスケートに\n行かない？", "text": "If you like,\nwant to go\nskating together?"},
-      {"offset": "0x6834", "original": "よかったら、\n一緒にスキーに\n行かない？", "text": "If you like,\nwant to go\nskiing together?"},
-      {"offset": "0x6860", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x6894", "original": "本当？\n良かった。", "text": "Really?\nI'm glad."},
-      {"offset": "0x68a8", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x68c0", "original": "うん、それでいいわ。\nそれじゃ。", "text": "Yes, that's fine.\nSee you."},
-      {"offset": "0x68ec", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x6924", "original": "そう…。\nあっ、別に良いの。\nそれじゃ。", "text": "I see...\nOh, it's fine.\nSee you."},
-      {"offset": "0x6950", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x6e68", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x6e88", "original": "傷ついてたみたいだな。\nもう少し優しくしても\nよかったかな…。", "text": "Looks like she was hurt.\nMaybe I could've been\na little kinder..."},
-      {"offset": "0x6ecc", "original": "かなり傷ついてたな…。\nあんな、ひどいことを…。\nあぁ、良心が痛むなぁ…。", "text": "She was really hurt...\nThat was awful of me...\nI feel so guilty..."},
-      {"offset": "0x6f1c", "original": "あんなこと言うなんて…。\n俺って、\n人間として最低だーっ！", "text": "How could I say that...\nI am the\nlowest of the low!!!"},
-      {"offset": "0x6f5c", "original": "すっごく、傷ついてたぞ。\n俺は、\n人間失格だーっ！！", "text": "She was so hurt.\nI'm a\nfailure as a human!!"},
-      {"offset": "0x7070", "original": "{P}\nちょっと\n聞きたいんですけど…。", "text": "{P},\ncan I ask you\nsomething...?"},
-      {"offset": "0x7094", "original": "{G}。\nどうしたの？", "text": "{G}.\nWhat's up?"},
-      {"offset": "0x70a8", "original": "今度の日曜日\n空いてますか…？", "text": "Are you free\nthis Sunday...?"},
-      {"offset": "0x70c8", "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。", "text": "I'm free. What's up?{q}Sorry, I'm a busy man."},
-      {"offset": "0x710c", "original": "よかったら、\n買い物に付き合って\n欲しいんですけど…。", "text": "If you want,\nwould you come\nshopping with me...?"},
-      {"offset": "0x7148", "original": "よかったら、\n一緒に水族館に\n行きませんか？", "text": "Would you like to\ngo to the aquarium\nwith me?"},
-      {"offset": "0x7178", "original": "よかったら、\n一緒に動物園に\n行きませんか？", "text": "Would you like to\ngo to the zoo\nwith me?"},
-      {"offset": "0x71a8", "original": "よかったら、\n一緒に植物園に\n行きませんか？", "text": "Would you like to\ngo to the botanical\ngarden with me?"},
-      {"offset": "0x71d8", "original": "よかったら、\nプラネタリウムに\n行きませんか？", "text": "Would you like to\ngo to the planetarium\nwith me?"},
-      {"offset": "0x7210", "original": "よかったら、\n一緒に図書館に\n行きませんか？", "text": "Would you like to\ngo to the library\nwith me?"},
-      {"offset": "0x7240", "original": "よかったら、\n一緒にゲームセンターに\n行きませんか？", "text": "Would you like to\ngo to the arcade\nwith me?"},
-      {"offset": "0x7278", "original": "よかったら、\n一緒にボーリングに\n行きませんか？", "text": "Would you like\nto go bowling\nwith me?"},
-      {"offset": "0x72b0", "original": "遊園地の入場券が\nあるんですけど、\n一緒に行きませんか？", "text": "I have passes\nto the theme park.\nWanna come with me?"},
-      {"offset": "0x72ec", "original": "野球のチケットが\nあるんですけど、\n一緒に行きませんか？", "text": "I have tickets\nto a baseball game.\nWanna come with me?"},
-      {"offset": "0x7328", "original": "プロレスのチケットが\nあるんですけど、\n一緒に行きませんか？", "text": "I have tickets\nto a wrestling show.\nWanna come with me?"},
-      {"offset": "0x7368", "original": "映画のチケットが\n２枚あるんですけど、\n一緒に行きませんか？", "text": "I have two\nmovie tickets.\nWanna come with me?"},
-      {"offset": "0x73a8", "original": "コンサートのチケットが\n２枚あるんですけど、\n一緒に行きませんか？", "text": "I have two\nconcert tickets.\nWanna come with me?"},
-      {"offset": "0x73f0", "original": "よかったら、\n一緒にプールに\n行きませんか？", "text": "Would you like to\ngo to the pool\nwith me?"},
-      {"offset": "0x7420", "original": "よかったら、\n一緒に海に\n行きませんか？", "text": "Would you like to\ngo to the beach\nwith me?"},
-      {"offset": "0x744c", "original": "よかったら、\n一緒にスケートに\n行きませんか？", "text": "Would you like\nto go skating\nwith me?"},
-      {"offset": "0x7480", "original": "よかったら、\n一緒にスキーに\n行きませんか？", "text": "Would you like\nto go skiing\nwith me?"},
-      {"offset": "0x74b0", "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。", "text": "Sure, let's go together.{q}No, I'll pass, thanks."},
-      {"offset": "0x74e4", "original": "やったー。\nそれじゃ、\n絶対、約束ですよ。", "text": "Yaaay!\nThen it's\na promise, okay?"},
-      {"offset": "0x7510", "original": "{M}で\n待ち合わせでいい？", "text": "Meet at {M},\nis that okay?"},
-      {"offset": "0x7528", "original": "うん、それでいいです。\nそれじゃ。", "text": "Yep, that's fine.\nBye!"},
-      {"offset": "0x7558", "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。", "text": "So, this Sunday.\nI'd better not\nforget it."},
-      {"offset": "0x7590", "original": "いいわよーだ。\nふん、\nお兄ちゃんと行くもん。", "text": "Fine, then!\nHmph, I'll go\nwith my older brother!"},
-      {"offset": "0x75c4", "original": "ちょっと\n冷たかったかな…。", "text": "Was I a little\ntoo cold...?"},
-      {"offset": "0x7ac0", "original": "{P}。", "text": "{P}."},
-      {"offset": "0x7ad4", "original": "あっ、{P}", "text": "Oh, {P}."},
-      {"offset": "0x7af8", "original": "あっ、{P}", "text": "Oh, {P}."}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/G_INVITE.BIN",
+      "base": "0x80197000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xc",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x20",
+          "original": "ねぇねぇ、\n今度の日曜日、\n空いてるでしょう？",
+          "text": "Hey, hey,\nyou're free\nthis Sunday, right?"
+        },
+        {
+          "offset": "0x50",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x94",
+          "original": "ラッキー。\n買い物に行こうよ。",
+          "text": "Lucky!\nLet's go shopping."
+        },
+        {
+          "offset": "0xb8",
+          "original": "ラッキー。\n一緒に水族館に\n行こうよ。",
+          "text": "Lucky!\nLet's go to the\naquarium together."
+        },
+        {
+          "offset": "0xe4",
+          "original": "ラッキー。\n一緒に動物園に\n行こうよ。",
+          "text": "Lucky!\nLet's go to the\nzoo together."
+        },
+        {
+          "offset": "0x110",
+          "original": "ラッキー。\n一緒に植物園に\n行こうよ。",
+          "text": "Lucky!\nLet's go to the\nbotanical garden."
+        },
+        {
+          "offset": "0x13c",
+          "original": "ラッキー。\nプラネタリウムに\n行こうよ。",
+          "text": "Lucky!\nLet's go to the\nplanetarium."
+        },
+        {
+          "offset": "0x168",
+          "original": "ラッキー。\n美術館に行こうよ。",
+          "text": "Lucky!\nLet's go to the art museum."
+        },
+        {
+          "offset": "0x18c",
+          "original": "ラッキー。\nちょろっと、図書館で、\n勉強教えてくんない？",
+          "text": "Lucky!\nCould you help me study\na bit at the library?"
+        },
+        {
+          "offset": "0x1c8",
+          "original": "ラッキー。\nゲームセンター\n行こうよ。",
+          "text": "Lucky!\nLet's hit\nthe arcade."
+        },
+        {
+          "offset": "0x1f4",
+          "original": "ラッキー。\n一緒にボーリングに\n行こうよ。",
+          "text": "Lucky!\nLet's go\nbowling together."
+        },
+        {
+          "offset": "0x224",
+          "original": "ラッキー。\n一緒にカラオケに\n行こうよ。",
+          "text": "Lucky!\nLet's go\nto karaoke together."
+        },
+        {
+          "offset": "0x250",
+          "original": "ラッキー。\n遊園地の入場券があるんだ。\n一緒に行こうよ。",
+          "text": "Lucky!\nI've got theme park passes.\nLet's go together."
+        },
+        {
+          "offset": "0x28c",
+          "original": "野球のチケットが\nあるんだけど、\n一緒に行こうよ。",
+          "text": "I've got tickets\nto a baseball game.\nLet's go together."
+        },
+        {
+          "offset": "0x2c4",
+          "original": "プロレスのチケットが\nあるんだけど、\n一緒に行こうよ。",
+          "text": "I've got tickets\nto a wrestling show.\nLet's go together."
+        },
+        {
+          "offset": "0x300",
+          "original": "映画のチケットが\n２枚あるんだ。\n一緒に行こうよ。",
+          "text": "I've got two\nmovie tickets.\nLet's go together."
+        },
+        {
+          "offset": "0x338",
+          "original": "コンサートのチケットが\n２枚あるんだ。\n一緒に行こうよ。",
+          "text": "I've got two\nconcert tickets.\nLet's go together."
+        },
+        {
+          "offset": "0x374",
+          "original": "ラッキー。\n一緒にプールに\n行こうよ。",
+          "text": "Lucky!\nLet's go to the\npool together."
+        },
+        {
+          "offset": "0x3a0",
+          "original": "ラッキー。\n一緒に海水浴に\n行こうよ。",
+          "text": "Lucky!\nLet's go to the\nbeach together."
+        },
+        {
+          "offset": "0x3cc",
+          "original": "ラッキー。\n一緒にスケートに\n行こうよ。",
+          "text": "Lucky!\nLet's go\nskating together."
+        },
+        {
+          "offset": "0x3f8",
+          "original": "ラッキー。\n一緒にスキーに\n行こうよ。",
+          "text": "Lucky!\nLet's go\nskiing together."
+        },
+        {
+          "offset": "0x424",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x458",
+          "original": "じゃ、決まりね。",
+          "text": "Then it's settled."
+        },
+        {
+          "offset": "0x46c",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x484",
+          "original": "うん、それでいいよ。\nそれじゃ、\n今度の日曜日が楽しみ。",
+          "text": "Yeah, that works.\nOkay, I can't wait\nfor Sunday."
+        },
+        {
+          "offset": "0x4c8",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x500",
+          "original": "えぇー、駄目ぇ。\n超がっかり。\nじゃあ、いいわよ。",
+          "text": "Whaaat, no?\nTotal bummer.\nFine, whatever."
+        },
+        {
+          "offset": "0x538",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0xa34",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xa40",
+          "original": "あっ、詩織。\nどうしたの？",
+          "text": "Oh, Shiori.\nWhat's up?"
+        },
+        {
+          "offset": "0xa5c",
+          "original": "ねぇ、\n今度の日曜日、\n空いてるかな…？",
+          "text": "Hey,\nare you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0xa84",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0xac8",
+          "original": "買い物に付き合って\n欲しいんだけど…。\n駄目？",
+          "text": "Would you go\nshopping with me...?\nIs that okay?"
+        },
+        {
+          "offset": "0xafc",
+          "original": "それなら、\n一緒に水族館に\n行かない？",
+          "text": "Then would you\ncome to the aquarium\nwith me?"
+        },
+        {
+          "offset": "0xb28",
+          "original": "それなら、\n一緒に動物園に\n行かない？",
+          "text": "Then would you\ncome to the zoo\nwith me?"
+        },
+        {
+          "offset": "0xb54",
+          "original": "それなら、\n一緒に植物園に\n行かない？",
+          "text": "Then would you\ncome to the botanical\ngarden with me?"
+        },
+        {
+          "offset": "0xb80",
+          "original": "それなら、\nプラネタリウムに\n行かない？",
+          "text": "Then would you\ngo to the planetarium\nwith me?"
+        },
+        {
+          "offset": "0xbac",
+          "original": "それなら、\n絵を見に\n美術館に行かない？",
+          "text": "Then would you like\nto see the paintings\nat the art museum?"
+        },
+        {
+          "offset": "0xbd8",
+          "original": "それなら、図書館で\n一緒に勉強しない？",
+          "text": "Want to study together\nat the library, then?"
+        },
+        {
+          "offset": "0xc04",
+          "original": "ゲームセンターに\n連れて行ってくれない？",
+          "text": "Would you take me\nto the arcade?"
+        },
+        {
+          "offset": "0xc30",
+          "original": "それなら、\n一緒にボーリングに\n行かない？",
+          "text": "Then would you\ngo bowling\nwith me?"
+        },
+        {
+          "offset": "0xc60",
+          "original": "それなら、\n一緒にカラオケに\n行かない？",
+          "text": "Then would you\ngo to karaoke\nwith me?"
+        },
+        {
+          "offset": "0xc8c",
+          "original": "遊園地の入場券があるの。\n一緒に行かない？",
+          "text": "I have theme park passes.\nWant to come with me?"
+        },
+        {
+          "offset": "0xcbc",
+          "original": "野球のチケットが\nあるんだけど、\n一緒に行かない？",
+          "text": "I have tickets\nto a baseball game.\nWant to come with me?"
+        },
+        {
+          "offset": "0xcf4",
+          "original": "プロレスのチケットが\nあるんだけど、\n一緒に行かない？",
+          "text": "I have tickets\nto a wrestling show.\nWant to come with me?"
+        },
+        {
+          "offset": "0xd30",
+          "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かない？",
+          "text": "I have two\nmovie tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0xd6c",
+          "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かない？",
+          "text": "I have two\nconcert tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0xdac",
+          "original": "それなら、\n一緒にプールに\n行かない？",
+          "text": "Then would you\ngo to the pool\nwith me?"
+        },
+        {
+          "offset": "0xdd8",
+          "original": "それなら、\n一緒に海水浴に\n行かない？",
+          "text": "Then would you\ngo to the beach\nwith me?"
+        },
+        {
+          "offset": "0xe04",
+          "original": "それなら、\n一緒にスケートに\n行かない？",
+          "text": "Then would you\ngo skating\nwith me?"
+        },
+        {
+          "offset": "0xe30",
+          "original": "それなら、\n一緒にスキーに\n行かない？",
+          "text": "Then would you\ngo skiing\nwith me?"
+        },
+        {
+          "offset": "0xe5c",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0xe90",
+          "original": "本当？\nそれじゃ、えーと…。",
+          "text": "Really?\nThen, um..."
+        },
+        {
+          "offset": "0xeac",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0xec4",
+          "original": "うん、それでいいわ。\n忘れないでね。",
+          "text": "Yes, that's fine.\nDon't forget."
+        },
+        {
+          "offset": "0xef4",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0xf2c",
+          "original": "そう…。\nそれならしかたないね。\nそれじゃ…。",
+          "text": "I see...\nWell, it can't be helped.\nBye, then..."
+        },
+        {
+          "offset": "0x1410",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x1424",
+          "original": "今度の日曜日\n空いてるわよね？",
+          "text": "You're free\nthis Sunday, aren't you?"
+        },
+        {
+          "offset": "0x1444",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x1488",
+          "original": "だったら、\n買い物に付き合いなさい。",
+          "text": "Then you'll come\nshopping with me."
+        },
+        {
+          "offset": "0x14b0",
+          "original": "だったら、\n水族館に行くわよ。",
+          "text": "Then we're going\nto the aquarium."
+        },
+        {
+          "offset": "0x14d4",
+          "original": "だったら、\n動物園に行くわよ。",
+          "text": "Then we're going\nto the zoo."
+        },
+        {
+          "offset": "0x14f8",
+          "original": "だったら、\n植物園に行くわよ。",
+          "text": "Then we're going to\nthe botanical garden."
+        },
+        {
+          "offset": "0x151c",
+          "original": "だったら、\nプラネタリウムに\n行くわよ。",
+          "text": "Then we're\ngoing to the\nplanetarium."
+        },
+        {
+          "offset": "0x1548",
+          "original": "だったら、\n美術館に行くわよ。",
+          "text": "Then we're going\nto the art museum."
+        },
+        {
+          "offset": "0x156c",
+          "original": "だったら、\n図書館で勉強よ。",
+          "text": "Then we're studying\nat the library."
+        },
+        {
+          "offset": "0x158c",
+          "original": "だったら、\nゲームセンターに\n行くわよ。",
+          "text": "Then we're\ngoing to the\narcade."
+        },
+        {
+          "offset": "0x15b8",
+          "original": "だったら、\nボーリングに\n行くわよ",
+          "text": "Then,\nwe're going\nbowling."
+        },
+        {
+          "offset": "0x15e0",
+          "original": "だったら、\nカラオケに行くわよ。",
+          "text": "Then we're going\nto karaoke."
+        },
+        {
+          "offset": "0x1604",
+          "original": "だったら\n遊園地に行くわよ。",
+          "text": "Then we're going\nto the theme park."
+        },
+        {
+          "offset": "0x1624",
+          "original": "だったら、\n野球を観に行くわよ。",
+          "text": "Then we're going\nto a baseball game."
+        },
+        {
+          "offset": "0x1648",
+          "original": "だったら、\nプロレスを観に行くわよ。",
+          "text": "Then we're going\nto see pro wrestling."
+        },
+        {
+          "offset": "0x1670",
+          "original": "だったら、\n映画を観に行くわよ。",
+          "text": "Then we're going\nto see a movie."
+        },
+        {
+          "offset": "0x1694",
+          "original": "だったら、\nコンサートを\n聴きに行くわよ。",
+          "text": "Then we're\ngoing to\na concert."
+        },
+        {
+          "offset": "0x16c4",
+          "original": "だったら、\nプールに行くわよ。",
+          "text": "Then we're going\nto the pool."
+        },
+        {
+          "offset": "0x16e8",
+          "original": "だったら、\n海に行くわよ。",
+          "text": "Then we're going\nto the beach."
+        },
+        {
+          "offset": "0x1708",
+          "original": "だったら、\nスケートに行くわよ。",
+          "text": "Then we're going\nskating."
+        },
+        {
+          "offset": "0x1730",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x1764",
+          "original": "当然ね。",
+          "text": "Naturally."
+        },
+        {
+          "offset": "0x1770",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x1788",
+          "original": "それでいいわ。\n忘れたら、\n覚悟しなさいよ。",
+          "text": "That's fine.\nIf you forget,\nwatch out!"
+        },
+        {
+          "offset": "0x17c0",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x17f8",
+          "original": "不愉快よ。\n失礼するわ。",
+          "text": "How unpleasant.\nBye."
+        },
+        {
+          "offset": "0x1814",
+          "original": "不愉快よ。\n失礼するわ。",
+          "text": "How unpleasant.\nBye."
+        },
+        {
+          "offset": "0x1d0c",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x1d18",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, {G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x1d30",
+          "original": "ねぇ、\n今度の日曜日、\n空いてる？",
+          "text": "Hey,\nare you free\nthis Sunday?"
+        },
+        {
+          "offset": "0x1d54",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x1d98",
+          "original": "買い物に付き合って\n欲しいんだけど…。\n駄目？",
+          "text": "Would you go\nshopping with me...?\nIs that okay?"
+        },
+        {
+          "offset": "0x1dcc",
+          "original": "それなら\n一緒に、水族館に\n行かない？",
+          "text": "Wanna go\nto the aquarium\nwith me?"
+        },
+        {
+          "offset": "0x1df8",
+          "original": "それなら\n一緒に、動物園に\n行かない？",
+          "text": "Then, wanna\ngo to the zoo\nwith me?"
+        },
+        {
+          "offset": "0x1e24",
+          "original": "それなら\n一緒に、植物園に\n行かない？",
+          "text": "Wanna go\nto the botanical\ngarden?"
+        },
+        {
+          "offset": "0x1e50",
+          "original": "それなら、\nプラネタリウムに\n行かない？",
+          "text": "Then would you\ngo to the planetarium\nwith me?"
+        },
+        {
+          "offset": "0x1e7c",
+          "original": "それなら、\n絵を見に、\n美術館に行かない？",
+          "text": "Then how about\nlooking at paintings\nat the art museum?"
+        },
+        {
+          "offset": "0x1eac",
+          "original": "それなら、図書館で、\n一緒に勉強しない？",
+          "text": "Then how about studying\ntogether at the library?"
+        },
+        {
+          "offset": "0x1ed8",
+          "original": "ゲームセンターに\n連れてってくれない？",
+          "text": "Would you take me\nto the arcade?"
+        },
+        {
+          "offset": "0x1f04",
+          "original": "それなら\n一緒にボーリングに\n行かない？",
+          "text": "Then how about\nbowling\nwith me?"
+        },
+        {
+          "offset": "0x1f30",
+          "original": "それなら\n一緒に、カラオケに\n行かない？",
+          "text": "How about\nsome karaoke\ntogether?"
+        },
+        {
+          "offset": "0x1f5c",
+          "original": "遊園地の入場券があるの。\n一緒にどう？",
+          "text": "I have theme park passes.\nWant to come along?"
+        },
+        {
+          "offset": "0x1f88",
+          "original": "野球のチケットが\nあるんだけど、\n一緒にどう？",
+          "text": "I have tickets\nto a baseball game.\nWant to come along?"
+        },
+        {
+          "offset": "0x1fbc",
+          "original": "プロレスのチケットが\nあるんだけど、\n一緒にどう？",
+          "text": "I have tickets\nto a wrestling show.\nWant to come along?"
+        },
+        {
+          "offset": "0x1ff4",
+          "original": "映画のチケットが\n２枚あるんだけど、\n一緒にどう？",
+          "text": "I have two\nmovie tickets.\nWant to come along?"
+        },
+        {
+          "offset": "0x202c",
+          "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒にどう？",
+          "text": "I have two\nconcert tickets.\nWant to come along?"
+        },
+        {
+          "offset": "0x2070",
+          "original": "それなら\n一緒に、スケートに\n行かない？",
+          "text": "How about\nwe go skating\ntogether?"
+        },
+        {
+          "offset": "0x20a0",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x20d4",
+          "original": "リアリー、本当に？\nそれじゃ、\nどうしようか？",
+          "text": "Really? Hontou ni?\nThen, what\nshould we do?"
+        },
+        {
+          "offset": "0x2104",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x211c",
+          "original": "ＯＫ。\nそれでいいわ。",
+          "text": "OK.\nThat works."
+        },
+        {
+          "offset": "0x2140",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x2178",
+          "original": "そう…。\nちょっぴり残念ね。\nそれじゃ…。",
+          "text": "I see...\nThat's a shame.\nBye, then..."
+        },
+        {
+          "offset": "0x2658",
+          "original": "あら、{P}。",
+          "text": "Well, {P}."
+        },
+        {
+          "offset": "0x2664",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x2678",
+          "original": "今度の日曜日、\n空いてるかしら？",
+          "text": "Are you free\nthis Sunday?"
+        },
+        {
+          "offset": "0x2698",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x26dc",
+          "original": "それなら、\n買い物に付き合って\n下さるわね。",
+          "text": "Then you're coming\nshopping with me,\naren't you?"
+        },
+        {
+          "offset": "0x270c",
+          "original": "それなら、\n一緒に水族館に\n付き合って下さるわね。",
+          "text": "Then you're coming\nto the aquarium with me,\naren't you?"
+        },
+        {
+          "offset": "0x2744",
+          "original": "それなら、\n動物園に付き合って\n下さるわね。",
+          "text": "Then you're coming\nto the zoo with me,\naren't you?"
+        },
+        {
+          "offset": "0x2774",
+          "original": "それなら、\n植物園に付き合って\n下さるわね。",
+          "text": "Then you're coming\nto the botanical garden\nwith me, aren't you?"
+        },
+        {
+          "offset": "0x27a4",
+          "original": "それなら、\nプラネタリウムに\n付き合って下さるわね。",
+          "text": "Then you're coming\nto the planetarium\nwith me, aren't you?"
+        },
+        {
+          "offset": "0x27dc",
+          "original": "それなら、\n美術館に付き合って\n下さるわね。",
+          "text": "Then you're coming\nto the art museum with me,\naren't you?"
+        },
+        {
+          "offset": "0x280c",
+          "original": "それなら、\n図書館で勉強を教えて\n下さらない？",
+          "text": "Then won't you help\nme study at\nthe library?"
+        },
+        {
+          "offset": "0x2840",
+          "original": "それなら、\nゲームセンターに\n付き合って下さるわね。",
+          "text": "Then you're coming\nto the arcade with me,\naren't you?"
+        },
+        {
+          "offset": "0x2878",
+          "original": "それなら、\nボーリングに付き合って\n下さるわね。",
+          "text": "Then you're coming\nbowling with me,\naren't you?"
+        },
+        {
+          "offset": "0x28ac",
+          "original": "それなら、\nカラオケに付き合って\n下さるわね。",
+          "text": "Then you're coming\nto karaoke with me,\naren't you?"
+        },
+        {
+          "offset": "0x28e0",
+          "original": "それなら、\n遊園地に付き合って\n下さるわね。",
+          "text": "Then you're coming\nto the theme park\nwith me, aren't you?"
+        },
+        {
+          "offset": "0x2910",
+          "original": "野球のチケットが\nあるのよ。\n付き合って下さるわね。",
+          "text": "I have tickets\nto a baseball game.\nYou'll come, won't you?"
+        },
+        {
+          "offset": "0x2948",
+          "original": "プロレスのチケットが\nあるのよ。\n付き合って下さるわね。",
+          "text": "I have tickets\nto a wrestling show.\nYou'll come, won't you?"
+        },
+        {
+          "offset": "0x2984",
+          "original": "映画のチケットが\n２枚あるのよ。\n付き合って下さるわね。",
+          "text": "I have two\nmovie tickets.\nYou'll come, won't you?"
+        },
+        {
+          "offset": "0x29c0",
+          "original": "コンサートのチケットが\n２枚あるのよ。\n付き合って下さるわね。",
+          "text": "I have two\nconcert tickets.\nYou'll come, won't you?"
+        },
+        {
+          "offset": "0x2a04",
+          "original": "それなら、\nプールに付き合って\n下さるわね。",
+          "text": "Then you're coming\nto the pool with me,\naren't you?"
+        },
+        {
+          "offset": "0x2a34",
+          "original": "それなら、\n海水浴に付き合って\n下さるわね。",
+          "text": "Then you're coming\nto the beach with me,\naren't you?"
+        },
+        {
+          "offset": "0x2a64",
+          "original": "それなら、\nスケートに付き合って\n下さるわね。",
+          "text": "Then you're coming\nskating with me,\naren't you?"
+        },
+        {
+          "offset": "0x2a98",
+          "original": "それなら、\nスキーに付き合って\n下さるわね。",
+          "text": "Then you're coming\nskiing with me,\naren't you?"
+        },
+        {
+          "offset": "0x2ac8",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x2afc",
+          "original": "私の誘いを断るのは、\n男として罪よね。",
+          "text": "A man turning me down?\nThat's a crime, you know!"
+        },
+        {
+          "offset": "0x2b24",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x2b3c",
+          "original": "それでいいわ。\n遅れず来なさいよ。",
+          "text": "That will do.\nDon't be late."
+        },
+        {
+          "offset": "0x2b6c",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x2ba4",
+          "original": "信じられない。\nこの私の誘いを断るなんて。\n失礼するわ。",
+          "text": "Unbelievable!\nYou turned me down?\nWell, excuse me."
+        },
+        {
+          "offset": "0x2be0",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x30dc",
+          "original": "ちょっといいですか？",
+          "text": "Do you have a moment?"
+        },
+        {
+          "offset": "0x30f4",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x3108",
+          "original": "あの…\n今度の日曜日、\n空いていますか…？",
+          "text": "Um...\nare you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0x3134",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x317c",
+          "original": "買い物に付き合って\n欲しいんですけど…。\n駄目ですよね？",
+          "text": "Would you go\nshopping with me...?\nYou'd rather not, right?"
+        },
+        {
+          "offset": "0x31b8",
+          "original": "一緒に、水族館に\n行きませんか？",
+          "text": "Would you come to\nthe aquarium with me?"
+        },
+        {
+          "offset": "0x31dc",
+          "original": "一緒に、動物園に\n行きませんか？",
+          "text": "Would you come to\nthe zoo with me?"
+        },
+        {
+          "offset": "0x3200",
+          "original": "一緒に、植物園に\n行きませんか？",
+          "text": "Would you come to the\nbotanical garden with me?"
+        },
+        {
+          "offset": "0x3224",
+          "original": "プラネタリウムに\n行きませんか？",
+          "text": "Would you like to go\nto the planetarium?"
+        },
+        {
+          "offset": "0x3248",
+          "original": "それなら、\n美術館に\n行きませんか？",
+          "text": "Then,\nwould you like to go\nto the art museum?"
+        },
+        {
+          "offset": "0x3270",
+          "original": "図書館で、一緒に\n勉強しませんか？",
+          "text": "Would you study with\nme at the library?"
+        },
+        {
+          "offset": "0x3298",
+          "original": "ゲームセンターに、\n行ってみたいの\nですけど…。",
+          "text": "I'd like to try\ngoing to\nthe arcade..."
+        },
+        {
+          "offset": "0x32cc",
+          "original": "一緒にボーリングに\n行きませんか？",
+          "text": "Would you go\nbowling with me?"
+        },
+        {
+          "offset": "0x32f4",
+          "original": "一緒にカラオケに\n連れて行って\nくれませんか？",
+          "text": "Would you take me\nto karaoke\nwith you?"
+        },
+        {
+          "offset": "0x3328",
+          "original": "遊園地の入場券が\nあるんですけど…、\n一緒に行きませんか？",
+          "text": "I have passes to\nthe theme park...\nWould you come with me?"
+        },
+        {
+          "offset": "0x3368",
+          "original": "野球のチケットが\nあるんですけど…、\n一緒に行きませんか？",
+          "text": "I have tickets to\na baseball game...\nWould you come with me?"
+        },
+        {
+          "offset": "0x33ac",
+          "original": "映画のチケットが、\n２枚あるんですけど、\n一緒に行きませんか？",
+          "text": "I have two\nmovie tickets.\nWould you come with me?"
+        },
+        {
+          "offset": "0x33f0",
+          "original": "コンサートのチケットが、\n２枚あるんですけど、\n一緒に行きませんか？",
+          "text": "I have two\nconcert tickets.\nWould you come with me?"
+        },
+        {
+          "offset": "0x3440",
+          "original": "スケートを教えて\n欲しいんですけど…。",
+          "text": "Would you teach me\nhow to skate...?"
+        },
+        {
+          "offset": "0x3470",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x34a4",
+          "original": "本当ですか？\n嬉しいです。",
+          "text": "Really?\nI'm so happy."
+        },
+        {
+          "offset": "0x34c0",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x34d8",
+          "original": "はい、それでいいです。\nそれでは、失礼します。",
+          "text": "Yes, that's fine.\nGoodbye, then."
+        },
+        {
+          "offset": "0x3514",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x354c",
+          "original": "そうですか…。\nそれでは、失礼します。",
+          "text": "I see...\nGoodbye, then."
+        },
+        {
+          "offset": "0x3578",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x3a90",
+          "original": "こんにちは。\n少々、\nよろしいでしょうか？",
+          "text": "Good day.\nMight I have\na moment?"
+        },
+        {
+          "offset": "0x3abc",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x3ad0",
+          "original": "今度の日曜日ですが…。\n予定は、空いております\nでしょうか？",
+          "text": "About this Sunday...\nWould you happen\nto be free?"
+        },
+        {
+          "offset": "0x3b0c",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x3b50",
+          "original": "よろしければ、\n買い物に付き合って\nいただけませんか？",
+          "text": "If it's no trouble,\nwould you accompany\nme shopping?"
+        },
+        {
+          "offset": "0x3b8c",
+          "original": "よろしければ、\n一緒に水族館に\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\naquarium together?"
+        },
+        {
+          "offset": "0x3bc0",
+          "original": "よろしければ、\n一緒に動物園に\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\nzoo together?"
+        },
+        {
+          "offset": "0x3bf4",
+          "original": "よろしければ、\n一緒に植物園に\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\nbotanical garden?"
+        },
+        {
+          "offset": "0x3c28",
+          "original": "よろしければ、\nプラネタリウムに\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\nplanetarium?"
+        },
+        {
+          "offset": "0x3c5c",
+          "original": "よろしければ、\n一緒に美術館に\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\nart museum together?"
+        },
+        {
+          "offset": "0x3c90",
+          "original": "よろしければ、\n一緒に図書館に\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\nlibrary together?"
+        },
+        {
+          "offset": "0x3cc4",
+          "original": "よろしければ、\nゲームセンターに\n連れて行って\nいただけませんか？",
+          "text": "If it's no trouble,\ncould you take me\nto the arcade,\nplease?"
+        },
+        {
+          "offset": "0x3d08",
+          "original": "よろしければ、\nボーリングに\n連れて行って\nいただけませんか？",
+          "text": "If it's no trouble,\ncould you take me\nbowling,\nplease?"
+        },
+        {
+          "offset": "0x3d48",
+          "original": "よろしければ、\nカラオケに\n連れて行って\nいただけませんか？",
+          "text": "If you don't mind,\ncan you take me\nto karaoke,\nplease?"
+        },
+        {
+          "offset": "0x3d88",
+          "original": "遊園地の入場券が\nありますので、\nよろしければ、\nご一緒しませんか？",
+          "text": "I have passes\nto the theme park,\nso if you like,\nshall we go together?"
+        },
+        {
+          "offset": "0x3dd0",
+          "original": "野球のチケットが\nありますので、\nよろしければ、\nご一緒しませんか？",
+          "text": "I have tickets\nto a baseball game,\nso if you like,\nshall we go together?"
+        },
+        {
+          "offset": "0x3e1c",
+          "original": "映画のチケットが\n２枚ありますので、\nよろしければ、\nご一緒しませんか？",
+          "text": "I have two\nmovie tickets,\nso if you like,\nshall we go together?"
+        },
+        {
+          "offset": "0x3e68",
+          "original": "コンサートのチケットが\n２枚ありますので、\nよろしければ、\nご一緒しませんか？",
+          "text": "I have two\nconcert tickets,\nso if you like,\nshall we go together?"
+        },
+        {
+          "offset": "0x3eb8",
+          "original": "よろしければ、\n一緒に海に\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\nbeach together?"
+        },
+        {
+          "offset": "0x3ee8",
+          "original": "よろしければ、\n一緒にプールに\n行きませんか？",
+          "text": "If it's no trouble,\nshall we go to the\npool together?"
+        },
+        {
+          "offset": "0x3f1c",
+          "original": "よろしければ、\nスケートを教えて\n下さいませんか？",
+          "text": "If it's no trouble,\nwould you teach me\nto skate?"
+        },
+        {
+          "offset": "0x3f54",
+          "original": "よろしければ、\nスキーを教えて\n下さいませんか？",
+          "text": "If it's no trouble,\nwould you teach me\nto ski?"
+        },
+        {
+          "offset": "0x3f88",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x3fbc",
+          "original": "本当ですか？\n嬉しいです。",
+          "text": "Really?\nI'm so happy."
+        },
+        {
+          "offset": "0x3fd8",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x3ff0",
+          "original": "はい、それで結構です。\nそれでは、楽しみにして\nおりますので。",
+          "text": "Yes, that's fine.\nI'm looking\nforward to it."
+        },
+        {
+          "offset": "0x403c",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x4074",
+          "original": "そうですか…。\nそれは、とても残念です。\n失礼いたします。",
+          "text": "I see...\nThat's very unfortunate.\nPlease excuse me."
+        },
+        {
+          "offset": "0x40b4",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x45b0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x45bc",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x45d0",
+          "original": "今度の日曜日、\n空いてるかな…？",
+          "text": "Are you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0x45f0",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x4634",
+          "original": "買い物に、付き合って\n欲しいんだけど…。",
+          "text": "Would you come\nshopping with me...?"
+        },
+        {
+          "offset": "0x4660",
+          "original": "それなら、\n一緒に水族館に\n行かない？",
+          "text": "Then would you\ncome to the aquarium\nwith me?"
+        },
+        {
+          "offset": "0x468c",
+          "original": "それなら、\n一緒に動物園に\n行かない？",
+          "text": "Then would you\ncome to the zoo\nwith me?"
+        },
+        {
+          "offset": "0x46b8",
+          "original": "それなら、\n一緒に植物園に\n行かない？",
+          "text": "Then would you\ncome to the botanical\ngarden with me?"
+        },
+        {
+          "offset": "0x46e4",
+          "original": "それなら、\nプラネタリウムに\n行かない？",
+          "text": "Then would you\ngo to the planetarium\nwith me?"
+        },
+        {
+          "offset": "0x4710",
+          "original": "それなら、\n絵を見に\n美術館に行かない？",
+          "text": "Then would you like\nto see the paintings\nat the art museum?"
+        },
+        {
+          "offset": "0x473c",
+          "original": "それなら、図書館で、\n勉強教えてくれない？",
+          "text": "Then would you help me\nstudy at the library?"
+        },
+        {
+          "offset": "0x476c",
+          "original": "ゲームセンターに\n連れて行ってくれない？",
+          "text": "Would you take me\nto the arcade?"
+        },
+        {
+          "offset": "0x4798",
+          "original": "それなら、\n一緒にボーリングに\n行かない？",
+          "text": "Then would you\ngo bowling\nwith me?"
+        },
+        {
+          "offset": "0x47c8",
+          "original": "それなら、\n一緒にカラオケに\n行かない？",
+          "text": "Then would you\ngo to karaoke\nwith me?"
+        },
+        {
+          "offset": "0x47f4",
+          "original": "遊園地の入場券があるんだ。\n一緒に行かない？",
+          "text": "I've got theme park passes.\nWant to come with me?"
+        },
+        {
+          "offset": "0x4824",
+          "original": "野球のチケットが\nあるんだけど、\n一緒に行かない？",
+          "text": "I have tickets\nto a baseball game.\nWant to come with me?"
+        },
+        {
+          "offset": "0x485c",
+          "original": "プロレスのチケットが\nあるんだけど、\n一緒に行かない？",
+          "text": "I have tickets\nto a wrestling show.\nWant to come with me?"
+        },
+        {
+          "offset": "0x4898",
+          "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かない？",
+          "text": "I have two\nmovie tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0x48d4",
+          "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かない？",
+          "text": "I have two\nconcert tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0x4914",
+          "original": "それなら、\n一緒にプールに\n行かない？",
+          "text": "Then would you\ngo to the pool\nwith me?"
+        },
+        {
+          "offset": "0x4940",
+          "original": "それなら、\n一緒に海水浴に\n行かない？",
+          "text": "Then would you\ngo to the beach\nwith me?"
+        },
+        {
+          "offset": "0x496c",
+          "original": "それなら、\n一緒にスケートに\n行かない？",
+          "text": "Then would you\ngo skating\nwith me?"
+        },
+        {
+          "offset": "0x4998",
+          "original": "それなら、\n一緒にスキーに\n行かない？",
+          "text": "Then would you\ngo skiing\nwith me?"
+        },
+        {
+          "offset": "0x49c4",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x49f8",
+          "original": "良かった。\nそれじゃ、どこで\n待ち合わせよっか？",
+          "text": "Great.\nSo, where\nshould we meet?"
+        },
+        {
+          "offset": "0x4a28",
+          "original": "{M}で\nいいかな？",
+          "text": "At {M},\nokay?"
+        },
+        {
+          "offset": "0x4a38",
+          "original": "うん、それでいいわ。\n忘れないでね。",
+          "text": "Yes, that's fine.\nDon't forget."
+        },
+        {
+          "offset": "0x4a68",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x4aa0",
+          "original": "そう…。\nそれは、残念ね。\nそれじゃ…。",
+          "text": "I see...\nThat's too bad.\nBye, then..."
+        },
+        {
+          "offset": "0x4acc",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x4fc8",
+          "original": "やあ、{P}。",
+          "text": "Yo, {P}."
+        },
+        {
+          "offset": "0x4fd4",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x4fe8",
+          "original": "今度の日曜日、\n空いてるかな…？",
+          "text": "Are you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0x5008",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x504c",
+          "original": "買い物に付き合って\n欲しいんだけど、\n駄目かな？",
+          "text": "Would you go\nshopping with me?\nOr is that no good?"
+        },
+        {
+          "offset": "0x5080",
+          "original": "だったら、\n一緒に水族館に\n行かないか？",
+          "text": "Then want to\ngo to the aquarium\nwith me?"
+        },
+        {
+          "offset": "0x50ac",
+          "original": "だったら、\n一緒に動物園に\n行かないか？",
+          "text": "Then want to\ngo to the zoo\nwith me?"
+        },
+        {
+          "offset": "0x50d8",
+          "original": "だったら、\n一緒に植物園に\n行かないか？",
+          "text": "Then want to\ngo to the botanical\ngarden with me?"
+        },
+        {
+          "offset": "0x5104",
+          "original": "だったら、\nプラネタリウムに\n行かないか？",
+          "text": "Then want to\ngo to the planetarium\nwith me?"
+        },
+        {
+          "offset": "0x5134",
+          "original": "だったら、\n絵を見に\n美術館に行かないか？",
+          "text": "Then want to\nsee some paintings\nat the art museum?"
+        },
+        {
+          "offset": "0x5164",
+          "original": "だったら、図書館で\n勉強教えてくれないか？",
+          "text": "Then would you help me\nstudy at the library?"
+        },
+        {
+          "offset": "0x5194",
+          "original": "ゲームセンターに\n行かないか？",
+          "text": "Want to hit\nthe arcade?"
+        },
+        {
+          "offset": "0x51b8",
+          "original": "だったら、\n一緒にボーリングに\n行かないか？",
+          "text": "Then want to\ngo bowling\nwith me?"
+        },
+        {
+          "offset": "0x51e8",
+          "original": "だったら、\n一緒にカラオケに\n行かないか？",
+          "text": "Then want to\ngo to karaoke\nwith me?"
+        },
+        {
+          "offset": "0x5218",
+          "original": "遊園地の入場券が\nあるんだ。\n一緒に行かないか？",
+          "text": "I've got passes\nto the theme park.\nWant to come with me?"
+        },
+        {
+          "offset": "0x524c",
+          "original": "野球のチケットが\nあるんだ。\n一緒に行かないか？",
+          "text": "I've got tickets\nto a baseball game.\nWant to come with me?"
+        },
+        {
+          "offset": "0x5280",
+          "original": "プロレスのチケットが\nあるんだ。\n一緒に行かないか？",
+          "text": "I've got tickets\nto a wrestling show.\nWant to come with me?"
+        },
+        {
+          "offset": "0x52b8",
+          "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かないか？",
+          "text": "I've got two\nmovie tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0x52f4",
+          "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かないか？",
+          "text": "I've got two\nconcert tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0x5338",
+          "original": "だったら、\n一緒にプールに\n行かないか？",
+          "text": "Then want to\nhit the pool\nwith me?"
+        },
+        {
+          "offset": "0x5364",
+          "original": "だったら、\n一緒に海に\n行かないか？",
+          "text": "Then want to\nhit the beach\nwith me?"
+        },
+        {
+          "offset": "0x538c",
+          "original": "だったら、\n一緒にスケートに\n行かないか？",
+          "text": "Then want to\ngo skating\nwith me?"
+        },
+        {
+          "offset": "0x53bc",
+          "original": "だったら、\n一緒にスキーに\n行かないか？",
+          "text": "Then want to\ngo skiing\nwith me?"
+        },
+        {
+          "offset": "0x53e8",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x541c",
+          "original": "よし。\nそれじゃ、\nどこで待ち合わせる？",
+          "text": "All right.\nSo where\nshould we meet?"
+        },
+        {
+          "offset": "0x5444",
+          "original": "{M}で\nいいかな？",
+          "text": "At {M},\nokay?"
+        },
+        {
+          "offset": "0x5454",
+          "original": "それでいいよ。\n忘れるなよ。",
+          "text": "That works.\nDon't forget."
+        },
+        {
+          "offset": "0x547c",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x54b4",
+          "original": "そうか、しょうがないな。\nじゃあな。",
+          "text": "I see. Oh well.\nSee ya."
+        },
+        {
+          "offset": "0x54dc",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x59d8",
+          "original": "あの…。\nち、ちょっと、\nいいでしょうか…？",
+          "text": "Um...\nD-do you have\na moment...?"
+        },
+        {
+          "offset": "0x5a04",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x5a18",
+          "original": "あの…\n今度の日曜日、\n空いていますか…？",
+          "text": "Um...\nare you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0x5a44",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x5a88",
+          "original": "あの…。\n買い物に付き合って、\nくれませんか…？",
+          "text": "Um...\nwould you go\nshopping with me...?"
+        },
+        {
+          "offset": "0x5abc",
+          "original": "あの…。\n一緒に水族館に\n行きませんか…？",
+          "text": "Um...\nwould you go to the\naquarium with me...?"
+        },
+        {
+          "offset": "0x5aec",
+          "original": "あの…。\n一緒に動物園に\n行きませんか…？",
+          "text": "Um...\nwould you go to the\nzoo with me...?"
+        },
+        {
+          "offset": "0x5b1c",
+          "original": "あの…。\n一緒に植物園に\n行きませんか…？",
+          "text": "Um...\nwould you join me\nat the botanical garden?"
+        },
+        {
+          "offset": "0x5b4c",
+          "original": "あの…。\nプラネタリウムに\n行きませんか…？",
+          "text": "Um...\nwould you join me\nat the planetarium?"
+        },
+        {
+          "offset": "0x5b7c",
+          "original": "あの…。\n一緒に美術館に\n行きませんか…？",
+          "text": "Um...\nwould you go to the\nart museum with me...?"
+        },
+        {
+          "offset": "0x5bac",
+          "original": "あの…。\n図書館で一緒に\n勉強しませんか？",
+          "text": "Um...\nwould you study with\nme at the library?"
+        },
+        {
+          "offset": "0x5bdc",
+          "original": "あの…。\nゲームセンターに\n行ってみたくて…。",
+          "text": "Um...\nI've been wanting to\ntry the arcade..."
+        },
+        {
+          "offset": "0x5c10",
+          "original": "あの…。\n一緒にボーリングに\n行きませんか…？",
+          "text": "Um...\nwould you go\nbowling with me...?"
+        },
+        {
+          "offset": "0x5c44",
+          "original": "あの…。\n一緒にカラオケに\n連れて行って\nくれませんか？",
+          "text": "Um...\nwould you take me\nto karaoke\nwith you?"
+        },
+        {
+          "offset": "0x5c80",
+          "original": "あの…。\n遊園地の入場券が\nあるんですけど…、\n一緒に行きませんか…？",
+          "text": "Um...\nI have passes\nto the theme park...\nwould you come with me...?"
+        },
+        {
+          "offset": "0x5cc8",
+          "original": "あの…。\n野球のチケットが\nあるんですけど…、\n一緒に行きませんか…？",
+          "text": "Um...\nI have tickets\nto a baseball game...\nwould you come with me...?"
+        },
+        {
+          "offset": "0x5d14",
+          "original": "あの…。\n映画のチケットが\n２枚あるんですけど、\n一緒に行きませんか…？",
+          "text": "Um...\nI have two\nmovie tickets...\nwould you come with me...?"
+        },
+        {
+          "offset": "0x5d60",
+          "original": "あの…。\nコンサートのチケットが\n２枚あるんですけど、\n一緒に行きませんか…？",
+          "text": "Um...\nI have two\nconcert tickets...\nwould you come with me...?"
+        },
+        {
+          "offset": "0x5db0",
+          "original": "あの…。\n一緒に、プールに\n行きませんか…？",
+          "text": "Um...\nwould you go to the\npool with me...?"
+        },
+        {
+          "offset": "0x5de0",
+          "original": "あの…。\n一緒に、海水浴に\n行きませんか…？",
+          "text": "Um...\nwould you go to the\nbeach with me...?"
+        },
+        {
+          "offset": "0x5e10",
+          "original": "あの…。\nスケートに\n行きませんか…？",
+          "text": "Um...\nwould you go\nskating...?"
+        },
+        {
+          "offset": "0x5e40",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x5e74",
+          "original": "良かった…。\n断られるかと\n思っちゃった…。",
+          "text": "Thank goodness...\nI thought you'd\nsay no..."
+        },
+        {
+          "offset": "0x5ea0",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x5eb8",
+          "original": "は、はい…。\nそれでいいです…。\nそれじゃ…。",
+          "text": "Y-yes...\nThat's fine...\nGoodbye..."
+        },
+        {
+          "offset": "0x5ef4",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x5f2c",
+          "original": "…！\nそ、そんな…。",
+          "text": "...!\nB-but..."
+        },
+        {
+          "offset": "0x5f44",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x6440",
+          "original": "ちょっと\n聞きたいんだけど…。",
+          "text": "Can I ask you\nsomething...?"
+        },
+        {
+          "offset": "0x6460",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x6474",
+          "original": "今度の日曜日\n空いてるかな…？",
+          "text": "Are you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0x6494",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x64dc",
+          "original": "よかったら、\n買い物に付き合って\n欲しいんだけど…。",
+          "text": "If you like,\nwould you go shopping\nwith me...?"
+        },
+        {
+          "offset": "0x6514",
+          "original": "よかったら、\n一緒に水族館に\n行かない？",
+          "text": "If you like,\nwant to go to the\naquarium together?"
+        },
+        {
+          "offset": "0x6540",
+          "original": "よかったら、\n一緒に動物園に\n行かない？",
+          "text": "If you like,\nwant to go to the\nzoo together?"
+        },
+        {
+          "offset": "0x656c",
+          "original": "よかったら、\n一緒に植物園に\n行かない？",
+          "text": "If you like, want to\ngo to the botanical\ngarden together?"
+        },
+        {
+          "offset": "0x6598",
+          "original": "よかったら、\nプラネタリウムに\n行かない？",
+          "text": "If you like,\nwant to go to the\nplanetarium?"
+        },
+        {
+          "offset": "0x65cc",
+          "original": "よかったら、\n一緒に図書館に\n行かない？",
+          "text": "If you like,\nwant to go to the\nlibrary together?"
+        },
+        {
+          "offset": "0x65f8",
+          "original": "ゲームセンターに、\n一緒に行ってくれない？",
+          "text": "Would you go to the\narcade with me?"
+        },
+        {
+          "offset": "0x6628",
+          "original": "よかったら、\n一緒にボーリングに\n行かない？",
+          "text": "If you like,\nwant to go\nbowling together?"
+        },
+        {
+          "offset": "0x6658",
+          "original": "よかったら\nカラオケで歌を\n教えてくれない？",
+          "text": "If you like,\nwould you teach me\nto sing at karaoke?"
+        },
+        {
+          "offset": "0x6688",
+          "original": "遊園地の入場券が\nあるんだけど…、\n一緒に行かない？",
+          "text": "I have passes to\nthe theme park...\nWant to come with me?"
+        },
+        {
+          "offset": "0x66c0",
+          "original": "野球のチケットが\nあるんだけど…、\n一緒に行かない？",
+          "text": "I have tickets to\na baseball game...\nWant to come with me?"
+        },
+        {
+          "offset": "0x66f8",
+          "original": "プロレスのチケットが\nあるんだけど…、\n一緒に行かない？",
+          "text": "I have tickets to\na wrestling show...\nWant to come with me?"
+        },
+        {
+          "offset": "0x6734",
+          "original": "映画のチケットが\n２枚あるんだけど、\n一緒に行かない？",
+          "text": "I have two\nmovie tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0x6770",
+          "original": "コンサートのチケットが\n２枚あるんだけど、\n一緒に行かない？",
+          "text": "I have two\nconcert tickets.\nWant to come with me?"
+        },
+        {
+          "offset": "0x67b0",
+          "original": "よかったら、\n一緒にプールに\n行かない？",
+          "text": "If you like,\nwant to go to the\npool together?"
+        },
+        {
+          "offset": "0x67dc",
+          "original": "よかったら、\n一緒に海に行かない？",
+          "text": "If you like, want to\ngo to the beach together?"
+        },
+        {
+          "offset": "0x6804",
+          "original": "よかったら、\n一緒にスケートに\n行かない？",
+          "text": "If you like,\nwant to go\nskating together?"
+        },
+        {
+          "offset": "0x6834",
+          "original": "よかったら、\n一緒にスキーに\n行かない？",
+          "text": "If you like,\nwant to go\nskiing together?"
+        },
+        {
+          "offset": "0x6860",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x6894",
+          "original": "本当？\n良かった。",
+          "text": "Really?\nI'm glad."
+        },
+        {
+          "offset": "0x68a8",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x68c0",
+          "original": "うん、それでいいわ。\nそれじゃ。",
+          "text": "Yes, that's fine.\nSee you."
+        },
+        {
+          "offset": "0x68ec",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x6924",
+          "original": "そう…。\nあっ、別に良いの。\nそれじゃ。",
+          "text": "I see...\nOh, it's fine.\nSee you."
+        },
+        {
+          "offset": "0x6950",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x6e68",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x6e88",
+          "original": "傷ついてたみたいだな。\nもう少し優しくしても\nよかったかな…。",
+          "text": "Looks like she was hurt.\nMaybe I could've been\na little kinder..."
+        },
+        {
+          "offset": "0x6ecc",
+          "original": "かなり傷ついてたな…。\nあんな、ひどいことを…。\nあぁ、良心が痛むなぁ…。",
+          "text": "She was really hurt...\nThat was awful of me...\nI feel so guilty..."
+        },
+        {
+          "offset": "0x6f1c",
+          "original": "あんなこと言うなんて…。\n俺って、\n人間として最低だーっ！",
+          "text": "How could I say that...\nI am the\nlowest of the low!!!"
+        },
+        {
+          "offset": "0x6f5c",
+          "original": "すっごく、傷ついてたぞ。\n俺は、\n人間失格だーっ！！",
+          "text": "She was so hurt.\nI'm a\nfailure as a human!!"
+        },
+        {
+          "offset": "0x7070",
+          "original": "{P}\nちょっと\n聞きたいんですけど…。",
+          "text": "{P},\ncan I ask you\nsomething...?"
+        },
+        {
+          "offset": "0x7094",
+          "original": "{G}。\nどうしたの？",
+          "text": "{G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x70a8",
+          "original": "今度の日曜日\n空いてますか…？",
+          "text": "Are you free\nthis Sunday...?"
+        },
+        {
+          "offset": "0x70c8",
+          "original": "空いてるけど、何？{q}残念ながら、俺様は忙しいのだ。",
+          "text": "I'm free. What's up?{q}Sorry, I'm a busy man."
+        },
+        {
+          "offset": "0x710c",
+          "original": "よかったら、\n買い物に付き合って\n欲しいんですけど…。",
+          "text": "If you want,\nwould you come\nshopping with me...?"
+        },
+        {
+          "offset": "0x7148",
+          "original": "よかったら、\n一緒に水族館に\n行きませんか？",
+          "text": "Would you like to\ngo to the aquarium\nwith me?"
+        },
+        {
+          "offset": "0x7178",
+          "original": "よかったら、\n一緒に動物園に\n行きませんか？",
+          "text": "Would you like to\ngo to the zoo\nwith me?"
+        },
+        {
+          "offset": "0x71a8",
+          "original": "よかったら、\n一緒に植物園に\n行きませんか？",
+          "text": "Would you like to\ngo to the botanical\ngarden with me?"
+        },
+        {
+          "offset": "0x71d8",
+          "original": "よかったら、\nプラネタリウムに\n行きませんか？",
+          "text": "Would you like to\ngo to the planetarium\nwith me?"
+        },
+        {
+          "offset": "0x7210",
+          "original": "よかったら、\n一緒に図書館に\n行きませんか？",
+          "text": "Would you like to\ngo to the library\nwith me?"
+        },
+        {
+          "offset": "0x7240",
+          "original": "よかったら、\n一緒にゲームセンターに\n行きませんか？",
+          "text": "Would you like to\ngo to the arcade\nwith me?"
+        },
+        {
+          "offset": "0x7278",
+          "original": "よかったら、\n一緒にボーリングに\n行きませんか？",
+          "text": "Would you like\nto go bowling\nwith me?"
+        },
+        {
+          "offset": "0x72b0",
+          "original": "遊園地の入場券が\nあるんですけど、\n一緒に行きませんか？",
+          "text": "I have passes\nto the theme park.\nWanna come with me?"
+        },
+        {
+          "offset": "0x72ec",
+          "original": "野球のチケットが\nあるんですけど、\n一緒に行きませんか？",
+          "text": "I have tickets\nto a baseball game.\nWanna come with me?"
+        },
+        {
+          "offset": "0x7328",
+          "original": "プロレスのチケットが\nあるんですけど、\n一緒に行きませんか？",
+          "text": "I have tickets\nto a wrestling show.\nWanna come with me?"
+        },
+        {
+          "offset": "0x7368",
+          "original": "映画のチケットが\n２枚あるんですけど、\n一緒に行きませんか？",
+          "text": "I have two\nmovie tickets.\nWanna come with me?"
+        },
+        {
+          "offset": "0x73a8",
+          "original": "コンサートのチケットが\n２枚あるんですけど、\n一緒に行きませんか？",
+          "text": "I have two\nconcert tickets.\nWanna come with me?"
+        },
+        {
+          "offset": "0x73f0",
+          "original": "よかったら、\n一緒にプールに\n行きませんか？",
+          "text": "Would you like to\ngo to the pool\nwith me?"
+        },
+        {
+          "offset": "0x7420",
+          "original": "よかったら、\n一緒に海に\n行きませんか？",
+          "text": "Would you like to\ngo to the beach\nwith me?"
+        },
+        {
+          "offset": "0x744c",
+          "original": "よかったら、\n一緒にスケートに\n行きませんか？",
+          "text": "Would you like\nto go skating\nwith me?"
+        },
+        {
+          "offset": "0x7480",
+          "original": "よかったら、\n一緒にスキーに\n行きませんか？",
+          "text": "Would you like\nto go skiing\nwith me?"
+        },
+        {
+          "offset": "0x74b0",
+          "original": "いいよ。一緒に行こう。{q}いや、遠慮しておくよ。",
+          "text": "Sure, let's go together.{q}No, I'll pass, thanks."
+        },
+        {
+          "offset": "0x74e4",
+          "original": "やったー。\nそれじゃ、\n絶対、約束ですよ。",
+          "text": "Yaaay!\nThen it's\na promise, okay?"
+        },
+        {
+          "offset": "0x7510",
+          "original": "{M}で\n待ち合わせでいい？",
+          "text": "Meet at {M},\nis that okay?"
+        },
+        {
+          "offset": "0x7528",
+          "original": "うん、それでいいです。\nそれじゃ。",
+          "text": "Yep, that's fine.\nBye!"
+        },
+        {
+          "offset": "0x7558",
+          "original": "今度の日曜日だな。\n忘れないように\nしなくっちゃ。",
+          "text": "So, this Sunday.\nI'd better not\nforget it."
+        },
+        {
+          "offset": "0x7590",
+          "original": "いいわよーだ。\nふん、\nお兄ちゃんと行くもん。",
+          "text": "Fine, then!\nHmph, I'll go\nwith my older brother!"
+        },
+        {
+          "offset": "0x75c4",
+          "original": "ちょっと\n冷たかったかな…。",
+          "text": "Was I a little\ntoo cold...?"
+        },
+        {
+          "offset": "0x7ac0",
+          "original": "{P}。",
+          "text": "{P}."
+        },
+        {
+          "offset": "0x7ad4",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x7af8",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}."
+        }
+      ]
+    }
+  ]
 }

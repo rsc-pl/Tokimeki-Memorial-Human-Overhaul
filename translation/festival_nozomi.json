@@ -469,7 +469,7 @@
         {
           "offset": "0xf7c",
           "original": "{G}。\n来てくれ…。",
-          "text": "{G}\nYou ca..."
+          "text": "{G}.\nYou ca..."
         },
         {
           "offset": "0xf98",
@@ -489,7 +489,7 @@
         {
           "offset": "0xff4",
           "original": "時代劇は、\n気分がすっきりするよね。\nすごく面白かったよ。",
-          "text": "Samurai dramas\nare so refreshing.\nIt was really fun."
+          "text": "Period dramas\nare so refreshing.\nIt was really fun."
         },
         {
           "offset": "0x1030",
@@ -509,7 +509,7 @@
         {
           "offset": "0x1088",
           "original": "やっぱりいいね、時代劇は。\nあっ、殺陣も良かったよ。",
-          "text": "Samurai dramas are great.\nOh, the swordplay too."
+          "text": "Period dramas are great.\nOh, the swordplay too."
         },
         {
           "offset": "0x10bc",
@@ -629,7 +629,7 @@
         {
           "offset": "0x13d4",
           "original": "あっ、{G}。\nどうだった？",
-          "text": "Oh, {G}\nHow was it?"
+          "text": "Oh, {G}.\nHow was it?"
         },
         {
           "offset": "0x13ec",
@@ -639,7 +639,7 @@
         {
           "offset": "0x1410",
           "original": "{G}が、そんな事\n言うなんて意外だなぁ。",
-          "text": "Hearing that from {G}\nis a surprise."
+          "text": "You said that, {G}?\nWhat a surprise."
         },
         {
           "offset": "0x1438",
@@ -694,7 +694,7 @@
         {
           "offset": "0x15b4",
           "original": "{G}。\n来てくれ…。",
-          "text": "{G}\nYou ca..."
+          "text": "{G}.\nYou ca..."
         },
         {
           "offset": "0x15d0",
@@ -824,7 +824,7 @@
         {
           "offset": "0x1a14",
           "original": "奇麗だね。\nこれで一緒にいるのが…。",
-          "text": "So pretty.\nIf only I were with..."
+          "text": "So pretty.\nWish I were here with..."
         },
         {
           "offset": "0x1a38",
@@ -1454,7 +1454,7 @@
         {
           "offset": "0x2d78",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x2d98",
@@ -1514,7 +1514,7 @@
         {
           "offset": "0x2f74",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x2f94",
@@ -1574,7 +1574,7 @@
         {
           "offset": "0x3174",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x3194",
@@ -1634,7 +1634,7 @@
         {
           "offset": "0x3364",
           "original": "あっ、{G}。\nい、いらっしゃ…。",
-          "text": "Oh, {G}\nW-welco..."
+          "text": "Oh, {G}.\nW-welco..."
         },
         {
           "offset": "0x338c",
@@ -1659,7 +1659,7 @@
         {
           "offset": "0x341c",
           "original": "{G}。\n俺の絵見た？\n感想聞かせてよ。",
-          "text": "{G}\nSeen my painting?\nWhat do you think?"
+          "text": "{G}.\nSeen my painting?\nWhat do you think?"
         },
         {
           "offset": "0x3440",
@@ -1689,7 +1689,7 @@
         {
           "offset": "0x3514",
           "original": "{G}。\n俺の絵見た？\n感想聞かせてよ。",
-          "text": "{G}\nSeen my painting?\nWhat do you think?"
+          "text": "{G}.\nSeen my painting?\nWhat do you think?"
         },
         {
           "offset": "0x3538",
@@ -1719,7 +1719,7 @@
         {
           "offset": "0x360c",
           "original": "{G}。\n俺の絵見た？\n感想聞かせてよ。",
-          "text": "{G}\nSeen my painting?\nWhat do you think?"
+          "text": "{G}.\nSeen my painting?\nWhat do you think?"
         },
         {
           "offset": "0x3630",
@@ -1969,7 +1969,7 @@
         {
           "offset": "0x3d20",
           "original": "{G}。\n来てくれ…。",
-          "text": "{G}\nYou ca..."
+          "text": "{G}.\nYou ca..."
         },
         {
           "offset": "0x3d3c",
@@ -2021,7 +2021,7 @@
         {
           "offset": "0x14",
           "original": "あっ、\n{G}、おはよう。",
-          "text": "Oh,\ngood morning, {G}"
+          "text": "Oh,\ngood morning, {G}."
         },
         {
           "offset": "0x2c",
@@ -2126,7 +2126,7 @@
         {
           "offset": "0x614",
           "original": "やぁ、{P}",
-          "text": "Yo, {P}"
+          "text": "Yo, {P}."
         }
       ]
     },
@@ -2523,7 +2523,7 @@
         {
           "offset": "0xbd4",
           "original": "すっごく面白かったね。\n時代劇は、気分が\nすっきりするね。",
-          "text": "That was super fun.\nSamurai dramas are\nso refreshing."
+          "text": "That was super fun.\nPeriod dramas are\nso refreshing."
         },
         {
           "offset": "0xc10",
@@ -2538,7 +2538,7 @@
         {
           "offset": "0xc6c",
           "original": "やっぱりいいね、時代劇は。\n特に殺陣の所は\n最高だったね。",
-          "text": "Samurai dramas are great.\nThe swordplay was\nthe best part."
+          "text": "Period dramas are great.\nThe swordplay was\nthe best part."
         },
         {
           "offset": "0xca8",
@@ -2673,7 +2673,7 @@
         {
           "offset": "0x10bc",
           "original": "{G}が、そんな事\n言うなんて意外だなぁ。",
-          "text": "Hearing that from {G}\nis a surprise."
+          "text": "You said that, {G}?\nWhat a surprise."
         },
         {
           "offset": "0x10e4",
@@ -3213,7 +3213,7 @@
         {
           "offset": "0x22b0",
           "original": "あれ？\n{G}どうしたの？",
-          "text": "Huh?\n{G} what's up?"
+          "text": "Huh?\n{G}, what's up?"
         },
         {
           "offset": "0x22cc",
@@ -3758,7 +3758,7 @@
         {
           "offset": "0x32b8",
           "original": "はっ、\nき、{G}、誤解だよ。\nちょっと待ってよ。",
-          "text": "Wha...\nN-no, {G} it's not\nwhat you think. Wait!"
+          "text": "Wha...\nN-no, {G}, it's not\nwhat you think. Wait!"
         },
         {
           "offset": "0x32f0",
@@ -3793,7 +3793,7 @@
         {
           "offset": "0x33d0",
           "original": "はっ、\nき、{G}、誤解だよ。\nちょっと待ってよ。",
-          "text": "Wha...\nN-no, {G} it's not\nwhat you think. Wait!"
+          "text": "Wha...\nN-no, {G}, it's not\nwhat you think. Wait!"
         },
         {
           "offset": "0x3408",

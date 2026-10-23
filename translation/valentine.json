@@ -1,206 +1,996 @@
 {
   "description": "Valentine's Day: all of SERIFU/VALEN.BIN (base 0x80197000; game-internals 6v), 182 of 187 strings; the five '‥‥' pauses stay; plus VALEN.EXN's location banners (Hall, Class, Rear, Roof, Gate, Home). 13 sections from VALEN.EXN's tables at 0x801343F0 (tools/geko_sections.py --valen): 0 Yuko, 1 the player's count of the day, 2 Shiori, 3 Yuina, 4 Ijuin, 5 Ayako, 6 Mira, 7 Mio, 8 Yukari, 9 Nozomi, 10 Megumi (with Shiori introducing her, speaker code 0B), 11 Saki, 12 Yumi. Each girl gives courtesy (part 0) or heartfelt (part 1) chocolate. Verified in DuckStation on forced Valentine's Days (force_valen.py via xmas_run.ps1, hidden emulator): Ijuin's lines for all three years; every girl's heartfelt and courtesy scene except Shiori's heartfelt-after-apology variant 5; Megumi's introduction and Shiori's apology; two count thoughts; each day ends normally. Checked only statically: each girl's part 2 (a later scene the forced girl list doesn't reach), the other count thoughts, the banners (not visible behind the boxes), natural triggers.",
   "strings": [
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2320", "original": "廊下", "text": "Hall"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2330", "original": "廊下", "text": "Hall"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2338", "original": "教室", "text": "Class"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2340", "original": "校舎裏", "text": "Rear"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2348", "original": "屋上", "text": "Roof"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2350", "original": "校門前", "text": "Gate"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2358", "original": "校門前", "text": "Gate"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2360", "original": "自宅前", "text": "Home"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2368", "original": "教室", "text": "Class"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x2370", "original": "校舎裏", "text": "Rear"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x23B0", "original": "自宅前", "text": "Home"},
-    {"file": "CDROM/EXEDIR/VALEN.EXN", "offset": "0x23B8", "original": "自宅前", "text": "Home"}
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2320",
+      "original": "廊下",
+      "text": "Hall"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2330",
+      "original": "廊下",
+      "text": "Hall"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2338",
+      "original": "教室",
+      "text": "Class"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2340",
+      "original": "校舎裏",
+      "text": "Rear"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2348",
+      "original": "屋上",
+      "text": "Roof"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2350",
+      "original": "校門前",
+      "text": "Gate"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2358",
+      "original": "校門前",
+      "text": "Gate"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2360",
+      "original": "自宅前",
+      "text": "Home"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2368",
+      "original": "教室",
+      "text": "Class"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x2370",
+      "original": "校舎裏",
+      "text": "Rear"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x23B0",
+      "original": "自宅前",
+      "text": "Home"
+    },
+    {
+      "file": "CDROM/EXEDIR/VALEN.EXN",
+      "offset": "0x23B8",
+      "original": "自宅前",
+      "text": "Home"
+    }
   ],
-  "dialogue": [{
-    "file": "CDROM/SERIFU/VALEN.BIN",
-    "base": "0x80197000",
-    "share_identical": true,
-    "lines": [
-      {"offset": "0x0", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0xc", "original": "はい、チョコレート。", "text": "Here, chocolate!"},
-      {"offset": "0x24", "original": "あ、ありがとう。\nでも、一個十円のだね。", "text": "Th-thanks.\nBut it's a ten-yen one."},
-      {"offset": "0x4c", "original": "私、今びんぼーなの。\nごめんね。", "text": "I'm totally broke now.\nSorry."},
-      {"offset": "0x6c", "original": "別にいいけど。\n（どこから見ても、\n義理にしか見えん。）", "text": "That's fine.\n(It's clearly just\nobligatory choco.)"},
-      {"offset": "0xb8", "original": "はい、チョコレート。", "text": "Here, chocolate!"},
-      {"offset": "0xd0", "original": "あ、ありがとう。\nこれ、有名なあの店の\nチョコじゃないか。", "text": "Th-thanks.\nHey, this is from\nthat famous shop!"},
-      {"offset": "0x10c", "original": "えっ、わかる？\n流行に敏感ね。", "text": "Oh, you can tell?\nYou're so trendy."},
-      {"offset": "0x12c", "original": "よく買えたね。", "text": "How'd you get it?"},
-      {"offset": "0x13c", "original": "朝５時から\n並んだんだからね。", "text": "I got in line\nat five this morning!"},
-      {"offset": "0x15c", "original": "俺にくれるために、\nわざわざ、そんな事を…。", "text": "You did all that\njust to give it to me..."},
-      {"offset": "0x188", "original": "やっぱり、渡すなら\nこのぐらいしないと…。", "text": "If I'm giving one,\nit's gotta be this good."},
-      {"offset": "0x1b4", "original": "ありがとう、嬉しいよ。", "text": "Thanks, I'm really happy."},
-      {"offset": "0x1cc", "original": "それじゃ、\n急ぐから…。", "text": "Well,\ngotta hurry..."},
-      {"offset": "0x20c", "original": "何だか、すごく嬉しいぞ。", "text": "Wow, I'm really happy."},
-      {"offset": "0x428", "original": "たくさん貰えたな。\n俺って、すごいんじゃない。", "text": "I got so many.\nMaybe I'm amazing."},
-      {"offset": "0x45c", "original": "わりと多くもらえたな。\n結構人気あるみたい。", "text": "I got quite a few.\nI'm pretty popular, huh."},
-      {"offset": "0x48c", "original": "まぁ、このぐらい貰えれば、\nいいほうかな。", "text": "Well, getting this many\nisn't bad."},
-      {"offset": "0x4bc", "original": "あまり貰えなかったけど、\nこんなもんかな。", "text": "I didn't get many,\nbut I guess that's okay."},
-      {"offset": "0x4ec", "original": "今日は、\n一個も貰えなかったよ。\n寂しいなぁ…。", "text": "Today,\nI didn't get a single one.\nSo lonely..."},
-      {"offset": "0x5fc", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0x608", "original": "はい、チョコレート。", "text": "Here, chocolate!"},
-      {"offset": "0x620", "original": "あ、ありがとう。\n（小さいな、\nこれは義理かな…。）", "text": "Th-thanks.\n(It's small.\nObligatory choco...?)"},
-      {"offset": "0x660", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0x66c", "original": "これ、形が悪いかも\nしれないけど…。", "text": "This might look\na little lopsided..."},
-      {"offset": "0x690", "original": "あ、ありがとう。\n嬉しいよ。", "text": "Th-thanks.\nI'm really happy."},
-      {"offset": "0x6ac", "original": "ちょっと学校では、\n恥ずかしくて\n渡せなかったの…。", "text": "I was too\nembarrassed to give\nit to you at school..."},
-      {"offset": "0x6e0", "original": "どうして？", "text": "Why?"},
-      {"offset": "0x6ec", "original": "だって…、\n特別な想いをこめた\nチョコだから…。", "text": "Because...\nI put special feelings\ninto this chocolate..."},
-      {"offset": "0x71c", "original": "えっ？\nそれって…。", "text": "Huh?\nYou mean..."},
-      {"offset": "0x730", "original": "そ、それじゃ、また。", "text": "W-well, see you."},
-      {"offset": "0x768", "original": "特別な想いか…。", "text": "Special feelings, huh..."},
-      {"offset": "0x780", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0x78c", "original": "さっきはごめんね。\n友達に頼まれて…。", "text": "Sorry about earlier.\nMy friend asked me..."},
-      {"offset": "0x7b4", "original": "別にいいよ。", "text": "That's okay."},
-      {"offset": "0x7c4", "original": "これ、形が悪いかも\nしれないけど…。", "text": "This might look\na little lopsided..."},
-      {"offset": "0x7e8", "original": "あ、ありがとう。\n嬉しいよ。", "text": "Th-thanks.\nI'm really happy."},
-      {"offset": "0x804", "original": "ちょっと学校では、\n恥ずかしくて\n渡せなかったの…。", "text": "I was too\nembarrassed to give\nit to you at school..."},
-      {"offset": "0x838", "original": "どうして？", "text": "Why?"},
-      {"offset": "0x844", "original": "だって…、\n特別な想いをこめた\nチョコだから…。", "text": "Because...\nI put special feelings\ninto this chocolate..."},
-      {"offset": "0x874", "original": "えっ？\nそれって…。", "text": "Huh?\nYou mean..."},
-      {"offset": "0x888", "original": "そ、それじゃ、また。", "text": "W-well, see you."},
-      {"offset": "0x8c8", "original": "特別な想いか…。", "text": "Special feelings, huh..."},
-      {"offset": "0x8e0", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0x8ec", "original": "さっきはごめんね。\nはい、チョコレート。", "text": "Sorry about earlier.\nHere, chocolate."},
-      {"offset": "0x914", "original": "あ、ありがとう。\n（小さいな、\nこれは義理かな…。）", "text": "Th-thanks.\n(It's small.\nObligatory choco...?)"},
-      {"offset": "0xccc", "original": "{P}。\nチョコレートよ。", "text": "{P}\nHere's chocolate."},
-      {"offset": "0xce4", "original": "ひ、{G}が俺に？\n嬉しいな。\nありがとう。", "text": "F-for me, {G}\nI'm so happy.\nThank you."},
-      {"offset": "0xd0c", "original": "これを食べて出た症状を\nレポートで提出してね。\nそれじゃ、失礼。", "text": "Write up any symptoms\nyou get from eating it.\nNow, excuse me."},
-      {"offset": "0xd4c", "original": "な、何が\n入ってるんだろう？", "text": "Wh-what did\nshe put in it?"},
-      {"offset": "0xd78", "original": "{P}これ、実験のついでに\n作ったからあげるわ。", "text": "{P}, I made this\nin an experiment. Take it."},
-      {"offset": "0xda4", "original": "あ、ありがとう。\n嬉しいよ。", "text": "Th-thanks.\nI'm really happy."},
-      {"offset": "0xdc0", "original": "大丈夫だとは思うけど、\n手足がしびれたときは\nすぐ言いなさいよ。", "text": "It should be safe, but\nif your limbs go numb,\ntell me right away."},
-      {"offset": "0xe00", "original": "どうして？", "text": "Why?"},
-      {"offset": "0xe0c", "original": "ちょっとだけ、\n特別な想いを\nこめてあるのよ…。", "text": "I put in just a bit\nof special\nfeeling..."},
-      {"offset": "0xe3c", "original": "特別な想いは\n嬉しいんだけど…。", "text": "Special feelings\nare nice, but..."},
-      {"offset": "0xe5c", "original": "それじゃ、失礼。", "text": "Now, excuse me."},
-      {"offset": "0xe90", "original": "何が、\n入ってるんだろう…？", "text": "Just what\nis inside it...?"},
-      {"offset": "0x1058", "original": "やぁ、おはよう。", "text": "Ah, good morning."},
-      {"offset": "0x106c", "original": "何だよ、伊集院。", "text": "What do you want, Ijuin?"},
-      {"offset": "0x1080", "original": "今日はバレンタインだね。\n君にはかなわないが、\n僕も少々もらったよ。", "text": "It's Valentine's Day.\nI'm no match for you,\nbut I got a few too."},
-      {"offset": "0x10c4", "original": "そうかよ。\n良かったな。", "text": "Oh yeah?\nGood for you."},
-      {"offset": "0x10dc", "original": "ほら見たまえ。\nまだあの程度さ。", "text": "Look over there.\nAnd that's just so far."},
-      {"offset": "0x1120", "original": "そんな事はないだろうが、\n帰りに鞄が空いていたら、\n言ってくれたまえ。", "text": "I doubt it, but if\nyour bag is empty later,\ndo let me know."},
-      {"offset": "0x1168", "original": "何でだよ。", "text": "Why's that?"},
-      {"offset": "0x1174", "original": "僕のをほんの少しだけ\n分けてあげるよ。\nそれじゃあ、また。\nはーっ、はっはっはっ…。", "text": "I'll share a tiny\nbit of mine with you.\nWell then, farewell.\nHa-ha-ha-ha..."},
-      {"offset": "0x11e8", "original": "やぁ、おはよう。", "text": "Ah, good morning."},
-      {"offset": "0x11fc", "original": "何だよ、伊集院。", "text": "What do you want, Ijuin?"},
-      {"offset": "0x1210", "original": "今日はバレンタインだね。\n毎年の事だが、\n全くまいってしまうよ。", "text": "It's Valentine's Day.\nIt's the same every year,\nand simply exhausting."},
-      {"offset": "0x1250", "original": "そうかよ。\n良かったな。", "text": "Oh yeah?\nGood for you."},
-      {"offset": "0x1268", "original": "ほら見たまえ。\n今年もあれだ…。", "text": "Look over there.\nThis year, too..."},
-      {"offset": "0x12ac", "original": "処分に困ってるんだ。\nよかったら半分持って\nいってくれないか？", "text": "I can't get rid\nof them all. Won't you\ntake half?"},
-      {"offset": "0x12ec", "original": "いらねえよ。", "text": "No thanks."},
-      {"offset": "0x12fc", "original": "欲しかったら\nいつでも言ってくれたまえ。\nそれじゃあまた。\nはーっ、はははははは…。", "text": "If you want some,\njust say the word.\nWell then, farewell.\nHa-ha-ha-ha-ha..."},
-      {"offset": "0x135c", "original": "いい加減にしろよ。", "text": "Give it a rest."},
-      {"offset": "0x1374", "original": "やぁ、おはよう。", "text": "Ah, good morning."},
-      {"offset": "0x1388", "original": "毎年、うるせえぞ。\n{G}。", "text": "You're a pain every\nyear, {G}"},
-      {"offset": "0x13a0", "original": "そんなに怒ることは\nないじゃないか。", "text": "No need to get\nso angry."},
-      {"offset": "0x13c4", "original": "怒りたくもなるぜ。\n毎年これじゃ…。", "text": "Who wouldn't be?\nEvery single year..."},
-      {"offset": "0x1408", "original": "まぁそうひがまないで\nくれたまえ。\nははははは…。", "text": "Now, now, don't be\nso jealous.\nHa-ha-ha-ha..."},
-      {"offset": "0x1450", "original": "あれ、{G}。\nまだ何か？", "text": "Oh, {G}\nIs there something else?"},
-      {"offset": "0x1858", "original": "{P}。\nはい、義理チョコよ。", "text": "{P}.\nObligatory choco."},
-      {"offset": "0x1874", "original": "あ、ありがとう。\n（何も、\nはっきり言わなくても…。）", "text": "Th-thanks.\n(She didn't have to\nsay it so plainly...)"},
-      {"offset": "0x18b8", "original": "{P}\nはい、これ。", "text": "{P}\nHere, this is for you."},
-      {"offset": "0x18c8", "original": "チョコレートだね。\nあ、ありがとう。\n嬉しいよ。", "text": "It's chocolate!\nTh-thanks.\nI'm really happy."},
-      {"offset": "0x18f8", "original": "ぎ、義理よ、義理。\nでも、ちょっとだけ\n義理じゃないの。", "text": "I-it's obligatory!\nBut maybe not\nentirely..."},
-      {"offset": "0x1930", "original": "何言ってんだか\nわかんないよ。", "text": "I don't get\nwhat you mean."},
-      {"offset": "0x1950", "original": "そ、それじゃ、\nさよなら。", "text": "W-well then,\ngoodbye."},
-      {"offset": "0x1984", "original": "何だろ、\nあんなに慌てて…。", "text": "What's with her,\nso flustered..."},
-      {"offset": "0x1af0", "original": "{P}。\nチョコレートよ。", "text": "{P}\nHere's chocolate."},
-      {"offset": "0x1b08", "original": "あ、ありがとう。", "text": "Th-thanks."},
-      {"offset": "0x1b1c", "original": "勘違いしないでね。\n義理よ、義理。", "text": "Don't get ideas.\nIt's obligatory."},
-      {"offset": "0x1b40", "original": "別にいいけど。\n（どこから見ても、\n義理にしか見えん。）", "text": "That's fine.\n(It's clearly just\nobligatory choco.)"},
-      {"offset": "0x1b88", "original": "チョコレートよ。", "text": "Here's chocolate."},
-      {"offset": "0x1b9c", "original": "あ、ありがとう。", "text": "Th-thanks."},
-      {"offset": "0x1bb0", "original": "バレンタインは大変だわ。\nたくさんの人に配らなきゃ\nいけないから…。", "text": "Valentine's is so hard.\nI have so many people\nto give chocolate to..."},
-      {"offset": "0x1bf4", "original": "あれ？\nこれみんなのと違うよ。", "text": "Huh?\nThis one's different."},
-      {"offset": "0x1c14", "original": "た、たまには、\nそういうのも\nいいんじゃないかしら？", "text": "W-well, once\nin a while, that's\nfine, isn't it?"},
-      {"offset": "0x1c48", "original": "俺だけ、特別なの？", "text": "Just me? I'm special?"},
-      {"offset": "0x1c5c", "original": "いいじゃないの。\n忙しいから、\nもう失礼するわ。", "text": "What does it matter?\nI'm busy,\nso excuse me."},
-      {"offset": "0x1cac", "original": "慌てて、\n行っちゃった気がする…。\n（何にしても特別は良いな。）", "text": "Seems like she\nhurried off...\n(Anyway, special is nice.)"},
-      {"offset": "0x1e98", "original": "これ、チョコレートです。\nどうぞ。", "text": "Here's some chocolate.\nPlease, take it."},
-      {"offset": "0x1ebc", "original": "あ、ありがとう。\n（これは義理かな…。）", "text": "Th-thanks.\n(Obligatory choco...?)"},
-      {"offset": "0x1eec", "original": "あっ、{P}。", "text": "Oh, {P}"},
-      {"offset": "0x1ef8", "original": "これ、受け取って\nください…。", "text": "Please\naccept this..."},
-      {"offset": "0x1f18", "original": "あ、ありがとう。\n嬉しいよ。", "text": "Th-thanks.\nI'm really happy."},
-      {"offset": "0x1f34", "original": "あの…、中に…。", "text": "Um... inside..."},
-      {"offset": "0x1f48", "original": "中に何？", "text": "Inside, what?"},
-      {"offset": "0x1f54", "original": "い、いえ、\n何でもないです。\nし、失礼します。", "text": "N-no,\nit's nothing.\nE-excuse me."},
-      {"offset": "0x1f84", "original": "中に…、何だろう。", "text": "Something inside...?"},
-      {"offset": "0x1fb4", "original": "ごそごそ", "text": "Rustle, rustle"},
-      {"offset": "0x1fc0", "original": "あれ、中に紙が入ってるぞ。\nこれは{G}の書いた\n詩じゃないか。\nどれどれ…。", "text": "Huh, there's a note inside.\nA poem by {G}?\nLet's see what\nit says..."},
-      {"offset": "0x2008", "original": "な、なんか\n照れちゃうな…。", "text": "I-I feel\nkind of shy now..."},
-      {"offset": "0x21b4", "original": "こんにちは。", "text": "Good afternoon."},
-      {"offset": "0x21c4", "original": "あっ、{G}。\nどうしたの？", "text": "Oh, {G}\nWhat's up?"},
-      {"offset": "0x21dc", "original": "つまらない物ですけれども、\nよろしければ、どうぞ。", "text": "It's only a small thing,\nbut please, have it."},
-      {"offset": "0x2210", "original": "あ、ありがとう。\n（何か、ご挨拶回りみたい。\nやっぱり、義理かな…。）", "text": "Th-thanks.\n(She's making her rounds.\nObligatory choco...?)"},
-      {"offset": "0x2268", "original": "{P}\nこれ、お口に合うかどうか\nわかりませんが、\nよろしければ、どうぞ。", "text": "{P}\nI don't know if this\nwill suit your taste,\nbut please, have it."},
-      {"offset": "0x22ac", "original": "あ、ありがとう。\nでも、随分大きな\nチョコだね。", "text": "Th-thanks.\nBut that's a really\nbig chocolate."},
-      {"offset": "0x22dc", "original": "ボーッとしていて、\n気がついたら、\nたくさんのチョコを\n溶かしてしまいまして…。", "text": "I was daydreaming,\nand before I knew it,\nI had melted a whole\nlot of chocolate..."},
-      {"offset": "0x232c", "original": "{G}の手作りなの？", "text": "You made this, {G}?"},
-      {"offset": "0x233c", "original": "それは、開けるまでの\n秘密です。\nでは、失礼いたします。", "text": "That's a secret until\nyou open it.\nWell, please excuse me."},
-      {"offset": "0x2388", "original": "そ、それじゃ。\n（さっき溶かしてたって\n言ったのになぁ…。）", "text": "S-see you.\n(But she just said\nshe melted it...)"},
-      {"offset": "0x2518", "original": "がらじゃないけど、\nはい、チョコレート。", "text": "It's not really my thing,\nbut here's some chocolate."},
-      {"offset": "0x2540", "original": "あ、ありがとう。\n（これは義理かな…。）", "text": "Th-thanks.\n(Obligatory choco...?)"},
-      {"offset": "0x2570", "original": "私、不器用だから、\n上手にできなかったけど、\nこれ…。", "text": "I'm clumsy,\nso it's not very good,\nbut here..."},
-      {"offset": "0x25a8", "original": "チョコレートだね。\nありがとう。\n嬉しいよ。", "text": "It's chocolate!\nThanks.\nI'm really happy."},
-      {"offset": "0x25d4", "original": "本当に、\n上手じゃないから、\n見て笑わないでよ。", "text": "Really,\nit's not good,\nso don't laugh at it."},
-      {"offset": "0x2604", "original": "そんな、一生懸命\n作ってくれたんだろう。\n絶対笑わないよ。", "text": "Come on, you worked\nhard to make it, right?\nI'd never laugh."},
-      {"offset": "0x2640", "original": "それならいいけど。\nそれじゃ、絶対食べてよ。", "text": "Then fine.\nBut make sure you eat it."},
-      {"offset": "0x266c", "original": "はいはい。\n残さず食べるよ。\n", "text": "Okay, okay.\nI'll eat every bit.\n"},
-      {"offset": "0x26a4", "original": "それにしても、清川さんの\n手作りチョコって\nすごく嬉しいなぁ。", "text": "Kiyokawa-san's homemade\nchocolates really\nmade my day."},
-      {"offset": "0x2818", "original": "あの…。\nこれ…、どうぞ。", "text": "Um...\nthis... for you."},
-      {"offset": "0x2834", "original": "あ、ありがとう。", "text": "Th-thanks."},
-      {"offset": "0x2848", "original": "それじゃ…\n失礼します…。", "text": "Well...\nexcuse me..."},
-      {"offset": "0x2864", "original": "これは、義理だろうな…。", "text": "Probably obligatory..."},
-      {"offset": "0x2890", "original": "あの…。\nこ、これ…。\nあの…。\n受け取ってください…。", "text": "Um...\nTh-this...\nUm...\nPlease take it..."},
-      {"offset": "0x28c8", "original": "あ、ありがとう。\n嬉しいよ。\nあっ、{G}。", "text": "Th-thanks.\nI'm really happy.\nOh, {G}"},
-      {"offset": "0x28f0", "original": "は、恥ずかしい…。", "text": "S-so embarrassing..."},
-      {"offset": "0x2910", "original": "真っ赤な顔してたな…。\nよっぽど恥ずかし\nかったのかな…。", "text": "Her face was bright red...\nShe must've been really\nembarrassed..."},
-      {"offset": "0x2950", "original": "{P}。\nちょっと、校舎裏に\n来て欲しいの。", "text": "{P}\nCould you come behind\nthe school building?"},
-      {"offset": "0x2978", "original": "ああ、いいよ。", "text": "Sure."},
-      {"offset": "0x2988", "original": "よかった。\nそれじゃ、すぐに来てね。", "text": "Great.\nCome right away, okay?"},
-      {"offset": "0x29b8", "original": "チョコレートなら\nここで渡せばいいのに、\n恥ずかしがっちゃって…。", "text": "If it's chocolate,\nshe could give it here,\nbut she's too shy..."},
-      {"offset": "0x2a00", "original": "おーい。\n詩織ぃ、きたぞー。", "text": "Hey!\nShiori, I'm here!"},
-      {"offset": "0x2a20", "original": "こんな所で、もしかしたら、\nチョコレート以外にも…？", "text": "Out here... besides\nchocolate, something more?"},
-      {"offset": "0x2a58", "original": "あのね、\n紹介したい女の子がいるんだ。\nちょっとここで、待ってて。", "text": "You see,\nI want you to meet a girl.\nWait right here a moment."},
-      {"offset": "0x2aa0", "original": "はぁ…。\n詩織の用じゃないのか…。\nでも、紹介したい\n女の子って誰だろう…。", "text": "Sigh...\nSo it isn't Shiori...\nBut who's this girl\nshe wants me to meet...?"},
-      {"offset": "0x2aec", "original": "でもぉ、恥ずかしい…。\nやっぱり、いいよぉ…。", "text": "But I'm so embarrassed...\nNever mind, forget it..."},
-      {"offset": "0x2b1c", "original": "何言ってるのよ。\nせっかくのチャンスじゃない。\n勇気を出さなきゃ。", "text": "What are you saying?\nThis is your big chance.\nYou have to be brave."},
-      {"offset": "0x2b60", "original": "何か、向こうで話し声が\n聞こえるぞ。", "text": "I can hear\nvoices over there."},
-      {"offset": "0x2b94", "original": "あの…。", "text": "Um..."},
-      {"offset": "0x2ba0", "original": "は、はい？", "text": "Y-yes?"},
-      {"offset": "0x2bac", "original": "わ、私…、\n美樹原愛といいます。\nこ、これ、\n受け取ってください…。", "text": "I-I'm...\nMikihara Megumi.\nP-please,\ntake this..."},
-      {"offset": "0x2bfc", "original": "あ、ありがと。", "text": "Th-thanks."},
-      {"offset": "0x2c0c", "original": "ありがたく…。\nあれ、\n走って逃げちゃったよ。", "text": "I'll gladly...\nHuh?\nShe ran away."},
-      {"offset": "0x2c44", "original": "ごめんなさい、あの娘\nとっても恥ずかしがり屋なの。\nメグ、ちょっと待って！", "text": "Sorry, she's\nreally, really shy.\nMegu, wait up!"},
-      {"offset": "0x2c94", "original": "恥ずかしがり屋ねぇ…。\nでも、可愛かったな。", "text": "Shy, huh...\nShe sure was cute."},
-      {"offset": "0x3074", "original": "はい、チョコレート。\n手作りなのよ。", "text": "Here, chocolate.\nI made it myself."},
-      {"offset": "0x3098", "original": "あ、ありがとう。\n（でもこれ、みんなと同じだ。\nやっぱり、義理か…。）", "text": "Th-thanks.\n(Same as everyone else's.\nMust be obligatory...)"},
-      {"offset": "0x30e8", "original": "これ、チョコレート。", "text": "This is chocolate."},
-      {"offset": "0x3100", "original": "あ、ありがとう。\nでも、どうしたの？\n眠そうだね。", "text": "Th-thanks.\nBut what's wrong?\nYou look sleepy."},
-      {"offset": "0x3134", "original": "このチョコレートを\n作るのに、朝まで\nかかっちゃって…。", "text": "Making this\nchocolate took me\nuntil morning..."},
-      {"offset": "0x316c", "original": "あ、朝まで？\nそれじゃ、勿体無くて\n食べれないね。", "text": "Until morning?\nThen it's too precious\nto eat."},
-      {"offset": "0x31a0", "original": "でも、食べてもらいたいから、\n心を込めて…。\nあっ、も、もう行くね。", "text": "But I want you to eat it,\nI made it with love...\nOh, I-I have to go."},
-      {"offset": "0x31fc", "original": "あっ、虹野さん？\n行っちゃった…。", "text": "Oh, Nijino-san?\nShe's gone..."},
-      {"offset": "0x3220", "original": "それにしても、朝までか…。\n最高に、嬉しいぜ。", "text": "Until morning, huh...\nThat's the best."},
-      {"offset": "0x33a4", "original": "{P}\nお兄ちゃんの友達だから、\nチョコレートあげる。", "text": "{P}\nYou're Yoshio's friend,\nso here's chocolate."},
-      {"offset": "0x33d4", "original": "あ、ありがとう。\n{G}。", "text": "Th-thanks,\n{G}"},
-      {"offset": "0x33f4", "original": "これ、チョコレートです。", "text": "I brought you chocolate."},
-      {"offset": "0x3410", "original": "あ、ありがとう。\n嬉しいよ。\n{G}。", "text": "Th-thanks.\nI'm really happy,\n{G}"},
-      {"offset": "0x3430", "original": "これ以外のチョコレートは\n貰ってもいいけど、\n絶対食べないで下さいね。", "text": "You can accept other\nchocolate, but\ndon't eat any of it!"},
-      {"offset": "0x3478", "original": "えっ？\nう、うん。", "text": "Huh?\nO-okay."},
-      {"offset": "0x348c", "original": "ホント？\n絶対約束だよ。\nそれじゃあ。", "text": "Really?\nYou promise!\nBye!"},
-      {"offset": "0x34cc", "original": "軽はずみな、\n約束しちゃったかな…。", "text": "Did I make a\ncareless promise...?"},
-      {"offset": "0x3624", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x3630", "original": "あっ、", "text": "Oh,"},
-      {"offset": "0x3638", "original": "あっ、", "text": "Oh,"},
-      {"offset": "0x3640", "original": "あっ、", "text": "Oh,"},
-      {"offset": "0x3648", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x3650", "original": "あっ、{P}", "text": "Oh, {P}"},
-      {"offset": "0x3658", "original": "あっ、{P}", "text": "Oh, {P}"}
-    ]
-  }]
+  "dialogue": [
+    {
+      "file": "CDROM/SERIFU/VALEN.BIN",
+      "base": "0x80197000",
+      "share_identical": true,
+      "lines": [
+        {
+          "offset": "0x0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0xc",
+          "original": "はい、チョコレート。",
+          "text": "Here, chocolate!"
+        },
+        {
+          "offset": "0x24",
+          "original": "あ、ありがとう。\nでも、一個十円のだね。",
+          "text": "Th-thanks.\nBut it's a ten-yen one."
+        },
+        {
+          "offset": "0x4c",
+          "original": "私、今びんぼーなの。\nごめんね。",
+          "text": "I'm totally broke now.\nSorry."
+        },
+        {
+          "offset": "0x6c",
+          "original": "別にいいけど。\n（どこから見ても、\n義理にしか見えん。）",
+          "text": "That's fine.\n(It's clearly just\nobligatory chocolate.)"
+        },
+        {
+          "offset": "0xb8",
+          "original": "はい、チョコレート。",
+          "text": "Here, chocolate!"
+        },
+        {
+          "offset": "0xd0",
+          "original": "あ、ありがとう。\nこれ、有名なあの店の\nチョコじゃないか。",
+          "text": "Th-thanks.\nHey, this is from\nthat famous shop!"
+        },
+        {
+          "offset": "0x10c",
+          "original": "えっ、わかる？\n流行に敏感ね。",
+          "text": "Oh, you can tell?\nYou're so trendy."
+        },
+        {
+          "offset": "0x12c",
+          "original": "よく買えたね。",
+          "text": "How'd you get it?"
+        },
+        {
+          "offset": "0x13c",
+          "original": "朝５時から\n並んだんだからね。",
+          "text": "I got in line\nat five this morning!"
+        },
+        {
+          "offset": "0x15c",
+          "original": "俺にくれるために、\nわざわざ、そんな事を…。",
+          "text": "You did all that\njust to give it to me..."
+        },
+        {
+          "offset": "0x188",
+          "original": "やっぱり、渡すなら\nこのぐらいしないと…。",
+          "text": "If I'm giving one,\nit's gotta be this good."
+        },
+        {
+          "offset": "0x1b4",
+          "original": "ありがとう、嬉しいよ。",
+          "text": "Thanks, I'm really happy."
+        },
+        {
+          "offset": "0x1cc",
+          "original": "それじゃ、\n急ぐから…。",
+          "text": "Well,\ngotta hurry..."
+        },
+        {
+          "offset": "0x20c",
+          "original": "何だか、すごく嬉しいぞ。",
+          "text": "Wow, I'm really happy."
+        },
+        {
+          "offset": "0x428",
+          "original": "たくさん貰えたな。\n俺って、すごいんじゃない。",
+          "text": "I got so many.\nMaybe I'm amazing."
+        },
+        {
+          "offset": "0x45c",
+          "original": "わりと多くもらえたな。\n結構人気あるみたい。",
+          "text": "I got quite a few.\nI'm pretty popular, huh."
+        },
+        {
+          "offset": "0x48c",
+          "original": "まぁ、このぐらい貰えれば、\nいいほうかな。",
+          "text": "Well, getting this many\nisn't bad."
+        },
+        {
+          "offset": "0x4bc",
+          "original": "あまり貰えなかったけど、\nこんなもんかな。",
+          "text": "I didn't get many,\nbut I guess that's okay."
+        },
+        {
+          "offset": "0x4ec",
+          "original": "今日は、\n一個も貰えなかったよ。\n寂しいなぁ…。",
+          "text": "Today,\nI didn't get a single one.\nSo lonely..."
+        },
+        {
+          "offset": "0x5fc",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x608",
+          "original": "はい、チョコレート。",
+          "text": "Here, chocolate!"
+        },
+        {
+          "offset": "0x620",
+          "original": "あ、ありがとう。\n（小さいな、\nこれは義理かな…。）",
+          "text": "Th-thanks.\n(It's small.\nObligatory chocolate...?)"
+        },
+        {
+          "offset": "0x660",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x66c",
+          "original": "これ、形が悪いかも\nしれないけど…。",
+          "text": "This might look\na little lopsided..."
+        },
+        {
+          "offset": "0x690",
+          "original": "あ、ありがとう。\n嬉しいよ。",
+          "text": "Th-thanks.\nI'm really happy."
+        },
+        {
+          "offset": "0x6ac",
+          "original": "ちょっと学校では、\n恥ずかしくて\n渡せなかったの…。",
+          "text": "I was too\nembarrassed to give\nit to you at school..."
+        },
+        {
+          "offset": "0x6e0",
+          "original": "どうして？",
+          "text": "Why?"
+        },
+        {
+          "offset": "0x6ec",
+          "original": "だって…、\n特別な想いをこめた\nチョコだから…。",
+          "text": "Because...\nI put special feelings\ninto this chocolate..."
+        },
+        {
+          "offset": "0x71c",
+          "original": "えっ？\nそれって…。",
+          "text": "Huh?\nYou mean..."
+        },
+        {
+          "offset": "0x730",
+          "original": "そ、それじゃ、また。",
+          "text": "W-well, see you."
+        },
+        {
+          "offset": "0x768",
+          "original": "特別な想いか…。",
+          "text": "Special feelings, huh..."
+        },
+        {
+          "offset": "0x780",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x78c",
+          "original": "さっきはごめんね。\n友達に頼まれて…。",
+          "text": "Sorry about earlier.\nMy friend asked me..."
+        },
+        {
+          "offset": "0x7b4",
+          "original": "別にいいよ。",
+          "text": "That's okay."
+        },
+        {
+          "offset": "0x7c4",
+          "original": "これ、形が悪いかも\nしれないけど…。",
+          "text": "This might look\na little lopsided..."
+        },
+        {
+          "offset": "0x7e8",
+          "original": "あ、ありがとう。\n嬉しいよ。",
+          "text": "Th-thanks.\nI'm really happy."
+        },
+        {
+          "offset": "0x804",
+          "original": "ちょっと学校では、\n恥ずかしくて\n渡せなかったの…。",
+          "text": "I was too\nembarrassed to give\nit to you at school..."
+        },
+        {
+          "offset": "0x838",
+          "original": "どうして？",
+          "text": "Why?"
+        },
+        {
+          "offset": "0x844",
+          "original": "だって…、\n特別な想いをこめた\nチョコだから…。",
+          "text": "Because...\nI put special feelings\ninto this chocolate..."
+        },
+        {
+          "offset": "0x874",
+          "original": "えっ？\nそれって…。",
+          "text": "Huh?\nYou mean..."
+        },
+        {
+          "offset": "0x888",
+          "original": "そ、それじゃ、また。",
+          "text": "W-well, see you."
+        },
+        {
+          "offset": "0x8c8",
+          "original": "特別な想いか…。",
+          "text": "Special feelings, huh..."
+        },
+        {
+          "offset": "0x8e0",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x8ec",
+          "original": "さっきはごめんね。\nはい、チョコレート。",
+          "text": "Sorry about earlier.\nHere, chocolate."
+        },
+        {
+          "offset": "0x914",
+          "original": "あ、ありがとう。\n（小さいな、\nこれは義理かな…。）",
+          "text": "Th-thanks.\n(It's small.\nObligatory chocolate...?)"
+        },
+        {
+          "offset": "0xccc",
+          "original": "{P}。\nチョコレートよ。",
+          "text": "{P}.\nHere's chocolate."
+        },
+        {
+          "offset": "0xce4",
+          "original": "ひ、{G}が俺に？\n嬉しいな。\nありがとう。",
+          "text": "F-for me, {G}?\nI'm so happy.\nThank you."
+        },
+        {
+          "offset": "0xd0c",
+          "original": "これを食べて出た症状を\nレポートで提出してね。\nそれじゃ、失礼。",
+          "text": "Write up any symptoms\nyou get from eating it.\nNow, excuse me."
+        },
+        {
+          "offset": "0xd4c",
+          "original": "な、何が\n入ってるんだろう？",
+          "text": "Wh-what did\nshe put in it?"
+        },
+        {
+          "offset": "0xd78",
+          "original": "{P}これ、実験のついでに\n作ったからあげるわ。",
+          "text": "{P}, I made this\nin an experiment. Take it."
+        },
+        {
+          "offset": "0xda4",
+          "original": "あ、ありがとう。\n嬉しいよ。",
+          "text": "Th-thanks.\nI'm really happy."
+        },
+        {
+          "offset": "0xdc0",
+          "original": "大丈夫だとは思うけど、\n手足がしびれたときは\nすぐ言いなさいよ。",
+          "text": "It should be safe, but\nif your limbs go numb,\ntell me right away."
+        },
+        {
+          "offset": "0xe00",
+          "original": "どうして？",
+          "text": "Why?"
+        },
+        {
+          "offset": "0xe0c",
+          "original": "ちょっとだけ、\n特別な想いを\nこめてあるのよ…。",
+          "text": "I put in just a bit\nof special\nfeeling..."
+        },
+        {
+          "offset": "0xe3c",
+          "original": "特別な想いは\n嬉しいんだけど…。",
+          "text": "Special feelings\nare nice, but..."
+        },
+        {
+          "offset": "0xe5c",
+          "original": "それじゃ、失礼。",
+          "text": "Now, excuse me."
+        },
+        {
+          "offset": "0xe90",
+          "original": "何が、\n入ってるんだろう…？",
+          "text": "Just what\nis inside it...?"
+        },
+        {
+          "offset": "0x1058",
+          "original": "やぁ、おはよう。",
+          "text": "Ah, good morning."
+        },
+        {
+          "offset": "0x106c",
+          "original": "何だよ、伊集院。",
+          "text": "What do you want, Ijuin?"
+        },
+        {
+          "offset": "0x1080",
+          "original": "今日はバレンタインだね。\n君にはかなわないが、\n僕も少々もらったよ。",
+          "text": "It's Valentine's Day.\nI'm no match for you,\nbut I got a few too."
+        },
+        {
+          "offset": "0x10c4",
+          "original": "そうかよ。\n良かったな。",
+          "text": "Oh yeah?\nGood for you."
+        },
+        {
+          "offset": "0x10dc",
+          "original": "ほら見たまえ。\nまだあの程度さ。",
+          "text": "Look over there.\nAnd that's just so far."
+        },
+        {
+          "offset": "0x1120",
+          "original": "そんな事はないだろうが、\n帰りに鞄が空いていたら、\n言ってくれたまえ。",
+          "text": "I doubt it, but if\nyour bag has room later,\ndo let me know."
+        },
+        {
+          "offset": "0x1168",
+          "original": "何でだよ。",
+          "text": "Why's that?"
+        },
+        {
+          "offset": "0x1174",
+          "original": "僕のをほんの少しだけ\n分けてあげるよ。\nそれじゃあ、また。\nはーっ、はっはっはっ…。",
+          "text": "I'll share a tiny\nbit of mine with you.\nWell then, farewell.\nHa-ha-ha-ha..."
+        },
+        {
+          "offset": "0x11e8",
+          "original": "やぁ、おはよう。",
+          "text": "Ah, good morning."
+        },
+        {
+          "offset": "0x11fc",
+          "original": "何だよ、伊集院。",
+          "text": "What do you want, Ijuin?"
+        },
+        {
+          "offset": "0x1210",
+          "original": "今日はバレンタインだね。\n毎年の事だが、\n全くまいってしまうよ。",
+          "text": "It's Valentine's Day.\nIt's the same every year,\nand simply exhausting."
+        },
+        {
+          "offset": "0x1250",
+          "original": "そうかよ。\n良かったな。",
+          "text": "Oh yeah?\nGood for you."
+        },
+        {
+          "offset": "0x1268",
+          "original": "ほら見たまえ。\n今年もあれだ…。",
+          "text": "Look over there.\nThis year, too..."
+        },
+        {
+          "offset": "0x12ac",
+          "original": "処分に困ってるんだ。\nよかったら半分持って\nいってくれないか？",
+          "text": "I can't get rid\nof them all. Won't you\ntake half?"
+        },
+        {
+          "offset": "0x12ec",
+          "original": "いらねえよ。",
+          "text": "No thanks."
+        },
+        {
+          "offset": "0x12fc",
+          "original": "欲しかったら\nいつでも言ってくれたまえ。\nそれじゃあまた。\nはーっ、はははははは…。",
+          "text": "If you want some,\njust say the word.\nWell then, farewell.\nHa-ha-ha-ha-ha..."
+        },
+        {
+          "offset": "0x135c",
+          "original": "いい加減にしろよ。",
+          "text": "Give it a rest."
+        },
+        {
+          "offset": "0x1374",
+          "original": "やぁ、おはよう。",
+          "text": "Ah, good morning."
+        },
+        {
+          "offset": "0x1388",
+          "original": "毎年、うるせえぞ。\n{G}。",
+          "text": "You're a pain every\nyear, {G}."
+        },
+        {
+          "offset": "0x13a0",
+          "original": "そんなに怒ることは\nないじゃないか。",
+          "text": "No need to get\nso angry."
+        },
+        {
+          "offset": "0x13c4",
+          "original": "怒りたくもなるぜ。\n毎年これじゃ…。",
+          "text": "Who wouldn't be?\nEvery single year..."
+        },
+        {
+          "offset": "0x1408",
+          "original": "まぁそうひがまないで\nくれたまえ。\nははははは…。",
+          "text": "Now, now, don't be\nso jealous.\nHa-ha-ha-ha..."
+        },
+        {
+          "offset": "0x1450",
+          "original": "あれ、{G}。\nまだ何か？",
+          "text": "Oh, {G}.\nIs there something else?"
+        },
+        {
+          "offset": "0x1858",
+          "original": "{P}。\nはい、義理チョコよ。",
+          "text": "{P}.\nObligatory chocolate."
+        },
+        {
+          "offset": "0x1874",
+          "original": "あ、ありがとう。\n（何も、\nはっきり言わなくても…。）",
+          "text": "Th-thanks.\n(She didn't have to\nsay it so plainly...)"
+        },
+        {
+          "offset": "0x18b8",
+          "original": "{P}\nはい、これ。",
+          "text": "{P}.\nHere, this is for you."
+        },
+        {
+          "offset": "0x18c8",
+          "original": "チョコレートだね。\nあ、ありがとう。\n嬉しいよ。",
+          "text": "It's chocolate!\nTh-thanks.\nI'm really happy."
+        },
+        {
+          "offset": "0x18f8",
+          "original": "ぎ、義理よ、義理。\nでも、ちょっとだけ\n義理じゃないの。",
+          "text": "I-it's obligatory!\nBut maybe not\nentirely..."
+        },
+        {
+          "offset": "0x1930",
+          "original": "何言ってんだか\nわかんないよ。",
+          "text": "I don't get\nwhat you mean."
+        },
+        {
+          "offset": "0x1950",
+          "original": "そ、それじゃ、\nさよなら。",
+          "text": "W-well then,\ngoodbye."
+        },
+        {
+          "offset": "0x1984",
+          "original": "何だろ、\nあんなに慌てて…。",
+          "text": "What's with her,\nso flustered..."
+        },
+        {
+          "offset": "0x1af0",
+          "original": "{P}。\nチョコレートよ。",
+          "text": "{P}.\nHere's chocolate."
+        },
+        {
+          "offset": "0x1b08",
+          "original": "あ、ありがとう。",
+          "text": "Th-thanks."
+        },
+        {
+          "offset": "0x1b1c",
+          "original": "勘違いしないでね。\n義理よ、義理。",
+          "text": "Don't get ideas.\nIt's obligatory."
+        },
+        {
+          "offset": "0x1b40",
+          "original": "別にいいけど。\n（どこから見ても、\n義理にしか見えん。）",
+          "text": "That's fine.\n(It's clearly just\nobligatory chocolate.)"
+        },
+        {
+          "offset": "0x1b88",
+          "original": "チョコレートよ。",
+          "text": "Here's chocolate."
+        },
+        {
+          "offset": "0x1b9c",
+          "original": "あ、ありがとう。",
+          "text": "Th-thanks."
+        },
+        {
+          "offset": "0x1bb0",
+          "original": "バレンタインは大変だわ。\nたくさんの人に配らなきゃ\nいけないから…。",
+          "text": "Valentine's is so hard.\nI have so many people\nto give chocolate to..."
+        },
+        {
+          "offset": "0x1bf4",
+          "original": "あれ？\nこれみんなのと違うよ。",
+          "text": "Huh?\nThis one's different."
+        },
+        {
+          "offset": "0x1c14",
+          "original": "た、たまには、\nそういうのも\nいいんじゃないかしら？",
+          "text": "W-well, once\nin a while, that's\nfine, isn't it?"
+        },
+        {
+          "offset": "0x1c48",
+          "original": "俺だけ、特別なの？",
+          "text": "Just me? I'm special?"
+        },
+        {
+          "offset": "0x1c5c",
+          "original": "いいじゃないの。\n忙しいから、\nもう失礼するわ。",
+          "text": "What does it matter?\nI'm busy,\nso excuse me."
+        },
+        {
+          "offset": "0x1cac",
+          "original": "慌てて、\n行っちゃった気がする…。\n（何にしても特別は良いな。）",
+          "text": "Seems like she\nhurried off...\n(Anyway, special is nice.)"
+        },
+        {
+          "offset": "0x1e98",
+          "original": "これ、チョコレートです。\nどうぞ。",
+          "text": "Here's some chocolate.\nPlease, take it."
+        },
+        {
+          "offset": "0x1ebc",
+          "original": "あ、ありがとう。\n（これは義理かな…。）",
+          "text": "Th-thanks.\n(Obligatory chocolate...?)"
+        },
+        {
+          "offset": "0x1eec",
+          "original": "あっ、{P}。",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x1ef8",
+          "original": "これ、受け取って\nください…。",
+          "text": "Please\naccept this..."
+        },
+        {
+          "offset": "0x1f18",
+          "original": "あ、ありがとう。\n嬉しいよ。",
+          "text": "Th-thanks.\nI'm really happy."
+        },
+        {
+          "offset": "0x1f34",
+          "original": "あの…、中に…。",
+          "text": "Um... inside..."
+        },
+        {
+          "offset": "0x1f48",
+          "original": "中に何？",
+          "text": "Inside, what?"
+        },
+        {
+          "offset": "0x1f54",
+          "original": "い、いえ、\n何でもないです。\nし、失礼します。",
+          "text": "N-no,\nit's nothing.\nE-excuse me."
+        },
+        {
+          "offset": "0x1f84",
+          "original": "中に…、何だろう。",
+          "text": "Something inside...?"
+        },
+        {
+          "offset": "0x1fb4",
+          "original": "ごそごそ",
+          "text": "Rustle, rustle"
+        },
+        {
+          "offset": "0x1fc0",
+          "original": "あれ、中に紙が入ってるぞ。\nこれは{G}の書いた\n詩じゃないか。\nどれどれ…。",
+          "text": "Huh, there's a note inside.\nA poem by {G}?\nLet's see what\nit says..."
+        },
+        {
+          "offset": "0x2008",
+          "original": "な、なんか\n照れちゃうな…。",
+          "text": "I-I feel\nkind of shy now..."
+        },
+        {
+          "offset": "0x21b4",
+          "original": "こんにちは。",
+          "text": "Good afternoon."
+        },
+        {
+          "offset": "0x21c4",
+          "original": "あっ、{G}。\nどうしたの？",
+          "text": "Oh, {G}.\nWhat's up?"
+        },
+        {
+          "offset": "0x21dc",
+          "original": "つまらない物ですけれども、\nよろしければ、どうぞ。",
+          "text": "It's only a small thing,\nbut please, have it."
+        },
+        {
+          "offset": "0x2210",
+          "original": "あ、ありがとう。\n（何か、ご挨拶回りみたい。\nやっぱり、義理かな…。）",
+          "text": "Th-thanks.\n(She's making her rounds.\nObligatory chocolate...?)"
+        },
+        {
+          "offset": "0x2268",
+          "original": "{P}\nこれ、お口に合うかどうか\nわかりませんが、\nよろしければ、どうぞ。",
+          "text": "{P}.\nI don't know if this\nwill suit your taste,\nbut please, have it."
+        },
+        {
+          "offset": "0x22ac",
+          "original": "あ、ありがとう。\nでも、随分大きな\nチョコだね。",
+          "text": "Th-thanks.\nBut that's a really\nbig chocolate."
+        },
+        {
+          "offset": "0x22dc",
+          "original": "ボーッとしていて、\n気がついたら、\nたくさんのチョコを\n溶かしてしまいまして…。",
+          "text": "I was daydreaming,\nand before I knew it,\nI had melted a whole\nlot of chocolate..."
+        },
+        {
+          "offset": "0x232c",
+          "original": "{G}の手作りなの？",
+          "text": "You made this, {G}?"
+        },
+        {
+          "offset": "0x233c",
+          "original": "それは、開けるまでの\n秘密です。\nでは、失礼いたします。",
+          "text": "That's a secret until\nyou open it.\nWell, please excuse me."
+        },
+        {
+          "offset": "0x2388",
+          "original": "そ、それじゃ。\n（さっき溶かしてたって\n言ったのになぁ…。）",
+          "text": "S-see you.\n(But she just said\nshe melted it...)"
+        },
+        {
+          "offset": "0x2518",
+          "original": "がらじゃないけど、\nはい、チョコレート。",
+          "text": "It's not really my thing,\nbut here's some chocolate."
+        },
+        {
+          "offset": "0x2540",
+          "original": "あ、ありがとう。\n（これは義理かな…。）",
+          "text": "Th-thanks.\n(Obligatory chocolate...?)"
+        },
+        {
+          "offset": "0x2570",
+          "original": "私、不器用だから、\n上手にできなかったけど、\nこれ…。",
+          "text": "I'm clumsy,\nso it's not very good,\nbut here..."
+        },
+        {
+          "offset": "0x25a8",
+          "original": "チョコレートだね。\nありがとう。\n嬉しいよ。",
+          "text": "It's chocolate!\nThanks.\nI'm really happy."
+        },
+        {
+          "offset": "0x25d4",
+          "original": "本当に、\n上手じゃないから、\n見て笑わないでよ。",
+          "text": "Really,\nit's not good,\nso don't laugh at it."
+        },
+        {
+          "offset": "0x2604",
+          "original": "そんな、一生懸命\n作ってくれたんだろう。\n絶対笑わないよ。",
+          "text": "Come on, you worked\nhard to make it, right?\nI'd never laugh."
+        },
+        {
+          "offset": "0x2640",
+          "original": "それならいいけど。\nそれじゃ、絶対食べてよ。",
+          "text": "Then fine.\nBut make sure you eat it."
+        },
+        {
+          "offset": "0x266c",
+          "original": "はいはい。\n残さず食べるよ。\n",
+          "text": "Okay, okay.\nI'll eat every bit.\n"
+        },
+        {
+          "offset": "0x26a4",
+          "original": "それにしても、清川さんの\n手作りチョコって\nすごく嬉しいなぁ。",
+          "text": "Kiyokawa-san's homemade\nchocolates really\nmade my day."
+        },
+        {
+          "offset": "0x2818",
+          "original": "あの…。\nこれ…、どうぞ。",
+          "text": "Um...\nthis... for you."
+        },
+        {
+          "offset": "0x2834",
+          "original": "あ、ありがとう。",
+          "text": "Th-thanks."
+        },
+        {
+          "offset": "0x2848",
+          "original": "それじゃ…\n失礼します…。",
+          "text": "Well...\nexcuse me..."
+        },
+        {
+          "offset": "0x2864",
+          "original": "これは、義理だろうな…。",
+          "text": "Probably obligatory..."
+        },
+        {
+          "offset": "0x2890",
+          "original": "あの…。\nこ、これ…。\nあの…。\n受け取ってください…。",
+          "text": "Um...\nTh-this...\nUm...\nPlease take it..."
+        },
+        {
+          "offset": "0x28c8",
+          "original": "あ、ありがとう。\n嬉しいよ。\nあっ、{G}。",
+          "text": "Th-thanks.\nI'm really happy.\nOh, {G}."
+        },
+        {
+          "offset": "0x28f0",
+          "original": "は、恥ずかしい…。",
+          "text": "S-so embarrassing..."
+        },
+        {
+          "offset": "0x2910",
+          "original": "真っ赤な顔してたな…。\nよっぽど恥ずかし\nかったのかな…。",
+          "text": "Her face was bright red...\nShe must've been really\nembarrassed..."
+        },
+        {
+          "offset": "0x2950",
+          "original": "{P}。\nちょっと、校舎裏に\n来て欲しいの。",
+          "text": "{P}.\nCould you come behind\nthe school building?"
+        },
+        {
+          "offset": "0x2978",
+          "original": "ああ、いいよ。",
+          "text": "Sure."
+        },
+        {
+          "offset": "0x2988",
+          "original": "よかった。\nそれじゃ、すぐに来てね。",
+          "text": "Great.\nCome right away, okay?"
+        },
+        {
+          "offset": "0x29b8",
+          "original": "チョコレートなら\nここで渡せばいいのに、\n恥ずかしがっちゃって…。",
+          "text": "If it's chocolate,\nshe could give it here,\nbut she's too shy..."
+        },
+        {
+          "offset": "0x2a00",
+          "original": "おーい。\n詩織ぃ、きたぞー。",
+          "text": "Hey!\nShiori, I'm here!"
+        },
+        {
+          "offset": "0x2a20",
+          "original": "こんな所で、もしかしたら、\nチョコレート以外にも…？",
+          "text": "Out here... besides\nchocolate, something more?"
+        },
+        {
+          "offset": "0x2a58",
+          "original": "あのね、\n紹介したい女の子がいるんだ。\nちょっとここで、待ってて。",
+          "text": "You see,\nI want you to meet a girl.\nWait right here a moment."
+        },
+        {
+          "offset": "0x2aa0",
+          "original": "はぁ…。\n詩織の用じゃないのか…。\nでも、紹介したい\n女の子って誰だろう…。",
+          "text": "Sigh...\nSo it isn't Shiori...\nBut who's this girl\nshe wants me to meet...?"
+        },
+        {
+          "offset": "0x2aec",
+          "original": "でもぉ、恥ずかしい…。\nやっぱり、いいよぉ…。",
+          "text": "But I'm so embarrassed...\nNever mind, forget it..."
+        },
+        {
+          "offset": "0x2b1c",
+          "original": "何言ってるのよ。\nせっかくのチャンスじゃない。\n勇気を出さなきゃ。",
+          "text": "What are you saying?\nThis is your big chance.\nYou have to be brave."
+        },
+        {
+          "offset": "0x2b60",
+          "original": "何か、向こうで話し声が\n聞こえるぞ。",
+          "text": "I can hear\nvoices over there."
+        },
+        {
+          "offset": "0x2b94",
+          "original": "あの…。",
+          "text": "Um..."
+        },
+        {
+          "offset": "0x2ba0",
+          "original": "は、はい？",
+          "text": "Y-yes?"
+        },
+        {
+          "offset": "0x2bac",
+          "original": "わ、私…、\n美樹原愛といいます。\nこ、これ、\n受け取ってください…。",
+          "text": "I-I'm...\nMikihara Megumi.\nP-please,\ntake this..."
+        },
+        {
+          "offset": "0x2bfc",
+          "original": "あ、ありがと。",
+          "text": "Th-thanks."
+        },
+        {
+          "offset": "0x2c0c",
+          "original": "ありがたく…。\nあれ、\n走って逃げちゃったよ。",
+          "text": "I'll gladly...\nHuh?\nShe ran away."
+        },
+        {
+          "offset": "0x2c44",
+          "original": "ごめんなさい、あの娘\nとっても恥ずかしがり屋なの。\nメグ、ちょっと待って！",
+          "text": "Sorry, she's\nreally, really shy.\nMegu, wait up!"
+        },
+        {
+          "offset": "0x2c94",
+          "original": "恥ずかしがり屋ねぇ…。\nでも、可愛かったな。",
+          "text": "Shy, huh...\nShe sure was cute."
+        },
+        {
+          "offset": "0x3074",
+          "original": "はい、チョコレート。\n手作りなのよ。",
+          "text": "Here, chocolate.\nI made it myself."
+        },
+        {
+          "offset": "0x3098",
+          "original": "あ、ありがとう。\n（でもこれ、みんなと同じだ。\nやっぱり、義理か…。）",
+          "text": "Th-thanks.\n(Same as everyone else's.\nMust be obligatory...)"
+        },
+        {
+          "offset": "0x30e8",
+          "original": "これ、チョコレート。",
+          "text": "This is chocolate."
+        },
+        {
+          "offset": "0x3100",
+          "original": "あ、ありがとう。\nでも、どうしたの？\n眠そうだね。",
+          "text": "Th-thanks.\nBut what's wrong?\nYou look sleepy."
+        },
+        {
+          "offset": "0x3134",
+          "original": "このチョコレートを\n作るのに、朝まで\nかかっちゃって…。",
+          "text": "Making this\nchocolate took me\nuntil morning..."
+        },
+        {
+          "offset": "0x316c",
+          "original": "あ、朝まで？\nそれじゃ、勿体無くて\n食べれないね。",
+          "text": "Until morning?\nThen it's too precious\nto eat."
+        },
+        {
+          "offset": "0x31a0",
+          "original": "でも、食べてもらいたいから、\n心を込めて…。\nあっ、も、もう行くね。",
+          "text": "But I want you to eat it,\nI made it with love...\nOh, I-I have to go."
+        },
+        {
+          "offset": "0x31fc",
+          "original": "あっ、虹野さん？\n行っちゃった…。",
+          "text": "Oh, Nijino-san?\nShe's gone..."
+        },
+        {
+          "offset": "0x3220",
+          "original": "それにしても、朝までか…。\n最高に、嬉しいぜ。",
+          "text": "Until morning, huh...\nThat's the best."
+        },
+        {
+          "offset": "0x33a4",
+          "original": "{P}\nお兄ちゃんの友達だから、\nチョコレートあげる。",
+          "text": "{P}\nYou're Yoshio's friend,\nso here's chocolate."
+        },
+        {
+          "offset": "0x33d4",
+          "original": "あ、ありがとう。\n{G}。",
+          "text": "Th-thanks,\n{G}."
+        },
+        {
+          "offset": "0x33f4",
+          "original": "これ、チョコレートです。",
+          "text": "I brought you chocolate."
+        },
+        {
+          "offset": "0x3410",
+          "original": "あ、ありがとう。\n嬉しいよ。\n{G}。",
+          "text": "Th-thanks.\nI'm really happy,\n{G}."
+        },
+        {
+          "offset": "0x3430",
+          "original": "これ以外のチョコレートは\n貰ってもいいけど、\n絶対食べないで下さいね。",
+          "text": "You can accept other\nchocolate, but\ndon't eat any of it!"
+        },
+        {
+          "offset": "0x3478",
+          "original": "えっ？\nう、うん。",
+          "text": "Huh?\nO-okay."
+        },
+        {
+          "offset": "0x348c",
+          "original": "ホント？\n絶対約束だよ。\nそれじゃあ。",
+          "text": "Really?\nYou promise!\nBye!"
+        },
+        {
+          "offset": "0x34cc",
+          "original": "軽はずみな、\n約束しちゃったかな…。",
+          "text": "Did I make a\ncareless promise...?"
+        },
+        {
+          "offset": "0x3624",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x3630",
+          "original": "あっ、",
+          "text": "Oh,"
+        },
+        {
+          "offset": "0x3638",
+          "original": "あっ、",
+          "text": "Oh,"
+        },
+        {
+          "offset": "0x3640",
+          "original": "あっ、",
+          "text": "Oh,"
+        },
+        {
+          "offset": "0x3648",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x3650",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}."
+        },
+        {
+          "offset": "0x3658",
+          "original": "あっ、{P}",
+          "text": "Oh, {P}."
+        }
+      ]
+    }
+  ]
 }

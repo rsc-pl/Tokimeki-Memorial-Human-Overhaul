@@ -1644,7 +1644,7 @@
         {
           "offset": "0x3ad8",
           "original": "{G}、演劇部なんだ…。\n大丈夫？\n舞台なんて、立てる？",
-          "text": "You're in Drama, {G}?\nYou okay?\nCan you perform?"
+          "text": "In Drama Club, {G}?\nYou okay?\nCan you perform?"
         },
         {
           "offset": "0x3b0c",
@@ -1664,7 +1664,7 @@
         {
           "offset": "0x3bac",
           "original": "{G}、演劇部なんだ…。\n大丈夫？\n舞台なんて、立てる？",
-          "text": "You're in Drama, {G}?\nYou okay?\nCan you perform?"
+          "text": "In Drama Club, {G}?\nYou okay?\nCan you perform?"
         },
         {
           "offset": "0x3be0",
@@ -1684,7 +1684,7 @@
         {
           "offset": "0x3c74",
           "original": "{G}、演劇部なんだ…。\n大丈夫？\n舞台なんて、立てる？",
-          "text": "You're in Drama, {G}?\nYou okay?\nCan you perform?"
+          "text": "In Drama Club, {G}?\nYou okay?\nCan you perform?"
         },
         {
           "offset": "0x3ca8",
@@ -4221,7 +4221,7 @@
         {
           "offset": "0x3a98",
           "original": "実は、ゲームの曲なんだ。\n{G}は、ゲームなんて\nあまりしないでしょう？",
-          "text": "It's from a game.\n{G}, you don't really\nplay games, do you?"
+          "text": "It's from a game.\n{G}, you hardly\nplay games, do you?"
         },
         {
           "offset": "0x3adc",
@@ -4241,7 +4241,7 @@
         {
           "offset": "0x3b78",
           "original": "実は、ゲームの曲なんだ。\n{G}は、ゲームなんて\nあまりしないもんね。",
-          "text": "It's from a game.\n{G}, you don't really\nplay games, I guess."
+          "text": "It's from a game.\n{G}, you hardly\nplay games, I guess."
         },
         {
           "offset": "0x3bc0",
@@ -5203,7 +5203,7 @@
         {
           "offset": "0xf5c",
           "original": "大丈夫だって、{G}。\n自分を信じなきゃ。",
-          "text": "You'll be fine, {G}.\nTrust yourself."
+          "text": "You're okay, {G}.\nTrust yourself."
         },
         {
           "offset": "0xf84",
@@ -5268,7 +5268,7 @@
         {
           "offset": "0x11e0",
           "original": "大丈夫だって、{G}。\n自分を信じなきゃ。",
-          "text": "You'll be fine, {G}.\nTrust yourself."
+          "text": "You're okay, {G}.\nTrust yourself."
         },
         {
           "offset": "0x1208",
@@ -5333,7 +5333,7 @@
         {
           "offset": "0x1430",
           "original": "大丈夫だって、{G}。\n自分を信じなきゃ。",
-          "text": "You'll be fine, {G}.\nTrust yourself."
+          "text": "You're okay, {G}.\nTrust yourself."
         },
         {
           "offset": "0x1458",
@@ -5398,7 +5398,7 @@
         {
           "offset": "0x1638",
           "original": "大丈夫だって、{G}。\n自分を信じなきゃ。",
-          "text": "You'll be fine, {G}.\nTrust yourself."
+          "text": "You're okay, {G}.\nTrust yourself."
         },
         {
           "offset": "0x1660",
@@ -6140,7 +6140,7 @@
         {
           "offset": "0x80",
           "original": "あの、良かったら、\n是非、文芸部に\n来て下さい…。",
-          "text": "Um, if you can,\nplease come to\nthe Literature Club..."
+          "text": "Um, if you can,\ncome visit\nthe Literature Club..."
         },
         {
           "offset": "0xb8",
@@ -6160,7 +6160,7 @@
         {
           "offset": "0x174",
           "original": "それじゃあ、{G}との\n約束だし、\n文芸部に行こうかな。",
-          "text": "I promised {G},\nso I'll check out\nthe Literature Club."
+          "text": "I promised {G}.\nI'll visit\nthe Literature Club."
         },
         {
           "offset": "0x1ac",
@@ -6180,17 +6180,17 @@
         {
           "offset": "0x210",
           "original": "一緒に、見学しない？",
-          "text": "Want to look around with me?"
+          "text": "Shall we look around?"
         },
         {
           "offset": "0x230",
           "original": "ごめんなさい…。\n文芸部のほうが…。\n誘っていただいたのに…。",
-          "text": "I'm sorry...\nI've got Literature Club.\nThanks for inviting me."
+          "text": "Sorry...\nI'm busy with Lit Club...\nThanks for inviting me."
         },
         {
           "offset": "0x274",
           "original": "ごめんなさい…。\n演劇部のほうが…。\n誘っていただいたのに…。",
-          "text": "I'm sorry...\nI've got Drama Club.\nThanks for inviting me."
+          "text": "Sorry...\nI'm busy with Drama Club...\nThanks for inviting me."
         },
         {
           "offset": "0x2b8",
@@ -6220,7 +6220,7 @@
         {
           "offset": "0x388",
           "original": "一緒に、見学しない？",
-          "text": "Want to look around with me?"
+          "text": "Shall we look around?"
         },
         {
           "offset": "0x3a8",
@@ -6245,7 +6245,7 @@
         {
           "offset": "0x470",
           "original": "そんな部に入ってたとは\n知らなかった…。",
-          "text": "Didn't know she was\nin a club like that..."
+          "text": "She's in that club?\nI had no idea..."
         },
         {
           "offset": "0x49c",
@@ -6255,7 +6255,7 @@
         {
           "offset": "0x4a8",
           "original": "一緒に、見学しない？",
-          "text": "Want to look around with me?"
+          "text": "Shall we look around?"
         },
         {
           "offset": "0x4c8",
@@ -6275,7 +6275,7 @@
         {
           "offset": "0x560",
           "original": "それでは、失礼します。",
-          "text": "Well, please excuse me."
+          "text": "I'll be going, then."
         },
         {
           "offset": "0x57c",
@@ -6290,7 +6290,7 @@
         {
           "offset": "0x59c",
           "original": "一緒に、見学しない？",
-          "text": "Want to look around with me?"
+          "text": "Shall we look around?"
         },
         {
           "offset": "0x5bc",
@@ -6762,7 +6762,7 @@
         {
           "offset": "0xef4",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere did she go?"
+          "text": "{G}'s not here.\nWhere did she go?"
         },
         {
           "offset": "0xf24",
@@ -6892,7 +6892,7 @@
         {
           "offset": "0x13d4",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere did she go?"
+          "text": "{G}'s not here.\nWhere did she go?"
         },
         {
           "offset": "0x1404",
@@ -7017,7 +7017,7 @@
         {
           "offset": "0x185c",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere did she go?"
+          "text": "{G}'s not here.\nWhere did she go?"
         },
         {
           "offset": "0x188c",
@@ -7122,7 +7122,7 @@
         {
           "offset": "0x1c48",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, {G}'s not here.\nWhere did she go?"
+          "text": "{G}'s not here.\nWhere did she go?"
         }
       ]
     }

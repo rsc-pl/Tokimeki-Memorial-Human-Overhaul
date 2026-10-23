@@ -424,7 +424,7 @@
         {
           "offset": "0x1780",
           "original": "{G}可愛いから、\n兄妹にみえるかもね。",
-          "text": "{G}, you're so cute,\nWe'd look like siblings."
+          "text": "Cute, {G}.\nWe'd look like siblings."
         },
         {
           "offset": "0x17a4",
@@ -469,7 +469,7 @@
         {
           "offset": "0x1b78",
           "original": "うん、だーい好き。\nお兄ちゃんと\nよく見るんだよ。",
-          "text": "Yeah, I looove it.\nI watch it with\nmy brother."
+          "text": "Yeah, I looove it.\nI watch with\nmy older brother."
         },
         {
           "offset": "0x1bac",

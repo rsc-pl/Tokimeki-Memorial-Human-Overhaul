@@ -438,6 +438,21 @@ def apply_bytes(patch: BytePatch, edit: FileEdit) -> None:
                     + (f"  ({patch.comment})" if patch.comment else ""))
 
 
+class PlanErrors(ValueError):
+    """All independent failures from one read-only planning pass.
+
+    Partial edits never escape: the normal builder does not start disc copying
+    until plan() returns successfully.
+    """
+
+    def __init__(self, problems: List[str]):
+        self.problems = tuple(problems)
+        super().__init__(
+            f"{len(problems)} patch error(s) found; no output written:\n" +
+            "\n".join(f"  [{i}] {problem}" for i, problem in enumerate(problems, 1))
+        )
+
+
 def _quiet(message: str) -> None:
     pass
 
@@ -446,11 +461,17 @@ def plan(track: Track, strings: List[StringPatch], images: List[ImagePatch],
          byte_patches: List[BytePatch] = (),
          dialogue: List[DialogueBlock] = (),
          log: Callable[[str], None] = _quiet,
-         progress: Callable[[str], None] = _quiet) -> List[FileEdit]:
+         progress: Callable[[str], None] = _quiet,
+         collect_errors: bool = False) -> List[FileEdit]:
     """Validate and apply every patch in memory, against the unmodified disc.
 
     `log` gets a line per stage; `progress` gets a short status for each
     dialogue block (the slow part), meant to be shown in place.
+
+    When collect_errors is True, each independent patch is applied to a
+    temporary in-memory copy. Failed operations leave the working bytes and
+    pair-encoder state intact; later operations still get checked. The builder
+    refuses publication if ANY operation failed.
     """
     log("  Reading the disc's file list")
     files = list_files(track)
@@ -469,24 +490,52 @@ def plan(track: Track, strings: List[StringPatch], images: List[ImagePatch],
         return edits[path]
 
     pairs = font.PairEncoder()
+    problems: List[str] = []
+
+    def checked(path: str, source: str, operation) -> None:
+        # Default legacy behavior is unchanged. Public Go build/preflight
+        # selects the collecting mode, which is also available to Python.
+        if not collect_errors:
+            operation(edit_for(path, source), pairs)
+            return
+        try:
+            current = edit_for(path, source)
+            # A failed dialogue/image patch may already have cleared or
+            # written part of its working file. Do not leak those mutations
+            # into the next check, or they would create false mismatches.
+            scratch = FileEdit(current.entry, current.original,
+                               bytearray(current.data))
+            candidate_pairs = font.PairEncoder()
+            candidate_pairs.used = pairs.used
+            operation(scratch, candidate_pairs)
+        except (ValueError, OSError) as exc:
+            problems.append(str(exc))
+        else:
+            current.data = scratch.data
+            current.log.extend(scratch.log)
+            pairs.used = candidate_pairs.used
+
     if strings:
         log(f"  Checking {len(strings)} menu and screen string(s)")
     for s in strings:
-        apply_string(s, edit_for(s.file, s.source), pairs)
+        checked(s.file, s.source, lambda e, p, s=s: apply_string(s, e, p))
     if images:
         log(f"  Checking {len(images)} image(s)")
     for i in images:
-        apply_image(i, edit_for(i.file, i.source))
+        checked(i.file, i.source, lambda e, p, i=i: apply_image(i, e))
     if byte_patches:
         log(f"  Checking {len(byte_patches)} code and data patch(es)")
     for b in byte_patches:
-        apply_bytes(b, edit_for(b.file, b.source))
+        checked(b.file, b.source, lambda e, p, b=b: apply_bytes(b, e))
     if dialogue:
         lines = sum(1 for d in dialogue for x in d.lines if x.text)
         log(f"  Repacking {lines} dialogue line(s) in {len(dialogue)} block(s)")
     for n, d in enumerate(dialogue, 1):
         progress(f"[{n}/{len(dialogue)}] {d.file} ({d.source})")
-        apply_dialogue(d, edit_for(d.file, d.source), pairs)
+        checked(d.file, d.source, lambda e, p, d=d: apply_dialogue(d, e, p))
+
+    if problems:
+        raise PlanErrors(problems)
 
     if pairs.used:
         log("  Installing the English text renderer")

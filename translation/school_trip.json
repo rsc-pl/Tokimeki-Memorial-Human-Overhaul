@@ -4854,7 +4854,7 @@
         {
           "offset": "0x133b8",
           "original": "今日は、{S}で\n朝から、自由行動だ。",
-          "text": "Today, in {S}\nwe're free all day long."
+          "text": "In {S},\nwe're free all day."
         },
         {
           "offset": "0x133e0",
@@ -5594,7 +5594,7 @@
         {
           "offset": "0x15964",
           "original": "あーあ、{S}まで行って、\n{Y}とツーショットじゃ\n悲しいよな…。",
-          "text": "All the way to {S},\nand a photo with {Y}...\nHow depressing."
+          "text": "To {S},\na pic with {Y}...\nHow depressing."
         },
         {
           "offset": "0x16410",

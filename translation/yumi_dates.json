@@ -24,7 +24,7 @@
         {
           "offset": "0x58",
           "original": "変な絵が多いね。{q}この絵、{G}に似てるね。{q}この絵、奇麗だと思わない？",
-          "text": "Lots of weird ones, huh.{q}Looks like you, {G}{q}Isn't this one pretty?"
+          "text": "Lots of weird ones, huh.{q}Looks like you, {G}.{q}Isn't this one pretty?"
         },
         {
           "offset": "0xa4",
@@ -179,7 +179,7 @@
         {
           "offset": "0xb98",
           "original": "フォームを直すといいかな。{q}{G}には絶対無理だね。{q}どうしたらいいかな…？",
-          "text": "Work on your form a bit.{q}{G}, it's hopeless.{q}Hmm, what would help...?"
+          "text": "Work on your form a bit.{q}You can't, {G}.{q}Hmm, what would help...?"
         },
         {
           "offset": "0xbe8",
@@ -784,7 +784,7 @@
         {
           "offset": "0x3258",
           "original": "ごめんよ、{G}。\nもう二度としないから。",
-          "text": "So sorry, {G}\nIt won't happen again."
+          "text": "Sorry, {G}.\nIt won't happen again."
         },
         {
           "offset": "0x32a8",
@@ -864,7 +864,7 @@
         {
           "offset": "0x3ba4",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3c2c",
@@ -879,7 +879,7 @@
         {
           "offset": "0x3c64",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3cec",
@@ -894,7 +894,7 @@
         {
           "offset": "0x3d34",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3f6c",
@@ -1189,7 +1189,7 @@
         {
           "offset": "0x5294",
           "original": "織姫星ってどこ？",
-          "text": "Where's Orihime?"
+          "text": "Where's Orihime's star?"
         },
         {
           "offset": "0x52ac",
@@ -1404,7 +1404,7 @@
         {
           "offset": "0x633c",
           "original": "うん、{G}によく似合うよ。{q}全然、思わない。{q}でも、あれも結構可愛いよ。",
-          "text": "It suits you, {G}{q}Not really.{q}But that one's cute too."
+          "text": "It suits you, {G}.{q}Not really.{q}But that one's cute too."
         },
         {
           "offset": "0x6388",
@@ -1574,7 +1574,7 @@
         {
           "offset": "0x71e8",
           "original": "俺はわりと好きだな…。{q}全然面白くない。{q}{G}はどうなの？",
-          "text": "I kinda like it...{q}It's not fun at all.{q}{G}, and you?"
+          "text": "I kinda like it...{q}It's not fun at all.{q}What about you, {G}?"
         },
         {
           "offset": "0x7228",
@@ -1614,7 +1614,7 @@
         {
           "offset": "0x73bc",
           "original": "そろそろ入るよ。\n{G}。",
-          "text": "Let's head in,\n{G}"
+          "text": "Let's head in,\n{G}."
         },
         {
           "offset": "0x73dc",
@@ -1639,7 +1639,7 @@
         {
           "offset": "0x74dc",
           "original": "そろそろ入るよ。\n{G}。",
-          "text": "Let's head in,\n{G}"
+          "text": "Let's head in,\n{G}."
         },
         {
           "offset": "0x74fc",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x8320",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to go see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x8358",
@@ -1849,17 +1849,17 @@
         {
           "offset": "0x84a0",
           "original": "撮影用より、楽なんだよ。{q}着たこと無いからなぁ…。{q}大変だって、聞いたことあるよ。",
-          "text": "Easier than the TV suits.{q}I've never worn one, so...{q}I hear it's super tough."
+          "text": "Easier than film suits.{q}I've never worn one, so...{q}I hear it's super tough."
         },
         {
           "offset": "0x84fc",
           "original": "えーっ。\n撮影用と違うの？{q}着たこと無くたって、\n優美、知ってるよ。{q}優美、\nいっぺん着てみたいん\nだけどなー。",
-          "text": "Whaaa?\nThey're not the TV ones?{q}You don't need to wear\none to know that!{q}Yumi wants to\ntry one on\njust once."
+          "text": "Whaaa?\nNot the film ones?{q}You don't need to wear\none to know that!{q}Yumi wants to\ntry one on\njust once."
         },
         {
           "offset": "0x856c",
           "original": "{G}、\n何に乗りたい？",
-          "text": "{G}\nwhat do you want to ride?"
+          "text": "{G},\nwhat do you want to ride?"
         },
         {
           "offset": "0x8580",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x8844",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}."
         },
         {
           "offset": "0x889c",
@@ -1969,7 +1969,7 @@
         {
           "offset": "0x8a34",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I saw only you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x8a84",
@@ -1994,7 +1994,7 @@
         {
           "offset": "0x8bec",
           "original": "{G}、\n何に乗りたい？",
-          "text": "{G}\nwhat do you want to ride?"
+          "text": "{G},\nwhat do you want to ride?"
         },
         {
           "offset": "0x8c00",
@@ -2039,7 +2039,7 @@
         {
           "offset": "0x8dac",
           "original": "{G}の人気もすごいよ。{q}順番待つのが辛いな。{q}園内で、一番人気の乗り物かもね。",
-          "text": "So are you, {G}{q}The wait is so brutal.{q}Top ride in the park, maybe."
+          "text": "So are you, {G}.{q}The wait is so brutal.{q}Top ride in the park, maybe."
         },
         {
           "offset": "0x8e00",
@@ -2064,7 +2064,7 @@
         {
           "offset": "0x8ecc",
           "original": "俺がいるから大丈夫だっただろ。{q}あれで？おかしいんじゃない？{q}{G}て、臆病なんだね。",
-          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}"
+          "text": "You were fine with me there.{q}That? Are you serious?{q}Scaredy-cat, {G}."
         },
         {
           "offset": "0x8f24",
@@ -2104,7 +2104,7 @@
         {
           "offset": "0x90bc",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I saw only you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x910c",
@@ -2129,7 +2129,7 @@
         {
           "offset": "0x9274",
           "original": "{G}、\n何に乗りたい？",
-          "text": "{G}\nwhat do you want to ride?"
+          "text": "{G},\nwhat do you want to ride?"
         },
         {
           "offset": "0x9288",
@@ -2174,7 +2174,7 @@
         {
           "offset": "0x9434",
           "original": "{G}の人気もすごいよ。{q}順番待つのが辛いな。{q}園内で、一番人気の乗り物かもね。",
-          "text": "So are you, {G}{q}The wait is so brutal.{q}Top ride in the park, maybe."
+          "text": "So are you, {G}.{q}The wait is so brutal.{q}Top ride in the park, maybe."
         },
         {
           "offset": "0x9488",
@@ -2199,7 +2199,7 @@
         {
           "offset": "0x95b8",
           "original": "優美も、ビックリ。\nお目め、クリクリだった。{q}どーせ、\n優美はまだまだ\n子供ですよーだ。{q}さすが\nバーチャルシップだね。",
-          "text": "Yumi was so surprised.\nHer eyes went all round!{q}Fine,\nYumi's just\na kid! Hmph!{q}That's the\nVirtual Ship for you!"
+          "text": "Yumi was so surprised.\nMy eyes went wide!{q}Fine,\nYumi's just\na kid! Hmph!{q}That's the\nVirtual Ship for you!"
         },
         {
           "offset": "0x9630",
@@ -2234,7 +2234,7 @@
         {
           "offset": "0x978c",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "My eyes were on {G}{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "I saw only you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x97dc",

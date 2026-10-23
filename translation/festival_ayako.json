@@ -8865,7 +8865,7 @@
         {
           "offset": "0x144c",
           "original": "{G}のは当然だけど。\n俺の絵も評判よくて\n一安心だよ。",
-          "text": "Yours got praise, {G}\nbut mine went over\nwell too. Phew."
+          "text": "Yours did well, {G}\nbut mine did too.\nPhew."
         },
         {
           "offset": "0x1480",
@@ -8905,7 +8905,7 @@
         {
           "offset": "0x15a8",
           "original": "{G}のは当然だけど。\n俺の絵も評判よくて\n一安心だよ。",
-          "text": "Yours got praise, {G}\nbut mine went over\nwell too. Phew."
+          "text": "Yours did well, {G}\nbut mine did too.\nPhew."
         },
         {
           "offset": "0x15dc",
@@ -8945,7 +8945,7 @@
         {
           "offset": "0x1730",
           "original": "{G}のは当然だけど。\n俺の絵も評判よくて\n一安心だよ。",
-          "text": "Yours got praise, {G}\nbut mine went over\nwell too. Phew."
+          "text": "Yours did well, {G}\nbut mine did too.\nPhew."
         },
         {
           "offset": "0x1764",
@@ -10424,7 +10424,7 @@
         {
           "offset": "0xea8",
           "original": "{G}がいなけりゃ、\nゆっくり\n見るんだけどなぁ…。",
-          "text": "If it weren't for {G}\nI'd stay\nand look..."
+          "text": "Without {G},\nI'd stay\nand look..."
         },
         {
           "offset": "0xedc",
@@ -10454,7 +10454,7 @@
         {
           "offset": "0xf90",
           "original": "{G}がいなけりゃ、\nゆっくり見るんだけどなぁ。\n‥‥‥‥帰るか。",
-          "text": "If it weren't for {G}\nI'd stay and look.\n...I'll go."
+          "text": "Without {G},\nI'd stay and look.\n...I'll go."
         },
         {
           "offset": "0xfd0",

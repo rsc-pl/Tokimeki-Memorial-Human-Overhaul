@@ -554,7 +554,7 @@
         {
           "offset": "0x2558",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}."
+          "text": "Yours if I win, {G}"
         },
         {
           "offset": "0x257c",
@@ -914,7 +914,7 @@
         {
           "offset": "0x3f84",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x400c",
@@ -929,7 +929,7 @@
         {
           "offset": "0x405c",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x40e4",
@@ -944,7 +944,7 @@
         {
           "offset": "0x4130",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x4368",
@@ -1004,7 +1004,7 @@
         {
           "offset": "0x4644",
           "original": "好きな音楽はクラシック\nということを聞き出した。",
-          "text": "Found out she loves\nclassical music."
+          "text": "Found out she likes\nclassical music."
         },
         {
           "offset": "0x4674",
@@ -1014,7 +1014,7 @@
         {
           "offset": "0x46c4",
           "original": "海水浴が好きらしい\nということを聞き出した。",
-          "text": "Found out she seems\nto like the beach."
+          "text": "Seems she likes\nswimming in the sea."
         },
         {
           "offset": "0x46f0",
@@ -1249,7 +1249,7 @@
         {
           "offset": "0x5884",
           "original": "へぇ、あれがそうなんだ。\n確か、織り姫星の\n星座よね。{q}そんな投げやりな\n答え方しなくても\nいいじゃない。{q}なんて言う星座なのかな？\nテープで説明して\nくれるかもしれないね。",
-          "text": "Oh, so that's it.\nIt's the constellation\nof Vega, right?{q}You don't have to\nanswer so\ncarelessly.{q}What constellation\nis it, I wonder?\nMaybe the tape will say."
+          "text": "Oh, so that's it.\nIt's Orihime's\nconstellation, right?{q}You don't have to\nanswer so\ncarelessly.{q}What constellation\nis it, I wonder?\nMaybe the tape will say."
         },
         {
           "offset": "0x5930",
@@ -1534,7 +1534,7 @@
         {
           "offset": "0x7204",
           "original": "スケートなら俺に任せてくれ。{q}氷の上はちょっと卑怯だよね…。{q}とりあえずってとこかな。",
-          "text": "Leave skating to me.{q}The ice makes it tricky...{q}I can manage, I guess."
+          "text": "Leave skating to me.{q}The ice is kind of unfair...{q}I can manage, I guess."
         },
         {
           "offset": "0x7264",
@@ -1864,7 +1864,7 @@
         {
           "offset": "0x8bbc",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to go see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x8bf4",

@@ -259,7 +259,7 @@
         {
           "offset": "0x880",
           "original": "あっ、{G}\nど、どうだった？",
-          "text": "Oh, {G}\nH-how was it?"
+          "text": "Oh, {G},\nH-how was it?"
         },
         {
           "offset": "0x89c",
@@ -1054,7 +1054,7 @@
         {
           "offset": "0x20bc",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x20d0",
@@ -1139,7 +1139,7 @@
         {
           "offset": "0x2318",
           "original": "あっ、{G}。\nちょっと待って。",
-          "text": "Oh, {G}\nWait a sec."
+          "text": "Oh, {G}.\nWait a sec."
         },
         {
           "offset": "0x2334",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x23b4",
           "original": "あっ、{G}。\n感想は？",
-          "text": "Oh, {G}\nThoughts?"
+          "text": "Oh, {G}.\nThoughts?"
         },
         {
           "offset": "0x23c8",
@@ -1184,7 +1184,7 @@
         {
           "offset": "0x2490",
           "original": "あっ、{G}。\n感想は？",
-          "text": "Oh, {G}\nThoughts?"
+          "text": "Oh, {G}.\nThoughts?"
         },
         {
           "offset": "0x24a4",
@@ -1219,7 +1219,7 @@
         {
           "offset": "0x25b4",
           "original": "あっ、{G}。\n感想は？",
-          "text": "Oh, {G}\nThoughts?"
+          "text": "Oh, {G}.\nThoughts?"
         },
         {
           "offset": "0x25c8",
@@ -1244,7 +1244,7 @@
         {
           "offset": "0x2664",
           "original": "あっ、{G}。\n感想は？",
-          "text": "Oh, {G}\nThoughts?"
+          "text": "Oh, {G}.\nThoughts?"
         },
         {
           "offset": "0x2678",
@@ -1279,7 +1279,7 @@
         {
           "offset": "0x278c",
           "original": "あっ、{G}。\n感想は？",
-          "text": "Oh, {G}\nThoughts?"
+          "text": "Oh, {G}.\nThoughts?"
         },
         {
           "offset": "0x27a0",
@@ -1304,7 +1304,7 @@
         {
           "offset": "0x2840",
           "original": "あっ、{G}。\n感想は？",
-          "text": "Oh, {G}\nThoughts?"
+          "text": "Oh, {G}.\nThoughts?"
         },
         {
           "offset": "0x2854",
@@ -1361,7 +1361,7 @@
         {
           "offset": "0x10",
           "original": "あっ、\n{G}、おはよう。",
-          "text": "Oh,\ngood morning, {G}"
+          "text": "Oh,\ngood morning, {G}."
         },
         {
           "offset": "0x28",
@@ -1838,7 +1838,7 @@
         {
           "offset": "0x9d4",
           "original": "演劇部で時代劇なんて\n面白いよね。\n私、好きだなぁ。",
-          "text": "A samurai drama\nfor a play is fun.\nI love it."
+          "text": "A period drama\nas a play? That's fun.\nI love it."
         },
         {
           "offset": "0xa08",
@@ -1853,7 +1853,7 @@
         {
           "offset": "0xa64",
           "original": "時代劇って面白いね。\n私、好きだなぁ。",
-          "text": "Samurai dramas are fun.\nI love them."
+          "text": "Period dramas are fun.\nI love them."
         },
         {
           "offset": "0xa8c",
@@ -2748,7 +2748,7 @@
         {
           "offset": "0x26e0",
           "original": "あっ、{G}待って。\n俺も帰るよ。",
-          "text": "Wait, {G} hold on.\nI'm going too."
+          "text": "Hey, wait, {G}!\nI'm going too."
         },
         {
           "offset": "0x2708",
@@ -2788,7 +2788,7 @@
         {
           "offset": "0x2844",
           "original": "あっ、{G}待って。\n俺も帰るよ。",
-          "text": "Wait, {G} hold on.\nI'm going too."
+          "text": "Hey, wait, {G}!\nI'm going too."
         },
         {
           "offset": "0x286c",

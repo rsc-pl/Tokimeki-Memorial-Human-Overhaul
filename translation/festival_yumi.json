@@ -19,7 +19,7 @@
         {
           "offset": "0x38",
           "original": "お兄ちゃんとの約束の時間\n過ぎちゃった。\nでも、少しぐらい…。",
-          "text": "I'm late to meet\nmy brother.\nBut just a little more..."
+          "text": "I'm late to meet\nmy older brother.\nBut just a little more..."
         },
         {
           "offset": "0x78",
@@ -39,7 +39,7 @@
         {
           "offset": "0xf4",
           "original": "お兄ちゃんとの約束の時間\n過ぎちゃった。\n早く戻らなくちゃ。",
-          "text": "I'm late to meet\nmy brother.\nI have to hurry back."
+          "text": "I'm late to meet\nmy older brother.\nI have to hurry back."
         },
         {
           "offset": "0x130",
@@ -59,7 +59,7 @@
         {
           "offset": "0x180",
           "original": "お兄ちゃんとの約束の時間\n過ぎちゃった。\n早く戻らないと。",
-          "text": "I'm late to meet\nmy brother.\nI'd better hurry back."
+          "text": "I'm late to meet\nmy older brother.\nI'd better hurry back."
         },
         {
           "offset": "0x1bc",
@@ -79,7 +79,7 @@
         {
           "offset": "0x210",
           "original": "あのね、優美１人で\n来たかったから、\nお兄ちゃんを置いて…。",
-          "text": "Well, Yumi wanted\nto come alone, so\nshe left her brother..."
+          "text": "Yumi wanted to\ncome alone, so she\nleft her older brother..."
         },
         {
           "offset": "0x24c",
@@ -99,7 +99,7 @@
         {
           "offset": "0x2f0",
           "original": "へへっ、実はね、\nお兄ちゃんを置き去りにして\n来ちゃったの。",
-          "text": "Hehe, actually,\nI ditched my brother\nto come here."
+          "text": "Hehe, actually,\nI ditched my older brother\nto come here."
         },
         {
           "offset": "0x32c",
@@ -134,7 +134,7 @@
         {
           "offset": "0x43c",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部なの…。",
-          "text": "My brother?\nMy brother's\nat the Art Club now..."
+          "text": "My older brother?\nMy older brother's\nat the Art Club now..."
         },
         {
           "offset": "0x470",
@@ -189,7 +189,7 @@
         {
           "offset": "0x620",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部に行ってるよ。",
-          "text": "My brother?\nMy brother's\ngone to the Art Club."
+          "text": "My older brother?\nMy older brother's\ngone to the Art Club."
         },
         {
           "offset": "0x65c",
@@ -269,7 +269,7 @@
         {
           "offset": "0x8ac",
           "original": "お兄ちゃんは\n美術部に行くって。",
-          "text": "My brother said he's\ngoing to the Art Club."
+          "text": "My older brother said he's\ngoing to the Art Club."
         },
         {
           "offset": "0x8cc",
@@ -374,7 +374,7 @@
         {
           "offset": "0xc00",
           "original": "お兄ちゃん？\nいつも、一緒にいるわけ\nじゃないもん。",
-          "text": "My brother?\nWe're not always\ntogether, you know."
+          "text": "My older brother?\nWe're not always\ntogether, you know."
         },
         {
           "offset": "0xc34",
@@ -409,7 +409,7 @@
         {
           "offset": "0xd48",
           "original": "お兄ちゃん？\nいつも、お兄ちゃんと\n一緒じゃないですよーだ。",
-          "text": "My brother?\nI'm not always with\nhim, so there!"
+          "text": "My older brother?\nI'm not always with\nhim, so there!"
         },
         {
           "offset": "0xd84",
@@ -444,7 +444,7 @@
         {
           "offset": "0xe84",
           "original": "お兄ちゃんは、\n外で待ってまーす。",
-          "text": "My brother's\nwaiting outside!"
+          "text": "My older brother's\nwaiting outside!"
         },
         {
           "offset": "0xea8",
@@ -509,7 +509,7 @@
         {
           "offset": "0x10b8",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部なの…。",
-          "text": "My brother?\nMy brother's\nat the Art Club now..."
+          "text": "My older brother?\nMy older brother's\nat the Art Club now..."
         },
         {
           "offset": "0x10ec",
@@ -554,7 +554,7 @@
         {
           "offset": "0x1238",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部に行ってるよ。",
-          "text": "My brother?\nMy brother's\ngone to the Art Club."
+          "text": "My older brother?\nMy older brother's\ngone to the Art Club."
         },
         {
           "offset": "0x1274",
@@ -609,7 +609,7 @@
         {
           "offset": "0x144c",
           "original": "お兄ちゃんはね、\n美術部に行くって。",
-          "text": "My brother said he's\ngoing to the Art Club."
+          "text": "My older brother said he's\ngoing to the Art Club."
         },
         {
           "offset": "0x1470",
@@ -669,7 +669,7 @@
         {
           "offset": "0x162c",
           "original": "お兄ちゃん？\nいつも、一緒にいるわけ\nじゃないもん。",
-          "text": "My brother?\nWe're not always\ntogether, you know."
+          "text": "My older brother?\nWe're not always\ntogether, you know."
         },
         {
           "offset": "0x1660",
@@ -684,7 +684,7 @@
         {
           "offset": "0x16b4",
           "original": "{G}なら、\n可愛いから、\nすぐにできるよ。",
-          "text": "{G}\nyou're cute, so\nyou'll find one soon."
+          "text": "{G},\nyou're cute, so\nyou'll find one soon."
         },
         {
           "offset": "0x16dc",
@@ -709,7 +709,7 @@
         {
           "offset": "0x176c",
           "original": "あのね、優美１人で\n来たかったから、\nお兄ちゃんを置いて…。",
-          "text": "Well, Yumi wanted\nto come alone, so\nshe left her brother..."
+          "text": "Yumi wanted to\ncome alone, so she\nleft her older brother..."
         },
         {
           "offset": "0x17a8",
@@ -739,7 +739,7 @@
         {
           "offset": "0x18a4",
           "original": "お兄ちゃん？\nいつも、お兄ちゃんと\n一緒じゃないですよーだ。",
-          "text": "My brother?\nI'm not always with\nhim, so there!"
+          "text": "My older brother?\nI'm not always with\nhim, so there!"
         },
         {
           "offset": "0x18e0",
@@ -754,7 +754,7 @@
         {
           "offset": "0x1930",
           "original": "{G}。\n今の劇、あんまり、\n好きじゃないね。",
-          "text": "{G}\nyou didn't really\nlike the play, huh."
+          "text": "{G}.\nYou didn't really\nlike the play, huh."
         },
         {
           "offset": "0x1958",
@@ -794,7 +794,7 @@
         {
           "offset": "0x1a64",
           "original": "{G}。\n大人はそんな事は\n気にしないもんだよ。",
-          "text": "{G}\ngrown-ups don't\nworry about that."
+          "text": "{G}.\nGrown-ups don't\nworry about that."
         },
         {
           "offset": "0x1a90",
@@ -819,7 +819,7 @@
         {
           "offset": "0x1b50",
           "original": "へへっ、実はね、\nお兄ちゃんを置き去りにして\n来ちゃったの。",
-          "text": "Hehe, actually,\nI ditched my brother\nto come here."
+          "text": "Hehe, actually,\nI ditched my older brother\nto come here."
         },
         {
           "offset": "0x1b8c",
@@ -844,7 +844,7 @@
         {
           "offset": "0x1c34",
           "original": "お兄ちゃんは、\n外で待ってまーす。",
-          "text": "My brother's\nwaiting outside!"
+          "text": "My older brother's\nwaiting outside!"
         },
         {
           "offset": "0x1c58",
@@ -909,7 +909,7 @@
         {
           "offset": "0x1ea0",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部なの…。",
-          "text": "My brother?\nMy brother's\nat the Art Club now..."
+          "text": "My older brother?\nMy older brother's\nat the Art Club now..."
         },
         {
           "offset": "0x1ed4",
@@ -939,7 +939,7 @@
         {
           "offset": "0x1fcc",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部に行ってるよ。",
-          "text": "My brother?\nMy brother's\ngone to the Art Club."
+          "text": "My older brother?\nMy older brother's\ngone to the Art Club."
         },
         {
           "offset": "0x2008",
@@ -974,7 +974,7 @@
         {
           "offset": "0x2104",
           "original": "お兄ちゃんは\n美術部に行くって。",
-          "text": "My brother said he's\ngoing to the Art Club."
+          "text": "My older brother said he's\ngoing to the Art Club."
         },
         {
           "offset": "0x2124",
@@ -999,7 +999,7 @@
         {
           "offset": "0x2200",
           "original": "お兄ちゃん？\nいつも、一緒にいるわけ\nじゃないもん。",
-          "text": "My brother?\nWe're not always\ntogether, you know."
+          "text": "My older brother?\nWe're not always\ntogether, you know."
         },
         {
           "offset": "0x2234",
@@ -1019,7 +1019,7 @@
         {
           "offset": "0x22c0",
           "original": "お兄ちゃん？\nいつも、お兄ちゃんと\n一緒じゃないですよーだ。",
-          "text": "My brother?\nI'm not always with\nhim, so there!"
+          "text": "My older brother?\nI'm not always with\nhim, so there!"
         },
         {
           "offset": "0x22fc",
@@ -1039,7 +1039,7 @@
         {
           "offset": "0x2388",
           "original": "お兄ちゃんは、\n他の所に行ってまーす。",
-          "text": "My brother went\nsomewhere else!"
+          "text": "My older brother went\nsomewhere else!"
         },
         {
           "offset": "0x23b0",
@@ -1059,12 +1059,12 @@
         {
           "offset": "0x2468",
           "original": "あれ、お兄ちゃん\nまだ来てない…。",
-          "text": "Huh, my brother's\nnot here yet..."
+          "text": "Huh, my older brother's\nnot here yet..."
         },
         {
           "offset": "0x248c",
           "original": "あっ、{G}。\n好雄探してるの？",
-          "text": "Oh, {G}\nLooking for Yoshio?"
+          "text": "Oh, {G}.\nLooking for Yoshio?"
         },
         {
           "offset": "0x24a8",
@@ -1079,12 +1079,12 @@
         {
           "offset": "0x250c",
           "original": "まったく、お兄ちゃんは\n時間にルーズなんだから。",
-          "text": "Jeez, my brother\nis always late."
+          "text": "Jeez, my older brother\nis always late."
         },
         {
           "offset": "0x2550",
           "original": "すっごく、奇麗でした。\nお兄ちゃんも見に来れば\n良かったのに。",
-          "text": "It was super pretty.\nMy brother should\nhave come to see."
+          "text": "It was super pretty.\nMy older brother should\nhave come to see."
         },
         {
           "offset": "0x2590",
@@ -1179,7 +1179,7 @@
         {
           "offset": "0x2848",
           "original": "優美ね、これ、この前\nお兄ちゃんと\nテレビで見たよ。",
-          "text": "Yumi saw this\non TV with\nher brother."
+          "text": "Yumi saw this\non TV with\nher older brother."
         },
         {
           "offset": "0x287c",
@@ -1219,7 +1219,7 @@
         {
           "offset": "0x2968",
           "original": "お兄ちゃん？\nお兄ちゃんはね、\n今、美術部なの…。",
-          "text": "My brother?\nMy brother's\nat the Art Club now..."
+          "text": "My older brother?\nMy older brother's\nat the Art Club now..."
         },
         {
           "offset": "0x299c",
@@ -1254,7 +1254,7 @@
         {
           "offset": "0x2a74",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部に行ってるよ。",
-          "text": "My brother?\nMy brother's\ngone to the Art Club."
+          "text": "My older brother?\nMy older brother's\ngone to the Art Club."
         },
         {
           "offset": "0x2ab0",
@@ -1289,7 +1289,7 @@
         {
           "offset": "0x2b84",
           "original": "お兄ちゃんは\n美術部に行くって。",
-          "text": "My brother said he's\ngoing to the Art Club."
+          "text": "My older brother said he's\ngoing to the Art Club."
         },
         {
           "offset": "0x2ba4",
@@ -1359,7 +1359,7 @@
         {
           "offset": "0x2d5c",
           "original": "いや、{G}が\n上手なだけだよ。",
-          "text": "No, {G}\nyou're just good."
+          "text": "No, {G},\nyou're just good."
         },
         {
           "offset": "0x2d78",
@@ -1434,7 +1434,7 @@
         {
           "offset": "0x2f70",
           "original": "{G}。\nどうして？",
-          "text": "{G}\nWhy not?"
+          "text": "{G}.\nWhy not?"
         },
         {
           "offset": "0x2f80",
@@ -1479,7 +1479,7 @@
         {
           "offset": "0x30e8",
           "original": "{G}。\nどうして？",
-          "text": "{G}\nWhy not?"
+          "text": "{G}.\nWhy not?"
         },
         {
           "offset": "0x30f8",
@@ -1519,7 +1519,7 @@
         {
           "offset": "0x323c",
           "original": "{G}。\nどうして？",
-          "text": "{G}\nWhy not?"
+          "text": "{G}.\nWhy not?"
         },
         {
           "offset": "0x324c",
@@ -1674,7 +1674,7 @@
         {
           "offset": "0x3664",
           "original": "お兄ちゃん\n来てませんか？",
-          "text": "Is my brother\nhere?"
+          "text": "Is my older brother\nhere?"
         },
         {
           "offset": "0x3680",
@@ -1744,7 +1744,7 @@
         {
           "offset": "0x389c",
           "original": "ごめんなさい。\nお兄ちゃん、ずーっと、\n居座ってたみたいで…。",
-          "text": "I'm sorry.\nLooks like my brother\nsat here forever..."
+          "text": "I'm sorry.\nLooks like my older brother\nsat here forever..."
         },
         {
           "offset": "0x38dc",
@@ -1764,7 +1764,7 @@
         {
           "offset": "0x3940",
           "original": "良かった。\nお兄ちゃんと\n一緒じゃなくて…。",
-          "text": "Phew.\nYou're not like\nmy brother..."
+          "text": "Phew.\nYou're not like\nmy older brother..."
         },
         {
           "offset": "0x396c",
@@ -1779,12 +1779,12 @@
         {
           "offset": "0x39dc",
           "original": "あっ、もう行かないと、\nお兄ちゃんがうるさいから。\nそれじゃあ、さよなら。",
-          "text": "Oh, I have to go,\nor my brother will nag.\nBye-bye!"
+          "text": "Gotta go, or my\nolder brother will nag.\nBye-bye!"
         },
         {
           "offset": "0x3a2c",
           "original": "騒がしい兄妹。",
-          "text": "What a noisy pair."
+          "text": "Those two siblings are loud."
         },
         {
           "offset": "0x3a40",
@@ -1799,7 +1799,7 @@
         {
           "offset": "0x3a74",
           "original": "お兄ちゃん\n来てるでしょう？",
-          "text": "My brother's\nhere, right?"
+          "text": "My older brother's\nhere, right?"
         },
         {
           "offset": "0x3a90",
@@ -1869,7 +1869,7 @@
         {
           "offset": "0x3c98",
           "original": "ごめんなさい。\n変なお兄ちゃんで。",
-          "text": "I'm sorry.\nMy brother's so weird."
+          "text": "I'm sorry.\nMy older brother's so weird."
         },
         {
           "offset": "0x3cbc",
@@ -1879,12 +1879,12 @@
         {
           "offset": "0x3cd4",
           "original": "それじゃ、\nお兄ちゃんが待ってるから。\nバイバーイ。",
-          "text": "Well,\nmy brother's waiting.\nBye-byeee!"
+          "text": "Well,\nmy older brother's waiting.\nBye-byeee!"
         },
         {
           "offset": "0x3d14",
           "original": "騒がしい兄妹。",
-          "text": "What a noisy pair."
+          "text": "Those two siblings are loud."
         },
         {
           "offset": "0x3d28",
@@ -1899,7 +1899,7 @@
         {
           "offset": "0x3d5c",
           "original": "お兄ちゃん\n来てるでしょう？",
-          "text": "My brother's\nhere, right?"
+          "text": "My older brother's\nhere, right?"
         },
         {
           "offset": "0x3d78",
@@ -1964,7 +1964,7 @@
         {
           "offset": "0x3f60",
           "original": "騒がしい兄妹。",
-          "text": "What a noisy pair."
+          "text": "Those two siblings are loud."
         },
         {
           "offset": "0x3f74",
@@ -2039,7 +2039,7 @@
         {
           "offset": "0x41c8",
           "original": "お兄ちゃん？\nいつも、一緒にいるわけ\nじゃないもん。",
-          "text": "My brother?\nWe're not always\ntogether, you know."
+          "text": "My older brother?\nWe're not always\ntogether, you know."
         },
         {
           "offset": "0x41fc",
@@ -2059,7 +2059,7 @@
         {
           "offset": "0x4274",
           "original": "家のお兄ちゃんと違って、\n何でもできるんですね。",
-          "text": "Unlike my brother,\nyou can do anything."
+          "text": "Unlike my older brother,\nyou can do anything."
         },
         {
           "offset": "0x42a4",
@@ -2084,7 +2084,7 @@
         {
           "offset": "0x4338",
           "original": "お兄ちゃん？\nいつも、お兄ちゃんと\n一緒じゃないですよーだ。",
-          "text": "My brother?\nI'm not always with\nhim, so there!"
+          "text": "My older brother?\nI'm not always with\nhim, so there!"
         },
         {
           "offset": "0x4374",
@@ -2139,7 +2139,7 @@
         {
           "offset": "0x4500",
           "original": "お兄ちゃんは、\n他の所に行ってまーす。",
-          "text": "My brother went\nsomewhere else!"
+          "text": "My older brother went\nsomewhere else!"
         },
         {
           "offset": "0x4528",
@@ -2154,7 +2154,7 @@
         {
           "offset": "0x4580",
           "original": "おいおい、友達なのに…。\nところで、{G}は、\n絵は好きなの？",
-          "text": "Hey, we're friends...\nSo, {G}\ndo you like art?"
+          "text": "Hey, we're friends...\nSo, {G},\ndo you like art?"
         },
         {
           "offset": "0x45b8",
@@ -2184,7 +2184,7 @@
         {
           "offset": "0x46c0",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部なの…。",
-          "text": "My brother?\nMy brother's\nat the Art Club now..."
+          "text": "My older brother?\nMy older brother's\nat the Art Club now..."
         },
         {
           "offset": "0x46f4",
@@ -2219,7 +2219,7 @@
         {
           "offset": "0x47f4",
           "original": "お兄ちゃん？\nお兄ちゃんはねぇ、\n今、美術部に行ってるよ。",
-          "text": "My brother?\nMy brother's\ngone to the Art Club."
+          "text": "My older brother?\nMy older brother's\ngone to the Art Club."
         },
         {
           "offset": "0x4830",
@@ -2254,7 +2254,7 @@
         {
           "offset": "0x4924",
           "original": "お兄ちゃんはね、\n美術部に行くって。",
-          "text": "My brother said he's\ngoing to the Art Club."
+          "text": "My older brother said he's\ngoing to the Art Club."
         },
         {
           "offset": "0x4948",
@@ -2289,7 +2289,7 @@
         {
           "offset": "0x4a4c",
           "original": "お兄ちゃん？\nいつも、一緒にいるわけ\nじゃないもん。",
-          "text": "My brother?\nWe're not always\ntogether, you know."
+          "text": "My older brother?\nWe're not always\ntogether, you know."
         },
         {
           "offset": "0x4a80",
@@ -2304,7 +2304,7 @@
         {
           "offset": "0x4ae4",
           "original": "そうかぁ。\n{G}には、\nつまらなかったかなぁ。",
-          "text": "I see.\n{G}\nwas it boring?"
+          "text": "I see.\n{G},\nwas it boring?"
         },
         {
           "offset": "0x4b10",
@@ -2334,7 +2334,7 @@
         {
           "offset": "0x4be0",
           "original": "お兄ちゃん？\nいつも、お兄ちゃんと\n一緒じゃないですよーだ。",
-          "text": "My brother?\nI'm not always with\nhim, so there!"
+          "text": "My older brother?\nI'm not always with\nhim, so there!"
         },
         {
           "offset": "0x4c1c",
@@ -2349,7 +2349,7 @@
         {
           "offset": "0x4c6c",
           "original": "{G}。\nクラシック、あんまり、\n好きじゃないね。",
-          "text": "{G}\nyou don't really\nlike classical, huh."
+          "text": "{G}.\nYou don't really\nlike classical, huh."
         },
         {
           "offset": "0x4c98",
@@ -2389,7 +2389,7 @@
         {
           "offset": "0x4da4",
           "original": "{G}。\n大人はそんな事は\n気にしないもんだよ。",
-          "text": "{G}\ngrown-ups don't\nworry about that."
+          "text": "{G}.\nGrown-ups don't\nworry about that."
         },
         {
           "offset": "0x4dd0",
@@ -2419,7 +2419,7 @@
         {
           "offset": "0x4eb4",
           "original": "お兄ちゃんは、\n外で待ってまーす。",
-          "text": "My brother's\nwaiting outside!"
+          "text": "My older brother's\nwaiting outside!"
         },
         {
           "offset": "0x4ed8",
@@ -2561,7 +2561,7 @@
         {
           "offset": "0x6c",
           "original": "お兄ちゃんなんて、\nどうでもいいから、\n一緒に行きましょうよー。",
-          "text": "Forget about\nmy brother.\nLet's go together!"
+          "text": "Forget about\nmy older brother.\nLet's go together!"
         },
         {
           "offset": "0xac",
@@ -2571,7 +2571,7 @@
         {
           "offset": "0xf8",
           "original": "やったー。\nそれじゃ、\nどこに行こうか？{q}いいわよーだ。\nふんだ、\nお兄ちゃんと行くもん。",
-          "text": "Yaaay!\nSo then,\nwhere should we go?{q}Fine, so there!\nHmph,\nI'll go with my brother."
+          "text": "Yaaay!\nSo then,\nwhere should we go?{q}Fine, so there!\nHmph, I'll go\nwith my older brother."
         },
         {
           "offset": "0x154",
@@ -2676,7 +2676,7 @@
         {
           "offset": "0x394",
           "original": "優美、お兄ちゃんと\n見学するから…。",
-          "text": "Yumi's looking around\nwith her brother..."
+          "text": "Yumi's looking around\nwith her older brother..."
         },
         {
           "offset": "0x3c4",
@@ -2718,7 +2718,7 @@
         {
           "offset": "0xbc",
           "original": "{G}、\n作文嫌いなの？",
-          "text": "{G}\nyou don't like essays?"
+          "text": "{G},\nyou don't like essays?"
         },
         {
           "offset": "0xd0",
@@ -2763,7 +2763,7 @@
         {
           "offset": "0x210",
           "original": "あっ、{G}。\nどこ行くの。",
-          "text": "Wait, {G}\nWhere are you going?"
+          "text": "Wait, {G}.\nWhere are you going?"
         },
         {
           "offset": "0x228",
@@ -2808,7 +2808,7 @@
         {
           "offset": "0x378",
           "original": "あっ、{G}。\nそんな事言って本当は、\n作文嫌いなんでしょう。",
-          "text": "Oh, {G}\nYou just hate essays,\ndon't you?"
+          "text": "Oh, {G}.\nYou just hate essays,\ndon't you?"
         },
         {
           "offset": "0x3b0",
@@ -2963,7 +2963,7 @@
         {
           "offset": "0x840",
           "original": "{G}。\nどうだった？",
-          "text": "{G}\nhow was it?"
+          "text": "{G}.\nHow was it?"
         },
         {
           "offset": "0x854",
@@ -3018,7 +3018,7 @@
         {
           "offset": "0x9e8",
           "original": "あー、{G}、\n真似しなくてもいいからね。",
-          "text": "Ah, {G}\nno need to copy it."
+          "text": "Ah, {G},\nno need to copy it."
         },
         {
           "offset": "0xa10",
@@ -3073,7 +3073,7 @@
         {
           "offset": "0xba8",
           "original": "{G}なら、\n可愛いから、\nすぐにできるよ。",
-          "text": "{G}\nyou're cute, so\nyou'll find one soon."
+          "text": "{G},\nyou're cute, so\nyou'll find one soon."
         },
         {
           "offset": "0xbd0",
@@ -3103,7 +3103,7 @@
         {
           "offset": "0xc8c",
           "original": "{G}。\n今の劇、あんまり、\n好きじゃないね。",
-          "text": "{G}\nyou didn't really\nlike the play, huh."
+          "text": "{G}.\nYou didn't really\nlike the play, huh."
         },
         {
           "offset": "0xcb4",
@@ -3143,7 +3143,7 @@
         {
           "offset": "0xdc0",
           "original": "{G}。\n大人はそんな事は\n気にしないもんだよ。",
-          "text": "{G}\ngrown-ups don't\nworry about that."
+          "text": "{G}.\nGrown-ups don't\nworry about that."
         },
         {
           "offset": "0xdec",
@@ -3258,7 +3258,7 @@
         {
           "offset": "0x124c",
           "original": "すっごく、奇麗でしたね。\nお兄ちゃんも見に来れば\n良かったのに。",
-          "text": "That was super pretty.\nMy brother should\nhave come to see."
+          "text": "That was super pretty.\nMy older brother\nshould've seen it."
         },
         {
           "offset": "0x128c",
@@ -3268,7 +3268,7 @@
         {
           "offset": "0x12b0",
           "original": "お兄ちゃんは、\n美術部に行くって…。",
-          "text": "My brother's off\nto Art Club..."
+          "text": "My older brother's off\nto Art Club..."
         },
         {
           "offset": "0x12d4",
@@ -3393,7 +3393,7 @@
         {
           "offset": "0x16dc",
           "original": "優美ね、これ、この前\nお兄ちゃんと\nテレビで見たよ。",
-          "text": "Yumi saw this\non TV with\nher brother."
+          "text": "Yumi saw this\non TV with\nher older brother."
         },
         {
           "offset": "0x1710",
@@ -3578,7 +3578,7 @@
         {
           "offset": "0x1c74",
           "original": "{G}だって\n上手だったよ。",
-          "text": "{G}\nyou were good too."
+          "text": "{G},\nyou were good too."
         },
         {
           "offset": "0x1c8c",
@@ -3603,7 +3603,7 @@
         {
           "offset": "0x1d40",
           "original": "いや、{G}が\n上手なだけだよ。",
-          "text": "No, {G}\nyou're just good."
+          "text": "No, {G},\nyou're just good."
         },
         {
           "offset": "0x1d5c",
@@ -3658,7 +3658,7 @@
         {
           "offset": "0x1ef0",
           "original": "いつもお兄ちゃんと\n練習してるもん。",
-          "text": "I always practice\nwith my brother!"
+          "text": "I always practice\nwith my older brother!"
         },
         {
           "offset": "0x1f14",
@@ -3668,7 +3668,7 @@
         {
           "offset": "0x1f40",
           "original": "お兄ちゃんは、\n美術部に行くって\n言ってたよ。",
-          "text": "My brother\nsaid he's going\nto the Art Club."
+          "text": "My older brother\nsaid he's going\nto the Art Club."
         },
         {
           "offset": "0x1f70",
@@ -3723,7 +3723,7 @@
         {
           "offset": "0x2138",
           "original": "いつもお兄ちゃんと\n練習してるからです。",
-          "text": "Because I always\npractice with my brother."
+          "text": "I always practice\nwith my older brother."
         },
         {
           "offset": "0x2160",
@@ -3733,7 +3733,7 @@
         {
           "offset": "0x218c",
           "original": "お兄ちゃんは、\n美術部に行くって…。",
-          "text": "My brother's off\nto Art Club..."
+          "text": "My older brother's off\nto Art Club..."
         },
         {
           "offset": "0x21b0",
@@ -3758,7 +3758,7 @@
         {
           "offset": "0x2290",
           "original": "{G}。\nどうして？",
-          "text": "{G}\nWhy not?"
+          "text": "{G}.\nWhy not?"
         },
         {
           "offset": "0x22a0",
@@ -3803,7 +3803,7 @@
         {
           "offset": "0x241c",
           "original": "{G}。\nどうして？",
-          "text": "{G}\nWhy not?"
+          "text": "{G}.\nWhy not?"
         },
         {
           "offset": "0x242c",
@@ -3853,7 +3853,7 @@
         {
           "offset": "0x25d0",
           "original": "{G}。\nどうして？",
-          "text": "{G}\nWhy not?"
+          "text": "{G}.\nWhy not?"
         },
         {
           "offset": "0x25e0",
@@ -3898,7 +3898,7 @@
         {
           "offset": "0x272c",
           "original": "{G}。\nどうしたの？",
-          "text": "{G}\nWhat's wrong?"
+          "text": "{G}.\nWhat's wrong?"
         },
         {
           "offset": "0x2740",
@@ -3913,7 +3913,7 @@
         {
           "offset": "0x278c",
           "original": "あっ、お兄ちゃん…。",
-          "text": "Oh, my brother..."
+          "text": "Oh, my older brother..."
         },
         {
           "offset": "0x27a4",
@@ -3923,7 +3923,7 @@
         {
           "offset": "0x27e4",
           "original": "お兄ちゃんに見つかる前に、\n帰らなきゃ…。",
-          "text": "I have to leave before\nmy brother sees me..."
+          "text": "I have to leave before\nmy older brother sees me..."
         },
         {
           "offset": "0x2810",
@@ -3958,12 +3958,12 @@
         {
           "offset": "0x2944",
           "original": "{G}。\nどうしたの？",
-          "text": "{G}\nWhat's wrong?"
+          "text": "{G}.\nWhat's wrong?"
         },
         {
           "offset": "0x2958",
           "original": "あっ、\nお兄ちゃんまでいる。",
-          "text": "Oh,\neven my brother's here."
+          "text": "Oh,\nmy older brother's here too."
         },
         {
           "offset": "0x2974",
@@ -4018,12 +4018,12 @@
         {
           "offset": "0x2b58",
           "original": "{G}。\nどうしたの？",
-          "text": "{G}\nWhat's wrong?"
+          "text": "{G}.\nWhat's wrong?"
         },
         {
           "offset": "0x2b6c",
           "original": "お兄ちゃんまでいる…。\nみっともなーい。",
-          "text": "Even my brother's here...\nHow embarrassing!"
+          "text": "Even my older brother...\nHow embarrassing!"
         },
         {
           "offset": "0x2b94",
@@ -4033,7 +4033,7 @@
         {
           "offset": "0x2bd8",
           "original": "あんなお兄ちゃんと\n一緒だと恥ずかしいから、\n優美、帰ります。",
-          "text": "Being with that brother\nis so embarrassing,\nYumi's going home."
+          "text": "Being with my older brother\nis so embarrassing,\nYumi's going home."
         },
         {
           "offset": "0x2c2c",
@@ -4273,7 +4273,7 @@
         {
           "offset": "0x33e8",
           "original": "面白かったですね。\nお兄ちゃんも\n来ればよかったのに。",
-          "text": "That was fun.\nMy brother should\nhave come."
+          "text": "That was fun.\nMy older brother should\nhave come."
         },
         {
           "offset": "0x3420",
@@ -4283,7 +4283,7 @@
         {
           "offset": "0x3444",
           "original": "お兄ちゃんは、\n美術部に行くって…。",
-          "text": "My brother's off\nto Art Club..."
+          "text": "My older brother's off\nto Art Club..."
         },
         {
           "offset": "0x3468",
@@ -4303,7 +4303,7 @@
         {
           "offset": "0x34f4",
           "original": "{G}。\nどうだった？",
-          "text": "{G}\nhow was it?"
+          "text": "{G}.\nHow was it?"
         },
         {
           "offset": "0x3508",
@@ -4313,7 +4313,7 @@
         {
           "offset": "0x3540",
           "original": "そうかぁ。\n{G}には、\nつまらなかったかなぁ。",
-          "text": "I see.\n{G}\nwas it boring?"
+          "text": "I see.\n{G},\nwas it boring?"
         },
         {
           "offset": "0x356c",
@@ -4338,7 +4338,7 @@
         {
           "offset": "0x3634",
           "original": "{G}。\nクラシック、あんまり、\n好きじゃないね。",
-          "text": "{G}\nyou don't really\nlike classical, huh."
+          "text": "{G}.\nYou don't really\nlike classical, huh."
         },
         {
           "offset": "0x3660",
@@ -4378,7 +4378,7 @@
         {
           "offset": "0x376c",
           "original": "{G}。\n大人はそんな事は\n気にしないもんだよ。",
-          "text": "{G}\ngrown-ups don't\nworry about that."
+          "text": "{G}.\nGrown-ups don't\nworry about that."
         },
         {
           "offset": "0x3798",
@@ -4398,7 +4398,7 @@
         {
           "offset": "0x3828",
           "original": "{G}。\nどうだった？",
-          "text": "{G}\nhow was it?"
+          "text": "{G}.\nHow was it?"
         },
         {
           "offset": "0x383c",

@@ -84,7 +84,7 @@
         {
           "offset": "0x1d4",
           "original": "目展大賞、\nおめでとうございます。\n素敵な絵ですね。",
-          "text": "Congratulations\non the Meten Prize.\nWhat a lovely painting."
+          "text": "Congrats on the\nMeten Grand Prize!\nWhat a lovely painting."
         },
         {
           "offset": "0x208",
@@ -184,7 +184,7 @@
         {
           "offset": "0x468",
           "original": "ははは、目展の大賞だよ。",
-          "text": "Haha, it's the Meten Prize."
+          "text": "Ha! The Meten Grand Prize!"
         },
         {
           "offset": "0x484",
@@ -289,7 +289,7 @@
         {
           "offset": "0x6e4",
           "original": "あの…目展大賞、\nおめでとうございます。\nすごく、きれいな絵ですね。",
-          "text": "Um... congratulations\non the Meten Prize.\nSuch a pretty painting."
+          "text": "Um... congrats on\nthe Meten Grand Prize!\nSuch a pretty painting."
         },
         {
           "offset": "0x728",
@@ -314,7 +314,7 @@
         {
           "offset": "0x788",
           "original": "目展大賞、\nおめでとうございます。",
-          "text": "Congratulations on\nthe Meten Prize!"
+          "text": "Congrats on the\nMeten Grand Prize!"
         },
         {
           "offset": "0x7ac",
@@ -374,7 +374,7 @@
         {
           "offset": "0x8f0",
           "original": "いやなに、君が目展大賞を\nとったというので、\n本当かどうか確かめに…。",
-          "text": "Oh, I heard you won\nthe Meten Prize, so\nI came to check..."
+          "text": "I heard you won\nthe Meten Grand Prize,\nso I came to check."
         },
         {
           "offset": "0x938",

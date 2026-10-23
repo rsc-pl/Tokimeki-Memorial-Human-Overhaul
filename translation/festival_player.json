@@ -831,7 +831,7 @@
         {
           "offset": "0x93c",
           "original": "今日は{G}の誕生日だ。\nプレゼントを用意して\nおいたんだ。",
-          "text": "It's {G}'s birthday.\nI made sure\nto bring a present."
+          "text": "It's {G}'s birthday\nI made sure\nto bring a present."
         },
         {
           "offset": "0x978",

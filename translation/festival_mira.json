@@ -414,7 +414,7 @@
         {
           "offset": "0xd20",
           "original": "あっ、{G}待ってよ。",
-          "text": "Wait, {G} hold on."
+          "text": "Hey, wait, {G}!"
         },
         {
           "offset": "0xd38",
@@ -429,12 +429,12 @@
         {
           "offset": "0xd74",
           "original": "私、時代劇なんて\n好きじゃないけど、\n良かったんじゃない。",
-          "text": "I don't like\nsamurai dramas, but\nit was fine."
+          "text": "I don't like\nperiod dramas, but\nit was fine."
         },
         {
           "offset": "0xdb0",
           "original": "ありがとう。\nでも、時代劇だって、\n面白いと思うけどなぁ。",
-          "text": "Thanks.\nBut samurai dramas\ncan be fun too."
+          "text": "Thanks.\nBut period dramas\ncan be fun too."
         },
         {
           "offset": "0xdfc",
@@ -449,12 +449,12 @@
         {
           "offset": "0xe38",
           "original": "私、時代劇なんて\n好きじゃないのよ。\n他のがよかったわ。",
-          "text": "I don't like\nsamurai dramas.\nI'd prefer another show."
+          "text": "I don't like\nperiod dramas.\nI'd prefer another show."
         },
         {
           "offset": "0xe70",
           "original": "時代劇だって、\n面白いと思うけどなぁ。",
-          "text": "Samurai dramas\ncan be fun too."
+          "text": "Period dramas\ncan be fun too."
         },
         {
           "offset": "0xea8",
@@ -464,7 +464,7 @@
         {
           "offset": "0xed0",
           "original": "時代劇は\nあまり好きじゃないから、\nほとんど見てなかったわ。",
-          "text": "I don't care for\nsamurai dramas, so\nI barely watched."
+          "text": "I don't care for\nperiod dramas, so\nI barely watched."
         },
         {
           "offset": "0xf0c",
@@ -1059,7 +1059,7 @@
         {
           "offset": "0x24a4",
           "original": "あっ、{G}。\nコンピュータゲーム\n作ったんだけど、\nどう、やってみない？",
-          "text": "Oh, {G}\nI made a\ncomputer game.\nWant to try it?"
+          "text": "Oh, {G}.\nI made a\ncomputer game.\nWant to try it?"
         },
         {
           "offset": "0x24e8",
@@ -1234,7 +1234,7 @@
         {
           "offset": "0x2a3c",
           "original": "あっ、{G}。\n良かったら、似顔絵どう？",
-          "text": "Oh, {G}\nWant a portrait?"
+          "text": "Oh, {G}.\nWant a portrait?"
         },
         {
           "offset": "0x2a60",
@@ -1369,7 +1369,7 @@
         {
           "offset": "0x2f40",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x2f60",
@@ -1429,7 +1429,7 @@
         {
           "offset": "0x316c",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x318c",
@@ -1474,7 +1474,7 @@
         {
           "offset": "0x332c",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x334c",
@@ -1659,7 +1659,7 @@
         {
           "offset": "0x3890",
           "original": "あっ、{G}待ってよ。",
-          "text": "Wait, {G} hold on."
+          "text": "Hey, wait, {G}!"
         },
         {
           "offset": "0x38a8",
@@ -1864,7 +1864,7 @@
         {
           "offset": "0x3f54",
           "original": "あっ、{G}待ってよ。",
-          "text": "Wait, {G} hold on."
+          "text": "Hey, wait, {G}!"
         },
         {
           "offset": "0x7158",
@@ -2213,7 +2213,7 @@
         {
           "offset": "0x474",
           "original": "あっ、{G}。\n待ってくれよ。",
-          "text": "Wait, {G}\nHold on."
+          "text": "Oh, {G}.\nWait a second."
         },
         {
           "offset": "0x494",
@@ -2253,7 +2253,7 @@
         {
           "offset": "0x5f0",
           "original": "あっ、{G}。\n待ってくれよ。",
-          "text": "Wait, {G}\nHold on."
+          "text": "Oh, {G}.\nWait a second."
         },
         {
           "offset": "0x610",
@@ -2323,7 +2323,7 @@
         {
           "offset": "0x83c",
           "original": "そんな、{G}\nちょっと待ってよ。",
-          "text": "Oh, wait, {G}\nHold on."
+          "text": "No, {G}!\nWait a second."
         },
         {
           "offset": "0x85c",
@@ -2388,7 +2388,7 @@
         {
           "offset": "0xac4",
           "original": "あっ、{G}。\n待ってくれよ。",
-          "text": "Wait, {G}\nHold on."
+          "text": "Oh, {G}.\nWait a second."
         },
         {
           "offset": "0xae4",
@@ -2513,7 +2513,7 @@
         {
           "offset": "0xf38",
           "original": "あっ、{G}。\n待ってくれよ。",
-          "text": "Wait, {G}\nHold on."
+          "text": "Oh, {G}.\nWait a second."
         },
         {
           "offset": "0xf58",
@@ -2568,7 +2568,7 @@
         {
           "offset": "0x10b0",
           "original": "ありがとう、\n{G}優しいね。",
-          "text": "Thanks,\n{G} you're kind."
+          "text": "Thanks,\n{G}, you're kind."
         },
         {
           "offset": "0x10cc",
@@ -2588,7 +2588,7 @@
         {
           "offset": "0x113c",
           "original": "えっ、何って？\n時代劇だけど…。",
-          "text": "Huh, what?\nA samurai drama..."
+          "text": "Huh, what?\nA period drama..."
         },
         {
           "offset": "0x115c",
@@ -3903,7 +3903,7 @@
         {
           "offset": "0x4310",
           "original": "{G}、ちょっと待ってよ。\n俺も帰るよ。",
-          "text": "{G} wait up.\nI'm going too."
+          "text": "{G}, wait up.\nI'm going too."
         },
         {
           "offset": "0x4340",
@@ -3963,7 +3963,7 @@
         {
           "offset": "0x456c",
           "original": "{G}、ちょっと待ってよ。\nこんなものやってること\n知らなかったんだよ。",
-          "text": "{G} wait.\nI didn't know they\nwere doing this."
+          "text": "{G}, wait.\nI didn't know they\nwere doing this."
         },
         {
           "offset": "0x45bc",
@@ -3983,7 +3983,7 @@
         {
           "offset": "0x461c",
           "original": "えっ？\n{G}何怒ってるの？",
-          "text": "Huh?\n{G} why so angry?"
+          "text": "Huh?\n{G}, why so angry?"
         },
         {
           "offset": "0x4634",
@@ -4003,7 +4003,7 @@
         {
           "offset": "0x46e4",
           "original": "{G}、ちょっと待ってよ。\nこんなものやってること\n知らなかったんだよ。",
-          "text": "{G} wait.\nI didn't know they\nwere doing this."
+          "text": "{G}, wait.\nI didn't know they\nwere doing this."
         },
         {
           "offset": "0x4734",
@@ -4038,7 +4038,7 @@
         {
           "offset": "0x4810",
           "original": "美術部の絵だからね。\nそれに、{G}の美しさに\n見合う絵はそうは無いよ。",
-          "text": "It's only the Art Club.\nFew could match {G}\nin beauty, anyway."
+          "text": "It's only the Art Club.\nYour beauty, {G},\nis hard to match."
         },
         {
           "offset": "0x4854",
@@ -4253,7 +4253,7 @@
         {
           "offset": "0x4efc",
           "original": "ありがとう、\n{G}優しいね。",
-          "text": "Thanks,\n{G} you're kind."
+          "text": "Thanks,\n{G}, you're kind."
         },
         {
           "offset": "0x4f18",
@@ -4438,7 +4438,7 @@
         {
           "offset": "0x5588",
           "original": "あっ、{G}。\nちょっと待ってよ。",
-          "text": "Oh, {G}\nwait a second."
+          "text": "Oh, {G}.\nWait a second."
         },
         {
           "offset": "0x55c0",

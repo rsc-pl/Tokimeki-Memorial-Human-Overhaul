@@ -59,7 +59,7 @@
         {
           "offset": "0x1f0",
           "original": "さすが{G}。良さがわかるんだ。{q}ただの落書きだよ。{q}何を表してるのか、おしえてよ。",
-          "text": "You've got taste, {G}{q}It's only a scribble, huh.{q}Tell me what it shows."
+          "text": "Good taste, {G}!{q}It's only a scribble, huh.{q}Tell me what it shows."
         },
         {
           "offset": "0x248",
@@ -194,7 +194,7 @@
         {
           "offset": "0xd54",
           "original": "{G}なら取れるって。{q}{G}には絶対取れないね。{q}何とかなるんじゃない。",
-          "text": "You can get it, {G}{q}You can't get it, {G}{q}You'll manage somehow."
+          "text": "You can get it, {G}{q}You can't, {G}{q}You'll manage somehow."
         },
         {
           "offset": "0xd9c",
@@ -599,7 +599,7 @@
         {
           "offset": "0x27cc",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}."
+          "text": "Yours if I win, {G}"
         },
         {
           "offset": "0x27f0",
@@ -694,7 +694,7 @@
         {
           "offset": "0x2ee0",
           "original": "クレーンゲームなんてどう？{q}シューティングは？{q}どうかな？{G}て大人だから。",
-          "text": "How about the crane games?{q}What about shooting games?{q}Too mature, {G}"
+          "text": "How about the crane games?{q}What about shooting games?{q}So grown-up, {G}"
         },
         {
           "offset": "0x2f30",
@@ -729,7 +729,7 @@
         {
           "offset": "0x3044",
           "original": "これで弟達に、\nいいお土産ができたわ。",
-          "text": "Now I've got a nice gift\nfor my little brothers."
+          "text": "Now, a nice gift\nfor my younger brothers."
         },
         {
           "offset": "0x3070",
@@ -999,7 +999,7 @@
         {
           "offset": "0x446c",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x44f8",
@@ -1019,7 +1019,7 @@
         {
           "offset": "0x4574",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x4600",
@@ -1039,7 +1039,7 @@
         {
           "offset": "0x467c",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x4918",
@@ -1154,7 +1154,7 @@
         {
           "offset": "0x4ef8",
           "original": "家はそんなに裕福ではなく、\n弟が六人いる。\nということを聞き出した。",
-          "text": "Found out her family\nisn't rich, and she\nhas six little brothers."
+          "text": "Found out her family\nisn't rich, and she\nhas six younger brothers."
         },
         {
           "offset": "0x5100",
@@ -1234,7 +1234,7 @@
         {
           "offset": "0x56b8",
           "original": "待たせたわね。どう？",
-          "text": "Waited long? Well?"
+          "text": "Kept you waiting. Well?"
         },
         {
           "offset": "0x56d0",
@@ -1264,7 +1264,7 @@
         {
           "offset": "0x5818",
           "original": "でも、鏡さんの方が奇麗だね。{q}流行りものなんか着てるから。{q}へぇ、流行ってるんだ。",
-          "text": "You're prettier, Kagami-san.{q}That's what you get, trendy.{q}Huh, so it's in style?"
+          "text": "You're prettier, Kagami-san.{q}You wear what's in style.{q}Huh, so it's in style?"
         },
         {
           "offset": "0x5878",
@@ -1949,7 +1949,7 @@
         {
           "offset": "0x8ce8",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to go see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x8d20",
@@ -2104,7 +2104,7 @@
         {
           "offset": "0x943c",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "Your face, {G}...{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "Only saw you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x948c",
@@ -2214,7 +2214,7 @@
         {
           "offset": "0x9a48",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "Your face, {G}...{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "Only saw you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0x9a98",
@@ -2299,7 +2299,7 @@
         {
           "offset": "0x9f2c",
           "original": "さすが{G}、お目が高い。{q}子供だましなのに？{q}なかなかいいよね。",
-          "text": "You've got taste, {G}{q}Even though it's for kids?{q}It's pretty good, huh."
+          "text": "Good taste, {G}!{q}Though it's for kids?{q}It's pretty good, huh."
         },
         {
           "offset": "0x9f70",
@@ -2334,7 +2334,7 @@
         {
           "offset": "0xa160",
           "original": "{G}の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "Your face, {G}...{q}Man, I was sleepy.{q}Yeah, it was a great view."
+          "text": "Only saw you, {G}.{q}Man, I was sleepy.{q}Yeah, it was a great view."
         },
         {
           "offset": "0xa1b0",

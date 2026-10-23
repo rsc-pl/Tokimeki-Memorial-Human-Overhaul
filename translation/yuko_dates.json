@@ -204,7 +204,7 @@
         {
           "offset": "0xb74",
           "original": "私って、すごすぎるわ。{q}実力よ実力。{q}はまっちゃえーっ。",
-          "text": "I'm just too awesome.{q}That's skill, skill!{q}Get hooked on it!"
+          "text": "I'm just too awesome.{q}That's skill, skill!{q}You'll get hooked!"
         },
         {
           "offset": "0xd28",
@@ -264,7 +264,7 @@
         {
           "offset": "0x10fc",
           "original": "俺も、そう思うよ。{q}ガキなんじゃない？{q}{G}と一緒ならどこでも…。",
-          "text": "I think so, too.{q}What are you, a kid?{q}Anywhere with {G}..."
+          "text": "I think so, too.{q}What are you, a kid?{q}Anywhere with {G}."
         },
         {
           "offset": "0x1144",
@@ -884,7 +884,7 @@
         {
           "offset": "0x37f0",
           "original": "いいわよ。\n私ファンなの。{q}えぇーっ。\n演歌ぁ？{q}そういうのも\n困っちゃうのよね。",
-          "text": "Sure!\nI'm a fan.{q}Whaaat?\nEnka?{q}That kind of answer\nis kinda no help."
+          "text": "Sure!\nI'm a fan.{q}Whaaat?\nEnka?{q}That doesn't\nhelp me choose."
         },
         {
           "offset": "0x39bc",
@@ -899,7 +899,7 @@
         {
           "offset": "0x3a04",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3a8c",
@@ -914,7 +914,7 @@
         {
           "offset": "0x3ad4",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3b5c",
@@ -929,7 +929,7 @@
         {
           "offset": "0x3ba4",
           "original": "さりげなく趣味とかを聞き出す。{q}それとなく好きな場所を探る。",
-          "text": "Ask about her hobbies.{q}Find out places she likes."
+          "text": "Ask about her hobbies.{q}Find out her favorite spots."
         },
         {
           "offset": "0x3ddc",
@@ -1454,7 +1454,7 @@
         {
           "offset": "0x63a4",
           "original": "俺が教えてあげるよ。{q}一緒に練習しようよ。{q}氷の上なんて、ずるいよね。",
-          "text": "Then I'll teach you.{q}Let's practice together.{q}Ice is so unfair, right?"
+          "text": "Then I'll teach you.{q}Let's practice together.{q}Ice makes it tricky, huh?"
         },
         {
           "offset": "0x63f4",
@@ -1679,7 +1679,7 @@
         {
           "offset": "0x727c",
           "original": "それなりの苦労はあるよ。{q}{G}何か考えてるの？{q}そんな事はないよ。",
-          "text": "Fish have it hard too.{q}And you, {G}?{q}That's not true."
+          "text": "Fish have it hard too.{q}You ever think, {G}?{q}That's not true."
         },
         {
           "offset": "0x72c4",
@@ -1699,7 +1699,7 @@
         {
           "offset": "0x7348",
           "original": "今見てきたイルカのショー、\n超良かったと思わない？",
-          "text": "That dolphin show just now,\nwasn't it super great?"
+          "text": "Wasn't that dolphin show\njust great?"
         },
         {
           "offset": "0x737c",
@@ -1769,7 +1769,7 @@
         {
           "offset": "0x7928",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to go see it.{q}Ignore the show."
+          "text": "Invite {G} along.{q}Ignore the show."
         },
         {
           "offset": "0x7960",
@@ -1984,7 +1984,7 @@
         {
           "offset": "0x823c",
           "original": "こればっかり乗ろうぜ。{q}楽しいのは{G}だけだよ。{q}怖くないの？",
-          "text": "Ride this all day!{q}Only you enjoy this, {G}.{q}Aren't you scared?"
+          "text": "Ride this all day!{q}Fun? Just you, {G}.{q}Aren't you scared?"
         },
         {
           "offset": "0x8280",
@@ -2109,7 +2109,7 @@
         {
           "offset": "0x874c",
           "original": "こればっかり乗ろうぜ。{q}楽しいのは{G}だけだよ。{q}怖くないの？",
-          "text": "Ride this all day!{q}Only you enjoy this, {G}.{q}Aren't you scared?"
+          "text": "Ride this all day!{q}Fun? Just you, {G}.{q}Aren't you scared?"
         },
         {
           "offset": "0x8790",

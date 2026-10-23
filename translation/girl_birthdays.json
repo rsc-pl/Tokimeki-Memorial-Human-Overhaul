@@ -4097,7 +4097,7 @@
         {
           "offset": "0xe8",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0xf8",
@@ -4142,7 +4142,7 @@
         {
           "offset": "0x218",
           "original": "{P}\n何、どうしたの？",
-          "text": "{P}\nWhat's up?"
+          "text": "{P},\nwhat's up?"
         },
         {
           "offset": "0x230",
@@ -4242,7 +4242,7 @@
         {
           "offset": "0x9b8",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x9c8",
@@ -4617,7 +4617,7 @@
         {
           "offset": "0x1f8c",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x1f9c",
@@ -4977,7 +4977,7 @@
         {
           "offset": "0x3528",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x3538",
@@ -5127,7 +5127,7 @@
         {
           "offset": "0x3e24",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x3e34",
@@ -5277,7 +5277,7 @@
         {
           "offset": "0x47b4",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x47c4",
@@ -5392,7 +5392,7 @@
         {
           "offset": "0x4b64",
           "original": "あっ、丁度いいところに\n{G}があらわれたぞ。",
-          "text": "Oh, perfect timing.\nThere's {G}"
+          "text": "Oh, perfect timing.\nThere's {G}."
         },
         {
           "offset": "0x503c",
@@ -5427,7 +5427,7 @@
         {
           "offset": "0x5124",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x5134",
@@ -5592,7 +5592,7 @@
         {
           "offset": "0x5b24",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x5b34",
@@ -5827,7 +5827,7 @@
         {
           "offset": "0x62a4",
           "original": "あっ、{G}。\n今日、誕生日だよね。\nはい、プレゼント。",
-          "text": "Oh, hi, {G}\nIt's your birthday, right?\nHere, a present."
+          "text": "Oh, hi, {G}.\nIt's your birthday, right?\nHere's a present."
         },
         {
           "offset": "0x62d8",
@@ -5962,7 +5962,7 @@
         {
           "offset": "0x712c",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x713c",
@@ -6052,7 +6052,7 @@
         {
           "offset": "0x73ac",
           "original": "こんなの貰っちゃって、\n悪いなぁ。\nありがたく、受け取るよ。",
-          "text": "Feels bad taking\nsomething like this.\nThanks, I'll take it."
+          "text": "I feel bad taking\nsomething like this.\nThanks, I'll take it."
         },
         {
           "offset": "0x73ec",
@@ -6332,7 +6332,7 @@
         {
           "offset": "0x873c",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x874c",
@@ -6477,7 +6477,7 @@
         {
           "offset": "0x905c",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x906c",
@@ -6777,7 +6777,7 @@
         {
           "offset": "0xa434",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}"
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0xa444",
