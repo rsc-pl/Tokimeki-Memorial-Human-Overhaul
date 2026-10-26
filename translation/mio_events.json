@@ -14,12 +14,12 @@
         {
           "offset": "0x40",
           "original": "大変そうだね、\n{G}。",
-          "text": "That looks tough,\n{G}"
+          "text": "That looks tough,\n{G}."
         },
         {
           "offset": "0x54",
           "original": "{P}、\nそ、そんなことは\nないですよ。",
-          "text": "{P}\nN-no, it's\nreally not."
+          "text": "{P},\nN-no, it's\nreally not."
         },
         {
           "offset": "0x78",
@@ -74,7 +74,7 @@
         {
           "offset": "0x220",
           "original": "{G}みたいに\n可愛い娘なら、\nいつでも手伝っちゃうよ。",
-          "text": "Oh, for {G}\na girl this cute,\nI'd help out any time."
+          "text": "You're so cute, {G},\nI'd help you out\nanytime."
         },
         {
           "offset": "0x26c",
@@ -109,17 +109,17 @@
         {
           "offset": "0x5dc",
           "original": "ス、スリルあったね。\n{G}。",
-          "text": "Wh-what a thrill,\neh, {G}"
+          "text": "Wh-what a thrill,\neh, {G}."
         },
         {
           "offset": "0x604",
           "original": "{G}。\nどうしたの？",
-          "text": "Oh, {G}\nwhat's wrong?"
+          "text": "Oh, {G}.\nWhat's wrong?"
         },
         {
           "offset": "0x624",
           "original": "{G}、大丈夫？\n（やばいな。\n完全に気を失ってるよ。）",
-          "text": "You okay, {G}\n(Uh-oh.\nShe's totally passed out.)"
+          "text": "You okay, {G}?\n(Uh-oh.\nShe's totally passed out.)"
         },
         {
           "offset": "0x65c",
@@ -199,7 +199,7 @@
         {
           "offset": "0xb00",
           "original": "{G}と一緒に\n海に来たかったんだよ。\nだから、{G}が\n日陰にいるなら、\n俺も、喜んでそうするよ。",
-          "text": "It's with {G}\nI wanted to visit the sea.\nSo if {G}\nstays in the shade,\nI'm happy to stay too."
+          "text": "I came for you, {G}.\nNot just for the sea.\nIf you stay, {G},\nI'll happily stay\nin the shade too."
         },
         {
           "offset": "0xb70",

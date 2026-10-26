@@ -1219,7 +1219,7 @@
         {
           "offset": "0x3cf0",
           "original": "あの…、{G}。",
-          "text": "Um... {G}"
+          "text": "Um... {G}."
         },
         {
           "offset": "0x3cfc",
@@ -2589,7 +2589,7 @@
         {
           "offset": "0x96c0",
           "original": "今日は、自由行動の日だ。\n{G}と、一緒に\n行く約束なんだけど…。",
-          "text": "Today's a free day.\nMeeting {G}\nto go out together, but..."
+          "text": "Today's a free day.\n{G} and I\nplanned to go out, but..."
         },
         {
           "offset": "0x96fc",

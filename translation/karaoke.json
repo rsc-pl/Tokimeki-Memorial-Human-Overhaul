@@ -134,7 +134,7 @@
         {
           "offset": "0x7e0",
           "original": "{P}。\n歌を聞きたいです。",
-          "text": "{P}\nI'd like to hear you sing."
+          "text": "{P}.\nI'd like to hear you sing."
         },
         {
           "offset": "0x7fc",
@@ -159,7 +159,7 @@
         {
           "offset": "0x954",
           "original": "{P}。\n歌をお聞きしたいです。",
-          "text": "{P}\nI'd love to hear you sing."
+          "text": "{P}.\nI'd love to hear you sing."
         },
         {
           "offset": "0x974",
@@ -234,7 +234,7 @@
         {
           "offset": "0xe64",
           "original": "{P}。\n歌、聞かせてくれるかな？",
-          "text": "{P}\nwill you sing for me?"
+          "text": "{P}.\nWill you sing for me?"
         },
         {
           "offset": "0xe88",

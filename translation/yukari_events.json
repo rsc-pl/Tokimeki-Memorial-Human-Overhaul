@@ -84,7 +84,7 @@
         {
           "offset": "0x2d0",
           "original": "それじゃ、{G}。\nあんまりボーッと\nしないようにね。",
-          "text": "Okay, {G}\ntry not to\nspace out so much."
+          "text": "Okay, {G}.\nTry not to\nspace out so much."
         },
         {
           "offset": "0x300",
@@ -99,12 +99,12 @@
         {
           "offset": "0x5f0",
           "original": "{P}\nこんにちは。",
-          "text": "{P}\ngood afternoon."
+          "text": "{P}.\nGood afternoon."
         },
         {
           "offset": "0x604",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, {G}\nWhat's up?"
+          "text": "Oh, {G}.\nWhat's up?"
         },
         {
           "offset": "0x61c",
@@ -144,7 +144,7 @@
         {
           "offset": "0x770",
           "original": "{G}。\n本当に、これ\n貰っちゃっていいの？",
-          "text": "Um, {G}\nis it really okay\nfor me to keep this?"
+          "text": "Um, {G}.\nIs it really okay\nfor me to keep this?"
         },
         {
           "offset": "0x798",
@@ -214,7 +214,7 @@
         {
           "offset": "0xc34",
           "original": "こ、{G}。\nそろそろ先に行かない？",
-          "text": "Y-{G}\nshall we move on?"
+          "text": "Y-{G}.\nShall we move on?"
         },
         {
           "offset": "0xc54",
@@ -274,7 +274,7 @@
         {
           "offset": "0x1044",
           "original": "こ、{G}。\n大丈夫？",
-          "text": "Y-{G}\nare you okay?"
+          "text": "Y-{G}.\nAre you okay?"
         },
         {
           "offset": "0x1058",
@@ -319,7 +319,7 @@
         {
           "offset": "0x1498",
           "original": "あれ、{G}。\nその荷物は？",
-          "text": "Um, {G}\nwhat's that bag?"
+          "text": "Um, {G}.\nWhat's that bag?"
         },
         {
           "offset": "0x14b0",
@@ -434,7 +434,7 @@
         {
           "offset": "0x1b04",
           "original": "こ、{G}。\n初めてなら、\n下で練習したほうが…。",
-          "text": "Y-{G}\nif it's your first time,\npractice down here..."
+          "text": "Y-{G}.\nIf it's your first time,\npractice down here..."
         },
         {
           "offset": "0x1b30",
@@ -459,7 +459,7 @@
         {
           "offset": "0x1ba4",
           "original": "だ、大丈夫？\n{G}。\nほら、手に掴まって。",
-          "text": "A-are you okay?\nOh, {G}\nHere, grab my hand."
+          "text": "A-are you okay?\nOh, {G}.\nHere, grab my hand."
         },
         {
           "offset": "0x1bd0",

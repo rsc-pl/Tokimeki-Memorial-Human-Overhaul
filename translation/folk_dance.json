@@ -14,7 +14,7 @@
         {
           "offset": "0x78",
           "original": "よし、次は、{G}とだ。",
-          "text": "Okay, next it's {G}"
+          "text": "Okay, next it's {G}."
         },
         {
           "offset": "0x90",
@@ -179,7 +179,7 @@
         {
           "offset": "0x4c8",
           "original": "{P}。\nあれぇ、どうして\nこっちにいるんですか？",
-          "text": "{P}\nHuh, why are\nyou over here?"
+          "text": "{P}.\nHuh, why are\nyou over here?"
         },
         {
           "offset": "0x4f4",

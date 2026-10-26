@@ -468,7 +468,7 @@
         {
           "offset": "0xcec",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xd08",
@@ -503,7 +503,7 @@
         {
           "offset": "0xe0c",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0xe20",
@@ -538,7 +538,7 @@
         {
           "offset": "0xf20",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0xf34",
@@ -1008,7 +1008,7 @@
         {
           "offset": "0x2b94",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x2ba8",
@@ -1053,7 +1053,7 @@
         {
           "offset": "0x2ce0",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x2cf4",
@@ -1098,7 +1098,7 @@
         {
           "offset": "0x2e24",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x2e38",
@@ -1603,7 +1603,7 @@
         {
           "offset": "0x4f3c",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x4f50",
@@ -1638,7 +1638,7 @@
         {
           "offset": "0x502c",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x5040",
@@ -1673,7 +1673,7 @@
         {
           "offset": "0x5128",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x513c",
@@ -1993,7 +1993,7 @@
         {
           "offset": "0x6804",
           "original": "あっ、{G}。\n明けましておめでとう。\n新年早々、どうしたの？",
-          "text": "Oh, {G}\nHappy New Year.\nWhat brings you here?"
+          "text": "Oh, {G}.\nHappy New Year.\nWhat brings you here?"
         },
         {
           "offset": "0x683c",
@@ -2098,7 +2098,7 @@
         {
           "offset": "0x6b44",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x6b58",
@@ -2138,7 +2138,7 @@
         {
           "offset": "0x6c70",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x6c84",
@@ -2178,7 +2178,7 @@
         {
           "offset": "0x6d90",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x6da4",
@@ -2673,7 +2673,7 @@
         {
           "offset": "0x8cb0",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x8ccc",
@@ -2708,7 +2708,7 @@
         {
           "offset": "0x8dcc",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x8de0",
@@ -2743,7 +2743,7 @@
         {
           "offset": "0x8eec",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x8f00",
@@ -2973,7 +2973,7 @@
         {
           "offset": "0x95b8",
           "original": "{G}。\nどうしたの？",
-          "text": "{G}\nWhat's wrong?"
+          "text": "{G},\nwhat's wrong?"
         },
         {
           "offset": "0x95cc",
@@ -3233,7 +3233,7 @@
         {
           "offset": "0xaca8",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0xacbc",
@@ -3273,7 +3273,7 @@
         {
           "offset": "0xadd0",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xadec",
@@ -3313,7 +3313,7 @@
         {
           "offset": "0xaef8",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xaf14",
@@ -3828,7 +3828,7 @@
         {
           "offset": "0xce60",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0xce74",
@@ -3873,7 +3873,7 @@
         {
           "offset": "0xcfb0",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xcfcc",
@@ -3918,7 +3918,7 @@
         {
           "offset": "0xd110",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xd12c",
@@ -4128,7 +4128,7 @@
         {
           "offset": "0xd820",
           "original": "{G}、\nどうだった？",
-          "text": "{G}\nhow was yours?"
+          "text": "{G},\nhow was yours?"
         },
         {
           "offset": "0xd834",
@@ -4383,7 +4383,7 @@
         {
           "offset": "0xeef0",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0xef04",
@@ -4423,7 +4423,7 @@
         {
           "offset": "0xf004",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xf020",
@@ -4463,7 +4463,7 @@
         {
           "offset": "0xf108",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0xf124",
@@ -4973,7 +4973,7 @@
         {
           "offset": "0x11000",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x11014",
@@ -5013,7 +5013,7 @@
         {
           "offset": "0x11114",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x11130",
@@ -5053,7 +5053,7 @@
         {
           "offset": "0x11218",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x11234",
@@ -5563,7 +5563,7 @@
         {
           "offset": "0x13114",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x13128",
@@ -5603,7 +5603,7 @@
         {
           "offset": "0x13240",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x1325c",
@@ -5643,7 +5643,7 @@
         {
           "offset": "0x1335c",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x13378",
@@ -6198,7 +6198,7 @@
         {
           "offset": "0x15464",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x15478",
@@ -6238,7 +6238,7 @@
         {
           "offset": "0x15574",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x15590",
@@ -6278,7 +6278,7 @@
         {
           "offset": "0x15670",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x1568c",
@@ -6823,7 +6823,7 @@
         {
           "offset": "0x17788",
           "original": "{G}。\n今、暇かな？",
-          "text": "{G}\nAre you free now?"
+          "text": "{G},\nare you free now?"
         },
         {
           "offset": "0x1779c",
@@ -6863,7 +6863,7 @@
         {
           "offset": "0x178a0",
           "original": "ところで、{G}。\n今、暇かな？",
-          "text": "So, {G}\nare you free now?"
+          "text": "So, {G},\nare you free now?"
         },
         {
           "offset": "0x178bc",
@@ -7203,7 +7203,7 @@
         {
           "offset": "0x18264",
           "original": "うん、だって先輩と、\n初詣できたんだもん。\n絶対そうなると思うよ。",
-          "text": "Yeah, Yumi went to the\nshrine with you, Senpai.\nI'm sure it'll come true."
+          "text": "Yeah, Yumi went to the\nshrine with you, Senpai.\nIt'll be a good year!"
         },
         {
           "offset": "0x182a8",
@@ -7278,7 +7278,7 @@
         {
           "offset": "0x184c0",
           "original": "お兄ちゃんは、\nちゃんと卒業\nできそうなんですか？",
-          "text": "Is my brother\ngonna graduate\nokay?"
+          "text": "Will Onii-chan\nreally be able\nto graduate?"
         },
         {
           "offset": "0x184f4",

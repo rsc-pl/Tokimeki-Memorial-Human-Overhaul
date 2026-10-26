@@ -679,7 +679,7 @@
         {
           "offset": "0x2404",
           "original": "{G}、\n何の用だったんだ？",
-          "text": "{G}\nwhat was that about?"
+          "text": "What did {G}\nwant, anyway?"
         },
         {
           "offset": "0x24c0",
@@ -834,7 +834,7 @@
         {
           "offset": "0x2d2c",
           "original": "お兄ちゃんに\n見習わせたいな。",
-          "text": "My brother should\nlearn from you."
+          "text": "My older brother should\nlearn from you."
         },
         {
           "offset": "0x2d4c",

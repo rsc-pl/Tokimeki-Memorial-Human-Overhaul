@@ -44,17 +44,17 @@
         {
           "offset": "0xa8",
           "original": "あっ、{G}。\n見に来てくれたんだ。\nど、どうだった？",
-          "text": "Oh, hi, {G}\nYou came to watch.\nH-how was it?"
+          "text": "Oh, hi, {G}.\nYou came to watch.\nH-how was it?"
         },
         {
           "offset": "0xdc",
           "original": "あっ、{G}。\n見に来てくれたんだ。",
-          "text": "Oh, {G}\nYou came to watch."
+          "text": "Oh, {G}.\nYou came to watch."
         },
         {
           "offset": "0x100",
           "original": "あっ、{G}。\n来てくれたんだ。",
-          "text": "Oh, {G}\nYou came."
+          "text": "Oh, {G}.\nYou came."
         },
         {
           "offset": "0x120",
@@ -479,7 +479,7 @@
         {
           "offset": "0x1098",
           "original": "あっ、{G}。\n来てたの？",
-          "text": "Oh, hi, {G}\nYou're here?"
+          "text": "Oh, hi, {G}.\nYou're here?"
         },
         {
           "offset": "0x10b0",
@@ -499,7 +499,7 @@
         {
           "offset": "0x110c",
           "original": "あっ、{G}。\n来てたの？",
-          "text": "Oh, hi, {G}\nYou're here?"
+          "text": "Oh, hi, {G}.\nYou're here?"
         },
         {
           "offset": "0x1124",
@@ -1049,7 +1049,7 @@
         {
           "offset": "0x24a4",
           "original": "あっ、そうか\n{G}、\n文芸部だったんだ…。",
-          "text": "Oh, right,\n{G}\nyou're in Literature..."
+          "text": "Oh, right,\n{G},\nyou're in Literature..."
         },
         {
           "offset": "0x24cc",
@@ -1074,7 +1074,7 @@
         {
           "offset": "0x25a0",
           "original": "あっ、そうか\n{G}、\n文芸部だったんだ…。",
-          "text": "Oh, right,\n{G}\nyou're in Literature..."
+          "text": "Oh, right,\n{G},\nyou're in Literature..."
         },
         {
           "offset": "0x25c8",
@@ -1089,7 +1089,7 @@
         {
           "offset": "0x2638",
           "original": "あっ、そうか\n{G}、\n文芸部だったんだ…。",
-          "text": "Oh, right,\n{G}\nyou're in Literature..."
+          "text": "Oh, right,\n{G},\nyou're in Literature..."
         },
         {
           "offset": "0x2660",
@@ -2506,7 +2506,7 @@
         {
           "offset": "0x100",
           "original": "あっ、{G}。\n来てくれたんだ。",
-          "text": "Oh, {G}\nYou came."
+          "text": "Oh, {G}.\nYou came."
         },
         {
           "offset": "0x120",
@@ -2571,7 +2571,7 @@
         {
           "offset": "0x328",
           "original": "あっ、{G}。\n占いやって行かない？",
-          "text": "Oh, {G}\nWant your fortune?"
+          "text": "Oh, {G}.\nWant your fortune?"
         },
         {
           "offset": "0x348",
@@ -3326,7 +3326,7 @@
         {
           "offset": "0x1bc8",
           "original": "あっ、{G}。\nゲームやって行かない？",
-          "text": "Oh, {G}\nWant to play a game?"
+          "text": "Oh, {G}.\nWant to play a game?"
         },
         {
           "offset": "0x1bec",
@@ -3346,7 +3346,7 @@
         {
           "offset": "0x1c84",
           "original": "あっ、{G}。\n良かったら、似顔絵どう？",
-          "text": "Oh, {G}\nWant a portrait?"
+          "text": "Oh, {G}.\nWant a portrait?"
         },
         {
           "offset": "0x1ca8",
@@ -3386,7 +3386,7 @@
         {
           "offset": "0x1de0",
           "original": "あっ、{G}。\n良かったら、似顔絵どう？",
-          "text": "Oh, {G}\nWant a portrait?"
+          "text": "Oh, {G}.\nWant a portrait?"
         },
         {
           "offset": "0x1e04",
@@ -3421,7 +3421,7 @@
         {
           "offset": "0x1f14",
           "original": "あっ、{G}。\n良かったら、似顔絵どう？",
-          "text": "Oh, {G}\nWant a portrait?"
+          "text": "Oh, {G}.\nWant a portrait?"
         },
         {
           "offset": "0x1f38",
@@ -3456,7 +3456,7 @@
         {
           "offset": "0x2070",
           "original": "あっ、{G}。\n似顔絵はどう？",
-          "text": "Oh, {G}\nWant a portrait?"
+          "text": "Oh, {G}.\nWant a portrait?"
         },
         {
           "offset": "0x208c",
@@ -3741,7 +3741,7 @@
         {
           "offset": "0x2a14",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}.\nW-welcome."
         },
         {
           "offset": "0x2a38",
@@ -3786,7 +3786,7 @@
         {
           "offset": "0x2b9c",
           "original": "あー、びっくりした、\n{G}が来るとは\n思わなかったよ。",
-          "text": "Whoa, you startled me.\nI didn't expect {G}\nto come by."
+          "text": "Whoa, you startled me.\nYou came, {G}!\nI didn't expect that."
         },
         {
           "offset": "0x2bd4",
@@ -4191,7 +4191,7 @@
         {
           "offset": "0x3988",
           "original": "あっ、{G}。\n来てくれたんだ。\nどうだった？",
-          "text": "Oh, {G}\nYou came.\nHow was it?"
+          "text": "Oh, {G}.\nYou came.\nHow was it?"
         },
         {
           "offset": "0x39b4",
@@ -5643,7 +5643,7 @@
         {
           "offset": "0x1fc4",
           "original": "{G}、\n落ち着いてるね。",
-          "text": "{G}\nyou're so calm."
+          "text": "{G},\nyou're so calm."
         },
         {
           "offset": "0x1fdc",
@@ -5683,7 +5683,7 @@
         {
           "offset": "0x2128",
           "original": "{G}、\n落ち着いてるね。",
-          "text": "{G}\nyou're so calm."
+          "text": "{G},\nyou're so calm."
         },
         {
           "offset": "0x2140",
@@ -5723,7 +5723,7 @@
         {
           "offset": "0x2270",
           "original": "{G}、\n落ち着いてるね。",
-          "text": "{G}\nyou're so calm."
+          "text": "{G},\nyou're so calm."
         },
         {
           "offset": "0x2288",
@@ -5753,7 +5753,7 @@
         {
           "offset": "0x2398",
           "original": "{G}、\n落ち着いてるね。",
-          "text": "{G}\nyou're so calm."
+          "text": "{G},\nyou're so calm."
         },
         {
           "offset": "0x23b0",

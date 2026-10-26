@@ -419,12 +419,12 @@
         {
           "offset": "0xd60",
           "original": "堂々としてて、\nかっこ良かったわよ。",
-          "text": "You were so poised.\nIt was cool."
+          "text": "You looked confident.\nThat was really cool."
         },
         {
           "offset": "0xd84",
           "original": "そ、そう？\n何か、弁論に\n自信持っちゃったよ。",
-          "text": "R-really?\nNow I feel good\nabout speeches."
+          "text": "R-really?\nI feel more confident\nabout public speaking."
         },
         {
           "offset": "0xdb4",
@@ -1254,7 +1254,7 @@
         {
           "offset": "0x27a0",
           "original": "あっ、{G}。\nちょっと待ってくれよ。",
-          "text": "Oh, {G}\nwait a sec."
+          "text": "Oh, {G},\nwait a sec."
         },
         {
           "offset": "0x27cc",
@@ -1344,7 +1344,7 @@
         {
           "offset": "0x2a78",
           "original": "あっ、{G}。\nちょっと待ってくれよ。",
-          "text": "Oh, {G}\nwait a sec."
+          "text": "Oh, {G},\nwait a sec."
         },
         {
           "offset": "0x2aa4",
@@ -1719,7 +1719,7 @@
         {
           "offset": "0x35f8",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}!\nW-welcome."
         },
         {
           "offset": "0x3618",
@@ -1754,7 +1754,7 @@
         {
           "offset": "0x371c",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}!\nW-welcome."
         },
         {
           "offset": "0x373c",
@@ -1809,7 +1809,7 @@
         {
           "offset": "0x392c",
           "original": "あっ、{G}。\nい、いらっしゃい。",
-          "text": "Oh, {G}\nW-welcome."
+          "text": "Oh, {G}!\nW-welcome."
         },
         {
           "offset": "0x394c",
@@ -1844,12 +1844,12 @@
         {
           "offset": "0x3a5c",
           "original": "あっ、{G}。\nいらっしゃい。",
-          "text": "Oh, {G}\nWelcome."
+          "text": "Oh, {G}!\nWelcome."
         },
         {
           "offset": "0x3a78",
           "original": "いやらしい目…。",
-          "text": "Dirty eyes..."
+          "text": "You're leering..."
         },
         {
           "offset": "0x3a98",
@@ -2069,7 +2069,7 @@
         {
           "offset": "0x40b4",
           "original": "ゲームだったんだ…。\nこれから、\nまだ何かあるの？",
-          "text": "A game...\nGot anything\nelse now?"
+          "text": "A game...\nAnything else\nplanned?"
         },
         {
           "offset": "0x40e8",
@@ -2094,7 +2094,7 @@
         {
           "offset": "0x4198",
           "original": "ゲームだったんだ…。\nこれから、\n何か予定あるの？",
-          "text": "A game...\nGot any plans\nfor now?"
+          "text": "A game...\nGot any plans\nafter this?"
         },
         {
           "offset": "0x41cc",
@@ -2321,7 +2321,7 @@
         {
           "offset": "0xc0",
           "original": "そういう訳にもいかないよ。\n後は、俺がやるから、\n{G}は、休んでてくれよ。",
-          "text": "I can't leave you to it.\nI'll finish up.\nYou rest, {G}"
+          "text": "I can't leave you to it.\nI'll finish up.\nYou rest, {G}."
         },
         {
           "offset": "0x108",
@@ -2356,7 +2356,7 @@
         {
           "offset": "0x208",
           "original": "後は、俺がやるから、\n{G}は、休んでてくれよ。",
-          "text": "I'll handle this.\nYou rest, {G}"
+          "text": "I'll handle this.\nYou rest, {G}."
         },
         {
           "offset": "0x234",
@@ -2391,7 +2391,7 @@
         {
           "offset": "0x33c",
           "original": "後は、俺がやるから、\n{G}は、休んでてくれよ。",
-          "text": "I'll handle this.\nYou rest, {G}"
+          "text": "I'll handle this.\nYou rest, {G}."
         },
         {
           "offset": "0x368",
@@ -2426,7 +2426,7 @@
         {
           "offset": "0x45c",
           "original": "ご、ごめん。\n後は、俺がやるから、\n{G}は、休んでてくれよ。",
-          "text": "S-sorry.\nI'll finish up.\nTake a break, {G}"
+          "text": "S-sorry.\nI'll finish up.\nTake a break, {G}."
         },
         {
           "offset": "0x494",
@@ -2531,7 +2531,7 @@
         {
           "offset": "0x860",
           "original": "{P}。\n待ってたのよ。",
-          "text": "{P}\nI was waiting."
+          "text": "{P},\nI was waiting."
         },
         {
           "offset": "0x878",
@@ -3776,7 +3776,7 @@
         {
           "offset": "0x3464",
           "original": "{P}。\n占いのプログラム\n作ってきてくれた？",
-          "text": "{P}\nDid you bring the\nfortune program?"
+          "text": "{P},\nDid you bring the\nfortune program?"
         },
         {
           "offset": "0x348c",
@@ -3856,7 +3856,7 @@
         {
           "offset": "0x3670",
           "original": "{P}。\n占いのプログラム\nちゃんと作ってきた？",
-          "text": "{P}\nDid you bring the\nfortune program?"
+          "text": "{P},\nDid you bring the\nfortune program?"
         },
         {
           "offset": "0x369c",
@@ -3946,7 +3946,7 @@
         {
           "offset": "0x38d8",
           "original": "{P}。\n占いのプログラム\nちゃんと作ってきた？",
-          "text": "{P}\nDid you bring the\nfortune program?"
+          "text": "{P},\nDid you bring the\nfortune program?"
         },
         {
           "offset": "0x3904",
@@ -4076,7 +4076,7 @@
         {
           "offset": "0x3c7c",
           "original": "{P}。\n出展するゲーム、\n作ってきてくれた？",
-          "text": "{P}\nDid you bring the\ngame for the show?"
+          "text": "{P},\nDid you bring the\ngame for the show?"
         },
         {
           "offset": "0x3ca4",
@@ -4146,7 +4146,7 @@
         {
           "offset": "0x3eac",
           "original": "{P}。\n出展するゲーム、\n作ってきてくれた？",
-          "text": "{P}\nDid you bring the\ngame for the show?"
+          "text": "{P},\nDid you bring the\ngame for the show?"
         },
         {
           "offset": "0x3ed4",
@@ -4216,7 +4216,7 @@
         {
           "offset": "0x40d4",
           "original": "{P}。\n出展するゲーム、\n作ってきてくれた？",
-          "text": "{P}\nDid you bring the\ngame for the show?"
+          "text": "{P},\nDid you bring the\ngame for the show?"
         },
         {
           "offset": "0x40fc",
@@ -4466,7 +4466,7 @@
         {
           "offset": "0x4958",
           "original": "{G}。\nどうしたの？",
-          "text": "{G}\nWhat's wrong?"
+          "text": "{G},\nWhat's wrong?"
         },
         {
           "offset": "0x496c",
@@ -4816,7 +4816,7 @@
         {
           "offset": "0x53fc",
           "original": "それで男子が\nうきうきしてたのね。\nもう、あきれちゃうわ。",
-          "text": "That's why the boys\nare so excited.\nHonestly."
+          "text": "That's why the boys\nwere so excited.\nHonestly."
         },
         {
           "offset": "0x5438",
@@ -6910,7 +6910,7 @@
         {
           "offset": "0x2534",
           "original": "{G}がいないなぁ。\nショーでも見ていくかな。",
-          "text": "I don't see {G}\nMaybe I'll watch the show."
+          "text": "I don't see {G}.\nMaybe I'll watch the show."
         },
         {
           "offset": "0x2564",
@@ -7305,7 +7305,7 @@
         {
           "offset": "0x323c",
           "original": "{G}がいないなぁ。\n占いでも、\nやってもらおう。",
-          "text": "I don't see {G}\nMaybe I'll get\nmy fortune told."
+          "text": "I don't see {G}.\nMaybe I'll get\nmy fortune told."
         },
         {
           "offset": "0x326c",
@@ -7680,7 +7680,7 @@
         {
           "offset": "0x3e54",
           "original": "{G}がいないなぁ。\nショーでも見ていくかな。",
-          "text": "I don't see {G}\nMaybe I'll watch the show."
+          "text": "I don't see {G}.\nMaybe I'll watch the show."
         },
         {
           "offset": "0x3e84",
@@ -7790,7 +7790,7 @@
         {
           "offset": "0x4230",
           "original": "そう…。\nいつでもいいから、\n続きを描かせてね？",
-          "text": "Oh...\nAnytime you like,\nlet me finish it?"
+          "text": "Oh...\nCome back anytime,\nso I can finish it."
         },
         {
           "offset": "0x4260",
@@ -8015,7 +8015,7 @@
         {
           "offset": "0x49f8",
           "original": "ごめんよ、{G}。\n（くそ、伊集院の奴…。）",
-          "text": "So sorry, {G}\n(Darn that Ijuin...)"
+          "text": "So sorry, {G}.\n(Darn that Ijuin...)"
         },
         {
           "offset": "0x4a2c",
@@ -8110,7 +8110,7 @@
         {
           "offset": "0x4d6c",
           "original": "いや、知らなかったよ。\nそれに、{G}がいるから\n来たんだよ。",
-          "text": "No, I didn't know.\nI came to see {G}\nthat's all."
+          "text": "No, I didn't know.\nI came for you, {G}.\nThat's all."
         },
         {
           "offset": "0x4da4",
@@ -8160,7 +8160,7 @@
         {
           "offset": "0x4f58",
           "original": "いや、もう帰るよ。\n（さすがに、{G}がいると\nゆっくり見てられないや。）",
-          "text": "No, I'll go now.\n(Not with {G}\naround, I can't look.)"
+          "text": "No, I'll go now.\n(With {G} here,\nI can't take my time.)"
         },
         {
           "offset": "0x4f9c",
@@ -8190,7 +8190,7 @@
         {
           "offset": "0x5070",
           "original": "さすがに、{G}がいると\nゆっくり見てられないや。",
-          "text": "Since {G}'s here,\nI can't stay and look."
+          "text": "With {G} here,\nI can't look for long."
         },
         {
           "offset": "0x50a0",
@@ -8200,7 +8200,7 @@
         {
           "offset": "0x50d8",
           "original": "{G}がいなけりゃ、\nゆっくり\n見るんだけどなぁ…。",
-          "text": "Without {G},\nI'd stay\nand look..."
+          "text": "Without {G} here,\nI'd take my time\nlooking..."
         },
         {
           "offset": "0x510c",
@@ -8680,7 +8680,7 @@
         {
           "offset": "0x60a0",
           "original": "す、好きだよ。",
-          "text": "S-sure I am."
+          "text": "S-sure I do."
         },
         {
           "offset": "0x60b0",
@@ -8730,7 +8730,7 @@
         {
           "offset": "0x6240",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, no {G}\nWhere'd she go?"
+          "text": "Huh, no {G}.\nWhere'd she go?"
         }
       ]
     },
@@ -8889,7 +8889,7 @@
         {
           "offset": "0x124",
           "original": "微かな木洩れ陽の中、\n二人、寄り添い歩く道、\nで始まる詩よ。",
-          "text": "It begins,\n\"Two walk side by side\nin the faint sunlight.\""
+          "text": "It begins,\n\"Two walk side by side\non a sun-dappled path.\""
         },
         {
           "offset": "0x160",
@@ -8949,7 +8949,7 @@
         {
           "offset": "0x2e4",
           "original": "微かな木洩れ陽の中、\n二人、寄り添い歩く道、\nで始まる詩よ。",
-          "text": "It begins,\n\"Two walk side by side\nin the faint sunlight.\""
+          "text": "It begins,\n\"Two walk side by side\non a sun-dappled path.\""
         },
         {
           "offset": "0x320",
@@ -10154,7 +10154,7 @@
         {
           "offset": "0x2480",
           "original": "考えるのが怖いから、\nもう帰りましょう。",
-          "text": "I'm scared to think.\nLet's go."
+          "text": "It's scary to think about.\nLet's go."
         },
         {
           "offset": "0x24a8",
@@ -10419,7 +10419,7 @@
         {
           "offset": "0x2d30",
           "original": "‥‥‥‥。\nまぁいいか、\n{G}がそう言うんなら。",
-          "text": "......\nOh, fine,\nsince {G} asks."
+          "text": "......\nOh, well,\nif {G} says so."
         },
         {
           "offset": "0x2d5c",
@@ -10439,7 +10439,7 @@
         {
           "offset": "0x2de0",
           "original": "横目で、ちょっと見ちゃえ。\nなるほど{G}が隠す訳だ。",
-          "text": "I'll sneak a peek...\nSo {G} hid it."
+          "text": "I'll sneak a peek...\nI see why {G} hid it."
         },
         {
           "offset": "0x2e18",
@@ -10479,7 +10479,7 @@
         {
           "offset": "0x2eec",
           "original": "横目で、ちょっと見ちゃえ。\nなるほど{G}が隠す訳だ。",
-          "text": "I'll sneak a peek...\nSo {G} hid it."
+          "text": "I'll sneak a peek...\nI see why {G} hid it."
         },
         {
           "offset": "0x2f24",
@@ -10964,7 +10964,7 @@
         {
           "offset": "0x3ce0",
           "original": "よ、良かったよ。",
-          "text": "Y-yeah, I did."
+          "text": "Y-yeah, it was good."
         },
         {
           "offset": "0x3cf4",

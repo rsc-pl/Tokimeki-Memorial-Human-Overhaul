@@ -19,7 +19,7 @@
         {
           "offset": "0x48",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x58",
@@ -34,7 +34,7 @@
         {
           "offset": "0xac",
           "original": "お兄ちゃんなんて、\nどうでもいいから。\n屋上に行きましょう。",
-          "text": "Forget about\nmy brother.\nLet's go to the roof."
+          "text": "Forget about\nmy older brother.\nLet's go to the roof."
         },
         {
           "offset": "0xe8",
@@ -154,7 +154,7 @@
         {
           "offset": "0x5ac",
           "original": "ゆ、{G}のお弁当なら\nいつでも大歓迎だよ。",
-          "text": "Y-your lunch, {G}\nis always welcome."
+          "text": "Y-your lunch, {G},\nis always welcome."
         },
         {
           "offset": "0x5d4",
@@ -219,7 +219,7 @@
         {
           "offset": "0xd38",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, {G}\nWhat's up?"
+          "text": "Oh, {G}.\nWhat's up?"
         },
         {
           "offset": "0xd50",
@@ -244,7 +244,7 @@
         {
           "offset": "0xdbc",
           "original": "あっ、お兄ちゃんに\n見つからないうちに\n戻らなきゃ。",
-          "text": "Oh, I have to go\nback before my\nbrother sees me."
+          "text": "Oh, I have to go\nback before my\nolder brother sees me."
         },
         {
           "offset": "0xdf0",
@@ -264,7 +264,7 @@
         {
           "offset": "0xe70",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, {G}\nWhat's up?"
+          "text": "Oh, {G}.\nWhat's up?"
         },
         {
           "offset": "0xe88",
@@ -319,7 +319,7 @@
         {
           "offset": "0x12a0",
           "original": "{G}。\n大丈夫？",
-          "text": "Oh, {G}\nAre you okay?"
+          "text": "Oh, {G}.\nAre you okay?"
         },
         {
           "offset": "0x12b0",
@@ -329,7 +329,7 @@
         {
           "offset": "0x12c4",
           "original": "{G}。\nほら、泣かないの。\nみんなが見てるよ。",
-          "text": "Look, {G}\ndon't cry.\nEveryone's looking."
+          "text": "Look, {G},\ndon't cry.\nEveryone's looking."
         },
         {
           "offset": "0x12f0",
@@ -389,7 +389,7 @@
         {
           "offset": "0x1698",
           "original": "ゆ、{G}。\nそんなに急がなくても、\nボートは逃げないよ。",
-          "text": "Y-{G}\nNo need to rush,\nthe boats won't run off."
+          "text": "Y-{G}.\nNo need to rush,\nthe boats won't run off."
         },
         {
           "offset": "0x16d4",
@@ -434,7 +434,7 @@
         {
           "offset": "0x17d4",
           "original": "ほ、ほら、{G}。\n好雄の妹だからさ、\nそう思うとね。",
-          "text": "W-well, {G}\nyou're Yoshio's sister,\nso that's how I see you."
+          "text": "W-well, {G},\nyou're Yoshio's sister,\nso that's how I see you."
         },
         {
           "offset": "0x1804",
@@ -464,7 +464,7 @@
         {
           "offset": "0x1b58",
           "original": "{G}って、\nプロレス好きなんだね。",
-          "text": "Gosh, {G}\nyou love pro wrestling."
+          "text": "Gosh, {G},\nyou love pro wrestling."
         },
         {
           "offset": "0x1b78",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1c7c",
           "original": "あの、{G}？\n前の席の人に\nパンツ見られちゃうよ。",
-          "text": "Um, {G}\nthe people in front\ncan see your panties."
+          "text": "Um, {G}?\nThe people in front\ncan see your panties."
         },
         {
           "offset": "0x1cac",
@@ -534,7 +534,7 @@
         {
           "offset": "0x1d78",
           "original": "あれ、この前お兄ちゃんに\nかけたらね、\nしばらく動けなく\nなっちゃったんだよ。",
-          "text": "When I did that on\nmy brother the other day,\nhe couldn't move\nfor a while."
+          "text": "I tried that move on\nmy older brother recently.\nHe couldn't move\nfor a while."
         },
         {
           "offset": "0x1dc4",
@@ -544,7 +544,7 @@
         {
           "offset": "0x1e04",
           "original": "あとね。\n最近は、お兄ちゃんで、\n新しい技を開発中なの。\nできたら見せてあげるね。",
-          "text": "And also,\nI'm working on new moves\nusing my brother.\nI'll show you when done!"
+          "text": "And also,\nI'm working on new moves\non my older brother.\nI'll show you when done!"
         },
         {
           "offset": "0x1e54",
@@ -599,7 +599,7 @@
         {
           "offset": "0x22b4",
           "original": "ゆ、{G}。\n大丈夫だからね。\nだから、泣かないでね。",
-          "text": "Y-{G}\nIt's okay, really.\nSo don't cry, okay?"
+          "text": "Y-{G}.\nIt's okay, really.\nSo don't cry, okay?"
         },
         {
           "offset": "0x22e4",

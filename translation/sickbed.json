@@ -269,7 +269,7 @@
         {
           "offset": "0x10a4",
           "original": "あれ、{G}。\nまだ何か？",
-          "text": "Oh, {G}\nIs there something else?"
+          "text": "Oh, {G}.\nIs there something else?"
         },
         {
           "offset": "0x11b4",
@@ -349,12 +349,12 @@
         {
           "offset": "0x161c",
           "original": "{G}だったのか。\nそんな、\n死ぬわけないじゃないか。",
-          "text": "Oh, it's you, {G}\nCome on,\nof course I'm not dead."
+          "text": "Oh, it's you, {G}.\nCome on,\nof course I'm not dead."
         },
         {
           "offset": "0x164c",
           "original": "だって…、だって、\nお兄ちゃんに聞いたら、\nあいつは死んだって。",
-          "text": "But... but\nmy brother said\nyou were dead."
+          "text": "But... but\nmy older brother said\nyou were dead."
         },
         {
           "offset": "0x168c",
@@ -389,12 +389,12 @@
         {
           "offset": "0x18e4",
           "original": "ほら{m}。",
-          "text": "Up you get, {m}"
+          "text": "Up you get, {m}."
         },
         {
           "offset": "0x18ec",
           "original": "ほら{m}。",
-          "text": "Up you get, {m}"
+          "text": "Up you get, {m}."
         }
       ]
     }

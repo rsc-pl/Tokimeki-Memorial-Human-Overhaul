@@ -444,7 +444,7 @@
         {
           "offset": "0x1838",
           "original": "{G}。\n大丈夫？\n起き上がれる？",
-          "text": "Oh, {G}\nAre you okay?\nCan you sit up?"
+          "text": "Oh, {G}.\nAre you okay?\nCan you sit up?"
         },
         {
           "offset": "0x1854",
@@ -469,7 +469,7 @@
         {
           "offset": "0x18e4",
           "original": "いや、当然のことだよ。\nでも、心配したんだよ。\nなかなか、意識が\n戻らないから人工呼吸を…。",
-          "text": "No, it was nothing.\nBut I was worried.\nYou wouldn't come to,\nso I was going to..."
+          "text": "No, of course I'd help.\nBut I was worried.\nYou wouldn't wake up,\nI nearly did mouth-to-mouth."
         },
         {
           "offset": "0x1948",
@@ -514,7 +514,7 @@
         {
           "offset": "0x1dd0",
           "original": "{G}って、\n野球好きなんだね。",
-          "text": "Gosh, {G}\nyou really love baseball."
+          "text": "Gosh, {G},\nyou really love baseball."
         },
         {
           "offset": "0x1dec",
@@ -539,7 +539,7 @@
         {
           "offset": "0x1e80",
           "original": "あの、{G}…？",
-          "text": "Um, {G}"
+          "text": "Um, {G}...?"
         },
         {
           "offset": "0x1e8c",
@@ -749,7 +749,7 @@
         {
           "offset": "0x29cc",
           "original": "に、{G}大丈夫？",
-          "text": "N-{G}, okay?"
+          "text": "N-{G}, are you okay?"
         },
         {
           "offset": "0x29dc",

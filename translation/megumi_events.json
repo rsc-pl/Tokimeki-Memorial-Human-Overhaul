@@ -9,12 +9,12 @@
         {
           "offset": "0x0",
           "original": "急に雨が降ってきたな。\n傘を持ってきてよかった。\nあっ、{G}だ。",
-          "text": "It started raining.\nLucky I had an umbrella.\nThere's {G}"
+          "text": "It started raining.\nLucky I had an umbrella.\nThere's {G}."
         },
         {
           "offset": "0x3c",
           "original": "{G}。\nどうしたの？",
-          "text": "Oh, {G}\nwhat's wrong?"
+          "text": "Oh, {G}.\nWhat's wrong?"
         },
         {
           "offset": "0x58",
@@ -74,7 +74,7 @@
         {
           "offset": "0x20c",
           "original": "{G}。\n俺と一緒でつまんない？",
-          "text": "Um, {G}\nare you bored with me?"
+          "text": "Um, {G}.\nAre you bored with me?"
         },
         {
           "offset": "0x228",
@@ -124,7 +124,7 @@
         {
           "offset": "0x3bc",
           "original": "それじゃ、{G}。",
-          "text": "Bye then, {G}"
+          "text": "Bye then, {G}."
         },
         {
           "offset": "0x3cc",
@@ -144,7 +144,7 @@
         {
           "offset": "0x7a8",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x7b4",
@@ -219,7 +219,7 @@
         {
           "offset": "0xba8",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0xbb4",
@@ -309,7 +309,7 @@
         {
           "offset": "0x10c0",
           "original": "あっ、{G}。\n俺も、\n今来たところだよ。",
-          "text": "Oh, {G}\nI just got\nhere myself."
+          "text": "Oh, {G}.\nI just got\nhere myself."
         },
         {
           "offset": "0x10e4",
@@ -349,7 +349,7 @@
         {
           "offset": "0x11f4",
           "original": "{G}。\n可愛い犬だね。\n触ってもいいかな？",
-          "text": "Gosh, {G}\nwhat a cute dog.\nCan I pet him?"
+          "text": "Gosh, {G}.\nWhat a cute dog.\nCan I pet him?"
         },
         {
           "offset": "0x121c",
@@ -469,7 +469,7 @@
         {
           "offset": "0x1a58",
           "original": "{G}。\nあっちに\n変な動物がいるよ。",
-          "text": "Look, {G}\nthere's a weird\nanimal over there."
+          "text": "Look, {G}.\nThere's a weird\nanimal over there."
         },
         {
           "offset": "0x1a88",
@@ -534,7 +534,7 @@
         {
           "offset": "0x1dec",
           "original": "み、{G}？\nどうしたの？",
-          "text": "M-{G}\nwhat's wrong?"
+          "text": "M-{G}?\nWhat's wrong?"
         },
         {
           "offset": "0x1e04",
@@ -584,7 +584,7 @@
         {
           "offset": "0x2104",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x2110",
@@ -614,7 +614,7 @@
         {
           "offset": "0x21bc",
           "original": "あれ、どうしたの、\n{G}？\n（急いで走っていくぞ。）",
-          "text": "Huh, what's wrong,\n{G}\n(She's running off.)"
+          "text": "Huh, what's wrong,\n{G}?\n(She's running off.)"
         },
         {
           "offset": "0x21f4",
@@ -649,7 +649,7 @@
         {
           "offset": "0x2314",
           "original": "{G}、\n早く連れてってあげよう。",
-          "text": "Okay, {G}\nlet's take it home quick."
+          "text": "Okay, {G},\nlet's take it home quick."
         },
         {
           "offset": "0x233c",
@@ -674,7 +674,7 @@
         {
           "offset": "0x25f8",
           "original": "み、{G}？",
-          "text": "M-{G}"
+          "text": "M-{G}?"
         }
       ]
     }

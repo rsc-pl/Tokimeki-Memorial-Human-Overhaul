@@ -9,7 +9,7 @@
         {
           "offset": "0x0",
           "original": "密かに応募していた小説\n『人間合格』で植木賞を\n受賞してしまうとは、\n俺って、なんて天才なんだ。",
-          "text": "My secret entry, the\nnovel \"Fully Human,\"\nwon the Ueki Prize.\nWhat a genius I am."
+          "text": "My secret entry, the\nnovel \"Fully Human,\"\nwon the Ueki Prize.\nI'm such a genius!"
         },
         {
           "offset": "0x60",
@@ -49,12 +49,12 @@
         {
           "offset": "0x160",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x170",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x17c",
@@ -74,12 +74,12 @@
         {
           "offset": "0x1dc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1ec",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x1f8",
@@ -99,12 +99,12 @@
         {
           "offset": "0x25c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x26c",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x278",
@@ -129,7 +129,7 @@
         {
           "offset": "0x304",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x310",
@@ -149,12 +149,12 @@
         {
           "offset": "0x380",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x390",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x39c",
@@ -179,7 +179,7 @@
         {
           "offset": "0x424",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x430",
@@ -204,12 +204,12 @@
         {
           "offset": "0x4f4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x504",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x510",
@@ -229,12 +229,12 @@
         {
           "offset": "0x58c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x59c",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x5a8",
@@ -254,12 +254,12 @@
         {
           "offset": "0x618",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x628",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x634",
@@ -269,7 +269,7 @@
         {
           "offset": "0x650",
           "original": "さすが{G}、\n情報が早いね。",
-          "text": "Leave it to {G}\nyou're quick with news."
+          "text": "Of course, {G}.\nYou're first to know."
         },
         {
           "offset": "0x66c",
@@ -279,12 +279,12 @@
         {
           "offset": "0x69c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6ac",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x6b8",
@@ -294,7 +294,7 @@
         {
           "offset": "0x6f0",
           "original": "ありがとう、{G}。",
-          "text": "Thanks, {G}"
+          "text": "Thanks, {G}."
         },
         {
           "offset": "0x700",
@@ -304,12 +304,12 @@
         {
           "offset": "0x720",
           "original": "あっ、{P}。\n",
-          "text": "Oh, {P}\n"
+          "text": "Oh, {P}.\n"
         },
         {
           "offset": "0x730",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x73c",
@@ -319,7 +319,7 @@
         {
           "offset": "0x760",
           "original": "ありがとう、{G}。",
-          "text": "Thanks, {G}"
+          "text": "Thanks, {G}."
         },
         {
           "offset": "0x770",

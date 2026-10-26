@@ -229,7 +229,7 @@
         {
           "offset": "0xc60",
           "original": "{G}。\nどうしたの？",
-          "text": "Oh, {G}\nwhat's wrong?"
+          "text": "Oh, {G}.\nWhat's wrong?"
         },
         {
           "offset": "0xc74",
@@ -264,12 +264,12 @@
         {
           "offset": "0xd10",
           "original": "か、{G}…。",
-          "text": "M-{G}"
+          "text": "M-{G}..."
         },
         {
           "offset": "0xd2c",
           "original": "やっぱり怖かったんだ。\n{G}。",
-          "text": "So you were scared,\n{G}"
+          "text": "So you were scared,\n{G}."
         },
         {
           "offset": "0xd58",
@@ -284,7 +284,7 @@
         {
           "offset": "0xde4",
           "original": "そんなことないって、　\nあっ、さっきの{G}、\nすごく可愛かったよ。",
-          "text": "Don't worry about it.\nOh, {G}\nyou were so cute in there."
+          "text": "Don't worry about it.\nOh, {G},\nyou were so cute in there."
         },
         {
           "offset": "0xe38",
@@ -349,7 +349,7 @@
         {
           "offset": "0x13e8",
           "original": "痛た…。\n{G}大丈夫？",
-          "text": "Ow...\nYou okay, {G}"
+          "text": "Ow...\nYou okay, {G}?"
         },
         {
           "offset": "0x13fc",
@@ -359,7 +359,7 @@
         {
           "offset": "0x1414",
           "original": "俺も、大丈夫だよ。\nほら、{G}手を貸すよ\n起きて。",
-          "text": "I'm fine too.\nHere, {G}\ntake my hand, get up."
+          "text": "I'm fine too.\nHere, {G},\ntake my hand, get up."
         },
         {
           "offset": "0x1444",
@@ -464,7 +464,7 @@
         {
           "offset": "0x1a98",
           "original": "あっ、{G}だ。",
-          "text": "There's {G}"
+          "text": "There's {G}."
         },
         {
           "offset": "0x1aa8",

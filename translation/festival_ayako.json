@@ -1659,7 +1659,7 @@
         {
           "offset": "0x385c",
           "original": "えっ、{G}って、\n美術部だったけ？",
-          "text": "Hm? {G}\nyou're in Art Club?"
+          "text": "Hm? {G},\nyou're in Art Club?"
         },
         {
           "offset": "0x387c",
@@ -1699,7 +1699,7 @@
         {
           "offset": "0x39e8",
           "original": "えっ、{G}って、\n美術部だったけ？",
-          "text": "Hm? {G}\nyou're in Art Club?"
+          "text": "Hm? {G},\nyou're in Art Club?"
         },
         {
           "offset": "0x3a08",
@@ -1739,7 +1739,7 @@
         {
           "offset": "0x3b64",
           "original": "えっ、{G}って、\n美術部だったけ？",
-          "text": "Hm? {G}\nyou're in Art Club?"
+          "text": "Hm? {G},\nyou're in Art Club?"
         },
         {
           "offset": "0x3b84",
@@ -2244,7 +2244,7 @@
         {
           "offset": "0x4cd0",
           "original": "背景のお城の絵が。",
-          "text": "Castle backdrop."
+          "text": "The castle backdrop."
         },
         {
           "offset": "0x4ce4",
@@ -3571,7 +3571,7 @@
         {
           "offset": "0xab4",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0xad4",
@@ -3601,7 +3601,7 @@
         {
           "offset": "0xbc8",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0xbe8",
@@ -3631,7 +3631,7 @@
         {
           "offset": "0xce0",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0xd00",
@@ -3976,7 +3976,7 @@
         {
           "offset": "0x17c8",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x17f4",
@@ -4086,7 +4086,7 @@
         {
           "offset": "0x1bb8",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x1be4",
@@ -4146,7 +4146,7 @@
         {
           "offset": "0x1dec",
           "original": "えっ、何が見れるの？",
-          "text": "Huh, see what?"
+          "text": "Huh? See what?"
         },
         {
           "offset": "0x1e04",
@@ -4286,7 +4286,7 @@
         {
           "offset": "0x22d4",
           "original": "えっ、何が見れるの？",
-          "text": "Huh, see what?"
+          "text": "Huh? See what?"
         },
         {
           "offset": "0x22ec",
@@ -4446,7 +4446,7 @@
         {
           "offset": "0x27c8",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x27f4",
@@ -4556,7 +4556,7 @@
         {
           "offset": "0x2bc0",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x2bec",
@@ -4886,7 +4886,7 @@
         {
           "offset": "0x360c",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x3638",
@@ -4996,7 +4996,7 @@
         {
           "offset": "0x39fc",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x3a28",
@@ -5501,7 +5501,7 @@
         {
           "offset": "0x4970",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x499c",
@@ -6126,7 +6126,7 @@
         {
           "offset": "0x5e50",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x5e7c",
@@ -6236,7 +6236,7 @@
         {
           "offset": "0x6240",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me along..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x626c",
@@ -6311,7 +6311,7 @@
         {
           "offset": "0x6498",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0x64b8",
@@ -6598,7 +6598,7 @@
         {
           "offset": "0x7ec",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x818",
@@ -6708,7 +6708,7 @@
         {
           "offset": "0xbcc",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0xbf8",
@@ -6723,7 +6723,7 @@
         {
           "offset": "0xc30",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0xc50",
@@ -6753,7 +6753,7 @@
         {
           "offset": "0xd44",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0xd64",
@@ -6783,7 +6783,7 @@
         {
           "offset": "0xe5c",
           "original": "他の部の、\n展示も見ないとね。",
-          "text": "I need to see\nother clubs' too."
+          "text": "I need to see\nother clubs' exhibits too."
         },
         {
           "offset": "0xe7c",
@@ -7198,7 +7198,7 @@
         {
           "offset": "0x1af8",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x1b24",
@@ -7318,7 +7318,7 @@
         {
           "offset": "0x1f48",
           "original": "誘ってくれても、\nいいと思うけどなぁ…。",
-          "text": "She could've\ninvited me..."
+          "text": "She could've\ninvited me to her concert..."
         },
         {
           "offset": "0x1f74",
@@ -7858,7 +7858,7 @@
         {
           "offset": "0x3200",
           "original": "いや、今日は忙しくて、\n他の部の見学も\nできないよ。",
-          "text": "No, I'm busy today.\nI can't even see\nother clubs."
+          "text": "No, I'm busy today.\nI can't even visit\nthe other clubs."
         },
         {
           "offset": "0x3234",
@@ -7978,7 +7978,7 @@
         {
           "offset": "0x367c",
           "original": "いや、今日は忙しくて、\n他の部の見学も\nできないよ。",
-          "text": "No, I'm busy today.\nI can't even see\nother clubs."
+          "text": "No, I'm busy today.\nI can't even visit\nthe other clubs."
         },
         {
           "offset": "0x36b0",
@@ -8875,7 +8875,7 @@
         {
           "offset": "0x14a4",
           "original": "ありがとう。\n{G}のおかげだよ。",
-          "text": "Thanks.\nIt's thanks to {G}."
+          "text": "Thanks.\nI owe you one, {G}."
         },
         {
           "offset": "0x14d4",
@@ -8885,7 +8885,7 @@
         {
           "offset": "0x14fc",
           "original": "{G}のは、\nそうだけどさ。\n俺の絵なんて…。",
-          "text": "Sure, {G}'s\nwas great.\nBut mine..."
+          "text": "Of course, {G},\nyours was great.\nBut mine..."
         },
         {
           "offset": "0x1524",
@@ -8915,7 +8915,7 @@
         {
           "offset": "0x1600",
           "original": "ありがとう。\n{G}のおかげだよ。",
-          "text": "Thanks.\nIt's thanks to {G}."
+          "text": "Thanks.\nI owe you one, {G}."
         },
         {
           "offset": "0x1630",
@@ -8925,7 +8925,7 @@
         {
           "offset": "0x1658",
           "original": "{G}のは、\nそうだけどさ。\n俺の絵なんて…。",
-          "text": "Sure, {G}'s\nwas great.\nBut mine..."
+          "text": "Of course, {G},\nyours was great.\nBut mine..."
         },
         {
           "offset": "0x1680",
@@ -8955,7 +8955,7 @@
         {
           "offset": "0x1788",
           "original": "ありがとう。\n{G}のおかげだよ。",
-          "text": "Thanks.\nIt's thanks to {G}."
+          "text": "Thanks.\nI owe you one, {G}."
         },
         {
           "offset": "0x17b8",
@@ -8965,7 +8965,7 @@
         {
           "offset": "0x17e0",
           "original": "{G}のは、\nそうだけどさ。\n俺の絵なんて…。",
-          "text": "Sure, {G}'s\nwas great.\nBut mine..."
+          "text": "Of course, {G},\nyours was great.\nBut mine..."
         },
         {
           "offset": "0x1808",
@@ -9005,7 +9005,7 @@
         {
           "offset": "0x1924",
           "original": "{G}のは、\nそうだけどさ。\n俺の絵なんて…。",
-          "text": "Sure, {G}'s\nwas great.\nBut mine..."
+          "text": "Of course, {G},\nyours was great.\nBut mine..."
         },
         {
           "offset": "0x194c",
@@ -9795,7 +9795,7 @@
         {
           "offset": "0x3424",
           "original": "最後まで足引っ張って、\n何なの、あなたは。",
-          "text": "You held us back to the end!\nWhat's with you?"
+          "text": "You kept dragging us down!\nWhat's with you?"
         },
         {
           "offset": "0x5d08",
@@ -10414,7 +10414,7 @@
         {
           "offset": "0xe10",
           "original": "いや、もう帰るよ。\n（さすがに、{G}がいると\nゆっくり見てられないや。）",
-          "text": "No, I'll go now.\n(Not with {G}\naround, I can't look.)"
+          "text": "No, I'll go now.\n(With {G} here,\nI can't take my time.)"
         },
         {
           "offset": "0xe54",
@@ -10474,7 +10474,7 @@
         {
           "offset": "0x1064",
           "original": "そういう問題じゃなくて。\n{G}は\n恥ずかしくない？",
-          "text": "That's not it.\n{G}\naren't you embarrassed?"
+          "text": "That's not it.\n{G},\naren't you embarrassed?"
         },
         {
           "offset": "0x1094",
@@ -10944,7 +10944,7 @@
         {
           "offset": "0x1f9c",
           "original": "{G}って、\nああいう曲を\n作るのが好きなの？",
-          "text": "{G},\nlike writing tunes\nlike that?"
+          "text": "{G},\ndo you like writing\ntunes like that?"
         },
         {
           "offset": "0x1fc4",
@@ -11009,7 +11009,7 @@
         {
           "offset": "0x21c8",
           "original": "そう、良かった…。\n３年間の集大成だから、\nいい演奏にしたかったの。",
-          "text": "Oh, good...\nIt's three years of work,\nso I wanted it great."
+          "text": "Oh, I'm glad...\nAfter three years' work,\nI wanted us to play well."
         },
         {
           "offset": "0x220c",
@@ -11054,7 +11054,7 @@
         {
           "offset": "0x2380",
           "original": "さすがに、\n３年間やってただけの事は\nあったね。",
-          "text": "You can tell\nyou've done it\nfor three years."
+          "text": "Those three years\nof practice really\npaid off."
         },
         {
           "offset": "0x23b0",
@@ -11104,7 +11104,7 @@
         {
           "offset": "0x2540",
           "original": "あれっ、{G}がいない。\nどこに行ったんだろう。",
-          "text": "Huh, no {G}\nWhere'd she go?"
+          "text": "Huh? {G}'s not here.\nWhere'd she go?"
         }
       ]
     }

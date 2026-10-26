@@ -129,7 +129,7 @@
         {
           "offset": "0x6f0",
           "original": "はいはい。\nでも、{G}の美声を\n聞いてみたいなぁ…。",
-          "text": "Sure, sure.\nWell, {G}\nI'd love to hear you sing."
+          "text": "Sure, sure.\nWell, {G},\nI'd love to hear you sing."
         },
         {
           "offset": "0x728",
@@ -189,7 +189,7 @@
         {
           "offset": "0xae0",
           "original": "{G}。\nほら、泳ぎに行こうよ。",
-          "text": "Look, {G}\nlet's go for a swim."
+          "text": "Look, {G}.\nLet's go for a swim."
         },
         {
           "offset": "0xb0c",
@@ -309,7 +309,7 @@
         {
           "offset": "0x12f8",
           "original": "無視しないでよ。\n{G}。",
-          "text": "Don't ignore me,\n{G}"
+          "text": "Don't ignore me,\n{G}."
         },
         {
           "offset": "0x133c",
@@ -324,7 +324,7 @@
         {
           "offset": "0x13ac",
           "original": "{G}…。\n起きて…。",
-          "text": "{G}\nwake up..."
+          "text": "{G}...\nwake up..."
         },
         {
           "offset": "0x13c0",
@@ -509,7 +509,7 @@
         {
           "offset": "0x2080",
           "original": "{G}？",
-          "text": "{G}"
+          "text": "{G}?"
         }
       ]
     }

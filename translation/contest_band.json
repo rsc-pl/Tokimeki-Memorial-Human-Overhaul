@@ -44,7 +44,7 @@
         {
           "offset": "0x10c",
           "original": "{G}、どうかしたの？",
-          "text": "What's wrong, {G}"
+          "text": "What's wrong, {G}?"
         },
         {
           "offset": "0x120",
@@ -64,12 +64,12 @@
         {
           "offset": "0x184",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x194",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x1a0",
@@ -89,12 +89,12 @@
         {
           "offset": "0x218",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x228",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x234",
@@ -114,12 +114,12 @@
         {
           "offset": "0x2c0",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x2d0",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x2dc",
@@ -164,7 +164,7 @@
         {
           "offset": "0x404",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x410",
@@ -184,12 +184,12 @@
         {
           "offset": "0x494",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4a4",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x4b0",
@@ -209,12 +209,12 @@
         {
           "offset": "0x53c",
           "original": "こんにちは\n{P}。",
-          "text": "Good afternoon,\n{P}"
+          "text": "Good afternoon,\n{P}."
         },
         {
           "offset": "0x550",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x55c",
@@ -239,12 +239,12 @@
         {
           "offset": "0x60c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x61c",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x628",
@@ -264,12 +264,12 @@
         {
           "offset": "0x6b4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6c4",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x6d0",
@@ -289,12 +289,12 @@
         {
           "offset": "0x74c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x75c",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x768",
@@ -314,12 +314,12 @@
         {
           "offset": "0x7cc",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x7dc",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x7e8",
@@ -339,12 +339,12 @@
         {
           "offset": "0x87c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x88c",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x898",
@@ -354,7 +354,7 @@
         {
           "offset": "0x8cc",
           "original": "ありがとう、{G}。",
-          "text": "Thanks, {G}"
+          "text": "Thanks, {G}."
         },
         {
           "offset": "0x8dc",
@@ -404,7 +404,7 @@
         {
           "offset": "0x9f4",
           "original": "い、{G}。\nなんでこんなところに。",
-          "text": "I-{G}\nWhy are you here?"
+          "text": "I-{G}.\nWhy are you here?"
         },
         {
           "offset": "0xa14",
@@ -424,7 +424,7 @@
         {
           "offset": "0x169c",
           "original": "{G}？",
-          "text": "{G}"
+          "text": "{G}?"
         },
         {
           "offset": "0x16a0",

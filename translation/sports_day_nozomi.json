@@ -14,7 +14,7 @@
         {
           "offset": "0x40",
           "original": "あっ、{P}、\n入っちゃ駄目！",
-          "text": "Ah, {P}\ndon't go in there!"
+          "text": "Ah, {P},\ndon't go in there!"
         },
         {
           "offset": "0x5c",
@@ -34,12 +34,12 @@
         {
           "offset": "0xa8",
           "original": "{P}、大丈夫？",
-          "text": "{P} you okay?"
+          "text": "{P}, you okay?"
         },
         {
           "offset": "0xb4",
           "original": "どうしたの、\nいきなり大声を出して。",
-          "text": "What's wrong,\nshouting all of a sudden?"
+          "text": "Why'd you shout\nall of a sudden?"
         },
         {
           "offset": "0xd8",

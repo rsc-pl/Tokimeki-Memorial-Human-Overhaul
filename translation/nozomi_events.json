@@ -84,7 +84,7 @@
         {
           "offset": "0x2d4",
           "original": "き、{G}。\nわ、悪いんだけど、\n早く職員室に行こうよ。",
-          "text": "N-{G}\nS-sorry, but can we\nhurry to the staff room?"
+          "text": "N-{G}.\nS-sorry, but can we\nhurry to the staff room?"
         },
         {
           "offset": "0x308",
@@ -179,7 +179,7 @@
         {
           "offset": "0x7e0",
           "original": "あっ、{G}。\nしょうがない、\n俺も行くか。",
-          "text": "Wait, {G}\nOh well,\nguess I'll go too."
+          "text": "Wait, {G}.\nOh well,\nguess I'll go too."
         },
         {
           "offset": "0x80c",

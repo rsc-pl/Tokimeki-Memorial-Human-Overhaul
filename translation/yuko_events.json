@@ -79,7 +79,7 @@
         {
           "offset": "0x214",
           "original": "そんなことないよ。\n週に３、４回かな。",
-          "text": "No way.\nThree, four times a week?"
+          "text": "No way.\nOnly three or four a week."
         },
         {
           "offset": "0x23c",
@@ -339,7 +339,7 @@
         {
           "offset": "0x119c",
           "original": "あっ、{G}。\nは、速い…。",
-          "text": "Wait, {G}\nTh-that was fast..."
+          "text": "Wait, {G}.\nTh-that was fast..."
         },
         {
           "offset": "0x1350",

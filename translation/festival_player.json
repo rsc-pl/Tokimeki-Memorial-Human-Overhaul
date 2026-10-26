@@ -601,7 +601,7 @@
         {
           "offset": "0x280",
           "original": "あっ、{G}！",
-          "text": "Oh, hi, {G}."
+          "text": "Oh, hi, {G}!"
         },
         {
           "offset": "0x294",
@@ -626,7 +626,7 @@
         {
           "offset": "0x31c",
           "original": "{P}。\nどうしたの？",
-          "text": "{P}\nWhat is it?"
+          "text": "{P}.\nWhat is it?"
         },
         {
           "offset": "0x334",
@@ -711,7 +711,7 @@
         {
           "offset": "0x524",
           "original": "これ、前から欲しかったの。\nずっと、大切にするね。",
-          "text": "I've wanted this for ages.\nI'll treasure it always."
+          "text": "I've wanted this for ages.\nI'll treasure it."
         },
         {
           "offset": "0x55c",

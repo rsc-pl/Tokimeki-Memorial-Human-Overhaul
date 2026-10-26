@@ -239,7 +239,7 @@
         {
           "offset": "0xf68",
           "original": "ご、ごめんなさ…。\n何だ、{G}じゃないか。\n女みたいな声出しやがって…。",
-          "text": "S-sorry abou...\nOh, it's you, {G}\nSquealing like a girl..."
+          "text": "S-sorry abou...\nOh, it's you, {G}.\nSquealing like a girl..."
         },
         {
           "offset": "0xfb0",
@@ -674,7 +674,7 @@
         {
           "offset": "0x2598",
           "original": "素敵な想い出ありがとう。\n私、あなたが……、\nあなたが……。",
-          "text": "Thanks for a lovely memory.\nI... you're...\nyou're..."
+          "text": "Thanks for a lovely memory.\nI... you...\nyou..."
         },
         {
           "offset": "0x25d4",

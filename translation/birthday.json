@@ -14,7 +14,7 @@
         {
           "offset": "0xc",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x2c",
@@ -84,7 +84,7 @@
         {
           "offset": "0x400",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x420",
@@ -94,7 +94,7 @@
         {
           "offset": "0x454",
           "original": "{G}が、俺に？",
-          "text": "From you, {G}"
+          "text": "From you, {G}?"
         },
         {
           "offset": "0x460",
@@ -114,7 +114,7 @@
         {
           "offset": "0x5a8",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x5c8",
@@ -139,7 +139,7 @@
         {
           "offset": "0x740",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x760",
@@ -164,7 +164,7 @@
         {
           "offset": "0x8e0",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x900",
@@ -204,7 +204,7 @@
         {
           "offset": "0xb04",
           "original": "あ、{G}。\nどうしたの？",
-          "text": "Ah, {G}\nWhat's up?"
+          "text": "Ah, {G}.\nWhat's up?"
         },
         {
           "offset": "0xb24",
@@ -234,7 +234,7 @@
         {
           "offset": "0xccc",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0xcec",
@@ -264,7 +264,7 @@
         {
           "offset": "0xe70",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0xe90",
@@ -304,7 +304,7 @@
         {
           "offset": "0x107c",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x109c",
@@ -354,7 +354,7 @@
         {
           "offset": "0x133c",
           "original": "あっ、{G}。\nどうしたの？",
-          "text": "Oh, hi, {G}\nWhat's up?"
+          "text": "Oh, hi, {G}.\nWhat's up?"
         },
         {
           "offset": "0x135c",

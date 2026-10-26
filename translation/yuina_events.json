@@ -14,7 +14,7 @@
         {
           "offset": "0x20",
           "original": "ん？\nあそこにいるのは、\n{G}じゃないか。",
-          "text": "Hm?\nWho's that over there?\nWhy, it's {G}"
+          "text": "Hm?\nWho's that over there?\nWhy, it's {G}."
         },
         {
           "offset": "0x50",
@@ -24,17 +24,17 @@
         {
           "offset": "0x5c",
           "original": "どうしたの{G}。\nため息なんてついて。",
-          "text": "So, {G}\nwhat's with the sigh?"
+          "text": "What's wrong, {G}?\nWhy the sigh?"
         },
         {
           "offset": "0x88",
           "original": "あっ、{P}\n嫌なところ\n見られちゃったわね。",
-          "text": "Oh, {P}\nYou caught me at\na bad moment."
+          "text": "Oh, {P}.\nYou caught me at\na bad moment."
         },
         {
           "offset": "0xb0",
           "original": "本当に、どうしたの？\n{G}らしくないよ。",
-          "text": "Really, what's wrong?\nSo unlike {G}"
+          "text": "Really, what's wrong?\nNot like you, {G}."
         },
         {
           "offset": "0xd8",
@@ -74,7 +74,7 @@
         {
           "offset": "0x23c",
           "original": "{G}大丈夫かな…。\n向こうで、\n何かつぶやいてるぞ。",
-          "text": "Oh, {G}\nare you okay? She's\nmuttering something."
+          "text": "Is {G} okay...?\nShe's muttering\nsomething over there."
         },
         {
           "offset": "0x26c",
@@ -124,7 +124,7 @@
         {
           "offset": "0x604",
           "original": "あ、あの。\n{G}。\n何言ってるの？",
-          "text": "U-um,\n{G}\nwhat are you saying?"
+          "text": "U-um...\n{G},\nwhat are you saying?"
         },
         {
           "offset": "0x624",
@@ -139,7 +139,7 @@
         {
           "offset": "0x7e8",
           "original": "ひ、{G}。\nこのスコアは何？",
-          "text": "Y-{G}\nwhat is this score?"
+          "text": "Y-{G}.\nWhat is this score?"
         },
         {
           "offset": "0x804",
@@ -149,7 +149,7 @@
         {
           "offset": "0x830",
           "original": "あのさ、{G}…。",
-          "text": "Listen, {G}"
+          "text": "Listen, {G}..."
         },
         {
           "offset": "0x840",
@@ -164,7 +164,7 @@
         {
           "offset": "0x890",
           "original": "{G}は、ストライク\nなんて、ほとんど\n出してないじゃないか。",
-          "text": "Except, {G}\nyou hardly bowled\nany strikes at all."
+          "text": "But {G},\nyou hardly bowled\nany strikes at all."
         },
         {
           "offset": "0x8e4",
@@ -194,7 +194,7 @@
         {
           "offset": "0x98c",
           "original": "{G}、\n何かやったんじゃ…。",
-          "text": "Wait, {G}\ndid you do this?"
+          "text": "Wait, {G},\ndid you do this?"
         },
         {
           "offset": "0x9a8",
@@ -204,7 +204,7 @@
         {
           "offset": "0xbb8",
           "original": "{G}。\nちょっとトイレに\n行ってくるね。",
-          "text": "Listen, {G}\nI'll be back,\nrestroom."
+          "text": "Hey, {G}.\nI'll be right back.\nGoing to the restroom."
         },
         {
           "offset": "0xbdc",
@@ -219,7 +219,7 @@
         {
           "offset": "0xc30",
           "original": "ひ、{G}。\nどうしたの？\nこのコインの山は…。",
-          "text": "Y-{G}\nwhat's going on?\nWhat's this pile of coins?"
+          "text": "Y-{G}.\nWhat's going on?\nWhat's this pile of coins?"
         },
         {
           "offset": "0xc5c",
@@ -284,7 +284,7 @@
         {
           "offset": "0x1038",
           "original": "{G}。\n買ってる姿が怖いよ…。",
-          "text": "Oh, {G}\nthe way you shop is scary."
+          "text": "Oh, {G}.\nThe way you shop is scary."
         },
         {
           "offset": "0x105c",
@@ -319,7 +319,7 @@
         {
           "offset": "0x12d4",
           "original": "あれ、{G}だ。",
-          "text": "There's {G}"
+          "text": "There's {G}."
         },
         {
           "offset": "0x12e0",
@@ -424,7 +424,7 @@
         {
           "offset": "0x18c0",
           "original": "ひ、{G}。\nどうしたの？",
-          "text": "Y-{G}\nwhat's going on?"
+          "text": "Y-{G}.\nWhat's going on?"
         },
         {
           "offset": "0x18d8",
@@ -434,7 +434,7 @@
         {
           "offset": "0x190c",
           "original": "俺は{G}の\n邪魔をした記憶はないよ。\nそれに、野望って？",
-          "text": "Listen, {G}\nI never got in your way.\nAnd what ambition?"
+          "text": "Listen, {G},\nI never got in your way.\nAnd what ambition?"
         },
         {
           "offset": "0x1940",
@@ -484,7 +484,7 @@
         {
           "offset": "0x1b08",
           "original": "ひ、{G}…。",
-          "text": "Y-{G}"
+          "text": "Y-{G}..."
         },
         {
           "offset": "0x1cd8",

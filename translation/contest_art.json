@@ -9,7 +9,7 @@
         {
           "offset": "0x0",
           "original": "密かに出展した\n油絵『花と貴婦人』で、\n目展大賞を受賞した。",
-          "text": "My secret entry, the oil\n\"Flowers and a Lady,\"\nwon the Meten Grand Prize!"
+          "text": "My secret oil painting,\n\"Flowers and a Lady,\"\nwon the Meten Grand Prize!"
         },
         {
           "offset": "0x3c",
@@ -74,12 +74,12 @@
         {
           "offset": "0x1b8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x1c8",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x1d4",
@@ -99,12 +99,12 @@
         {
           "offset": "0x248",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x258",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x264",
@@ -124,7 +124,7 @@
         {
           "offset": "0x304",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x310",
@@ -144,12 +144,12 @@
         {
           "offset": "0x378",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x388",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x394",
@@ -174,7 +174,7 @@
         {
           "offset": "0x414",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x420",
@@ -194,12 +194,12 @@
         {
           "offset": "0x4d4",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x4e4",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x4f0",
@@ -224,12 +224,12 @@
         {
           "offset": "0x594",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x5a4",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x5b0",
@@ -254,12 +254,12 @@
         {
           "offset": "0x638",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x648",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x654",
@@ -269,7 +269,7 @@
         {
           "offset": "0x67c",
           "original": "さすが{G}、\n情報が早いね。",
-          "text": "Leave it to {G}\nyou're quick with news."
+          "text": "Of course, {G}.\nYou're first to know."
         },
         {
           "offset": "0x698",
@@ -279,12 +279,12 @@
         {
           "offset": "0x6c8",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x6d8",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x6e4",
@@ -304,12 +304,12 @@
         {
           "offset": "0x76c",
           "original": "あっ、{P}。",
-          "text": "Oh, {P}"
+          "text": "Oh, {P}."
         },
         {
           "offset": "0x77c",
           "original": "あっ、{G}。",
-          "text": "Oh, {G}"
+          "text": "Oh, {G}."
         },
         {
           "offset": "0x788",
@@ -319,7 +319,7 @@
         {
           "offset": "0x7ac",
           "original": "ありがとう、{G}。",
-          "text": "Thanks, {G}"
+          "text": "Thanks, {G}."
         },
         {
           "offset": "0x7bc",
@@ -369,7 +369,7 @@
         {
           "offset": "0x8d0",
           "original": "い、{G}。\nなんでこんなところに。",
-          "text": "I-{G}\nWhy are you here?"
+          "text": "I-{G}.\nWhy are you here?"
         },
         {
           "offset": "0x8f0",
