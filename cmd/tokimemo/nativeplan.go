@@ -138,7 +138,7 @@ func cmdNativePlan(root string, args []string) error {
 		return err
 	}
 	defer f.Close()
-	// Keep disc identity check consistent with the production Python backend.
+	// Keep disc identity checks consistent with the authenticated production disc reader.
 	cnf, ok := iso.Entries["SYSTEM.CNF"]
 	if !ok || cnf.IsDir {
 		return errors.New("SYSTEM.CNF missing")

@@ -450,55 +450,17 @@ func cmdBuild(root string, argv []string, preflight bool) error {
 		return e
 	}
 	fmt.Fprintf(commandOutput, "Corpus check passed: %d files / %d dialogue lines\n", n.Files, n.Lines)
-	a := productionPlannerArgs(input, preflight)
-	if !preflight {
-		target := *out
-		if target == "" {
-			target, e = config.Output(root)
-			if e != nil {
-				return e
-			}
-		}
-		target, e = filepath.Abs(target)
-		if e != nil {
-			return e
-		}
-		if e = config.SafeOutput(root, input, target); e != nil {
-			return e
-		}
-		if e = guardOutputTracks(input, target); e != nil {
-			return e
-		}
-		a = append(a, "-o", target)
-		if *force {
-			a = append(a, "--force")
-		}
-		if *verbose {
-			a = append(a, "--verbose")
-		}
+	// No Python packing: the complete original N10/N20 composer validates
+	// source-owned names, both GEKO policies, overlay MIPS and every EN byte
+	// before the existing Go sector writer is entered.
+	if *verbose {
+		fmt.Fprintln(commandOutput, "Verbose source-authenticated N10/N20 build selected")
 	}
-	for _, t := range translations {
-		a = append(a, "-t", t)
+	if len(translations) != 0 {
+		return errors.New("full English N10/N20 build requires the complete source-owned translation corpus; partial --translation builds are not authorized")
 	}
-	// Record only the bounded Python log tail for automatic, read-only
-	// failure explanation. The normal unmodified Python output is still shown.
-	previous := commandOutput
-	tail := &buildErrorTail{}
-	targetOutput := io.MultiWriter(previous, tail)
-	if !preflight {
-		commandOutput = &stageWriter{destination: targetOutput}
-	} else {
-		commandOutput = targetOutput
-	}
-	defer func() { commandOutput = previous }()
-	if e = runPython(root, a...); e != nil {
-		explainPythonPackingError(root, input, string(tail.data), previous)
-		return e
-	}
-	if !preflight {
-		fmt.Fprintf(commandOutput, "Verification: Python preflight and patch application passed; emulator runtime NOT verified by this command.\n")
-	}
-	return nil
+	return cmdIntegratedEnglishBuild(root, input, *out, *force, preflight)
+
 }
 func cmdExtract(root string, args []string) error {
 	fs := flag.NewFlagSet("extract", flag.ContinueOnError)

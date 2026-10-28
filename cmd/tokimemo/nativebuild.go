@@ -234,7 +234,7 @@ func cmdNativeBuild(root string, argv []string) error {
 		return err
 	}
 	if !*experimental {
-		return errors.New("native-build is experimental; pass --experimental (production build remains Python)")
+		return errors.New("native-build is an optional comparison command; pass --experimental (normal build uses the validated Go compositor)")
 	}
 	if fs.NArg() > 1 || (*game != "" && fs.NArg() != 0) {
 		return errors.New("usage: tokimemo native-build --experimental [--game CUE] [--output NEW_DIR] [--compare-python]")
@@ -345,7 +345,7 @@ func cmdNativeBuild(root string, argv []string) error {
 	if err = os.MkdirAll(parent, 0700); err != nil {
 		return err
 	}
-	stage, err := os.MkdirTemp(parent, ".tokimemo-native-g08-*")
+	stage, err := os.MkdirTemp(parent, ".tokimemo-native-stage-*")
 	if err != nil {
 		return err
 	}
