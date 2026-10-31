@@ -228,8 +228,9 @@ type N20IntegratedPlan struct {
 	PatchedEXE      []byte            `json:"-"`
 	PatchedOverlays map[string][]byte `json:"-"`
 
-	N6        OverlayLocalPlan `json:"-"`
-	FieldPrep N20RelocPlan     `json:"-"`
+	N6        OverlayLocalPlan    `json:"-"`
+	FieldPrep N20RelocPlan        `json:"-"`
+	TELDialog TelScopedDialogPlan `json:"-"`
 
 	Manifest    N20BuildManifest `json:"manifest"`
 	Verdict     string           `json:"verdict"`
@@ -298,6 +299,14 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 		patched[name] = d
 	}
 
+	// The TEL-only extra window is accounted independently from the shared
+	// N6 guard. The resident EXE remains completely unchanged by this layout.
+	telDialog, telPatched, e := telScopedDialogPatch(exe, overlays["TEL.EXN"], patched["TEL.EXN"])
+	if e != nil {
+		return p, e
+	}
+	patched["TEL.EXN"] = telPatched
+	p.TELDialog = telDialog
 	p.PatchedEXE = fp.PatchedEXE
 	p.PatchedOverlays = patched
 	p.N6 = n6
@@ -310,6 +319,39 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	if err != nil {
 		return p, err
 	}
+	// The local clone is a separately owned, source-zero region. It is NOT
+	// part of N6's verified body and cannot alter the N6 checksum/verifier.
+	m.Words = append(m.Words, telDialog.Calls...)
+	m.Regions = append(m.Regions, N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telDialogCloneEntry, FileOff: 0x25000,
+		Bytes: len(telDialog.Bytes), SHA256: sha(telDialog.Bytes), Kind: "tel_scoped_renderer",
+		Role: "TEL-only bounded first-line renderer", Reason: "original renderer clone, 29 fixed dialogue calls, one indexed girl greeting and 29 indexed multiline first-line calls; max 54 bytes else retail X",
+	})
+	m.Regions = append(m.Regions, N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telSavedSurnameShim, FileOff: telSavedSurnameWindowOff,
+		Bytes: len(telDialog.SavedNameBytes), SHA256: sha(telDialog.SavedNameBytes), Kind: "tel_saved_surname",
+		Role: "TEL saved surname first-line display adapter", Reason: "authenticated direct saved-field body; reuse same-overlay guarded N6 core and retail formatter fallback",
+	})
+	m.Regions = append(m.Regions, N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telSurnameCopyShim, FileOff: telSurnameComposeOff,
+		Bytes: len(telDialog.SurnameComposeBytes), SHA256: sha(telDialog.SurnameComposeBytes), Kind: "tel_surname_composition",
+		Role: "TEL saved surname mixed-dialogue composition", Reason: "four authenticated saved-surname copies/appends into script buffers, guarded local N6 conversion with retail fallback",
+	})
+	m.Regions = append(m.Regions, N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telGivenAddressShim, FileOff: telGivenAddressOff,
+		Bytes: len(telDialog.GivenAddressBytes), SHA256: sha(telDialog.GivenAddressBytes), Kind: "tel_given_address",
+		Role: "TEL selector-13 saved given-name display adapter", Reason: "retail case 13 source-attested, length-bounded display-only romanization",
+	})
+	m.Accounting.PayloadRegions++
+	m.Accounting.PayloadBodyBytes += len(telDialog.GivenAddressBytes)
+	m.Accounting.PayloadRegions++
+	m.Accounting.PayloadBodyBytes += len(telDialog.SurnameComposeBytes)
+	m.Accounting.PayloadRegions++
+	m.Accounting.PayloadBodyBytes += len(telDialog.SavedNameBytes)
+	m.Accounting.OverlayCallsiteWords += len(telDialog.Calls)
+	m.Accounting.OverlayChangedWords += len(telDialog.Calls)
+	m.Accounting.PayloadRegions++
+	m.Accounting.PayloadBodyBytes += len(telDialog.Bytes)
 	p.Manifest = m
 
 	if err := verifyN20IntegratedBuild(exe, overlays, &p); err != nil {
@@ -351,7 +393,7 @@ func buildN20BuildManifest(exe []byte, overlays map[string][]byte,
 		return m, fmt.Errorf("rebuilt romanizer is not the leading body bytes in both modules")
 	}
 
-	// Per-word manifest: 30 EXE relocation + 12 overlay relocation + 371
+	// Per-word manifest: 30 EXE relocation + 12 overlay relocation + 372
 	// overlay callsite JAL retargets.
 	for _, w := range fp.EXEWords {
 		m.Words = append(m.Words, N20ManifestWord{
@@ -359,6 +401,12 @@ func buildN20BuildManifest(exe []byte, overlays map[string][]byte,
 			Role:   w.Role,
 			Reason: "redirect the authenticated EXE materialisation to the relocated 12-byte field at 0x8012B500/0x8012B510",
 		})
+	}
+	// Christmas-only guarded copies preserve original A and optionally mirror
+	// scene-local sources into relocated A; no other carrier is modified.
+	m.Words = append(m.Words, N20ManifestWord{Owner: fp.SHOUCopyWord.Owner, PC: fp.SHOUCopyWord.PC, Old: fp.SHOUCopyWord.Old, New: fp.SHOUCopyWord.New, Kind: "jal", Role: fp.SHOUCopyWord.Role, Reason: "same-overlay guarded strcpy ABI, original fallback and source-specific family romanization"})
+	for _, w := range fp.SHOULabelWords {
+		m.Words = append(m.Words, N20ManifestWord{Owner: w.Owner, PC: w.PC, Old: w.Old, New: w.New, Kind: "jal", Role: w.Role, Reason: "exact source-owned A label; retail old-A write followed by bounded relocated-A mirror"})
 	}
 	for _, w := range fp.OverlayWords {
 		m.Words = append(m.Words, N20ManifestWord{
@@ -444,8 +492,8 @@ func buildN20BuildManifest(exe []byte, overlays map[string][]byte,
 		OverlayRelocationWords: len(fp.OverlayWords),
 		OverlayCallsiteN6:      n6Calls,
 		OverlayCallsiteN6FP:    fpCalls,
-		OverlayCallsiteWords:   n6Calls + fpCalls,
-		OverlayChangedWords:    len(fp.OverlayWords) + n6Calls + fpCalls,
+		OverlayCallsiteWords:   n6Calls + fpCalls + 1 + len(fp.SHOULabelWords),
+		OverlayChangedWords:    len(fp.OverlayWords) + n6Calls + fpCalls + 1,
 		PayloadGuardBytes:      guardBytes,
 		PayloadBodyBytes:       bodyBytes,
 		PayloadRegions:         len(m.Regions),
@@ -576,6 +624,88 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			Reason: "same-overlay JAL retarget from retail 0x800847b8 to guard 0x80160e10; retail is called first by the shim; delay slot preserved"})
 		fpCalls++
 	}
+	// Reconstruct the Christmas-only callsites independently from original bytes.
+	{
+		const owner = "SHOUGATU.EXN"
+		const off = int(shouFamilySHOUCopyPC - OverlaySlotBase)
+		raw := overlays[owner]
+		if len(raw) != 196608 || binary.LittleEndian.Uint32(raw[off:]) != jalWord(shouFamilySHOUCopyOld) || binary.LittleEndian.Uint32(raw[off+4:]) != 0x2484A16C {
+			return fmt.Errorf("verify: ChristmasFamily authenticated callsite drift")
+		}
+		expected = append(expected, N20ManifestWord{Owner: owner, PC: shouFamilySHOUCopyPC, Old: jalWord(shouFamilySHOUCopyOld), New: jalWord(shouFamilySHOUStub), Kind: "jal", Role: "SHOU guarded duplicate surname copy", Reason: "same-overlay guarded strcpy ABI, original fallback and source-specific family romanization"})
+	}
+	for _, site := range shouSceneLabelCalls {
+		const owner = "SHOUGATU.EXN"
+		raw := overlays[owner]
+		off := int(site.pc - OverlaySlotBase)
+		if len(raw) != 196608 || binary.LittleEndian.Uint32(raw[off:]) != jalWord(shouFamilySHOUCopyOld) || binary.LittleEndian.Uint32(raw[off+4:]) != site.delay {
+			return fmt.Errorf("verify: Christmas A label source drift at %#x", site.pc)
+		}
+		expected = append(expected, N20ManifestWord{Owner: owner, PC: site.pc, Old: jalWord(shouFamilySHOUCopyOld), New: jalWord(shouFamilySHOUStub), Kind: "jal", Role: "source-bounded Christmas A dual-write", Reason: "exact source-owned A label; retail old-A write followed by bounded relocated-A mirror"})
+	}
+	// Re-derive the TEL inventory independently of the provided manifest.
+	telSites, err := telOriginalDialogSites(overlays["TEL.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: TEL scoped sites: %w", err)
+	}
+	for _, pc := range telSites {
+		expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: pc,
+			Old: jalWord(telDialogOriginalEntry), New: jalWord(telDialogCloneEntry), Kind: "jal",
+			Role: "TEL-local NPC inline body", Reason: "only authenticated adjacent NPC speaker/0x0D body calls; bounded first-line X, retail fallback for long lines"})
+	}
+	indexedGreeting, err := telOriginalIndexedGreeting(exe, overlays["TEL.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: TEL indexed greeting: %w", err)
+	}
+	expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: indexedGreeting,
+		Old: jalWord(telDialogOriginalEntry), New: jalWord(telDialogCloneEntry), Kind: "jal",
+		Role: "TEL indexed NPC greeting inline body", Reason: "source-indexed EXE speaker/TEL first-line pair, retail argument/delay preservation; bounded X with long-line fallback"})
+	adjacent, err := telOriginalAdjacentSpeakerFirstLines(overlays["TEL.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: TEL adjacent speaker: %w", err)
+	}
+	for _, pc := range adjacent {
+		expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: pc,
+			Old: jalWord(telDialogOriginalEntry), New: jalWord(telDialogCloneEntry), Kind: "jal",
+			Role:   "TEL adjacent source-owned speaker first line",
+			Reason: "retail surname nameplate and first-line body pair; unchanged other lines and renderer"})
+	}
+	wrapperSites, err := telIndexedWrappedGirlSites(overlays["TEL.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: TEL indexed multiline: %w", err)
+	}
+	for _, pc := range wrapperSites {
+		expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: pc,
+			Old: jalWord(telDialogueWrapperOriginal), New: jalWord(telDialogueWrapperClone), Kind: "jal",
+			Role:   "TEL indexed multiline girl first-line wrapper",
+			Reason: "source-indexed EXE girl speaker and first-line body; authentic multiline wrapper with two local formatters and bounded X"})
+	}
+	if err := telSavedSurnameSource(overlays["TEL.EXN"]); err != nil {
+		return fmt.Errorf("verify: TEL saved surname source: %w", err)
+	}
+	expected = append(expected, N20ManifestWord{
+		Owner: "TEL.EXN", PC: telSavedSurnameCall, Old: jalWord(telDialogOriginalEntry), New: jalWord(telSavedSurnameShim), Kind: "jal",
+		Role: "TEL saved surname dialogue display", Reason: "authenticated saved-surname first conversation line; same-overlay N6 romanizer with original formatter fallback",
+	})
+	if err := telSurnameComposeSource(overlays["TEL.EXN"]); err != nil {
+		return fmt.Errorf("verify: TEL surname composition source: %w", err)
+	}
+	for _, site := range telSurnameCompositionSites {
+		shim := telSurnameCopyShim
+		if site.original == 0x800ae100 {
+			shim = telSurnameAppendShim
+		}
+		expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: site.pc, Old: jalWord(site.original), New: jalWord(shim), Kind: "jal",
+			Role: "TEL saved surname mixed-dialogue composition", Reason: "exact source-owned surname into TEL script buffer, guarded same-overlay N6 conversion with retail fallback"})
+	}
+	if err := telGivenAddressSource(exe, overlays["TEL.EXN"]); err != nil {
+		return fmt.Errorf("verify: TEL given address source: %w", err)
+	}
+	expected = append(expected, N20ManifestWord{
+		Owner: "TEL.EXN", PC: telGivenAddressCall, Old: jalWord(0x80051508), New: jalWord(telGivenAddressShim),
+		Kind: "jal", Role: "TEL saved given-name address, selector 13",
+		Reason: "source-dispatched selector 13 performs exact saved given copy; guard N6 conversion and 16-byte local field; retail fallback",
+	})
 	if n6Calls != 136 || fpCalls != 235 {
 		return fmt.Errorf("verify: callsite coverage drifted: N6=%d N6-FP=%d, want 136/235", n6Calls, fpCalls)
 	}
@@ -729,7 +859,11 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			// guard/body/verifier layout for the fields used here.
 			mod.Guard, mod.Body, mod.Sum32, mod.XOR32 = p.N6.Module.Guard, p.N6.Module.Body, p.N6.Module.Sum32, p.N6.Module.XOR32
 		} else if fpNames[name] {
-			mod = p.FieldPrep.Module
+			if name == "SHOUGATU.EXN" && p.FieldPrep.FieldPrep.SHOUCopyModule != nil {
+				mod = *p.FieldPrep.FieldPrep.SHOUCopyModule
+			} else {
+				mod = p.FieldPrep.Module
+			}
 		}
 		for _, r := range p.Manifest.Regions {
 			if r.Owner != name {
@@ -741,6 +875,54 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 				b = mod.Guard
 			case "body":
 				b = mod.Body
+			case "tel_given_address":
+				if name != "TEL.EXN" {
+					return fmt.Errorf("verify: TEL given address wrong carrier %s", name)
+				}
+				code, err := telGivenAddressPayload()
+				if err != nil {
+					return err
+				}
+				if !bytes.Equal(code, p.TELDialog.GivenAddressBytes) {
+					return fmt.Errorf("verify: TEL given address payload drift")
+				}
+				b = code
+			case "tel_surname_composition":
+				if name != "TEL.EXN" {
+					return fmt.Errorf("verify: TEL surname composition in wrong overlay %s", name)
+				}
+				code, err := telSurnameComposePayload()
+				if err != nil {
+					return err
+				}
+				if !bytes.Equal(code, p.TELDialog.SurnameComposeBytes) {
+					return fmt.Errorf("verify: TEL surname composition drift")
+				}
+				b = code
+			case "tel_saved_surname":
+				if name != "TEL.EXN" {
+					return fmt.Errorf("verify: saved surname in wrong carrier %s", name)
+				}
+				shim, err := telSavedSurnameAdapter()
+				if err != nil {
+					return err
+				}
+				if !bytes.Equal(shim, p.TELDialog.SavedNameBytes) {
+					return fmt.Errorf("verify: saved surname shim drift")
+				}
+				b = shim
+			case "tel_scoped_renderer":
+				if name != "TEL.EXN" {
+					return fmt.Errorf("verify: scoped renderer in wrong overlay %s", name)
+				}
+				cloned, err := telCloneSource(exe, overlays["TEL.EXN"])
+				if err != nil {
+					return fmt.Errorf("verify: TEL clone: %w", err)
+				}
+				if !bytes.Equal(cloned, p.TELDialog.Bytes) {
+					return fmt.Errorf("verify: TEL clone differs from original-derived bytes")
+				}
+				b = cloned
 			default:
 				return fmt.Errorf("verify: %s unknown region kind %s", name, r.Kind)
 			}
@@ -819,11 +1001,11 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if acc.EXEEntryHooks != 0 || acc.EXERelocationPairs != 15 || acc.EXERelocationWords != 30 ||
 		acc.OverlayRelocationPairs != 6 || acc.OverlayRelocationWords != 12 ||
 		acc.OverlayCallsiteN6 != 136 || acc.OverlayCallsiteN6FP != 235 ||
-		acc.OverlayCallsiteWords != 371 || acc.TotalEXEChangedWords != 30 ||
+		acc.OverlayCallsiteWords != 443 || acc.TotalEXEChangedWords != 30 ||
 		acc.LegacyEXEChangedWords != 0 {
 		return fmt.Errorf("verify: change accounting %+v", acc)
 	}
-	if acc.PayloadRegions != len(p.Manifest.Regions) || acc.PayloadRegions != 34 {
+	if acc.PayloadRegions != len(p.Manifest.Regions) || acc.PayloadRegions != 38 {
 		return fmt.Errorf("verify: payload region accounting %d", acc.PayloadRegions)
 	}
 	safety, err := AuditN20RelocOwnership(exe, overlays)
@@ -887,7 +1069,44 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 		guardBytes += len(mod.Guard)
 		bodyBytes += len(mod.Body)
 	}
-	if len(p.Manifest.Regions) != len(wantRegions) || len(wantRegions) != 34 {
+	// Independently derive the extra TEL-local clone from the authenticated EXE.
+	clonedTEL, err := telCloneSource(exe, overlays["TEL.EXN"])
+	if err != nil {
+		return err
+	}
+	wantRegions[regionKey{"TEL.EXN", "tel_scoped_renderer"}] = N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telDialogCloneEntry, FileOff: 0x25000,
+		Bytes: len(clonedTEL), SHA256: sha(clonedTEL), Kind: "tel_scoped_renderer",
+	}
+	savedTEL, err := telSavedSurnameAdapter()
+	if err != nil {
+		return err
+	}
+	wantRegions[regionKey{"TEL.EXN", "tel_saved_surname"}] = N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telSavedSurnameShim, FileOff: telSavedSurnameWindowOff,
+		Bytes: len(savedTEL), SHA256: sha(savedTEL), Kind: "tel_saved_surname",
+	}
+	givenTEL, err := telGivenAddressPayload()
+	if err != nil {
+		return err
+	}
+	wantRegions[regionKey{"TEL.EXN", "tel_given_address"}] = N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telGivenAddressShim, FileOff: telGivenAddressOff,
+		Bytes: len(givenTEL), SHA256: sha(givenTEL), Kind: "tel_given_address",
+	}
+	bodyBytes += len(givenTEL)
+	composedTEL, err := telSurnameComposePayload()
+	if err != nil {
+		return err
+	}
+	wantRegions[regionKey{"TEL.EXN", "tel_surname_composition"}] = N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telSurnameCopyShim, FileOff: telSurnameComposeOff,
+		Bytes: len(composedTEL), SHA256: sha(composedTEL), Kind: "tel_surname_composition",
+	}
+	bodyBytes += len(composedTEL)
+	bodyBytes += len(savedTEL)
+	bodyBytes += len(clonedTEL)
+	if len(p.Manifest.Regions) != len(wantRegions) || len(wantRegions) != 38 {
 		return fmt.Errorf("verify: region records %d want %d", len(p.Manifest.Regions), len(wantRegions))
 	}
 	gotRegions := map[regionKey]N20ManifestRegion{}
@@ -977,6 +1196,16 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	// The composed map must be exactly the two component plans, so a caller
 	// cannot substitute a hand-built overlay after validation.
 	for name, d := range p.N6.Patched {
+		if name == "TEL.EXN" {
+			result, retargeted, err := telScopedDialogPatch(exe, overlays[name], d)
+			if err != nil {
+				return fmt.Errorf("verify: TEL plan replay: %w", err)
+			}
+			if !bytes.Equal(result.Bytes, p.TELDialog.Bytes) || !bytes.Equal(result.SavedNameBytes, p.TELDialog.SavedNameBytes) || !bytes.Equal(result.SurnameComposeBytes, p.TELDialog.SurnameComposeBytes) || !bytes.Equal(result.GivenAddressBytes, p.TELDialog.GivenAddressBytes) || !bytes.Equal(p.PatchedOverlays[name], retargeted) {
+				return fmt.Errorf("verify: TEL scoped component replay drift")
+			}
+			continue
+		}
 		if !bytes.Equal(p.PatchedOverlays[name], d) {
 			return fmt.Errorf("verify: N6 carrier %s differs from its component plan", name)
 		}
@@ -1043,7 +1272,7 @@ func n20RelocGateProof(m OverlayFieldPrepModule) (N20GateProof, error) {
 	if m.ShimBodyRAM < OLBodyBase || int(m.ShimBodyRAM-OLBodyBase) >= len(m.Body) {
 		return g, fmt.Errorf("gate: shim outside body")
 	}
-	shim := m.Body[int(m.ShimBodyRAM-OLBodyBase):]
+	shim := m.Body[int(m.ShimBodyRAM-OLBodyBase) : int(m.ShimBodyRAM-OLBodyBase)+m.ShimBytes]
 	for i := 0; i+4 <= len(shim); i += 4 {
 		w := binary.LittleEndian.Uint32(shim[i:])
 		if w == g.GateWord {
@@ -1330,6 +1559,9 @@ func patchedModuleFor(name string, n6 OverlayLocalPlan, fp N20RelocPlan) (*Overl
 		return &m, true
 	}
 	if _, ok := fp.PatchedOverlay[name]; ok {
+		if name == "SHOUGATU.EXN" && fp.FieldPrep.SHOUCopyModule != nil {
+			return fp.FieldPrep.SHOUCopyModule, false
+		}
 		m := fp.Module
 		return &m, false
 	}

@@ -88,7 +88,7 @@ func fullCorpusFiles(root string) ([]string, string, error) {
 }
 
 // fullReadN20 composes the authenticated integrated baseline and direct
-// saved-name queue hooks against the same retail bytes. The base 413-word
+// saved-name queue hooks against the same retail bytes. The base 414-word
 // manifest is checked separately from the 13 additional hook records.
 func fullReadN20(source fullISOReader) (n.N20IntegratedPlan, []n.N20ManifestWord, error) {
 	var empty n.N20IntegratedPlan

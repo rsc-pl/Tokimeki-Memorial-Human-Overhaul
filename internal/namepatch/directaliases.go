@@ -72,16 +72,19 @@ func verifyCallWords(buf []byte, points []struct {
 // English renderer reservation. originalGEKO must be the retail overlay.
 // The two unresolved sites, indirect references, RAM destinations and display
 // bounds remain unmodified and UNAPPROVED; these outputs cannot be booted.
-func StageDirectFixedAliases(stagedEXE, originalGEKO []byte, sourceNames ...[]string) ([]byte, []byte, DirectAliasStage, error) {
+func StageDirectFixedAliases(stagedEXE, originalGEKO []byte, sourceNames []string) ([]byte, []byte, DirectAliasStage, error) {
 	fail := func(err error) ([]byte, []byte, DirectAliasStage, error) { return nil, nil, DirectAliasStage{}, err }
+	if len(sourceNames) != Entries {
+		return fail(fmt.Errorf("expected 16 source-authored labels"))
+	}
 	const gekoDigest = "f7295203dc38417b8ff3c274833c06554dd072f5a6efcc74674cdaf38f06e5ad"
 	if fmt.Sprintf("%x", sha256.Sum256(originalGEKO)) != gekoDigest {
 		return fail(fmt.Errorf("N10 GEKO revision is not verified"))
 	}
-	return stageDirectFixedAliasesAfterIdentityProof(stagedEXE, originalGEKO, sourceNames...)
+	return stageDirectFixedAliasesAfterIdentityProof(stagedEXE, originalGEKO, sourceNames)
 }
 
-func stageDirectFixedAliasesAfterIdentityProof(stagedEXE, originalGEKO []byte, sourceNames ...[]string) ([]byte, []byte, DirectAliasStage, error) {
+func stageDirectFixedAliasesAfterIdentityProof(stagedEXE, originalGEKO []byte, sourceNames []string) ([]byte, []byte, DirectAliasStage, error) {
 	fail := func(err error) ([]byte, []byte, DirectAliasStage, error) { return nil, nil, DirectAliasStage{}, err }
 	start, pool, err := graphics.RendererNameTail(stagedEXE)
 	if err != nil {
@@ -113,15 +116,11 @@ func stageDirectFixedAliasesAfterIdentityProof(stagedEXE, originalGEKO []byte, s
 	if at > N10CompactExpectedBytes || !bytes.Equal(pool[at:N10CompactExpectedBytes], make([]byte, N10CompactExpectedBytes-at)) {
 		return fail(fmt.Errorf("N10 compact pool has nonzero slack after %d bytes", at))
 	}
-	// The two shared entries must retain their intended identity. GEKO's
-	// honorific-bearing "Tatebayashi-san" is NOT one of these entries.
-	labels := []string{"Fujisaki", "Tatebayashi"} // legacy offline fixture default
-	if len(sourceNames) > 0 {
-		if len(sourceNames[0]) != Entries {
-			return fail(fmt.Errorf("expected 16 source-authored labels"))
-		}
-		labels = []string{sourceNames[0][0], sourceNames[0][11]}
+	// Both aliases must match the names supplied by the translated source.
+	if len(sourceNames) != Entries {
+		return fail(fmt.Errorf("expected 16 source-authored labels"))
 	}
+	labels := []string{sourceNames[0], sourceNames[11]}
 	for _, entry := range []struct {
 		index int
 		value string

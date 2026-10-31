@@ -459,7 +459,7 @@
         {
           "offset": "0x1ad8",
           "original": "この前と同じ所だったわね。\n何度も同じ所は\n飽きてしょうがないわ。",
-          "text": "Same place as last time.\nThe same place over\nand over bores me."
+          "text": "Same place as last time.\nI'm sick of coming\nhere over and over."
         },
         {
           "offset": "0x1b1c",
@@ -739,7 +739,7 @@
         {
           "offset": "0x30b4",
           "original": "{G}、ごめんね。\nちょっとした手違いで、\n遅くなっちゃった。",
-          "text": "So sorry, {G}\nThere was a mix-up,\nso I'm late."
+          "text": "Sorry, {G}.\nThere was a mix-up,\nso I'm late."
         },
         {
           "offset": "0x30ec",
@@ -754,7 +754,7 @@
         {
           "offset": "0x316c",
           "original": "{G}、ごめんね。\nちょっとした手違いで、\n遅くなっちゃった。",
-          "text": "So sorry, {G}\nThere was a mix-up,\nso I'm late."
+          "text": "Sorry, {G}.\nThere was a mix-up,\nso I'm late."
         },
         {
           "offset": "0x31a4",
@@ -769,7 +769,7 @@
         {
           "offset": "0x3200",
           "original": "{G}、ごめんね。\nちょっとした手違いで、\n遅くなっちゃった。",
-          "text": "So sorry, {G}\nThere was a mix-up,\nso I'm late."
+          "text": "Sorry, {G}.\nThere was a mix-up,\nso I'm late."
         },
         {
           "offset": "0x3238",
@@ -784,7 +784,7 @@
         {
           "offset": "0x32e4",
           "original": "おーい、\n{G}…。\n待ってくれー。",
-          "text": "Hey,\n{G}\nWait up!"
+          "text": "Hey,\n{G}!\nWait up!"
         },
         {
           "offset": "0x3304",
@@ -1064,7 +1064,7 @@
         {
           "offset": "0x4ac8",
           "original": "何度見ても\n無駄なパレードね。",
-          "text": "Always such a\npointless parade."
+          "text": "This parade never\ngets any less pointless."
         },
         {
           "offset": "0x4aec",
@@ -1324,7 +1324,7 @@
         {
           "offset": "0x5d7c",
           "original": "こんな形だけの服の\nどこがいいのかしら？",
-          "text": "What's so good about\nclothes that are all show?"
+          "text": "What's so great about\nclothes made just for show?"
         },
         {
           "offset": "0x5da4",
@@ -1699,7 +1699,7 @@
         {
           "offset": "0x7ab4",
           "original": "あっ、向こうで\nヒーローショーを\nやってるぞ。",
-          "text": "Oh, there's a hero\nshow going on\nover that way."
+          "text": "Hey, there's a hero\nshow going on\nover there."
         },
         {
           "offset": "0x7ae4",
@@ -1749,7 +1749,7 @@
         {
           "offset": "0x7c3c",
           "original": "待たせたわね。\nさあ、行くわよ。",
-          "text": "Kept you waiting.\nLet's go."
+          "text": "Kept you waiting, huh?\nCome on, let's go."
         },
         {
           "offset": "0x7c5c",
@@ -2129,12 +2129,12 @@
         {
           "offset": "0x9c54",
           "original": "頭を休めるには\nま、いいかもね。",
-          "text": "Well, it's fine for\nresting the brain."
+          "text": "It might be nice\nto give my brain a rest."
         },
         {
           "offset": "0x9c74",
           "original": "今日は、\n並木道の方に行こうよ。",
-          "text": "Today let's head\nfor the tree-lined path."
+          "text": "Let's go down the\ntree-lined path today."
         },
         {
           "offset": "0x9c94",
@@ -2159,12 +2159,12 @@
         {
           "offset": "0x9da0",
           "original": "頭を休めるには\nま、いいかもね。",
-          "text": "Well, it's fine for\nresting the brain."
+          "text": "It might be nice\nto give my brain a rest."
         },
         {
           "offset": "0x9dc0",
           "original": "今日は、\n池の方に行こうよ。",
-          "text": "Today let's head\nover to the pond."
+          "text": "Let's head over\nto the pond today."
         },
         {
           "offset": "0x9ddc",

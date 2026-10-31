@@ -54,7 +54,7 @@
         {
           "offset": "0x160",
           "original": "俺でよかったら、\n一緒に考えるけど…。",
-          "text": "If I'm any help,\nI could think with you..."
+          "text": "If it'd help,\nwe can brainstorm together."
         },
         {
           "offset": "0x1a0",
@@ -69,7 +69,7 @@
         {
           "offset": "0x204",
           "original": "そうね。\n頭を冷やしながら、\n考えてみるわ。",
-          "text": "Yes.\nI'll cool my head\nand think it over."
+          "text": "Yeah.\nI'll clear my head\nand think it over."
         },
         {
           "offset": "0x23c",
@@ -169,7 +169,7 @@
         {
           "offset": "0x8e4",
           "original": "でも、ほら見なさいよ。\nこの点数。",
-          "text": "But look at it.\nLook at this score."
+          "text": "But just look\nat this score!"
         },
         {
           "offset": "0x908",
@@ -189,7 +189,7 @@
         {
           "offset": "0x974",
           "original": "そう？\nさあ、帰るわよ。",
-          "text": "Is it?\nCome, we're leaving."
+          "text": "Oh, really?\nCome on, let's go."
         },
         {
           "offset": "0x98c",
@@ -224,7 +224,7 @@
         {
           "offset": "0xc5c",
           "original": "決まってるわ。\n私の実力よ。",
-          "text": "Obviously.\nMy skill."
+          "text": "Obviously.\nIt's all skill."
         },
         {
           "offset": "0xc78",
@@ -254,7 +254,7 @@
         {
           "offset": "0xd2c",
           "original": "あーぁ、銀行の機械も\nこのぐらい簡単に出せれば、\n研究資金に\n困らないのに…。",
-          "text": "Sigh, if only banks\npaid out this easily,\nI'd never lack\nresearch funds..."
+          "text": "If only ATMs\npaid out this easily,\nI'd never run short\nof research funds..."
         },
         {
           "offset": "0xd78",
@@ -269,7 +269,7 @@
         {
           "offset": "0xf84",
           "original": "大安売りですって？\n買いだめよ。\nほら、手伝いなさい。",
-          "text": "A huge sale?\nWe stock up.\nCome, help me."
+          "text": "A huge sale?\nLet's stock up!\nCome on, help me."
         },
         {
           "offset": "0xfbc",
@@ -279,12 +279,12 @@
         {
           "offset": "0x1004",
           "original": "これも、これも、\nみんな安いわ。\n全部、買い占めよ。",
-          "text": "This, and this...\nit's all so cheap.\nI'll buy them all."
+          "text": "This, and this...\nEverything's so cheap!\nI'll buy it all!"
         },
         {
           "offset": "0x1038",
           "original": "{G}。\n買ってる姿が怖いよ…。",
-          "text": "Oh, {G}.\nThe way you shop is scary."
+          "text": "You know, {G},\nyou're scary when you shop."
         },
         {
           "offset": "0x105c",
@@ -324,7 +324,7 @@
         {
           "offset": "0x12e0",
           "original": "探したわよ。{P}、\nこれから調査よ。",
-          "text": "Found you, {P}.\nLet's investigate."
+          "text": "Found you, {P}.\nTime to investigate."
         },
         {
           "offset": "0x1304",
@@ -334,7 +334,7 @@
         {
           "offset": "0x131c",
           "original": "ホテルのそばの農場に、\nいい研究テーマがあったのよ。",
-          "text": "A farm by the hotel has\na fine research subject."
+          "text": "I found a promising topic\nat the farm by the hotel."
         },
         {
           "offset": "0x1350",
@@ -349,12 +349,12 @@
         {
           "offset": "0x13b8",
           "original": "初めて見た。",
-          "text": "My first one."
+          "text": "I've never seen one before."
         },
         {
           "offset": "0x13c8",
           "original": "ほらつっ立っていないで、\n調査よ、調査。\nまずは、中心からね。",
-          "text": "Don't just stand there,\ninvestigate!\nStart at the center."
+          "text": "Don't just stand there!\nWe need to investigate.\nStart at the center."
         },
         {
           "offset": "0x1414",

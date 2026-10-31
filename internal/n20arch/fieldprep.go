@@ -385,6 +385,7 @@ type OverlayFieldPrepReport struct {
 
 // OverlayFieldPrepPlan is an in-memory delivery plan. No file is written.
 type OverlayFieldPrepPlan struct {
+	SHOUCopyModule *OverlayFieldPrepModule // only SHOUGATU, authenticated ChristmasFamily copy route
 	Module         OverlayFieldPrepModule
 	Patched        map[string][]byte
 	SitesByOverlay map[string][]FieldPrepCallsite

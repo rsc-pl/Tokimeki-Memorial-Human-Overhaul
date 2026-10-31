@@ -22,6 +22,13 @@ func PublishIntoEmptyBuildDirectory(stage, output string) error {
 	if !original.IsDir() || original.Mode()&os.ModeSymlink != 0 {
 		return fmt.Errorf("empty build destination is not an ordinary directory: %s", output)
 	}
+	staged, err := os.Lstat(stage)
+	if err != nil {
+		return err
+	}
+	if !staged.IsDir() || staged.Mode()&os.ModeSymlink != 0 || os.SameFile(original, staged) {
+		return fmt.Errorf("staged build is not a distinct ordinary directory: %s", stage)
+	}
 	files, err := os.ReadDir(output)
 	if err != nil {
 		return err
@@ -41,6 +48,10 @@ func PublishIntoEmptyBuildDirectory(stage, output string) error {
 	old, err := os.Lstat(stage)
 	if err != nil || !os.SameFile(original, old) {
 		return rollback(fmt.Errorf("empty output identity changed during atomic publication"))
+	}
+	published, err := os.Lstat(output)
+	if err != nil || published.Mode()&os.ModeSymlink != 0 || !os.SameFile(staged, published) {
+		return rollback(fmt.Errorf("staged build identity changed during atomic publication"))
 	}
 	files, err = os.ReadDir(stage)
 	if err != nil || len(files) != 0 {

@@ -36,10 +36,10 @@ func verify(plan n.N20IntegratedPlan, exe []byte, original map[string][]byte) (q
 	if plan.SafeToPatch || plan.RuntimePass || m.SafeToPatch || m.RuntimePass || m.Safety.ExclusiveRuntimeOwnershipProven {
 		return r, errors.New("unexpected safety/runtime success flag in offline-only candidate")
 	}
-	if m.Schema != 2 || !m.Integrity.DeltaAuditPassed || m.Accounting.EXEEntryHooks != 0 || len(m.Words) != 413 || len(m.Regions) != 34 || len(original) != 26 || len(plan.PatchedOverlays) != 26 {
+	if m.Schema != 2 || !m.Integrity.DeltaAuditPassed || m.Accounting.EXEEntryHooks != 0 || len(m.Words) != 414 || len(m.Regions) != 34 || len(original) != 26 || len(plan.PatchedOverlays) != 26 {
 		return r, fmt.Errorf("manifest cardinality/schema/gate rejected: words=%d regions=%d", len(m.Words), len(m.Regions))
 	}
-	if m.Accounting.EXERelocationWords != 30 || m.Accounting.OverlayChangedWords != 383 || m.Carriers != 17 || m.SlotBytes != 12 || m.MaxInputKana != 3 {
+	if m.Accounting.EXERelocationWords != 30 || m.Accounting.OverlayChangedWords != 384 || m.Carriers != 17 || m.SlotBytes != 12 || m.MaxInputKana != 3 {
 		return r, errors.New("unexpected accounting or relocation geometry")
 	}
 	allowed := map[string]map[int]bool{"EXE": {}}

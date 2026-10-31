@@ -270,9 +270,12 @@ type GEKOG2Result struct {
 // StageGEKOG2 redirects only the second fixed GEKO source and preserves the
 // entire two-slot original Japanese region. Caller must explicitly resolve
 // whether JP scene/branch supports the -san policy; this API does not choose.
-func StageGEKOG2(exe, geko, originalGEKO []byte, policy string, nameForIndex11 ...string) ([]byte, []byte, GEKOG2Result, error) {
+func StageGEKOG2(exe, geko, originalGEKO []byte, policy string, nameForIndex11 string) ([]byte, []byte, GEKOG2Result, error) {
 	fail := func(format string, args ...any) ([]byte, []byte, GEKOG2Result, error) {
 		return nil, nil, GEKOG2Result{}, fmt.Errorf("N10 GEKO G2: "+format, args...)
+	}
+	if nameForIndex11 == "" {
+		return fail("source-authored name for entry 11 is required")
 	}
 	if fmt.Sprintf("%x", sha256.Sum256(originalGEKO)) != n10Phase2ImageSHA["GEKO.EXN"] || len(geko) != len(originalGEKO) || len(exe) < N10Phase2SpareEnd {
 		return fail("source revision or length mismatch")
@@ -283,12 +286,8 @@ func StageGEKOG2(exe, geko, originalGEKO []byte, policy string, nameForIndex11 .
 	if !bytes.Equal(exe[N10Phase2G2Offset:N10Phase2SpareEnd], make([]byte, N10Phase2SpareEnd-N10Phase2G2Offset)) {
 		return fail("G2 destination or spare already occupied")
 	}
-	// The source-owned entry is read from the already staged short-name
-	// pointer table. Never substitute the historical engineering fixture.
-	name := "Tatebayashi" // Backward-compatible test-only default.
-	if len(nameForIndex11) > 0 {
-		name = nameForIndex11[0]
-	}
+	// The source-owned name is mandatory; never infer a translation from a fixture.
+	name := nameForIndex11
 	shortPtr := binary.LittleEndian.Uint32(exe[PointerTable+11*4:])
 	if shortPtr < Base || shortPtr >= Base+uint32(len(exe)) || name == "" {
 		return fail("invalid staged short name entry 11")

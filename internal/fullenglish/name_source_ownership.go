@@ -29,6 +29,7 @@ const (
 
 type namePoolLayoutNameSlot struct {
 	start, end int
+	nameEnd    int // first byte after the encoded text and its NUL
 	value      string
 }
 
@@ -102,23 +103,73 @@ func namePoolLayoutReadNameSlots(image []byte, original []byte, table, start, en
 			return nil, fmt.Errorf("name index %d: %w", i, e)
 		}
 		slots[i].end = limit
+		slots[i].nameEnd = at + nul + 1
 		slots[i].value = name
 	}
 	return slots, nil
 }
 
 func namePoolLayoutExpandedAbbreviation(source, target string) bool {
-	// Current official-era EN fits fixed source name slots by abbreviating,
-	// e.g. `Fujisaki S.`. N10's complete value `Fujisaki Shiori` can be
-	// accepted only as an explicit extension of the exact same prefix.
+	// A complete English source name must match the selected translated
+	// value exactly. Only a real initial abbreviation, e.g. `Fujisaki S.`,
+	// permits an expansion to a longer source-owned value. A plain prefix
+	// (`Fujisaki S`) or an existing full name is NOT an abbreviation.
 	if source == target {
 		return true
 	}
-	s := strings.TrimSuffix(source, ".")
-	return len(s) >= 3 && strings.HasPrefix(target, s)
+	if !strings.HasSuffix(source, ".") {
+		return false
+	}
+	prefix := strings.TrimSuffix(source, ".")
+	space := strings.LastIndexByte(prefix, ' ')
+	if space < 1 || space != len(prefix)-2 || strings.Contains(prefix[:space], " ") {
+		return false
+	}
+	initial := prefix[len(prefix)-1]
+	if initial < 'A' || initial > 'Z' {
+		return false
+	}
+	return len(target) > len(prefix) && strings.HasPrefix(target, prefix)
 }
 
-func namePoolLayoutConfirmNameOwnership(retail, english []byte, shortCurrent, fullTarget []string) error {
+// namePoolLayoutVerifiedFullStage permits an intermediate, unpunctuated
+// placeholder ONLY if it is tied to the exact authenticated owner source
+// record, pool pointer, retail preimage and canonical staging capacity.
+// Arbitrary English prefixes remain forbidden.
+func namePoolLayoutVerifiedFullStage(retail []byte, staged, target string, index int, deferred []longNameDeferredName) bool {
+	if namePoolLayoutExpandedAbbreviation(staged, target) {
+		return true
+	}
+	for _, d := range deferred {
+		if d.kind != "full" || d.index != index {
+			continue
+		}
+		p := d.entry
+		if p.Source != "character_names.json" || p.File != "SLPM_86.053" || p.Text != target || d.placeholder != staged || p.Offset < namePoolLayoutFullPoolStart || p.Offset >= namePoolLayoutFullPointer {
+			return false
+		}
+		if namePoolLayoutFullPointer+4*index+4 > len(retail) || binary.LittleEndian.Uint32(retail[namePoolLayoutFullPointer+4*index:]) != nametables.Base+uint32(p.Offset) {
+			return false
+		}
+		raw, e := script.EncodeOriginal(p.Original)
+		if e != nil || len(raw) == 0 || p.Offset+len(raw) >= len(retail) || !bytes.Equal(retail[p.Offset:p.Offset+len(raw)], raw) || retail[p.Offset+len(raw)] != 0 {
+			return false
+		}
+		cap := len(raw) + 1
+		if p.Slot != nil {
+			cap = *p.Slot
+		} else {
+			for (p.Offset+cap)%4 != 0 && p.Offset+cap < len(retail) && retail[p.Offset+cap] == 0 {
+				cap++
+			}
+		}
+		exact, e := longNamePlaceholder(target, cap)
+		return e == nil && exact == staged
+	}
+	return false
+}
+
+func namePoolLayoutConfirmNameOwnership(retail, english []byte, shortCurrent, fullTarget []string, deferred ...longNameDeferredName) error {
 	if len(shortCurrent) != 16 || len(fullTarget) != 16 {
 		return errors.New("source names requires 16 name-source and name-target strings")
 	}
@@ -134,7 +185,7 @@ func namePoolLayoutConfirmNameOwnership(retail, english []byte, shortCurrent, fu
 		if short[i].value != shortCurrent[i] {
 			return fmt.Errorf("source names live EN short name %d differs from provisional N10 source: EN=%q N10=%q; no overwrite", i, short[i].value, shortCurrent[i])
 		}
-		if !namePoolLayoutExpandedAbbreviation(full[i].value, fullTarget[i]) {
+		if !namePoolLayoutVerifiedFullStage(retail, full[i].value, fullTarget[i], i, deferred) {
 			return fmt.Errorf("source names live EN full name %d not compatible with provisional N10 expansion: EN=%q N10=%q; no overwrite", i, full[i].value, fullTarget[i])
 		}
 	}
@@ -142,7 +193,7 @@ func namePoolLayoutConfirmNameOwnership(retail, english []byte, shortCurrent, fu
 	// belong to a validated name slot. Unrelated bytes cannot be waived.
 	mask := make([]bool, namePoolLayoutShortPointerEnd)
 	for _, slot := range append(full, short...) {
-		for i := slot.start; i < slot.end; i++ {
+		for i := slot.start; i < slot.nameEnd; i++ {
 			mask[i] = true
 		}
 	}
@@ -153,7 +204,12 @@ func namePoolLayoutConfirmNameOwnership(retail, english []byte, shortCurrent, fu
 		mask[i] = true
 	} // short pointers
 	for i := namePoolLayoutFullPoolStart; i < namePoolLayoutShortPointerEnd; i++ {
-		if english[i] != retail[i] && !mask[i] {
+		if english[i] != retail[i] && !mask[i] && english[i] != 0 {
+			// Old pool space may be cleared during source-controlled
+			// repacking, but a newly inserted nonzero byte outside the
+			// actual encoded names, their NULs and pointer tables is not
+			// an authorized translation edit. It must not be discarded
+			// silently by name relocation.
 			return fmt.Errorf("source names unowned English EXE name-area mutation +%#x", i)
 		}
 	}
@@ -163,11 +219,11 @@ func namePoolLayoutConfirmNameOwnership(retail, english []byte, shortCurrent, fu
 // Release exactly the semantically authenticated old N10 name storage to the
 // candidate's ownership. pool ownership keeps exclusive protection for its separate
 // 440-byte reserved renderer region. No other shared changes are bypassed.
-func fullMergeN10Names(retail, english, physical, authorized []byte, spareStart, spareEnd int, currentShort, targetFull []string) ([]byte, int, []fullConflict, error) {
+func fullMergeN10Names(retail, english, physical, authorized []byte, spareStart, spareEnd int, currentShort, targetFull []string, deferred ...longNameDeferredName) ([]byte, int, []fullConflict, error) {
 	if len(retail) != len(english) || len(retail) != len(physical) || len(english) < namePoolLayoutShortPointerEnd {
 		return nil, 0, nil, errors.New("source names unequal/short EXE")
 	}
-	if e := namePoolLayoutConfirmNameOwnership(retail, english, currentShort, targetFull); e != nil {
+	if e := namePoolLayoutConfirmNameOwnership(retail, english, currentShort, targetFull, deferred...); e != nil {
 		return nil, 0, nil, e
 	}
 	// The live English patch's short/full name pool is intentionally

@@ -22,49 +22,6 @@ import (
 	"tokimemo/internal/script"
 )
 
-// These lists are a byte-for-byte reification of the already tested name fixture
-// engineering fixture. They are not silently promoted to reviewed translation.
-var imageCompositionCurrent = []string{"Shiori", "Mio", "Himoo", "Ayako", "Nijino", "Yukari", "Nozomi", "Mira", "Yuko", "Megumi", "Yumi", "Miharu", "Ijuin", "Yoshio", "Sotoi", "Yumi"}
-var imageCompositionShort = []string{"Fujisaki", "Kisaragi", "Himoo", "Katagiri", "Nijino", "Koshiki", "Kiyokawa", "Kagami", "Asahina", "Mikihara", "Saotome", "Tatebayashi", "Ijuin", "Yoshio", "Sotoi", "Yumi"}
-var imageCompositionFull = []string{"Fujisaki Shiori", "Kisaragi Mio", "Himoo Yuina", "Katagiri Ayako", "Nijino Saki", "Koshiki Yukari", "Kiyokawa Nozomi", "Kagami Mira", "Asahina Yuko", "Mikihara Megumi", "Saotome Yumi", "Tatebayashi Miharu", "Ijuin Rei", "Saotome Yoshio", "Sotoi Yukinojou", "Player"}
-
-func imageCompositionInput(retail []byte, overlays map[string][]byte, policy string) (nametables.N10OfflineTransaction, error) {
-	if policy != nametables.N10GEKOBare && policy != nametables.N10GEKOSan {
-		return nametables.N10OfflineTransaction{}, errors.New("English image composition requires named GEKO policy")
-	}
-	stage, err := graphics.InstallRenderer(retail)
-	if err != nil {
-		return nametables.N10OfflineTransaction{}, err
-	}
-	if len(imageCompositionCurrent) != nametables.Entries || len(imageCompositionShort) != nametables.Entries || len(imageCompositionFull) != nametables.Entries {
-		return nametables.N10OfflineTransaction{}, errors.New("invalid research fixture names")
-	}
-	clear(stage[nametables.ShortStart:nametables.ShortEnd])
-	pos := nametables.ShortStart
-	for i, v := range imageCompositionCurrent {
-		raw, e := (&script.PairEncoder{}).Encode(v)
-		if e != nil {
-			return nametables.N10OfflineTransaction{}, e
-		}
-		if pos+len(raw)+1 > nametables.ShortEnd {
-			return nametables.N10OfflineTransaction{}, errors.New("English image composition fixture name pool overflow")
-		}
-		copy(stage[pos:], raw)
-		stage[pos+len(raw)] = 0
-		binary.LittleEndian.PutUint32(stage[nametables.PointerTable+4*i:], nametables.Base+uint32(pos))
-		pos += len(raw) + 1
-	}
-	originals := map[string][]byte{"SLPM_86.053": retail}
-	for _, name := range []string{"GEKO.EXN", "SHUGAKU.EXN", "SHOUGATU.EXN"} {
-		b, ok := overlays[name]
-		if !ok {
-			return nametables.N10OfflineTransaction{}, fmt.Errorf("missing N10 original %s", name)
-		}
-		originals[name] = b
-	}
-	return nametables.N10OfflineTransaction{Originals: originals, StagedEXE: stage, StagedEXESHA: sha256.Sum256(stage), CurrentShort: append([]string(nil), imageCompositionCurrent...), TargetShort: append([]string(nil), imageCompositionShort...), TargetFull: append([]string(nil), imageCompositionFull...), GEKOG2Policy: policy}, nil
-}
-
 // authoritativeSourceNames obtains the authoritative CURRENT game names from the
 // translated English executable, not the name fixture/English image composition engineering target fixture.
 // The owner will later edit surname strings in translation source; this layer
@@ -190,7 +147,7 @@ type imageCompositionReport struct {
 // reachable through this API.
 func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[string][]byte) error {
 	report := imageCompositionReport{Schema: 1, Status: "NOT_CHECKED", SafeToPatch: false, RuntimePass: false, ImageBuilt: false, SourceCUE: cuePath, ResearchFixtureOnly: false,
-		EditorialWarning: "long-name source conversion: labels are taken from the live English EXE or exact oversized character_names.json source records, never from historic surname fixtures. GEKO branches remain diagnostic; no owner choice inferred.", GekoDecision: "PENDING",
+		EditorialWarning: "long-name source conversion: labels are taken from the live English EXE or exact authenticated NPC name records (including the two GEKO event_words.json literals), never from historic surname fixtures. GEKO branches remain diagnostic; no owner choice inferred.", GekoDecision: "PENDING",
 		RuntimeBlocker: "No exclusive overlay-local C10 code RAM/CPU/DMA/IRQ ownership proof, complete parser NUL/alias proof or in-game GPU/layout QA. Offline validation does not establish runtime safety; image generation is permitted by the builder but gameplay safety remains unverified."}
 	out := func() error { return json.NewEncoder(w).Encode(report) }
 	paths, digest, err := fullCorpusFiles(root)
@@ -382,7 +339,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		mergeN10 := func(retail, translated, physical []byte) ([]byte, int, []fullConflict, error) {
 			return fullMergeN10Names(retail, translated, physical, manualCopyStage.EnglishRendererEXE,
 				namePoolGuardPoolAndGuardStart, namePoolGuardPoolAndGuardStart+namePoolGuardPoolAndGuardBytes,
-				liveShort, targetFull)
+				liveShort, targetFull, deferredNames...)
 		}
 		physical, clashes, examples, e := fullComposeCombinedWithEXEMerge(source, english, mergedCandidate, mergeN10)
 		item.ConflictBytes = clashes
@@ -511,6 +468,14 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			continue
 		}
 		physical[rpgPath] = rpgIntegration.Overlay
+		// The N20 ancestor has already installed the authenticated phone
+		// callsites and its owned renderer. Validate the final output without
+		// applying the same binary patch a second time.
+		if e = verifyTELNPCInlineLayout(exe, overlays, physical); e != nil {
+			item.Blocker = "telephone final dialogue integrity: " + e.Error()
+			results = append(results, item)
+			continue
+		}
 		item.NPCLabelGeometry = "npc_frame_inset_runtime_not_proven"
 		item.NPCFormatterScratch = "npc_scratch_formatted_length_load_delay_runtime_not_proven"
 		files, edited, e := fullEnglishContentProof(source, english, physical)

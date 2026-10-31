@@ -445,6 +445,8 @@ type N20RelocPlan struct {
 	EXEWords       []n20RelocWord         `json:"exe_words"`
 	PatchedOverlay map[string][]byte      `json:"-"`
 	OverlayWords   []n20RelocWord         `json:"overlay_words"`
+	SHOUCopyWord   n20RelocWord           `json:"-"`
+	SHOULabelWords []n20RelocWord         `json:"-"`
 	Module         OverlayFieldPrepModule `json:"-"`
 	FieldPrep      OverlayFieldPrepPlan   `json:"-"`
 	Destination    N20RelocDestAudit      `json:"destination"`
@@ -490,6 +492,31 @@ func PlanN20Relocation(exe []byte, overlays map[string][]byte,
 	if err != nil {
 		return p, err
 	}
+	// Only SHOUGATU receives the extended module; the other 25 overlays
+	// remain bit-for-bit identical to the authenticated predecessor.
+	shouModule, err := shouFamilyExtendFieldPrepModule(m)
+	if err != nil {
+		return p, err
+	}
+	shou := fp.Patched["SHOUGATU.EXN"]
+	if shou == nil {
+		return p, fmt.Errorf("ChristmasFamily SHOUGATU not a verified N6-FP carrier")
+	}
+	copy(shou[OLPayloadFileOff:OLGuardFileEnd], shouModule.Guard)
+	copy(shou[OLBodyFileOff:OLBodyFileOff+len(shouModule.Body)], shouModule.Body)
+	fp.SHOUCopyModule = &shouModule
+	copyWord, err := shouFamilyAuthenticatedSHOUCopyPatch(overlays["SHOUGATU.EXN"], shou)
+	if err != nil {
+		return p, err
+	}
+	fp.Report.OverlayPlanSHA["SHOUGATU.EXN"] = sha(fp.Patched["SHOUGATU.EXN"])
+	p.SHOUCopyWord = copyWord
+	labelWords, err := shouSceneLabelAuthenticatedPatches(overlays["SHOUGATU.EXN"], shou)
+	if err != nil {
+		return p, err
+	}
+	p.SHOULabelWords = labelWords
+	fp.Report.OverlayPlanSHA["SHOUGATU.EXN"] = sha(shou)
 	p.FieldPrep = fp
 	p.PatchedOverlay = fp.Patched
 	for _, ws := range extra {

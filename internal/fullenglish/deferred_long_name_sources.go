@@ -36,6 +36,19 @@ func longNameOriginalNameIndex(exe []byte, table, indexOffset, end, at int) (int
 }
 
 func longNameClassifyName(exe []byte, p script.InPlaceString) (string, int, bool) {
+	// The two original GEKO Tatebayashi name literals are authored in
+	// event_words.json, not character_names.json. Only these exact source
+	// records may use N10's already-authenticated name relocation; no
+	// other event word may bypass the ordinary fixed-slot planner.
+	if p.File == "CDROM/EXEDIR/GEKO.EXN" &&
+		(p.Source == "event_words.json" || p.Source == "character_names.json") {
+		switch p.Offset {
+		case 0x12b1c:
+			return "geko11", 11, true
+		case 0x12b24:
+			return "geko11san", 11, true
+		}
+	}
 	if p.Source != "character_names.json" {
 		return "", 0, false
 	}
@@ -49,14 +62,6 @@ func longNameClassifyName(exe []byte, p script.InPlaceString) (string, int, bool
 		}
 		if i, ok := longNameOriginalNameIndex(exe, namePoolLayoutFullPointer, namePoolLayoutFullPoolStart, namePoolLayoutFullPointer, p.Offset); ok {
 			return "full", i, true
-		}
-	}
-	if p.File == "CDROM/EXEDIR/GEKO.EXN" {
-		switch p.Offset {
-		case 0x12b1c:
-			return "geko11", 11, true
-		case 0x12b24:
-			return "geko11san", 11, true
 		}
 	}
 	return "", 0, false
@@ -233,7 +238,7 @@ func longNameSourceNames(retail, english []byte, deferred []longNameDeferredName
 			err = fmt.Errorf("long-name source empty translated name %d", i)
 			return
 		}
-		if !namePoolLayoutExpandedAbbreviation(fullStage[i], desiredFull[i]) {
+		if !namePoolLayoutVerifiedFullStage(retail, fullStage[i], desiredFull[i], i, deferred) {
 			err = fmt.Errorf("long-name source full-name stage %d not prefix of source translation", i)
 			return
 		}

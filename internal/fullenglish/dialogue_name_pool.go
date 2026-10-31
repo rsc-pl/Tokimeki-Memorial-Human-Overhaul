@@ -23,10 +23,9 @@ func npcDialogueNamesSeparateNPCNameDialogue(retail []byte, batch patchplan.Batc
 			cleaned.Dialogue = append(cleaned.Dialogue, block)
 			continue
 		}
-		group := ""
 		candidates := make([]longNameDeferredName, 0, len(block.Lines))
 		eligible := true
-		indexes := map[int]bool{}
+		indexes := map[string]bool{}
 		for _, line := range block.Lines {
 			p := script.InPlaceString{Source: block.Source, File: block.File, Offset: line.Offset, Original: line.Original, Text: line.Text}
 			kind, idx, known := longNameClassifyName(retail, p)
@@ -34,15 +33,11 @@ func npcDialogueNamesSeparateNPCNameDialogue(retail []byte, batch patchplan.Batc
 				eligible = false
 				break
 			}
-			if group != "" && group != kind {
-				eligible = false
-				break
-			}
-			group = kind
-			if indexes[idx] {
+			key := fmt.Sprintf("%s:%d", kind, idx)
+			if indexes[key] {
 				return cleaned, nil, fmt.Errorf("dialogue name pool duplicate original NPC %s index %d", kind, idx)
 			}
-			indexes[idx] = true
+			indexes[key] = true
 			jp, err := script.EncodeOriginal(line.Original)
 			if err != nil {
 				return cleaned, nil, fmt.Errorf("dialogue name pool original name encoding: %w", err)
@@ -61,7 +56,8 @@ func npcDialogueNamesSeparateNPCNameDialogue(retail []byte, batch patchplan.Batc
 			}
 			candidates = append(candidates, longNameDeferredName{entry: p, kind: kind, index: idx, placeholder: placeholder})
 		}
-		// No exemption for mixed/unknown dialogue or other NPC-related text.
+		// No exemption for any unknown dialogue or other NPC-related text.
+		// Authenticated short/full source records may share one block.
 		if !eligible {
 			cleaned.Dialogue = append(cleaned.Dialogue, block)
 			continue
