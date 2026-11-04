@@ -77,14 +77,14 @@ func BuildGlyphSelector() ([]byte, error) {
 	return out, nil
 }
 
-// previous version: only the exact authenticated R3000A control-flow shape may be cloned.
+// Only the authenticated R3000A control-flow shape may be cloned.
 // The source is SHA checked by the caller, but validating the shape as well
 // prevents a future source-layout change from silently making an unsafe copy.
 // In particular indirect jumps, branch-likely/COP branches and control-flow
 // instructions in delay slots are not justified by relative-branch relocation.
 func nameEntryCloneFlowValidateCloneFlow(out []byte, start, end uint32) error {
 	if start >= end || (end-start)%4 != 0 || len(out) != int(end-start) {
-		return fmt.Errorf("previous version invalid clone span %#x..%#x", start, end)
+		return fmt.Errorf("NAME_ENT clone invalid clone span %#x..%#x", start, end)
 	}
 	expected := map[uint32]map[uint32]uint32{
 		0x8004e788: {0x8004e82c: 0x8004f268},
@@ -94,7 +94,7 @@ func nameEntryCloneFlowValidateCloneFlow(out []byte, start, end uint32) error {
 			0x8004f4c8: 0x8009c674},
 	}[start]
 	if expected == nil {
-		return fmt.Errorf("previous version unknown clone source %#x", start)
+		return fmt.Errorf("NAME_ENT clone unknown clone source %#x", start)
 	}
 	seen := map[uint32]bool{}
 	delaySlot := false
@@ -107,49 +107,49 @@ func nameEntryCloneFlowValidateCloneFlow(out []byte, start, end uint32) error {
 		case op == 0 && (fn == 8 || fn == 9): // JR/JALR
 			control, delay = true, true
 			if fn != 8 || rs != 31 || pc != end-8 || w != olJR(31) {
-				return fmt.Errorf("previous version unsafe indirect jump at %#x: %08x", pc, w)
+				return fmt.Errorf("NAME_ENT clone unsafe indirect jump at %#x: %08x", pc, w)
 			}
 			jrCount++
 		case op == 0 && (fn == 12 || fn == 13): // SYSCALL/BREAK
-			return fmt.Errorf("previous version exception instruction at %#x: %08x", pc, w)
+			return fmt.Errorf("NAME_ENT clone exception instruction at %#x: %08x", pc, w)
 		case op == 2 || op == 3: // absolute J or JAL
 			control, delay = true, true
 			target := (pc & 0xf0000000) | ((w & 0x03ffffff) << 2)
 			if op != 3 || expected[pc] != target {
-				return fmt.Errorf("previous version unexpected jump at %#x to %#x", pc, target)
+				return fmt.Errorf("NAME_ENT clone unexpected jump at %#x to %#x", pc, target)
 			}
 			seen[pc] = true
 		case op == 1 || (op >= 4 && op <= 7): // regular relative branches
 			control, delay = true, true
 			if op == 1 && (w>>16)&31 > 1 { // disallow link and unrecognized REGIMM modes
-				return fmt.Errorf("previous version unsupported REGIMM at %#x", pc)
+				return fmt.Errorf("NAME_ENT clone unsupported REGIMM at %#x", pc)
 			}
 			offset := int32(int16(w & 0xffff))
 			target := uint32(int64(pc) + 4 + int64(offset)*4)
 			if target < start || target >= end {
-				return fmt.Errorf("previous version branch exits clone at %#x to %#x", pc, target)
+				return fmt.Errorf("NAME_ENT clone branch exits clone at %#x to %#x", pc, target)
 			}
 		case op >= 20 && op <= 23: // MIPS-II branch-likely, invalid for PS1 R3000A
-			return fmt.Errorf("previous version branch-likely at %#x", pc)
+			return fmt.Errorf("NAME_ENT clone branch-likely at %#x", pc)
 		case op >= 16 && op <= 19 && rs == 8: // coprocessor conditional branch
-			return fmt.Errorf("previous version COP branch at %#x", pc)
+			return fmt.Errorf("NAME_ENT clone COP branch at %#x", pc)
 		}
 		if delaySlot && control {
-			return fmt.Errorf("previous version control instruction in delay slot at %#x", pc)
+			return fmt.Errorf("NAME_ENT clone control instruction in delay slot at %#x", pc)
 		}
 		if delay && pc+4 >= end {
-			return fmt.Errorf("previous version unterminated delay slot at %#x", pc)
+			return fmt.Errorf("NAME_ENT clone unterminated delay slot at %#x", pc)
 		}
 		delaySlot = delay
 	}
 	if jrCount != 1 || len(seen) != len(expected) {
-		return fmt.Errorf("previous version flow mismatch: return=%d callsites=%d/%d", jrCount, len(seen), len(expected))
+		return fmt.Errorf("NAME_ENT clone flow mismatch: return=%d callsites=%d/%d", jrCount, len(seen), len(expected))
 	}
 	return nil
 }
 
 // Clone authenticated instruction bytes with the exact original branch
-// displacements. For these three source blocks, previous version requires every indirect
+// displacements. For these three source blocks, cloning requires every indirect
 // return, JAL target and relative branch to remain within the proved shape.
 func nameEntryCloneCloneAuthenticated(exe []byte, start, end, base uint32) ([]byte, error) {
 	if start >= end || (end-start)%4 != 0 || base&3 != 0 || (start&0xf0000000) != (base&0xf0000000) {

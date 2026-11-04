@@ -7,8 +7,8 @@ import (
 )
 
 // This file answers one question only: can any of the five hooked retail
-// sites (formatter 0x8007F7D4/B898/C95C/D0C30 inside 0x8007EF48, speaker
-// 0x80050E74 inside 0x80050DFC) execute before the first overlay load has
+// sites (the retail text formatter call chain anchored at 0x8007EF48 and
+// speaker at 0x80050E74 inside 0x80050DFC) execute before the overlay load has
 // installed and flushed the N20 window at 0x80161EDC?
 //
 // Everything here is a read-only re-decode of authenticated bytes. No address
@@ -851,4 +851,11 @@ func FormatReachabilityVerdict(a ReachabilityAudit) string {
 		a.Verdict, a.FormatterPreLoadReachable, a.SpeakerPreLoadReachable,
 		len(a.FormatterCallers), len(a.SpeakerCallers), a.SpeakerStates, a.PreLoadStates,
 		a.DistinctSceneEntries, len(a.LoadTriggeringScenes), a.JalrSites, len(a.JalrUnresolved))
+}
+
+func sext16(v uint32) uint32 {
+	if v&0x8000 != 0 {
+		return v | 0xFFFF0000
+	}
+	return v
 }

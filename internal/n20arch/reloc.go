@@ -447,6 +447,7 @@ type N20RelocPlan struct {
 	OverlayWords   []n20RelocWord         `json:"overlay_words"`
 	SHOUCopyWord   n20RelocWord           `json:"-"`
 	SHOULabelWords []n20RelocWord         `json:"-"`
+	GEKOCopyWords  []n20RelocWord         `json:"-"`
 	Module         OverlayFieldPrepModule `json:"-"`
 	FieldPrep      OverlayFieldPrepPlan   `json:"-"`
 	Destination    N20RelocDestAudit      `json:"destination"`
@@ -492,8 +493,8 @@ func PlanN20Relocation(exe []byte, overlays map[string][]byte,
 	if err != nil {
 		return p, err
 	}
-	// Only SHOUGATU receives the extended module; the other 25 overlays
-	// remain bit-for-bit identical to the authenticated predecessor.
+	// SHOUGATU retains its original extended module; GEKO independently
+	// receives three guarded saved-family copy retargets. Other overlays are unchanged.
 	shouModule, err := shouFamilyExtendFieldPrepModule(m)
 	if err != nil {
 		return p, err
@@ -517,6 +518,41 @@ func PlanN20Relocation(exe []byte, overlays map[string][]byte,
 	}
 	p.SHOULabelWords = labelWords
 	fp.Report.OverlayPlanSHA["SHOUGATU.EXN"] = sha(shou)
+	// GEKO copies saved kana to the relocated family at three independently
+	// verified sites. Extend only GEKO's local guarded module; leave every
+	// other overlay's module, source pointers and saved slots untouched.
+	gekoModule, err := extendSavedFamilyFieldPrepModule(m, false)
+	if err != nil {
+		return p, err
+	}
+	geko := fp.Patched["GEKO.EXN"]
+	if geko == nil {
+		return p, fmt.Errorf("GEKO saved-family: no authenticated N6-FP carrier")
+	}
+	copy(geko[OLPayloadFileOff:OLGuardFileEnd], gekoModule.Guard)
+	copy(geko[OLBodyFileOff:OLBodyFileOff+len(gekoModule.Body)], gekoModule.Body)
+	fp.GEKOCopyModule = &gekoModule
+	p.GEKOCopyWords, err = gekoSavedFamilyAuthenticatedPatches(overlays["GEKO.EXN"], geko)
+	if err != nil {
+		return p, err
+	}
+	fp.Report.OverlayPlanSHA["GEKO.EXN"] = sha(geko)
+	// One authenticated VALEN dynamic-fieldprep caller gets a same-overlay
+	// post-return packed-glyph rotation. All other 234 N6-FP callsites retain
+	// their exact previous JAL and body; source translation remains external.
+	valenModule, err := valenSanExtendedModule(m)
+	if err != nil {
+		return p, err
+	}
+	valen := fp.Patched["VALEN.EXN"]
+	if valen == nil {
+		return p, fmt.Errorf("Valentine san: no authenticated N6-FP carrier")
+	}
+	if err := valenSanPatch(overlays["VALEN.EXN"], valen, m, valenModule); err != nil {
+		return p, err
+	}
+	fp.VALENSuffixModule = &valenModule
+	fp.Report.OverlayPlanSHA["VALEN.EXN"] = sha(valen)
 	p.FieldPrep = fp
 	p.PatchedOverlay = fp.Patched
 	for _, ws := range extra {

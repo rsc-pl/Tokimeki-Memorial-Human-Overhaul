@@ -9,13 +9,13 @@ import (
 	"tokimemo/internal/script"
 )
 
-// PlanNPCFrameInsetPrivate applies the owner's one-time, jointly shifted
-// visual compromise AFTER NPC spacing on the SIX authenticated NPC-A EXE routes.
+// PlanNPCFrameInsetPrivate applies a coordinated geometry adjustment
+// after NPC spacing on six authenticated NPC-A executable routes.
 // Both surname and its quote move RIGHT 3 native X units; the NPC coordinates parser
 // reads that same quote position and therefore also moves RIGHT 3.
-// The ink-to-quote separation is EXACTLY the same as owner-tested NPC spacing.
+// The ink-to-quote separation follows the previously verified NPC layout.
 // Telephone, title activity, exams, seasonal overlays and N20 are untouched.
-// This is a PRIVATE test-only candidate, NOT a runtime or production PASS.
+// This geometry variant is evaluated offline; no in-game runtime approval follows.
 func PlanNPCFrameInsetPrivate(retail, npcFrameStage []byte, names []string) ([]byte, error) {
 	const base uint32 = 0x80040800
 	if len(npcFrameStage) != len(retail) || len(names) != 16 {

@@ -24,6 +24,12 @@ const (
 )
 
 func shouFamilyBuildStrcpyAdapter(entry uint32) []byte {
+	return buildSavedFamilyStrcpyAdapter(entry, true)
+}
+
+// The GEKO duplicate writers need only the saved-surname conversion half.
+// The SHOUGATU-only old-A nameplate mirrors must never be installed in GEKO.
+func buildSavedFamilyStrcpyAdapter(entry uint32, mirror bool) []byte {
 	a := &miniAsm{labels: map[string]int{}}
 	w := func(v uint32) { a.w(v) }
 	imm := func(dst, src uint32, n int16) { w(olADDIU(dst, src, n)) }
@@ -45,36 +51,38 @@ func shouFamilyBuildStrcpyAdapter(entry uint32) []byte {
 	// original buffer. Some selected N10 formatters read the relocated A.
 	// Preserve the retail destination and mirror only exact original labels
 	// into the 16-byte relocated A if the *complete* source C-string fits.
-	addr(10, 0x800CA188)
-	a.b(5, 8, 10, "family")
-	w(0)
-	for _, source := range []uint32{0x80143760, 0x8014394c, 0x80143954, 0x80143960} {
-		addr(10, source)
-		a.b(4, 9, 10, "mirror_verify")
+	if mirror {
+		addr(10, 0x800CA188)
+		a.b(5, 8, 10, "family")
+		w(0)
+		for _, source := range []uint32{0x80143760, 0x8014394c, 0x80143954, 0x80143960} {
+			addr(10, source)
+			a.b(4, 9, 10, "mirror_verify")
+			w(0)
+		}
+		a.j("retail")
+		w(0)
+		a.label("mirror_verify")
+		imm(10, 0, 16) // capacity includes NUL
+		imm(11, 9, 0)  // source pointer (MIPS load-delay safe)
+		a.label("mirror_scan")
+		a.b(4, 10, 0, "retail")
+		w(0)
+		w(olLBU(12, 11, 0))
+		w(0)
+		a.b(4, 12, 0, "mirror_copy")
+		w(0)
+		imm(11, 11, 1)
+		imm(10, 10, -1)
+		a.j("mirror_scan")
+		w(0)
+		a.label("mirror_copy")
+		addr(4, 0x800B35A4)
+		lw(5, shouFamilySavedSRC)
+		j(shouFamilySHOUCopyOld)
+		a.j("retail")
 		w(0)
 	}
-	a.j("retail")
-	w(0)
-	a.label("mirror_verify")
-	imm(10, 0, 16) // capacity includes NUL
-	imm(11, 9, 0)  // source pointer (MIPS load-delay safe)
-	a.label("mirror_scan")
-	a.b(4, 10, 0, "retail")
-	w(0)
-	w(olLBU(12, 11, 0))
-	w(0)
-	a.b(4, 12, 0, "mirror_copy")
-	w(0)
-	imm(11, 11, 1)
-	imm(10, 10, -1)
-	a.j("mirror_scan")
-	w(0)
-	a.label("mirror_copy")
-	addr(4, 0x800B35A4)
-	lw(5, shouFamilySavedSRC)
-	j(shouFamilySHOUCopyOld)
-	a.j("retail")
-	w(0)
 	a.label("family")
 	addr(10, N20RelocFamilyAddr)
 	a.b(5, 8, 10, "retail")
@@ -92,6 +100,35 @@ func shouFamilyBuildStrcpyAdapter(entry uint32) []byte {
 	w(0)
 	w(olSLTIU(1, 2, N20RelocSlotBytes))
 	a.b(4, 1, 0, "retail")
+	w(0)
+	// The return length includes NUL. Reject empty or partial glyph pairs
+	// before modifying the relocated family slot. Valid encoded length is
+	// even, at least two bytes, with every glyph byte in the Latin font.
+	imm(8, 2, -1)
+	w(olSLTIU(1, 8, 2))
+	a.b(5, 1, 0, "retail")
+	w(0)
+	w(olIType(0x0c, 8, 1, 1))
+	a.b(5, 1, 0, "retail")
+	w(0)
+	// Check the advertised terminator before scanning the body.
+	imm(9, 29, 0)
+	w(olAddu(10, 9, 8))
+	w(olLBU(11, 10, 0))
+	w(0) // R3000A load delay
+	a.b(5, 11, 0, "retail")
+	w(0)
+	imm(10, 29, 0)
+	a.label("font_scan")
+	w(olLBU(11, 10, 0))
+	w(0) // R3000A load delay
+	imm(11, 11, -0xa0)
+	w(olSLTIU(1, 11, 0x5b))
+	a.b(4, 1, 0, "retail")
+	w(0)
+	imm(10, 10, 1)
+	imm(8, 8, -1)
+	a.b(5, 8, 0, "font_scan")
 	w(0)
 	sw(2, shouFamilyLength)
 	lw(8, shouFamilyLength)
@@ -122,9 +159,14 @@ func shouFamilyBuildStrcpyAdapter(entry uint32) []byte {
 
 // shouFamilyExtendFieldPrepModule rechecks the known SHOU-specific hook geometry.
 // The same guarded payload is placed in the 14 N6-FP carriers because the
-// production planner shares one module layout; only SHOUGATU receives a new
-// JAL. No additional global or resident-memory hook is introduced.
+// production planner shares the field-prep layout. SHOUGATU retains its
+// original scoped JAL; GEKO adds only its three source-guarded copy JALs.
+// No additional global or resident-memory hook is introduced.
 func shouFamilyExtendFieldPrepModule(m OverlayFieldPrepModule) (OverlayFieldPrepModule, error) {
+	return extendSavedFamilyFieldPrepModule(m, true)
+}
+
+func extendSavedFamilyFieldPrepModule(m OverlayFieldPrepModule, mirror bool) (OverlayFieldPrepModule, error) {
 	if m.FamilyDst != N20RelocFamilyAddr || m.GivenDst != N20RelocGivenAddr || m.SlotBytes != N20RelocSlotBytes || m.VerifierBytes != 184 {
 		return m, fmt.Errorf("ChristmasFamily incompatible N20 fieldprep module")
 	}
@@ -136,7 +178,7 @@ func shouFamilyExtendFieldPrepModule(m OverlayFieldPrepModule) (OverlayFieldPrep
 	m.Guard = bytes.Clone(m.Guard)
 	m.Body = bytes.Clone(m.Body)
 	entry := m.ModuleEnd()
-	adapter := shouFamilyBuildStrcpyAdapter(entry)
+	adapter := buildSavedFamilyStrcpyAdapter(entry, mirror)
 	m.Body = append(m.Body, adapter...)
 	for len(m.Body)%16 != 0 {
 		m.Body = append(m.Body, 0)

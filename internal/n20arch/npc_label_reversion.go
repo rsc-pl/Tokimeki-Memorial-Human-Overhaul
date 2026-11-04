@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// VerifyNPCLabelGeometryBaseline prevents the owner-rejected speaker geometry
+// VerifyNPCLabelGeometryBaseline prevents the superseded speaker geometry
 // speaker-X experiment from re-entering a private integrated build.
 // It is a verification-only boundary: no bytes are written or repositioned.
 // The native six-site label geometry still fails for long surnames; PASS

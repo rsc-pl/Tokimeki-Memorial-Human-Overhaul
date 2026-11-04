@@ -132,8 +132,8 @@ func StageFullNameSplit(stagedEXE []byte, expectedSHA [32]byte, names []string) 
 	return out, FullSplitResult{FirstBytes: one, SecondBytes: two, PointerWords: Entries}, nil
 }
 
-// These sites are a finite, separately verified 28-site list from Phase 2,
-// Appendix A. Non-N10 A sites must remain on the original buffer. Offsets are
+// These sites are a finite, independently verified 28-site list.
+// Non-N10 A sites must remain on the original buffer. Offsets are
 // PC-relative to the authenticated original executable/overlay load addresses.
 var n10Phase2ASites = map[string][][2]uint32{
 	EXE: {

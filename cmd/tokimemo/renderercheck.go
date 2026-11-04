@@ -13,8 +13,8 @@ import (
 	"tokimemo/internal/graphics"
 )
 
-// These values come from the Python source assembler, not from a Go-generated
-// binary. The independent fixture lives in internal/graphics/testdata.
+// These SHA-256 digests pin independent reference assembler output bytes.
+// Native Go renderer assembly must match the verified reference exactly.
 const rendererCodeSHA = "f330b360d68df9067d3e4ddc5973154e66703f72a95fb5f064dff40be2b52916"
 const rendererFontSHA = "04ba1cac4684341dfa4a74d1af902f5e183e7d8cccbf9110d1c361fcb3636f80"
 const rendererSiteHex = "0f110108ffff6830"

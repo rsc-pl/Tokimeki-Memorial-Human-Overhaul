@@ -61,11 +61,34 @@ func rpgSavedSurnameRPGCopyWrapper(romanizer uint32) ([]byte, error) {
 	mov(18, 2)
 	w(olSLTIU(8, 18, 33))
 	beq(8, 0, "fallback")
+	// An encoded surname must be at least one complete glyph pair followed
+	// by NUL. The return count includes NUL, hence it must be odd (3..31).
+	// This also prevents a NUL-only or partially packed output from
+	// replacing the live battle name with a blank or malformed string.
+	add(8, 18, -1)
+	w(olSLTIU(9, 8, 2))
+	bne(9, 0, "fallback")
+	w(olIType(0x0c, 8, 9, 1))
+	bne(9, 0, "fallback")
 	add(8, 29, 0x20)
 	w(olAddu(8, 8, 18))
 	w(olLBU(9, 8, -1))
 	w(0)
 	bne(9, 0, "fallback")
+	// Validate the entire paired Latin glyph alphabet before committing
+	// anything into the 40-byte retail battle slot. An unexpected byte
+	// is a retail fallback, never a partially written translated name.
+	add(10, 29, 0x20)
+	add(8, 18, -1)
+	a.label("validate")
+	w(olLBU(11, 10, 0))
+	w(0) // R3000A load delay
+	add(11, 11, -0xa0)
+	w(olSLTIU(9, 11, 0x5b))
+	beq(9, 0, "fallback")
+	add(10, 10, 1)
+	add(8, 8, -1)
+	bne(8, 0, "validate")
 	mov(10, 0)
 	a.label("copy")
 	beq(10, 18, "success")

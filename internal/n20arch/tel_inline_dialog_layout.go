@@ -36,6 +36,8 @@ type TelScopedDialogPlan struct {
 	SavedNameBytes      []byte
 	SurnameComposeBytes []byte
 	GivenAddressBytes   []byte
+	SurnamePeriodBytes  []byte
+	SelfIntroBytes      []byte
 	Calls               []N20ManifestWord
 }
 
@@ -138,9 +140,11 @@ func telOriginalIndexedGreeting(exe, tel []byte) (uint32, error) {
 			return 0, fmt.Errorf("TEL indexed greeting: source instruction mismatch at %#x", pc)
 		}
 	}
-	// The 12 consecutive retail records pair exactly twelve named speakers
-	// with twelve different first-line greetings, indexed by the script. The
-	// hash-authenticated original tables must not be substituted by test names.
+	// The two retail tables each have 12 entries selected by the same script
+	// index. This establishes pointer and index provenance, NOT a semantic
+	// match of every name to the spoken greeting: the last original slot has
+	// a Tatebayashi nameplate and an Ijuin greeting. Preserve retail bytes,
+	// selection and fallback; never infer scene identity from this table alone.
 	for i := uint32(0); i < 12; i++ {
 		namePtr := binary.LittleEndian.Uint32(exe[0x800b35f4-0x80040800+4*i:])
 		textPtr := binary.LittleEndian.Uint32(tel[0x801406e0-OverlaySlotBase+4*i:])
@@ -194,6 +198,35 @@ func telIndexedWrappedGirlSites(tel []byte) ([]uint32, error) {
 		return nil, fmt.Errorf("TEL indexed multiline: callsite family drift (%d, expected 29)", len(out))
 	}
 	return out, nil
+}
+
+// One indexed first-line call preserves a nontrivial retail delay-slot store
+// instead of clearing a1 in the delay slot. The preceding block already sets
+// a1=0, passes the same selected character index in a2, and prepares the
+// speaker from the indexed EXE table. This is a distinct authenticated route,
+// not an extension of the 29 uniform wrapper sites.
+const telIndexedPreparedFirstLineCall uint32 = 0x80135ae4
+
+func telIndexedPreparedFirstLine(tel []byte) (uint32, error) {
+	if len(tel) != 196608 || sha(tel) != OverlaySHA["TEL.EXN"] {
+		return 0, fmt.Errorf("TEL prepared first line: unauthenticated original")
+	}
+	original := map[uint32]uint32{
+		0x80135a84:                          0x91ef05e4, // current character index
+		0x80135a94:                          0x8c8435f4, // indexed original speaker
+		0x80135a98:                          jalWord(OLOriginalSpeaker),
+		0x80135aa4:                          0x906605e4, // a2 retains the speaker index
+		0x80135ad0:                          0x00002825, // a1 = 0 before the first-line call
+		0x80135ae0:                          0x8c8410bc, // indexed dialogue source
+		telIndexedPreparedFirstLineCall:     jalWord(telDialogueWrapperOriginal),
+		telIndexedPreparedFirstLineCall + 4: 0xafa90028, // retail delay-slot save
+	}
+	for pc, want := range original {
+		if binary.LittleEndian.Uint32(tel[pc-OverlaySlotBase:]) != want {
+			return 0, fmt.Errorf("TEL prepared first line: instruction drift at %#x", pc)
+		}
+	}
+	return telIndexedPreparedFirstLineCall, nil
 }
 
 // telWrapperCloneSource preserves the retail multiline preprocessor, including
@@ -379,7 +412,7 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 	}
 	// The shared-speaker family has 29 immutable, source-authenticated
 	// return addresses. The source passed to the speaker call is the given
-	// name at 0x800B3628 (Yoshio in the owner live trace), while the
+	// name at 0x800B3628 (Yoshio in the recorded runtime trace), while the
 	// displayed surname label is supplied by the neighbouring original
 	// surname slot 0x800B361C. Measure that same source, and align the
 	// first line with the retail continuation's fixed origin.
@@ -486,6 +519,16 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 	b.w(olSUBU(4, 4, 10))                // 7 native X units per English letter
 	b.w(olADDIU(4, 4, -124))             // speaker X=-128 plus four units margin
 	b.w(olAddu(4, 4, 9))                 // shared-family continuation alignment in native X units
+	// A 10..12-byte speaker otherwise leaves only four native X units after
+	// the displayed surname. Add ten units only for these long, authenticated
+	// speaker sources. The existing 54-byte/27-glyph first-line bound proves
+	// even the worst case ends at X=-30+27*7=159, within the native X=160 edge.
+	// Short names (including previously accepted Fujisaki/Kisaragi) are frozen.
+	b.w(olSLTIU(5, 10, 10))
+	b.b(5, 5, 0, "shortSpeaker")
+	b.w(0)
+	b.w(olADDIU(4, 4, 10))
+	b.label("shortSpeaker")
 	b.w(jWord(telDialogCloneStub + uint32(a.labels["common"]*4)))
 	b.w(0)
 	b.resolve()
@@ -522,6 +565,10 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 		return result, nil, err
 	}
 	wrappedGirls, err := telIndexedWrappedGirlSites(original)
+	if err != nil {
+		return result, nil, err
+	}
+	prepared, err := telIndexedPreparedFirstLine(original)
 	if err != nil {
 		return result, nil, err
 	}
@@ -587,6 +634,21 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 			Reason: "source-indexed EXE girl speaker and first-line body; authentic multiline wrapper with two local formatters and bounded X",
 		})
 	}
+	// Preserve the indexed a2/a1 ABI and the original delay-slot store.
+	// The existing cloned wrapper handles the same first-line queue; no
+	// additional renderer or RAM ownership is introduced.
+	preparedOff := int(prepared - OverlaySlotBase)
+	if binary.LittleEndian.Uint32(dest[preparedOff:]) != jalWord(telDialogueWrapperOriginal) ||
+		binary.LittleEndian.Uint32(dest[preparedOff+4:]) != 0xafa90028 {
+		return result, nil, fmt.Errorf("TEL prepared first line: staged caller modified")
+	}
+	binary.LittleEndian.PutUint32(dest[preparedOff:], jalWord(telDialogueWrapperClone))
+	result.Calls = append(result.Calls, N20ManifestWord{
+		Owner: "TEL.EXN", PC: prepared, Old: jalWord(telDialogueWrapperOriginal),
+		New: jalWord(telDialogueWrapperClone), Kind: "jal",
+		Role:   "TEL indexed prepared first-line wrapper",
+		Reason: "retail indexed speaker/dialogue pair with original a1=0, a2=index and nonzero delay-slot store preserved",
+	})
 	shim, withSavedName, err := telSavedSurnamePatch(original, dest)
 	if err != nil {
 		return result, nil, err
@@ -626,6 +688,34 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 		Kind: "jal", Role: "TEL saved given-name address, selector 13",
 		Reason: "source-dispatched selector 13 performs exact saved given copy; guard N6 conversion and 16-byte local field; retail fallback",
 	})
+	// Fold paired trailing punctuation only after source-authenticated
+	// mixed saved-surname operations. No global pair-font modification.
+	period, afterPeriod, err := telSurnamePeriodPatch(original, dest)
+	if err != nil {
+		return result, nil, err
+	}
+	dest = afterPeriod
+	result.SurnamePeriodBytes = period
+	for _, site := range telSurnamePeriodSites {
+		result.Calls = append(result.Calls, N20ManifestWord{
+			Owner: "TEL.EXN", PC: site.pc, Old: jalWord(0x800ae100), New: jalWord(telSurnamePeriodShim),
+			Kind: "jal", Role: "TEL saved surname adjacent period attachment",
+			Reason: "retail-authenticated suffix append, verify exactly one encoded period and N6 surname tail before folding 0xA0 pad; original strcat fallback",
+		})
+	}
+	// Only the authenticated outgoing player self-introduction with one P
+	// marker: never hook all phone/P templates or the global EXE parser.
+	selfIntro, afterIntro, err := telSelfIntroPatch(exe, original, dest)
+	if err != nil {
+		return result, nil, err
+	}
+	dest = afterIntro
+	result.SelfIntroBytes = selfIntro
+	result.Calls = append(result.Calls, N20ManifestWord{
+		Owner: "TEL.EXN", PC: telSelfIntroCall, Old: jalWord(telSelfIntroRetail),
+		New: jalWord(telSelfIntroShim), Kind: "jal", Role: "TEL outgoing player self-introduction P token",
+		Reason: "one authenticated source-owned P template: bounded local saved surname/given N6 conversion, synchronous retail copy and strict fallback",
+	})
 	ck := packedTableChecksum(dest)
 	dest[0x2fffc], dest[0x2fffd] = byte(ck>>8), byte(ck)
 	result.Bytes = payload
@@ -652,6 +742,10 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 		return err
 	}
 	wrappedGirls, err := telIndexedWrappedGirlSites(original)
+	if err != nil {
+		return err
+	}
+	prepared, err := telIndexedPreparedFirstLine(original)
 	if err != nil {
 		return err
 	}
@@ -698,6 +792,11 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 			return fmt.Errorf("TEL indexed multiline: inherited caller missing or modified at %#x", pc)
 		}
 	}
+	preparedOff := int(prepared - OverlaySlotBase)
+	if binary.LittleEndian.Uint32(composed[preparedOff:]) != jalWord(telDialogueWrapperClone) ||
+		binary.LittleEndian.Uint32(composed[preparedOff+4:]) != 0xafa90028 {
+		return fmt.Errorf("TEL prepared first line: inherited caller missing or delay drift")
+	}
 	if err := telSavedSurnameSource(original); err != nil {
 		return err
 	}
@@ -729,6 +828,20 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 		return err
 	}
 	if err := verifyTELGivenAddress(exe, original, composed, givenAddress); err != nil {
+		return err
+	}
+	periodBytes, err := telSurnamePeriodPayload()
+	if err != nil {
+		return err
+	}
+	if err := verifyTELSurnamePeriod(original, composed, periodBytes); err != nil {
+		return err
+	}
+	selfIntro, err := telSelfIntroPayload()
+	if err != nil {
+		return err
+	}
+	if err := verifyTELSelfIntro(exe, original, composed, selfIntro); err != nil {
 		return err
 	}
 	if binary.BigEndian.Uint16(composed[len(composed)-4:]) != packedTableChecksum(composed) ||

@@ -1,8 +1,8 @@
 package playername
 
-// surname formatting: host-side reference contract for the TWO original N20 surname-only
-// formatter sources identified by retail previous version/previous version and the owner previous version trace.
-// This does not modify MIPS, RAM, a CUE, the private source, or text records.
+// surname formatting: host-side verification of two original surname-only
+// formatter return addresses. The resulting candidate does not modify MIPS,
+// RAM, source images, saved names or dialogue records.
 // The actual renderer and destination lifetime remain unproven.
 import (
 	"bytes"

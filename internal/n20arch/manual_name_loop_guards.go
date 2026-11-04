@@ -76,7 +76,7 @@ func parserCopyGuardCompactParserProgram() (parserGuardProgram, error) {
 	a.w(0)
 
 	// Compact destination-role selection. Original six authenticated callsites
-	// remain pinned by PlanH62; capacity follows the actual buffer pointer.
+	// remain fixed to their verified instruction sites; capacity follows the destination pointer.
 	a.label("strcpy")
 	a.w(0x27ab0084) // t3 = sp + 132, original first short field
 	a.b(4, 4, 11, "copy8")

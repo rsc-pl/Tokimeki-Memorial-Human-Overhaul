@@ -1,6 +1,6 @@
 package n20arch
 
-// parser relocation PRIVATE OFFLINE ONLY. Move previous version N10's *already authenticated* compact
+// Parser relocation (offline only): move authenticated N10 compact
 // 132-byte surname strings from the overlapping English renderer FONT tail into
 // the renderer HOOK reservation, after its actual glyph scratch. The N20 fixed
 // executable guards remain entirely in the font tail. The two reservations
@@ -73,7 +73,7 @@ func compactRelocationRetargetAddressPair(b []byte, p compactRelocationPair, old
 	return nil
 }
 
-// compactRelocationRelocateN10ShortOffline accepts the exact in-memory previous version transaction
+// compactRelocationRelocateN10ShortOffline accepts the validated in-memory N10 transaction
 // output. N20 base is passed independently so preimage and ownership can be
 // tested against the ACTUAL integrated formatter bridge candidate instead of assumptions.
 // Every change is staged on clones and checked before returning anything.
@@ -188,7 +188,7 @@ type CombinedOfflineCandidate struct {
 	ImageBuilt         bool
 }
 
-// PlanN10N20Offline performs the previous version N10 transaction and formatter bridge N20 full
+// PlanN10N20Offline performs the N10 transaction and N20 formatter bridge full
 // overlay plan against the same authenticated original bytes, then merges both
 // sets only where their original preimage ownership does not conflict. The
 // renderer hook spare is the ONLY N10 short pool relocation. No files/ROMs are

@@ -16,7 +16,7 @@ package n20arch
 // Mapping basis
 // -------------
 // Every supplemental digraph below is standard/modified Hepburn and is a
-// selectable NAME_ENT keyboard cell pair (pinned by coverage_ext_test.go):
+// selectable NAME_ENT keyboard cell pair (validated against the NAME_ENT input grid):
 //
 //	うぃ=wi  うぇ=we  うぉ=wo  いぇ=ye
 //	くぁ=kwa くぃ=kwi くぇ=kwe くぉ=kwo
@@ -65,7 +65,7 @@ import (
 )
 
 const (
-	// Rebuilt core geometry (pinned by romanizer_ext_test.go).
+	// Rebuilt core geometry (checked against the packed table and code layout).
 	N20PackedCodeBytes      = 1840
 	N20PackedTableBytes     = 672
 	N20PackedProgramBytes   = 2512

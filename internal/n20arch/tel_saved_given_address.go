@@ -153,6 +153,10 @@ func telGivenAddressPayload() ([]byte, error) {
 	add(8, 8, -1)
 	add(10, 10, 1)
 	branch(5, 8, 0, "valid")
+	// Scan has advanced to the advertised NUL. Keep retail selector-13
+	// output if the N6 result is not actually terminated.
+	lbu(11, 10, 0)
+	branch(5, 11, 0, "done")
 	lw(4, 29, 0x80)
 	add(5, 29, telGivenAddressScratch)
 	w(jalWord(0x800ae0f0))

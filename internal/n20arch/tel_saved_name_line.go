@@ -113,6 +113,12 @@ func telSavedSurnameAdapter() ([]byte, error) {
 	add(10, 10, 1)
 	a.b(5, 8, 0, "validate")
 	w(0)
+	// The advertised glyph count is not proof of a terminated C string.
+	// t2 points to scratch[count-1] after the validated glyph scan.
+	w(olLBU(11, 10, 0))
+	w(0)
+	a.b(5, 11, 0, "retail")
+	w(0)
 	// Only the source pointer changes; both original mode arguments survive.
 	add(4, 29, telSavedSurnameScratch)
 	a.j("format")

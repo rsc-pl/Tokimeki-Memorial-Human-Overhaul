@@ -292,6 +292,38 @@ func buildFieldPrepShimAt(romanizer, shimRAM, famDst, givDst uint32, slotBytes i
 	sw(2, 29, OLFieldPrepV0Off) // retail v0, restored on every path
 	sw(3, 29, OLFieldPrepV1Off)
 
+	// Reject malformed N6 results before committing EITHER field. Length alone
+	// does not prove that the returned C string consists of complete Latin
+	// glyph pairs: NUL-only, an odd payload, a missing terminator or a byte
+	// outside the high-bit pair-font alphabet must retain both retail fields.
+	// This check reads only the bounded, stack-owned 16-byte staging area.
+	validatePacked := func(scratchOff int16, label string) {
+		addiu(8, 2, -1) // t0: encoded payload bytes, excluding NUL
+		w(olSLTIU(9, 8, 2))
+		a.b(5, 9, 0, "retail") // require at least one complete pair
+		w(0)
+		w(olIType(0x0c, 8, 9, 1))
+		a.b(5, 9, 0, "retail") // payload must have even length
+		w(0)
+		addiu(10, 29, scratchOff)
+		w(olAddu(11, 10, 8))
+		w(olLBU(11, 11, 0))
+		w(0)                    // R3000A load delay
+		a.b(5, 11, 0, "retail") // NUL at advertised byte count
+		w(0)
+		a.label(label + "_scan")
+		w(olLBU(11, 10, 0))
+		w(0) // R3000A load delay
+		addiu(11, 11, -0xa0)
+		w(olSLTIU(9, 11, 0x5b)) // original 0xA0..0xFA alphabet
+		a.b(4, 9, 0, "retail")
+		w(0)
+		addiu(10, 10, 1)
+		addiu(8, 8, -1)
+		a.b(5, 8, 0, label+"_scan")
+		w(0)
+	}
+
 	// 2. Romanize saved family into owned scratch.
 	luiAddr(4, OLA0SurnameField)
 	addiu(5, 29, OLFieldPrepFamilyOff)
@@ -307,6 +339,7 @@ func buildFieldPrepShimAt(romanizer, shimRAM, famDst, givDst uint32, slotBytes i
 	w(olSLTIU(1, 2, int16(slotBytes)))
 	a.b(4, 1, 0, "retail")
 	w(0)
+	validatePacked(OLFieldPrepFamilyOff, "family")
 	sw(2, 29, OLFieldPrepFamilyLenOff)
 
 	// 3. Romanize saved given into owned scratch.
@@ -320,6 +353,7 @@ func buildFieldPrepShimAt(romanizer, shimRAM, famDst, givDst uint32, slotBytes i
 	w(olSLTIU(1, 2, int16(slotBytes)))
 	a.b(4, 1, 0, "retail")
 	w(0)
+	validatePacked(OLFieldPrepGivenOff, "given")
 	sw(2, 29, OLFieldPrepGivenLenOff)
 
 	// 4. Both fit: copy both outputs (including NUL) into the working slots.
@@ -385,13 +419,15 @@ type OverlayFieldPrepReport struct {
 
 // OverlayFieldPrepPlan is an in-memory delivery plan. No file is written.
 type OverlayFieldPrepPlan struct {
-	SHOUCopyModule *OverlayFieldPrepModule // only SHOUGATU, authenticated ChristmasFamily copy route
-	Module         OverlayFieldPrepModule
-	Patched        map[string][]byte
-	SitesByOverlay map[string][]FieldPrepCallsite
-	PatchedWords   map[string][]int
-	PatchedSites   int
-	Report         OverlayFieldPrepReport
+	SHOUCopyModule    *OverlayFieldPrepModule // only SHOUGATU, authenticated ChristmasFamily copy route
+	GEKOCopyModule    *OverlayFieldPrepModule // only GEKO, source-authenticated duplicate saved-family copies
+	VALENSuffixModule *OverlayFieldPrepModule // only VALEN dynamic selector, bounded -san pair rotation
+	Module            OverlayFieldPrepModule
+	Patched           map[string][]byte
+	SitesByOverlay    map[string][]FieldPrepCallsite
+	PatchedWords      map[string][]int
+	PatchedSites      int
+	Report            OverlayFieldPrepReport
 }
 
 // PlanOverlayFieldPrep patches only the overlay-owned JALs to 0x800847B8.

@@ -1,8 +1,8 @@
 package playername
 
-// packed transliteration table reproduces the N20 Muse/DeepSeek 1,424-byte derived CP932 romanizer
-// table in production Go. It is data-only: no executing MIPS packed decoder
-// exists yet, and this does not authorise a playable patch.
+// The packed transliteration table encodes 1,424 bytes of CP932-to-Latin
+// mapping data. This module builds and verifies the table; it does not
+// install an executable MIPS decoder or authorize a runtime patch.
 import (
 	"crypto/sha256"
 	"encoding/binary"
@@ -123,7 +123,7 @@ func BuildPS1PackedRomanizationTable() ([]byte, error) {
 		return nil, fmt.Errorf("N20 packed size %d !=1424", len(out))
 	}
 	if fmt.Sprintf("%x", sha256.Sum256(out)) != packedTablePackedTableSHA {
-		return nil, fmt.Errorf("N20 packed data mismatches independent Muse SHA")
+		return nil, fmt.Errorf("N20 packed table digest does not match the verified reference")
 	}
 	if err := packedTableCheckPackedTable(out, simple, dig); err != nil {
 		return nil, err

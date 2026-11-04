@@ -10,7 +10,7 @@ import (
 )
 
 // PlanCoordinatedNPCAFirstLinePrivate is a narrowly-scoped PRIVATE geometry
-// candidate for the six owner-observed NPC-A formatter routes. It preserves
+// candidate for the six NPC-A formatter routes observed in gameplay. It preserves
 // the native speaker-X, N10 name bytes and glyph/font setup. It moves the
 // quote-prefix and the dialogue parser's initial X TOGETHER, to the right of
 // the formatted speaker's conservative pair-glyph right edge.

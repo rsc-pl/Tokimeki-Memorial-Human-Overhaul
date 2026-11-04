@@ -1,10 +1,9 @@
 package n20arch
 
-// speaker width joins the OpenCode width-aware speaker bridge resident F1 shim with the already
-// source-authenticated speaker bridge 16-site caller expansion and the speaker rendering state-3
-// delivery chain. This is an OFFLINE, BLOCKED candidate, never a ROM writer.
-// In particular it DOES NOT claim co-residency with the 60-byte telephone telephone
-// dispatcher: only 4 bytes remain after the width-aware resident source.
+// Speaker width combines the resident F1 width-aware speaker adapter with the
+// verified 16-callsite speaker bridge and the state-3 rendering chain.
+// This offline candidate is not included in the ROM writer. The separate
+// 60-byte telephone dispatcher does not fit in the remaining 4-byte window.
 
 import (
 	"bytes"
@@ -12,7 +11,7 @@ import (
 	"fmt"
 )
 
-const SpeakerWidthBlockedReason = "speaker width offline-only: width-aware F1 and all 16 exact surname callers compose with speaker rendering, but C10 resident lifetime, GPU/DMA/IRQ/cache and actual gameplay are unproved; the separate telephone telephone dispatcher cannot fit beside this F1 shim (4 B free vs 60 B required). safe_to_patch=false, runtime_pass=false."
+const SpeakerWidthBlockedReason = "speaker width offline-only: width-aware F1 and all 16 exact surname callers compose with speaker rendering, but C10 resident lifetime, GPU/DMA/IRQ/cache and actual gameplay are unproved; the separate telephone dispatcher cannot fit beside this F1 shim (4 B free vs 60 B required). safe_to_patch=false, runtime_pass=false."
 
 type WidthCandidate struct {
 	C10DistributedCandidate

@@ -10,7 +10,7 @@ import (
 // OriginalEXESHA is the SHA-256 of the authenticated Japanese retail PS-X EXE.
 const OriginalEXESHA = "bae1514fcc4bd8843c69803bf469632b004377b67f3e4408f0641c545fd843ae"
 
-// OverlaySHA pins all 26 authenticated original overlays (packed transliteration table/previous version).
+// OverlaySHA pins the 26 authenticated original overlay images.
 var OverlaySHA = map[string]string{
 	"BUNKAKEN.EXN": "950de4f402232a1a36242935ad18094b1a4327d7d8fc187a8ecdb7e090313952",
 	"BUNKASAI.EXN": "381a936f10c244b21bd274eab74bda0f0388f33570947e473afbf46c31204b42",
@@ -243,8 +243,8 @@ func CensusHeap(exe []byte, overlays map[string][]byte) HeapCensus {
 	for _, d := range overlays {
 		scan(d, 0x80132000)
 	}
-	h.UnresolvedStoreBases = 55657 // previous version authenticated census; not recomputed here.
-	h.Verdict = "REJECTED: InitHeap heap use is not disproved; previous version/overlay status are inconclusive"
+	h.UnresolvedStoreBases = 55657 // Authenticated static census; not recomputed here.
+	h.Verdict = "REJECTED: InitHeap heap use remains possible; overlay lifetime is unproven"
 	h.Note = "Negative-only static census. No A0 malloc wrapper is resolved, but B0 kernel-heap allocation calls exist and 55,657 store bases remain unresolved. Absence of a resolved malloc is not proof."
 	return h
 }

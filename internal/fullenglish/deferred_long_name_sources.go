@@ -225,7 +225,7 @@ func longNameSourceNames(retail, english []byte, deferred []longNameDeferredName
 			g2Source = d.entry.Text
 		}
 	}
-	// No GEKO bare/san owner decision is inferred from a source suffix.
+	// A source suffix does not select the GEKO bare/san policy.
 	// This validates only the san diagnostic branch's exact spelling.
 	if g2Source != "" && g2Source != desiredShort[11]+"-san" {
 		err = fmt.Errorf("long-name source GEKO G2 source %q disagrees with source-owned index 11 + -san %q", g2Source, desiredShort[11]+"-san")

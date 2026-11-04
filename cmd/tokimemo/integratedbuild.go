@@ -170,6 +170,12 @@ func cmdIntegratedEnglishBuild(root, cue, requested string, force, preflight boo
 	if _, err = auditCompletedBuild(cue, stage); err != nil {
 		return fmt.Errorf("staged image readback: %w", err)
 	}
+	// Bind the build log to the exact data-track bytes verified in staging.
+	// The TUI may publish this staged result later; it does not change the data.
+	builtTrackSHA256, err := diskSHA(dataTrack)
+	if err != nil {
+		return fmt.Errorf("staged Track 1 SHA-256: %w", err)
+	}
 	if previous != "" {
 		current, e := auditCompletedBuild(cue, dest)
 		if e != nil || current != previous {
@@ -189,6 +195,7 @@ func cmdIntegratedEnglishBuild(root, cue, requested string, force, preflight boo
 			return err
 		}
 	}
+	fmt.Fprintf(commandOutput, "Built Track 1 SHA-256: %s\n", builtTrackSHA256)
 	fmt.Fprintf(commandOutput, "Full English + N10/N20 Go build: %d verified files; %d rewritten sectors. No original, translation or saved-game changes. Runtime safety is NOT certified.\n", len(plan.Files), sectors)
 	return nil
 }

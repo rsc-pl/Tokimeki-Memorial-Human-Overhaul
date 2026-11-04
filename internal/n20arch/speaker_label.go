@@ -27,7 +27,7 @@ package n20arch
 // observed. safe_to_patch=false and runtime_pass=false are intentional.
 //
 // Nothing here writes translation data, the retail EXE, overlays on disk,
-// saves, memory cards, DuckStation, .local/museresearch, guest RAM outside
+// saves, memory cards, emulator settings, private project files, guest RAM outside
 // the offline test Machine, or the original kana storage.
 
 import (

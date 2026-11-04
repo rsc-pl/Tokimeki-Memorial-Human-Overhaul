@@ -188,6 +188,12 @@ func cmdNativePlan(root string, args []string) error {
 			return fmt.Errorf("snapshotting translations: %w", err)
 		}
 	}
+	if err := checkPNGSourceFiles(paths); err != nil {
+		return err
+	}
+	if _, err := validateSourcePaths(root, paths, false); err != nil {
+		return fmt.Errorf("selected translation validation: %w", err)
+	}
 	batch, err := patchplan.Load(root, paths)
 	if err != nil {
 		return err

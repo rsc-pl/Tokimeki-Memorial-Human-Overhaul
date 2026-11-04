@@ -1,9 +1,9 @@
 package main
 
-// Experimental native disc builder: copies the original multi-track CUE/BIN
-// to a fresh private staging directory, writes only changed MODE2/Form1
-// sectors, checks the resulting file hashes/EDC/ECC and atomically publishes
-// the directory. Production `build` deliberately remains Python-backed.
+// Native disc-image writer for validated offline plans. It copies the original
+// multi-track CUE/BIN into isolated staging, changes only selected MODE2/Form1
+// sectors, verifies source bytes and sector integrity, then publishes atomically.
+// The normal build command uses the integrated Go composition pipeline.
 
 import (
 	"bytes"
@@ -303,6 +303,12 @@ func cmdNativeBuild(root string, argv []string) error {
 	translationInputs, err := freezeInputs(paths)
 	if err != nil {
 		return fmt.Errorf("snapshotting translation inputs: %w", err)
+	}
+	if err := checkPNGSourceFiles(paths); err != nil {
+		return err
+	}
+	if _, err := validateSourcePaths(root, paths, false); err != nil {
+		return fmt.Errorf("selected translation validation: %w", err)
 	}
 	batch, err := patchplan.Load(root, paths)
 	if err != nil {

@@ -2,7 +2,7 @@ package n20arch
 
 // This loader bridge remains an OFFLINE MIPS candidate. It does not enable
 // resident EXE rendering hooks. Installing EXE hooks before a proven initial
-// promotion would reproduce previous version's unloaded-target failure.
+// promotion could jump into an overlay target before it is loaded.
 
 import (
 	"bytes"

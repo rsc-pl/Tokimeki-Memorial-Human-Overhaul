@@ -1,7 +1,7 @@
 package n20arch
 
-// exam integrity freezes the two owner-accepted exam labels exam outputs during the PRIVATE
-// full-English image build. It is a source-authenticated byte-integrity gate,
+// Exam integrity pins the two previously validated ETC exam-label outputs
+// during the English image build. It is a source-authenticated byte-integrity gate,
 // not another MIPS hook, an assertion of runtime safety, or an edit to game data.
 import (
 	"bytes"
@@ -14,10 +14,10 @@ import (
 // This accepted digest is pinned to the exam labels code bytes independently of the
 // current planner. The original ETC local payload is separate from EN script
 // data and remains constant across source-owned translations/GEKO policies.
-// If anyone revises exam labels's executable helper, that requires a distinct owner
-// QA/approval; the gate must refuse silent changes even if the new planner
+// Revising the exam-label executable helper requires separate QA and explicit
+// approval; this gate must refuse silent changes even if a different planner
 // would otherwise happily reconstruct its own changed output.
-const examPayloadOwnerAcceptedETCPayloadSHA256 = "9619dcf15044552ba00f9ea5b6e7b110ed4ff97e30ac0896d1bf8850696fa384"
+const examPayloadVerifiedETCPayloadSHA256 = "9619dcf15044552ba00f9ea5b6e7b110ed4ff97e30ac0896d1bf8850696fa384"
 
 // VerifyFrozenETC takes a pre-exam labels, English source-owned ETC overlay and
 // the final composed candidate. It demands the exact authorized exam labels delta,
@@ -52,8 +52,8 @@ func VerifyFrozenETC(originalEXE, retailETC, englishBefore, finalETC []byte) err
 		}
 	}
 	payloadSum := sha256.Sum256(finalETC[OLPayloadFileOff:OLPayloadEndOff])
-	if hex.EncodeToString(payloadSum[:]) != examPayloadOwnerAcceptedETCPayloadSHA256 {
-		return fmt.Errorf("exam integrity frozen owner-tested ETC N6/N20 payload code digest changed")
+	if hex.EncodeToString(payloadSum[:]) != examPayloadVerifiedETCPayloadSHA256 {
+		return fmt.Errorf("exam integrity frozen ETC N6/N20 payload code digest changed")
 	}
 	if !bytes.Equal(expected.Overlay, finalETC) {
 		first := -1
@@ -63,7 +63,7 @@ func VerifyFrozenETC(originalEXE, retailETC, englishBefore, finalETC []byte) err
 				break
 			}
 		}
-		return fmt.Errorf("exam integrity owner-accepted exam image changed at ETC offset %#x", first)
+		return fmt.Errorf("exam integrity pinned exam image changed at ETC offset %#x", first)
 	}
 	return nil
 }

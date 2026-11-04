@@ -22,10 +22,9 @@ import (
 	"tokimemo/internal/script"
 )
 
-// authoritativeSourceNames obtains the authoritative CURRENT game names from the
-// translated English executable, not the name fixture/English image composition engineering target fixture.
-// The owner will later edit surname strings in translation source; this layer
-// must never decide to promote an unintroduced Girl to Asahina by fiat.
+// English name tables are read from the supplied translated executable.
+// Test fixtures do not supersede source names, and an unidentified speaker
+// label (such as Girl) must not be replaced by a named character here.
 func ownerEnglishSourceNames(retail []byte, english []byte) ([]string, []string, error) {
 	short, err := namePoolLayoutReadNameSlots(english, retail, namePoolLayoutShortPointer, namePoolLayoutShortPoolStart, namePoolLayoutShortPointer)
 	if err != nil {
@@ -147,7 +146,7 @@ type imageCompositionReport struct {
 // reachable through this API.
 func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[string][]byte) error {
 	report := imageCompositionReport{Schema: 1, Status: "NOT_CHECKED", SafeToPatch: false, RuntimePass: false, ImageBuilt: false, SourceCUE: cuePath, ResearchFixtureOnly: false,
-		EditorialWarning: "long-name source conversion: labels are taken from the live English EXE or exact authenticated NPC name records (including the two GEKO event_words.json literals), never from historic surname fixtures. GEKO branches remain diagnostic; no owner choice inferred.", GekoDecision: "PENDING",
+		EditorialWarning: "long-name source conversion: labels are taken from the live English EXE or exact authenticated NPC name records (including the two GEKO event_words.json literals), never from historic surname fixtures. GEKO branches remain diagnostic; source text does not select the policy.", GekoDecision: "PENDING",
 		RuntimeBlocker: "No exclusive overlay-local C10 code RAM/CPU/DMA/IRQ ownership proof, complete parser NUL/alias proof or in-game GPU/layout QA. Offline validation does not establish runtime safety; image generation is permitted by the builder but gameplay safety remains unverified."}
 	out := func() error { return json.NewEncoder(w).Encode(report) }
 	paths, digest, err := fullCorpusFiles(root)
@@ -316,7 +315,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		mergedCandidate := formatterBridgeStage.CombinedQACandidate
 		mergedCandidate.EnglishEXE = manualCopyStage.EnglishRendererEXE
 		mergedCandidate.Overlays = manualCopyStage.Overlays
-		// direct name hooks: the owner already relies on 15 dynamic surname/given/nickname
+		// Direct name hooks use 15 dynamic surname/given/nickname
 		// sites in four existing overlay carriers. A future source/merge drift
 		// must abort before any private ISO write, rather than silently show kana.
 		if hookErr := n.VerifyDirectSavedNameHooks(overlays, mergedCandidate.Overlays); hookErr != nil {
@@ -401,7 +400,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			results = append(results, item)
 			continue
 		}
-		// NPC spacing owner-directed pragmatic visual compromise: speaker +3,
+		// NPC frame spacing adjustment: speaker +3,
 		// quotation AND parser -1, six NPC-A routes only. Phone and other
 		// speaker consumers remain separate. Runtime remains unverified.
 		balancedEXE, balanceErr := n.PlanNPCModerateBalancePrivate(exe, coordinatedEXE, targetShort)
@@ -446,7 +445,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// Compare the actual assembled image against the authenticated
 		// pre-exam labels English source, never a hardcoded player name.
 		if gateErr := n.VerifyFrozenETC(exe, overlays["ETC.EXN"], mergedETC, physical[etcPath]); gateErr != nil {
-			item.Blocker = "exam integrity owner-approved ETC image integrity: " + gateErr.Error()
+			item.Blocker = "exam integrity: verified ETC image mismatch: " + gateErr.Error()
 			results = append(results, item)
 			continue
 		}
@@ -468,6 +467,25 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			continue
 		}
 		physical[rpgPath] = rpgIntegration.Overlay
+		// School-festival full-name JOIN: retail builds two independently saved
+		// player fields into sp+0x38 (24 B) and uses their original kana lengths
+		// for horizontal centering. Compose both in the same overlay's guarded
+		// N6 module, validating the complete packed output before writing and
+		// keeping the retail strcat route on every failed precondition.
+		bunkaPath := "CDROM/EXEDIR/BUNKA_SD.EXN"
+		mergedBUNKA, bunkaPresent := physical[bunkaPath]
+		if !bunkaPresent {
+			item.Blocker = "school festival saved full name: English BUNKA_SD.EXN absent"
+			results = append(results, item)
+			continue
+		}
+		bunkaIntegration, bunkaErr := n.PlanBUNKASavedFullName(overlays["BUNKA_SD.EXN"], mergedBUNKA)
+		if bunkaErr != nil || bunkaIntegration.SafeToPatch || bunkaIntegration.RuntimePass {
+			item.Blocker = fmt.Sprintf("school festival saved full name: %v", bunkaErr)
+			results = append(results, item)
+			continue
+		}
+		physical[bunkaPath] = bunkaIntegration.Overlay
 		// The N20 ancestor has already installed the authenticated phone
 		// callsites and its owned renderer. Validate the final output without
 		// applying the same binary patch a second time.

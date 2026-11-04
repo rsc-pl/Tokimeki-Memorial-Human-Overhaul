@@ -1,6 +1,6 @@
 package playername
 
-// previous version: offline-assembled R3000A/PS1 kana-to-pair-font core.
+// Offline R3000A/PS1 kana-to-pair-font assembly core.
 // This is NOT a hook, executable-space discovery or ISO patch. Handles simple
 // kana, supported two-kana digraphs, sokuon and long-vowel mark, using the same
 // transliteration tables as the host Go romanizer. The caller must provide a
@@ -123,9 +123,9 @@ func BuildPS1NamePairCore(origin uint32) (PS1RomanizerCore, error) {
 	return buildPS1RomanizerCore(origin, true, true, false)
 }
 
-// BuildPS1SafeSingleCore emits a separate previous version single-field converter with
-// explicit MIPS-I load-delay slots. The previous version legacy binary is deliberately
-// preserved for reproducibility, but MUST NOT be selected for console use:
+// BuildPS1SafeSingleCore emits a single-field converter with explicit
+// MIPS-I load-delay slots. The older load-unsafe binary is retained for
+// regression comparison but MUST NOT be selected for console use:
 // its eager-load tests did not model R3000A's one-instruction load hazard.
 // This safe variant remains offline / NOT patch-ready until a real hook and
 // output ownership have been independently proven.
@@ -165,9 +165,9 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 	}
 	var b mipsBuf
 	b.labels = map[string]int{}
-	// previous version safe single + previous version two-field: a NOP after EVERY load so the
-	// R3000A load-delay slot cannot consume an old register value. Retain
-	// the previous version legacy no-NOP binary solely for regression comparison.
+// Safe single-field and two-field cores insert a NOP after every load so
+// the R3000A load-delay slot cannot consume a stale register value. The
+// older no-NOP binary is retained solely for regression comparison.
 	e := func(w uint32) {
 		b.emit(w)
 		if safeLoads && (w>>26 == 35 || w>>26 == 36) {
@@ -516,7 +516,7 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 		jump("char_loop")
 		b.label("both_fields_done")
 	}
-	// previous version: append an explicitly selected ASCII honorific to the local scratch.
+// Append an explicitly selected ASCII honorific to the local scratch.
 	// All changes are SCRATCH ONLY until final capacity preflight succeeds.
 	e(iType(35, 29, 8, 0x4c)) // selector
 	beq(8, 0, "preflight")

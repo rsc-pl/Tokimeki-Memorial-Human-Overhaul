@@ -10,6 +10,9 @@ import (
 	"tokimemo/internal/script"
 )
 
+// Compact surname-pool capacity is shared with offline A/B source audits.
+const N10CompactExpectedBytes = 132
+
 // DirectAliasStage is an explicitly INCOMPLETE experiment. It rewrites only
 // three direct resident-EXE source-address constructions, one guarded
 // inherited-register EXE source, and one GEKO source. GEKO's remaining

@@ -25,7 +25,7 @@ func openDiscISO(dataTrack string, sectors int64) (*os.File, *ps1.ISO, error) {
 	return f, iso, nil
 }
 
-// Native read-only directory inventory. No game content is included in technical handoffs.
+// List entries in the validated ISO9660 data track without modifying the disc.
 func cmdFiles(root string, args []string) error {
 	fs := flag.NewFlagSet("files", flag.ContinueOnError)
 	game := fs.String("game", "", "original CUE (automatic discovery if omitted)")

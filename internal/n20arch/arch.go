@@ -6,7 +6,7 @@
 // An earlier, rejected layout placed a persistent 4,032 B core at 0x801FF000 and
 // disabled the original BIOS heap. Both choices are REJECTED here:
 //   - the original InitHeap(0x801FF800,0x7F0) heap overlaps that core by
-//     1,984 B and its use is not disproved; previous version/overlay status are inconclusive;
+//     1,984 B; heap activity and overlay lifetime remain unproven;
 //   - the four boot words that implement the SP switch and InitHeap call are
 //     preserved byte-identically, including the SP-derived store to
 //     0x80125124.
@@ -325,11 +325,11 @@ func sha(b []byte) string          { return fmt.Sprintf("%x", sha256.Sum256(b)) 
 // Payload returns the 4,312 B overlay payload: "N5", the module and zero tail.
 func (c Core) PayloadBytes() []byte { return append([]byte(nil), c.Payload...) }
 
-// RefuseForbidden rejects the historical previous version address and the rejected
+// RefuseForbidden rejects the superseded scratch-table address and rejected
 // persistent top-of-RAM claim before any build.
 func RefuseForbidden(base uint32) error {
 	if base >= ForbiddenOldBase && base < ForbiddenOldEnd {
-		return fmt.Errorf("previous version: %08x intersects original scratch/record table", base)
+		return fmt.Errorf("N20: %08x intersects original scratch/record table", base)
 	}
 	if base >= RejectedTopRAMBase && base < RejectedTopRAMEnd {
 		return fmt.Errorf("N20: %08x is in the rejected unproven top-of-RAM claim", base)

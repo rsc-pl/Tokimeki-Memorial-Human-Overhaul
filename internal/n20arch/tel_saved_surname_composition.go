@@ -107,6 +107,10 @@ func telSurnameComposeAdapter(base, target uint32, appendMode bool) ([]byte, err
 	add(8, 8, -1)
 	add(10, 10, 1)
 	branch(5, 8, 0, "validate")
+	// N6's returned count is not proof of NUL termination. The glyph
+	// scan left t2 at scratch[count-1]; reject before any C strcpy/strcat.
+	lbu(11, 10, 0)
+	branch(5, 11, 0, "retail")
 	// The last (source-owned) append is followed by an original suffix
 	// concat. Scan a bounded prefix; on uncertainty use retail kana.
 	if appendMode {
