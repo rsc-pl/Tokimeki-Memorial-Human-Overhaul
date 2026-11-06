@@ -703,19 +703,21 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 			Reason: "retail-authenticated suffix append, verify exactly one encoded period and N6 surname tail before folding 0xA0 pad; original strcat fallback",
 		})
 	}
-	// Only the authenticated outgoing player self-introduction with one P
-	// marker: never hook all phone/P templates or the global EXE parser.
+	// Only the two authenticated outgoing player introductions with one P
+	// marker each: never hook all phone/P templates or the global EXE parser.
 	selfIntro, afterIntro, err := telSelfIntroPatch(exe, original, dest)
 	if err != nil {
 		return result, nil, err
 	}
 	dest = afterIntro
 	result.SelfIntroBytes = selfIntro
-	result.Calls = append(result.Calls, N20ManifestWord{
-		Owner: "TEL.EXN", PC: telSelfIntroCall, Old: jalWord(telSelfIntroRetail),
-		New: jalWord(telSelfIntroShim), Kind: "jal", Role: "TEL outgoing player self-introduction P token",
-		Reason: "one authenticated source-owned P template: bounded local saved surname/given N6 conversion, synchronous retail copy and strict fallback",
-	})
+	for _, pc := range []uint32{telSelfIntroCall, telSelfIntroOtherCall} {
+		result.Calls = append(result.Calls, N20ManifestWord{
+			Owner: "TEL.EXN", PC: pc, Old: jalWord(telSelfIntroRetail),
+			New: jalWord(telSelfIntroShim), Kind: "jal", Role: "TEL outgoing player self-introduction P token",
+			Reason: "exact source-owned P template: bounded local saved surname/given N6 conversion, synchronous retail copy and strict fallback",
+		})
+	}
 	ck := packedTableChecksum(dest)
 	dest[0x2fffc], dest[0x2fffd] = byte(ck>>8), byte(ck)
 	result.Bytes = payload

@@ -1,11 +1,12 @@
 package n20arch
 
-// The TEL source-owned first outgoing self-introduction contains one P marker:
-// えっと… Pって言いますけど。 Its caller passes this exact line to the resident
+// Two authenticated TEL outgoing self-introductions contain one P marker:
+// えっと… Pって言いますけど。 and もしもし、 Pですけど。
+// Their callers pass those exact lines to the resident
 // 0x80050E8C formatter. The formatter immediately copies its input to its
 // own 256-byte stack buffer (BIOS A0:1A strncpy), BEFORE interpreting P and
 // queuing any line. This opt-in TEL-local preprocessor substitutes the saved
-// player's surname + given name only at that one original caller. It never
+// player's surname + given name only at those two original callers. It never
 // changes the saved kana, source translation, EXE parser or other P records.
 // An invalid source, failed converter or missing N6 body runs the unchanged
 // retail call. This is an offline candidate pending real frame acceptance.
@@ -18,6 +19,8 @@ import (
 const (
 	telSelfIntroCall        uint32 = 0x80135108
 	telSelfIntroSource      uint32 = 0x8013ecd8
+	telSelfIntroOtherCall   uint32 = 0x801381b4
+	telSelfIntroOtherSource uint32 = 0x8013ef90
 	telSelfIntroRetail      uint32 = 0x80050e8c
 	telSelfIntroShim        uint32 = OverlaySlotBase + 0x2a000
 	telSelfIntroFileOff            = 0x2a000
@@ -36,6 +39,10 @@ func telSelfIntroRetailSource(exe, original []byte) error {
 		0x801350fc: 0x3c048014, 0x80135100: 0x2484ecd8, 0x80135104: 0x00002825,
 		telSelfIntroCall: jalWord(telSelfIntroRetail), telSelfIntroCall + 4: 0x2406000f,
 		0x80135110: jalWord(0x8004ead4), 0x80135114: 0x00002025,
+		0x8013819c: 0x3c04800e, 0x801381a0: jalWord(0x80050dfc), 0x801381a4: 0x24846354,
+		0x801381a8: 0x3c048014, 0x801381ac: 0x2484ef90, 0x801381b0: 0x00002825,
+		telSelfIntroOtherCall: jalWord(telSelfIntroRetail), telSelfIntroOtherCall + 4: 0x2406000f,
+		0x801381bc: jalWord(0x8004ead4), 0x801381c0: 0x00002025,
 	} {
 		if binary.LittleEndian.Uint32(original[pc-OverlaySlotBase:]) != expected {
 			return fmt.Errorf("TEL self-intro: caller drift %#x", pc)
@@ -43,7 +50,11 @@ func telSelfIntroRetailSource(exe, original []byte) error {
 	}
 	expected := []byte{0x82, 0xa6, 0x82, 0xc1, 0x82, 0xc6, 0x81, 0x63, 0x20, 0x50, 0x82, 0xc1, 0x82, 0xc4, 0x8c, 0xbe, 0x82, 0xa2, 0x82, 0xdc, 0x82, 0xb7, 0x82, 0xaf, 0x82, 0xc7, 0x81, 0x42, 0}
 	if !bytes.Equal(original[telSelfIntroSource-OverlaySlotBase:telSelfIntroSource-OverlaySlotBase+uint32(len(expected))], expected) {
-		return fmt.Errorf("TEL self-intro: original source P token mismatch")
+		return fmt.Errorf("TEL self-intro: original first source P token mismatch")
+	}
+	other := []byte{0x82, 0xe0, 0x82, 0xb5, 0x82, 0xe0, 0x82, 0xb5, 0x81, 0x41, 0x20, 0x50, 0x82, 0xc5, 0x82, 0xb7, 0x82, 0xaf, 0x82, 0xc7, 0x81, 0x42, 0}
+	if !bytes.Equal(original[telSelfIntroOtherSource-OverlaySlotBase:telSelfIntroOtherSource-OverlaySlotBase+uint32(len(other))], other) {
+		return fmt.Errorf("TEL self-intro: original second source P token mismatch")
 	}
 	// The native formatter's immediate copy must be source-authenticated too.
 	const exeBase = uint32(0x80040800)
@@ -96,7 +107,11 @@ func telSelfIntroPayload() ([]byte, error) {
 	mov(18, 6)
 	w(olLUI(8, telSelfIntroSource))
 	w(olORI(8, 8, telSelfIntroSource&65535))
+	beq(16, 8, "source_ok")
+	w(olLUI(8, telSelfIntroOtherSource))
+	w(olORI(8, 8, telSelfIntroOtherSource&65535))
 	bne(16, 8, "retail")
+	a.label("source_ok")
 	beq(17, 0, "verify_a2")
 	jump("retail")
 	a.label("verify_a2")
@@ -305,11 +320,13 @@ func telSelfIntroPatch(exe, original, composed []byte) ([]byte, []byte, error) {
 	}
 	dst := bytes.Clone(composed)
 	copy(dst[telSelfIntroFileOff:], code)
-	off := int(telSelfIntroCall - OverlaySlotBase)
-	if binary.LittleEndian.Uint32(dst[off:]) != jalWord(telSelfIntroRetail) || binary.LittleEndian.Uint32(dst[off+4:]) != 0x2406000f {
-		return nil, nil, fmt.Errorf("TEL self-intro: composed caller drift")
+	for _, pc := range []uint32{telSelfIntroCall, telSelfIntroOtherCall} {
+		off := int(pc - OverlaySlotBase)
+		if binary.LittleEndian.Uint32(dst[off:]) != jalWord(telSelfIntroRetail) || binary.LittleEndian.Uint32(dst[off+4:]) != 0x2406000f {
+			return nil, nil, fmt.Errorf("TEL self-intro: composed caller drift %#x", pc)
+		}
+		binary.LittleEndian.PutUint32(dst[off:], jalWord(telSelfIntroShim))
 	}
-	binary.LittleEndian.PutUint32(dst[off:], jalWord(telSelfIntroShim))
 	return code, dst, nil
 }
 
@@ -324,9 +341,11 @@ func verifyTELSelfIntro(exe, original, composed, expected []byte) error {
 	if !bytes.Equal(code, expected) || !bytes.Equal(composed[telSelfIntroFileOff:telSelfIntroFileOff+len(code)], code) {
 		return fmt.Errorf("TEL self-intro: payload drift")
 	}
-	off := int(telSelfIntroCall - OverlaySlotBase)
-	if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telSelfIntroShim) || binary.LittleEndian.Uint32(composed[off+4:]) != 0x2406000f {
-		return fmt.Errorf("TEL self-intro: caller drift")
+	for _, pc := range []uint32{telSelfIntroCall, telSelfIntroOtherCall} {
+		off := int(pc - OverlaySlotBase)
+		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telSelfIntroShim) || binary.LittleEndian.Uint32(composed[off+4:]) != 0x2406000f {
+			return fmt.Errorf("TEL self-intro: caller drift %#x", pc)
+		}
 	}
 	return nil
 }

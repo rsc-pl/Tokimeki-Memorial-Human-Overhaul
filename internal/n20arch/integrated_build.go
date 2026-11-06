@@ -351,7 +351,7 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	m.Regions = append(m.Regions, N20ManifestRegion{
 		Owner: "TEL.EXN", RAMAddr: telSelfIntroShim, FileOff: telSelfIntroFileOff,
 		Bytes: len(telDialog.SelfIntroBytes), SHA256: sha(telDialog.SelfIntroBytes),
-		Kind: "tel_self_intro_p", Role: "single source-authenticated TEL outgoing self-introduction P-token adapter",
+		Kind: "tel_self_intro_p", Role: "two source-authenticated TEL outgoing self-introduction P-token routes",
 		Reason: "two guarded saved-field N6 conversions into bounded local line, synchronous native retail formatter copy, original caller ABI and fail-closed fallback",
 	})
 	m.Accounting.PayloadRegions++
@@ -783,12 +783,14 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if err := telSelfIntroRetailSource(exe, overlays["TEL.EXN"]); err != nil {
 		return fmt.Errorf("verify: TEL outgoing self-intro source: %w", err)
 	}
-	expected = append(expected, N20ManifestWord{
-		Owner: "TEL.EXN", PC: telSelfIntroCall, Old: jalWord(telSelfIntroRetail),
-		New: jalWord(telSelfIntroShim), Kind: "jal",
-		Role:   "TEL outgoing player self-introduction P token",
-		Reason: "one authenticated source-owned P template with bounded local saved surname/given conversion, synchronous native copy and strict fallback",
-	})
+	for _, pc := range []uint32{telSelfIntroCall, telSelfIntroOtherCall} {
+		expected = append(expected, N20ManifestWord{
+			Owner: "TEL.EXN", PC: pc, Old: jalWord(telSelfIntroRetail),
+			New: jalWord(telSelfIntroShim), Kind: "jal",
+			Role:   "TEL outgoing player self-introduction P token",
+			Reason: "exact source-owned P template with bounded local saved surname/given conversion, synchronous native copy and strict fallback",
+		})
+	}
 	if n6Calls != 136 || fpCalls != 235 {
 		return fmt.Errorf("verify: callsite coverage drifted: N6=%d N6-FP=%d, want 136/235", n6Calls, fpCalls)
 	}
@@ -1112,7 +1114,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if acc.EXEEntryHooks != 0 || acc.EXERelocationPairs != 15 || acc.EXERelocationWords != 30 ||
 		acc.OverlayRelocationPairs != 6 || acc.OverlayRelocationWords != 12 ||
 		acc.OverlayCallsiteN6 != 136 || acc.OverlayCallsiteN6FP != 235 ||
-		acc.OverlayCallsiteWords != 452 || acc.TotalEXEChangedWords != 30 ||
+		acc.OverlayCallsiteWords != 453 || acc.TotalEXEChangedWords != 30 ||
 		acc.LegacyEXEChangedWords != 0 {
 		return fmt.Errorf("verify: change accounting %+v", acc)
 	}
