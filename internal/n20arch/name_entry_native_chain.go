@@ -1,6 +1,6 @@
 package n20arch
 
-// native name entry: source-stage, NAME_ENT-only private copy of three source-authenticated
+// native name entry: source-stage, NAME_ENT-only private copy of three original-byte-verified
 // retail routines. Unlike glyph aliasing this does not overwrite already submitted VRAM
 // slots. It delegates the ordinary alias slot assignment / LoadImage path to
 // the native retail instructions and replaces only the input 96-byte bitmap

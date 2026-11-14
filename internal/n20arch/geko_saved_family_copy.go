@@ -1,6 +1,6 @@
 package n20arch
 
-// The three source-authenticated GEKO duplicate-family writes copy the saved
+// The three original-byte-verified GEKO duplicate-family writes copy the saved
 // CP932 surname into the relocated 12-byte N20 working field, after which the
 // retail fallback alone leaves kana behind. This source-specific adapter first
 // preserves the original strcpy semantics, then attempts the same bounded

@@ -1,7 +1,7 @@
 package n20arch
 
 // Exam integrity pins the two previously validated ETC exam-label outputs
-// during the English image build. It is a source-authenticated byte-integrity gate,
+// during the English image build. It is an original-byte-verified byte-integrity gate,
 // not another MIPS hook, an assertion of runtime safety, or an edit to game data.
 import (
 	"bytes"

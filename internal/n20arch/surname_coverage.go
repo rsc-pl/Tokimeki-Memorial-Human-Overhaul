@@ -1,6 +1,6 @@
 package n20arch
 
-// speaker bridge: source-authenticated, OFFLINE-ONLY expansion of the existing speaker rendering F1
+// speaker bridge: original-byte-verified, runtime-unverified expansion of the existing speaker rendering F1
 // gate. 16 exact EXE callers load the saved surname into a0 and invoke the
 // same retail speaker routine. speaker rendering covered two; these fourteen are omitted.
 // This adds no ROM write, no new RAM region and no gate/body bytes.

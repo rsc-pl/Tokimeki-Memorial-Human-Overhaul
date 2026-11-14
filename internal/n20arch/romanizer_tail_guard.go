@@ -1,6 +1,6 @@
 package n20arch
 
-// tail guard OFFLINE only: overlay formatter's order-sensitive integrity sentinel covered only
+// tail guard runtime-unverified: overlay formatter's order-sensitive integrity sentinel covered only
 // [image+256, image+4056) but execution also jumps into the 240-byte terminal
 // adapter in [image+16, image+256). Reuse the same 64-byte EXE checker to
 // validate all 4040 executable image bytes. The first 16 bytes are metadata
@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	TailGuardBlockedReason = "tail guard OFFLINE ONLY: 4040-byte adapter+body rolling integrity check, 22/26 overlay carriers and 4 retail fallbacks; executable overlay ownership/TOCTOU/DMA/IRQ/cache, narrator and complete English gameplay UNPROVEN; safe_to_patch=false, runtime_pass=false"
+	TailGuardBlockedReason = "tail guard runtime verification pending: 4040-byte adapter+body rolling integrity check, 22/26 overlay carriers and 4 retail fallbacks; executable overlay ownership/TOCTOU/DMA/IRQ/cache, narrator and complete English gameplay UNPROVEN; safe_to_patch=false, runtime_pass=false"
 	ExecutableBytes        = C10ResidentBytes - 16
 )
 

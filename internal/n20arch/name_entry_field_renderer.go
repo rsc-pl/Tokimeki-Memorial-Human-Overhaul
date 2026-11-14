@@ -1,6 +1,6 @@
 package n20arch
 
-// entry slot: private, offline-only exact-site NAME_ENT screen-field conversion.
+// entry slot: private, runtime-unverified exact-site NAME_ENT screen-field conversion.
 // The authenticated game has two alternative views, each drawing a pair of
 // 8-byte player-name fields through retail 0x8004E788. entry slot redirects ONLY
 // those four calls to an overlay-local converter; the third field on each

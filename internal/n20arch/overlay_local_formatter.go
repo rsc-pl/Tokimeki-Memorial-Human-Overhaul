@@ -1,6 +1,6 @@
 package n20arch
 
-// overlay formatter OFFLINE ONLY. overlay dispatch's plain XOR is commutative: changing the same bit in
+// overlay formatter runtime-unverified. overlay dispatch's plain XOR is commutative: changing the same bit in
 // two instructions is invisible. This stronger 16-instruction MIPS-I check
 // folds each instruction word into an order-sensitive reversible recurrence,
 // and stores its inverse-derived seed in the existing local header field.
@@ -13,7 +13,7 @@ import (
 
 const (
 	OverlayFormatterBlocked              = true
-	OverlayFormatterBlockedReason        = "overlay formatter OFFLINE ONLY: order-dependent 32-bit C10 integrity sentinel detects two-word XOR cancellation, but executable overlay ownership/TOCTOU, 4 fallback overlays, full English and real game runtime remain UNPROVEN; safe_to_patch=false, runtime_pass=false."
+	OverlayFormatterBlockedReason        = "overlay formatter runtime verification pending: order-dependent 32-bit C10 integrity sentinel detects two-word XOR cancellation, but executable overlay ownership/TOCTOU, 4 fallback overlays, full English and real game runtime remain UNPROVEN; safe_to_patch=false, runtime_pass=false."
 	overlayFormatterIncrement                  uint32 = 0x00005a77
 )
 

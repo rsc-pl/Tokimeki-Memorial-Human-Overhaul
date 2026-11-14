@@ -31,7 +31,7 @@ var inheritedFujisakiCode = []struct {
 // Fujisaki source. Only the existing LUI at 0x3ff94 and ADDIU at 0x40068 may
 // change. Its branch-provenance proof is tied to the byte-exact known retail
 // instructions. The input must already be the direct-source rewrite direct-source candidate.
-// Result is a research-only EXE COPY, not safe to boot.
+// Result is an analysis-stage EXE COPY, not safe to boot.
 func RewriteGuardedInheritedFujisaki(source []byte, target uint32) ([]byte, error) {
 	if target == 0 || len(source) < 0x4006c {
 		return nil, fmt.Errorf("invalid Fujisaki candidate geometry")

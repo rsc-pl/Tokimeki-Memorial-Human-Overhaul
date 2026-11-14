@@ -4,7 +4,7 @@ package n20arch
 // the already allocated terminal EXE gate, without a new global gate or
 // persistent RAM module. The 512-byte pre-C10 overlay-local window is used
 // only in authenticated eligible carrier overlays; the four other overlays
-// retain retail behavior. This is OFFLINE ONLY: indirect writes, DMA/IRQ,
+// retain retail behavior. This is runtime-unverified: indirect writes, DMA/IRQ,
 // GPU and exact narrator identity remain unproved.
 import (
 	"bytes"

@@ -8,7 +8,7 @@ import (
 // invariant: no N20 EXE hook may target the overlay window unless the
 // authentic dispatcher is already installed.
 //
-// This corrected prototype DOES NOT satisfy the invariant. Five unconditional
+// This corrected candidate DOES NOT satisfy the invariant. Five unconditional
 // EXE JALs target 0x80161EDC / 0x80161EE4 before any overlay load. Those bytes
 // are zero/absent at cold boot, so the CPU executes NOPs and falls through
 // 0x80162000 instead of reaching the retail fallback 0x8004E788.
@@ -154,7 +154,7 @@ func FormatColdBootVerdict(a ColdBootAudit) string {
 // success; failure tail-Jumps to the retail queue, preserving $ra.
 //
 // This is dependency/size evidence only. No EXE cave is proven and the guard
-// is NOT installed in the prototype.
+// is NOT installed in the candidate.
 func buildColdBootGuard(checkAddr, classTarget uint32) []byte {
 	a := &miniAsm{labels: map[string]int{}}
 	expected := jWord(VerifierRAM)

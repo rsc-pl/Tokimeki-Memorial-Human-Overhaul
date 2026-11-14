@@ -33,12 +33,13 @@ package n20arch
 // 8-byte working slot (at most seven output bytes including the NUL). A failure of either field
 // leaves both working fields exactly as the retail routine wrote them (kana).
 //
-// 0x800CA17C and 0x800CA190 are deliberately NOT converted: they are built by
-// the EXE suffix/name-table helpers 0x80051508/0x80051438, whose inputs include
-// kanji name-table output, so they are not dynamically kana-romanizable at
-// this route. They remain documented blocked fields.
-//
-// safe_to_patch remains false. This is an offline, in-memory prototype.
+// The retail P field is relocated to a 16-byte destination. After both
+// romanized working fields validate, only a *complete exact retail output*
+// matching saved given/surname, optionally followed by native 君 or さん, is
+// replaced. Saved nickname, compound names and unknown suffixes stay retail.
+// The font pad follows the complete output; joining a following punctuation
+// glyph is a separate renderer concern. 0x800CA190 remains unconverted.
+// Guest execution and image reconstruction do not constitute runtime proof.
 
 import (
 	"bytes"
@@ -182,11 +183,15 @@ func BuildOverlayFieldPrepModule() (OverlayFieldPrepModule, error) {
 }
 
 // buildOverlayFieldPrepModuleAt is the same module with caller-chosen working
-// slot addresses and slot size. The N20 relocation prototype uses it to write
+// slot addresses and slot size. The N20 relocation candidate uses it to write
 // the two EXE-resident fields at their relocated addresses with a 12-byte
 // slot; the default wrapper above keeps the retail 8-byte N6-FP behaviour
 // byte-identical.
 func buildOverlayFieldPrepModuleAt(famDst, givDst uint32, slotBytes int) (OverlayFieldPrepModule, error) {
+	return buildOverlayFieldPrepModuleAtWithGivenKun(famDst, givDst, slotBytes, false)
+}
+
+func buildOverlayFieldPrepModuleAtWithGivenKun(famDst, givDst uint32, slotBytes int, enabled bool) (OverlayFieldPrepModule, error) {
 	var m OverlayFieldPrepModule
 	m.FamilyDst, m.GivenDst, m.SlotBytes = famDst, givDst, slotBytes
 	if err := RefuseForbidden(OLBodyBase); err != nil {
@@ -202,7 +207,7 @@ func buildOverlayFieldPrepModuleAt(famDst, givDst uint32, slotBytes int) (Overla
 	}
 	m.RomanizerBytes = len(r.Binary)
 	m.ShimBodyRAM = align16(OLBodyBase + uint32(m.RomanizerBytes))
-	shim, err := buildFieldPrepShimAt(OLBodyBase, m.ShimBodyRAM, famDst, givDst, slotBytes)
+	shim, err := buildFieldPrepShimAtWithGivenKun(OLBodyBase, m.ShimBodyRAM, famDst, givDst, slotBytes, enabled)
 	if err != nil {
 		return m, err
 	}
@@ -261,12 +266,16 @@ func buildOverlayFieldPrepModuleAt(famDst, givDst uint32, slotBytes int) (Overla
 //
 // Entry ABI (unchanged from retail 0x800847B8): a0 = caller selector.
 // It calls retail first, so every behavior other than the two working fields
-// (selector return value, 0x800CA17C/0x800CA190 construction) is untouched.
+// (selector return value and native fallback construction) is preserved.
 func buildFieldPrepShim(romanizer, shimRAM uint32) ([]byte, error) {
 	return buildFieldPrepShimAt(romanizer, shimRAM, OLFieldPrepWorkFam, OLFieldPrepWorkGiv, OLFieldPrepSlotBytes)
 }
 
 func buildFieldPrepShimAt(romanizer, shimRAM, famDst, givDst uint32, slotBytes int) ([]byte, error) {
+	return buildFieldPrepShimAtWithGivenKun(romanizer, shimRAM, famDst, givDst, slotBytes, false)
+}
+
+func buildFieldPrepShimAtWithGivenKun(romanizer, shimRAM, famDst, givDst uint32, slotBytes int, enabled bool) ([]byte, error) {
 	if slotBytes < 2 || slotBytes > 0x7FFF {
 		return nil, fmt.Errorf("fieldprep slot bytes %d", slotBytes)
 	}
@@ -378,6 +387,161 @@ func buildFieldPrepShimAt(romanizer, shimRAM, famDst, givDst uint32, slotBytes i
 	copyBytes(OLFieldPrepFamilyLenOff, OLFieldPrepFamilyOff, famDst, "fam")
 	copyBytes(OLFieldPrepGivenLenOff, OLFieldPrepGivenOff, givDst, "giv")
 
+	if enabled {
+		if famDst != N20RelocFamilyAddr || givDst != N20RelocGivenAddr || slotBytes != N20RelocSlotBytes {
+			return nil, fmt.Errorf("dynamic P conversion requires relocated fields")
+		}
+		// Recognise the *finished retail result*, never a selector number.
+		// Only exact saved given/surname, optionally followed by native
+		// 君/さん and NUL, is changed. Other forms remain retail.
+		// t7: source 0=given,1=family. t6: suffix 0=kun,1=san.
+		addiu(15, 0, 0)
+		a.label("p_try_source")
+		a.b(4, 15, 0, "p_saved_given")
+		w(0)
+		luiAddr(9, OLA0SurnameField)
+		a.j("p_saved_selected")
+		w(0)
+		a.label("p_saved_given")
+		luiAddr(9, OLFieldPrepSavedGiv)
+		a.label("p_saved_selected")
+		luiAddr(10, givenKunExtended)
+		addiu(8, 0, 0)
+		a.label("p_match_name")
+		w(olLBU(11, 9, 0))
+		w(0) // R3000A load delay
+		a.b(4, 11, 0, "p_check_name_length")
+		w(0)
+		w(olSLTIU(12, 8, 6))
+		a.b(4, 12, 0, "p_next_source")
+		w(0)
+		w(olLBU(13, 10, 0))
+		w(0)
+		a.b(5, 11, 13, "p_next_source")
+		w(0)
+		addiu(9, 9, 1)
+		addiu(10, 10, 1)
+		addiu(8, 8, 1)
+		a.j("p_match_name")
+		w(0)
+		a.label("p_check_name_length")
+		w(olSLTIU(12, 8, 2))
+		a.b(5, 12, 0, "p_next_source")
+		w(0)
+		w(olIType(0x0c, 8, 12, 1))
+		a.b(5, 12, 0, "p_next_source")
+		w(0)
+		// Compare both native suffixes at the exact CP932 boundary.
+		w(olLBU(11, 10, 0))
+		w(0)
+		a.b(4, 11, 0, "p_check_bare")
+		w(0)
+		addiu(12, 0, 0x8c)
+		a.b(4, 11, 12, "p_check_kun")
+		w(0)
+		addiu(12, 0, 0x82)
+		a.b(5, 11, 12, "p_next_source")
+		w(0)
+		for i, expected := range []int16{0xb3, 0x82, 0xf1, 0} {
+			w(olLBU(11, 10, int16(i+1)))
+			w(0)
+			addiu(12, 0, expected)
+			a.b(5, 11, 12, "p_next_source")
+			w(0)
+		}
+		addiu(14, 0, 1)
+		a.j("p_suffix_matched")
+		w(0)
+		a.label("p_check_bare")
+		addiu(14, 0, 2) // exact unsuffixed saved given/family
+		a.j("p_suffix_matched")
+		w(0)
+		a.label("p_check_kun")
+		for i, expected := range []int16{0x4e, 0} {
+			w(olLBU(11, 10, int16(i+1)))
+			w(0)
+			addiu(12, 0, expected)
+			a.b(5, 11, 12, "p_next_source")
+			w(0)
+		}
+		addiu(14, 0, 0)
+		a.j("p_suffix_matched")
+		w(0)
+		a.label("p_next_source")
+		a.b(5, 15, 0, "retail")
+		w(0)
+		addiu(15, 0, 1)
+		a.j("p_try_source")
+		w(0)
+		a.label("p_suffix_matched")
+		// Both working names were validated and copied already; select the
+		// matching source's scratch and exact byte count including NUL.
+		a.b(4, 15, 0, "p_stage_given")
+		w(0)
+		lw(8, 29, OLFieldPrepFamilyLenOff)
+		addiu(9, 29, OLFieldPrepFamilyOff)
+		a.j("p_stage_selected")
+		w(0)
+		a.label("p_stage_given")
+		lw(8, 29, OLFieldPrepGivenLenOff)
+		addiu(9, 29, OLFieldPrepGivenOff)
+		a.label("p_stage_selected")
+		w(0) // R3000A load delay for preceding lw
+		addiu(8, 8, -1)
+		w(olAddu(10, 9, 8))
+		w(olLBU(11, 10, -1))
+		w(0)
+		addiu(10, 0, 0xa0)
+		a.b(5, 11, 10, "p_no_pad")
+		w(0)
+		addiu(8, 8, -1)
+		a.label("p_no_pad")
+		luiAddr(10, givenKunExtended)
+		mov(11, 8)
+		a.label("p_copy_name")
+		a.b(4, 8, 0, "p_copy_done")
+		w(0)
+		w(olLBU(12, 9, 0))
+		w(0)
+		w(olSB(12, 10, 0))
+		addiu(9, 9, 1)
+		addiu(10, 10, 1)
+		addiu(8, 8, -1)
+		a.j("p_copy_name")
+		w(0)
+		a.label("p_copy_done")
+		addiu(12, 0, 2)
+		a.b(4, 14, 12, "p_finish")
+		w(0)
+		addiu(12, 0, 0xad) // '-' shared by both suffixes
+		w(olSB(12, 10, 0))
+		addiu(10, 10, 1)
+		a.b(5, 14, 0, "p_append_san")
+		w(0)
+		for _, c := range []int16{0xeb, 0xf5, 0xee} {
+			addiu(12, 0, c)
+			w(olSB(12, 10, 0))
+			addiu(10, 10, 1)
+		}
+		a.j("p_finish")
+		w(0)
+		a.label("p_append_san")
+		for _, c := range []int16{0xf3, 0xe1, 0xee} {
+			addiu(12, 0, c)
+			w(olSB(12, 10, 0))
+			addiu(10, 10, 1)
+		}
+		a.label("p_finish")
+		w(olIType(12, 11, 12, 1)) // padding after complete suffix only
+		a.b(4, 12, 0, "p_nul")
+		w(0)
+		addiu(12, 0, 0xa0)
+		w(olSB(12, 10, 0))
+		addiu(10, 10, 1)
+		a.label("p_nul")
+		w(olSB(0, 10, 0))
+	}
+
 	// 5. Restore retail v0/v1, ra, sp. Nothing else was modified.
 	a.label("retail")
 	lw(2, 29, OLFieldPrepV0Off)
@@ -420,7 +584,7 @@ type OverlayFieldPrepReport struct {
 // OverlayFieldPrepPlan is an in-memory delivery plan. No file is written.
 type OverlayFieldPrepPlan struct {
 	SHOUCopyModule    *OverlayFieldPrepModule // only SHOUGATU, authenticated ChristmasFamily copy route
-	GEKOCopyModule    *OverlayFieldPrepModule // only GEKO, source-authenticated duplicate saved-family copies
+	GEKOCopyModule    *OverlayFieldPrepModule // GEKO duplicate saved-family copies verified against original code
 	VALENSuffixModule *OverlayFieldPrepModule // only VALEN dynamic selector, bounded -san pair rotation
 	Module            OverlayFieldPrepModule
 	Patched           map[string][]byte
@@ -443,7 +607,7 @@ func PlanOverlayFieldPrep(overlays map[string][]byte, sites []FieldPrepCallsite)
 
 // planOverlayFieldPrepWithModule is the shared installer. extra carries
 // non-JAL overlay instruction replacements (used only by the relocation
-// prototype); nil preserves the retail N6-FP plan byte-for-byte.
+// candidate); nil preserves the retail N6-FP plan byte-for-byte.
 func planOverlayFieldPrepWithModule(overlays map[string][]byte, sites []FieldPrepCallsite,
 	m OverlayFieldPrepModule, extra map[string][]n20RelocWord) (OverlayFieldPrepPlan, error) {
 	p := OverlayFieldPrepPlan{Patched: map[string][]byte{},

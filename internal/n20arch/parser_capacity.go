@@ -5,7 +5,7 @@ package n20arch
 // second strcpy at 0x80081254 (destination sp+0x8c). In the authenticated
 // retail parser, the next separate buffer begins at sp+0x28c, leaving
 // precisely 0x200 bytes. Do not rewrite any other guard or guest memory.
-// This is OFFLINE ONLY and cannot prove N10/N20 runtime RAM ownership.
+// This is runtime-unverified and cannot prove N10/N20 runtime RAM ownership.
 import (
 	"bytes"
 	"encoding/binary"

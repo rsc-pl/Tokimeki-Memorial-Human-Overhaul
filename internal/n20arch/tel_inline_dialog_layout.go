@@ -38,6 +38,7 @@ type TelScopedDialogPlan struct {
 	GivenAddressBytes   []byte
 	SurnamePeriodBytes  []byte
 	SelfIntroBytes      []byte
+	PAddressBytes       []byte
 	Calls               []N20ManifestWord
 }
 
@@ -410,7 +411,7 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 		b.b(4, 12, 8, "wrapped")
 		b.w(0)
 	}
-	// The shared-speaker family has 29 immutable, source-authenticated
+	// The shared-speaker family has 29 immutable, original-byte-verified
 	// return addresses. The source passed to the speaker call is the given
 	// name at 0x800B3628 (Yoshio in the recorded runtime trace), while the
 	// displayed surname label is supplied by the neighbouring original
@@ -688,7 +689,7 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 		Kind: "jal", Role: "TEL saved given-name address, selector 13",
 		Reason: "source-dispatched selector 13 performs exact saved given copy; guard N6 conversion and 16-byte local field; retail fallback",
 	})
-	// Fold paired trailing punctuation only after source-authenticated
+	// Fold paired trailing punctuation only after original-byte-verified
 	// mixed saved-surname operations. No global pair-font modification.
 	period, afterPeriod, err := telSurnamePeriodPatch(original, dest)
 	if err != nil {
@@ -718,6 +719,35 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 			Reason: "exact source-owned P template: bounded local saved surname/given N6 conversion, synchronous retail copy and strict fallback",
 		})
 	}
+	// Only the authenticated source-indexed player-address greeting families.
+	// This executes after the two independent outgoing self-introductions.
+	pAddress, afterPAddress, err := telPAddressPatch(exe, original, dest)
+	if err != nil {
+		return result, nil, err
+	}
+	dest = afterPAddress
+	result.PAddressBytes = pAddress
+	for _, site := range telPAddressSites {
+		found := false
+		for i := range result.Calls {
+			if result.Calls[i].PC != site.pc {
+				continue
+			}
+			if result.Calls[i].Old != jalWord(telDialogueWrapperOriginal) ||
+				result.Calls[i].New != jalWord(telDialogueWrapperClone) {
+				return result, nil, fmt.Errorf("TEL P address: earlier wrapper chain drift at %#x", site.pc)
+			}
+			result.Calls[i].New = jalWord(telPAddressShim)
+			result.Calls[i].Role = "TEL source-indexed P address through existing multiline renderer"
+			result.Calls[i].Reason = "bounded saved given+kun P form with exact retail fallback; retains TEL-local multiline renderer and layout"
+			found = true
+			break
+		}
+		if !found {
+			return result, nil, fmt.Errorf("TEL P address: no authenticated earlier wrapper at %#x", site.pc)
+		}
+	}
+
 	ck := packedTableChecksum(dest)
 	dest[0x2fffc], dest[0x2fffd] = byte(ck>>8), byte(ck)
 	result.Bytes = payload
@@ -789,7 +819,14 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 	}
 	for _, pc := range wrappedGirls {
 		off := int(pc - OverlaySlotBase)
-		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telDialogueWrapperClone) ||
+		want := jalWord(telDialogueWrapperClone)
+		for _, site := range telPAddressSites {
+			if site.pc == pc {
+				want = jalWord(telPAddressShim)
+				break
+			}
+		}
+		if binary.LittleEndian.Uint32(composed[off:]) != want ||
 			binary.LittleEndian.Uint32(composed[off+4:]) != 0x00002825 {
 			return fmt.Errorf("TEL indexed multiline: inherited caller missing or modified at %#x", pc)
 		}
@@ -844,6 +881,16 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 		return err
 	}
 	if err := verifyTELSelfIntro(exe, original, composed, selfIntro); err != nil {
+		return err
+	}
+	pAddress, err := telPAddressPayload()
+	if err != nil {
+		return err
+	}
+	if err := verifyTELPAddress(exe, original, composed, pAddress); err != nil {
+		return err
+	}
+	if err := VerifyTELPAddressFinalSources(original, composed); err != nil {
 		return err
 	}
 	if binary.BigEndian.Uint16(composed[len(composed)-4:]) != packedTableChecksum(composed) ||

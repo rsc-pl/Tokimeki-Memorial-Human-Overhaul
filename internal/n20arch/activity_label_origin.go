@@ -1,6 +1,6 @@
 package n20arch
 
-// activity source is a strict, source-authenticated provenance boundary for the 286
+// activity source is a strict, original-byte-verified provenance boundary for the 286
 // original OLH.EXN queue callsites. The result is NOT a proof of a particular
 // activity-screen consumer, a runtime hook, or a patch authorization.
 import (

@@ -1,6 +1,6 @@
 package n20arch
 
-// N20 EXE-side working-name-field relocation prototype (offline only).
+// N20 EXE-side working-name-field relocation candidate (runtime-unverified).
 //
 // The 8-byte retail working fields 0x800CA16C (family) and 0x800CA174 (given)
 // cannot hold the rebuilt romanizer's 9-byte maximum: nine letters + one pad
@@ -475,7 +475,7 @@ func PlanN20Relocation(exe []byte, overlays map[string][]byte,
 	if !dest.Viable {
 		return p, fmt.Errorf("relocation destination is not viable: %s", dest.Reason)
 	}
-	m, err := buildOverlayFieldPrepModuleAt(N20RelocFamilyAddr, N20RelocGivenAddr, N20RelocSlotBytes)
+	m, err := buildOverlayFieldPrepModuleAtWithGivenKun(N20RelocFamilyAddr, N20RelocGivenAddr, N20RelocSlotBytes, true)
 	if err != nil {
 		return p, err
 	}

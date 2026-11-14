@@ -1,6 +1,6 @@
 package n20arch
 
-// TEL mode-13 address preparation is a distinct, source-authenticated case:
+// TEL mode-13 address preparation is a distinct, original-byte-verified case:
 // retail EXE 0x80051508 selector 13 -> 0x800519A4 copies *saved given name*
 // 0x800E635C (no suffix) into TEL's 16-byte sp+0x2c field. The caller then
 // concatenates that field into its own dialogue buffer. The display-only

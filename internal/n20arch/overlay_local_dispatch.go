@@ -1,6 +1,6 @@
 package n20arch
 
-// overlay dispatch OFFLINE ONLY: verify the complete overlay-local 3800-byte C10 body
+// overlay dispatch runtime-unverified: verify the complete overlay-local 3800-byte C10 body
 // before dispatching through the permanent EXE F1 or terminal queue gates.
 // overlay allocation checked only magic and declared length. A live overlay write can leave
 // those 8 bytes intact while corrupting executable instructions. This guard
@@ -14,7 +14,7 @@ import (
 
 const (
 	OverlayDispatchBlocked       = true
-	OverlayDispatchBlockedReason = "overlay dispatch OFFLINE ONLY: bounded XOR integrity checks detect stale/corrupt overlay-local C10 body, but 22/26 coverage, concurrent CPU/DMA/IRQ mutations, overlay slot lifetime and gameplay remain UNVERIFIED; safe_to_patch=false, runtime_pass=false."
+	OverlayDispatchBlockedReason = "overlay dispatch runtime verification pending: bounded XOR integrity checks detect stale/corrupt overlay-local C10 body, but 22/26 coverage, concurrent CPU/DMA/IRQ mutations, overlay slot lifetime and gameplay remain UNVERIFIED; safe_to_patch=false, runtime_pass=false."
 	overlayDispatchF1Stub                    = C10EXELoaderGate
 	overlayDispatchTermStub                  = C10EXELoaderGate + 12
 	overlayDispatchVerifier                  = C10EXELoaderGate + 24

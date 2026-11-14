@@ -1,6 +1,6 @@
 package n20arch
 
-// guarded copying is an OFFLINE-only candidate. The retail parser has two manual byte
+// guarded copying is a runtime-unverified candidate. The retail parser has two manual byte
 // copying loops whose `sb` writes occur in MIPS JAL delay slots. The existing
 // 32 string-library guards cannot intercept those stores. This variant checks
 // the entire source name length against the remaining scratch capacity BEFORE

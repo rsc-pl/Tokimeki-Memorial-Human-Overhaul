@@ -1,7 +1,7 @@
 package n20arch
 
 // name-entry transfer: isolated PS1 R3000A GPU-transfer bridge for the NAME_ENT local 12x12
-// glyph bank.  OFFLINE ONLY: no queue callsite or game image uses this routine.
+// glyph bank.  runtime-unverified: no queue callsite or game image uses this routine.
 //
 // This bridges name-entry glyphs's native 96B raster output to the *original retail*
 // LoadImage transfer ABI, including its fifth stack argument.  Crucially,

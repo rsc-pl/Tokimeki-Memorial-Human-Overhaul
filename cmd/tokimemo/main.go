@@ -580,7 +580,7 @@ func cmdBuild(root string, argv []string, preflight bool) error {
 	// source-owned names, both GEKO policies, overlay MIPS and every EN byte
 	// before the existing Go sector writer is entered.
 	if *verbose {
-		fmt.Fprintln(commandOutput, "Verbose source-authenticated N10/N20 build selected")
+		fmt.Fprintln(commandOutput, "Verbose N10/N20 build selected (verified input files)")
 	}
 	if len(translations) != 0 {
 		return errors.New("full English N10/N20 build requires the complete source-owned translation corpus; partial --translation builds are not authorized")

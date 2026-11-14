@@ -1,6 +1,6 @@
 package n20arch
 
-// parser guard parser-copy prototype: R3000A program with three BIOS-call entrypoints.
+// parser guard parser-copy candidate: R3000A program with three BIOS-call entrypoints.
 // It is NOT a game-boot authorization. It enforces an observed 64-byte scratch
 // boundary and separate small parser buffers, but parser failure propagation,
 // source address lifetime and renderer reservation ownership remain unproven.

@@ -20,7 +20,7 @@ package n20arch
 // executed on the full grid (2,829,111 / 4,251,528, 0 mismatches); see
 // N20_RESULT.md §19. The packed romanizer-faithful view remains the historical baseline
 // (2,745,044). This audit keeps all three views so the gain stays attributable.
-// The fields below still mean "offline prototype", never a runtime patch.
+// The fields below still mean "offline candidate", never a runtime patch.
 //
 // Every entry below is source-grounded:
 //   - every kana is a NAME_ENT keyboard cell (verified by the tests through

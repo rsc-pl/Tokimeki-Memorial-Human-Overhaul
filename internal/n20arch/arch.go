@@ -1,4 +1,4 @@
-// Package n20arch is an ISOLATED, OFFLINE-ONLY prototype for the corrected
+// Package n20arch is an ISOLATED, runtime-unverified candidate for the corrected
 // N20 delivery architecture. It never opens a game image, save, emulator or
 // production builder. Retail bytes are read only when a caller explicitly
 // supplies a private path through an environment variable in tests.

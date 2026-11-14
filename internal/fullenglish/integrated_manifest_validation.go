@@ -34,7 +34,7 @@ func verify(plan n.N20IntegratedPlan, exe []byte, original map[string][]byte) (q
 	var r qaReport
 	m := plan.Manifest
 	if plan.SafeToPatch || plan.RuntimePass || m.SafeToPatch || m.RuntimePass || m.Safety.ExclusiveRuntimeOwnershipProven {
-		return r, errors.New("unexpected safety/runtime success flag in offline-only candidate")
+		return r, errors.New("unexpected runtime-success flag in a candidate not verified in-game")
 	}
 	if m.Schema != 2 || !m.Integrity.DeltaAuditPassed || m.Accounting.EXEEntryHooks != 0 || len(m.Words) != 414 || len(m.Regions) != 34 || len(original) != 26 || len(plan.PatchedOverlays) != 26 {
 		return r, fmt.Errorf("manifest cardinality/schema/gate rejected: words=%d regions=%d", len(m.Words), len(m.Regions))

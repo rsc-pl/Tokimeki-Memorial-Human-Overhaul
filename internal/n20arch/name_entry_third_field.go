@@ -1,6 +1,6 @@
 package n20arch
 
-// third-field input: two additional original NAME_ENT *presentation* callsites, offline only.
+// third-field input: two additional original NAME_ENT *presentation* callsites, runtime-unverified.
 // These draw a third field after the entry slot pair (the first screen uses a
 // distinct 16-byte record stride, unlike A/B and the other screen). Field identity (nickname versus another UI role) is NOT inferred from
 // adjacency alone; this is a bounded kana-only conversion with retail fallback.

@@ -1,6 +1,6 @@
 package n20arch
 
-// tail guard source-authenticated correction to activity source: the six OLH loops reading
+// tail guard original-byte-verified correction to activity source: the six OLH loops reading
 // a3=*(s2) are not arbitrary runtime-populated name-pointer arrays. Their
 // s2 registers are loaded from six static overlay-local address tables.
 // These contain 47 original pointers to bounded local help/menu strings and

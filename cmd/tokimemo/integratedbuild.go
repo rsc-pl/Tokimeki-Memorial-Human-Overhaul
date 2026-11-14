@@ -10,6 +10,7 @@ import (
 
 	"tokimemo/internal/config"
 	"tokimemo/internal/fullenglish"
+	"tokimemo/internal/n20arch"
 	"tokimemo/internal/patchplan"
 	"tokimemo/internal/ps1"
 )
@@ -170,6 +171,13 @@ func cmdIntegratedEnglishBuild(root, cue, requested string, force, preflight boo
 	if _, err = auditCompletedBuild(cue, stage); err != nil {
 		return fmt.Errorf("staged image readback: %w", err)
 	}
+	// Confirm the actual staged Track 1 contains the complete, current TEL
+	// greeting adapter. A source-only composition test cannot detect missing
+	// or stale on-disc hooks; refuse publication on any mismatch.
+	verifiedTEL, err := verifyStagedTELPAddress(dataTrack, info.Sectors, iso, physical)
+	if err != nil {
+		return fmt.Errorf("staged TEL greeting readback refused: %w", err)
+	}
 	// Bind the build log to the exact data-track bytes verified in staging.
 	// The TUI may publish this staged result later; it does not change the data.
 	builtTrackSHA256, err := diskSHA(dataTrack)
@@ -195,9 +203,53 @@ func cmdIntegratedEnglishBuild(root, cue, requested string, force, preflight boo
 			return err
 		}
 	}
+	fmt.Fprintf(commandOutput, "Verified staged TEL greeting hooks: %d\n", verifiedTEL)
 	fmt.Fprintf(commandOutput, "Built Track 1 SHA-256: %s\n", builtTrackSHA256)
 	fmt.Fprintf(commandOutput, "Full English + N10/N20 Go build: %d verified files; %d rewritten sectors. No original, translation or saved-game changes. Runtime safety is NOT certified.\n", len(plan.Files), sectors)
 	return nil
+}
+
+// verifyStagedTELPAddress reads the physical staged sector data, never a
+// project-side cache or synthetic planner output. The ISO extent was obtained
+// from the already authenticated original source track.
+func verifyStagedTELPAddress(track string, sectors int64, sourceISO *ps1.ISO, physical map[string][]byte) (int, error) {
+	got, err := readStagedTELOverlay(track, sectors, sourceISO, physical)
+	if err != nil {
+		return 0, err
+	}
+	return n20arch.VerifyTELPAddressInstalled(got)
+}
+
+func readStagedTELOverlay(track string, sectors int64, sourceISO *ps1.ISO, physical map[string][]byte) ([]byte, error) {
+	const telPath = "CDROM/EXEDIR/TEL.EXN"
+	planned, ok := physical[telPath]
+	if !ok || len(planned) != 196608 {
+		return nil, errors.New("missing complete planned TEL overlay")
+	}
+	if sourceISO == nil {
+		return nil, errors.New("missing authenticated ISO extents")
+	}
+	entry, ok := sourceISO.Entries[telPath]
+	if !ok || entry.IsDir || entry.Size != int64(len(planned)) {
+		return nil, errors.New("missing exact TEL ISO extent")
+	}
+	file, err := os.Open(track)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+	st, err := file.Stat()
+	if err != nil || !st.Mode().IsRegular() || st.Size() != sectors*ps1.SectorSize {
+		return nil, errors.New("invalid staged data-track geometry")
+	}
+	var got bytes.Buffer
+	if err = ps1.ReadFileTo(file, sectors, entry.LBA, entry.Size, &got); err != nil {
+		return nil, err
+	}
+	if !bytes.Equal(got.Bytes(), planned) {
+		return nil, errors.New("staged TEL bytes disagree with composed image")
+	}
+	return got.Bytes(), nil
 }
 
 // A failed replacement rollback may move the user's previous image into the

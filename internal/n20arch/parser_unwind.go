@@ -1,6 +1,6 @@
 package n20arch
 
-// parser unwind (OFFLINE ONLY): do not resume the retail parser after a rejected
+// parser unwind (runtime-unverified): do not resume the retail parser after a rejected
 // parser guard copy. The original parser itself has an authenticated early exit:
 // at 0x8008123c it branches to 0x80082734 with v0=0 in its delay slot.
 // Reuse exactly that epilogue and the parser's own saved $ra/$s-registers.

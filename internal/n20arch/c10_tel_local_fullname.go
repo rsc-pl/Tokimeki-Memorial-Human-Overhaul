@@ -1,9 +1,9 @@
 package n20arch
 
-// telephone: private, OFFLINE ONLY TEL-local unsuffixed player full-name route.
+// telephone: private, runtime-unverified TEL-local unsuffixed player full-name route.
 // This reuses speaker rendering's authenticated loader and resident module's existing four complete-line
 // queues. Nothing in this file is enabled in the normal speaker rendering offline verification builder.
-// The TEL overlay owns the executable prototype ONLY while TEL is loaded;
+// The TEL overlay owns the executable candidate ONLY while TEL is loaded;
 // the resident F3 dispatcher checks a TEL-only marker/length and otherwise
 // tail-jumps to the original surname+san converter.
 //

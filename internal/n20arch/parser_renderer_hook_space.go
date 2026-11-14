@@ -1,6 +1,6 @@
 package n20arch
 
-// Parser relocation (offline only): move authenticated N10 compact
+// Parser relocation (runtime-unverified): move authenticated N10 compact
 // 132-byte surname strings from the overlapping English renderer FONT tail into
 // the renderer HOOK reservation, after its actual glyph scratch. The N20 fixed
 // executable guards remain entirely in the font tail. The two reservations

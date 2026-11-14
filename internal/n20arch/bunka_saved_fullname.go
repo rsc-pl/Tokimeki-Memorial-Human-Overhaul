@@ -4,7 +4,7 @@ package n20arch
 // separator + given in a 24-byte caller stack slot before drawing it. Its
 // original strlen-derived center coordinate must be updated together with
 // the display-only pair-font text; saved CP932 fields are never modified.
-// This is a strictly source-authenticated, fallback-preserving overlay hook.
+// This is a strictly original-byte-verified, fallback-preserving overlay hook.
 import (
 	"bytes"
 	"encoding/binary"

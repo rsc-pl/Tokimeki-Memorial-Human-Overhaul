@@ -3,7 +3,7 @@ package n20arch
 // TEL's saved surname is also copied/concatenated into two independent
 // script-owned dialogue buffers. Unlike the stand-alone saved-field row, these
 // callers create mixed strings before entering the retail formatter. Redirect
-// only source-authenticated saved-surname copies and appends, never arbitrary
+// only original-byte-verified saved-surname copies and appends, never arbitrary
 // text or the player's given/nickname field. Original save bytes are read-only.
 import (
 	"bytes"

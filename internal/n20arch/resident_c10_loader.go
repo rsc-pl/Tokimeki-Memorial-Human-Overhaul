@@ -182,7 +182,7 @@ func ApplyC10BridgeToOverlay(original []byte, bridge []byte) ([]byte, error) {
 }
 
 // C10OfflineComposition composes integrated 426-word offline plan with a
-// test-only loader bridge. The separate bridge is NOT admitted into the
+// verification-only loader bridge. The separate bridge is NOT admitted into the
 // human-overhaul image builder: C10 does not yet establish first-promotion
 // order, GYOZI table-index ownership, or F2/F3 suffix conversion.
 type C10OfflineComposition struct {

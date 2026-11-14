@@ -1,6 +1,6 @@
 package n20arch
 
-// loop guards: OFFLINE-only exhaustive first-entry guards for the retail parser's
+// loop guards: runtime-unverified exhaustive first-entry guards for the retail parser's
 // 22 structurally authenticated manual name-byte loops. This reuses guarded copying's
 // checkedstrlen entry and 308-byte renderer-resident module; no new RAM.
 // Protecting a single iteration's JAL is too late because its delay slot

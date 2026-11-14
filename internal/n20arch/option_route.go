@@ -1,6 +1,6 @@
 package n20arch
 
-// N20-OPTION: source-authenticated, overlay-owned activity/name UI route.
+// N20-OPTION: original-byte-verified, overlay-owned activity/name UI route.
 // This is an OFFLINE candidate. OPTION has two name-label groups whose queue
 // callsites directly pass the saved surname/given as a3. Both groups share a
 // single in-overlay guarded romanizer; nickname calls remain untouched.

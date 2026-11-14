@@ -56,7 +56,7 @@ func telSelfIntroRetailSource(exe, original []byte) error {
 	if !bytes.Equal(original[telSelfIntroOtherSource-OverlaySlotBase:telSelfIntroOtherSource-OverlaySlotBase+uint32(len(other))], other) {
 		return fmt.Errorf("TEL self-intro: original second source P token mismatch")
 	}
-	// The native formatter's immediate copy must be source-authenticated too.
+	// The native formatter's immediate copy must be original-byte-verified too.
 	const exeBase = uint32(0x80040800)
 	for pc, word := range map[uint32]uint32{
 		0x80050e8c: 0x27bdfe98, // 360-byte retail frame

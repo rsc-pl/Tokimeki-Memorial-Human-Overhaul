@@ -597,7 +597,7 @@ func AuditReachability(exe []byte, overlays map[string][]byte) (ReachabilityAudi
 	return auditReachability(exe, overlays, true)
 }
 
-// auditReachabilityUnchecked is test-only: it runs the same analysis on a
+// auditReachabilityUnchecked is verification-only: it runs the same analysis on a
 // deliberately mutated copy so the suite can prove the audit would flip to
 // EARLY_EXECUTION_POSSIBLE if real evidence contradicted the verdict.
 func auditReachabilityUnchecked(exe []byte, overlays map[string][]byte) (ReachabilityAudit, error) {

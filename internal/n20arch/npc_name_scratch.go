@@ -14,7 +14,7 @@ import (
 // separately initialized local is the 16-byte object sp+88..103
 // (0x58..0x67). The 40-byte interval [sp+0x30,sp+0x58) is not directly
 // accessed or addressed by any original instruction in this function.
-// Source-authenticated six NPC-A sprintf("%s ") producers previously wrote
+// Six original-byte-verified NPC-A sprintf("%s ") producers previously wrote
 // at sp+0x68; their synchronous queue consumer read the same bytes.
 // Repoint BOTH producer and queue caller to the candidate 40-byte scratch.
 // Do not change name X, prefix, parser start, source names or public code.
@@ -31,7 +31,7 @@ func PlanPrivateNPCScratch(retail, merged []byte, sourceNPCNames []string) ([]by
 	const expected = "bae1514fcc4bd8843c69803bf469632b004377b67f3e4408f0641c545fd843ae"
 	const base = uint32(0x80040800)
 	if len(retail) != 667648 || len(merged) != len(retail) || fmt.Sprintf("%x", sha256.Sum256(retail)) != expected {
-		return nil, fmt.Errorf("NPC scratch buffer retail source authentication failed")
+		return nil, fmt.Errorf("NPC scratch buffer original-code verification failed")
 	}
 	if len(sourceNPCNames) != 16 {
 		return nil, fmt.Errorf("NPC scratch buffer requires all 16 live source-owned names")

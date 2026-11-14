@@ -420,7 +420,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			continue
 		}
 		physical["SLPM_86.053"] = insetEXE
-		// exam labels UNVERIFIED: the source-authenticated ETC exam table previously
+		// exam labels UNVERIFIED: the original-byte-verified ETC exam table previously
 		// bypassed N20 by calling retail strncat on saved CP932 name fields.
 		// Extend the ALREADY-COMPOSED suffix punctuation/N6 ETC carrier (same overlay/guard
 		// lifetime), not a second stand-alone module. The lower caption uses

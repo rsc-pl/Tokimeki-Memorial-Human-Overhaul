@@ -1,6 +1,6 @@
 package n20arch
 
-// speaker rendering OFFLINE-ONLY. Re-route C10 promotion from the uncommon scene-0xD0
+// speaker rendering runtime-unverified. Re-route C10 promotion from the uncommon scene-0xD0
 // jalr target to the authenticated state-3 scene-select call. Reuse the
 // same fixed EXE loader gate (88 B) and source bridge (288 B), so no new
 // renderer reservation or resident RAM is consumed. All queue routing features remain

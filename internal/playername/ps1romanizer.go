@@ -210,7 +210,7 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 		e(iType(11, 8, 10, 2))    // only 0 and 1 supported
 		beq(10, 0, "fail")
 		e(iType(43, 29, 8, 0x78)) // save joinMode
-		e(iType(43, 29, 0, 0x74)) // phase 0 surname
+		e(iType(43, 29, 0, 0x74)) // name selector: 0 surname, 1 given
 		e(iType(9, 29, 8, 0x20))
 		e(iType(43, 29, 8, 0x88)) // current field ASCII start for vowel mark
 		e(iType(9, 0, 8, -1))
@@ -494,7 +494,7 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 	if pair {
 		// End of surname: switch to given name only once; source/scratch
 		// bytes stay separate. A nonempty second field is checked below.
-		e(iType(35, 29, 8, 0x74)) // phase 0 surname, 1 given
+		e(iType(35, 29, 8, 0x74)) // name selector: 0 surname, 1 given
 		bne(8, 0, "both_fields_done")
 		e(iType(9, 0, 8, 1))
 		e(iType(43, 29, 8, 0x74)) // phase=1

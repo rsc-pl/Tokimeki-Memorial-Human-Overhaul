@@ -1,6 +1,6 @@
 package n20arch
 
-// Overlay-local, lifecycle-safe N20 architecture ("N6" prototype).
+// Overlay-local, lifecycle-safe N20 architecture ("N6" candidate).
 //
 // The previous N20 design hooked five EXE call sites and dispatched into a
 // window supplied by whichever overlay happened to be loaded. That design is
@@ -19,7 +19,7 @@ package n20arch
 //     original $ra, so the retail continuation runs unchanged;
 //   - no code is shared between overlays and no persistent RAM is claimed.
 //
-// safe_to_patch remains false: this is an offline, in-memory prototype.
+// safe_to_patch remains false: this is an offline, in-memory candidate.
 
 import (
 	"bytes"
@@ -72,7 +72,7 @@ const (
 
 // OverlayNameTarget is one authenticated EXE routine an overlay may call
 // directly. Only 0x80050DFC (speaker) has an overlay-owned argument form this
-// prototype can safely intercept. The other targets are inventoried so the
+// candidate can safely intercept. The other targets are inventoried so the
 // blocked routes are explicit rather than silently dropped.
 type OverlayNameTarget struct {
 	Name  string

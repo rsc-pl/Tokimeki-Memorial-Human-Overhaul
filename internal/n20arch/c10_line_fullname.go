@@ -1,6 +1,6 @@
 package n20arch
 
-// Offline prototype: suffix-free dynamic surname+given token inside an
+// Offline candidate: suffix-free dynamic surname+given token inside an
 // arbitrary mixed CP932/ASCII line (the phone form). The caller must own the
 // source and destination and provide a writable capacity; the routine cannot
 // be installed into C10's exhausted resident body until physical placement is
@@ -251,7 +251,7 @@ func BuildC10LineFullnamePrototype(romanizer uint32) ([]byte, error) {
 	a.resolve()
 	b := words(a.words...)
 	if len(b) > 2048 {
-		return nil, fmt.Errorf("prototype unexpected growth: %d B", len(b))
+		return nil, fmt.Errorf("unexpected generated code growth: %d B", len(b))
 	}
 	return b, nil
 }

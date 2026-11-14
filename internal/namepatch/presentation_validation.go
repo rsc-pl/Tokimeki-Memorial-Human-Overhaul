@@ -1,6 +1,6 @@
 package namepatch
 
-// glyph-layout validation: read-only audit of the EXACT pair-glyph data produced by N10's
+// glyph-layout verification: non-mutating inspection of the EXACT pair-glyph data produced by N10's
 // integrated offline transaction. A pair glyph consumes one script cell,
 // irrespective of the number of Latin letters (one or two) it represents.
 // The historical {G}=10-cell validator reservation is an estimate, NOT a

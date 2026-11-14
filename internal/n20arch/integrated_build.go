@@ -1,8 +1,8 @@
 package n20arch
 
-// N20 integrated private build (offline only).
+// N20 integrated private build (runtime-unverified).
 //
-// This file is the single consolidated planner for the N20 prototype. It
+// This file is the single consolidated planner for the N20 candidate. It
 // composes, in one in-memory plan:
 //
 //   (a) the rebuilt packed romanizer (inside both module bodies),
@@ -309,6 +309,17 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	p.TELDialog = telDialog
 	p.PatchedEXE = fp.PatchedEXE
 	p.PatchedOverlays = patched
+	// The resident retail P producer and all of its known consumers are
+	// relocated together. The N6-FP module handles selector 11 locally;
+	// noncarrier calls retain the original retail formatter behavior.
+	pFieldWords, e := pFieldSourceWords(exe, overlays)
+	if e != nil {
+		return p, e
+	}
+	p.PatchedEXE, p.PatchedOverlays, e = applyPFieldRelocation(p.PatchedEXE, p.PatchedOverlays, pFieldWords)
+	if e != nil {
+		return p, e
+	}
 	p.N6 = n6
 	p.FieldPrep = fp
 	p.SafeToPatch = false
@@ -319,6 +330,25 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	if err != nil {
 		return p, err
 	}
+	m.Words = append(m.Words, pFieldWords...)
+	m.Accounting.EXERelocationPairs += 2
+	m.Accounting.EXERelocationWords += 4
+	m.Accounting.OverlayRelocationPairs += 3
+	m.Accounting.OverlayRelocationWords += 6
+	m.Accounting.TotalEXEChangedWords += 4
+	m.Accounting.OverlayChangedWords += 6
+	m.Integrity.EXEPairs += 2
+	m.Integrity.EXEWords += 4
+	m.Integrity.OverlayPairs += 3
+	m.Integrity.OverlayWords += 6
+	m.Architecture += "; relocated 16-byte P field, exact-retail-content-gated given-name N6-FP suffix"
+	var stillBlocked []string
+	for _, reason := range m.BlockedRoutes {
+		if !bytes.HasPrefix([]byte(reason), []byte("renderer P ")) {
+			stillBlocked = append(stillBlocked, reason)
+		}
+	}
+	m.BlockedRoutes = stillBlocked
 	// The local clone is a separately owned, source-zero region. It is NOT
 	// part of N6's verified body and cannot alter the N6 checksum/verifier.
 	m.Words = append(m.Words, telDialog.Calls...)
@@ -351,9 +381,17 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	m.Regions = append(m.Regions, N20ManifestRegion{
 		Owner: "TEL.EXN", RAMAddr: telSelfIntroShim, FileOff: telSelfIntroFileOff,
 		Bytes: len(telDialog.SelfIntroBytes), SHA256: sha(telDialog.SelfIntroBytes),
-		Kind: "tel_self_intro_p", Role: "two source-authenticated TEL outgoing self-introduction P-token routes",
+		Kind: "tel_self_intro_p", Role: "two original TEL outgoing self-introduction P-token routes",
 		Reason: "two guarded saved-field N6 conversions into bounded local line, synchronous native retail formatter copy, original caller ABI and fail-closed fallback",
 	})
+	m.Regions = append(m.Regions, N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telPAddressShim, FileOff: telPAddressFileOff,
+		Bytes: len(telDialog.PAddressBytes), SHA256: sha(telDialog.PAddressBytes),
+		Kind: "tel_p_address", Role: "six source-indexed TEL P given-name address lines through existing local renderer",
+		Reason: "exact saved given+native kun and source table guards; bounded local N6 and unchanged indexed wrapper fallback",
+	})
+	m.Accounting.PayloadRegions++
+	m.Accounting.PayloadBodyBytes += len(telDialog.PAddressBytes)
 	m.Accounting.PayloadRegions++
 	m.Accounting.PayloadBodyBytes += len(telDialog.SelfIntroBytes)
 	m.Accounting.PayloadRegions++
@@ -456,7 +494,7 @@ func buildN20BuildManifest(exe []byte, overlays map[string][]byte,
 			if name == "VALEN.EXN" && cs.PC == valenDynamicFieldPrepPC && fp.FieldPrep.VALENSuffixModule != nil {
 				newTarget = fp.Module.ModuleEnd()
 				role = "VALEN bounded pair-font -san rotation"
-				reason = "source-authenticated dynamic selector; existing guarded N6-FP first, then in-place pad rotation only for a complete 11-byte packed suffix"
+				reason = "verified original dynamic selector; existing guarded N6-FP first, then in-place pad rotation only for a complete 11-byte packed suffix"
 			}
 			m.Words = append(m.Words, N20ManifestWord{
 				Owner: name, PC: cs.PC, Old: old, New: jalWord(newTarget), Kind: "jal",
@@ -654,7 +692,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			}
 			newTarget = p.FieldPrep.Module.ModuleEnd()
 			role = "VALEN bounded pair-font -san rotation"
-			reason = "source-authenticated dynamic selector; existing guarded N6-FP first, then in-place pad rotation only for a complete 11-byte packed suffix"
+			reason = "verified original dynamic selector; existing guarded N6-FP first, then in-place pad rotation only for a complete 11-byte packed suffix"
 		}
 		expected = append(expected, N20ManifestWord{Owner: cs.Overlay, PC: cs.PC, Old: old,
 			New: jalWord(newTarget), Kind: "jal", Role: role, Reason: reason})
@@ -726,11 +764,21 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if err != nil {
 		return fmt.Errorf("verify: TEL indexed multiline: %w", err)
 	}
+	if err := telPAddressSource(exe, overlays["TEL.EXN"]); err != nil {
+		return fmt.Errorf("verify: TEL P address: %w", err)
+	}
 	for _, pc := range wrapperSites {
+		target := telDialogueWrapperClone
+		for _, site := range telPAddressSites {
+			if site.pc == pc {
+				target = telPAddressShim
+				break
+			}
+		}
 		expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: pc,
-			Old: jalWord(telDialogueWrapperOriginal), New: jalWord(telDialogueWrapperClone), Kind: "jal",
-			Role:   "TEL indexed multiline girl first-line wrapper",
-			Reason: "source-indexed EXE girl speaker and first-line body; authentic multiline wrapper with two local formatters and bounded X"})
+			Old: jalWord(telDialogueWrapperOriginal), New: jalWord(target), Kind: "jal",
+			Role:   "TEL source-indexed multiline name and first-line wrapper",
+			Reason: "retail-verified TEL P address sites use guarded local name line then preserve existing multiline wrapper; other original calls retain wrapper"})
 	}
 	prepared, err := telIndexedPreparedFirstLine(overlays["TEL.EXN"])
 	if err != nil {
@@ -777,7 +825,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			Owner: "TEL.EXN", PC: site.pc, Old: jalWord(0x800ae100),
 			New: jalWord(telSurnamePeriodShim), Kind: "jal",
 			Role:   "TEL surname punctuation join",
-			Reason: "source-authenticated suffix strcat; guarded N6 packed-period folding with original fallback",
+			Reason: "verified original suffix strcat; guarded N6 packed-period folding with original fallback",
 		})
 	}
 	if err := telSelfIntroRetailSource(exe, overlays["TEL.EXN"]); err != nil {
@@ -794,6 +842,11 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if n6Calls != 136 || fpCalls != 235 {
 		return fmt.Errorf("verify: callsite coverage drifted: N6=%d N6-FP=%d, want 136/235", n6Calls, fpCalls)
 	}
+	pFieldWords, err := pFieldSourceWords(exe, overlays)
+	if err != nil {
+		return fmt.Errorf("verify: P field source inventory: %w", err)
+	}
+	expected = append(expected, pFieldWords...)
 
 	// 2. Manifest must contain exactly this set: no missing, duplicate or
 	// conflicting record. A duplicate PC with a different new word is a
@@ -938,6 +991,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			changedWords[off] = true
 		}
 		hasModule := n6Names[name] || fpNames[name]
+		pFieldPassive := name == "DATE2.EXN"
 		var mod OverlayFieldPrepModule
 		if n6Names[name] {
 			// OverlayLocalModule and OverlayFieldPrepModule share the same
@@ -960,6 +1014,18 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			}
 			var b []byte
 			switch r.Kind {
+			case "tel_p_address":
+				if name != "TEL.EXN" {
+					return fmt.Errorf("verify: TEL P address wrong carrier %s", name)
+				}
+				code, err := telPAddressPayload()
+				if err != nil {
+					return err
+				}
+				if !bytes.Equal(code, p.TELDialog.PAddressBytes) {
+					return fmt.Errorf("verify: TEL P address payload drift")
+				}
+				b = code
 			case "guard":
 				b = mod.Guard
 			case "body":
@@ -1050,19 +1116,20 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			}
 			copy(d[r.FileOff:r.FileOff+len(b)], b)
 		}
-		if hasModule {
+		if hasModule || pFieldPassive {
 			ck := packedTableChecksum(d)
 			d[0x2FFFC] = byte(ck >> 8)
 			d[0x2FFFD] = byte(ck)
 			if packedTableChecksum(d) != binary.BigEndian.Uint16(d[0x2FFFC:]) {
 				return fmt.Errorf("verify: %s checksum does not validate", name)
 			}
-			// Guard integrity read back from the final bytes.
-			if binary.LittleEndian.Uint32(d[OLPayloadFileOff:]) != binary.LittleEndian.Uint32(mod.Guard[:4]) {
+			// Guard integrity is required for actual carriers, not the
+			// separately source-pinned DATE2 address relocation.
+			if hasModule && binary.LittleEndian.Uint32(d[OLPayloadFileOff:]) != binary.LittleEndian.Uint32(mod.Guard[:4]) {
 				return fmt.Errorf("verify: %s guard magic not installed", name)
 			}
 			body := d[OLBodyFileOff : OLBodyFileOff+len(mod.Body)]
-			if sha(body) != sha(mod.Body) {
+			if hasModule && sha(body) != sha(mod.Body) {
 				return fmt.Errorf("verify: %s body drift", name)
 			}
 		} else if !bytes.Equal(d, src) {
@@ -1094,8 +1161,8 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 		binary.LittleEndian.PutUint32(expectedEXE[off:], w.New)
 		exeChanged++
 	}
-	if exeChanged != 30 {
-		return fmt.Errorf("verify: %d EXE manifest words, want 30", exeChanged)
+	if exeChanged != 34 {
+		return fmt.Errorf("verify: %d EXE manifest words, want 34", exeChanged)
 	}
 	if !bytes.Equal(expectedEXE, p.PatchedEXE) {
 		return fmt.Errorf("verify: patched EXE differs from the verified reconstruction")
@@ -1111,14 +1178,14 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 
 	// 7. Accounting and safety must match the verified records.
 	acc := p.Manifest.Accounting
-	if acc.EXEEntryHooks != 0 || acc.EXERelocationPairs != 15 || acc.EXERelocationWords != 30 ||
-		acc.OverlayRelocationPairs != 6 || acc.OverlayRelocationWords != 12 ||
+	if acc.EXEEntryHooks != 0 || acc.EXERelocationPairs != 17 || acc.EXERelocationWords != 34 ||
+		acc.OverlayRelocationPairs != 9 || acc.OverlayRelocationWords != 18 ||
 		acc.OverlayCallsiteN6 != 136 || acc.OverlayCallsiteN6FP != 235 ||
-		acc.OverlayCallsiteWords != 453 || acc.TotalEXEChangedWords != 30 ||
+		acc.OverlayCallsiteWords != 453 || acc.TotalEXEChangedWords != 34 ||
 		acc.LegacyEXEChangedWords != 0 {
 		return fmt.Errorf("verify: change accounting %+v", acc)
 	}
-	if acc.PayloadRegions != len(p.Manifest.Regions) || acc.PayloadRegions != 40 {
+	if acc.PayloadRegions != len(p.Manifest.Regions) || acc.PayloadRegions != 41 {
 		return fmt.Errorf("verify: payload region accounting %d", acc.PayloadRegions)
 	}
 	safety, err := AuditN20RelocOwnership(exe, overlays)
@@ -1145,7 +1212,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	}
 	wantCarriers := sortedKeys(union)
 	if !n20SameStrings(p.Manifest.PatchedOverlays, wantCarriers) {
-		return fmt.Errorf("verify: manifest patched overlay set %v want %v", p.Manifest.PatchedOverlays, wantCarriers)
+		return fmt.Errorf("verify: manifest modified overlay set %v want %v", p.Manifest.PatchedOverlays, wantCarriers)
 	}
 	if p.Manifest.Carriers != len(wantCarriers) || p.Manifest.UntouchedOverlay != len(overlays)-len(wantCarriers) {
 		return fmt.Errorf("verify: manifest carrier summary %d/%d want %d/%d",
@@ -1187,6 +1254,15 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if err != nil {
 		return err
 	}
+	pAddressTEL, err := telPAddressPayload()
+	if err != nil {
+		return err
+	}
+	wantRegions[regionKey{"TEL.EXN", "tel_p_address"}] = N20ManifestRegion{
+		Owner: "TEL.EXN", RAMAddr: telPAddressShim, FileOff: telPAddressFileOff,
+		Bytes: len(pAddressTEL), SHA256: sha(pAddressTEL), Kind: "tel_p_address",
+	}
+	bodyBytes += len(pAddressTEL)
 	wantRegions[regionKey{"TEL.EXN", "tel_scoped_renderer"}] = N20ManifestRegion{
 		Owner: "TEL.EXN", RAMAddr: telDialogCloneEntry, FileOff: 0x25000,
 		Bytes: len(clonedTEL), SHA256: sha(clonedTEL), Kind: "tel_scoped_renderer",
@@ -1237,7 +1313,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	bodyBytes += len(composedTEL)
 	bodyBytes += len(savedTEL)
 	bodyBytes += len(clonedTEL)
-	if len(p.Manifest.Regions) != len(wantRegions) || len(wantRegions) != 40 {
+	if len(p.Manifest.Regions) != len(wantRegions) || len(wantRegions) != 41 {
 		return fmt.Errorf("verify: region records %d want %d", len(p.Manifest.Regions), len(wantRegions))
 	}
 	gotRegions := map[regionKey]N20ManifestRegion{}
@@ -1299,8 +1375,8 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			return fmt.Errorf("verify: unexpected source SHA key %s", name)
 		}
 	}
-	if p.Manifest.Integrity.EXEPairs != 15 || p.Manifest.Integrity.EXEWords != 30 ||
-		p.Manifest.Integrity.OverlayPairs != 6 || p.Manifest.Integrity.OverlayWords != 12 {
+	if p.Manifest.Integrity.EXEPairs != 17 || p.Manifest.Integrity.EXEWords != 34 ||
+		p.Manifest.Integrity.OverlayPairs != 9 || p.Manifest.Integrity.OverlayWords != 18 {
 		return fmt.Errorf("verify: integrity pair counts %+v", p.Manifest.Integrity)
 	}
 	wantFallback := map[string]string{
@@ -1342,6 +1418,26 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 		}
 	}
 	for name, d := range p.FieldPrep.PatchedOverlay {
+		if name == "SHOUGATU.EXN" || name == "DATE2.EXN" {
+			// Reapply only the authenticated P pointer changes and checksum.
+			check := bytes.Clone(d)
+			for _, w := range pFieldWords {
+				if w.Owner != name {
+					continue
+				}
+				off := int(w.PC - OverlaySlotBase)
+				if binary.LittleEndian.Uint32(check[off:]) != w.Old {
+					return fmt.Errorf("verify: holiday P original word mismatch %#x", w.PC)
+				}
+				binary.LittleEndian.PutUint32(check[off:], w.New)
+			}
+			ck := packedTableChecksum(check)
+			check[0x2fffc], check[0x2fffd] = byte(ck>>8), byte(ck)
+			if !bytes.Equal(p.PatchedOverlays[name], check) {
+				return fmt.Errorf("verify: holiday P relocation component replay mismatch")
+			}
+			continue
+		}
 		if !bytes.Equal(p.PatchedOverlays[name], d) {
 			return fmt.Errorf("verify: N6-FP carrier %s differs from its component plan", name)
 		}

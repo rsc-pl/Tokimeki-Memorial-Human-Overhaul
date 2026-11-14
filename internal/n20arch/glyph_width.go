@@ -11,7 +11,7 @@ import (
 	"fmt"
 )
 
-const SpeakerWidthBlockedReason = "speaker width offline-only: width-aware F1 and all 16 exact surname callers compose with speaker rendering, but C10 resident lifetime, GPU/DMA/IRQ/cache and actual gameplay are unproved; the separate telephone dispatcher cannot fit beside this F1 shim (4 B free vs 60 B required). safe_to_patch=false, runtime_pass=false."
+const SpeakerWidthBlockedReason = "speaker width runtime verification pending: width-aware F1 and all 16 exact surname callers compose with speaker rendering, but C10 resident lifetime, GPU/DMA/IRQ/cache and actual gameplay are unproved; the separate telephone dispatcher cannot fit beside this F1 shim (4 B free vs 60 B required). safe_to_patch=false, runtime_pass=false."
 
 type WidthCandidate struct {
 	C10DistributedCandidate

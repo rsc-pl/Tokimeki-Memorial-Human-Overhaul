@@ -70,7 +70,7 @@ func verifyCallWords(buf []byte, points []struct {
 	return nil
 }
 
-// StageDirectFixedAliases produces research-only COPIES of the input images.
+// StageDirectFixedAliases produces analysis-stage COPIES of the input images.
 // stagedEXE MUST already contain the checked 132-byte N10 table in the verified
 // English renderer reservation. originalGEKO must be the retail overlay.
 // The two unresolved sites, indirect references, RAM destinations and display

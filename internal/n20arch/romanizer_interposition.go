@@ -26,7 +26,7 @@ func PlanInterposedSurnameOffline(exe []byte, originals map[string][]byte) (Inte
 	var empty InterposedCandidate
 	// tail guard: block the old false "runtime-filled OLH name-pointer array"
 	// assumption before producing even a read-only full-English formatter interposition plan.
-	// This checks source provenance only; narrator output remains UNKNOWN.
+	// This checks the original caller and input identity only; narrator output remains UNKNOWN.
 	if _, e := AuditOLHStaticHelpTables(originals["OLH.EXN"]); e != nil {
 		return empty, fmt.Errorf("tail guard original OLH help-menu provenance: %w", e)
 	}
