@@ -1,11 +1,11 @@
 package n20arch
 
-// TEL-local, source-scoped name address candidate. Only the authenticated
-// source-indexed second-greeting callsites are eligible. The original game
-// selects the current form of address into a private stack field; only exact
-// saved given + 君 and saved family + さん are converted. Neither the saved
-// names nor the shared P field, global parser, speaker or tables are changed.
-// Other forms retain the existing scoped renderer without reinterpretation.
+// TEL-local address conversion applies only to authenticated second-greeting
+// callers and their selected source rows. The original address producer chooses
+// given or family name followed by 君 or さん in a local stack field. Conversion
+// requires an exact match to the corresponding saved name and chosen suffix.
+// Saved fields, shared P data, parser, speaker and tables remain untouched;
+// unmatched forms continue through the native renderer.
 import (
 	"bytes"
 	"encoding/binary"
@@ -43,6 +43,13 @@ var telPAddressTables = [...]struct {
 func telPAddressSource(exe, tel []byte) error {
 	if len(exe) != 667648 || sha(exe) != OriginalEXESHA || len(tel) != 196608 || sha(tel) != OverlaySHA["TEL.EXN"] {
 		return fmt.Errorf("TEL P address: unauthenticated retail image")
+	}
+	// Original phone speaker table: index 2 is Himoo, index 3 Katagiri.
+	for index, want := range map[uint32][]byte{2: {0x95, 0x52, 0x8f, 0x8f, 0}, 3: {0x95, 0xd0, 0x8b, 0xcb, 0}} {
+		ptr := binary.LittleEndian.Uint32(exe[0x800b35f4-Base+index*4:])
+		if ptr < Base || ptr-Base+uint32(len(want)) > uint32(len(exe)) || !bytes.Equal(exe[ptr-Base:ptr-Base+uint32(len(want))], want) {
+			return fmt.Errorf("TEL P address: original speaker table drift at %d", index)
+		}
 	}
 	for _, s := range telPAddressSites {
 		for pc, want := range map[uint32]uint32{
@@ -210,12 +217,14 @@ func telPAddressPayload() ([]byte, error) {
 	mov(5, 18)
 	w(jalWord(telPAddressNativeP))
 	w(0)
-	// Only the two source-observed semantic forms are converted; unusual
-	// relation/nickname variants stay in the original renderer.
-	mov(23, 0) // 0: given + 君, 1: surname + さん
+	// Match the native producer's exact saved name and suffix, independently
+	// of character index. Unrecognized nickname/address forms remain retail.
+	mov(23, 0) // 0: given + 君, 1: family + さん, 2: family + 君, 3: given + さん
 	a.label("try_name")
 	add(20, 29, 0xe0)
 	beq(23, 0, "select_given")
+	add(8, 0, 3)
+	beq(23, 8, "select_given")
 	w(olLUI(21, OLA0SurnameField))
 	w(olORI(21, 21, OLA0SurnameField&0xffff))
 	jump("name_selected")
@@ -241,7 +250,8 @@ func telPAddressPayload() ([]byte, error) {
 	bne(8, 0, "next_name")
 	w(olIType(0x0c, 22, 8, 1))
 	bne(8, 0, "next_name")
-	beq(23, 0, "check_kun")
+	w(olIType(0x0c, 23, 9, 1)) // odd forms carry さん
+	beq(9, 0, "check_kun")
 	for i, v := range []int16{0x82, 0xb3, 0x82, 0xf1, 0} {
 		lbu(8, 20, int16(i))
 		add(9, 0, v)
@@ -256,8 +266,9 @@ func telPAddressPayload() ([]byte, error) {
 	}
 	jump("form_matched")
 	a.label("next_name")
-	bne(23, 0, "retail")
-	add(23, 0, 1)
+	add(23, 23, 1)
+	w(olSLTIU(8, 23, 4))
+	beq(8, 0, "retail")
 	jump("try_name")
 	a.label("form_matched")
 	// Fail closed if the TEL-local N6 converter has not been installed.
@@ -269,6 +280,8 @@ func telPAddressPayload() ([]byte, error) {
 	add(10, 0, int16(mod.BodyLen))
 	bne(9, 10, "retail")
 	beq(23, 0, "convert_given")
+	add(8, 0, 3)
+	beq(23, 8, "convert_given")
 	w(olLUI(4, OLA0SurnameField))
 	w(olORI(4, 4, OLA0SurnameField&0xffff))
 	jump("convert_selected")
@@ -347,7 +360,8 @@ func telPAddressPayload() ([]byte, error) {
 	add(8, 0, 0xad)
 	sb(8, 21, 0)
 	add(21, 21, 1)
-	beq(23, 0, "append_kun")
+	w(olIType(0x0c, 23, 9, 1))
+	beq(9, 0, "append_kun")
 	for _, v := range []int16{0xf3, 0xe1, 0xee} {
 		add(8, 0, v)
 		sb(8, 21, 0)

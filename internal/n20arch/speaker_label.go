@@ -1,7 +1,7 @@
 package n20arch
 
-// speaker bridge — width-independent rendering of the SAVED PLAYER SURNAME in the retail
-// speaker call (0x80050DFC). PRIVATE OFFLINE CANDIDATE, DISABLED BY DEFAULT.
+// Speaker bridge computes pair-font geometry for the saved player surname at
+// the retail speaker call (0x80050DFC). This path is disabled by default.
 //
 // The retail speaker picks its X origin from the byte length of the kana
 // string (2/4/6 bytes -> -114/-121/-128, 14 px per 2-byte cell). Once the
@@ -22,9 +22,9 @@ package n20arch
 // speaker with the original kana pointer. The EXE side is the SAME 52-byte
 // guard used by speaker rendering; only the resident F1 body behind it changes.
 //
-// speaker bridge BLOCKED: the resident window lifetime, overlay reloads, pair-font
-// rendering, real queue consumption and in-game positioning have NOT been
-// observed. safe_to_patch=false and runtime_pass=false are intentional.
+// Enabling this path requires proof of resident window lifetime, overlay reload
+// behavior, pair-font rendering, queue consumption and in-game positioning.
+// safe_to_patch=false and runtime_pass=false remain mandatory until then.
 //
 // Nothing here writes translation data, the retail EXE, overlays on disk,
 // saves, memory cards, emulator settings, private project files, guest RAM outside
@@ -43,7 +43,7 @@ const (
 	// false; the plan itself also returns Blocked=true.
 	SpeakerExperimentEnabled = false
 	SpeakerBlocked           = true
-	SpeakerBlockedReason     = "speaker bridge BLOCKED: private offline candidate only. The 16 exact speaker callers are redirected to a resident C10 F1 shim, but persistent resident-window lifetime, overlay reload/reuse, DMA/IRQ/cache coherency, English pair-font rendering and in-game position have not been observed. safe_to_patch=false, runtime_pass=false; no guest RAM, EXE, overlay, save, translation or public builder change is authorised."
+	SpeakerBlockedReason     = "speaker bridge BLOCKED: the proposed 16-caller resident C10 F1 redirect lacks verified window lifetime, overlay reload/reuse, DMA/IRQ/cache coherency, English pair-font rendering and in-game positioning. safe_to_patch=false, runtime_pass=false; no guest RAM, EXE, overlay, save, translation or public builder change is authorised."
 
 	speakerGeometryQueueEntry   uint32 = 0x8004E788 // authenticated retail speaker queue
 	speakerGeometryAdvanceRAM   uint32 = 0x800B3F6A // renderer cell advance byte, retail default 14
@@ -68,8 +68,8 @@ type SpeakerSite struct {
 	Interposed bool // delay still supplies the surname, but pc-4 is not LUI a0,0x800E
 }
 
-// SpeakerCandidate is a private, runtime-unverified speaker bridge plan. It contains
-// bytes only; the caller decides whether to materialise anything offline.
+// SpeakerCandidate holds a disabled bridge plan and its safety state. The
+// caller receives bytes only; no game or guest memory writes occur.
 type SpeakerCandidate struct {
 	EnglishEXE    []byte
 	SourceImage   []byte

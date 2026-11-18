@@ -1,6 +1,6 @@
 package n20arch
 
-// N20 integrated private build (runtime-unverified).
+// N20 image composition constructs authenticated byte changes without running the game.
 //
 // This file is the single consolidated planner for the N20 candidate. It
 // composes, in one in-memory plan:
@@ -780,6 +780,13 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			Role:   "TEL source-indexed multiline name and first-line wrapper",
 			Reason: "retail-verified TEL P address sites use guarded local name line then preserve existing multiline wrapper; other original calls retain wrapper"})
 	}
+	recordedSites, err := telRecordedMessageSites(exe, overlays["TEL.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: TEL recorded message: %w", err)
+	}
+	for _, pc := range recordedSites {
+		expected = append(expected, telRecordedMessageWord(pc))
+	}
 	prepared, err := telIndexedPreparedFirstLine(overlays["TEL.EXN"])
 	if err != nil {
 		return fmt.Errorf("verify: TEL prepared first line: %w", err)
@@ -1181,7 +1188,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if acc.EXEEntryHooks != 0 || acc.EXERelocationPairs != 17 || acc.EXERelocationWords != 34 ||
 		acc.OverlayRelocationPairs != 9 || acc.OverlayRelocationWords != 18 ||
 		acc.OverlayCallsiteN6 != 136 || acc.OverlayCallsiteN6FP != 235 ||
-		acc.OverlayCallsiteWords != 453 || acc.TotalEXEChangedWords != 34 ||
+		acc.OverlayCallsiteWords != 456 || acc.TotalEXEChangedWords != 34 ||
 		acc.LegacyEXEChangedWords != 0 {
 		return fmt.Errorf("verify: change accounting %+v", acc)
 	}

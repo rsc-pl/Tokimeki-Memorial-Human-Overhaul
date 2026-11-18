@@ -694,7 +694,7 @@
         {
           "offset": "0x3044",
           "original": "ソーリー、ごめんなさい。\nちょっと\n手間取っちゃったの。",
-          "text": "Sorry, I'm so sorry.\nIt took me\na little longer."
+          "text": "Sorry! Gomen nasai!\nIt took me\na little longer."
         },
         {
           "offset": "0x307c",
@@ -714,7 +714,7 @@
         {
           "offset": "0x30fc",
           "original": "ソーリー、ごめんね。\nちょっと、\n手間取っちゃったのよ。",
-          "text": "Sorry, so sorry.\nIt took me\na little longer."
+          "text": "Sorry, gomen ne.\nIt took me\na little longer."
         },
         {
           "offset": "0x3134",
@@ -734,7 +734,7 @@
         {
           "offset": "0x31b4",
           "original": "ソーリー、ごめんなさい。\nちょっと\n手間取っちゃってたの。",
-          "text": "Sorry, I'm so sorry.\nI was a little\nheld up."
+          "text": "Sorry! Gomen nasai!\nI got held up\na bit."
         },
         {
           "offset": "0x31f0",
@@ -1379,7 +1379,7 @@
         {
           "offset": "0x6364",
           "original": "ソーリー、ごめんね。\nもうちょっと\n見てきてもいいかな？",
-          "text": "Sorry, so sorry.\nCan I look around\na little longer?"
+          "text": "Sorry, gomen ne.\nCan I look around\na little longer?"
         },
         {
           "offset": "0x639c",

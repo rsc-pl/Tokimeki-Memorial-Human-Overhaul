@@ -567,7 +567,7 @@
         {
           "offset": "0x984",
           "original": "ま、しょうがないけど、\n失敗の原因を\nよく調べてみなさい。",
-          "text": "Well, it can't be helped.\nLook carefully into\nwhy it failed."
+          "text": "Well, what's done is done.\nLook into what\nwent wrong."
         },
         {
           "offset": "0x9c0",
@@ -787,7 +787,7 @@
         {
           "offset": "0x11c0",
           "original": "そうね。\n成功しない研究なんて、\nただの時間潰しだから。",
-          "text": "Indeed. Research that\nfails is just a\nwaste of time."
+          "text": "Right.\nFailed research is\njust wasted time."
         },
         {
           "offset": "0x11f8",

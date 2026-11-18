@@ -574,12 +574,12 @@
         {
           "offset": "0x1304",
           "original": "あなたは、もう、私の\n所属している科学部の一員よ。\n嫌とは言わせないわよ。",
-          "text": "You are now a member\nof my Science Club.\nNo is not an option."
+          "text": "You're in my Science Club\nnow. I won't take no\nfor an answer."
         },
         {
           "offset": "0x1354",
           "original": "あなたは、もう、私の\n所属している電脳部の一員よ。\n嫌とは言わせないわよ。",
-          "text": "You are now a member\nof my Computer Club.\nNo is not an option."
+          "text": "You're in my Computer Club\nnow. I won't take no\nfor an answer."
         },
         {
           "offset": "0x13a4",

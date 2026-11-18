@@ -198,6 +198,41 @@ func telIndexedWrappedGirlSites(tel []byte) ([]uint32, error) {
 	if len(out) != 29 {
 		return nil, fmt.Errorf("TEL indexed multiline: callsite family drift (%d, expected 29)", len(out))
 	}
+	// Scheduling conflicts draw the indexed speaker before a longer
+	// selection block. The adjacent-call scan intentionally misses it.
+	// Authenticate the original speaker index, the separate text row
+	// selection, and the actual a2 index passed to the multiline wrapper.
+	const refusalPC uint32 = 0x8013761c
+	for pc, want := range map[uint32]uint32{
+		0x801374fc:    0x3c0c800e,
+		0x80137500:    0x918c71df,
+		0x80137504:    0x3c04800b,
+		0x80137508:    0x000c5880,
+		0x8013750c:    0x008b2021,
+		0x80137510:    0x8c8435f4,
+		0x80137514:    jalWord(OLOriginalSpeaker),
+		0x80137518:    0,
+		0x801375fc:    0x00095080,
+		0x80137600:    0x3c048014,
+		0x80137604:    0x008a2021,
+		0x80137608:    0x3c06800e,
+		0x8013760c:    0x90c671df,
+		0x80137610:    0x8c841d80,
+		0x80137614:    0x3c018014,
+		0x80137618:    0xa02905e4,
+		refusalPC:     jalWord(telDialogueWrapperOriginal),
+		refusalPC + 4: 0x00002825,
+	} {
+		if binary.LittleEndian.Uint32(tel[pc-OverlaySlotBase:]) != want {
+			return nil, fmt.Errorf("TEL scheduling conflict: source instruction drift at %#x", pc)
+		}
+	}
+	for _, pc := range out {
+		if pc == refusalPC {
+			return nil, fmt.Errorf("TEL scheduling conflict: duplicate caller")
+		}
+	}
+	out = append(out, refusalPC)
 	return out, nil
 }
 
@@ -228,6 +263,66 @@ func telIndexedPreparedFirstLine(tel []byte) (uint32, error) {
 		}
 	}
 	return telIndexedPreparedFirstLineCall, nil
+}
+
+// The recorded-message conversation uses its own nine-row source table.
+// Unlike the ordinary indexed greeting, the speaker is loaded from the
+// fixed EXE table slot corresponding to the original wrapper mode (0x0b).
+// Both NPC turns use the same bounded first-line renderer; the intervening
+// player turns and the selection/voice data remain retail.
+func telRecordedMessageSites(exe, tel []byte) ([]uint32, error) {
+	if len(exe) != 667648 || sha(exe) != OriginalEXESHA ||
+		len(tel) != 196608 || sha(tel) != OverlaySHA["TEL.EXN"] {
+		return nil, fmt.Errorf("TEL recorded message: unauthenticated source")
+	}
+	for _, site := range []struct {
+		pc       uint32
+		preimage []uint32
+	}{
+		{0x8013a554, []uint32{0x3c04800b, 0x8c843620, jalWord(OLOriginalSpeaker), 0,
+			0x8fa2002c, 0x3c198014, 0x0002c080, 0x0338c821, 0x8f395c44,
+			0x03001025, 0x8f240000, 0xafb80028, 0x00002825, jalWord(telDialogueWrapperOriginal), 0x2406000b}},
+		{0x8013a658, []uint32{0x3c04800b, 0x8c843620, jalWord(OLOriginalSpeaker), 0,
+			0x8fa2002c, 0x3c188014, 0x00027880, 0x030fc021, 0x8f185c44,
+			0x01e01025, 0x8f040008, 0xafaf0028, 0x00002825, jalWord(telDialogueWrapperOriginal), 0x2406000b}},
+	} {
+		off := int(site.pc - OverlaySlotBase)
+		if !bytes.Equal(tel[off:off+len(site.preimage)*4], words(site.preimage...)) {
+			return nil, fmt.Errorf("TEL recorded message: original speaker/body preimage drift at %#x", site.pc)
+		}
+	}
+	// Authenticated slot 11 is the same pointer measured by the existing
+	// wrapper-width helper (s4 <- a2). All nine source rows have that name
+	// in their original first spoken line, not the unrelated indexed greeting.
+	namePtr := binary.LittleEndian.Uint32(exe[0x800b3620-0x80040800:])
+	if namePtr != 0x800b35cc {
+		return nil, fmt.Errorf("TEL recorded message: name pointer drift")
+	}
+	name := exe[namePtr-0x80040800 : namePtr-0x80040800+4]
+	for i := uint32(0); i < 9; i++ {
+		row := binary.LittleEndian.Uint32(tel[0x80145c44-OverlaySlotBase+4*i:])
+		if row < 0x80145974 || row > 0x80145bf4 || (row-0x80145974)%0x50 != 0 {
+			return nil, fmt.Errorf("TEL recorded message: row %d drift", i)
+		}
+		for _, col := range []uint32{0, 8} {
+			ptr := binary.LittleEndian.Uint32(tel[row-OverlaySlotBase+col:])
+			if ptr < 0x801454d8 || ptr >= 0x80145974 {
+				return nil, fmt.Errorf("TEL recorded message: text pointer drift")
+			}
+			line := tel[ptr-OverlaySlotBase : 0x80145974-OverlaySlotBase]
+			end := bytes.IndexByte(line, 0)
+			if end <= 0 || (col == 0 && !bytes.Contains(line[:end], name)) {
+				return nil, fmt.Errorf("TEL recorded message: source row %d column %d drift", i, col)
+			}
+		}
+	}
+	return []uint32{0x8013a588, 0x8013a68c}, nil
+}
+
+func telRecordedMessageWord(pc uint32) N20ManifestWord {
+	return N20ManifestWord{Owner: "TEL.EXN", PC: pc, Old: jalWord(telDialogueWrapperOriginal),
+		New: jalWord(telDialogueWrapperClone), Kind: "jal", Role: "TEL recorded message NPC inline first line",
+		Reason: "authenticated retail source table and mode-indexed speaker width; original wrapper and delay preserved"}
 }
 
 // telWrapperCloneSource preserves the retail multiline preprocessor, including
@@ -635,6 +730,18 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 			Reason: "source-indexed EXE girl speaker and first-line body; authentic multiline wrapper with two local formatters and bounded X",
 		})
 	}
+	recordedSites, err := telRecordedMessageSites(exe, original)
+	if err != nil {
+		return result, nil, err
+	}
+	for _, pc := range recordedSites {
+		off := int(pc - OverlaySlotBase)
+		if !bytes.Equal(dest[off:off+8], original[off:off+8]) {
+			return result, nil, fmt.Errorf("TEL recorded message: staged caller drift at %#x", pc)
+		}
+		binary.LittleEndian.PutUint32(dest[off:], jalWord(telDialogueWrapperClone))
+		result.Calls = append(result.Calls, telRecordedMessageWord(pc))
+	}
 	// Preserve the indexed a2/a1 ABI and the original delay-slot store.
 	// The existing cloned wrapper handles the same first-line queue; no
 	// additional renderer or RAM ownership is introduced.
@@ -829,6 +936,17 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 		if binary.LittleEndian.Uint32(composed[off:]) != want ||
 			binary.LittleEndian.Uint32(composed[off+4:]) != 0x00002825 {
 			return fmt.Errorf("TEL indexed multiline: inherited caller missing or modified at %#x", pc)
+		}
+	}
+	recordedSites, err := telRecordedMessageSites(exe, original)
+	if err != nil {
+		return err
+	}
+	for _, pc := range recordedSites {
+		off := int(pc - OverlaySlotBase)
+		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telDialogueWrapperClone) ||
+			!bytes.Equal(composed[off+4:off+8], original[off+4:off+8]) {
+			return fmt.Errorf("TEL recorded message: composed caller drift at %#x", pc)
 		}
 	}
 	preparedOff := int(prepared - OverlaySlotBase)

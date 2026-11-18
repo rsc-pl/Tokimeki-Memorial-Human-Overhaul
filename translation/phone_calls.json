@@ -220,7 +220,7 @@
         {
           "offset": "0xedf4",
           "original": "え、{P}？！\nどうしたの今日は？",
-          "text": "Oh, {P}?!\nWhat's the occasion?"
+          "text": "Oh, {P}?!\nWhat's up?"
         },
         {
           "offset": "0xee14",
@@ -315,7 +315,7 @@
         {
           "offset": "0xf2d4",
           "original": "少々お待ち下さい…。\nえーと。\nよろしいようですよ。",
-          "text": "Just a moment, please...\nLet's see...\nLooks like that's fine."
+          "text": "One moment, please.\nLet's see...\nYes, I'm free."
         },
         {
           "offset": "0xf308",
@@ -485,7 +485,7 @@
         {
           "offset": "0xfb60",
           "original": "あら、残念ね。\nその日は、\n空いてないのよ。",
-          "text": "Oh, too bad.\nThat day,\nI'm not free."
+          "text": "Oh, too bad.\nI'm not free\nthat day."
         },
         {
           "offset": "0xfb8c",
@@ -605,7 +605,7 @@
         {
           "offset": "0x1002c",
           "original": "せっかく誘っていただいたのに\nごめんなさい…。",
-          "text": "You were kind enough to ask,\nand I'm sorry..."
+          "text": "Thanks for asking me,\nbut I'm sorry..."
         },
         {
           "offset": "0x1005c",
@@ -615,7 +615,7 @@
         {
           "offset": "0x10074",
           "original": "悪いんだけど、\nまた今度誘ってくんない？\nごめんね。",
-          "text": "Sorry, but\ncould you ask me again?\nI'm sorry."
+          "text": "Sorry, but\nask me out again\nsometime, okay?"
         },
         {
           "offset": "0x100a8",
@@ -865,7 +865,7 @@
         {
           "offset": "0x10a9c",
           "original": "そうしていただけると、\n助かります。",
-          "text": "That would be\nmost kind of you."
+          "text": "That would\nreally help me."
         },
         {
           "offset": "0x10ac0",
@@ -945,7 +945,7 @@
         {
           "offset": "0x10da4",
           "original": "あーっ。\nその日は、パス。\n用あるから。",
-          "text": "Ah, not that day.\nGot plans.\nI'll pass."
+          "text": "Oh...\nNot that day.\nI've got plans."
         },
         {
           "offset": "0x10dcc",
@@ -1570,7 +1570,7 @@
         {
           "offset": "0x12978",
           "original": "今日は、どうしたのですか？\n約束を破る事は、\n悪いことだと思います。",
-          "text": "What happened today?\nI think breaking a promise\nis wrong."
+          "text": "What happened today?\nI don't think it's right\nto break a promise."
         },
         {
           "offset": "0x129bc",
@@ -2442,12 +2442,12 @@
         {
           "offset": "0xc5d4",
           "original": "何だその残念そうな声は。",
-          "text": "Why so disappointed?"
+          "text": "You sound disappointed."
         },
         {
           "offset": "0xc5f0",
           "original": "俺からじゃ不満か？",
-          "text": "Not good enough?"
+          "text": "Not happy it's me?"
         },
         {
           "offset": "0xc604",
@@ -2537,12 +2537,12 @@
         {
           "offset": "0xc72c",
           "original": "何だその残念そうな声は。",
-          "text": "Why so disappointed?"
+          "text": "You sound disappointed."
         },
         {
           "offset": "0xc748",
           "original": "俺からじゃ不満か？",
-          "text": "Not good enough?"
+          "text": "Not happy it's me?"
         },
         {
           "offset": "0xc75c",

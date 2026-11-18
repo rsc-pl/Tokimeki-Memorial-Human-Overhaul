@@ -634,7 +634,7 @@
         {
           "offset": "0x280c",
           "original": "よろしいですよ。\n参りましょう。",
-          "text": "That would be fine.\nLet us go."
+          "text": "Of course.\nLet's go."
         },
         {
           "offset": "0x2834",
@@ -759,7 +759,7 @@
         {
           "offset": "0x3390",
           "original": "申し訳ございません。\nどうやら、ゆっくり\n歩きすぎたようですね。",
-          "text": "I'm terribly sorry.\nIt seems I walked\na bit too slowly."
+          "text": "I'm so sorry.\nI guess I walked\na bit too slowly."
         },
         {
           "offset": "0x33d0",
@@ -2394,7 +2394,7 @@
         {
           "offset": "0xadec",
           "original": "よろしいですよ。\nそれでは、参りましょう。",
-          "text": "That would be fine.\nThen let us go."
+          "text": "Of course.\nLet's go, then."
         },
         {
           "offset": "0xae24",

@@ -6,9 +6,9 @@ package n20arch
 // F1 gate* there; it does not place another romanizer in EXE RAM.
 //
 // The guarded gate always has a retail destination, including on cold boot,
-// and its JAL callsites do not depend on which overlay is loaded. It is a
-// private offline candidate: the renderer tail's whole-game write ownership
-// and C10 destination lifetime still require in-game QA before release.
+// and its JAL callsites do not depend on which overlay is loaded. Static checks
+// cannot establish whether the renderer tail remains writable or the C10
+// destination survives overlay replacement; both require runtime validation.
 
 import (
 	"bytes"

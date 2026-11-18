@@ -99,7 +99,7 @@
         {
           "offset": "0x2ec",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x30c",
@@ -259,7 +259,7 @@
         {
           "offset": "0x69c",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x6bc",
@@ -279,7 +279,7 @@
         {
           "offset": "0x708",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x728",
@@ -314,7 +314,7 @@
         {
           "offset": "0xfac",
           "original": "なかなか、\n頑張ってるじゃない。",
-          "text": "You're working\nrather hard."
+          "text": "Not bad.\nYou're working hard."
         },
         {
           "offset": "0xfcc",
@@ -344,7 +344,7 @@
         {
           "offset": "0x1078",
           "original": "とりあえず。\nできてるじゃない。\n当然だけど。",
-          "text": "Well.\nIt works.\nNaturally."
+          "text": "Well...\nIt seems to work.\nAs it should."
         },
         {
           "offset": "0x10a8",
@@ -354,7 +354,7 @@
         {
           "offset": "0x10c4",
           "original": "つまらないプログラム\n組んでるわね。\nま、頑張りなさい。",
-          "text": "What a dull program\nyou're writing.\nWell, do your best."
+          "text": "Your program's dull.\nBut still, keep\nworking on it."
         },
         {
           "offset": "0x10fc",
@@ -364,7 +364,7 @@
         {
           "offset": "0x1120",
           "original": "今回は、こんなものね。\n次も、頑張りなさいよ。",
-          "text": "That's it for now.\nDo your best next time."
+          "text": "That'll do for now.\nDo your best next time."
         },
         {
           "offset": "0x1150",
@@ -424,7 +424,7 @@
         {
           "offset": "0x168c",
           "original": "あら？\nなかなかいい絵ね。",
-          "text": "Oh?\nRather a good picture."
+          "text": "Oh?\nNot a bad painting."
         },
         {
           "offset": "0x16a8",
@@ -474,7 +474,7 @@
         {
           "offset": "0x1968",
           "original": "最近、\nわりと見られるように\nなってきたわね。",
-          "text": "Lately you've become\nrather presentable,\nI must say."
+          "text": "You're looking\nfairly decent\nthese days."
         },
         {
           "offset": "0x1998",
@@ -509,12 +509,12 @@
         {
           "offset": "0x1a94",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x1ab4",
           "original": "本を読んでる姿が、\nさまになってて、\n素敵ですね。",
-          "text": "You look so\nnatural reading.\nIt's lovely."
+          "text": "You look right\nat home with a book.\nIt's lovely."
         },
         {
           "offset": "0x1ae8",
@@ -569,12 +569,12 @@
         {
           "offset": "0x1e04",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x1e24",
           "original": "こんにちは。\n今日も、\n練習、頑張りましょうね。",
-          "text": "Good afternoon.\nToday, too,\nlet's practice hard."
+          "text": "Hello!\nLet's practice\nhard today, too."
         },
         {
           "offset": "0x1e54",
@@ -629,7 +629,7 @@
         {
           "offset": "0x20a8",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x20c8",
@@ -649,7 +649,7 @@
         {
           "offset": "0x2110",
           "original": "ありがとう。\n嬉しいよ。",
-          "text": "Thank you.\nI'm happy."
+          "text": "Thanks!\nI'm so glad!"
         },
         {
           "offset": "0x2130",
@@ -694,7 +694,7 @@
         {
           "offset": "0x24fc",
           "original": "お疲れ様。\n最近、\nよく頑張ってるね。",
-          "text": "Good work.\nLately you've\nbeen trying so hard."
+          "text": "Nice job.\nYou've worked\nhard lately."
         },
         {
           "offset": "0x2524",

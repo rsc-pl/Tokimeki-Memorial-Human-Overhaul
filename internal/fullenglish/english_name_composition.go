@@ -396,7 +396,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// certify right-edge wrapping or in-game VRAM placement.
 		coordinatedEXE, layoutErr := n.PlanCoordinatedNPCAFirstLinePrivate(exe, coherentEXE, targetShort)
 		if layoutErr != nil {
-			item.Blocker = "NPC coordinates private coordinated NPC first-line gate: " + layoutErr.Error()
+			item.Blocker = "NPC first-line parser and label placement gate: " + layoutErr.Error()
 			results = append(results, item)
 			continue
 		}
@@ -405,17 +405,17 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// speaker consumers remain separate. Runtime remains unverified.
 		balancedEXE, balanceErr := n.PlanNPCModerateBalancePrivate(exe, coordinatedEXE, targetShort)
 		if balanceErr != nil {
-			item.Blocker = "NPC spacing private label/quote two-sided compromise: " + balanceErr.Error()
+			item.Blocker = "NPC label/quotation spacing gate: " + balanceErr.Error()
 			results = append(results, item)
 			continue
 		}
-		// NPC frame recorded screenshot QA: the left-border frame lip still touches the
+		// NPC frame alignment: the left-border frame lip can touch the
 		// surname. Translate BOTH label and prefix/body RIGHT by +3 relative
 		// to tested NPC spacing, keeping their mutual ink clearance unchanged.
-		// NOTE: right-edge text/wrap is NOT certified; user will test once.
+		// Right-edge wrapping and on-screen placement remain unverified by static checks.
 		insetEXE, insetErr := n.PlanNPCFrameInsetPrivate(exe, balancedEXE, targetShort)
 		if insetErr != nil {
-			item.Blocker = "NPC frame private one-time frame inset: " + insetErr.Error()
+			item.Blocker = "NPC frame inset gate: " + insetErr.Error()
 			results = append(results, item)
 			continue
 		}
@@ -449,10 +449,9 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			results = append(results, item)
 			continue
 		}
-		// battle surname PRIVATE: RPG_BAT has an independently authenticated saved-surname
-		// strcpy outside the 15 already frozen direct name hooks direct name sites. Install
-		// a separate verifier-covered N6 adapter only in the previously unused
-		// RPG_BAT local window; formatter bridge C10 and both exam labels ETC hooks remain intact.
+		// The battle overlay has separate saved-surname copy and status-name
+		// draw calls. Both use its existing verifier-covered local window,
+		// leaving the neighbouring character draw and C10 carrier unchanged.
 		rpgPath := "CDROM/EXEDIR/RPG_BAT.EXN"
 		mergedRPG, rpgPresent := physical[rpgPath]
 		if !rpgPresent {
@@ -486,6 +485,63 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			continue
 		}
 		physical[bunkaPath] = bunkaIntegration.Overlay
+		if e = composeDATEActivitySurname(exe, overlays, physical); e != nil {
+			item.Blocker = "DATE activity surname integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		datePath := "CDROM/EXEDIR/DATE.EXN"
+		if physical[datePath], e = n.PlanDATEContextSpeaker(exe, physical["SLPM_86.053"], overlays["DATE.EXN"], physical[datePath]); e != nil {
+			item.Blocker = "DATE contextual label integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		contextCurrent := make(map[string][]byte, len(overlays))
+		for name := range overlays {
+			contextCurrent[name] = physical["CDROM/EXEDIR/"+name]
+		}
+		contextLabels, contextErr := n.PlanContextSpeakers(exe, physical["SLPM_86.053"], overlays, contextCurrent)
+		if contextErr != nil {
+			item.Blocker = "contextual label integration: " + contextErr.Error()
+			results = append(results, item)
+			continue
+		}
+		for name, data := range contextLabels {
+			physical["CDROM/EXEDIR/"+name] = data
+		}
+		tripPath := "CDROM/EXEDIR/SHUGAKU.EXN"
+		if physical[tripPath], e = n.PlanSchoolTripSurname(exe, physical["SLPM_86.053"], overlays["SHUGAKU.EXN"], physical[tripPath]); e != nil {
+			item.Blocker = "school trip surname label integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		festivalPath := "CDROM/EXEDIR/BUNKASAI.EXN"
+		if physical[festivalPath], e = n.PlanFestivalActivitySurname(overlays, physical[festivalPath]); e != nil {
+			item.Blocker = "festival activity surname integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		answeringPath := "CDROM/EXEDIR/TEL.EXN"
+		if physical[answeringPath], e = n.PlanAnsweringMachineSurname(overlays["TEL.EXN"], physical[answeringPath]); e != nil {
+			item.Blocker = "answering machine surname integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		if physical["SLPM_86.053"], e = n.PlanPTerminalPunctuation(exe, physical["SLPM_86.053"]); e != nil {
+			item.Blocker = "terminal name punctuation integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		if physical["SLPM_86.053"], e = n.PlanFTerminalPeriod(exe, physical["SLPM_86.053"]); e != nil {
+			item.Blocker = "terminal full name period integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		if physical["SLPM_86.053"], e = n.PlanGSuffixJoin(exe, physical["SLPM_86.053"]); e != nil {
+			item.Blocker = "dynamic surname suffix integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
 		// The N20 ancestor has already installed the authenticated phone
 		// callsites and its owned renderer. Validate the final output without
 		// applying the same binary patch a second time.
