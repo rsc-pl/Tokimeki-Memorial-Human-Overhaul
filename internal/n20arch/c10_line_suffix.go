@@ -240,7 +240,7 @@ func buildC10LineSuffix(sharedRAM, romanizer uint32) ([]byte, error) {
 	add(9, 9, 1)
 	sltu(8, 20, 10)
 	beq(8, 0, "copy_tail")
-	// Success is now proven. Commit exactly the staged bytes.
+	// All validation checks passed. Commit exactly the staged bytes.
 	add(8, 0, 0)
 	a.label("commit")
 	a.b(4, 8, 14, "success")

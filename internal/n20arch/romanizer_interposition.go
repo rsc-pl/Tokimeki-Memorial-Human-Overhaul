@@ -1,7 +1,7 @@
 package n20arch
 
 // formatter interposition extends the existing overlay formatter *offline* F1 surname renderer to three
-// authenticated EXE calls previously excluded because the preceding
+// authenticated EXE calls for which the preceding
 // instruction updates the saved display-style byte. The delay slot still
 // computes a0 = saved surname. Patch ONLY each JAL; do not touch either the
 // state write or delay slot. No new code/guest RAM allocation is introduced.

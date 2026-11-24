@@ -1,11 +1,9 @@
 package n20arch
 
-// N20-local, private packed romanizer (the "N20 romanizer rebuild").
+// N20-local packed romanizer with supplemental keyboard mappings.
 //
-// This file deliberately does NOT edit or import-edit the production
-// internal/playername builder. It copies the packed romanizer packed-table and packed-MIPS
-// algorithm into this isolated package, then makes two source-grounded
-// changes on top of the authenticated packed romanizer behaviour:
+// The packed table and MIPS algorithm use the existing internal/playername
+// mappings with two extensions to the authenticated packed romanizer behavior:
 //
 //  1. the fullwidth wave dash '～' (CP932 0x8160) is accepted and emitted as
 //     the host's established compact ASCII "~";

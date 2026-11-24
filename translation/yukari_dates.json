@@ -599,7 +599,7 @@
         {
           "offset": "0x271c",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x2740",
@@ -674,7 +674,7 @@
         {
           "offset": "0x2c6c",
           "original": "最近は、女の子も結構来てるよ。{q}時代遅れなんじゃない。{q}不良になっちゃう？",
-          "text": "More girls come here now.{q}Isn't that old-fashioned?{q}Afraid you'll turn punk?"
+          "text": "Girls come here now too.{q}Isn't that outdated?{q}Afraid you'll turn punk?"
         },
         {
           "offset": "0x2cc0",
@@ -1049,7 +1049,7 @@
         {
           "offset": "0x47a0",
           "original": "意外と怖い映画が好み。\nということを聞き出した。",
-          "text": "Turns out she likes\nscary movies."
+          "text": "Found out she actually\nlikes scary movies."
         },
         {
           "offset": "0x47d0",
@@ -1099,7 +1099,7 @@
         {
           "offset": "0x4a30",
           "original": "大学に進みなさいと、\n父親に言われている。\nということを聞き出した。",
-          "text": "Found out her father\nwants her to go\nto university."
+          "text": "Found out her father\ntold her to go\nto university."
         },
         {
           "offset": "0x4a78",
@@ -1409,7 +1409,7 @@
         {
           "offset": "0x62dc",
           "original": "花を見てると、心が和むね。{q}食べれるのかな。{q}奇麗な花だねぇ。",
-          "text": "Flowers are so soothing.{q}I wonder if they taste good.{q}What pretty flowers."
+          "text": "Flowers are so soothing.{q}Can you eat them?{q}They're so pretty."
         },
         {
           "offset": "0x6324",
@@ -1434,7 +1434,7 @@
         {
           "offset": "0x63e0",
           "original": "本当、素敵だね。{q}お花高いからね。{q}持って帰ろうか？",
-          "text": "Really? That's lovely.{q}Flowers are expensive.{q}Shall we take some home?"
+          "text": "It would.{q}Flowers are pricey.{q}Take some home?"
         },
         {
           "offset": "0x641c",
@@ -1689,7 +1689,7 @@
         {
           "offset": "0x79b4",
           "original": "俺はわりと好きだな…。{q}全然面白くない。{q}{G}はどうなの？",
-          "text": "I kinda like it...{q}It's not fun at all.{q}{G}, and you?"
+          "text": "I kinda like it...{q}It's not fun at all.{q}And you, {G}?"
         },
         {
           "offset": "0x79f4",
@@ -1914,7 +1914,7 @@
         {
           "offset": "0x8a7c",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x8ab4",
@@ -2404,7 +2404,7 @@
         {
           "offset": "0xae54",
           "original": "また、一緒に見れるといいね。{q}ボーッとしてると、樹にぶつかるよ。{q}まさに日本の風物詩だね。",
-          "text": "Let's come see them again.{q}Don't space out into a tree.{q}A real Japanese tradition."
+          "text": "Let's come see them again.{q}You'll walk into a tree.{q}A real Japanese tradition."
         },
         {
           "offset": "0xaeb8",

@@ -2,11 +2,9 @@ package n20arch
 
 // Overlay-local, lifecycle-safe N20 architecture ("N6" candidate).
 //
-// The previous N20 design hooked five EXE call sites and dispatched into a
-// window supplied by whichever overlay happened to be loaded. That design is
-// rejected: before the first overlay load the window is absent, and no EXE
-// word can both validate and dispatch. This file implements a different
-// contract:
+// Five EXE call sites cannot dispatch into an arbitrary overlay window:
+// before the first overlay load the window is absent, and no EXE
+// word can both validate and dispatch. The overlay-local contract is:
 //
 //   - the EXE is byte-identical to retail and contains no hook;
 //   - every patched JAL lives inside the overlay that already owns the call
@@ -29,8 +27,8 @@ import (
 )
 
 const (
-	// The guard occupies the first 256 B of the same zero-filled payload
-	// region the superseded design used. The body follows.
+	// The guard occupies the first 256 B of the zero-filled payload
+	// region. The body follows.
 	OLGuardBase   uint32 = 0x80160E00
 	OLGuardBytes         = 256
 	OLStubRAM     uint32 = 0x80160E10
@@ -85,7 +83,7 @@ var OverlayNameTargets = map[uint32]OverlayNameTarget{
 	0x80050DFC: {"speaker", "speaker", true},
 	// 0x80081DC8 is the renderer's generic text queue (jal 0x8004E788),
 	// reached by every rendered line. It is not an honourific or surname
-	// route; the historical "surname_san" label is retained only in prose.
+	// route.
 	0x80081DC8: {"generic_renderer_queue_site", "renderer_queue", false},
 	0x80081DA8: {"alternate_preparser_site", "san_alt", false},
 	0x80082764: {"fullname", "fullname", true},
@@ -958,7 +956,7 @@ func OverlayLocalRoutes(sites []OverlayCallsite, exeSites []EXECallsite) []Overl
 		{"formatter_b", "0x8007F898", "EXE", "blocked", 0, "same EXE-owned formatter body; recorded RA 0x8007F8A0 five times (surname-only 8-byte queued string) reading working family 0x800CA16C"},
 		{"formatter_c", "0x8007F95C", "EXE", "blocked", 0, "same EXE-owned formatter body; sibling of formatter_b, not observed in the recorded trace"},
 		{"formatter_d", "0x80080C30", "EXE", "blocked", 0, "same EXE-owned formatter body; recorded RA 0x80080C38 once (surname-only 8-byte queued string) reading working family 0x800CA16C"},
-		{"generic_renderer_queue", "0x80081DC8", "EXE", "blocked", 0, "generic queue JAL inside EXE renderer 0x80081190 (historical id surname_san); reached by every rendered line; no overlay callsite to intercept; recorded RA 0x80081DD0 once with a 27-byte surname+given F join"},
+		{"generic_renderer_queue", "0x80081DC8", "EXE", "blocked", 0, "generic queue JAL inside EXE renderer 0x80081190; reached by every rendered line; no overlay callsite to intercept; recorded RA 0x80081DD0 once with a 27-byte surname+given F join"},
 		{"alternate_parser_branch", "0x80081DA8", "EXE", "blocked", 0, "alternative EXE path; no overlay callsite"},
 		{"fullname", "overlay JALs to 0x80082764", "DATE, DATE2, GEKO, KANGEI, SHOUGATU, SHUGAKU, VALEN", "owned_not_implemented", counts["fullname"], "0x80082764 is the talk runner (a0=index); full-name expansion is owned by EXE renderer 0x80081190, so no tail shim can replace it"},
 		{"shared_exe_wrapper", "0x800E5238", "EXE", "blocked", 0, "internal EXE wrapper fallback"},

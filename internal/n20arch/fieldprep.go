@@ -586,6 +586,7 @@ type OverlayFieldPrepPlan struct {
 	SHOUCopyModule    *OverlayFieldPrepModule // only SHOUGATU, authenticated ChristmasFamily copy route
 	GEKOCopyModule    *OverlayFieldPrepModule // GEKO duplicate saved-family copies verified against original code
 	VALENSuffixModule *OverlayFieldPrepModule // only VALEN dynamic selector, bounded -san pair rotation
+	DATE2PModule      *OverlayFieldPrepModule // only DATE2 direct native P producers
 	Module            OverlayFieldPrepModule
 	Patched           map[string][]byte
 	SitesByOverlay    map[string][]FieldPrepCallsite

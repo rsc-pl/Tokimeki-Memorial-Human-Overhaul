@@ -27,7 +27,7 @@ const (
 	speakerScratchMaxFormattedSourceBytes        = int(speakerScratchScratchEnd-speakerScratchScratchOffset) - 2 // space + NUL
 )
 
-func PlanPrivateNPCScratch(retail, merged []byte, sourceNPCNames []string) ([]byte, error) {
+func PlanNPCScratch(retail, merged []byte, sourceNPCNames []string) ([]byte, error) {
 	const expected = "bae1514fcc4bd8843c69803bf469632b004377b67f3e4408f0641c545fd843ae"
 	const base = uint32(0x80040800)
 	if len(retail) != 667648 || len(merged) != len(retail) || fmt.Sprintf("%x", sha256.Sum256(retail)) != expected {

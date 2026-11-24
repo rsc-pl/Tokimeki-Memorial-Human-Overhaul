@@ -13,7 +13,7 @@ import (
 // Compact surname-pool capacity is shared with offline A/B source audits.
 const N10CompactExpectedBytes = 132
 
-// DirectAliasStage is an explicitly INCOMPLETE experiment. It rewrites only
+// DirectAliasStage is an incomplete, nonbootable composition. It rewrites only
 // three direct resident-EXE source-address constructions, one guarded
 // inherited-register EXE source, and one GEKO source. GEKO's remaining
 // honorific-bearing source at 0xF480 is deliberately left unchanged.
@@ -26,7 +26,7 @@ type DirectAliasStage struct {
 	FujisakiAddress      uint32   `json:"fujisaki_alias_address"`
 	TatebayashiAddress   uint32   `json:"tatebayashi_alias_address"`
 	UntouchedCases       []string `json:"untouched_cases"`
-	RuntimeApproved      bool     `json:"runtime_approved"`
+	RuntimeAuthorized    bool     `json:"runtime_authorized"`
 	Complete             bool     `json:"complete"`
 	UnsafeToBoot         bool     `json:"unsafe_to_boot"`
 }
@@ -74,7 +74,7 @@ func verifyCallWords(buf []byte, points []struct {
 // stagedEXE MUST already contain the checked 132-byte N10 table in the verified
 // English renderer reservation. originalGEKO must be the retail overlay.
 // The two unresolved sites, indirect references, RAM destinations and display
-// bounds remain unmodified and UNAPPROVED; these outputs cannot be booted.
+// bounds remain unmodified and unverified; these outputs cannot be booted.
 func StageDirectFixedAliases(stagedEXE, originalGEKO []byte, sourceNames []string) ([]byte, []byte, DirectAliasStage, error) {
 	fail := func(err error) ([]byte, []byte, DirectAliasStage, error) { return nil, nil, DirectAliasStage{}, err }
 	if len(sourceNames) != Entries {
@@ -164,12 +164,12 @@ func stageDirectFixedAliasesAfterIdentityProof(stagedEXE, originalGEKO []byte, s
 		return fail(fmt.Errorf("EXE inherited Fujisaki source: %w", err))
 	}
 	return newEXE, newGEKO, DirectAliasStage{
-		Status:            "RESEARCH_PARTIAL_DIRECT_ALIASES_NOT_BOOTABLE",
+		Status:            "PARTIAL_DIRECT_ALIASES_NOT_BOOTABLE",
 		EXEDirectRewrites: 3, EXEInheritedRewrites: 1, GEKODirectRewrites: 1,
 		FujisakiAddress: addresses[0], TatebayashiAddress: addresses[11],
 		UntouchedCases: []string{
 			"GEKO 0x12B24 carries Japanese -san and must not alias an unsuffixed name",
 			"Other indirect/fixed-literal consumers and RAM copy destinations have not been proven",
-		}, RuntimeApproved: false, Complete: false, UnsafeToBoot: true,
+		}, RuntimeAuthorized: false, Complete: false, UnsafeToBoot: true,
 	}, nil
 }

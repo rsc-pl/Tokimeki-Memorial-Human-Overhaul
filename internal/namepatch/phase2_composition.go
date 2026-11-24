@@ -77,7 +77,7 @@ func StageFullNameSplit(stagedEXE []byte, expectedSHA [32]byte, names []string) 
 	}
 	out := bytes.Clone(stagedEXE)
 	// Zero every original name fragment before packing. When current English
-	// names are shorter than the historic test fixture, stale bytes may not
+	// names are shorter than the previous pool contents, stale bytes may not
 	// remain adjacent to valid strings. The pointer-table region is separate.
 	clear(out[N10FullPoolStart:N10FullPoolSplit])
 	clear(out[N10FullTableEnd:N10FullFragment2End])
@@ -114,7 +114,7 @@ func StageFullNameSplit(stagedEXE []byte, expectedSHA [32]byte, names []string) 
 	if err != nil {
 		return fail("second fragment: %v", err)
 	}
-	// Previously 124 bytes of short strings are now available for fragment2,
+	// The 124-byte vacated short-string region is available for fragment2,
 	// runtime buffers and G2. Clear the entire old region deterministically;
 	// the following stages will fill 16+32+17 bytes of it.
 	clear(out[N10FullFragment2End:N10Phase2SpareEnd])
@@ -286,7 +286,7 @@ func StageGEKOG2(exe, geko, originalGEKO []byte, policy string, nameForIndex11 s
 	if !bytes.Equal(exe[N10Phase2G2Offset:N10Phase2SpareEnd], make([]byte, N10Phase2SpareEnd-N10Phase2G2Offset)) {
 		return fail("G2 destination or spare already occupied")
 	}
-	// The source-owned name is mandatory; never infer a translation from a fixture.
+	// The source-owned name is mandatory; never infer a translation from substitute data.
 	name := nameForIndex11
 	shortPtr := binary.LittleEndian.Uint32(exe[PointerTable+11*4:])
 	if shortPtr < Base || shortPtr >= Base+uint32(len(exe)) || name == "" {

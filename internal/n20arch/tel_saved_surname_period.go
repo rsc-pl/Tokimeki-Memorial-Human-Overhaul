@@ -1,10 +1,12 @@
 package n20arch
 
-// TEL source-owned period attachment after dynamic saved-surname composition.
+// TEL source-owned punctuation attachment after dynamic saved-name composition.
 // The pair-font converter pads an odd glyph count with 0xA0: a following
 // encoded full stop (0xAE,0xA0) otherwise displays an unwanted blank.
-// The shim folds only a one-period suffix and only when the exact tail of
-// the script buffer matches a fresh, guarded N6 saved-surname conversion.
+// The surname entry folds only a one-period suffix; the separate selector-13
+// given-name entry accepts one period, question mark or exclamation mark.
+// Both require an exact tail match with the corresponding fresh, guarded
+// saved-name conversion.
 // The original C strcat, static text, all saved fields and other suffixes
 // remain unchanged on every nonmatching path.
 import (
@@ -20,6 +22,8 @@ const (
 	telSurnamePeriodFrame           int16  = 0x90
 	telSurnamePeriodScratch         int16  = 0x20
 	telSurnamePeriodScratchCapacity int16  = 24
+	telGivenPunctuationCall         uint32 = 0x801324b4
+	telGivenPunctuationShim         uint32 = telSurnamePeriodShim + 0x200
 )
 
 // The four distinct TEL surname copy/append chains all finish with this
@@ -30,6 +34,10 @@ var telSurnamePeriodSites = []struct{ pc, suffix uint32 }{
 	{0x80132904, 0x8013e5cc},
 	{0x80132da0, 0x8013e70c},
 	{0x80132e28, 0x8013e724},
+}
+
+func telGivenPunctuationWord() N20ManifestWord {
+	return N20ManifestWord{Owner: "TEL.EXN", PC: telGivenPunctuationCall, Old: jalWord(0x800ae100), New: jalWord(telGivenPunctuationShim), Kind: "jal", Role: "TEL given-name punctuation join", Reason: "exact selector-13 suffix append; guarded saved given tail and single punctuation pair; original fallback"}
 }
 
 func telSurnamePeriodSource(original []byte) error {
@@ -45,6 +53,18 @@ func telSurnamePeriodSource(original []byte) error {
 			return fmt.Errorf("TEL period: wrong retail suffix caller at %#x", site.pc)
 		}
 	}
+	// Selector-13 concatenates its separate given-name field before this
+	// independent suffix append. Keep both original calls and their delays.
+	for pc, want := range map[uint32]uint32{
+		0x80132494: 0x27a4002c, 0x80132498: jalWord(0x80051508), 0x8013249c: 0x2405000d,
+		0x801324a0: 0x27a4003c, 0x801324a4: jalWord(0x800ae100), 0x801324a8: 0x27a5002c,
+		0x801324ac: 0x3c058014, 0x801324b0: 0x24a5e484, telGivenPunctuationCall: jalWord(0x800ae100),
+		0x801324b8: 0x27a4003c, 0x801324c4: jalWord(telDialogOriginalEntry), 0x801324c8: 0x2406000d,
+	} {
+		if binary.LittleEndian.Uint32(original[pc-OverlaySlotBase:]) != want {
+			return fmt.Errorf("TEL given punctuation: wrong retail caller at %#x", pc)
+		}
+	}
 	if !allZero(original[telSurnamePeriodOff : telSurnamePeriodOff+telSurnamePeriodWindow]) {
 		return fmt.Errorf("TEL period: source-owned window occupied")
 	}
@@ -52,6 +72,24 @@ func telSurnamePeriodSource(original []byte) error {
 }
 
 func telSurnamePeriodPayload() ([]byte, error) {
+	old, err := telAppendPunctuationPayload(telSurnamePeriodShim, OLA0SurnameField, false)
+	if err != nil {
+		return nil, err
+	}
+	given, err := telAppendPunctuationPayload(telGivenPunctuationShim, OLFieldPrepSavedGiv, true)
+	if err != nil {
+		return nil, err
+	}
+	out := make([]byte, telSurnamePeriodWindow)
+	if len(old) > 0x200 || len(given) > 0x200 {
+		return nil, fmt.Errorf("TEL punctuation: existing window split exceeded (%d/%d)", len(old), len(given))
+	}
+	copy(out, old)
+	copy(out[0x200:], given)
+	return out, nil
+}
+
+func telAppendPunctuationPayload(entry, saved uint32, given bool) ([]byte, error) {
 	mod, err := BuildOverlayLocalModule()
 	if err != nil {
 		return nil, err
@@ -70,8 +108,18 @@ func telSurnamePeriodPayload() ([]byte, error) {
 	// Exact one punctuation pair and NUL. Do not consume other suffixes.
 	lw(8, 29, 0x84)
 	lbu(9, 8, 0)
-	add(10, 0, 0xae)
+	if given {
+		add(10, 0, 0xa1) // !
+		branch(4, 9, 10, "punctuation")
+		add(10, 0, 0xbf) // ?
+		branch(4, 9, 10, "punctuation")
+	}
+	add(10, 0, 0xae) // .
 	branch(5, 9, 10, "retail")
+	if given {
+		a.label("punctuation")
+		sw(9, 29, 0x7c)
+	}
 	lbu(9, 8, 1)
 	add(10, 0, 0xa0)
 	branch(5, 9, 10, "retail")
@@ -85,8 +133,8 @@ func telSurnamePeriodPayload() ([]byte, error) {
 	lw(9, 8, int16((OLGuardBase+4)&65535))
 	add(10, 0, int16(mod.BodyLen))
 	branch(5, 9, 10, "retail")
-	w(olLUI(4, OLA0SurnameField))
-	w(olORI(4, 4, OLA0SurnameField&65535))
+	w(olLUI(4, saved))
+	w(olORI(4, 4, saved&65535))
 	add(5, 29, telSurnamePeriodScratch)
 	add(6, 0, telSurnamePeriodScratchCapacity)
 	w(jalWord(OLBodyBase))
@@ -136,6 +184,11 @@ func telSurnamePeriodPayload() ([]byte, error) {
 	lbu(11, 8, 0)
 	lbu(13, 9, 0)
 	branch(5, 11, 13, "retail")
+	if given {
+		add(13, 13, -0xa0)
+		w(olSLTIU(13, 13, 0x5b))
+		branch(4, 13, 0, "retail")
+	}
 	add(8, 8, 1)
 	add(9, 9, 1)
 	add(10, 10, -1)
@@ -143,7 +196,11 @@ func telSurnamePeriodPayload() ([]byte, error) {
 	// Exact output tail matches N6 converted source; fold a trailing pair
 	// pad into its immediate punctuation, no shifting, no length change.
 	// Compare advanced t0 to the actual NUL terminator.
-	add(11, 0, 0xae)
+	if given {
+		lw(11, 29, 0x7c)
+	} else {
+		add(11, 0, 0xae)
+	}
 	w(olSB(11, 8, -1))
 	lw(2, 29, 0x80)
 	a.j("done")
@@ -158,14 +215,12 @@ func telSurnamePeriodPayload() ([]byte, error) {
 	w(olJR(31))
 	add(29, 29, telSurnamePeriodFrame)
 	a.resolve()
-	a.resolveJLabels(telSurnamePeriodShim)
+	a.resolveJLabels(entry)
 	code := words(a.words...)
 	if len(code) > telSurnamePeriodWindow {
 		return nil, fmt.Errorf("TEL period: code %d exceeds window", len(code))
 	}
-	out := make([]byte, telSurnamePeriodWindow)
-	copy(out, code)
-	return out, nil
+	return code, nil
 }
 
 func telSurnamePeriodPatch(original, composed []byte) ([]byte, []byte, error) {
@@ -188,6 +243,16 @@ func telSurnamePeriodPatch(original, composed []byte) ([]byte, []byte, error) {
 		}
 		binary.LittleEndian.PutUint32(out[off:], jalWord(telSurnamePeriodShim))
 	}
+	off := int(telGivenPunctuationCall - OverlaySlotBase)
+	if binary.LittleEndian.Uint32(out[off:]) != jalWord(0x800ae100) || binary.LittleEndian.Uint32(out[off+4:]) != 0x27a4003c {
+		return nil, nil, fmt.Errorf("TEL given punctuation: staged caller drift")
+	}
+	if binary.LittleEndian.Uint32(out[telGivenAddressCall-OverlaySlotBase:]) != jalWord(telGivenAddressShim) ||
+		binary.LittleEndian.Uint32(out[0x801324a4-OverlaySlotBase:]) != jalWord(0x800ae100) ||
+		binary.LittleEndian.Uint32(out[0x801324a8-OverlaySlotBase:]) != 0x27a5002c {
+		return nil, nil, fmt.Errorf("TEL given punctuation: missing given-name preparation")
+	}
+	binary.LittleEndian.PutUint32(out[off:], jalWord(telGivenPunctuationShim))
 	return code, out, nil
 }
 
@@ -207,6 +272,10 @@ func verifyTELSurnamePeriod(original, composed, expected []byte) error {
 		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telSurnamePeriodShim) || binary.LittleEndian.Uint32(composed[off+4:]) != 0x27a4003c {
 			return fmt.Errorf("TEL period: callsite drift %#x", s.pc)
 		}
+	}
+	off := int(telGivenPunctuationCall - OverlaySlotBase)
+	if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telGivenPunctuationShim) || binary.LittleEndian.Uint32(composed[off+4:]) != 0x27a4003c {
+		return fmt.Errorf("TEL given punctuation: callsite drift")
 	}
 	return nil
 }

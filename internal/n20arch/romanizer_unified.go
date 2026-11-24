@@ -1,6 +1,6 @@
 package n20arch
 
-// romanization is a single, explicitly BLOCKED private resident image combining
+// romanization is a single, explicitly blocked resident image combining
 // the width-aware 16-site F1 surname display and TEL-local telephone F3 full names.
 // It does not establish safe runtime memory ownership or GPU/cache behaviour.
 import (
@@ -10,9 +10,9 @@ import (
 )
 
 const (
-	UnifiedRomanizerExperimentEnabled = false
-	UnifiedRomanizerBlocked           = true
-	UnifiedRomanizerBlockedReason     = "romanization OFFLINE/BLOCKED: compact width-aware F1 and telephone F3 physically co-reside in 3800-byte C10, but resident RAM lifetime, DMA/IRQ/cache, queue GPU behaviour, and real gameplay remain unproven. safe_to_patch=false, runtime_pass=false."
+	UnifiedRomanizerAdapterEnabled = false
+	UnifiedRomanizerBlocked        = true
+	UnifiedRomanizerBlockedReason  = "romanization OFFLINE/BLOCKED: compact width-aware F1 and telephone F3 physically co-reside in 3800-byte C10, but resident RAM lifetime, DMA/IRQ/cache, queue GPU behaviour, and real gameplay remain unproven. safe_to_patch=false, runtime_pass=false."
 )
 
 type UnifiedCandidate struct {
@@ -37,7 +37,7 @@ func buildUnifiedResident(originalGYOZI []byte) (src []byte, used int, dispatche
 		err = fmt.Errorf("romanization base geometry %d/%d", base.ShimBytes, base.ActualBodyBytes)
 		return
 	}
-	fullname, e = BuildC10LineFullnamePrototype(c10ResidentRomanizer)
+	fullname, e = BuildC10LineFullname(c10ResidentRomanizer)
 	if e != nil {
 		err = e
 		return

@@ -6,17 +6,17 @@ import (
 	"fmt"
 )
 
-// PlanNPCFormattedLengthPrivate is a *private, unverified-at-runtime* N10
+// PlanNPCFormattedLength is a runtime-unverified N10
 // consistency correction. Six legacy NPC-A routes obtain the label's X count
 // from the result of a separate strlen BEFORE formatting. With N10 Phase-2
 // source relocation, that length may refer to a different buffer than the
 // sprintf("%s ", N10-A) that is actually enqueued. Immediately after sprintf
 // returns, its v0 is the number of formatted bytes excluding NUL. Because
-// the SHA-pinned format is exactly "%s " we use (v0-1), i.e. length of the
-// very string formatted, instead of the earlier potentially stale strlen.
+// the SHA-pinned format is exactly "%s ", use (v0-1), the length of the
+// formatted string, instead of a separate potentially stale strlen.
 // This does NOT adjust X, quote/body starts, line-wrap, fonts or GPU clipping.
-// It is not a demonstrated fix for the existing owner-visible overlap.
-func PlanNPCFormattedLengthPrivate(retail, speakerScratchStage []byte) ([]byte, error) {
+// This length correction alone does not establish rendering clearance.
+func PlanNPCFormattedLength(retail, speakerScratchStage []byte) ([]byte, error) {
 	const base = uint32(0x80040800)
 	const digest = "bae1514fcc4bd8843c69803bf469632b004377b67f3e4408f0641c545fd843ae"
 	if len(retail) != 667648 || len(speakerScratchStage) != len(retail) || fmt.Sprintf("%x", sha256.Sum256(retail)) != digest {
@@ -41,7 +41,7 @@ func PlanNPCFormattedLengthPrivate(retail, speakerScratchStage []byte) ([]byte, 
 			return nil, fmt.Errorf("formatted length unexpected sprintf caller at route %d", i)
 		}
 		// The six source-A materialisations were already redirected to the
-		// exact Phase-2 A buffer by N10. No historic fixtures or name swaps.
+		// exact Phase-2 A buffer by N10. No substituted names or alternate input tables.
 		if word(retail, route.FormatPC-16) != 0x3C06800D || word(retail, route.FormatPC-8) != 0x24C6A188 ||
 			word(speakerScratchStage, route.FormatPC-16) != 0x3C06800B || word(speakerScratchStage, route.FormatPC-8) != 0x24C635A4 {
 			return nil, fmt.Errorf("formatted length current N10-A source ownership mismatch at route %d", i)

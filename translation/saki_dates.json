@@ -534,7 +534,7 @@
         {
           "offset": "0x2410",
           "original": "はい、{G}にあげるよ。",
-          "text": "{G}, for you."
+          "text": "Here, for you, {G}."
         },
         {
           "offset": "0x2428",
@@ -554,7 +554,7 @@
         {
           "offset": "0x248c",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x24b0",
@@ -1064,7 +1064,7 @@
         {
           "offset": "0x4808",
           "original": "早く、好きな人のためだけに\n料理を作ってあげたいと\n思っている。\nということを聞き出した。",
-          "text": "Found out she can't\nwait to cook only\nfor the one\nshe loves."
+          "text": "Found out she can't\nwait to cook just\nfor the one\nshe likes."
         },
         {
           "offset": "0x4a24",
@@ -1839,7 +1839,7 @@
         {
           "offset": "0x8568",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x85a0",
@@ -1924,7 +1924,7 @@
         {
           "offset": "0x8980",
           "original": "風を切る感覚って奴かな？{q}ちょっと酔ったみたい。{q}どういうとこが、気持ちいい？",
-          "text": "Like cutting through wind?{q}I think I'm a little sick.{q}Which part feels good?"
+          "text": "Like cutting through wind?{q}I feel a little queasy.{q}Which part feels good?"
         },
         {
           "offset": "0x89d8",
@@ -2029,7 +2029,7 @@
         {
           "offset": "0x8e94",
           "original": "大丈夫、顔が青いよ。{q}根性が足りないんじゃない。{q}無理には誘わないからね。",
-          "text": "You okay? You look pale.{q}Aren't you lacking guts?{q}I won't force you to ride."
+          "text": "You okay? You look pale.{q}You need more guts.{q}I won't force you to ride."
         },
         {
           "offset": "0x8ee8",
@@ -2149,7 +2149,7 @@
         {
           "offset": "0x9498",
           "original": "大丈夫、顔が青いよ。{q}根性が足りないんじゃない。{q}無理には誘わないからね。",
-          "text": "You okay? You look pale.{q}Aren't you lacking guts?{q}I won't force you to ride."
+          "text": "You okay? You look pale.{q}You need more guts.{q}I won't force you to ride."
         },
         {
           "offset": "0x94ec",

@@ -82,7 +82,7 @@ func formatterBridgeSlot(romanizer uint32) ([]byte, error) {
 // Invert the existing reversible order-dependent recurrence over an extended,
 // contiguous instruction span: router + formatter + C10 metadata/adapter/body.
 // The seed at 0x8015FC00 precedes executable code, so verification includes
-// every word of the local formatter bridge and all previously verified code.
+// every word of the local formatter bridge and all other verified code.
 func formatterBridgeSeed(content []byte) (uint32, error) {
 	if len(content) != SlotBytes+C10ResidentBytes {
 		return 0, fmt.Errorf("formatter bridge length drift")
@@ -118,8 +118,8 @@ func PlanFormatterIntegratedOffline(exe []byte, originals map[string][]byte) (Fo
 	if len(bridge.SourceQueueSites) != 4 || bridge.SafeToPatch || bridge.RuntimePass {
 		return empty, fmt.Errorf("formatter bridge source route drift")
 	}
-	// formatter bridge expands its executable interval by 512 bytes. memory ownership's older scan
-	// did not cover this interval; independently refuse authenticated
+	// The formatter bridge adds a 512-byte executable interval outside the
+	// base memory audit; independently refuse authenticated
 	// originals with literals or direct reads/writes into the added window.
 	for name, retail := range originals {
 		reads, writes := memoryOwnershipBoundedLiteralAccessesInWindowAt(retail, OverlaySlotBase, 0x24000, SlotRAM, OverlayBase)

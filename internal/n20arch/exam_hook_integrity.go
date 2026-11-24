@@ -1,6 +1,6 @@
 package n20arch
 
-// Exam integrity pins the two previously validated ETC exam-label outputs
+// Exam integrity pins the two SHA-pinned ETC exam-label outputs
 // during the English image build. It is an original-byte-verified byte-integrity gate,
 // not another MIPS hook, an assertion of runtime safety, or an edit to game data.
 import (
@@ -11,11 +11,11 @@ import (
 	"fmt"
 )
 
-// This accepted digest is pinned to the exam labels code bytes independently of the
+// This reference digest is pinned to the exam labels code bytes independently of the
 // current planner. The original ETC local payload is separate from EN script
 // data and remains constant across source-owned translations/GEKO policies.
-// Revising the exam-label executable helper requires separate QA and explicit
-// approval; this gate must refuse silent changes even if a different planner
+// Revising the exam-label executable helper requires independent validation and
+// an explicit change to the pinned digest; this gate must refuse silent changes even if a different planner
 // would otherwise happily reconstruct its own changed output.
 const examPayloadVerifiedETCPayloadSHA256 = "9619dcf15044552ba00f9ea5b6e7b110ed4ff97e30ac0896d1bf8850696fa384"
 
@@ -29,9 +29,9 @@ func VerifyFrozenETC(originalEXE, retailETC, englishBefore, finalETC []byte) err
 		return fmt.Errorf("exam integrity ETC image size mismatch")
 	}
 	if bytes.Equal(englishBefore, finalETC) {
-		return fmt.Errorf("exam integrity both accepted exam fixes are absent")
+		return fmt.Errorf("exam integrity both required exam hooks are absent")
 	}
-	expected, err := PlanETCExamPrivateOverlay(originalEXE, retailETC, englishBefore)
+	expected, err := PlanETCExamOverlay(originalEXE, retailETC, englishBefore)
 	if err != nil {
 		return fmt.Errorf("exam integrity authenticated exam labels provenance refused: %w", err)
 	}
@@ -48,7 +48,7 @@ func VerifyFrozenETC(originalEXE, retailETC, englishBefore, finalETC []byte) err
 		off := int(site.pc - OverlaySlotBase)
 		if binary.LittleEndian.Uint32(finalETC[off:]) != jalWord(site.target) ||
 			binary.LittleEndian.Uint32(finalETC[off+4:]) != site.delay {
-			return fmt.Errorf("exam integrity accepted exam JAL/delay drift at %#x", site.pc)
+			return fmt.Errorf("exam integrity exam JAL/delay drift at %#x", site.pc)
 		}
 	}
 	payloadSum := sha256.Sum256(finalETC[OLPayloadFileOff:OLPayloadEndOff])

@@ -1,7 +1,7 @@
 package fullenglish
 
 // Composes the source-authored English name tables with saved-name rendering.
-// Candidate names used by regression tests do not replace live translated
+// Substitute name data does not replace live translated
 // names. All supported GEKO layouts must validate independently; layout
 // selection does not authorize a translation or establish runtime RAM safety.
 import (
@@ -23,9 +23,9 @@ import (
 )
 
 // English name tables are read from the supplied translated executable.
-// Test fixtures do not supersede source names, and an unidentified speaker
+// Substitute name tables do not supersede source names, and an unidentified speaker
 // label (such as Girl) must not be replaced by a named character here.
-func ownerEnglishSourceNames(retail []byte, english []byte) ([]string, []string, error) {
+func readEnglishSourceNames(retail []byte, english []byte) ([]string, []string, error) {
 	short, err := namePoolLayoutReadNameSlots(english, retail, namePoolLayoutShortPointer, namePoolLayoutShortPoolStart, namePoolLayoutShortPointer)
 	if err != nil {
 		return nil, nil, fmt.Errorf("source name composition live short names: %w", err)
@@ -44,10 +44,10 @@ func ownerEnglishSourceNames(retail []byte, english []byte) ([]string, []string,
 	return sh, fu, nil
 }
 
-// sourceNameInput stages verbatim live EN names, never a surname fixture. Its
+// buildEnglishNameInput stages verbatim live EN names, never a substitute surname table. Its
 // authenticated retail original is used only for physical instruction checks;
 // all game-visible label decisions come from the translated EXE.
-func ownerEnglishInput(retail []byte, overlays map[string][]byte, policy string, currentShort, currentFull []string) (nametables.N10OfflineTransaction, error) {
+func buildEnglishNameInput(retail []byte, overlays map[string][]byte, policy string, currentShort, currentFull []string) (nametables.N10OfflineTransaction, error) {
 	if policy != nametables.N10GEKOBare && policy != nametables.N10GEKOSan {
 		return nametables.N10OfflineTransaction{}, errors.New("source name composition requires named GEKO policy")
 	}
@@ -90,7 +90,7 @@ func ownerEnglishInput(retail []byte, overlays map[string][]byte, policy string,
 // Keep the original short-stage labels to authenticate the legacy tables, but
 // transfer the actual selected final labels separately (without global rename).
 func longNameInput(retail []byte, overlays map[string][]byte, policy string, stageShort, desiredShort, desiredFull []string) (nametables.N10OfflineTransaction, error) {
-	tx, err := ownerEnglishInput(retail, overlays, policy, stageShort, desiredFull)
+	tx, err := buildEnglishNameInput(retail, overlays, policy, stageShort, desiredFull)
 	if err != nil {
 		return tx, err
 	}
@@ -121,32 +121,32 @@ type imageCompositionPolicyResult struct {
 }
 
 type imageCompositionReport struct {
-	Schema              int                            `json:"schema"`
-	Status              string                         `json:"status"`
-	SafeToPatch         bool                           `json:"safe_to_patch"`
-	RuntimePass         bool                           `json:"runtime_pass"`
-	ImageBuilt          bool                           `json:"image_built"`
-	SourceCUE           string                         `json:"source_cue"`
-	CorpusJSONs         int                            `json:"corpus_jsons"`
-	CorpusSHA256        string                         `json:"corpus_sha256"`
-	CorpusStrings       int                            `json:"corpus_strings"`
-	CorpusDialogue      int                            `json:"corpus_dialogue"`
-	DeferredLongNames   int                            `json:"n10_deferred_long_names"`
-	NameEntryLabels     string                         `json:"name_entry_labels"`
-	RendererInstalled   bool                           `json:"renderer_installed"`
-	ResearchFixtureOnly bool                           `json:"n10_research_fixture_only"`
-	EditorialWarning    string                         `json:"editorial_warning"`
-	GekoDecision        string                         `json:"geko_owner_decision"`
-	RuntimeBlocker      string                         `json:"runtime_blocker"`
-	Policies            []imageCompositionPolicyResult `json:"policies"`
+	Schema             int                            `json:"schema"`
+	Status             string                         `json:"status"`
+	SafeToPatch        bool                           `json:"safe_to_patch"`
+	RuntimePass        bool                           `json:"runtime_pass"`
+	ImageBuilt         bool                           `json:"image_built"`
+	SourceCUE          string                         `json:"source_cue"`
+	CorpusJSONs        int                            `json:"corpus_jsons"`
+	CorpusSHA256       string                         `json:"corpus_sha256"`
+	CorpusStrings      int                            `json:"corpus_strings"`
+	CorpusDialogue     int                            `json:"corpus_dialogue"`
+	DeferredLongNames  int                            `json:"n10_deferred_long_names"`
+	NameEntryLabels    string                         `json:"name_entry_labels"`
+	RendererInstalled  bool                           `json:"renderer_installed"`
+	SourceFallbackUsed bool                           `json:"n10_source_fallback_used"`
+	EditorialWarning   string                         `json:"editorial_warning"`
+	GekoDecision       string                         `json:"geko_policy_decision"`
+	RuntimeBlocker     string                         `json:"runtime_blocker"`
+	Policies           []imageCompositionPolicyResult `json:"policies"`
 }
 
 // composeFullEnglishPlan validates both name-layout policies and provides the
 // complete, checked production edit plan. No diagnostic image-write mode is
 // reachable through this API.
 func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[string][]byte) error {
-	report := imageCompositionReport{Schema: 1, Status: "NOT_CHECKED", SafeToPatch: false, RuntimePass: false, ImageBuilt: false, SourceCUE: cuePath, ResearchFixtureOnly: false,
-		EditorialWarning: "long-name source conversion: labels are taken from the live English EXE or exact authenticated NPC name records (including the two GEKO event_words.json literals), never from historic surname fixtures. GEKO branches remain diagnostic; source text does not select the policy.", GekoDecision: "PENDING",
+	report := imageCompositionReport{Schema: 1, Status: "NOT_CHECKED", SafeToPatch: false, RuntimePass: false, ImageBuilt: false, SourceCUE: cuePath, SourceFallbackUsed: false,
+		EditorialWarning: "long-name source conversion: labels are taken from the live English EXE or exact authenticated NPC name records (including the two GEKO event_words.json literals), never from substitute surname tables. GEKO branches remain diagnostic; source text does not select the policy.", GekoDecision: "PENDING",
 		RuntimeBlocker: "No exclusive overlay-local C10 code RAM/CPU/DMA/IRQ ownership proof, complete parser NUL/alias proof or in-game GPU/layout QA. Offline validation does not establish runtime safety; image generation is permitted by the builder but gameplay safety remains unverified."}
 	out := func() error { return json.NewEncoder(w).Encode(report) }
 	paths, digest, err := fullCorpusFiles(root)
@@ -200,7 +200,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 	report.CorpusStrings = len(batch.Strings)
 	report.CorpusDialogue = len(batch.Dialogue)
 	// Name-entry labels are loaded from translation/ only, with no hidden
-	// filesystem inputs or auto-import from private research directories.
+	// filesystem inputs or automatic imports from alternate directories.
 	batch, report.NameEntryLabels, err = nameEntryLabelsAddNameLabels(root, batch)
 	if err != nil {
 		report.Status = "GRAPHICS_SOURCE_BLOCKED"
@@ -267,7 +267,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 	liveEXE, ok := english["SLPM_86.053"]
 	if !ok {
 		report.Status = "CORPUS_BLOCKED"
-		report.RuntimeBlocker = "source name composition translated EXE missing; refusing fallback fixture"
+		report.RuntimeBlocker = "source name composition translated EXE missing; refusing fallback name data"
 		return out()
 	}
 	if err := longNameApplyNameStage(liveEXE, deferredNames); err != nil {
@@ -281,8 +281,8 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		report.RuntimeBlocker = err.Error()
 		return out()
 	}
-	// layout restoration: speaker geometry's six-site NPC speaker-X experiment was REJECTED by the
-	// In-game testing found additional overlap for long surnames.
+	// Preserve the native six-site NPC speaker-X geometry: the alternate
+	// layout increases overlap for long surnames.
 	// The source-owned N10 long names remain, but no speaker geometry-only length gate
 	// or unverified label movement is allowed in the composed image.
 	formatterBridgeStage, err := n.PlanFormatterIntegratedOffline(exe, overlays)
@@ -317,7 +317,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		mergedCandidate.Overlays = manualCopyStage.Overlays
 		// Direct name hooks use 15 dynamic surname/given/nickname
 		// sites in four existing overlay carriers. A future source/merge drift
-		// must abort before any private ISO write, rather than silently show kana.
+		// must abort before any output ISO write, rather than silently show kana.
 		if hookErr := n.VerifyDirectSavedNameHooks(overlays, mergedCandidate.Overlays); hookErr != nil {
 			item.Blocker = "direct name hooks existing player-name route integrity: " + hookErr.Error()
 			results = append(results, item)
@@ -355,8 +355,8 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 			continue
 		}
 		// layout restoration: preserve the pre-speaker geometry NPC X instructions byte-for-byte.
-		// This verification refuses accidental reapplication of the rejected
-		// experiment, including partial writes. It does not assert that the
+		// This verification rejects reapplication of the incompatible
+		// layout, including partial writes. It does not assert that the
 		// original long-surname label geometry is visually correct.
 		labelStage, ok := physical["SLPM_86.053"]
 		if !ok {
@@ -374,7 +374,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// from the adjacent sp+0x74 scratch. This does not alter layout restoration label X,
 		// parser-body layout, the source names, or the public image builder.
 		// The destination and synchronous queue pointer must move together.
-		scratchEXE, scratchErr := n.PlanPrivateNPCScratch(exe, labelStage, targetShort)
+		scratchEXE, scratchErr := n.PlanNPCScratch(exe, labelStage, targetShort)
 		if scratchErr != nil {
 			item.Blocker = "NPC scratch buffer NPC temporary scratch ownership: " + scratchErr.Error()
 			results = append(results, item)
@@ -383,7 +383,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// formatted length: read label length from the same formatted N10-A source used
 		// by the queue, not a possibly stale pre-relocation strlen buffer.
 		// No speaker-X/body relocation and no additional runtime storage.
-		coherentEXE, lengthErr := n.PlanNPCFormattedLengthPrivate(exe, scratchEXE)
+		coherentEXE, lengthErr := n.PlanNPCFormattedLength(exe, scratchEXE)
 		if lengthErr != nil {
 			item.Blocker = "formatted length NPC formatted-name count ownership: " + lengthErr.Error()
 			results = append(results, item)
@@ -394,7 +394,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// max-16-pixel pair-font edge derived from formatted length's actual formatted
 		// byte length. No code cave, no public builder changes. This cannot
 		// certify right-edge wrapping or in-game VRAM placement.
-		coordinatedEXE, layoutErr := n.PlanCoordinatedNPCAFirstLinePrivate(exe, coherentEXE, targetShort)
+		coordinatedEXE, layoutErr := n.PlanCoordinatedNPCAFirstLine(exe, coherentEXE, targetShort)
 		if layoutErr != nil {
 			item.Blocker = "NPC first-line parser and label placement gate: " + layoutErr.Error()
 			results = append(results, item)
@@ -403,7 +403,7 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// NPC frame spacing adjustment: speaker +3,
 		// quotation AND parser -1, six NPC-A routes only. Phone and other
 		// speaker consumers remain separate. Runtime remains unverified.
-		balancedEXE, balanceErr := n.PlanNPCModerateBalancePrivate(exe, coordinatedEXE, targetShort)
+		balancedEXE, balanceErr := n.PlanNPCModerateBalance(exe, coordinatedEXE, targetShort)
 		if balanceErr != nil {
 			item.Blocker = "NPC label/quotation spacing gate: " + balanceErr.Error()
 			results = append(results, item)
@@ -413,15 +413,21 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		// surname. Translate BOTH label and prefix/body RIGHT by +3 relative
 		// to tested NPC spacing, keeping their mutual ink clearance unchanged.
 		// Right-edge wrapping and on-screen placement remain unverified by static checks.
-		insetEXE, insetErr := n.PlanNPCFrameInsetPrivate(exe, balancedEXE, targetShort)
+		insetEXE, insetErr := n.PlanNPCFrameInset(exe, balancedEXE, targetShort)
 		if insetErr != nil {
 			item.Blocker = "NPC frame inset gate: " + insetErr.Error()
 			results = append(results, item)
 			continue
 		}
-		physical["SLPM_86.053"] = insetEXE
-		// exam labels UNVERIFIED: the original-byte-verified ETC exam table previously
-		// bypassed N20 by calling retail strncat on saved CP932 name fields.
+		literalEXE, literalErr := n.PlanLiteralSpeakerGeometry(exe, insetEXE, targetShort[0])
+		if literalErr != nil {
+			item.Blocker = "literal speaker geometry gate: " + literalErr.Error()
+			results = append(results, item)
+			continue
+		}
+		physical["SLPM_86.053"] = literalEXE
+		// ETC exam-label hooks are runtime-unverified: the original exam table
+		// calls retail strncat on saved CP932 name fields.
 		// Extend the ALREADY-COMPOSED suffix punctuation/N6 ETC carrier (same overlay/guard
 		// lifetime), not a second stand-alone module. The lower caption uses
 		// the existing N6 surname stub. No save, translation, or public code
@@ -429,19 +435,19 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		etcPath := "CDROM/EXEDIR/ETC.EXN"
 		mergedETC, present := physical[etcPath]
 		if !present {
-			item.Blocker = "exam labels private ETC integration: merged English ETC.EXN absent"
+			item.Blocker = "exam labels ETC integration: merged English ETC.EXN absent"
 			results = append(results, item)
 			continue
 		}
-		etcIntegration, etcErr := n.PlanETCExamPrivateOverlay(exe, overlays["ETC.EXN"], mergedETC)
+		etcIntegration, etcErr := n.PlanETCExamOverlay(exe, overlays["ETC.EXN"], mergedETC)
 		if etcErr != nil || etcIntegration.SafeToPatch || etcIntegration.RuntimePass {
-			item.Blocker = fmt.Sprintf("exam labels private ETC actual join/caption hooks: %v", etcErr)
+			item.Blocker = fmt.Sprintf("exam labels ETC join/caption hooks: %v", etcErr)
 			results = append(results, item)
 			continue
 		}
 		physical[etcPath] = etcIntegration.Overlay
-		// exam integrity: fail closed if either visually accepted exam labels exam fix, the
-		// complete local module or an unrelated owner-translated byte drifts.
+		// exam integrity: fail closed if either required exam hook, the
+		// complete local module or an unrelated translated byte drifts.
 		// Compare the actual assembled image against the authenticated
 		// pre-exam labels English source, never a hardcoded player name.
 		if gateErr := n.VerifyFrozenETC(exe, overlays["ETC.EXN"], mergedETC, physical[etcPath]); gateErr != nil {
@@ -455,13 +461,13 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		rpgPath := "CDROM/EXEDIR/RPG_BAT.EXN"
 		mergedRPG, rpgPresent := physical[rpgPath]
 		if !rpgPresent {
-			item.Blocker = "battle surname private RPG surname adapter: English RPG_BAT.EXN absent"
+			item.Blocker = "battle surname RPG adapter: English RPG_BAT.EXN absent"
 			results = append(results, item)
 			continue
 		}
-		rpgIntegration, rpgErr := n.PlanRPGPrivateSurname(overlays["RPG_BAT.EXN"], mergedRPG)
+		rpgIntegration, rpgErr := n.PlanRPGSurnameOverlay(overlays["RPG_BAT.EXN"], mergedRPG)
 		if rpgErr != nil || rpgIntegration.SafeToPatch || rpgIntegration.RuntimePass {
-			item.Blocker = fmt.Sprintf("battle surname private RPG saved-surname hook: %v", rpgErr)
+			item.Blocker = fmt.Sprintf("battle surname RPG saved-surname hook: %v", rpgErr)
 			results = append(results, item)
 			continue
 		}
@@ -509,6 +515,11 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		for name, data := range contextLabels {
 			physical["CDROM/EXEDIR/"+name] = data
 		}
+		if e = composeDialogueNickname(overlays, physical); e != nil {
+			item.Blocker = "dialogue nickname integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
 		tripPath := "CDROM/EXEDIR/SHUGAKU.EXN"
 		if physical[tripPath], e = n.PlanSchoolTripSurname(exe, physical["SLPM_86.053"], overlays["SHUGAKU.EXN"], physical[tripPath]); e != nil {
 			item.Blocker = "school trip surname label integration: " + e.Error()
@@ -539,6 +550,21 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 		}
 		if physical["SLPM_86.053"], e = n.PlanGSuffixJoin(exe, physical["SLPM_86.053"]); e != nil {
 			item.Blocker = "dynamic surname suffix integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		if physical["SLPM_86.053"], e = n.PlanGPInnerPunctuation(exe, physical["SLPM_86.053"]); e != nil {
+			item.Blocker = "dynamic name punctuation integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		if physical["SLPM_86.053"], e = n.PlanLowercasePJoin(exe, physical["SLPM_86.053"]); e != nil {
+			item.Blocker = "lowercase p native punctuation integration: " + e.Error()
+			results = append(results, item)
+			continue
+		}
+		if physical[tripPath], e = n.PlanSchoolTripNarratorGeometry(exe, physical["SLPM_86.053"], overlays["SHUGAKU.EXN"], physical[tripPath]); e != nil {
+			item.Blocker = "school trip narrator geometry integration: " + e.Error()
 			results = append(results, item)
 			continue
 		}
@@ -598,5 +624,4 @@ func composeFullEnglishPlan(root, cuePath string, w io.Writer, selected *map[str
 	return out()
 }
 
-// Production image paths remain unchanged and blocked. Experimental
-// staging uses the existing isolated backend with two explicit approval gates.
+// The plan does not write a disc image or establish runtime safety.

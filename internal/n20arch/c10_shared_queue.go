@@ -2,7 +2,7 @@ package n20arch
 
 // Cover the renderer terminal queue exits and two additional authenticated
 // complete-line queue exits in the same EXE renderer. This remains an explicit
-// private, runtime-unverified experiment. The same cold-boot safe EXE gate and
+// runtime-unverified offline composition. The same cold-boot safe EXE gate and
 // resident adapter are reused: NO new resident/renderer memory is allocated.
 // Both sites supply a3=sp+0x2a4 and independently supply their fifth stack arg.
 import (

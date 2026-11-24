@@ -133,7 +133,7 @@ func namePoolLayoutExpandedAbbreviation(source, target string) bool {
 }
 
 // namePoolLayoutVerifiedFullStage permits an intermediate, unpunctuated
-// placeholder ONLY if it is tied to the exact authenticated owner source
+// placeholder ONLY if it is tied to the exact authenticated source
 // record, pool pointer, retail preimage and canonical staging capacity.
 // Arbitrary English prefixes remain forbidden.
 func namePoolLayoutVerifiedFullStage(retail []byte, staged, target string, index int, deferred []longNameDeferredName) bool {

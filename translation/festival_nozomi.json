@@ -2116,7 +2116,7 @@
         {
           "offset": "0x2c4",
           "original": "がーん。\n何てことを…。",
-          "text": "Ouch.\nWhat a thing to say..."
+          "text": "Ouch.\nThat was mean..."
         },
         {
           "offset": "0x2dc",
@@ -2963,7 +2963,7 @@
         {
           "offset": "0x1a40",
           "original": "そうなのかな、\n別にいいや。\nそろそろ帰ろうよ。",
-          "text": "Is that so?\nWhatever.\nLet's head home."
+          "text": "Maybe...\nOh well.\nLet's head home."
         },
         {
           "offset": "0x1a70",

@@ -130,7 +130,7 @@ func fullReadN20(source fullISOReader) (n.N20IntegratedPlan, []n.N20ManifestWord
 	}
 	base.PatchedOverlays = h4.PatchedOverlays
 	// The public compositor uses only the authenticated integrated layer.
-	// Experimental resident/queue variants are deliberately not selectable.
+	// Unvalidated resident/queue variants are deliberately not selectable.
 	return base, h4.Words, nil
 }
 
@@ -354,7 +354,7 @@ func fullReadFormatter(source fullISOReader) (n.FormatterIntegratedCandidate, er
 	return out, nil
 }
 
-// The direct-name layer may alter exactly four owner overlays, with only the 13 authenticated
+// The direct-name layer may alter exactly four designated overlays, with only the 13 authenticated
 // queue JAL words, their module regions and derived trailer checksums changing.
 // All other original N6-FP relocations and callsite words remain unchanged.
 func checkDirectNameLayer(base, extended, retail map[string][]byte, extra []n.N20ManifestWord, shaByOwner map[string]string) error {

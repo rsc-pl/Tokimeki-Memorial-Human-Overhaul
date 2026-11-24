@@ -79,16 +79,32 @@ func buildOptionQueueShimVariant(romanizer uint32, includeNickname bool) ([]byte
 	}
 	a.b(5, 19, 8, "retail")
 	w(0)
+	if includeNickname {
+		// The third field is a separate 16-byte source, with up to five
+		// selected kana. The existing stack scratch extends to sp+0x38.
+		// Five three-letter syllables need at most 15 bytes + pad + NUL.
+		mov(4, 19)
+		add(5, 29, optionScratchOff)
+		add(6, 0, 18)
+		add(7, 0, 5)
+		a.b(4, 0, 0, "run")
+		w(0)
+	}
 	a.label("convert")
 	mov(4, 19)
 	add(5, 29, optionScratchOff)
 	add(6, 0, 16)
 	add(7, 0, 3) // exactly three saved kana, no guessed honorific
+	a.label("run")
 	w(jalWord(romanizer))
 	w(0)
 	a.b(4, 2, 0, "retail")
 	w(0)
-	w(olSLTIU(1, 2, 16))
+	if includeNickname {
+		w(olSLTIU(1, 2, 18))
+	} else {
+		w(olSLTIU(1, 2, 16))
+	}
 	a.b(4, 1, 0, "retail")
 	w(0)
 	add(20, 29, optionScratchOff)
@@ -102,7 +118,7 @@ func buildOptionQueueShimVariant(romanizer uint32, includeNickname bool) ([]byte
 	mov(6, 18)
 	mov(7, 20)
 	// The retail callsite delay slot stores the fifth argument (zero) at
-	// old_sp+0x10. The nested queue call uses OUR sp, so reproduce it.
+	// old_sp+0x10. The nested queue call uses the current stack pointer, so copy the argument.
 	// Otherwise retail queue observes arbitrary shim-frame contents.
 	w(olSW(0, 29, 0x10))
 	w(jalWord(optionQueueRetail))

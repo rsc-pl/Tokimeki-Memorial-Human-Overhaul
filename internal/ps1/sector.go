@@ -1,5 +1,5 @@
 // Package ps1 supplies native, testable MODE2/Form1 sector primitives.
-// Patcher writing remains Python-owned until complete disc/renderer parity is verified.
+// Sector validation and EDC/ECC generation are independent of image assembly.
 package ps1
 
 import (

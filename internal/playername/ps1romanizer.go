@@ -165,9 +165,9 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 	}
 	var b mipsBuf
 	b.labels = map[string]int{}
-// Safe single-field and two-field cores insert a NOP after every load so
-// the R3000A load-delay slot cannot consume a stale register value. The
-// older no-NOP binary is retained solely for regression comparison.
+	// Safe single-field and two-field cores insert a NOP after every load so
+	// the R3000A load-delay slot cannot consume a stale register value. The
+	// older no-NOP binary is retained solely for regression comparison.
 	e := func(w uint32) {
 		b.emit(w)
 		if safeLoads && (w>>26 == 35 || w>>26 == 36) {
@@ -187,7 +187,7 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 	e(iType(9, 5, 17, 0)) // s1=output
 	e(iType(9, 6, 18, 0)) // s2=capacity
 	// a3 packed ABI: [suffix selector in high bits | maxKana in low byte].
-	// Store selector in our stack, because s4 is reused for table pointers.
+	// Store selector in the local stack frame, because s4 is reused for table pointers.
 	e(iType(12, 7, 19, 0xff)) // andi s3,a3,0xff => maxKana
 	e(rType(0, 7, 8, 8, 2))   // srl t0,a3,8 => suffix selector
 	e(iType(43, 29, 8, 0x4c)) // sw t0,0x4c(sp)
@@ -196,7 +196,7 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 	e(iType(9, 0, 23, 0))     // s7=consumed kana
 	e(iType(43, 29, 0, 0x48)) // pending-sokuon (word), initially zero
 	if pair {
-		// Incoming O32 stack args are at 0xa0/0xa4 AFTER our 0x90 frame.
+		// Incoming O32 stack args are at 0xa0/0xa4 after allocating the 0x90-byte frame.
 		e(iType(35, 29, 8, 0xa0)) // given CP932 source
 		beq(8, 0, "fail")
 		e(iType(43, 29, 8, 0x80)) // save given pointer
@@ -516,7 +516,7 @@ func buildPS1RomanizerCore(origin uint32, pair bool, safeLoads bool, packed bool
 		jump("char_loop")
 		b.label("both_fields_done")
 	}
-// Append an explicitly selected ASCII honorific to the local scratch.
+	// Append an explicitly selected ASCII honorific to the local scratch.
 	// All changes are SCRATCH ONLY until final capacity preflight succeeds.
 	e(iType(35, 29, 8, 0x4c)) // selector
 	beq(8, 0, "preflight")

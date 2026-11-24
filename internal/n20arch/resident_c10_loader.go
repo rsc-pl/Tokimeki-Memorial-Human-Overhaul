@@ -37,7 +37,7 @@ func BuildC10PromotionBridgeAt(source []byte, sourceGuard uint32) ([]byte, error
 	return buildC10PromotionBridgeAt(source, sourceGuard, 0)
 }
 
-// speaker rendering PRIVATE: the genuine state-3 loader calls a fixed original scene
+// Speaker rendering: the genuine state-3 loader calls a fixed original scene
 // selector, not jalr $t9. This bridge restores that exact target after
 // attempted promotion. It does not affect the queue routing builder.
 func BuildC10PromotionBridgeAtScene3(source []byte, sourceGuard uint32) ([]byte, error) {

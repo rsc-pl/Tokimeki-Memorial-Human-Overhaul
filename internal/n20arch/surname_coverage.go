@@ -48,7 +48,7 @@ func PlanTELAndExactSurnameF1Offline(exe []byte, originals map[string][]byte) (C
 
 func applyF1Additional(exe []byte, d C10DistributedCandidate) (C10DistributedCandidate, error) {
 	// The two existing F1 callers are intentionally untouched; the full
-	// approved set is 16, each with the SAME saved surname and queue ABI.
+	// authenticated callsite set is 16, each with the SAME saved surname and queue ABI.
 	seen := map[uint32]bool{}
 	for _, pc := range c10EXEF1RetailCalls {
 		seen[pc] = true

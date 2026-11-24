@@ -1,6 +1,6 @@
 package n20arch
 
-// entry slot: private, runtime-unverified exact-site NAME_ENT screen-field conversion.
+// Entry slot: runtime-unverified exact-site NAME_ENT screen-field conversion.
 // The authenticated game has two alternative views, each drawing a pair of
 // 8-byte player-name fields through retail 0x8004E788. entry slot redirects ONLY
 // those four calls to an overlay-local converter; the third field on each
@@ -42,6 +42,10 @@ var nameEntryQueueNameEntQueuePCs = []uint32{
 }
 
 func buildSlotDrawShim(romanizer uint32) ([]byte, error) {
+	return buildSlotDrawShimVariant(romanizer, false)
+}
+
+func buildSlotDrawShimVariant(romanizer uint32, thirdField bool) ([]byte, error) {
 	a := &miniAsm{labels: map[string]int{}}
 	w := func(x uint32) { a.w(x) }
 	add := func(d, s uint32, v int16) { w(olADDIU(d, s, v)) }
@@ -64,6 +68,23 @@ func buildSlotDrawShim(romanizer uint32) ([]byte, error) {
 	add(5, 29, 0x20)
 	add(6, 0, 32)
 	add(7, 0, 3)
+	if thirdField {
+		// Only the two native third-field calls use the wider source:
+		// the indexed 16-byte field and the independent slot record.
+		// All four eight-byte presenters retain the original three-kana cap.
+		for _, pc := range nicknameFieldThirdFieldPCs {
+			ret := pc + 8
+			w(olLUI(8, ret))
+			w(olORI(8, 8, ret&0xffff))
+			a.b(4, 31, 8, "wide")
+			w(0)
+		}
+		a.b(4, 0, 0, "convert")
+		w(0)
+		a.label("wide")
+		add(7, 0, 5)
+		a.label("convert")
+	}
 	w(jalWord(romanizer))
 	w(0)
 	a.b(4, 2, 0, "old")

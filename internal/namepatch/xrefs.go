@@ -187,5 +187,5 @@ func AuditXrefs(file string, raw []byte) (XrefAudit, error) {
 	for _, r := range refs {
 		counts[fmt.Sprintf("0x%08X", r.Address)]++
 	}
-	return XrefAudit{File: file, Size: len(raw), References: refs, CallGroups: SummarizeDirectCalls(refs), CountsByAddress: counts, ReviewedSitesMatched: found, ReviewedSitesRequired: len(known), CompleteCallerCoverage: false, SafeToRelocate: false, Caveat: "Static MIPS candidates; indirect references, overlay aliasing, pointer data, buffer capacity and liveness unresolved. Not approval to patch."}, nil
+	return XrefAudit{File: file, Size: len(raw), References: refs, CallGroups: SummarizeDirectCalls(refs), CountsByAddress: counts, ReviewedSitesMatched: found, ReviewedSitesRequired: len(known), CompleteCallerCoverage: false, SafeToRelocate: false, Caveat: "Static MIPS candidates; indirect references, overlay aliasing, pointer data, buffer capacity and liveness unresolved. Patch safety is not established."}, nil
 }

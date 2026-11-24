@@ -24,7 +24,7 @@
         {
           "offset": "0x6c",
           "original": "この絵、奇麗だと思わない？{q}あの人、奇麗だな…。{q}この絵の人、詩織に似てない？",
-          "text": "Isn't this one lovely?{q}That lady is pretty...{q}Doesn't she look like you?"
+          "text": "Isn't this one lovely?{q}That lady is pretty...{q}Looks like you, Shiori?"
         },
         {
           "offset": "0xc4",
@@ -239,7 +239,7 @@
         {
           "offset": "0x10b8",
           "original": "私、こういうのよりも、\nもうちょっとシックな方が\n好きだな。{q}そうでしょう。\n私はシックなのが\n好きだけどな…。{q}私は好きじゃないかな。\nクラシックとかなら\n好きなんだけど…。",
-          "text": "Rather than this,\nI like something a\nlittle more chic.{q}Right?\nI prefer the\nchic kind, though...{q}I didn't care for it.\nI like classical\nmusic, though..."
+          "text": "I prefer something\na little more\nsophisticated.{q}Right?\nI like something more\nsophisticated, though...{q}I didn't care for it.\nI like classical\nmusic, though..."
         },
         {
           "offset": "0x1168",
@@ -554,7 +554,7 @@
         {
           "offset": "0x2558",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x257c",
@@ -629,7 +629,7 @@
         {
           "offset": "0x2b18",
           "original": "最近は、女の子も結構来てるよ。{q}時代遅れなんじゃない。{q}不良になっちゃう？",
-          "text": "Lots of girls come lately.{q}Aren't you behind the times?{q}Afraid you'll turn punk?"
+          "text": "Girls come here now too.{q}Isn't that outdated?{q}Afraid you'll turn punk?"
         },
         {
           "offset": "0x2b6c",
@@ -1339,7 +1339,7 @@
         {
           "offset": "0x61e0",
           "original": "花を見てると、心が和むね。{q}食べれるのかな。{q}奇麗な花だねぇ。",
-          "text": "Flowers are so soothing.{q}I wonder if they taste good.{q}What pretty flowers."
+          "text": "Flowers are so soothing.{q}Can you eat them?{q}They're so pretty."
         },
         {
           "offset": "0x6228",
@@ -1424,7 +1424,7 @@
         {
           "offset": "0x6758",
           "original": "全然、ゆっくり見てていいよ。{q}待ってることも、考えてくれよ。{q}もう満足した？",
-          "text": "No rush, take your time.{q}Think about me waiting, too.{q}Satisfied now?"
+          "text": "No rush, take your time.{q}Remember I'm waiting, too.{q}Satisfied now?"
         },
         {
           "offset": "0x67ac",
@@ -1464,7 +1464,7 @@
         {
           "offset": "0x6978",
           "original": "うん、詩織によく似合うよ。{q}全然、思わない。{q}でも、あれも結構可愛いよ。",
-          "text": "Yeah, it really suits you.{q}Nah, not at all.{q}But that one's cute too."
+          "text": "Yeah, suits you, Shiori.{q}Nah, not at all.{q}But that one's cute too."
         },
         {
           "offset": "0x69c8",
@@ -1864,7 +1864,7 @@
         {
           "offset": "0x8bbc",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x8bf4",
@@ -2009,7 +2009,7 @@
         {
           "offset": "0x932c",
           "original": "詩織の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "I was only looking at you...{q}Aah, I nearly fell asleep.{q}Yes, that was a nice view."
+          "text": "I just watched your face...{q}Ah, I was sleepy.{q}Yeah, what a nice view."
         },
         {
           "offset": "0x9380",
@@ -2024,7 +2024,7 @@
         {
           "offset": "0x9438",
           "original": "詩織と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "With you there? Not one bit.{q}Swaying? Didn't even notice.{q}Scariest ride here, maybe."
+          "text": "I was fine with you, Shiori.{q}Swaying? Didn't notice.{q}Scariest ride here, maybe."
         },
         {
           "offset": "0x94a0",
@@ -2129,7 +2129,7 @@
         {
           "offset": "0x9a20",
           "original": "詩織の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "I was only looking at you...{q}Aah, I nearly fell asleep.{q}Yes, that was a nice view."
+          "text": "I just watched your face...{q}Ah, I was sleepy.{q}Yeah, what a nice view."
         },
         {
           "offset": "0x9a74",
@@ -2144,7 +2144,7 @@
         {
           "offset": "0x9b2c",
           "original": "詩織と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "With you there? Not one bit.{q}Swaying? Didn't even notice.{q}Scariest ride here, maybe."
+          "text": "I was fine with you, Shiori.{q}Swaying? Didn't notice.{q}Scariest ride here, maybe."
         },
         {
           "offset": "0x9b94",
@@ -2249,7 +2249,7 @@
         {
           "offset": "0xa0e8",
           "original": "詩織の顔ばかり見てたから…。{q}あーっ、眠かった。{q}うん、いい眺めだったね。",
-          "text": "I was only looking at you...{q}Aah, I nearly fell asleep.{q}Yes, that was a nice view."
+          "text": "I just watched your face...{q}Ah, I was sleepy.{q}Yeah, what a nice view."
         },
         {
           "offset": "0xa13c",
@@ -2264,7 +2264,7 @@
         {
           "offset": "0xa1f4",
           "original": "詩織と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "With you there? Not one bit.{q}Swaying? Didn't even notice.{q}Scariest ride here, maybe."
+          "text": "I was fine with you, Shiori.{q}Swaying? Didn't notice.{q}Scariest ride here, maybe."
         },
         {
           "offset": "0xa25c",

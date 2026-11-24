@@ -24,7 +24,7 @@
         {
           "offset": "0x68",
           "original": "俺が持ってあげるから、\nほら、貸して？",
-          "text": "I'll carry them,\nhere, hand them over."
+          "text": "I'll carry them.\nHere, let me take 'em."
         },
         {
           "offset": "0x90",
@@ -64,7 +64,7 @@
         {
           "offset": "0x1f0",
           "original": "ちょっと、\nお安くないかもしれない。",
-          "text": "Okay, maybe\nit is a problem."
+          "text": "Maybe this isn't\nso easy after all."
         },
         {
           "offset": "0x214",
@@ -569,7 +569,7 @@
         {
           "offset": "0x1be8",
           "original": "あっ、信じるよ。\nうん、{G}は、\n何て内気なんだ。",
-          "text": "Oh, I believe you.\nSure, {G}'s\nreally shy."
+          "text": "Oh, I believe you.\nSure, {G},\nyou're so shy."
         },
         {
           "offset": "0x1c18",

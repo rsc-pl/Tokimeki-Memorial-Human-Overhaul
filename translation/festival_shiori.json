@@ -1609,7 +1609,7 @@
         {
           "offset": "0x32f0",
           "original": "はい、できたよ。どう？",
-          "text": "All done. How is it?"
+          "text": "All done! How's that?"
         },
         {
           "offset": "0x331c",
@@ -2881,7 +2881,7 @@
         {
           "offset": "0x1464",
           "original": "壇上に登る前に\n精神統一できなかったから、\nすごく緊張したわ。",
-          "text": "I couldn't focus\nbefore going up,\nso I was so nervous."
+          "text": "I couldn't calm down\nbefore going up,\nso I was really nervous."
         },
         {
           "offset": "0x14a4",
@@ -8140,7 +8140,7 @@
         {
           "offset": "0x4ea0",
           "original": "へぇ、そうなんだ。\n（いいときに、来たなぁ。）",
-          "text": "Oh, is that so.\n(Great timing.)"
+          "text": "Oh, really?\n(Great timing!)"
         },
         {
           "offset": "0x4ed0",

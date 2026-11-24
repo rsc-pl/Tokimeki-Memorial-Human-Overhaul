@@ -5178,7 +5178,7 @@
         {
           "offset": "0xe70",
           "original": "そうですか、\nそれでは失礼します。",
-          "text": "Is that so.\nWell, excuse me."
+          "text": "I see.\nI'll be going, then."
         },
         {
           "offset": "0xea0",
@@ -7072,7 +7072,7 @@
         {
           "offset": "0x1a60",
           "original": "そうなんだ。\n{G}の\nお気に入りなんだ…。",
-          "text": "I see.\nIt's one of {G}'s\nfavorites..."
+          "text": "I see.\n{G}, it's your\nfavorite..."
         },
         {
           "offset": "0x1a88",

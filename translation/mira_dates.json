@@ -34,7 +34,7 @@
         {
           "offset": "0x134",
           "original": "あ、い、いや。\n今日の{G}は\n一段と奇麗だなぁと…。",
-          "text": "Oh, n-nothing.\nJust that {G}\nlooks extra pretty today..."
+          "text": "Oh, n-no.\nYou're pretty, {G}\neven more today..."
         },
         {
           "offset": "0x168",
@@ -284,7 +284,7 @@
         {
           "offset": "0x14bc",
           "original": "{G}程なら、きっとわかるよ。{q}そのお菓子が欲しいんじゃない？{q}わかる訳ないよ。",
-          "text": "It must know, {G}{q}Maybe it wants your snack?{q}How could it know?"
+          "text": "Of course it can, {G}{q}Maybe it wants your snack?{q}How could it know?"
         },
         {
           "offset": "0x1510",
@@ -579,7 +579,7 @@
         {
           "offset": "0x2770",
           "original": "はい、{G}にあげるよ。",
-          "text": "{G}, for you."
+          "text": "Here, for you, {G}."
         },
         {
           "offset": "0x2788",
@@ -599,7 +599,7 @@
         {
           "offset": "0x27cc",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x27f0",
@@ -649,7 +649,7 @@
         {
           "offset": "0x2940",
           "original": "{G}ほどじゃないよ。{q}線香花火の方がいいな。{q}昇り龍乱れ七変化って奴だね。",
-          "text": "Can't match {G}{q}I like sparklers better.{q}That's a Rising Dragon Spin."
+          "text": "You shine more, {G}.{q}I like sparklers better.{q}A Rising Dragon Spin."
         },
         {
           "offset": "0x2990",
@@ -1149,7 +1149,7 @@
         {
           "offset": "0x4e98",
           "original": "二流企業に行こうと\n思っていたが、モデルの誘いが\nきているらしい。\nということを聞き出した。",
-          "text": "Found out she planned\nto work at a second-rate\ncompany, but she's been\noffered modeling work."
+          "text": "Found out she aimed\nfor a second-tier firm,\nbut she's been offered\nmodeling work."
         },
         {
           "offset": "0x4ef8",
@@ -1689,7 +1689,7 @@
         {
           "offset": "0x79d4",
           "original": "{G}と一緒だからね。{q}女にはわからないよ。{q}やってみれば、わかるよ。",
-          "text": "'Cause I'm with {G}{q}Girls just don't get it.{q}Try it and you'll see."
+          "text": "Thanks to you, {G}.{q}Girls don't get it.{q}Try it and you'll see."
         },
         {
           "offset": "0x7a1c",
@@ -1739,7 +1739,7 @@
         {
           "offset": "0x7bf0",
           "original": "{G}と一緒だからね。{q}やっぱ筋肉美だね。{q}男のロマンだよ。",
-          "text": "'Cause I'm with {G}{q}It's all about muscle.{q}It's a man's dream, see."
+          "text": "Thanks to you, {G}.{q}Muscular beauty.{q}A man's dream."
         },
         {
           "offset": "0x7c30",
@@ -1794,7 +1794,7 @@
         {
           "offset": "0x8184",
           "original": "たまにはいい事言うわね。\n誉めてあげるわ。{q}‥‥‥‥。\n聞かなかった事に\nしてあげるわ。{q}まあ、私の美貌には、\n遠く及ばないけれど…。",
-          "text": "You say good things\nsometimes. I'll praise you.{q}......\nI'll pretend\nI didn't hear that.{q}Well, it's nowhere\nnear my beauty..."
+          "text": "You do say nice things.\nI'll give you credit.{q}......\nI'll pretend\nI didn't hear that.{q}Well, it's nowhere\nnear my beauty..."
         },
         {
           "offset": "0x820c",
@@ -1949,7 +1949,7 @@
         {
           "offset": "0x8ce8",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x8d20",
@@ -2439,7 +2439,7 @@
         {
           "offset": "0xb434",
           "original": "でも、{G}にはかなわないね。{q}そうかな？全然。{q}本当。奇麗だね。",
-          "text": "They can't beat {G}{q}Huh? Not at all, really.{q}Yeah. They're really pretty."
+          "text": "You shine more, {G}.{q}Not at all.{q}Yes, they're pretty."
         },
         {
           "offset": "0xb478",

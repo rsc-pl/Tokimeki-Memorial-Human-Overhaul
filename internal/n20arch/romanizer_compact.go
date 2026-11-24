@@ -81,7 +81,7 @@ func BuildCompactSpeakerShim(romanizer uint32) ([]byte, error) {
 	add(29, 29, speakerGeometryFrameBytes)
 
 	// Tail-call original speaker on any unexpected value. Restore the exact
-	// original a0, ra and sp; original speaker itself returns to our caller.
+	// original a0, ra and sp; original speaker itself returns to the original caller.
 	a.label("retail")
 	lw(4, 29, 0x60)
 	lw(31, 29, 0x7c)

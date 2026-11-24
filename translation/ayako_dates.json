@@ -414,7 +414,7 @@
         {
           "offset": "0x1a58",
           "original": "ミステイク、\n失敗だったわ。\n来なければよかった…。",
-          "text": "Big mistake.\nWhat a disaster.\nI shouldn't have come..."
+          "text": "Mistake.\nThis was a bust.\nI shouldn't have come..."
         },
         {
           "offset": "0x1a8c",
@@ -459,7 +459,7 @@
         {
           "offset": "0x1c4c",
           "original": "それでも、\n読んでくれたんだ。\nありがとう。",
-          "text": "Still, you\ngave it a try.\nThanks."
+          "text": "But you read it\nanyway.\nThanks."
         },
         {
           "offset": "0x1c80",
@@ -469,7 +469,7 @@
         {
           "offset": "0x1cb4",
           "original": "それでも、\n読んでくれたんだ。\nありがとう。",
-          "text": "Still, you\ngave it a try.\nThanks."
+          "text": "But you read it\nanyway.\nThanks."
         },
         {
           "offset": "0x1ce8",
@@ -539,7 +539,7 @@
         {
           "offset": "0x240c",
           "original": "オーサンキュー、ありがとう。\n嬉しいわ。",
-          "text": "Oh, thank you, thanks.\nI'm so happy."
+          "text": "Oh, thanks! Arigato!\nI'm so happy."
         },
         {
           "offset": "0x2438",
@@ -554,7 +554,7 @@
         {
           "offset": "0x2474",
           "original": "取れたら{G}にあげるね。",
-          "text": "I'll win it for {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x2498",
@@ -669,7 +669,7 @@
         {
           "offset": "0x2cc8",
           "original": "テイクアルック。\n何だか知らないけど、\nコインが出てきたわよ。",
-          "text": "Look at that!\nI don't know how,\nbut I won some coins!"
+          "text": "Look at that!\nFor some reason,\ncoins came out!"
         },
         {
           "offset": "0x2d08",
@@ -1759,7 +1759,7 @@
         {
           "offset": "0x8154",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x818c",

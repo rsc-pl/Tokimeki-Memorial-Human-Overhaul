@@ -158,7 +158,7 @@ func PlanAllManualLoopsOffline(retail []byte, overlays map[string][]byte, in nam
 		}
 		// parser relocation N10 legitimately retargeted some caller LUI/ADDIU source
 		// pairs to the long-NPC string tables. Preserve those bytes intact.
-		// The earlier authenticated composer owns their exact values.
+		// The N10 composer determines their exact values.
 		newDelay := binary.LittleEndian.Uint32(result[off+4:])
 		oldDelay := binary.LittleEndian.Uint32(retail[off+4:])
 		if newDelay != oldDelay {

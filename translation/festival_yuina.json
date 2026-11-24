@@ -2379,7 +2379,7 @@
         {
           "offset": "0x4e28",
           "original": "なかなかいいわ。\n肖像画もあなたに\nお願いしようかしら。",
-          "text": "Rather good.\nPerhaps you'll paint\nmy official portrait."
+          "text": "Not bad.\nMaybe I'll have you\npaint my portrait, too."
         },
         {
           "offset": "0x4e60",
@@ -2709,7 +2709,7 @@
         {
           "offset": "0x5960",
           "original": "なかなかいいわね。\nもう少し頑張れば、\n合格ラインよ。",
-          "text": "Rather good.\nA bit more effort,\nand you'll pass."
+          "text": "Not bad.\nA bit more effort,\nand you'll pass."
         },
         {
           "offset": "0x5998",
@@ -2839,7 +2839,7 @@
         {
           "offset": "0x5e04",
           "original": "{G}て、\n科学部だったんだ。",
-          "text": "So {G}'s in\nthe Science Club..."
+          "text": "{G}, you're\nin Science Club."
         },
         {
           "offset": "0x5e20",
@@ -2859,7 +2859,7 @@
         {
           "offset": "0x5ec4",
           "original": "{G}て、\n電脳部だったんだ。",
-          "text": "So {G}'s in\nthe Computer Club..."
+          "text": "{G}, you're\nin Computer Club"
         },
         {
           "offset": "0x5ee0",

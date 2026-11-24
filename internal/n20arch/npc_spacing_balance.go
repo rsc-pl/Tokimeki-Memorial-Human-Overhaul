@@ -9,15 +9,15 @@ import (
 	"tokimemo/internal/script"
 )
 
-// PlanNPCModerateBalancePrivate is a source-owned and preimage-guarded
-// compromise for the SIX NPC-A EXE paths only. NPC spacing stays responsible for the
+// PlanNPCModerateBalance is a source-owned and preimage-guarded
+// adjustment for the six NPC-A EXE paths only. NPC spacing stays responsible for the
 // prefix/parser synchronization; NPC spacing moves the label RIGHT 3 native X units
 // and their paired quote+body LEFT 1 unit. This sacrifices NPC spacing's conservative
 // four-pixel inter-element reserve but never accepts overlapping glyph ink in
 // the model for the exact current 16 names in both 14/16 stride modes.
 // The phone, other 8 formatters, overlay consumers, UI and N20 are untouched.
-// One owner private runtime test is still essential; NOT safe for public use.
-func PlanNPCModerateBalancePrivate(retail, npcSpacingStage []byte, names []string) ([]byte, error) {
+// Runtime validation is still required; this plan does not establish gameplay safety.
+func PlanNPCModerateBalance(retail, npcSpacingStage []byte, names []string) ([]byte, error) {
 	const base uint32 = 0x80040800
 	const digest = "bae1514fcc4bd8843c69803bf469632b004377b67f3e4408f0641c545fd843ae"
 	if len(retail) != 667648 || len(npcSpacingStage) != len(retail) || fmt.Sprintf("%x", sha256.Sum256(retail)) != digest {

@@ -18,7 +18,7 @@ const (
 	MaxTableBytes         = 32                  // stack-owned, at s5=sp+0x7c in this one caller
 )
 
-type ETCPrivateCandidate struct {
+type ETCOverlayPlan struct {
 	Overlay                  []byte
 	JoinShim                 uint32
 	JoinShimBytes            int
@@ -169,14 +169,14 @@ func buildExamNameJoin(romanizer uint32) ([]byte, error) {
 	return words(a.words...), nil
 }
 
-// PlanETCExamPrivateOverlay takes ORIGINAL authenticated evidence plus
-// the exact candidate ETC data (retail or an owner-built English ETC). The
+// PlanETCExamOverlay takes ORIGINAL authenticated evidence plus
+// the exact candidate ETC data (retail or a composed English ETC). The
 // latter must have the original executable callsite words, a zero-filled
 // source-owned local payload and a valid trailer/checksum. It emits actual
 // modified overlay bytes, with a verifier-backed separate table adapter and
 // existing verified speaker adapter. It NEVER writes a file or marks safe.
-func PlanETCExamPrivateOverlay(originalEXE, retailETC, inputETC []byte) (ETCPrivateCandidate, error) {
-	var out ETCPrivateCandidate
+func PlanETCExamOverlay(originalEXE, retailETC, inputETC []byte) (ETCOverlayPlan, error) {
+	var out ETCOverlayPlan
 	if len(originalEXE) != 667648 || sha(originalEXE) != OriginalEXESHA {
 		return out, fmt.Errorf("exam labels retail EXE authentication failed")
 	}
@@ -288,12 +288,12 @@ func PlanETCExamPrivateOverlay(originalEXE, retailETC, inputETC []byte) (ETCPriv
 			(i >= int(ETCJoinSite-OverlaySlotBase) && i < int(ETCJoinSite-OverlaySlotBase)+4) ||
 			(i >= int(ETCCaptionSite-OverlaySlotBase) && i < int(ETCCaptionSite-OverlaySlotBase)+4)
 		if !ok {
-			return out, fmt.Errorf("exam labels modified unapproved input byte %#x", i)
+			return out, fmt.Errorf("exam labels modified input byte outside the permitted changes %#x", i)
 		}
 	}
 	out.Overlay = dst
 	out.PatchedCallsites = []uint32{ETCJoinSite, ETCCaptionSite}
 	out.OriginalEXEAuthenticated = true
-	out.BlockedReason = "exam labels PRIVATE EXECUTABLE ETC OVERLAY CANDIDATE ONLY: two actual redirected JALs, checked 32-byte table output, existing surname shim. Still lacks installed English ETC runtime, CPU/DMA/IRQ overlay ownership, exact frame alias and queue/GPU lifetime proof. No release or original-game writes."
+	out.BlockedReason = "exam labels OFFLINE ETC OVERLAY PLAN: two actual redirected JALs, checked 32-byte table output, existing surname shim. Still lacks installed English ETC runtime, CPU/DMA/IRQ overlay ownership, exact frame alias and queue/GPU lifetime proof. No release or original-game writes."
 	return out, nil
 }

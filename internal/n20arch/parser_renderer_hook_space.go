@@ -6,7 +6,7 @@ package n20arch
 // executable guards remain entirely in the font tail. The two reservations
 // are independent parts of the existing authenticated renderer installation.
 //
-// This transforms a private, staged N10 candidate, never a retail image or
+// This transforms an in-memory N10 image, never a retail image or
 // installed patch. It is NOT an authorization to boot: N10's 32 parser string
 // operations are unguarded, the hook scratch/range lifetime is unverified in
 // the running game and N20 overlay-local C10 has unresolved CPU/DMA ownership.
@@ -75,7 +75,7 @@ func compactRelocationRetargetAddressPair(b []byte, p compactRelocationPair, old
 
 // compactRelocationRelocateN10ShortOffline accepts the validated in-memory N10 transaction
 // output. N20 base is passed independently so preimage and ownership can be
-// tested against the ACTUAL integrated formatter bridge candidate instead of assumptions.
+// checked against the integrated formatter bridge image.
 // Every change is staged on clones and checked before returning anything.
 func compactRelocationRelocateN10ShortOffline(n10 map[string][]byte, formatterBridgeEXE []byte) (map[string][]byte, RelocationEvidence, error) {
 	fail := func(f string, args ...any) (map[string][]byte, RelocationEvidence, error) {
@@ -173,8 +173,8 @@ func compactRelocationRelocateN10ShortOffline(n10 map[string][]byte, formatterBr
 }
 
 // CombinedOfflineCandidate is an independently byte-merged host-memory
-// research artifact. It cannot be passed to the public disc builder: the N10
-// parser is unguarded and no runtime owner proof exists for either reservation.
+// composition result. It cannot be passed to the disc builder: the N10
+// parser is unguarded and runtime memory ownership is unproven for either reservation.
 // The caller must retain the current EN translation corpus separately; this
 // function composes the physical N10/N20 layers on authenticated JP sources.
 type CombinedOfflineCandidate struct {
@@ -270,6 +270,6 @@ func PlanN10N20Offline(retailEXE []byte, overlays map[string][]byte, input namet
 	if bytes.Equal(merged, n20.EnglishEXE) {
 		return zero, fmt.Errorf("parser relocation N10 unexpectedly absent")
 	}
-	rel.FullEnglishPreserved = false // owner's *current* translation corpus not supplied to this planner
+	rel.FullEnglishPreserved = false // translation corpus is not an input to this planner
 	return CombinedOfflineCandidate{EnglishRendererEXE: merged, Overlays: ovs, N10Report: n10r, Relocation: rel, SafeToPatch: false, RuntimePass: false, ImageBuilt: false}, nil
 }

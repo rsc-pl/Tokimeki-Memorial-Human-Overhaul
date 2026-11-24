@@ -1,10 +1,10 @@
 package n20arch
 
-// activity formatter source-backed bridge between the earlier four-route formatter name-formatting logic and
-// the CURRENT overlay formatter packed romanizer. This intentionally remains a detached,
+// Source-backed bridge between the four-route name formatter and
+// the overlay packed romanizer. This remains a detached,
 // OFFLINE MIPS component. The four original EXE queue sites are left retail:
 // no proven permanent EXE entry gate/executable placement exists for this
-// bridge, and the owner's activity-screen identity is not established.
+// bridge, and the activity-screen identity is not established.
 import (
 	"encoding/binary"
 	"fmt"
@@ -29,8 +29,8 @@ type FormatterCandidate struct {
 	BlockedReason     string
 }
 
-// PrepareActivityFormatterOffline binds the HISTORICALLY vetted four-route formatter
-// four-return formatter to the overlay formatter actual packed romanizer in memory, checking
+// PrepareActivityFormatterOffline binds the four-return formatter to
+// the overlay packed romanizer in memory, checking
 // *all four* original queue sites and current merged code before proceeding.
 // It does not allocate or write any executable region in a game image.
 func PrepareActivityFormatterOffline(originalEXE []byte, current []byte) (FormatterCandidate, error) {
@@ -62,6 +62,6 @@ func PrepareActivityFormatterOffline(originalEXE []byte, current []byte) (Format
 	out = FormatterCandidate{Bridge: bridge.Binary, Entry: bridge.Entry, Romanizer: romanizer,
 		SourceQueueSites: sites, SourceReturnSites: returns, OriginalQueueJAL: jalWord(optionQueueRetail),
 		ReadOnly: true, SafeToPatch: false, RuntimePass: false,
-		BlockedReason: "Four EXE formatter routes can execute the earlier bounded four-route formatter bridge with the current overlay formatter romanizer OFFLINE; no authenticated cold-safe EXE entry, module memory lifetime, and exact observed activity-sink identity remain proven. No image or hooks."}
+		BlockedReason: "Four EXE formatter routes can execute the bounded bridge with the overlay romanizer offline; cold-safe EXE entry, module memory lifetime and exact activity-sink identity are unverified. No image or hooks."}
 	return out, nil
 }

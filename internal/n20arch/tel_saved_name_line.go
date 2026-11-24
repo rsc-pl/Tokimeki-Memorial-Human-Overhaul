@@ -69,7 +69,7 @@ func telSavedSurnameAdapter() ([]byte, error) {
 	sw(5, 29, 0x74)
 	sw(6, 29, 0x78)
 	sw(7, 29, 0x6c)
-	// No dependence on the owner's example name, translation text or ID.
+	// No dependence on a literal saved name, translation text or ID.
 	w(olLUI(8, OLA0SurnameField))
 	w(olORI(8, 8, OLA0SurnameField))
 	a.b(5, 4, 8, "retail")

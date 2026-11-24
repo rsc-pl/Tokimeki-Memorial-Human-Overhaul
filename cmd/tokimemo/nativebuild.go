@@ -273,7 +273,7 @@ func cmdNativeBuild(root string, argv []string) error {
 		return fmt.Errorf("canonical source isolation: %w", err)
 	}
 	// Never create a native-build output inside the translation or public
-	// checkout; only .local/build is an approved in-repo destination.
+	// checkout; only .local/build is a permitted in-repo destination.
 	if config.Within(root, out) && !config.Within(filepath.Join(root, ".local", "build"), out) {
 		return errors.New("native build output inside repository must be under .local/build/")
 	}

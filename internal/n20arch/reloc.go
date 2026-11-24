@@ -553,6 +553,19 @@ func PlanN20Relocation(exe []byte, overlays map[string][]byte,
 	}
 	fp.VALENSuffixModule = &valenModule
 	fp.Report.OverlayPlanSHA["VALEN.EXN"] = sha(valen)
+	date2Module, err := extendDATE2NativePModule(m)
+	if err != nil {
+		return p, err
+	}
+	date2 := fp.Patched["DATE2.EXN"]
+	if date2 == nil {
+		return p, fmt.Errorf("DATE2 P: no authenticated field prep carrier")
+	}
+	if err := applyDATE2NativeP(overlays["DATE2.EXN"], date2, m, date2Module); err != nil {
+		return p, err
+	}
+	fp.DATE2PModule = &date2Module
+	fp.Report.OverlayPlanSHA["DATE2.EXN"] = sha(date2)
 	p.FieldPrep = fp
 	p.PatchedOverlay = fp.Patched
 	for _, ws := range extra {

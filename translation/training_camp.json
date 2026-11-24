@@ -1677,7 +1677,7 @@
         {
           "offset": "0x50b0",
           "original": "えっ？\n本当、風の音ね。\nあー何だ、安心したわ。",
-          "text": "Huh?\nIt is the wind.\nOh, what a relief."
+          "text": "Huh?\nJust the wind.\nWhew, what a relief."
         },
         {
           "offset": "0x50e0",
@@ -3557,7 +3557,7 @@
         {
           "offset": "0xb6d0",
           "original": "すごく面白かったです。\nいい作品だと思いました。",
-          "text": "It was really interesting.\nI thought it was good."
+          "text": "It was a great story.\nI really enjoyed it."
         },
         {
           "offset": "0xb700",
@@ -3692,7 +3692,7 @@
         {
           "offset": "0xbb78",
           "original": "素晴らしい作品ですね。\nとても、高校生の作品とは\n思えませんね。",
-          "text": "It's a wonderful work.\nYou'd never think a high\nschooler wrote it."
+          "text": "A wonderful novel.\nHard to believe a\nhigh schooler wrote it."
         },
         {
           "offset": "0xbbb8",
@@ -4237,7 +4237,7 @@
         {
           "offset": "0xcfcc",
           "original": "{G}がそう言うなら、\n何とかなるかも\nしれないね。",
-          "text": "If {G} says so,\nmaybe we can\ndo it."
+          "text": "If you say so, {G},\nmaybe we can\ndo it."
         },
         {
           "offset": "0xcffc",
@@ -4627,7 +4627,7 @@
         {
           "offset": "0x10000",
           "original": "それはいけませんね。\nそれでしたら、\n今日はもう休まないと…。",
-          "text": "Oh, that's no good.\nIn that case, you must\nrest for today..."
+          "text": "That's not good.\nYou should get some\nrest today..."
         },
         {
           "offset": "0x10040",
@@ -4647,7 +4647,7 @@
         {
           "offset": "0x10094",
           "original": "はぁ、そうなんですか。\nテニスの調子ですか。",
-          "text": "Oh, I see.\nYour tennis game."
+          "text": "Oh, I see.\nYour tennis, then."
         },
         {
           "offset": "0x100c0",
@@ -5012,7 +5012,7 @@
         {
           "offset": "0x10e20",
           "original": "そうなんですか。\n旅行じゃなくて、\nテニスの大会ですか。",
-          "text": "Is that so?\nNot a trip but\na tennis tournament."
+          "text": "Oh, I see.\nSo it's a tennis\ntournament, not a trip."
         },
         {
           "offset": "0x10e58",
@@ -5427,7 +5427,7 @@
         {
           "offset": "0x130d0",
           "original": "基本からねぇ…。\n{G}にも\nそういう時があるんだ。",
-          "text": "The basics, huh...\nSo even {G}\nhas times like that."
+          "text": "Basics, huh...\nEven you, {G},\nhave those days."
         },
         {
           "offset": "0x13100",
@@ -6692,7 +6692,7 @@
         {
           "offset": "0x16f88",
           "original": "何だ、そうなの。",
-          "text": "Oh, is that so."
+          "text": "Oh, I see."
         },
         {
           "offset": "0x16fa8",
@@ -7387,7 +7387,7 @@
         {
           "offset": "0x185dc",
           "original": "何だ、そうなの。",
-          "text": "Oh, is that so."
+          "text": "Oh, I see."
         },
         {
           "offset": "0x1a878",

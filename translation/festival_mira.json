@@ -104,7 +104,7 @@
         {
           "offset": "0x2f0",
           "original": "何だ、そうなの。",
-          "text": "Oh, is that so."
+          "text": "Oh, I see."
         },
         {
           "offset": "0x304",
@@ -504,7 +504,7 @@
         {
           "offset": "0x1034",
           "original": "変なのやるわね。\nこういうガキっぽいのって、\n面白いの？",
-          "text": "What an odd show.\nIs childish stuff\nlike that fun?"
+          "text": "What a weird show.\nIs childish stuff\nreally that fun?"
         },
         {
           "offset": "0x106c",
@@ -1139,7 +1139,7 @@
         {
           "offset": "0x2738",
           "original": "あら、意外と上手なのね。",
-          "text": "Oh, you're rather good."
+          "text": "Oh, better than I thought."
         },
         {
           "offset": "0x2754",
@@ -1159,7 +1159,7 @@
         {
           "offset": "0x27bc",
           "original": "あら、意外と上手なのね。",
-          "text": "Oh, you're rather good."
+          "text": "Oh, better than I thought."
         },
         {
           "offset": "0x27d8",
@@ -1839,7 +1839,7 @@
         {
           "offset": "0x3ea0",
           "original": "なかなか良かったけど、\n私のような気品は\nなかったわね。",
-          "text": "Rather good, but\nit lacked elegance\nlike mine."
+          "text": "Not bad, but\nit didn't have\nthe class I do."
         },
         {
           "offset": "0x3ed8",

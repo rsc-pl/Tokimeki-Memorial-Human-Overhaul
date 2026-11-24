@@ -27,7 +27,7 @@ package n20arch
 // safe_to_patch=false and runtime_pass=false remain mandatory until then.
 //
 // Nothing here writes translation data, the retail EXE, overlays on disk,
-// saves, memory cards, emulator settings, private project files, guest RAM outside
+// saves, memory cards, emulator settings, other project files, guest RAM outside
 // the offline test Machine, or the original kana storage.
 
 import (
@@ -38,12 +38,12 @@ import (
 )
 
 const (
-	// SpeakerExperimentEnabled is the explicit disabled-by-default guard. No
+	// SpeakerAdapterEnabled is the explicit disabled-by-default guard. No
 	// production path may call PlanSpeakerDisplayOffline while this is
 	// false; the plan itself also returns Blocked=true.
-	SpeakerExperimentEnabled = false
-	SpeakerBlocked           = true
-	SpeakerBlockedReason     = "speaker bridge BLOCKED: the proposed 16-caller resident C10 F1 redirect lacks verified window lifetime, overlay reload/reuse, DMA/IRQ/cache coherency, English pair-font rendering and in-game positioning. safe_to_patch=false, runtime_pass=false; no guest RAM, EXE, overlay, save, translation or public builder change is authorised."
+	SpeakerAdapterEnabled = false
+	SpeakerBlocked        = true
+	SpeakerBlockedReason  = "speaker bridge BLOCKED: the proposed 16-caller resident C10 F1 redirect lacks verified window lifetime, overlay reload/reuse, DMA/IRQ/cache coherency, English pair-font rendering and in-game positioning. safe_to_patch=false, runtime_pass=false; no guest RAM, EXE, overlay, save, translation or public builder change is authorised."
 
 	speakerGeometryQueueEntry   uint32 = 0x8004E788 // authenticated retail speaker queue
 	speakerGeometryAdvanceRAM   uint32 = 0x800B3F6A // renderer cell advance byte, retail default 14
@@ -174,7 +174,7 @@ func BuildSpeakerShim(romanizer uint32) ([]byte, error) {
 	add(10, 0, speakerGeometryAdvanceCell)
 	bne(9, 10, "retail")
 
-	// Romanise the kana surname into our own stack buffer.
+	// Romanise the kana surname into the local stack buffer.
 	mov(4, 16)
 	add(5, 29, speakerGeometryNameBufOff)
 	add(6, 0, speakerGeometryNameBufBytes)

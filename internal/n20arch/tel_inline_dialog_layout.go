@@ -236,6 +236,54 @@ func telIndexedWrappedGirlSites(tel []byte) ([]uint32, error) {
 	return out, nil
 }
 
+// These three telephone states use the same script index for both the
+// nameplate and the first dialogue pointer. Their delay slots pass s0 as a2,
+// rather than clearing a1, so they are not members of the uniform family.
+func telMissedDateSites(exe, tel []byte) ([]uint32, error) {
+	if len(exe) != 667648 || sha(exe) != OriginalEXESHA || len(tel) != 196608 || sha(tel) != OverlaySHA["TEL.EXN"] {
+		return nil, fmt.Errorf("TEL missed date: unauthenticated source")
+	}
+	get := func(pc uint32) uint32 { return binary.LittleEndian.Uint32(tel[pc-OverlaySlotBase:]) }
+	for pc, want := range map[uint32]uint32{0x80139ff4: 0x3c10800e, 0x80139ff8: 0x8e1067cc, 0x8013a000: 0x001070c0, 0x8013a004: 0x000e2702, 0x8013a008: 0x0c01469a, 0x8013a00c: 0x00808025, 0x8013a030: 0x8c38ff38, 0x8013a038: 0x03000008} {
+		if get(pc) != want {
+			return nil, fmt.Errorf("TEL missed date: selector drift at %#x", pc)
+		}
+	}
+	var sites []uint32
+	for _, s := range []struct{ start, table, state uint32 }{{0x8013a078, 0x4738, 10}, {0x8013a100, 0x4aa4, 30}, {0x8013a188, 0x4d6c, 50}} {
+		if get(0x8013ff38+4*s.state) != s.start {
+			return nil, fmt.Errorf("TEL missed date: state table drift")
+		}
+		words := []uint32{0x0c013aab, 0, 0x00101880, 0x3c04800b, 0x00832021, 0x8c8435f4, jalWord(OLOriginalSpeaker), 0xafa30030, 0x8fa30030, 0x3c048014, 0x00832021, 0x8c840000 | s.table, 0x00002825, jalWord(telDialogueWrapperOriginal), 0x02003025}
+		for i, w := range words {
+			if get(s.start+4*uint32(i)) != w {
+				return nil, fmt.Errorf("TEL missed date: caller drift at %#x", s.start+4*uint32(i))
+			}
+		}
+		for i := uint32(0); i < 12; i++ {
+			ptr := get(0x80140000 + s.table + 4*i)
+			name := binary.LittleEndian.Uint32(exe[0x800b35f4-Base+4*i:])
+			if ptr < 0x801444d0 || ptr >= 0x80144d6c || ptr&3 != 0 || name < 0x800b3578 || name >= 0x800b35f4 || bytes.IndexByte(tel[ptr-OverlaySlotBase:ptr-OverlaySlotBase+128], 0) <= 0 || bytes.IndexByte(exe[name-Base:name-Base+16], 0) <= 0 {
+				return nil, fmt.Errorf("TEL missed date: invalid indexed source %d", i)
+			}
+		}
+		sites = append(sites, s.start+52)
+	}
+	return sites, nil
+}
+
+func telMissedDateWord(pc uint32) N20ManifestWord {
+	return N20ManifestWord{Owner: "TEL.EXN", PC: pc, Old: jalWord(telDialogueWrapperOriginal), New: jalWord(telDialogueWrapperClone), Kind: "jal", Role: "TEL missed date indexed first-line wrapper", Reason: "same native speaker and dialogue index, preserved delay slot and bounded first-line geometry"}
+}
+
+func telMissedDateCheckCaller(original, composed []byte, pc, target uint32) error {
+	off := int(pc - OverlaySlotBase)
+	if !bytes.Equal(original[off-52:off], composed[off-52:off]) || binary.LittleEndian.Uint32(composed[off:]) != jalWord(target) || !bytes.Equal(original[off+4:off+8], composed[off+4:off+8]) {
+		return fmt.Errorf("TEL missed date: staged caller drift at %#x", pc)
+	}
+	return nil
+}
+
 // One indexed first-line call preserves a nontrivial retail delay-slot store
 // instead of clearing a1 in the delay slot. The preceding block already sets
 // a1=0, passes the same selected character index in a2, and prepares the
@@ -380,6 +428,10 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 		return nil, err
 	}
 	adjacent, err := telOriginalAdjacentSpeakerFirstLines(originalTEL)
+	if err != nil {
+		return nil, err
+	}
+	recorded, err := telRecordedMessageSites(exe, originalTEL)
 	if err != nil {
 		return nil, err
 	}
@@ -549,7 +601,7 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 	b.w(olAddu(8, 8, 9))
 	b.w(olLW(8, 8, 0))
 	b.w(0)                // load delay: name pointer from indexed table
-	b.w(olADDIU(9, 0, 0)) // indexed first lines retain the accepted gap
+	b.w(olADDIU(9, 0, 0)) // indexed first lines retain native alignment
 	b.j("scanInit")
 	b.w(0)
 	b.label("sharedSpeaker")
@@ -563,7 +615,7 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 	b.w(olLUI(8, 0x800b361c))
 	b.w(olLW(8, 8, 0x361c)) // original source of the adjacent nameplate
 	b.w(0)                  // load delay
-	b.w(olADDIU(9, 0, 0))   // adjacent mode keeps its previously tested geometry
+	b.w(olADDIU(9, 0, 0))   // adjacent mode retains its existing geometry
 	b.label("scanInit")
 	b.w(olADDIU(10, 0, 0)) // t2 = bounded encoded byte count
 	b.label("scan")
@@ -619,12 +671,119 @@ func telCloneSource(exe, originalTEL []byte) ([]byte, error) {
 	// the displayed surname. Add ten units only for these long, authenticated
 	// speaker sources. The existing 54-byte/27-glyph first-line bound proves
 	// even the worst case ends at X=-30+27*7=159, within the native X=160 edge.
-	// Short names (including previously accepted Fujisaki/Kisaragi) are frozen.
+	// Short names retain the unadjusted geometry.
 	b.w(olSLTIU(5, 10, 10))
 	b.b(5, 5, 0, "shortSpeaker")
 	b.w(0)
 	b.w(olADDIU(4, 4, 10))
+	// The formatter saves its caller at sp+28; only the two cloned wrapper
+	// return addresses establish that the enclosing 0x168-byte wrapper frame
+	// exists. Its original saved RA is at sp+0x118+0x2c. Keep the established
+	// long-name margin for every other caller, including the same index via
+	// a different route. Never infer the caller from the displayed name.
+	if wordAt(exe, telDialogOriginalEntry) != 0x27bdfee8 ||
+		wordAt(exe, telDialogOriginalEntry+12) != 0xafbf001c ||
+		wordAt(exe, telDialogueWrapperOriginal) != 0x27bdfe98 ||
+		wordAt(exe, telDialogueWrapperOriginal+8) != 0xafbf002c {
+		return nil, fmt.Errorf("TEL dialogue: enclosing wrapper frame preimage drift")
+	}
+	b.w(olLW(12, 29, 28))
+	b.w(0)
+	for _, ra := range []uint32{telDialogueWrapperClone + 0x108, telDialogueWrapperClone + 0x134} {
+		b.w(olLUI(13, ra))
+		b.w(olORI(13, 13, ra))
+		b.b(4, 12, 13, "recordedFrame")
+		b.w(0)
+	}
+	b.j("shortSpeaker")
+	b.w(0)
+	b.label("recordedFrame")
+	b.w(olADDIU(13, 0, 11)) // authenticated original wrapper mode
+	b.b(5, 20, 13, "shortSpeaker")
+	b.w(0)
+	b.w(olLW(12, 29, 0x144))
+	b.w(0)
+	for _, pc := range recorded {
+		b.w(olLUI(13, pc+8))
+		b.w(olORI(13, 13, pc+8))
+		b.b(4, 12, 13, "recordedName")
+		b.w(0)
+	}
+	b.j("shortSpeaker")
+	b.w(0)
+	// Use the already checked 10/12-byte length and terminator. Only narrow
+	// letters and a single optional trailing pair-pad qualify. The original
+	// speaker is X=-128 at these lengths. With either native 14/16-pixel
+	// advance, the final pair begins no later than X=-128+8*n-16 and its
+	// ink ends within 12 pixels (5 for a padded final pair). Retain four
+	// units beyond that worst-case ink edge. Do not change global advance;
+	// the later renderer, not this queue producer, reads that setting.
+	b.label("recordedName")
+	b.w(olSUBU(14, 8, 10))
+	b.w(olADDIU(15, 8, -1))
+	b.label("recordedScan")
+	b.w(olLBU(5, 14, 0))
+	b.w(0)
+	b.b(5, 14, 15, "recordedLetter")
+	b.w(olADDIU(13, 0, 0xa0))
+	b.b(4, 5, 13, "recordedPad")
+	b.w(0)
+	b.label("recordedLetter")
+	b.w(olORI(5, 5, 0x20))
+	b.w(olADDIU(5, 5, -0xe1))
+	b.w(olSLTIU(5, 5, 26))
+	b.b(4, 5, 0, "shortSpeaker")
+	b.w(olADDIU(14, 14, 1))
+	b.b(5, 14, 8, "recordedScan")
+	b.w(0)
+	b.w(olADDIU(13, 0, 12))
+	b.j("recordedX")
+	b.w(0)
+	b.label("recordedPad")
+	b.w(olADDIU(13, 0, 5))
+	b.label("recordedX")
+	b.w(olRType(0, 10, 4, 0) | (3 << 6))
+	b.w(olAddu(4, 4, 13))
+	b.w(olADDIU(4, 4, -140))
 	b.label("shortSpeaker")
+	// The missed-date banks have their own bounded short-name clearance.
+	// At 16-pixel advance an eight-byte label can reach the unadjusted
+	// first-line origin exactly. Add four units only for six/eight-byte
+	// names and at most thirteen first-line glyphs, and only after the
+	// real enclosing wrapper caller has been authenticated.
+	b.w(olSLTIU(5, 10, 6))
+	b.b(5, 5, 0, "queueReturn")
+	b.w(0)
+	b.w(olSLTIU(5, 10, 9))
+	b.b(4, 5, 0, "queueReturn")
+	b.w(0)
+	b.w(olSLTIU(5, 11, 14))
+	b.b(4, 5, 0, "queueReturn")
+	b.w(0)
+	b.w(olLW(12, 29, 28))
+	b.w(0)
+	for _, ra := range []uint32{telDialogueWrapperClone + 0x108, telDialogueWrapperClone + 0x134} {
+		b.w(olLUI(13, ra))
+		b.w(olORI(13, 13, ra))
+		b.b(4, 12, 13, "missedFrame")
+		b.w(0)
+	}
+	b.j("queueReturn")
+	b.w(0)
+	b.label("missedFrame")
+	b.w(olLW(12, 29, 0x144))
+	b.w(0)
+	for _, pc := range []uint32{0x8013a0ac, 0x8013a134, 0x8013a1bc} {
+		b.w(olLUI(13, pc+8))
+		b.w(olORI(13, 13, pc+8))
+		b.b(4, 12, 13, "missedMargin")
+		b.w(0)
+	}
+	b.j("queueReturn")
+	b.w(0)
+	b.label("missedMargin")
+	b.w(olADDIU(4, 4, 4))
+	b.label("queueReturn")
 	b.w(jWord(telDialogCloneStub + uint32(a.labels["common"]*4)))
 	b.w(0)
 	b.resolve()
@@ -742,6 +901,17 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 		binary.LittleEndian.PutUint32(dest[off:], jalWord(telDialogueWrapperClone))
 		result.Calls = append(result.Calls, telRecordedMessageWord(pc))
 	}
+	missedSites, err := telMissedDateSites(exe, original)
+	if err != nil {
+		return result, nil, err
+	}
+	for _, pc := range missedSites {
+		if err := telMissedDateCheckCaller(original, dest, pc, telDialogueWrapperOriginal); err != nil {
+			return result, nil, err
+		}
+		binary.LittleEndian.PutUint32(dest[pc-OverlaySlotBase:], jalWord(telDialogueWrapperClone))
+		result.Calls = append(result.Calls, telMissedDateWord(pc))
+	}
 	// Preserve the indexed a2/a1 ABI and the original delay-slot store.
 	// The existing cloned wrapper handles the same first-line queue; no
 	// additional renderer or RAM ownership is introduced.
@@ -797,7 +967,7 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 		Reason: "source-dispatched selector 13 performs exact saved given copy; guard N6 conversion and 16-byte local field; retail fallback",
 	})
 	// Fold paired trailing punctuation only after original-byte-verified
-	// mixed saved-surname operations. No global pair-font modification.
+	// mixed saved-name operations. No global pair-font modification.
 	period, afterPeriod, err := telSurnamePeriodPatch(original, dest)
 	if err != nil {
 		return result, nil, err
@@ -811,6 +981,7 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 			Reason: "retail-authenticated suffix append, verify exactly one encoded period and N6 surname tail before folding 0xA0 pad; original strcat fallback",
 		})
 	}
+	result.Calls = append(result.Calls, telGivenPunctuationWord())
 	// Only the two authenticated outgoing player introductions with one P
 	// marker each: never hook all phone/P templates or the global EXE parser.
 	selfIntro, afterIntro, err := telSelfIntroPatch(exe, original, dest)
@@ -855,6 +1026,13 @@ func telScopedDialogPatch(exe, original, staged []byte) (TelScopedDialogPlan, []
 		}
 	}
 
+	for _, site := range telGirlSuffixSites {
+		result.Calls = append(result.Calls, N20ManifestWord{
+			Owner: "TEL.EXN", PC: site.pc, Old: jalWord(0x80051438), New: jalWord(telGirlSuffixShim), Kind: "jal",
+			Role:   "TEL original character-name producer bounded pair join",
+			Reason: "exact source-owned ratings/rumor callers; original character selector and suffix preserved; latin odd-width pad rotation only; native fallback",
+		})
+	}
 	ck := packedTableChecksum(dest)
 	dest[0x2fffc], dest[0x2fffd] = byte(ck>>8), byte(ck)
 	result.Bytes = payload
@@ -947,6 +1125,15 @@ func VerifyComposedTELNPCInlineLayout(exe, original, composed []byte) error {
 		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telDialogueWrapperClone) ||
 			!bytes.Equal(composed[off+4:off+8], original[off+4:off+8]) {
 			return fmt.Errorf("TEL recorded message: composed caller drift at %#x", pc)
+		}
+	}
+	missedSites, err := telMissedDateSites(exe, original)
+	if err != nil {
+		return err
+	}
+	for _, pc := range missedSites {
+		if err := telMissedDateCheckCaller(original, composed, pc, telDialogueWrapperClone); err != nil {
+			return err
 		}
 	}
 	preparedOff := int(prepared - OverlaySlotBase)

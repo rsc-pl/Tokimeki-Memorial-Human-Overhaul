@@ -1864,7 +1864,7 @@
         {
           "offset": "0x6238",
           "original": "心配してくれてありがとう。\nじゃあ、\nそろそろ帰ろうか。",
-          "text": "Thanks for worrying.\nWell,\nshall we head back?"
+          "text": "Thanks for worrying\nabout me.\nShall we head back?"
         },
         {
           "offset": "0x6270",
@@ -2034,7 +2034,7 @@
         {
           "offset": "0x7608",
           "original": "それじゃあ、ちょっと\n準備してくるから、\n待っていただける？",
-          "text": "Then I'll go get\nready, so would you\nkindly wait?"
+          "text": "Then I'll go get\nready. Could you\nwait a moment?"
         },
         {
           "offset": "0x7644",
@@ -3339,7 +3339,7 @@
         {
           "offset": "0xcbdc",
           "original": "がーん。\n何てことを…。",
-          "text": "Ouch.\nWhat a thing to say..."
+          "text": "Ouch.\nThat was mean..."
         },
         {
           "offset": "0xcbf4",
@@ -3719,7 +3719,7 @@
         {
           "offset": "0xe570",
           "original": "がーん。\n何てことを…。",
-          "text": "Ouch.\nWhat a thing to say..."
+          "text": "Ouch.\nThat was mean..."
         },
         {
           "offset": "0xe588",

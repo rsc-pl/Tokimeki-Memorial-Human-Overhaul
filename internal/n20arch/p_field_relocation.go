@@ -130,3 +130,67 @@ func applyPFieldRelocation(exe []byte, overlays map[string][]byte, records []N20
 	}
 	return destEXE, destOverlays, nil
 }
+
+// The holiday setup formats the explicit saved surname and san after its
+// normal field-preparation call. A second guarded call with selector 14
+// bypasses the native selector table, leaving the formatted P and A fields
+// intact while applying the existing exact-content conversion. Consolidate
+// the pointer loads below the local initializer to fit that call in place.
+const holidayPRefreshPC uint32 = 0x8013b0d0
+
+func holidayPRefreshWords(original []byte) ([]N20ManifestWord, error) {
+	const name = "SHOUGATU.EXN"
+	if len(original) != OverlayLoadSectors*2048 || sha(original) != OverlaySHA[name] {
+		return nil, fmt.Errorf("holiday P refresh source identity mismatch")
+	}
+	old := [...]uint32{
+		0x3c098014, 0x8d294db0, 0x3c018014, 0x3c0a8014,
+		0x8d4a4dd4, 0xac294dfc, 0x3c018014, 0x3c0b8014,
+		0x8d6b4df8, 0xac2a4e00, 0x3c018014, 0x0c010a13, 0xac2b4e04,
+	}
+	next := [...]uint32{
+		jalWord(OLStubRAM), 0x2404000e, 0x3c018014, 0x8c294db0,
+		0x8c2a4dd4, 0xac294dfc, 0x8c2b4df8, 0,
+		0, 0xac2a4e00, 0x3c018014, 0x0c010a13, 0xac2b4e04,
+	}
+	var records []N20ManifestWord
+	for i, w := range old {
+		pc := holidayPRefreshPC + uint32(i*4)
+		if binary.LittleEndian.Uint32(original[pc-OverlaySlotBase:]) != w {
+			return nil, fmt.Errorf("holiday P refresh instruction mismatch at %#x", pc)
+		}
+		if w != next[i] {
+			kind := "word"
+			if i == 0 {
+				kind = "jal"
+			}
+			records = append(records, N20ManifestWord{
+				Owner: name, PC: pc, Old: w, New: next[i], Kind: kind,
+				Role: "holiday formatted P conversion", Reason: "retain explicit native surname and suffix; reuse guarded field preparation before the scheduler",
+			})
+		}
+	}
+	return records, nil
+}
+
+func applyHolidayPRefresh(original, staged []byte) ([]N20ManifestWord, error) {
+	records, err := holidayPRefreshWords(original)
+	if err != nil {
+		return nil, err
+	}
+	if len(staged) != len(original) {
+		return nil, fmt.Errorf("holiday P refresh image size mismatch")
+	}
+	// Check the entire block, including the retained initializer, scheduler,
+	// delay stores and unmodified pointer instructions before the first write.
+	start, end := int(holidayPRefreshPC-OverlaySlotBase)-8, int(0x8013b104-OverlaySlotBase)
+	if !bytes.Equal(original[start:end], staged[start:end]) {
+		return nil, fmt.Errorf("holiday P refresh composition collision")
+	}
+	for _, w := range records {
+		binary.LittleEndian.PutUint32(staged[w.PC-OverlaySlotBase:], w.New)
+	}
+	ck := packedTableChecksum(staged)
+	staged[0x2fffc], staged[0x2fffd] = byte(ck>>8), byte(ck)
+	return records, nil
+}

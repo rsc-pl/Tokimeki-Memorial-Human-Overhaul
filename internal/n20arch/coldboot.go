@@ -135,8 +135,8 @@ func DirectCallers(exe []byte, addr uint32) []uint32 {
 
 // SceneEntryTable extracts the distinct overlay entry addresses assigned to
 // 0x80123110 from the authenticated 129-entry scene jump table at 0x800B1BEC.
-// The earlier scan of 0x800790EC..0x80079300 stopped inside the dispatch body
-// and therefore undercounted (24); the full table yields 40 distinct entries.
+// The dispatch-body prefix at 0x800790EC..0x80079300 exposes only 24 entries;
+// the full table yields 40 distinct entries.
 // The table uses multiple entries (not only 0x80132000), so a runtime writer
 // cannot be validated by patching one uniform overlay offset.
 func SceneEntryTable(exe []byte) []uint32 {
@@ -173,7 +173,7 @@ func buildColdBootGuard(checkAddr, classTarget uint32) []byte {
 	return words(a.words...)
 }
 
-// ColdBootGuardPair returns the formatter and speaker guard prototypes. Both
+// ColdBootGuardPair returns the formatter and speaker guard bodies. Both
 // are 40 B and together require ColdBootGuardBytes of executable space.
 func ColdBootGuardPair() (formatter, speaker []byte) {
 	return buildColdBootGuard(WindowStart, FormatterStubRAM),

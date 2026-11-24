@@ -11,7 +11,7 @@ package n20arch
 // All s-registers, ra, sp are preserved. Real MIPS-I load delays are explicit.
 import "fmt"
 
-func BuildC10LineFullnamePrototype(romanizer uint32) ([]byte, error) {
+func BuildC10LineFullname(romanizer uint32) ([]byte, error) {
 	a := &miniAsm{labels: map[string]int{}}
 	w := func(x uint32) { a.w(x) }
 	add := func(d, s uint32, i int16) { w(olADDIU(d, s, i)) }

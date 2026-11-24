@@ -63,7 +63,7 @@ func PlanUnifiedNameEntOffline(original []byte) (UnifiedNameEntCandidate, error)
 	if err != nil {
 		return empty, err
 	}
-	shim, err := buildSlotDrawShim(UnifiedEntryRomRAM)
+	shim, err := buildSlotDrawShimVariant(UnifiedEntryRomRAM, true)
 	if err != nil {
 		return empty, err
 	}
@@ -74,7 +74,7 @@ func PlanUnifiedNameEntOffline(original []byte) (UnifiedNameEntCandidate, error)
 	// before installing name-entry transfer's *different* local code at overlapping addresses.
 	out := bytes.Clone(old.Overlay)
 	if !bytes.Equal(original[EntrySlotNameEntOff:EntrySlotNameEntOff+EntrySlotNameEntBytes], make([]byte, EntrySlotNameEntBytes)) {
-		return empty, fmt.Errorf("unified name entry historical module window not original-zero")
+		return empty, fmt.Errorf("unified name entry reserved module window not original-zero")
 	}
 	copy(out[EntrySlotNameEntOff:EntrySlotNameEntOff+EntrySlotNameEntBytes], original[EntrySlotNameEntOff:EntrySlotNameEntOff+EntrySlotNameEntBytes])
 	// name-entry transfer can modify only bytes that are pristine in the third-field input presenter plan.

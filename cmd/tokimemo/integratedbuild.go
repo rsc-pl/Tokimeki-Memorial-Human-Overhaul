@@ -252,7 +252,7 @@ func readStagedTELOverlay(track string, sectors int64, sourceISO *ps1.ISO, physi
 	return got.Bytes(), nil
 }
 
-// A failed replacement rollback may move the user's previous image into the
+// A failed replacement rollback may move the previous output image into the
 // stage path. Never recursively remove a directory unless it remains the
 // temporary directory created by this build.
 func cleanupOwnedBuildStage(stage string, created os.FileInfo) {

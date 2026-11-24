@@ -324,7 +324,7 @@
         {
           "offset": "0x1130",
           "original": "この犬、ムクって言うんだ。\n{G}家の\nペットなの？",
-          "text": "So this dog's called Muku.\nIs he {G}'s\nfamily pet?"
+          "text": "So his name's Muku.\n{G}, is he\nyour family pet?"
         },
         {
           "offset": "0x1160",
@@ -564,7 +564,7 @@
         {
           "offset": "0x1e84",
           "original": "み、{G}さえ\n良ければ…。",
-          "text": "So if {G}\nis okay with it..."
+          "text": "{G}, i-if you\nwant to..."
         },
         {
           "offset": "0x1e9c",

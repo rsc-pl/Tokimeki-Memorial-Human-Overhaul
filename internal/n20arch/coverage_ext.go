@@ -10,15 +10,15 @@ package n20arch
 // That is a real 62,211-three-kana-name coverage gap in the guest core. This
 // file models three views explicitly:
 //
-//   - host primitive: the historical capacity audit's upper bound;
+//   - host primitive: the host capacity upper bound;
 //   - packed romanizer-faithful: host behaviour minus '～';
 //   - N20 local: packed romanizer-faithful plus '～' and a small, source-grounded set of
 //     missing digraphs.
 //
 // The local view is now implemented in the actual N6/N6-FP offline bodies by
 // romanizer_ext.go. The rebuilt core accepts the same local set and was
-// executed on the full grid (2,829,111 / 4,251,528, 0 mismatches); see
-// N20_RESULT.md §19. The packed romanizer-faithful view remains the historical baseline
+// executed on the full grid (2,829,111 / 4,251,528, 0 mismatches).
+// The original packed romanizer-faithful view remains the comparison baseline
 // (2,745,044). This audit keeps all three views so the gain stays attributable.
 // The fields below still mean "offline candidate", never a runtime patch.
 //
@@ -445,7 +445,7 @@ func AuditN20Coverage(nameEnt []byte) (N20CoverageAudit, error) {
 				localRoman, localErr := RomanizeKanaN20Local(name)
 				wave := strings.ContainsRune(name, '～')
 
-				// Host primitive (historical upper bound).
+				// Host primitive (upper bound).
 				if hostErr != nil {
 					c.HostUnromanizable++
 					_, origErr := n20Romanize(name, nil, true)
@@ -535,7 +535,7 @@ func AuditN20Coverage(nameEnt []byte) (N20CoverageAudit, error) {
 	a.Verdict = "n20_local_table_embedded_offline_no_runtime"
 	waveGap := a.FailureBreakdown["packed_romanizer_wave_dash_gap"]
 	a.Reason = fmt.Sprintf(
-		"authenticated NAME_ENT grid has %d rows and %d unique kana. The host primitive accepts %d/%d three-kana names, but the historical packed romanizer core accepted only %d/%d (%.4f%%) because its packed table had no ～ record; %d three-kana names contain ～ and host-romanize but packed romanizer rejected them. The rebuilt N20 table adds ～ plus %d source-grounded digraphs and the actual N6/N6-FP cores accept %d/%d (%.4f%%) in offline MIPS, a gain of %d accepted names over packed romanizer. %d remain unromanizable locally (%v) and %d remain too long (%v). The 8-byte slot, buffers, loader and EXE are unchanged; safe_to_patch remains false.",
+		"authenticated NAME_ENT grid has %d rows and %d unique kana. The host primitive accepts %d/%d three-kana names, but the original packed romanizer core accepted only %d/%d (%.4f%%) because its packed table had no ～ record; %d three-kana names contain ～ and host-romanize but packed romanizer rejected them. The rebuilt N20 table adds ～ plus %d source-grounded digraphs and the actual N6/N6-FP cores accept %d/%d (%.4f%%) in offline MIPS, a gain of %d accepted names over packed romanizer. %d remain unromanizable locally (%v) and %d remain too long (%v). The 8-byte slot, buffers, loader and EXE are unchanged; safe_to_patch remains false.",
 		a.KeyboardRows, a.UniqueKana,
 		a.Triples.HostAccepted, a.Triples.Entries,
 		a.TriplesAccepted, a.Triples.Entries, a.TriplesAcceptedPct,

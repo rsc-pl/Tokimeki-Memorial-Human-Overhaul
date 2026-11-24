@@ -164,7 +164,7 @@
         {
           "offset": "0x310",
           "original": "一人の方がよかったな…。",
-          "text": "I'd rather be alone..."
+          "text": "Should've gone alone..."
         },
         {
           "offset": "0x330",
@@ -174,7 +174,7 @@
         {
           "offset": "0x350",
           "original": "一人の方がよかったな…。",
-          "text": "I'd rather be alone..."
+          "text": "Should've gone alone..."
         },
         {
           "offset": "0x370",
@@ -184,7 +184,7 @@
         {
           "offset": "0x390",
           "original": "一人の方がよかったな…。",
-          "text": "I'd rather be alone..."
+          "text": "Should've gone alone..."
         },
         {
           "offset": "0x3b0",
@@ -194,7 +194,7 @@
         {
           "offset": "0x3d0",
           "original": "一人の方がよかったな…。",
-          "text": "I'd rather be alone..."
+          "text": "Should've gone alone..."
         },
         {
           "offset": "0x3f0",
@@ -1174,7 +1174,7 @@
         {
           "offset": "0x4348",
           "original": "私、\n乗れなくてよかった…。",
-          "text": "I'm glad\nI couldn't ride..."
+          "text": "I'm glad\nI didn't ride..."
         },
         {
           "offset": "0x4368",
@@ -1349,7 +1349,7 @@
         {
           "offset": "0x4ecc",
           "original": "これに乗るのですね…。",
-          "text": "We're riding this...?"
+          "text": "So we're riding it..."
         },
         {
           "offset": "0x4ee8",
@@ -1554,12 +1554,12 @@
         {
           "offset": "0x5a2c",
           "original": "ただでさえ苦手なのに…。",
-          "text": "Rides are hard enough..."
+          "text": "These scare me as it is..."
         },
         {
           "offset": "0x5a5c",
           "original": "ただでさえ苦手なのに…。",
-          "text": "Rides are hard enough..."
+          "text": "These scare me as it is..."
         },
         {
           "offset": "0x5a8c",
@@ -1934,7 +1934,7 @@
         {
           "offset": "0x7200",
           "original": "私、乗れなくて\nよかった…。",
-          "text": "I'm glad I\ncouldn't ride..."
+          "text": "I'm glad I\ndidn't ride..."
         },
         {
           "offset": "0x7220",

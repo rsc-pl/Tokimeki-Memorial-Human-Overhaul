@@ -1,6 +1,6 @@
 package n20arch
 
-// resident module: private offline C10 source distribution across overlay-local high-tail
+// resident module: offline C10 source distribution across overlay-local high-tail
 // empty space. This removes dependence on GYOZI specifically, while retaining
 // the EXE's guarded original-target fallback and all integrated baseline code. It is
 // NOT a claim of in-game memory ownership or a safe-to-patch verdict.
@@ -43,7 +43,7 @@ func PlanC10DistributedOffline(exe []byte, originals map[string][]byte) (C10Dist
 	if len(originals) != len(OverlaySHA) {
 		return out, fmt.Errorf("expected 26 authenticated overlays, got %d", len(originals))
 	}
-	// This generator makes exactly the same checked resident image as an earlier validated image.
+	// Generate the checksum-verified resident image from the GYOZI source.
 	source, err := PlanC10GyoziSource(originals["GYOZI.EXN"])
 	if err != nil {
 		return out, err

@@ -37,7 +37,7 @@ var telPAddressTables = [...]struct {
 	count int
 	pMask uint16 // Original table rows with the dynamic P name token.
 }{
-	{0x80140ad8, 11, 0x05fe}, {0x80140d18, 11, 0x07ff}, {0x80140f0c, 10, 0x037f},
+	{0x80140ad8, 11, 0x05fe}, {0x80140d18, 11, 0x07ff}, {0x80140f0c, 11, 0x077f},
 }
 
 func telPAddressSource(exe, tel []byte) error {
@@ -323,6 +323,7 @@ func telPAddressPayload() ([]byte, error) {
 	// Copy source prefix and suffix to a private 128B staging line.
 	mov(20, 16)
 	add(21, 29, 0x20)
+	mov(24, 21) // start of current wrapper line, reset at each structural newline
 	a.label("prefix")
 	lbu(8, 20, 0)
 	add(9, 0, 0x50)
@@ -332,8 +333,7 @@ func telPAddressPayload() ([]byte, error) {
 	// 0xA0 is the existing invisible pair-pad, not a text newline.
 	add(9, 0, 0x20)
 	bne(8, 9, "prefix_write")
-	add(10, 21, -0x20)
-	w(olSUBU(10, 10, 29)) // current output offset from (sp+0x20)
+	w(olSUBU(10, 21, 24)) // parity within the current wrapper line
 	w(olIType(0x0c, 10, 10, 1))
 	beq(10, 0, "prefix_write")
 	add(9, 0, 0xa0)
@@ -343,6 +343,10 @@ func telPAddressPayload() ([]byte, error) {
 	sb(8, 21, 0)
 	add(20, 20, 1)
 	add(21, 21, 1)
+	add(9, 0, 0x20)
+	bne(8, 9, "prefix_next")
+	mov(24, 21) // native wrapper resets its byte index after a split
+	a.label("prefix_next")
 	jump("prefix")
 	a.label("prefix_done")
 	add(20, 20, 1) // skip P
@@ -382,8 +386,7 @@ func telPAddressPayload() ([]byte, error) {
 	// 0xA0 is the existing invisible pair-pad, not a text newline.
 	add(9, 0, 0x20)
 	bne(8, 9, "suffix_write")
-	add(10, 21, -0x20)
-	w(olSUBU(10, 10, 29)) // current output offset from (sp+0x20)
+	w(olSUBU(10, 21, 24)) // parity within the current wrapper line
 	w(olIType(0x0c, 10, 10, 1))
 	beq(10, 0, "suffix_write")
 	add(9, 0, 0xa0)
@@ -393,6 +396,10 @@ func telPAddressPayload() ([]byte, error) {
 	sb(8, 21, 0)
 	add(20, 20, 1)
 	add(21, 21, 1)
+	add(9, 0, 0x20)
+	bne(8, 9, "suffix_next")
+	mov(24, 21) // next delimiter counts from this new line start
+	a.label("suffix_next")
 	jump("suffix")
 	a.label("suffix_done")
 	add(8, 29, 0x20)
@@ -431,7 +438,15 @@ func telPAddressPayload() ([]byte, error) {
 		return nil, fmt.Errorf("TEL P address helper too large %d", len(code))
 	}
 	out := make([]byte, telPAddressWindow)
+	if len(code) > telGirlSuffixShimOffset {
+		return nil, fmt.Errorf("TEL scoped name helper overlaps local address code")
+	}
+	girl, err := telGirlSuffixPayload()
+	if err != nil {
+		return nil, err
+	}
 	copy(out, code)
+	copy(out[telGirlSuffixShimOffset:], girl)
 	return out, nil
 }
 
@@ -461,6 +476,9 @@ func telPAddressPatch(exe, original, composed []byte) ([]byte, []byte, error) {
 			return nil, nil, fmt.Errorf("TEL P address cloned-wrapper call drift %#x", site.pc)
 		}
 		binary.LittleEndian.PutUint32(out[off:], jalWord(telPAddressShim))
+	}
+	if err := telGirlSuffixPatch(original, out); err != nil {
+		return nil, nil, err
 	}
 	return code, out, nil
 }
@@ -520,6 +538,12 @@ func VerifyTELPAddressInstalled(composed []byte) (int, error) {
 			return 0, fmt.Errorf("TEL P address built overlay caller drift at %#x", site.pc)
 		}
 	}
+	for _, site := range telGirlSuffixSites {
+		off := site.pc - OverlaySlotBase
+		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telGirlSuffixShim) || binary.LittleEndian.Uint32(composed[off+4:]) != site.delay {
+			return 0, fmt.Errorf("TEL scoped name installed call drift %#x", site.pc)
+		}
+	}
 	return len(telPAddressSites), nil
 }
 
@@ -539,6 +563,9 @@ func verifyTELPAddress(exe, original, composed, expected []byte) error {
 		if binary.LittleEndian.Uint32(composed[off:]) != jalWord(telPAddressShim) || binary.LittleEndian.Uint32(composed[off+4:]) != 0x00002825 {
 			return fmt.Errorf("TEL P address site drift %#x", site.pc)
 		}
+	}
+	if err := telGirlSuffixVerify(original, composed); err != nil {
+		return err
 	}
 	return nil
 }

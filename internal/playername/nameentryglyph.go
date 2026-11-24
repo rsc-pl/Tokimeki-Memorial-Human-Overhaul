@@ -1,7 +1,7 @@
 package playername
 
 // Compact 12x12 monochrome name-entry key-label raster. One kana cell
-// still selects its original CP932 value. We do not modify the global kana
+// still selects its original CP932 value. The implementation does not modify the global kana
 // font atlas: it is shared by the rest of the game. The caller must arrange
 // display-only drawing exclusively on the NAME_ENT keyboard screen.
 import "fmt"

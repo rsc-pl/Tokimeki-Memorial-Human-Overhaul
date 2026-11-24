@@ -1,6 +1,6 @@
 package n20arch
 
-// nickname — private, detached OPTION nickname presentation candidate.
+// Nickname — detached OPTION nickname presentation candidate.
 // integrated telephone baseline intentionally left the two 0x800E6364 sources unchanged. This
 // variant reuses the existing OPTION-local packed romanizer and dispatch gate,
 // replacing only its bounded shim, verification metadata and two exact JALs.

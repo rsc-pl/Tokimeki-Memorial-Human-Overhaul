@@ -9,7 +9,7 @@ import (
 // WriteFileBytes replaces file bytes in a writable copy of a MODE2/2352 track.
 // It deliberately matches Track.write_file_bytes in the legacy Python backend.
 // A validation pass checks all targeted sectors before the first write.
-// Production patching remains Python-owned until the full planner is migrated.
+// Callers must supply a writable copy of the track.
 func WriteFileBytes(track interface {
 	io.ReaderAt
 	io.WriterAt

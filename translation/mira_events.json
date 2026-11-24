@@ -19,7 +19,7 @@
         {
           "offset": "0x3c",
           "original": "{G}だったのか、\n相変わらず、\nもてもてだね。",
-          "text": "Oh, it was {G}.\nPopular as\never, I see."
+          "text": "Oh, it's you, {G}.\nStill as popular\nas ever."
         },
         {
           "offset": "0x68",
@@ -469,7 +469,7 @@
         {
           "offset": "0x1aa8",
           "original": "鏡さ〜ん。",
-          "text": "Miraaa!"
+          "text": "Kagami-san"
         },
         {
           "offset": "0x1ab4",

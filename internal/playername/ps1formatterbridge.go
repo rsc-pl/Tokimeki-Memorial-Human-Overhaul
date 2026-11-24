@@ -44,7 +44,7 @@ func BuildPS1FormatterBridge(origin, safeSingleRomanizer uint32) (PS1FormatterBr
 // BuildPS1FormatterBridgeFourRoutes extends the exact original formatter
 // return allowlist from two observed retail sites to all four original
 // surname-global %s-space branches, authenticated against the retail
-// executable. No extra code region, game memory writes or patch approval.
+// executable. No extra code region, game memory writes or proof of patch safety.
 func BuildPS1FormatterBridgeFourRoutes(origin, safeSingleRomanizer uint32) (PS1FormatterBridge, error) {
 	return buildPS1FormatterBridge(origin, safeSingleRomanizer, true)
 }

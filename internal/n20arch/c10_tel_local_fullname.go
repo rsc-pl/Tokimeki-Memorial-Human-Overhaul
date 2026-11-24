@@ -1,6 +1,6 @@
 package n20arch
 
-// telephone: private, runtime-unverified TEL-local unsuffixed player full-name route.
+// Telephone: runtime-unverified TEL-local unsuffixed player full-name route.
 // This reuses speaker rendering's authenticated loader and resident module's existing four complete-line
 // queues. Nothing in this file is enabled in the normal speaker rendering offline verification builder.
 // The TEL overlay owns the executable candidate ONLY while TEL is loaded;
@@ -8,7 +8,7 @@ package n20arch
 // tail-jumps to the original surname+san converter.
 //
 // IMPORTANT: zero bytes in a retail overlay establish file preimage, NOT
-// runtime ownership. This remains an uninstalled diagnostic candidate.
+// runtime ownership. The planner does not install this route.
 import (
 	"bytes"
 	"encoding/binary"
@@ -112,7 +112,7 @@ func telephoneNameResidentSource(original []byte) (source, dispatcher, wrapper, 
 	if err != nil {
 		return nil, nil, nil, nil, err
 	}
-	fullname, err = BuildC10LineFullnamePrototype(c10ResidentRomanizer)
+	fullname, err = BuildC10LineFullname(c10ResidentRomanizer)
 	if err != nil {
 		return nil, nil, nil, nil, err
 	}

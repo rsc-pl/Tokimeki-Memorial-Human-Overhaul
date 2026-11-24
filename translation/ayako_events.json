@@ -44,7 +44,7 @@
         {
           "offset": "0x148",
           "original": "ほ、ほら。\nオゾン層の破壊で、\n直射日光は身体にね…。",
-          "text": "W-well, you see,\nwith the ozone layer gone,\ndirect sunlight is bad..."
+          "text": "W-well...\nWith ozone depletion,\ndirect sun is bad..."
         },
         {
           "offset": "0x180",
@@ -59,7 +59,7 @@
         {
           "offset": "0x1d8",
           "original": "そう言えば、\nさっき先生が、\n{G}を呼んでたよ。",
-          "text": "Oh, by the way,\nthe teacher was just\ncalling {G}"
+          "text": "Oh, the teacher\njust asked for\nyou, {G}."
         },
         {
           "offset": "0x204",
@@ -284,7 +284,7 @@
         {
           "offset": "0x1094",
           "original": "よっぽど、\n好きなんだなぁ…。\nもう２時間も見てるよ。",
-          "text": "She must\nreally love it...\nTwo hours staring now."
+          "text": "She must love it.\nShe's been at it\nfor two hours now."
         },
         {
           "offset": "0x10cc",
@@ -414,7 +414,7 @@
         {
           "offset": "0x16ac",
           "original": "いつもの{G}と\n反応が違う気がする。",
-          "text": "Strange {G}\nNot her normal reaction."
+          "text": "{G}, that's\nnot your usual reaction."
         },
         {
           "offset": "0x1a38",

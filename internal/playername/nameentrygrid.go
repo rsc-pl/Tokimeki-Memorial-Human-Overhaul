@@ -23,7 +23,7 @@ type KeyboardCell struct {
 // KanaKeyboardLabel uses the authenticated entry-grid convention: normal kana are
 // uppercase Latin syllables (KA, SHI, TSU), small composing kana are lowercase
 // (a, ya, tsu). Neither labels nor their rendered pixels are saved as a name.
-// This differs from the display name's ordinary title case (Mumei, Kya).
+// This differs from the display name's ordinary title case.
 func KanaKeyboardLabel(kana string) (string, error) {
 	rr := []rune(kana)
 	if len(rr) != 1 {

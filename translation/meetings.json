@@ -699,7 +699,7 @@
         {
           "offset": "0x18bc",
           "original": "{p}君。\n私の実験を、\nちょっと手伝ってくれる。",
-          "text": "{p}-kun.\nCome help me with\nmy experiment."
+          "text": "{p}-kun.\nCould you help with\nmy experiment?"
         },
         {
           "offset": "0x18e8",
@@ -954,7 +954,7 @@
         {
           "offset": "0x2d70",
           "original": "あっ、逃げた。\n片桐彩子、侮れん奴だ。",
-          "text": "She slipped away!\nGotta watch out for her."
+          "text": "She escaped!\nKatagiri Ayako's no fool."
         },
         {
           "offset": "0x2d9c",
@@ -1449,7 +1449,7 @@
         {
           "offset": "0x4a90",
           "original": "う、うん…。",
-          "text": "Y-yeah..."
+          "text": "M-mm..."
         },
         {
           "offset": "0x4aa0",
@@ -1679,7 +1679,7 @@
         {
           "offset": "0x5f0c",
           "original": "ははは…。\n清川さんの足手まといに\nならなきゃいいけどね。",
-          "text": "Ha ha ha...\nI hope I won't\nhold Kiyokawa-san back."
+          "text": "Ha ha ha...\nHope I won't slow\nyou down, Kiyokawa-san."
         },
         {
           "offset": "0x5f48",
@@ -1789,7 +1789,7 @@
         {
           "offset": "0x6384",
           "original": "ははは、からかわないでくれよ。\n清川さんに言われると、\n本気にしちゃうぜ。",
-          "text": "Ha ha, don't tease me.\nIf Kiyokawa-san says it,\nI might believe it."
+          "text": "Ha ha, don't tease me.\nI'd take that seriously\nfrom you, Kiyokawa-san."
         },
         {
           "offset": "0x63d0",

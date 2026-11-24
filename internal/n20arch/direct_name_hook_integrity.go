@@ -1,6 +1,6 @@
 package n20arch
 
-// direct name hooks is a read-only, private-image build gate for the 15 already installed
+// direct name hooks is a read-only composed-image build gate for the 15 already installed
 // overlay-local direct player-name queue calls. It does not create additional
 // hooks or infer which screenshot used them. Refuse a build that silently
 // falls back to raw CP932 at any of these authenticated sites.

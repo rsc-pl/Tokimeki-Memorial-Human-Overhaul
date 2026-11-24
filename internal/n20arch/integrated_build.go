@@ -16,8 +16,8 @@ package n20arch
 //
 // The planner fails closed. It cannot return success without exactly 15 EXE
 // pairs, exactly 6 overlay pairs, the two v0<12 gates and an exact byte-delta
-// audit against the authenticated originals. The EXE is no longer untouched:
-// it carries 30 relocation words and zero entry hooks. That distinction is
+// audit against the authenticated originals. The EXE carries 30 relocation
+// words and zero entry hooks. That distinction is
 // explicit in the manifest and in every consumer of this plan.
 //
 // No file, image, save, emulator or guest memory is written. safe_to_patch
@@ -320,6 +320,10 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	if e != nil {
 		return p, e
 	}
+	holidayWords, e := applyHolidayPRefresh(overlays["SHOUGATU.EXN"], p.PatchedOverlays["SHOUGATU.EXN"])
+	if e != nil {
+		return p, e
+	}
 	p.N6 = n6
 	p.FieldPrep = fp
 	p.SafeToPatch = false
@@ -331,6 +335,16 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 		return p, err
 	}
 	m.Words = append(m.Words, pFieldWords...)
+	m.Words = append(m.Words, holidayWords...)
+	m.Accounting.OverlayCallsiteWords++
+	m.Accounting.OverlayChangedWords += len(holidayWords)
+	date2Words, e := date2NativePWords(overlays["DATE2.EXN"])
+	if e != nil {
+		return p, e
+	}
+	m.Words = append(m.Words, date2Words...)
+	m.Accounting.OverlayCallsiteWords += len(date2Words)
+	m.Accounting.OverlayChangedWords += len(date2Words)
 	m.Accounting.EXERelocationPairs += 2
 	m.Accounting.EXERelocationWords += 4
 	m.Accounting.OverlayRelocationPairs += 3
@@ -375,8 +389,8 @@ func PlanIntegratedN20Build(exe []byte, overlays map[string][]byte) (N20Integrat
 	m.Regions = append(m.Regions, N20ManifestRegion{
 		Owner: "TEL.EXN", RAMAddr: telSurnamePeriodShim, FileOff: telSurnamePeriodOff,
 		Bytes: len(telDialog.SurnamePeriodBytes), SHA256: sha(telDialog.SurnamePeriodBytes),
-		Kind: "tel_surname_period", Role: "TEL local saved surname punctuation join",
-		Reason: "bounded pair-font suffix folding with exact saved surname N6 tail validation and original strcat fallback",
+		Kind: "tel_surname_period", Role: "TEL local saved name punctuation join",
+		Reason: "bounded pair-font suffix folding with exact saved surname or given N6 tail validation and original strcat fallback",
 	})
 	m.Regions = append(m.Regions, N20ManifestRegion{
 		Owner: "TEL.EXN", RAMAddr: telSelfIntroShim, FileOff: telSelfIntroFileOff,
@@ -780,12 +794,26 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			Role:   "TEL source-indexed multiline name and first-line wrapper",
 			Reason: "retail-verified TEL P address sites use guarded local name line then preserve existing multiline wrapper; other original calls retain wrapper"})
 	}
+	if err := telGirlSuffixSource(overlays["TEL.EXN"]); err != nil {
+		return fmt.Errorf("verify: TEL character name: %w", err)
+	}
+	for _, site := range telGirlSuffixSites {
+		expected = append(expected, N20ManifestWord{Owner: "TEL.EXN", PC: site.pc, Old: jalWord(0x80051438), New: jalWord(telGirlSuffixShim), Kind: "jal",
+			Role: "TEL original character-name producer bounded pair join", Reason: "exact source-owned ratings/rumor callers; original character selector and suffix preserved; latin odd-width pad rotation only; native fallback"})
+	}
 	recordedSites, err := telRecordedMessageSites(exe, overlays["TEL.EXN"])
 	if err != nil {
 		return fmt.Errorf("verify: TEL recorded message: %w", err)
 	}
 	for _, pc := range recordedSites {
 		expected = append(expected, telRecordedMessageWord(pc))
+	}
+	missedSites, err := telMissedDateSites(exe, overlays["TEL.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: TEL missed date: %w", err)
+	}
+	for _, pc := range missedSites {
+		expected = append(expected, telMissedDateWord(pc))
 	}
 	prepared, err := telIndexedPreparedFirstLine(overlays["TEL.EXN"])
 	if err != nil {
@@ -835,6 +863,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			Reason: "verified original suffix strcat; guarded N6 packed-period folding with original fallback",
 		})
 	}
+	expected = append(expected, telGivenPunctuationWord())
 	if err := telSelfIntroRetailSource(exe, overlays["TEL.EXN"]); err != nil {
 		return fmt.Errorf("verify: TEL outgoing self-intro source: %w", err)
 	}
@@ -854,6 +883,16 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 		return fmt.Errorf("verify: P field source inventory: %w", err)
 	}
 	expected = append(expected, pFieldWords...)
+	holidayWords, err := holidayPRefreshWords(overlays["SHOUGATU.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: holiday P refresh: %w", err)
+	}
+	expected = append(expected, holidayWords...)
+	date2Words, err := date2NativePWords(overlays["DATE2.EXN"])
+	if err != nil {
+		return fmt.Errorf("verify: DATE2 P producers: %w", err)
+	}
+	expected = append(expected, date2Words...)
 
 	// 2. Manifest must contain exactly this set: no missing, duplicate or
 	// conflicting record. A duplicate PC with a different new word is a
@@ -1011,6 +1050,8 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 				mod = *p.FieldPrep.FieldPrep.GEKOCopyModule
 			} else if name == "VALEN.EXN" && p.FieldPrep.FieldPrep.VALENSuffixModule != nil {
 				mod = *p.FieldPrep.FieldPrep.VALENSuffixModule
+			} else if name == "DATE2.EXN" && p.FieldPrep.FieldPrep.DATE2PModule != nil {
+				mod = *p.FieldPrep.FieldPrep.DATE2PModule
 			} else {
 				mod = p.FieldPrep.Module
 			}
@@ -1188,7 +1229,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	if acc.EXEEntryHooks != 0 || acc.EXERelocationPairs != 17 || acc.EXERelocationWords != 34 ||
 		acc.OverlayRelocationPairs != 9 || acc.OverlayRelocationWords != 18 ||
 		acc.OverlayCallsiteN6 != 136 || acc.OverlayCallsiteN6FP != 235 ||
-		acc.OverlayCallsiteWords != 456 || acc.TotalEXEChangedWords != 34 ||
+		acc.OverlayCallsiteWords != 466 || acc.TotalEXEChangedWords != 34 ||
 		acc.LegacyEXEChangedWords != 0 {
 		return fmt.Errorf("verify: change accounting %+v", acc)
 	}
@@ -1426,7 +1467,7 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 	}
 	for name, d := range p.FieldPrep.PatchedOverlay {
 		if name == "SHOUGATU.EXN" || name == "DATE2.EXN" {
-			// Reapply only the authenticated P pointer changes and checksum.
+			// Reapply the authenticated P pointer changes and local refresh.
 			check := bytes.Clone(d)
 			for _, w := range pFieldWords {
 				if w.Owner != name {
@@ -1440,6 +1481,11 @@ func verifyN20IntegratedBuild(exe []byte, overlays map[string][]byte, p *N20Inte
 			}
 			ck := packedTableChecksum(check)
 			check[0x2fffc], check[0x2fffd] = byte(ck>>8), byte(ck)
+			if name == "SHOUGATU.EXN" {
+				if _, err := applyHolidayPRefresh(overlays[name], check); err != nil {
+					return fmt.Errorf("verify: holiday P refresh component replay: %w", err)
+				}
+			}
 			if !bytes.Equal(p.PatchedOverlays[name], check) {
 				return fmt.Errorf("verify: holiday P relocation component replay mismatch")
 			}
@@ -1665,7 +1711,7 @@ func AuditN20RelocOwnership(exe []byte, overlays map[string][]byte) (N20RelocOwn
 			return a, err
 		}
 	}
-	// Legacy boolean is now strictly PROOF-oriented: UNKNOWN != SAFE.
+	// A true result requires proof; an unknown range is not safe.
 	// Even an initialized-pointer table is mutable at runtime, and any genuinely
 	// unresolved destination/length prevents proving no later reclear.
 	a.UnknownRuntimeRanges = a.ReclearUnresolved + a.ReclearInitialOnly
@@ -1674,7 +1720,7 @@ func AuditN20RelocOwnership(exe []byte, overlays map[string][]byte) (N20RelocOwn
 	a.ExclusiveRuntimeOwnershipProven = false
 	a.Blocker = "runtime BSS ownership NOT PROVEN: file-initialized pointer tables can change if an unmodelled runtime writer/DMA/ISR exists; indirect stores, save/restore and whole-game lifetime remain; absence of a known overlapping call is not proof of exclusivity"
 	a.Unknowns = []string{
-		"the four previously unresolved sites are now source-resolved (one bounded loop union, three stack slots loaded from the file-backed TT table), but table values remain initial-state evidence only",
+		"four sites resolve to one bounded loop union and three stack slots loaded from the file-backed TT table; table values establish initial state only",
 		"TT 0x80158A60..0x80158A80 has no decoded static 32-bit writer (only 16-bit 0x80158A5C writes); DMA/IRQ/indirect writers are unmodelled",
 		"dynamic pointer / DMA / IRQ / save-restore access to the relocated range is not disprovable offline",
 		"the loader is checksum-gated, not atomic; torn CD load is unmodelled",
@@ -1801,6 +1847,9 @@ func patchedModuleFor(name string, n6 OverlayLocalPlan, fp N20RelocPlan) (*Overl
 		}
 		if name == "VALEN.EXN" && fp.FieldPrep.VALENSuffixModule != nil {
 			return fp.FieldPrep.VALENSuffixModule, false
+		}
+		if name == "DATE2.EXN" && fp.FieldPrep.DATE2PModule != nil {
+			return fp.FieldPrep.DATE2PModule, false
 		}
 		m := fp.Module
 		return &m, false

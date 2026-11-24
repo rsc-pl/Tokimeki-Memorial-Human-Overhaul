@@ -79,7 +79,7 @@
         {
           "offset": "0x34c",
           "original": "すみません。\nこういう雰囲気は、\n昔から苦手で…。{q}もっと、別な絵なら、\nいいんですけど…。{q}すみません。\n私の好みには、\nちょっと…。",
-          "text": "I'm sorry.\nI've never been good\nwith this mood...{q}A different kind\nwould be fine, but...{q}I'm sorry.\nIt's not quite\nto my taste..."
+          "text": "I'm sorry.\nI've always found\nthis unsettling...{q}A different kind\nwould be fine, but...{q}I'm sorry.\nIt's not quite\nto my taste..."
         },
         {
           "offset": "0x3d4",
@@ -174,7 +174,7 @@
         {
           "offset": "0xba8",
           "original": "フォームを直すといいかな。{q}{G}には絶対無理だね。{q}どうしたらいいかな…？",
-          "text": "Work on your form a bit.{q}Never happen, {G}{q}Hmm, what would help...?"
+          "text": "Work on your form a bit.{q}You? No way, {G}.{q}Hmm, what would help...?"
         },
         {
           "offset": "0xbf8",
@@ -644,7 +644,7 @@
         {
           "offset": "0x2af0",
           "original": "はい、{G}にあげるよ。",
-          "text": "Here, for {G}."
+          "text": "Here, for you, {G}."
         },
         {
           "offset": "0x2b08",
@@ -664,7 +664,7 @@
         {
           "offset": "0x2b6c",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x2b90",
@@ -739,7 +739,7 @@
         {
           "offset": "0x3148",
           "original": "最近は、女の子も結構来てるよ。{q}時代遅れなんじゃない。{q}不良になっちゃう？",
-          "text": "Lots of girls come lately.{q}Aren't you behind the times?{q}Afraid you'll turn punk?"
+          "text": "Girls come here now too.{q}Isn't that outdated?{q}Afraid you'll turn punk?"
         },
         {
           "offset": "0x319c",
@@ -759,7 +759,7 @@
         {
           "offset": "0x3288",
           "original": "これが一番向いてる\n気がしますけど、\nできそうにないですね。{q}私には無理だと\n思います…。{q}取りたいとは思いますけど、\n取れそうもないですね…。",
-          "text": "This one seems to\nsuit me best, but\nI don't think I can.{q}I don't think\nI could...{q}I'd like to win one, but\nI doubt I could..."
+          "text": "This seems best\nfor me, but I doubt\nI could manage.{q}I don't think\nI could...{q}I'd like to win one, but\nI doubt I could..."
         },
         {
           "offset": "0x3318",
@@ -1464,7 +1464,7 @@
         {
           "offset": "0x68f8",
           "original": "花を見てると、心が和むね。{q}食べれるのかな。{q}奇麗な花だねぇ。",
-          "text": "Flowers are so soothing.{q}I wonder if they taste good.{q}What pretty flowers."
+          "text": "Flowers are so soothing.{q}Can you eat them?{q}They're so pretty."
         },
         {
           "offset": "0x6940",
@@ -1574,7 +1574,7 @@
         {
           "offset": "0x7094",
           "original": "この銀のネックレスはどう？{q}このどくろの指輪はどう？{q}このカラフルなのはどう？",
-          "text": "How about this silver one?{q}How about this skull ring?{q}How about this colorful one?"
+          "text": "This silver necklace?{q}This skull ring?{q}This colorful one?"
         },
         {
           "offset": "0x70ec",
@@ -1679,7 +1679,7 @@
         {
           "offset": "0x7b20",
           "original": "俺はわりと好きだな…。{q}全然面白くない。{q}{G}はどうなの？",
-          "text": "I kinda like it...{q}It's not fun at all.{q}What about you, {G}"
+          "text": "I kinda like it...{q}It's not fun at all.{q}And you, {G}?"
         },
         {
           "offset": "0x7b60",
@@ -1904,7 +1904,7 @@
         {
           "offset": "0x8c2c",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Ask {G} to see it.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x8c64",
@@ -2069,7 +2069,7 @@
         {
           "offset": "0x9458",
           "original": "{G}と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "I had {G} with me.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
+          "text": "Not with you, {G}.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
         },
         {
           "offset": "0x94bc",
@@ -2179,7 +2179,7 @@
         {
           "offset": "0x9990",
           "original": "{G}と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "I had {G} with me.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
+          "text": "Not with you, {G}.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
         },
         {
           "offset": "0x99f4",
@@ -2289,7 +2289,7 @@
         {
           "offset": "0x9f04",
           "original": "{G}と一緒だから平気だったよ。{q}揺れる？全然気付かなかったよ。{q}園内で、一番怖い乗り物かもね。",
-          "text": "I had {G} with me.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
+          "text": "Not with you, {G}.{q}Swayed? Didn't notice.{q}Scariest ride in the park."
         },
         {
           "offset": "0x9f68",

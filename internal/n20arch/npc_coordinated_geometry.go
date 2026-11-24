@@ -9,15 +9,15 @@ import (
 	"tokimemo/internal/script"
 )
 
-// PlanCoordinatedNPCAFirstLinePrivate is a narrowly-scoped PRIVATE geometry
-// candidate for the six NPC-A formatter routes observed in gameplay. It preserves
+// PlanCoordinatedNPCAFirstLine plans a geometry adjustment
+// for the six NPC-A formatter routes. It preserves
 // the native speaker-X, N10 name bytes and glyph/font setup. It moves the
 // quote-prefix and the dialogue parser's initial X TOGETHER, to the right of
 // the formatted speaker's conservative pair-glyph right edge.
 //
 // This is NOT a runtime fit proof: actual glyph preparation, wrapping, GPU
 // bounding boxes, per-window right edges, C10 ownership and overlays remain
-// unverified. Do not ship through any public builder; safe_to_patch is false.
+// unverified. This function alone does not authorize output; safe_to_patch is false.
 //
 // n is the exact formatted source byte count (less the space) from formatted length and is
 // read from the existing sp+0x286 halfword. Retail NPC X=-104-4*n. For 1-byte
@@ -36,7 +36,7 @@ import (
 // immediately before the name call and untouched by intervening instructions
 // and the queue callee (the old redundant zero stores are reclaimed).
 // No new executable code, BSS, overlay hook, or independent RAM allocation.
-func PlanCoordinatedNPCAFirstLinePrivate(retail, npcGeometryStage []byte, englishNames []string) ([]byte, error) {
+func PlanCoordinatedNPCAFirstLine(retail, npcGeometryStage []byte, englishNames []string) ([]byte, error) {
 	const base = uint32(0x80040800)
 	const digest = "bae1514fcc4bd8843c69803bf469632b004377b67f3e4408f0641c545fd843ae"
 	if len(retail) != 667648 || len(npcGeometryStage) != len(retail) || fmt.Sprintf("%x", sha256.Sum256(retail)) != digest {

@@ -64,7 +64,7 @@
         {
           "offset": "0x204",
           "original": "{G}の顔を見たら、\n治っちゃったよ。",
-          "text": "I saw {G}\nand I'm all better."
+          "text": "Seeing you, {G},\nmade me better."
         },
         {
           "offset": "0x228",

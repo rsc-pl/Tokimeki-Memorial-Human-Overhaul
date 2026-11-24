@@ -184,7 +184,7 @@
         {
           "offset": "0x5f8",
           "original": "はぁ、素晴らしいですねぇ。\n私には、\nこんなに書けません。",
-          "text": "Ohh, how wonderful.\nI could never\nwrite so many."
+          "text": "Oh, how wonderful!\nI could never\nwrite that much."
         },
         {
           "offset": "0x634",
@@ -384,7 +384,7 @@
         {
           "offset": "0xdf4",
           "original": "そうなんですか？\n皆さんすごいですね。",
-          "text": "Is that so?\nEveryone is amazing."
+          "text": "Oh, really?\nThey're all impressive."
         },
         {
           "offset": "0xe1c",
@@ -1539,7 +1539,7 @@
         {
           "offset": "0x378c",
           "original": "よかったですよ。\nお父様も、素晴らしいと\n絶賛なさっておりました。",
-          "text": "It was lovely.\nFather praised it\nas wonderful, too."
+          "text": "It was lovely.\nFather couldn't stop\npraising it, either."
         },
         {
           "offset": "0x37d0",
@@ -2088,7 +2088,7 @@
         {
           "offset": "0xcf0",
           "original": "そうなんですか。\nそれなら、別に考えなくても\nよかったのですね。",
-          "text": "Is that so.\nThen I needn't have\nthought about it."
+          "text": "Oh, I see.\nThen I needn't have\nthought about it."
         },
         {
           "offset": "0xd30",
@@ -2113,7 +2113,7 @@
         {
           "offset": "0xe20",
           "original": "そうなんですかぁ。\nそれなら別に早口でも\nいいですね。",
-          "text": "Is that so?\nThen speaking fast\nis fine, I suppose."
+          "text": "Oh, I see.\nThen it doesn't matter\nhow fast he speaks."
         },
         {
           "offset": "0xe58",
@@ -2138,7 +2138,7 @@
         {
           "offset": "0xf10",
           "original": "そうなんですか？\nみなさんすごいですね。",
-          "text": "Is that so?\nEveryone is amazing."
+          "text": "Oh, really?\nThey're all impressive."
         },
         {
           "offset": "0xf38",
@@ -3018,7 +3018,7 @@
         {
           "offset": "0x2e7c",
           "original": "はぁ、そうなんですか。\nそれで光る物が目の前を\n通ったのですね。",
-          "text": "Ohh, is that so.\nSo that's why something\nshiny passed by."
+          "text": "Oh, I see.\nSo that's why something\nshiny passed by."
         },
         {
           "offset": "0x2ebc",

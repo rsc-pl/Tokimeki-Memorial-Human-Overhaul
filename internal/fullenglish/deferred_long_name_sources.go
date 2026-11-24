@@ -87,7 +87,7 @@ func longNamePlaceholder(text string, available int) (string, error) {
 			return candidate, nil
 		}
 	}
-	return "", fmt.Errorf("name %q cannot be represented even as private short-stage prefix in %d bytes", text, available)
+	return "", fmt.Errorf("name %q cannot be represented even as short-stage prefix in %d bytes", text, available)
 }
 
 // separateLongNameSources validates preimages using the existing production
@@ -177,7 +177,7 @@ func longNameApplyNameStage(english []byte, deferred []longNameDeferredName) err
 			}
 		}
 		if p.Offset < 0 || p.Offset+cap > len(english) || len(enc)+1 > cap || !bytes.Equal(english[p.Offset:p.Offset+len(raw)], raw) || english[p.Offset+len(raw)] != 0 {
-			return fmt.Errorf("long-name source private name stage invalid original area %s %#x", p.File, p.Offset)
+			return fmt.Errorf("long-name source name stage invalid original area %s %#x", p.File, p.Offset)
 		}
 		clear(english[p.Offset : p.Offset+cap])
 		copy(english[p.Offset:], enc)
@@ -186,7 +186,7 @@ func longNameApplyNameStage(english []byte, deferred []longNameDeferredName) err
 }
 
 func longNameSourceNames(retail, english []byte, deferred []longNameDeferredName) (stageShort, fullStage, desiredShort, desiredFull []string, err error) {
-	stageShort, fullStage, err = ownerEnglishSourceNames(retail, english)
+	stageShort, fullStage, err = readEnglishSourceNames(retail, english)
 	if err != nil {
 		return
 	}

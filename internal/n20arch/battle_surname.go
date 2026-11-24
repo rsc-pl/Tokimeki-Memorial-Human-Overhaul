@@ -10,17 +10,19 @@ import (
 )
 
 const (
-	RPGCopyPC       uint32 = 0x801334FC
-	RPGOriginalCopy uint32 = 0x800AE0F0
-	RPGBuffer       uint32 = 0x8015E828
-	RPGNextBuffer   uint32 = 0x8015E850
-	RPGMaxBytes            = int(RPGNextBuffer - RPGBuffer)
-	rpgStatusNamePC uint32 = 0x801525CC
-	rpgStatusDraw   uint32 = 0x8013E934
-	rpgStatusStub   uint32 = OLGuardBase + 0xe0
+	RPGCopyPC             uint32 = 0x801334FC
+	RPGOriginalCopy       uint32 = 0x800AE0F0
+	RPGBuffer             uint32 = 0x8015E828
+	RPGNextBuffer         uint32 = 0x8015E850
+	RPGMaxBytes                  = int(RPGNextBuffer - RPGBuffer)
+	rpgStatusNamePC       uint32 = 0x801525CC
+	rpgStatusCachedNamePC uint32 = 0x801597C4
+	rpgStatusCachedName   uint32 = 0x8015E0D8
+	rpgStatusDraw         uint32 = 0x8013E934
+	rpgStatusStub         uint32 = OLGuardBase + 0xe0
 )
 
-type RPGPrivateCandidate struct {
+type RPGOverlayPlan struct {
 	Overlay            []byte
 	WrapperRAM         uint32
 	WrapperBytes       int
@@ -31,9 +33,11 @@ type RPGPrivateCandidate struct {
 	BlockedReason      string
 }
 
-// The native status-name helper takes x, y, and a literal string pointer.
-// Only the player's first row is redirected; the following NPC-table row
-// and the original helper's coordinates and return value stay unchanged.
+// The native status-name helper takes x, y, and a string pointer. The first
+// player row has two original callers: one uses the saved surname directly;
+// the other uses a short scene-local cache. The latter is eligible only when
+// its complete eight-byte value equals the currently saved surname. The
+// adjacent NPC row and original drawing coordinates remain unchanged.
 func rpgStatusNameWrapper(romanizer uint32) []byte {
 	a := &miniAsm{labels: map[string]int{}}
 	w := func(v uint32) { a.w(v) }
@@ -51,8 +55,24 @@ func rpgStatusNameWrapper(romanizer uint32) []byte {
 	bne(5, 8, "retail")
 	w(olLUI(8, OLA0SurnameField))
 	w(olORI(8, 8, OLA0SurnameField))
-	bne(6, 8, "retail")
-	w(olAddu(4, 6, 0))
+	// The direct source is already the saved field. Other pointers are
+	// never trusted unless they are exactly the second retail player row.
+	a.b(4, 6, 8, "convert")
+	w(0)
+	w(olLUI(9, rpgStatusCachedName))
+	w(olORI(9, 9, rpgStatusCachedName&0xffff))
+	bne(6, 9, "retail")
+	w(olLW(10, 8, 0))
+	w(olLW(11, 6, 0))
+	w(0) // R3000A load delay before comparison.
+	bne(10, 11, "retail")
+	w(olLW(10, 8, 4))
+	w(olLW(11, 6, 4))
+	w(0) // R3000A load delay before comparison.
+	bne(10, 11, "retail")
+	w(0)
+	a.label("convert")
+	w(olAddu(4, 8, 0)) // Always convert current saved surname, never the cache.
 	add(5, 29, 0x20)
 	add(6, 0, 16)
 	w(jalWord(romanizer))
@@ -191,12 +211,12 @@ func rpgSavedSurnameRPGCopyWrapper(romanizer uint32) ([]byte, error) {
 	return words(a.words...), nil
 }
 
-// PlanRPGPrivateSurname integrates into the actual private English RPG
+// PlanRPGSurnameOverlay composes the supplied English RPG
 // overlay only after validating its original callsite, its original writable
 // name slot and its *already installed* formatter bridge C10 carrier. Both modules occupy
 // disjoint original-zero regions. No save, translation or other overlay edits.
-func PlanRPGPrivateSurname(retailRPG, currentRPG []byte) (RPGPrivateCandidate, error) {
-	var out RPGPrivateCandidate
+func PlanRPGSurnameOverlay(retailRPG, currentRPG []byte) (RPGOverlayPlan, error) {
+	var out RPGOverlayPlan
 	if len(retailRPG) != OverlayLoadSectors*2048 || sha(retailRPG) != OverlaySHA["RPG_BAT.EXN"] {
 		return out, fmt.Errorf("battle surname original RPG_BAT authentication failed")
 	}
@@ -211,6 +231,7 @@ func PlanRPGPrivateSurname(retailRPG, currentRPG []byte) (RPGPrivateCandidate, e
 		return out, fmt.Errorf("battle surname original RPG surname strcpy ABI/preimage drift")
 	}
 	statusOff := int(rpgStatusNamePC - OverlaySlotBase)
+	cachedOff := int(rpgStatusCachedNamePC - OverlaySlotBase)
 	drawOff := int(rpgStatusDraw - OverlaySlotBase)
 	// The first call is the saved surname, the second is an indexed
 	// NPC name at y+16. The original draw helper forwards a2 to a3
@@ -218,6 +239,16 @@ func PlanRPGPrivateSurname(retailRPG, currentRPG []byte) (RPGPrivateCandidate, e
 	if !bytes.Equal(retailRPG[statusOff-20:statusOff+8], currentRPG[statusOff-20:statusOff+8]) ||
 		!bytes.Equal(retailRPG[statusOff-20:statusOff+8], words(0x3c01800e, 0x3c06800e, 0xa02062ba, 0x24c66354, 0x240400b1, jalWord(rpgStatusDraw), 0x240500b3)) {
 		return out, fmt.Errorf("battle status name caller preimage drift")
+	}
+	// The second player row renders an eight-byte cached name at precisely
+	// the same position. The cache can differ from the current save; the
+	// wrapper checks exact equality at runtime and falls back on mismatch.
+	if !bytes.Equal(retailRPG[cachedOff-12:cachedOff+8], currentRPG[cachedOff-12:cachedOff+8]) ||
+		!bytes.Equal(retailRPG[cachedOff-12:cachedOff+8], words(
+			0x3c068016, 0x24c6e0d8, 0x240400b1, jalWord(rpgStatusDraw), 0x240500b3)) ||
+		binary.LittleEndian.Uint32(retailRPG[cachedOff+4:]) != 0x240500b3 ||
+		!bytes.Equal(retailRPG[cachedOff+8:cachedOff+0x4c], currentRPG[cachedOff+8:cachedOff+0x4c]) {
+		return out, fmt.Errorf("battle cached status-name caller or adjacent NPC row drift")
 	}
 	if !bytes.Equal(retailRPG[drawOff:drawOff+0x48], currentRPG[drawOff:drawOff+0x48]) ||
 		!bytes.Equal(retailRPG[statusOff+8:statusOff+0x4c], currentRPG[statusOff+8:statusOff+0x4c]) {
@@ -293,16 +324,17 @@ func PlanRPGPrivateSurname(retailRPG, currentRPG []byte) (RPGPrivateCandidate, e
 	copy(out.Overlay[OLBodyFileOff:OLBodyFileOff+len(module.Body)], module.Body)
 	binary.LittleEndian.PutUint32(out.Overlay[off:], jalWord(OLStubRAM))
 	binary.LittleEndian.PutUint32(out.Overlay[statusOff:], jalWord(rpgStatusStub))
+	binary.LittleEndian.PutUint32(out.Overlay[cachedOff:], jalWord(rpgStatusStub))
 	binary.BigEndian.PutUint16(out.Overlay[len(out.Overlay)-4:], packedTableChecksum(out.Overlay))
 	for i := range out.Overlay {
 		if out.Overlay[i] == currentRPG[i] {
 			continue
 		}
-		if (i >= OLPayloadFileOff && i < OLPayloadEndOff) || (i >= off && i < off+4) || (i >= statusOff && i < statusOff+4) || (i >= len(out.Overlay)-4 && i < len(out.Overlay)-2) {
+		if (i >= OLPayloadFileOff && i < OLPayloadEndOff) || (i >= off && i < off+4) || (i >= statusOff && i < statusOff+4) || (i >= cachedOff && i < cachedOff+4) || (i >= len(out.Overlay)-4 && i < len(out.Overlay)-2) {
 			continue
 		}
-		return RPGPrivateCandidate{}, fmt.Errorf("battle surname unowned RPG byte changed %#x", i)
+		return RPGOverlayPlan{}, fmt.Errorf("battle surname unowned RPG byte changed %#x", i)
 	}
-	out.BlockedReason = "battle surname private battle surname adapter: verified per-overlay code and 40B source buffer, but live display/CPU/DMA/IRQ ownership and exact battle frame still unverified; safe_to_patch=false, runtime_pass=false"
+	out.BlockedReason = "battle surname adapter: verified per-overlay code and 40B source buffer, but live display/CPU/DMA/IRQ ownership and exact battle frame still unverified; safe_to_patch=false, runtime_pass=false"
 	return out, nil
 }

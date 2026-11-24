@@ -564,7 +564,7 @@
         {
           "offset": "0x2478",
           "original": "取れたら{G}にあげるね。",
-          "text": "Yours if I win, {G}"
+          "text": "Yours if I win, {G}."
         },
         {
           "offset": "0x249c",
@@ -999,7 +999,7 @@
         {
           "offset": "0x4444",
           "original": "一流企業をねらっている\nということを聞き出した。\n紐緒さん大学行かないんだ。",
-          "text": "Found out she's aiming\nfor a top company.\nNo college for her, then."
+          "text": "Found out she aims\nfor a top company.\nNo college for Himoo-san."
         },
         {
           "offset": "0x4494",
@@ -1704,7 +1704,7 @@
         {
           "offset": "0x7ae4",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x7b1c",

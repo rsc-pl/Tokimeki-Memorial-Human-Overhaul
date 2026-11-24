@@ -157,7 +157,7 @@ func auditCueForNative(path string) (cueAudit, error) {
 			}
 			fileUsed, haveTrack, indexSeen, indexZeroSeen = true, true, false, false
 		case "FLAGS":
-			// DCP is a copy-permitted subchannel flag in the owner's original CUE.
+			// DCP is a copy-permitted subchannel flag in the original input CUE.
 			// Preserve the line exactly in the copied CUE; do not infer sectors from it.
 			if !haveTrack || len(fields) != 2 || !strings.EqualFold(fields[1], "DCP") || indexSeen {
 				return result, fmt.Errorf("CUE line %d: unsupported track flag", lineNo+1)

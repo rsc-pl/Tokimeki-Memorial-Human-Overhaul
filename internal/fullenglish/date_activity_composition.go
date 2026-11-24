@@ -28,3 +28,19 @@ func composeDATEActivitySurname(exe []byte, originals, physical map[string][]byt
 	physical["CDROM/EXEDIR/DATE.EXN"] = newDATE
 	return nil
 }
+
+func composeDialogueNickname(originals, physical map[string][]byte) error {
+	staged := make(map[string][]byte, 2)
+	for _, name := range []string{"DATE.EXN", "GEKO.EXN"} {
+		path := "CDROM/EXEDIR/" + name
+		data, err := n.PlanDialogueNickname(name, originals[name], physical[path])
+		if err != nil {
+			return err
+		}
+		staged[path] = data
+	}
+	for path, data := range staged {
+		physical[path] = data
+	}
+	return nil
+}

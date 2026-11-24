@@ -35,7 +35,7 @@ func BuildC10TerminalQueueAdapter(base uint32) ([]byte, error) {
 	mov(18, 6)
 	mov(19, 7)
 	// Original fifth O32 argument at old SP+0x10; nested retail queue
-	// observes our new SP+0x10 instead. Copy it exactly.
+	// observes the adapter frame at SP+0x10 instead. Copy it exactly.
 	lw(12, c10QueueFrame+0x10)
 	sw(12, 0x10)
 	beq(19, 0, "retail")

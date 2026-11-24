@@ -1,8 +1,7 @@
 package fullenglish
 
 // Name-entry graphics are supplied only through the normal, explicit
-// translation corpus. An optional private research directory must never
-// influence a public build.
+// translation corpus. No implicit alternate directory may influence the build.
 import (
 	"fmt"
 	"os"

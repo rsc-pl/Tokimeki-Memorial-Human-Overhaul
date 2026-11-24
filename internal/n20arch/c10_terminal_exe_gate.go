@@ -1,7 +1,7 @@
 package n20arch
 
 // EXE-tail guard for both verified renderer terminal queue exits.
-// This candidate remains private: GYOZI residency, runtime overwrites and
+// Runtime safety remains unverified: GYOZI residency, runtime overwrites and
 // parser behavior require grouped game QA. Default integrated baseline is untouched.
 import (
 	"bytes"

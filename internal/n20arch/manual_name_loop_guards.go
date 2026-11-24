@@ -136,7 +136,7 @@ func parserCopyGuardCompactParserProgram() (parserGuardProgram, error) {
 	a.j("scan")
 	a.w(0)
 
-	// Our handwritten epilogue is the authenticated original parser early exit.
+	// The emitted epilogue reproduces the authenticated original parser early exit.
 	// Resolve only branches and local jumps, then overwrite the fail J target.
 	a.label("epilogue")
 	a.resolve()

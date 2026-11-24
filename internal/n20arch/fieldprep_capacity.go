@@ -289,6 +289,6 @@ func FieldPrepCapacityReportFor(a FieldPrepCapacityAudit) map[string]any {
 	}
 }
 
-// The capacity audit is intentionally cheap enough to run in tests (four
+// The capacity audit has a bounded computation (four
 // million short names), but the evidence generator should not enumerate twice.
 // Callers may cache the value; no global mutable state is used here.

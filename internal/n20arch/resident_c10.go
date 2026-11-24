@@ -1,7 +1,7 @@
 package n20arch
 
 // C10 physically materialises an authenticated, relocated resident *source*
-// using the otherwise unused tail of GYOZI.EXN. This is a PRIVATE OFFLINE
+// using the otherwise unused tail of GYOZI.EXN. This is a in-memory offline
 // component test, NOT a runtime-deliverable patch. It deliberately leaves all
 // EXE hooks untouched: before source promotion, an unconditional EXE call
 // would jump into uninitialised persistent RAM. The 26-overlay loader bridge,

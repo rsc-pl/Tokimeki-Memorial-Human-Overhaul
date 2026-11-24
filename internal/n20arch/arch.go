@@ -1,17 +1,15 @@
-// Package n20arch is an ISOLATED, runtime-unverified candidate for the corrected
-// N20 delivery architecture. It never opens a game image, save, emulator or
-// production builder. Retail bytes are read only when a caller explicitly
-// supplies a private path through an environment variable in tests.
+// Package n20arch composes and validates N20 name-rendering components
+// from supplied source bytes. Static composition does not establish runtime safety.
 //
-// An earlier, rejected layout placed a persistent 4,032 B core at 0x801FF000 and
-// disabled the original BIOS heap. Both choices are REJECTED here:
+// A persistent 4,032 B core at 0x801FF000 and disabling the original BIOS
+// heap are forbidden:
 //   - the original InitHeap(0x801FF800,0x7F0) heap overlaps that core by
 //     1,984 B; heap activity and overlay lifetime remain unproven;
 //   - the four boot words that implement the SP switch and InitHeap call are
 //     preserved byte-identically, including the SP-derived store to
 //     0x80125124.
 //
-// The corrected module is fully overlay-local: it lives in the authenticated
+// The module is fully overlay-local: it lives in the authenticated
 // overlay payload window at 0x80160E00, which the original operation-6 loader
 // already owns and replaces on every scene load. There is no resident code,
 // no boot patch, no preload call and no ENDING-first ordering assumption.
@@ -63,10 +61,8 @@ const (
 	SurnameField    uint32 = 0x800E6354
 	GivenField      uint32 = 0x800E635C
 	SanCallerReturn uint32 = 0x80081DD0
-	// HISTORICAL-UNUSED: the old labels "fullname return A/B" were wrong.
-	// Both words are renderer 0x80081190 queue exits (jal 0x8004E788), not
-	// full-name entries; see N20_RESULT.md §12.6. Kept for audit only and
-	// referenced by no code.
+	// These unused constants identify the 0x80081190 renderer queue exits
+	// (jal 0x8004E788), not full-name entries.
 	FullnameReturnA    uint32 = 0x80082708
 	FullnameReturnB    uint32 = 0x8008272C
 	ForbiddenOldBase   uint32 = 0x800E3800
@@ -127,8 +123,8 @@ var PreservedBootWords = []struct {
 // either original FlushCache caller.
 var PreloadSites = []uint32{}
 
-// RejectedBootPatch records the superseded four-word patch so the evidence can
-// show why it is not applied.
+// RejectedBootPatch lists the four forbidden boot instruction replacements.
+// The original instructions must remain intact.
 var RejectedBootPatch = []struct {
 	PC       uint32
 	Original uint32
@@ -325,7 +321,7 @@ func sha(b []byte) string          { return fmt.Sprintf("%x", sha256.Sum256(b)) 
 // Payload returns the 4,312 B overlay payload: "N5", the module and zero tail.
 func (c Core) PayloadBytes() []byte { return append([]byte(nil), c.Payload...) }
 
-// RefuseForbidden rejects the superseded scratch-table address and rejected
+// RefuseForbidden rejects the original scratch-table range and unverified
 // persistent top-of-RAM claim before any build.
 func RefuseForbidden(base uint32) error {
 	if base >= ForbiddenOldBase && base < ForbiddenOldEnd {

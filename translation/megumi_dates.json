@@ -24,7 +24,7 @@
         {
           "offset": "0x5c",
           "original": "この絵、奇麗だと思わない？{q}あの人、奇麗だな…。{q}この絵、{G}に似てるね。",
-          "text": "Isn't this one pretty?{q}That lady is pretty...{q}Looks like {G}."
+          "text": "Isn't this one pretty?{q}That lady is pretty...{q}Looks like you, {G}"
         },
         {
           "offset": "0xac",
@@ -724,7 +724,7 @@
         {
           "offset": "0x2e48",
           "original": "{G}と一緒だからね。{q}賭事好きなの？{q}女の子にわりと人気あるからね。",
-          "text": "'Cause I'm with {G}{q}You like gambling?{q}Girls really like these."
+          "text": "Thanks to you, {G}.{q}You like gambling?{q}Girls really like these."
         },
         {
           "offset": "0x2e90",
@@ -1114,7 +1114,7 @@
         {
           "offset": "0x4874",
           "original": "二流企業に進みたい。\nということを聞き出した。",
-          "text": "Found out she wants to join\na second-rate company."
+          "text": "Found out she wants to\njoin a second-tier firm."
         },
         {
           "offset": "0x48a8",
@@ -1369,7 +1369,7 @@
         {
           "offset": "0x5b34",
           "original": "それじゃ…。",
-          "text": "Good night..."
+          "text": "See you..."
         },
         {
           "offset": "0x5c30",
@@ -1429,7 +1429,7 @@
         {
           "offset": "0x5ff0",
           "original": "花を見てると、心が和むね。{q}食べれるのかな。{q}奇麗な花だねぇ。",
-          "text": "Flowers are so soothing.{q}I wonder if they taste good.{q}What pretty flowers."
+          "text": "Flowers are so soothing.{q}Can you eat them?{q}They're so pretty."
         },
         {
           "offset": "0x6038",
@@ -1509,7 +1509,7 @@
         {
           "offset": "0x6598",
           "original": "いいから、いいから。\n貸してよ。",
-          "text": "It's fine, it's fine.\nHand them over."
+          "text": "It's fine.\nLet me take them."
         },
         {
           "offset": "0x65bc",
@@ -1644,7 +1644,7 @@
         {
           "offset": "0x70b0",
           "original": "俺はわりと好きだな…。{q}全然面白くない。{q}{G}はどうなの？",
-          "text": "I kinda like it...{q}It's not fun at all.{q}{G}, and you?"
+          "text": "I kinda like it...{q}It's not fun at all.{q}And you, {G}?"
         },
         {
           "offset": "0x70f0",
@@ -1769,7 +1769,7 @@
         {
           "offset": "0x789c",
           "original": "{G}みたい。{q}ちょっと、おかしいんじゃない？{q}うん。可愛いね。",
-          "text": "Looks like {G}.{q}Isn't that a little weird?{q}Yeah. It's cute."
+          "text": "Looks like you, {G}.{q}A bit weird, isn't it?{q}Yeah. It's cute."
         },
         {
           "offset": "0x78e0",
@@ -1869,7 +1869,7 @@
         {
           "offset": "0x80ec",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x8124",
@@ -2314,7 +2314,7 @@
         {
           "offset": "0xa26c",
           "original": "{G}と一緒だからね。{q}散歩は、お腹がすいてくるね。{q}何か気分がいいね。",
-          "text": "'Cause I'm with {G}{q}Walking makes me hungry.{q}I'm in a great mood."
+          "text": "Thanks to you, {G}.{q}Walking makes me hungry.{q}I'm in a great mood."
         },
         {
           "offset": "0xa2b8",

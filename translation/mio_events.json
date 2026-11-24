@@ -29,7 +29,7 @@
         {
           "offset": "0xa0",
           "original": "い、いえ、大丈夫です。\nそれに、\n迷惑がかかりますし…。",
-          "text": "N-no, I'm all right.\nBesides,\nit would be a bother..."
+          "text": "N-no, I'm all right.\nBesides,\nI'd only be a bother..."
         },
         {
           "offset": "0xd8",
@@ -54,7 +54,7 @@
         {
           "offset": "0x184",
           "original": "それで、これはどこまで\n運べばいいのかな？",
-          "text": "So, how far do\nthese need to go?"
+          "text": "So, where should I\ntake these?"
         },
         {
           "offset": "0x1b0",
@@ -194,7 +194,7 @@
         {
           "offset": "0xae0",
           "original": "そうなんですか？\nだとすると…。",
-          "text": "Is that so?\nThen..."
+          "text": "Oh, really?\nIn that case..."
         },
         {
           "offset": "0xb00",

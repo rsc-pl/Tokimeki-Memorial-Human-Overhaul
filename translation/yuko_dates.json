@@ -24,7 +24,7 @@
         {
           "offset": "0x4c",
           "original": "この絵、奇麗だと思わない？{q}あの人、奇麗だな…。{q}この絵、{G}に似てるね。",
-          "text": "Isn't this one pretty?{q}That lady is pretty...{q}It looks like {G}."
+          "text": "Isn't this one pretty?{q}That lady is pretty...{q}Looks like you, {G}"
         },
         {
           "offset": "0x9c",
@@ -174,7 +174,7 @@
         {
           "offset": "0xa2c",
           "original": "{G}だったらとれるって。{q}{G}には絶対とれないね。{q}とにかく、頑張れ。",
-          "text": "{G}'s got it!{q}Hopeless, {G}{q}Anyway, go for it!"
+          "text": "You can get it, {G}.{q}No chance, {G}.{q}Anyway, go for it!"
         },
         {
           "offset": "0xa74",
@@ -519,7 +519,7 @@
         {
           "offset": "0x2120",
           "original": "はい、{G}にあげるよ。",
-          "text": "{G}, for you."
+          "text": "Here, for you, {G}."
         },
         {
           "offset": "0x2138",
@@ -1039,7 +1039,7 @@
         {
           "offset": "0x4354",
           "original": "三流大学ぐらいには行きたいと\n思っているが、それでもかなり\n危ないらしい。\nということを聞き出した。",
-          "text": "Found out she wants to get\ninto a third-rate college,\nbut even that's looking\npretty iffy."
+          "text": "Found out she aims for\na third-tier college,\nbut even that might\nbe a stretch."
         },
         {
           "offset": "0x43bc",
@@ -1399,7 +1399,7 @@
         {
           "offset": "0x5eb4",
           "original": "買ってあげたいけど、高いよね。{q}借金してでも買ったら。{q}とりあえず、諦めるしかないね。",
-          "text": "I'd buy it, but it's pricey.{q}Borrow money and buy it.{q}Guess you'll have to pass."
+          "text": "I'd buy it for you, but...{q}Borrow money and buy it.{q}Guess you'll have to pass."
         },
         {
           "offset": "0x5f14",
@@ -1554,7 +1554,7 @@
         {
           "offset": "0x6aa4",
           "original": "俺はわりと好きだな…。{q}全然面白くない。{q}{G}はどうなの？",
-          "text": "I kinda like it...{q}It's not fun at all.{q}{G}, and you?"
+          "text": "I kinda like it...{q}It's not fun at all.{q}And you, {G}?"
         },
         {
           "offset": "0x6ae4",
@@ -1604,7 +1604,7 @@
         {
           "offset": "0x6c98",
           "original": "俺はわりと好きだな…。{q}全然面白くない。{q}{G}はどうなの？",
-          "text": "I kinda like it...{q}It's not fun at all.{q}{G}, and you?"
+          "text": "I kinda like it...{q}It's not fun at all.{q}And you, {G}?"
         },
         {
           "offset": "0x6cd8",
@@ -1704,7 +1704,7 @@
         {
           "offset": "0x737c",
           "original": "イルカって頭良いよねぇ。{q}イルカってほ乳類なんだよ。{q}イルカの歯って怖くない？",
-          "text": "Dolphins are so smart.{q}Dolphins are mammals, see.{q}Dolphin teeth are scary."
+          "text": "Dolphins are so smart.{q}Dolphins are mammals, see.{q}Aren't their teeth scary?"
         },
         {
           "offset": "0x73d4",
@@ -1769,7 +1769,7 @@
         {
           "offset": "0x7928",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x7960",
@@ -1929,7 +1929,7 @@
         {
           "offset": "0x8020",
           "original": "やめようか？{q}そう。絶対乗る。{q}{G}は嫌いなんだね。",
-          "text": "Should we skip it?{q}Yep. We're riding.{q}{G} hates it?"
+          "text": "Skip it?{q}Yep, we're riding.{q}Not a fan, {G}?"
         },
         {
           "offset": "0x8058",
@@ -2054,7 +2054,7 @@
         {
           "offset": "0x8530",
           "original": "やめようか？{q}そう。絶対乗る。{q}{G}は嫌いなんだね。",
-          "text": "Should we skip it?{q}Yep. We're riding.{q}{G} hates it?"
+          "text": "Skip it?{q}Yep, we're riding.{q}Not a fan, {G}?"
         },
         {
           "offset": "0x8568",
@@ -2189,7 +2189,7 @@
         {
           "offset": "0x8a8c",
           "original": "やめようか？{q}そう。絶対乗る。{q}{G}は嫌いなんだね。",
-          "text": "Should we skip it?{q}Yep. We're riding.{q}{G} hates it?"
+          "text": "Skip it?{q}Yep, we're riding.{q}Not a fan, {G}?"
         },
         {
           "offset": "0x8ac4",

@@ -1339,7 +1339,7 @@
         {
           "offset": "0x5dcc",
           "original": "本当、素敵だね。{q}ここの花も、持って帰ろうか？{q}でも、お花高いからね。",
-          "text": "Really? That's lovely.{q}Shall we take some home?{q}But flowers are expensive."
+          "text": "That sounds lovely.{q}Shall we take some home?{q}But flowers are expensive."
         },
         {
           "offset": "0x5e1c",
@@ -1814,7 +1814,7 @@
         {
           "offset": "0x8320",
           "original": "{G}を誘って見に行く。{q}ショーの事は全然無視する。",
-          "text": "Invite {G} along.{q}Ignore the show."
+          "text": "Go see it with {G}.{q}Ignore the show."
         },
         {
           "offset": "0x8358",

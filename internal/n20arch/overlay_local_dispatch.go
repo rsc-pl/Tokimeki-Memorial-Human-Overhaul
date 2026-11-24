@@ -15,9 +15,9 @@ import (
 const (
 	OverlayDispatchBlocked       = true
 	OverlayDispatchBlockedReason = "overlay dispatch runtime verification pending: bounded XOR integrity checks detect stale/corrupt overlay-local C10 body, but 22/26 coverage, concurrent CPU/DMA/IRQ mutations, overlay slot lifetime and gameplay remain UNVERIFIED; safe_to_patch=false, runtime_pass=false."
-	overlayDispatchF1Stub                    = C10EXELoaderGate
-	overlayDispatchTermStub                  = C10EXELoaderGate + 12
-	overlayDispatchVerifier                  = C10EXELoaderGate + 24
+	overlayDispatchF1Stub        = C10EXELoaderGate
+	overlayDispatchTermStub      = C10EXELoaderGate + 12
+	overlayDispatchVerifier      = C10EXELoaderGate + 24
 )
 
 type OverlayDispatchIntegrityCandidate struct {
@@ -77,7 +77,7 @@ func buildIntegrityGates(f1, terminal []byte) ([]byte, error) {
 	stub(int(overlayDispatchF1Stub-C10EXEGuardF1), f1entry, OLOriginalSpeaker)
 	stub(int(overlayDispatchTermStub-C10EXEGuardF1), terminalentry, optionQueueRetail)
 	// 16 instructions. A single 950-word bounded scan, not a full memory
-	// owner proof. Read expected XOR from relocated overlay allocation header +12, preserve
+	// ownership proof. Read expected XOR from relocated overlay allocation header +12, preserve
 	// the MIPS-I load delay. XOR is a corruption sentinel, not cryptographic.
 	base := int(overlayDispatchVerifier - C10EXEGuardF1)
 	words16 := []uint32{

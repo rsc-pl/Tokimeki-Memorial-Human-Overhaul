@@ -136,7 +136,7 @@ func telGivenAddressPayload() ([]byte, error) {
 	w(jalWord(OLBodyBase))
 	add(7, 0, 3)
 	// Return length includes NUL; verify even 2..12 encoded bytes and
-	// a 16-byte exact destination, independent of owner's sample name.
+	// a 16-byte exact destination; the actual saved name must fit.
 	add(8, 2, -1)
 	w(olSLTIU(9, 8, 13))
 	branch(4, 9, 0, "done")
